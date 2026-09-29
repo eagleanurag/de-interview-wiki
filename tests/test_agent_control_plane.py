@@ -1491,6 +1491,88 @@ def test_trigger_dict_conversion_is_json_safe():
     assert json.loads(json.dumps(payload)) == payload
 
 
+def test_report_falls_back_when_the_attempt_file_is_absent():
+    """
+    Regression guard for the first end-to-end run: the report job
+    could not read the agent's attempt file, so it rendered
+    "no summary produced" despite the agent succeeding.
+
+    The workflow now downloads the attempt file as an artifact, and
+    when it is genuinely unavailable the report must still be honest
+    rather than silently claiming success.
+    """
+
+    outcome = outcome_from_dict({})
+
+    assert outcome.status == "FAILED"
+    assert outcome.commit_sha == ""
+    assert outcome.summary == ""
+
+
+def test_report_reads_a_real_attempt_file():
+    outcome = outcome_from_dict(
+        {
+            "status": "SUCCESS",
+            "head_sha": "abc1234",
+            "agent_text": "Health check complete.",
+            "tests": "213 passed",
+            "attempt": "1",
+            "validation_run": "999",
+        }
+    )
+
+    assert outcome.status == "SUCCESS"
+    assert outcome.commit_sha == "abc1234"
+    assert outcome.summary == "Health check complete."
+
+    text = reporting.build_report(make_context(outcome=outcome))
+
+    assert "abc1234" in text
+    assert "Health check complete." in text
+
+
+def test_workflow_report_job_collects_the_attempt_file(workflow):
+    """
+    The attempt file is written by the agent job and read by the
+    report job, so it must cross the boundary as an artifact.
+    """
+
+    steps = workflow["jobs"]["report"]["steps"]
+
+    collect = next(
+        step
+        for step in steps
+        if step.get("name") == "Collect the agent attempt result"
+    )
+
+    assert collect["if"] == "always()"
+    assert "gh run download" in collect["run"]
+    assert "attempt-1.json" in collect["run"]
+    assert "opencode-agent-logs" in collect["run"]
+
+
+def test_workflow_report_job_never_claims_success_without_evidence(
+    workflow,
+):
+    """
+    The publish step must pass the attempt file only when it was
+    actually collected, and fall back to the agent job's published
+    status otherwise.
+    """
+
+    steps = workflow["jobs"]["report"]["steps"]
+
+    publish = next(
+        step
+        for step in steps
+        if step.get("name") == "Render and publish report"
+    )
+
+    assert "steps.attempt.outputs.collected" in publish["run"]
+    assert "AGENT_STATUS" in publish["env"]
+    assert "AGENT_HEAD_SHA" in publish["env"]
+
+
 def test_report_bridge_round_trip():
     payload = {
         "kind": events.TRIGGER_ISSUE,

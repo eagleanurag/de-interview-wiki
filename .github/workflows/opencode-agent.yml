@@ -411,14 +411,49 @@ jobs:
 
           echo "Fetched failure evidence for ${RUN_ID}"
 
+      - name: Collect the agent attempt result
+        id: attempt
+        if: always()
+        shell: bash
+        run: |
+          set -uo pipefail
+
+          # The attempt file is produced by the agent job. It crosses
+          # the job boundary as an artifact rather than as a leftover
+          # file on the previous runner.
+          if gh run download "${GITHUB_RUN_ID}" \
+              --name "opencode-agent-logs-${GITHUB_RUN_ID}" \
+              --dir .agent 2>/dev/null; then
+            if [ -f .agent/attempt-1.json ]; then
+              mv .agent/attempt-1.json attempt-1.json
+              echo "collected=true" >> "${GITHUB_OUTPUT}"
+              exit 0
+            fi
+          fi
+
+          # Fall back to the outcome published by the agent job so a
+          # report is still produced when the file is unreadable.
+          echo "collected=false" >> "${GITHUB_OUTPUT}"
+          echo "status=${AGENT_STATUS:-FAILED}" >> "${GITHUB_OUTPUT}"
+          echo "head_sha=${AGENT_HEAD_SHA:-}" >> "${GITHUB_OUTPUT}"
+          echo "validation_run=${AGENT_VALIDATION_RUN:-}" >> "${GITHUB_OUTPUT}"
+
       - name: Render and publish report
         id: publish
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ needs.preflight.outputs.issue_number }}
+          AGENT_STATUS: ${{ steps.attempt.outputs.status }}
+          AGENT_HEAD_SHA: ${{ steps.attempt.outputs.head_sha }}
+          AGENT_VALIDATION_RUN: ${{ steps.attempt.outputs.validation_run }}
         run: |
           set +e
+
+          ATTEMPT_ARGS=(--attempt attempt-1.json)
+          if [ "${{ steps.attempt.outputs.collected }}" != "true" ]; then
+            ATTEMPT_ARGS=()
+          fi
 
           ARGS=()
           if [ -n "${ISSUE_NUMBER}" ]; then
@@ -427,7 +462,7 @@ jobs:
 
           python -m src.agent.report \
             --trigger .agent/trigger.json \
-            --attempt attempt-1.json \
+            "${ATTEMPT_ARGS[@]}" \
             --failure-evidence failure-evidence.log \
             --out report.md \
             --summary job-summary.md \
