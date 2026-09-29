@@ -45,7 +45,6 @@ jobs:
           from pathlib import Path
 
           run_id = os.environ["RUN_ID"]
-
           job_id = f"cloud_worker_{run_id}"
 
           job = {
