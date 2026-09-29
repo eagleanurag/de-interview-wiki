@@ -1,0 +1,89 @@
+﻿name: Run Python Worker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  worker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install OpenCode
+        run: npm install --global @opencode/cli
+
+      - name: Verify runtime
+        run: |
+          python --version
+          node --version
+          opencode --version
+
+      - name: Create cloud worker job
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          run_id = os.environ["RUN_ID"]
+
+          job_id = f"cloud_worker_{run_id}"
+
+          job = {
+              "job_id": job_id,
+              "post_directory": "data/posts/sample_001",
+              "output_path": f"data/results/{job_id}.json",
+              "status": "pending",
+              "attempt": 0,
+              "max_attempts": 3,
+          }
+
+          path = Path("data/jobs/cloud_worker_job.json")
+          path.write_text(
+              json.dumps(job, indent=2),
+              encoding="utf-8",
+          )
+
+          print(f"Created job: {job_id}")
+          print(f"Job file: {path}")
+          PY
+
+      - name: Run Python worker
+        run: |
+          python -m src.workers.cli \
+            --job data/jobs/cloud_worker_job.json
+
+      - name: Verify worker result
+        run: |
+          cat data/jobs/cloud_worker_job.json
+          ls -lh data/results/
+
+      - name: Upload worker result
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloud-worker-result
+          path: |
+            data/jobs/cloud_worker_job.json
+            data/results/*.json
+
+      - name: Cloud worker completed
+        run: echo "Python worker completed successfully on GitHub cloud."
