@@ -1,0 +1,419 @@
+name: OpenCode Remote Agent
+
+# Remote control plane: turn a GitHub issue, issue comment, or manual
+# dispatch into an autonomous OpenCode engineering task.
+#
+#   ChatGPT / Android
+#     -> GitHub issue titled "[OpenCode] <task>"
+#     -> this workflow
+#     -> OpenCode implements, tests, commits, pushes
+#     -> run-python-worker.yml validates
+#     -> repair cycle, bounded at 3
+#     -> report back into the issue
+#
+# The agent runs only for the repository owner. Unrelated issues and
+# unrelated comments never reach OpenCode.
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Task for OpenCode to perform."
+        required: true
+        type: string
+      issue_number:
+        description: >
+          Optional issue number to report the result into.
+        required: false
+        type: string
+      branch:
+        description: "Branch to work on and push to."
+        required: false
+        default: main
+        type: string
+
+# One writer per issue. Queued runs wait rather than cancelling, so an
+# in-flight engineering task is never destroyed by a new comment.
+# Manual dispatches serialize on a single group for the same reason.
+concurrency:
+  # Single line on purpose: a folded multi-line expression leaves
+  # newlines inside the group name, which is fragile.
+  group: opencode-agent-${{ github.event.issue.number || 'dispatch' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    name: Authorize request
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+
+    outputs:
+      authorized: ${{ steps.check.outputs.authorized }}
+      trigger_kind: ${{ steps.check.outputs.trigger_kind }}
+      issue_number: ${{ steps.check.outputs.issue_number }}
+      ref: ${{ steps.check.outputs.ref }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Fetch issue context for continuation
+        id: context
+        if: github.event_name == 'issue_comment'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python -m src.agent.issue_context \
+            --issue "${ISSUE_NUMBER}" \
+            --out context.json \
+            --repository "${GITHUB_REPOSITORY}"
+
+      - name: Write issue body for preflight
+        id: bodies
+        shell: bash
+        run: |
+          mkdir -p .agent
+          if [ "${GITHUB_EVENT_NAME}" = "issues" ]; then
+            {
+              echo "event=issues"
+              echo "actor=${GITHUB_EVENT_ISSUE_USER_LOGIN}"
+              echo "title=${GITHUB_EVENT_ISSUE_TITLE}"
+              echo "issue_number=${GITHUB_EVENT_ISSUE_NUMBER}"
+            } > .agent/event.env
+            printf '%s' "${GITHUB_EVENT_ISSUE_BODY}" > .agent/body.md
+          elif [ "${GITHUB_EVENT_NAME}" = "issue_comment" ]; then
+            {
+              echo "event=issue_comment"
+              echo "actor=${GITHUB_EVENT_COMMENT_USER_LOGIN}"
+              echo "issue_number=${GITHUB_EVENT_ISSUE_NUMBER}"
+            } > .agent/event.env
+            printf '%s' "${GITHUB_EVENT_COMMENT_BODY}" > .agent/body.md
+          else
+            {
+              echo "event=workflow_dispatch"
+              echo "actor=${GITHUB_ACTOR}"
+              echo "issue_number=${{ inputs.issue_number }}"
+              echo "task=${{ inputs.task }}"
+              echo "ref=${{ inputs.branch || 'main' }}"
+            } > .agent/event.env
+            : > .agent/body.md
+          fi
+
+      - name: Validate actor, convention and task text
+        id: check
+        shell: bash
+        run: |
+          set -a
+          # shellcheck disable=SC1091
+          . .agent/event.env
+          set +a
+
+          CONTEXT_ARGS=()
+          if [ -f context.json ]; then
+            CONTEXT_ARGS=(--context-file context.json)
+          fi
+
+          set +e
+          python -m src.agent.preflight \
+            --event-name "${event}" \
+            --actor "${actor}" \
+            --owner "${GITHUB_REPOSITORY_OWNER}" \
+            --issue-number "${issue_number:-}" \
+            --title "${title:-}" \
+            --task "${task:-}" \
+            --body-file .agent/body.md \
+            "${CONTEXT_ARGS[@]}" \
+            --out .agent/trigger.json
+          STATUS=$?
+          set -e
+
+          if [ "${STATUS}" -eq 0 ]; then
+            echo "authorized=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "authorized=false" >> "${GITHUB_OUTPUT}"
+            echo "Preflight declined the event (exit ${STATUS})."
+            exit 0
+          fi
+
+          KIND=$(python -c \
+            "import json;print(json.load(open('.agent/trigger.json'))['kind'])")
+          NUMBER=$(python -c \
+            "import json;print(json.load(open('.agent/trigger.json')).get('issue_number') or '')")
+
+          echo "trigger_kind=${KIND}" >> "${GITHUB_OUTPUT}"
+          echo "issue_number=${NUMBER}" >> "${GITHUB_OUTPUT}"
+          echo "ref=${ref:-main}" >> "${GITHUB_OUTPUT}"
+
+          echo "Authorized ${KIND} task"
+          if [ -n "${NUMBER}" ]; then
+            echo "Reports will be posted to issue #${NUMBER}"
+          else
+            echo "No issue number; reporting via job summary and artifact."
+          fi
+
+      - name: Upload declined trigger record
+        if: steps.check.outputs.authorized == 'false'
+        uses: actions/upload-artifact@v4
+        with:
+          name: opencode-declined-${{ github.run_id }}
+          retention-days: 7
+          path: |
+            .agent/trigger.json
+            .agent/event.env
+          if-no-files-found: ignore
+
+  agent:
+    name: Run OpenCode agent
+    needs: preflight
+    if: needs.preflight.outputs.authorized == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    permissions:
+      # Required to push the agent's commit.
+      contents: write
+      # Required to post the task report back to the issue.
+      issues: write
+      # Required to dispatch and read the validation workflow.
+      actions: write
+
+    outputs:
+      status: ${{ steps.result.outputs.status }}
+      head_sha: ${{ steps.result.outputs.head_sha }}
+      validation_run: ${{ steps.result.outputs.validation_run }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.preflight.outputs.ref }}
+          fetch-depth: 0
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "opencode-agent[bot]"
+          git config --global user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory "${GITHUB_WORKSPACE}"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install pinned OpenCode CLI
+        env:
+          OPENCODE_VERSION: 2.0.20
+        run: |
+          npm install --global "@opencode/cli@${OPENCODE_VERSION}"
+          opencode --version
+
+      - name: Verify runtime
+        run: |
+          python --version
+          node --version
+          gh --version | head -n 1
+
+      - name: Build task prompt
+        id: prompt
+        env:
+          WORKFLOW: run-python-worker.yml
+        run: |
+          set -a
+          # shellcheck disable=SC1091
+          . .agent/event.env
+          set +a
+
+          python - "$WORKFLOW" "${needs.preflight.outputs.ref}" <<'PY'
+          import json
+          import sys
+
+          from src.agent.prompt import build_prompt
+          from src.agent.events import Trigger
+
+          workflow, ref = sys.argv[1], sys.argv[2]
+
+          payload = json.load(open(".agent/trigger.json", encoding="utf-8"))
+
+          trigger = Trigger(
+              kind=payload["kind"],
+              task=payload["task"],
+              instruction=payload["instruction"],
+              issue_number=payload["issue_number"],
+              issue_title=payload["issue_title"],
+              actor=payload["actor"],
+              prior_context=payload["prior_context"],
+          )
+
+          prompt = build_prompt(
+              trigger, workflow=workflow, ref=ref
+          )
+
+          with open("agent-prompt.md", "w", encoding="utf-8") as handle:
+              handle.write(prompt)
+
+          print("Prompt written to agent-prompt.md")
+          PY
+
+      - name: Run OpenCode and validate
+        id: result
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # Read by the redaction helpers so a credential echoed by a
+          # tool can never reach an issue comment or an artifact.
+          AGENT_REDACT: "true"
+          VALIDATION_WORKFLOW: run-python-worker.yml
+        run: |
+          set +e
+          python -m src.agent.run_agent \
+            --trigger .agent/trigger.json \
+            --prompt agent-prompt.md \
+            --workflow "${VALIDATION_WORKFLOW}" \
+            --ref "${{ needs.preflight.outputs.ref }}" \
+            --out attempt-1.json \
+            --attempt 1 \
+            --max-attempts 3
+          echo "exit_code=$?" >> "${GITHUB_OUTPUT}"
+
+          python - <<'PY'
+          import json
+          import os
+
+          payload = json.load(
+              open("attempt-1.json", encoding="utf-8")
+          )
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"status={payload.get('status','')}\n")
+              out.write(f"head_sha={payload.get('head_sha','')}\n")
+              out.write(f"validation_run={payload.get('validation_run','')}\n")
+          PY
+          exit 0
+
+      - name: Upload agent logs and prompt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opencode-agent-logs-${{ github.run_id }}
+          retention-days: 14
+          if-no-files-found: ignore
+          path: |
+            agent-logs/
+            agent-prompt.md
+            attempt-1.json
+            .agent/trigger.json
+
+  report:
+    name: Report task result
+    needs: [preflight, agent]
+    if: >-
+      always() &&
+      needs.preflight.outputs.authorized == 'true' &&
+      needs.agent.result != 'skipped'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch failing validation logs
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ needs.agent.outputs.validation_run }}
+        run: |
+          if [ -z "${RUN_ID}" ]; then
+            echo "No validation run to fetch."
+            exit 0
+          fi
+
+          gh run view "${RUN_ID}" --log-failed \
+            > failure-evidence.log 2>&1 || \
+            echo "No failing-step logs available for ${RUN_ID}." \
+              > failure-evidence.log
+
+          echo "Fetched failure evidence for ${RUN_ID}"
+
+      - name: Render and publish report
+        id: publish
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ needs.preflight.outputs.issue_number }}
+        run: |
+          set +e
+
+          ARGS=()
+          if [ -n "${ISSUE_NUMBER}" ]; then
+            ARGS+=(--post)
+          fi
+
+          python -m src.agent.report \
+            --trigger .agent/trigger.json \
+            --attempt attempt-1.json \
+            --failure-evidence failure-evidence.log \
+            --out report.md \
+            --summary job-summary.md \
+            "${ARGS[@]}"
+          STATUS=$?
+          set -e
+
+          echo "report_exit=${STATUS}"
+
+      - name: Write report to the job summary
+        if: always()
+        run: |
+          if [ -f job-summary.md ]; then
+            cat job-summary.md >> "${GITHUB_STEP_SUMMARY}"
+          fi
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opencode-report-${{ github.run_id }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            report.md
+            job-summary.md
+            attempt-1.json
+            failure-evidence.log
