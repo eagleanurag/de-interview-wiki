@@ -17,14 +17,14 @@ REDACTED = "[REDACTED]"
 
 # Patterns for common credential shapes.
 _PATTERNS: tuple[re.Pattern[str], ...] = (
-    # GitHub tokens: ghp_, gho_, ghu_, ghs_, ghr_ and the fine-grained
-    # github_pat_ prefix.
+    # GitHub tokens. One pattern covers every documented prefix:
+    # ghp_ (personal), gho_ (OAuth), ghu_ (user-to-server),
+    # ghs_ (server-to-server), ghr_ (refresh), and the fine-grained
+    # github_pat_ form.
     re.compile(
-        r"\b(?:gh[pousr]_[A-Za-z0-9]{16,}"
+        r"\b(?:gh[posur]_[A-Za-z0-9]{16,}"
         r"|github_pat_[A-Za-z0-9_]{20,})\b"
     ),
-    # GitHub Actions OIDC / app and webhook tokens.
-    re.compile(r"\bgh[osur]_[A-Za-z0-9]{16,}\b"),
     # Slack, Stripe and OpenAI style prefixed keys.
     re.compile(
         r"\b(?:sk|pk|rk|xox[baprs])[-_]"

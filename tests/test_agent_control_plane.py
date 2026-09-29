@@ -475,6 +475,8 @@ _FILLER = "abcdefghijklmnopqrstuvwxyz0123456789"
 CREDENTIAL_FIXTURES = {
     "github_oauth": "gh" + "p_" + _FILLER,
     "github_app": "gh" + "o_" + _FILLER,
+    "github_server": "gh" + "s_" + _FILLER,
+    "github_refresh": "gh" + "r_" + _FILLER,
     "github_fine_grained": "github_" + "pat_" + "11" + _FILLER,
     # AWS access key ids are "AKIA" plus exactly 16 uppercase
     # alphanumeric characters.
@@ -1723,6 +1725,21 @@ def workflow() -> dict:
 def trigger_events(workflow: dict) -> dict:
     # PyYAML parses a bare `on:` key as boolean True.
     return workflow.get("on") or workflow.get(True)
+
+
+def test_scratch_directory_is_gitignored():
+    """
+    Regression guard for the first end-to-end run: the agent reported
+    that .agent/event.json was not ignored, so an uncontrolled
+    `git add -A` inside an agent session could commit untrusted issue
+    title and body text.
+    """
+
+    ignore_file = REPO_ROOT / ".gitignore"
+    contents = ignore_file.read_text(encoding="utf-8")
+
+    assert "\n.agent/\n" in contents
+    assert contents.count("\n.agent/\n") == 1
 
 
 def test_agent_workflow_parses_and_has_three_modes(workflow):
