@@ -26,18 +26,19 @@ class OpenCodeClient:
     """
     Python adapter around the OpenCode CLI.
 
-    The adapter intentionally hides subprocess details from the rest
-    of the application so the AI provider can later be executed locally
-    or on a cloud worker.
+    OpenCode remains isolated behind this class so the rest of the
+    application can run locally, in GitHub Actions, or on a cloud VM.
     """
 
     def __init__(
         self,
         model: str = "opencode/space-bunny-free",
         timeout_seconds: int = 1800,
+        standalone: bool = True,
     ) -> None:
         self.model = model
         self.timeout_seconds = timeout_seconds
+        self.standalone = standalone
 
     def run(
         self,
@@ -52,15 +53,28 @@ class OpenCodeClient:
         command = [
             executable,
             "run",
-            "--auto",
-            "--model",
-            self.model,
-            "--format",
-            "json",
         ]
 
+        if self.standalone:
+            command.append("--standalone")
+
+        command.extend(
+            [
+                "--auto",
+                "--model",
+                self.model,
+                "--format",
+                "json",
+            ]
+        )
+
         for file_path in files or []:
-            command.extend(["--file", file_path])
+            command.extend(
+                [
+                    "--file",
+                    str(file_path),
+                ]
+            )
 
         command.append(prompt)
 
@@ -77,8 +91,10 @@ class OpenCodeClient:
             )
         except FileNotFoundError as exc:
             raise OpenCodeError(
-                f"OpenCode executable could not be started: {executable}"
+                f"OpenCode executable could not be started: "
+                f"{executable}"
             ) from exc
+
         except subprocess.TimeoutExpired as exc:
             raise OpenCodeError(
                 f"OpenCode timed out after "
@@ -100,50 +116,38 @@ class OpenCodeClient:
         """
         Resolve the real OpenCode executable.
 
-        PowerShell can execute opencode.ps1, but Python subprocess
-        cannot directly execute that PowerShell script.
-
-        Resolution order:
-
-        1. OPENCODE_EXECUTABLE environment variable.
-        2. Windows executable discovered from the PowerShell shim.
-        3. Normal PATH lookup.
+        Windows PowerShell resolves opencode.ps1, while Python
+        subprocess needs the actual executable.
         """
 
-        configured = os.environ.get("OPENCODE_EXECUTABLE")
+        configured = os.environ.get(
+            "OPENCODE_EXECUTABLE"
+        )
 
         if configured:
-            path = Path(configured).expanduser()
+            path = Path(
+                configured
+            ).expanduser()
 
             if path.exists():
                 return str(path)
 
             raise OpenCodeError(
-                "OPENCODE_EXECUTABLE is configured but does not exist: "
-                f"{path}"
+                "OPENCODE_EXECUTABLE is configured but does not "
+                f"exist: {path}"
             )
 
         if os.name == "nt":
 
-            commands = [
-                "where.exe opencode",
-                "where.exe opencode.exe",
-            ]
-
-            for command in commands:
-
-                try:
-                    result = subprocess.run(
-                        command,
-                        capture_output=True,
-                        text=True,
-                        encoding="utf-8",
-                        errors="replace",
-                        shell=True,
-                        check=False,
-                    )
-                except OSError:
-                    continue
+            try:
+                result = subprocess.run(
+                    ["where.exe", "opencode"],
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    check=False,
+                )
 
                 candidates = [
                     Path(line.strip())
@@ -157,10 +161,8 @@ class OpenCodeClient:
                         if candidate.exists():
                             return str(candidate)
 
-                    # `where.exe` may return the extension-less
-                    # Node launcher. Check the actual CLI executable
-                    # referenced by the installation.
                     if candidate.name.lower() == "opencode":
+
                         real_executable = (
                             candidate.parent
                             / "node_modules"
@@ -173,23 +175,33 @@ class OpenCodeClient:
                         if real_executable.exists():
                             return str(real_executable)
 
-        executable = shutil.which("opencode")
+            except OSError:
+                pass
+
+        executable = shutil.which(
+            "opencode"
+        )
 
         if executable:
             return executable
 
-        executable = shutil.which("opencode.exe")
+        executable = shutil.which(
+            "opencode.exe"
+        )
 
         if executable:
             return executable
 
         raise OpenCodeError(
             "Could not locate OpenCode. "
-            "Install OpenCode or set OPENCODE_EXECUTABLE."
+            "Install OpenCode or set "
+            "OPENCODE_EXECUTABLE."
         )
 
     @staticmethod
-    def _parse_output(output: str) -> OpenCodeResult:
+    def _parse_output(
+        output: str,
+    ) -> OpenCodeResult:
         """Parse OpenCode's JSON event stream."""
 
         text_events: list[str] = []
@@ -208,21 +220,29 @@ class OpenCodeClient:
                 continue
 
             if session_id is None:
-                session_id = event.get("sessionID")
+                session_id = event.get(
+                    "sessionID"
+                )
 
             if event.get("type") != "text":
                 continue
 
-            part = event.get("part", {})
+            part = event.get(
+                "part",
+                {},
+            )
+
             text = part.get("text")
 
             if isinstance(text, str) and text.strip():
-                text_events.append(text.strip())
+                text_events.append(
+                    text.strip()
+                )
 
         if not text_events:
             raise OpenCodeError(
-                "OpenCode completed successfully but no text response "
-                "was found in its JSON event stream."
+                "OpenCode completed successfully but no text "
+                "response was found in its JSON event stream."
             )
 
         final_text = text_events[-1]
@@ -234,27 +254,25 @@ class OpenCodeClient:
         )
 
 
-def _try_parse_json(text: str) -> Any:
+def _try_parse_json(
+    text: str,
+) -> Any:
     """
     Parse JSON from common LLM response formats.
 
-    Supports:
-    - raw JSON
-    - ```json fenced JSON
-    - ``` fenced JSON
-    - explanatory text surrounding a JSON object/array
+    Supports raw JSON, Markdown fenced JSON, and JSON embedded
+    inside explanatory text.
     """
 
     cleaned = text.strip()
 
-    # First try raw JSON.
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         pass
 
-    # Remove Markdown code fences.
     if cleaned.startswith("```"):
+
         lines = cleaned.splitlines()
 
         if lines and lines[0].strip().startswith("```"):
@@ -263,9 +281,10 @@ def _try_parse_json(text: str) -> Any:
         if lines and lines[-1].strip() == "```":
             lines = lines[:-1]
 
-        cleaned = "\n".join(lines).strip()
+        cleaned = "\n".join(
+            lines
+        ).strip()
 
-        # Remove optional language marker if still present.
         if cleaned.lower().startswith("json\n"):
             cleaned = cleaned[5:].strip()
 
@@ -274,22 +293,32 @@ def _try_parse_json(text: str) -> Any:
         except json.JSONDecodeError:
             pass
 
-    # Last attempt: find the outermost JSON object/array.
-    candidates = [
-        (cleaned.find("{"), cleaned.rfind("}")),
-        (cleaned.find("["), cleaned.rfind("]")),
-    ]
+    object_start = cleaned.find("{")
+    object_end = cleaned.rfind("}")
 
-    for start, end in candidates:
-        if start == -1 or end == -1 or end <= start:
-            continue
+    if object_start != -1 and object_end > object_start:
 
-        candidate = cleaned[start : end + 1]
+        candidate = cleaned[
+            object_start : object_end + 1
+        ]
 
         try:
             return json.loads(candidate)
         except json.JSONDecodeError:
-            continue
+            pass
 
-    # Not JSON — preserve the original response.
+    array_start = cleaned.find("[")
+    array_end = cleaned.rfind("]")
+
+    if array_start != -1 and array_end > array_start:
+
+        candidate = cleaned[
+            array_start : array_end + 1
+        ]
+
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            pass
+
     return text

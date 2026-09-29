@@ -45,7 +45,7 @@ def save_job(
 
     temporary_path.write_text(
         job.model_dump_json(indent=2),
-        encoding="utf-8",
+        encoding="utf-8-sig",
     )
 
     temporary_path.replace(path)
@@ -69,7 +69,7 @@ def run_job(
 
     job = WorkerJob.model_validate_json(
         job_path.read_text(
-            encoding="utf-8"
+            encoding="utf-8-sig"
         )
     )
 
