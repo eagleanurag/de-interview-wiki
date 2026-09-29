@@ -1,0 +1,11 @@
+{
+  "id": "sample_003",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample_003",
+    "captured_at": "2026-09-29T18:30:00+05:30",
+    "author": "Sample Author"
+  },
+  "original_text": "Interview question: You have a PySpark job processing a large dataset and it is taking too long. How would you identify the bottleneck and optimize the Spark workload? Consider shuffles, partitioning, caching, joins, skew, and Spark UI metrics.",
+  "media": []
+}

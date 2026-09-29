@@ -1,0 +1,11 @@
+{
+  "id": "sample_002",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample_002",
+    "captured_at": "2026-09-29T18:30:00+05:30",
+    "author": "Sample Author"
+  },
+  "original_text": "Interview question: A SQL query on a large fact table is running slowly. How would you diagnose and optimize it? Consider joins, indexes, statistics, filtering, aggregation, and execution plans.",
+  "media": []
+}
