@@ -1789,10 +1789,50 @@ def test_declined_events_are_recorded_not_executed(workflow):
     upload = next(
         step
         for step in steps
-        if step.get("name") == "Upload declined trigger record"
+        if step.get("name") == "Upload trigger record"
     )
 
-    assert upload["if"] == "steps.check.outputs.authorized == 'false'"
+    # Uploaded unconditionally: downstream jobs must be able to read
+    # the trigger record even when the agent is declined, and a failed
+    # upload must not hide the record from a later debug step.
+    assert upload["if"] == "always()"
+    assert upload["with"]["if-no-files-found"] == "warn"
+
+
+def test_resolved_trigger_reaches_downstream_jobs(workflow):
+    """
+    Regression guard: the trigger is written by preflight but consumed
+    by two separate jobs. Each has its own checkout, so it must travel
+    as an artifact. Without this the agent job fails with
+    FileNotFoundError on .agent/trigger.json.
+    """
+
+    upload_name = "opencode-trigger-${{ github.run_id }}"
+
+    upload = next(
+        step
+        for step in workflow["jobs"]["preflight"]["steps"]
+        if step.get("uses") == "actions/upload-artifact@v4"
+    )
+
+    assert upload_name in upload["with"]["name"]
+
+    for job_name in ("agent", "report"):
+        steps = workflow["jobs"][job_name]["steps"]
+
+        downloads = [
+            step
+            for step in steps
+            if step.get("uses") == "actions/download-artifact@v4"
+        ]
+
+        assert downloads, f"{job_name} must download the trigger"
+
+        assert any(
+            download["with"].get("name") == upload_name
+            and download["with"].get("path") == ".agent"
+            for download in downloads
+        ), f"{job_name} downloads the wrong artifact"
 
 
 def test_agent_runs_the_control_plane_modules(workflow):

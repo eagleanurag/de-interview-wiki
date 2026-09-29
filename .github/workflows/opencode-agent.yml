@@ -185,16 +185,16 @@ jobs:
             echo "No issue number; reporting via job summary and artifact."
           fi
 
-      - name: Upload declined trigger record
-        if: steps.check.outputs.authorized == 'false'
+      - name: Upload trigger record
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: opencode-declined-${{ github.run_id }}
+          name: opencode-trigger-${{ github.run_id }}
           retention-days: 7
           path: |
             .agent/trigger.json
-            .agent/event.env
-          if-no-files-found: ignore
+            .agent/event.json
+          if-no-files-found: warn
 
   agent:
     name: Run OpenCode agent
@@ -239,6 +239,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      # The resolved trigger was produced by the preflight job. Each job
+      # gets its own fresh checkout, so it has to travel as an artifact
+      # rather than as a file left on the previous runner.
+      - name: Download resolved trigger
+        uses: actions/download-artifact@v4
+        with:
+          name: opencode-trigger-${{ github.run_id }}
+          path: .agent
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -374,6 +383,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      # The report job runs on its own runner and needs the same
+      # resolved trigger the agent used, so that the report names the
+      # correct issue and task.
+      - name: Download resolved trigger
+        uses: actions/download-artifact@v4
+        with:
+          name: opencode-trigger-${{ github.run_id }}
+          path: .agent
 
       - name: Fetch failing validation logs
         if: always()
