@@ -1,11 +1,21 @@
-﻿name: Run Python Worker
+﻿name: Run Python Workers
 
 on:
   workflow_dispatch:
 
 jobs:
   worker:
+    name: Worker - ${{ matrix.post_id }}
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        post_id:
+          - sample_001
+          - sample_002
+          - sample_003
 
     steps:
       - name: Checkout repository
@@ -38,6 +48,7 @@ jobs:
       - name: Create cloud worker job
         env:
           RUN_ID: ${{ github.run_id }}
+          POST_ID: ${{ matrix.post_id }}
         run: |
           python - <<'PY'
           import json
@@ -45,44 +56,57 @@ jobs:
           from pathlib import Path
 
           run_id = os.environ["RUN_ID"]
-          job_id = f"cloud_worker_{run_id}"
+          post_id = os.environ["POST_ID"]
+
+          job_id = f"cloud_worker_{post_id}_{run_id}"
 
           job = {
               "job_id": job_id,
-              "post_directory": "data/posts/sample_001",
+              "post_directory": f"data/posts/{post_id}",
               "output_path": f"data/results/{job_id}.json",
               "status": "pending",
               "attempt": 0,
               "max_attempts": 3,
           }
 
-          path = Path("data/jobs/cloud_worker_job.json")
+          path = Path(f"data/jobs/{job_id}.json")
           path.write_text(
               json.dumps(job, indent=2),
               encoding="utf-8",
           )
 
           print(f"Created job: {job_id}")
+          print(f"Post: {post_id}")
           print(f"Job file: {path}")
           PY
 
       - name: Run Python worker
+        env:
+          POST_ID: ${{ matrix.post_id }}
         run: |
           python -m src.workers.cli \
-            --job data/jobs/cloud_worker_job.json
+            --job data/jobs/cloud_worker_${POST_ID}_${{ github.run_id }}.json
 
       - name: Verify worker result
+        env:
+          POST_ID: ${{ matrix.post_id }}
         run: |
-          cat data/jobs/cloud_worker_job.json
-          ls -lh data/results/
+          JOB_ID="cloud_worker_${POST_ID}_${{ github.run_id }}"
+
+          echo "=== JOB ==="
+          cat "data/jobs/${JOB_ID}.json"
+
+          echo "=== RESULT ==="
+          ls -lh "data/results/${JOB_ID}.json"
 
       - name: Upload worker result
         uses: actions/upload-artifact@v4
         with:
-          name: cloud-worker-result
+          name: cloud-worker-result-${{ matrix.post_id }}
           path: |
-            data/jobs/cloud_worker_job.json
-            data/results/cloud_worker_${{ github.run_id }}.json
+            data/jobs/cloud_worker_${{ matrix.post_id }}_${{ github.run_id }}.json
+            data/results/cloud_worker_${{ matrix.post_id }}_${{ github.run_id }}.json
 
       - name: Cloud worker completed
-        run: echo "Python worker completed successfully on GitHub cloud."
+        run: |
+          echo "Worker completed successfully for ${{ matrix.post_id }}."
