@@ -35,10 +35,12 @@ class OpenCodeClient:
         model: str = "opencode/space-bunny-free",
         timeout_seconds: int = 1800,
         standalone: bool = True,
+        agent: str = "enricher",
     ) -> None:
         self.model = model
         self.timeout_seconds = timeout_seconds
         self.standalone = standalone
+        self.agent = agent
 
     def run(
         self,
@@ -63,6 +65,8 @@ class OpenCodeClient:
                 "--auto",
                 "--model",
                 self.model,
+                "--agent",
+                self.agent,
                 "--format",
                 "json",
             ]
@@ -89,6 +93,7 @@ class OpenCodeClient:
                 check=False,
                 shell=False,
             )
+
         except FileNotFoundError as exc:
             raise OpenCodeError(
                 f"OpenCode executable could not be started: "
@@ -138,7 +143,6 @@ class OpenCodeClient:
             )
 
         if os.name == "nt":
-
             try:
                 result = subprocess.run(
                     ["where.exe", "opencode"],
@@ -156,13 +160,11 @@ class OpenCodeClient:
                 ]
 
                 for candidate in candidates:
-
                     if candidate.suffix.lower() == ".exe":
                         if candidate.exists():
                             return str(candidate)
 
                     if candidate.name.lower() == "opencode":
-
                         real_executable = (
                             candidate.parent
                             / "node_modules"
@@ -208,7 +210,6 @@ class OpenCodeClient:
         session_id: str | None = None
 
         for line in output.splitlines():
-
             line = line.strip()
 
             if not line:
@@ -268,11 +269,11 @@ def _try_parse_json(
 
     try:
         return json.loads(cleaned)
+
     except json.JSONDecodeError:
         pass
 
     if cleaned.startswith("```"):
-
         lines = cleaned.splitlines()
 
         if lines and lines[0].strip().startswith("```"):
@@ -290,6 +291,7 @@ def _try_parse_json(
 
         try:
             return json.loads(cleaned)
+
         except json.JSONDecodeError:
             pass
 
@@ -297,13 +299,13 @@ def _try_parse_json(
     object_end = cleaned.rfind("}")
 
     if object_start != -1 and object_end > object_start:
-
         candidate = cleaned[
-            object_start : object_end + 1
+            object_start:object_end + 1
         ]
 
         try:
             return json.loads(candidate)
+
         except json.JSONDecodeError:
             pass
 
@@ -311,13 +313,13 @@ def _try_parse_json(
     array_end = cleaned.rfind("]")
 
     if array_start != -1 and array_end > array_start:
-
         candidate = cleaned[
-            array_start : array_end + 1
+            array_start:array_end + 1
         ]
 
         try:
             return json.loads(candidate)
+
         except json.JSONDecodeError:
             pass
 
