@@ -4,18 +4,69 @@ on:
   workflow_dispatch:
 
 jobs:
+  discover:
+    name: Discover posts
+    runs-on: ubuntu-latest
+
+    outputs:
+      matrix: ${{ steps.posts.outputs.matrix }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Discover post directories
+        id: posts
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          posts = sorted(
+              path.parent.name
+              for path in Path("data/posts").glob("*/post.json")
+          )
+
+          if not posts:
+              raise SystemExit("No posts found under data/posts/")
+
+          matrix = {
+              "post_id": posts
+          }
+
+          print("Discovered posts:")
+          for post in posts:
+              print(f"  - {post}")
+
+          matrix_json = json.dumps(
+              matrix,
+              separators=(",", ":"),
+          )
+
+          print(f"Matrix JSON: {matrix_json}")
+
+          with open(
+              os.environ["GITHUB_OUTPUT"],
+              "a",
+              encoding="utf-8",
+          ) as output:
+              output.write(
+                  f"matrix={matrix_json}\n"
+              )
+          PY
+
   worker:
     name: Worker - ${{ matrix.post_id }}
+    needs: discover
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       max-parallel: 3
-      matrix:
-        post_id:
-          - sample_001
-          - sample_002
-          - sample_003
+
+      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
 
     steps:
       - name: Checkout repository
@@ -49,6 +100,7 @@ jobs:
         env:
           RUN_ID: ${{ github.run_id }}
           POST_ID: ${{ matrix.post_id }}
+
         run: |
           python - <<'PY'
           import json
@@ -69,7 +121,10 @@ jobs:
               "max_attempts": 3,
           }
 
-          path = Path(f"data/jobs/{job_id}.json")
+          path = Path(
+              f"data/jobs/{job_id}.json"
+          )
+
           path.write_text(
               json.dumps(job, indent=2),
               encoding="utf-8",
@@ -83,6 +138,7 @@ jobs:
       - name: Run Python worker
         env:
           POST_ID: ${{ matrix.post_id }}
+
         run: |
           python -m src.workers.cli \
             --job data/jobs/cloud_worker_${POST_ID}_${{ github.run_id }}.json
@@ -90,6 +146,7 @@ jobs:
       - name: Verify worker result
         env:
           POST_ID: ${{ matrix.post_id }}
+
         run: |
           JOB_ID="cloud_worker_${POST_ID}_${{ github.run_id }}"
 
@@ -101,8 +158,10 @@ jobs:
 
       - name: Upload worker result
         uses: actions/upload-artifact@v4
+
         with:
           name: cloud-worker-result-${{ matrix.post_id }}
+
           path: |
             data/jobs/cloud_worker_${{ matrix.post_id }}_${{ github.run_id }}.json
             data/results/cloud_worker_${{ matrix.post_id }}_${{ github.run_id }}.json
