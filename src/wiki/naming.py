@@ -1,0 +1,163 @@
+"""
+Deterministic slugs and relative link helpers.
+
+Every link in the generated site is relative to the page that contains
+it. That makes the same output work three ways with no base URL
+configuration at all:
+
+* opened directly from the filesystem (``file://``)
+* served from ``/``
+* served from a GitHub Pages project path such as ``/repo-name/``
+
+Repository owner and name never appear in application logic.
+"""
+
+from __future__ import annotations
+
+import posixpath
+import re
+import unicodedata
+
+
+MAX_SLUG_LENGTH = 60
+MAX_ID_LENGTH = 80
+
+_SLUG_SEPARATOR = re.compile(r"[^a-z0-9]+")
+
+# Keeps word separators (underscore, hyphen, dot) so IDs stay legible.
+_UNSAFE_ID_CHARACTERS = re.compile(r"[^A-Za-z0-9_.-]+")
+
+ASSETS_DIR = "assets"
+POSTS_DIR = "posts"
+TOPICS_DIR = "topics"
+
+INDEX_PAGE = "index.html"
+SEARCH_PAGE = "search.html"
+TOPICS_PAGE = "topics.html"
+QUESTIONS_PAGE = "questions.html"
+NOT_FOUND_PAGE = "404.html"
+
+SEARCH_INDEX_FILE = f"{ASSETS_DIR}/search-index.json"
+STYLE_FILE = f"{ASSETS_DIR}/style.css"
+SEARCH_SCRIPT = f"{ASSETS_DIR}/search.js"
+QUESTIONS_SCRIPT = f"{ASSETS_DIR}/questions.js"
+
+MANIFEST_FILE = ".wiki-manifest.json"
+
+
+def slugify(
+    value: str,
+    *,
+    fallback: str = "untitled",
+) -> str:
+    """Reduce arbitrary text to a stable, URL-safe slug."""
+
+    normalized = unicodedata.normalize("NFKD", value)
+    ascii_only = normalized.encode(
+        "ascii", "ignore"
+    ).decode("ascii")
+
+    slug = _SLUG_SEPARATOR.sub("-", ascii_only.lower()).strip("-")
+
+    if len(slug) > MAX_SLUG_LENGTH:
+        slug = slug[:MAX_SLUG_LENGTH].rstrip("-")
+
+    return slug or fallback
+
+
+def safe_id(value: str, *, fallback: str = "post") -> str:
+    """
+    Make a post ID safe to use as a file name.
+
+    Post IDs are the canonical public identifier, and existing IDs use
+    underscores (`sample_001`). Preserving them keeps generated URLs
+    readable and predictable, and keeps the post page filename equal
+    to the ID that appears in the page itself. Only characters that
+    are genuinely unsafe in a path or a URL are replaced.
+
+    Collisions are still resolved by the caller, because two distinct
+    IDs can reduce to the same safe form.
+    """
+
+    normalized = unicodedata.normalize("NFKD", value)
+    ascii_only = normalized.encode(
+        "ascii", "ignore"
+    ).decode("ascii")
+
+    candidate = _UNSAFE_ID_CHARACTERS.sub("-", ascii_only).strip("-")
+
+    if len(candidate) > MAX_ID_LENGTH:
+        candidate = candidate[:MAX_ID_LENGTH].rstrip("-")
+
+    return candidate or fallback
+
+
+def href(
+    from_page: str,
+    to_page: str,
+) -> str:
+    """
+    Relative href from one generated page to another.
+
+    Both arguments are site-relative POSIX paths. `posixpath` is used
+    deliberately so links always use forward slashes regardless of the
+    host operating system.
+    """
+
+    from_dir = posixpath.dirname(from_page) or "."
+
+    return posixpath.relpath(to_page, from_dir)
+
+
+class SlugRegistry:
+    """
+    Assigns unique slugs in insertion order.
+
+    Two different labels can reduce to the same slug, which would make
+    one page silently overwrite the other and break links. Collisions
+    get a numeric suffix in first-come order, so the same ordered input
+    always produces the same slugs.
+    """
+
+    def __init__(
+        self,
+        prefix: str = "",
+        *,
+        transform=slugify,
+    ) -> None:
+        self._prefix = prefix
+        self._transform = transform
+        self._counters: dict[str, int] = {}
+        self._used: set[str] = set()
+
+    def register(self, label: str) -> str:
+        base = self._transform(label)
+        candidate = f"{self._prefix}{base}"
+
+        if candidate in self._used:
+            index = self._counters.get(base, 0)
+
+            while True:
+                index += 1
+                candidate = f"{self._prefix}{base}-{index}"
+
+                if candidate not in self._used:
+                    break
+
+            self._counters[base] = index
+
+        self._used.add(candidate)
+
+        return candidate
+
+
+def post_page(slug: str) -> str:
+    """Site-relative path of a generated post page."""
+
+    return f"{POSTS_DIR}/{slug}.html"
+
+
+def topic_page(slug: str) -> str:
+    """Site-relative path of a generated topic page."""
+
+    return f"{TOPICS_DIR}/{slug}.html"

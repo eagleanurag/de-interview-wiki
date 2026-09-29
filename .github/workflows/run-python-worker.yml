@@ -284,3 +284,109 @@ jobs:
         run: |
           echo "Canonical knowledge base uploaded as artifact:"
           echo "  knowledge-base-${{ github.run_id }}"
+
+  wiki:
+    name: Generate static wiki
+    needs: [aggregate, discover]
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download canonical knowledge base
+        uses: actions/download-artifact@v4
+
+        with:
+          name: knowledge-base-${{ github.run_id }}
+          path: aggregation
+
+      - name: Generate static site
+        env:
+          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
+
+        run: |
+          python -m src.wiki.generator \
+            --input aggregation/knowledge_base.json \
+            --output site
+
+      - name: Verify generated site
+        env:
+          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
+
+        run: |
+          test -s site/index.html
+          test -s site/search.html
+          test -s site/topics.html
+          test -s site/questions.html
+          test -s site/assets/search-index.json
+
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          site = Path("site")
+
+          expected = int(
+              os.environ["EXPECTED_POST_COUNT"]
+          )
+
+          index = json.loads(
+              (
+                  site / "assets" / "search-index.json"
+              ).read_text(encoding="utf-8")
+          )
+
+          aggregated = index["posts"]
+
+          print(f"Expected posts: {expected}")
+          print(f"Posts in site: {aggregated}")
+
+          if aggregated != expected:
+              raise SystemExit(
+                  "Generated site post count does not match the "
+                  "discovered post count. Refusing to publish a "
+                  "partial knowledge base."
+              )
+
+          for page in sorted(site.rglob("*.html")):
+              print(f"  - {page.as_posix()}")
+          PY
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: [wiki]
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -68,6 +68,8 @@ def test_workflow_parses_and_declares_all_jobs(workflow):
         "discover",
         "worker",
         "aggregate",
+        "wiki",
+        "deploy",
     }
 
 
@@ -273,17 +275,40 @@ def test_worker_artifact_filenames_match_aggregator_glob(workflow):
 
 
 def test_workflow_never_pushes_or_commits(workflow):
+    """
+    No job may push, commit, open a pull request, or call the API
+    directly.
+
+    Repository contents stay read-only everywhere. The only elevated
+    permissions anywhere in the workflow are the Pages and OIDC pair
+    on the deploy job, which the official Pages deployment requires
+    and which grants nothing about the repository itself.
+    """
+
     forbidden = (
         "git push",
         "git commit",
         "gh pr create",
+        "gh release",
         "curl -X POST",
     )
 
     for job_name, job in workflow["jobs"].items():
-        assert job.get("permissions") == {
-            "contents": "read"
-        }, f"{job_name} should be read-only"
+        permissions = job.get("permissions", {})
+
+        assert permissions.get("contents") in (None, "read"), (
+            f"{job_name} must not have repository write access"
+        )
+
+        if job_name == "deploy":
+            assert permissions == {
+                "pages": "write",
+                "id-token": "write",
+            }
+        else:
+            assert permissions == {
+                "contents": "read"
+            }, f"{job_name} should be read-only"
 
         for step in job["steps"]:
             script = step.get("run", "")
@@ -293,6 +318,197 @@ def test_workflow_never_pushes_or_commits(workflow):
                     f"{job_name} / {step.get('name')} "
                     f"must not use {token!r}"
                 )
+
+
+def test_pages_deployment_uses_the_official_actions(workflow):
+    deploy = workflow["jobs"]["deploy"]
+
+    assert deploy["runs-on"] == "ubuntu-latest"
+    assert deploy["needs"] == ["wiki"]
+
+    uses = [step.get("uses") for step in deploy["steps"]]
+
+    assert uses == ["actions/deploy-pages@v4"]
+    assert deploy["environment"]["name"] == "github-pages"
+    assert (
+        deploy["environment"]["url"]
+        == "${{ steps.deployment.outputs.page_url }}"
+    )
+
+    upload = find_step(
+        workflow["jobs"]["wiki"], "Upload Pages artifact"
+    )
+
+    assert upload["uses"] == "actions/upload-pages-artifact@v3"
+    assert upload["with"]["path"] == "site"
+
+
+def test_wiki_generation_happens_only_after_aggregation(workflow):
+    """
+    The wiki must never be built from a partial knowledge base.
+
+    `wiki` depends on `aggregate` with no `if:` override, so the
+    default success() applies: if aggregation fails, or if any worker
+    failed and aggregation was therefore skipped, the wiki job is
+    skipped too.
+    """
+
+    aggregate = workflow["jobs"]["aggregate"]
+    wiki = workflow["jobs"]["wiki"]
+    deploy = workflow["jobs"]["deploy"]
+
+    assert wiki["needs"] == ["aggregate", "discover"]
+
+    # No escape hatch that could run on failure.
+    assert "if" not in wiki
+    assert "always()" not in str(wiki.get("needs"))
+    assert "always()" not in str(aggregate.get("needs"))
+    assert "always()" not in str(deploy.get("needs"))
+
+    # And the deploy waits on wiki.
+    assert deploy["needs"] == ["wiki"]
+    assert "if" not in deploy
+
+
+def test_wiki_generation_consumes_the_canonical_artifact(
+    workflow,
+):
+    """
+    The wiki must read the knowledge base the aggregate job uploaded,
+    not something reconstructed locally.
+    """
+
+    wiki = workflow["jobs"]["wiki"]
+
+    download = find_step(wiki, "Download canonical knowledge base")
+
+    assert download["uses"] == "actions/download-artifact@v4"
+    assert (
+        download["with"]["name"]
+        == "knowledge-base-${{ github.run_id }}"
+    )
+    assert download["with"]["path"] == "aggregation"
+
+    generate = find_step(wiki, "Generate static site")
+
+    assert "python -m src.wiki.generator" in generate["run"]
+    assert (
+        "--input aggregation/knowledge_base.json"
+        in generate["run"]
+    )
+    assert "--output site" in generate["run"]
+
+    # The artifact name must match what the aggregate job uploads.
+    aggregate = workflow["jobs"]["aggregate"]
+    upload = find_step(
+        aggregate, "Upload canonical knowledge base"
+    )
+
+    assert (
+        upload["with"]["name"] == download["with"]["name"]
+    )
+
+
+def test_wiki_verification_blocks_partial_publication(workflow):
+    """
+    Publication must fail closed. The wiki job checks that the
+    generated site exists and that its post count matches the
+    discovered post count before the Pages artifact is uploaded.
+    """
+
+    wiki = workflow["jobs"]["wiki"]
+
+    steps = [step.get("name") for step in wiki["steps"]]
+
+    generate_index = steps.index("Generate static site")
+    verify_index = steps.index("Verify generated site")
+    upload_index = steps.index("Upload Pages artifact")
+
+    assert generate_index < verify_index < upload_index
+
+    verify = find_step(wiki, "Verify generated site")
+
+    for required in (
+        "site/index.html",
+        "site/search.html",
+        "site/topics.html",
+        "site/questions.html",
+        "site/assets/search-index.json",
+    ):
+        assert f"test -s {required}" in verify["run"]
+
+    # The error text is wrapped across source lines, so compare on
+    # whitespace-normalised text.
+    # The messages are wrapped across YAML/Python source lines, so
+    # match on stable fragments rather than whole sentences.
+    normalized = " ".join(verify["run"].split())
+
+    assert "Refusing to publish a" in normalized
+    assert "partial knowledge base" in normalized
+
+    # The count check must read the discovery output, and the verify
+    # step must define the variable it reads.
+    assert (
+        verify["env"]["EXPECTED_POST_COUNT"]
+        == "${{ needs.discover.outputs.post_count }}"
+    )
+    assert find_step(wiki, "Generate static site")["env"][
+        "EXPECTED_POST_COUNT"
+    ] == "${{ needs.discover.outputs.post_count }}"
+
+    # The Pages upload must fail rather than deploy an empty site.
+    upload = find_step(wiki, "Upload Pages artifact")
+
+    assert "if-no-files-found" not in upload["with"]
+
+
+def test_aggregation_still_fails_closed_on_post_count(workflow):
+    """
+    Adding the wiki must not weaken the existing aggregation guard.
+    """
+
+    aggregate = workflow["jobs"]["aggregate"]
+
+    run_step = find_step(aggregate, "Run aggregation")
+
+    assert "--expected-post-count" in run_step["run"]
+
+    verify = find_step(aggregate, "Verify canonical knowledge base")
+
+    normalized = " ".join(verify["run"].split())
+
+    assert "Canonical knowledge base post count does" in normalized
+    assert "not match discovered post count" in normalized
+    assert "posts_aggregated" in verify["run"]
+
+
+def test_worker_job_is_unchanged_by_the_wiki(workflow):
+    """
+    The wiki is additive. Worker discovery, parallelism, isolation
+    and artifact naming must be exactly as before.
+    """
+
+    discover = workflow["jobs"]["discover"]
+    worker = workflow["jobs"]["worker"]
+
+    assert set(discover["outputs"]) == {"matrix", "post_count"}
+    assert 'glob("*/post.json")' in find_step(
+        discover, "Discover post directories"
+    )["run"]
+
+    assert worker["needs"] == "discover"
+    assert worker["strategy"]["fail-fast"] is False
+    assert worker["strategy"]["max-parallel"] == 3
+
+    upload = find_step(worker, "Upload worker result")
+
+    assert (
+        upload["with"]["name"]
+        == "cloud-worker-result-${{ matrix.post_id }}"
+    )
+    assert upload["with"]["if-no-files-found"] == "error"
+
+    assert len(upload_paths(upload)) == 2
 
 
 def test_aggregate_ignores_job_manifests_in_downloaded_layout(
