@@ -82,7 +82,7 @@ jobs:
           name: cloud-worker-result
           path: |
             data/jobs/cloud_worker_job.json
-            data/results/*.json
+            data/results/cloud_worker_${{ github.run_id }}.json
 
       - name: Cloud worker completed
         run: echo "Python worker completed successfully on GitHub cloud."
