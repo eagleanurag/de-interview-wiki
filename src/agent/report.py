@@ -90,6 +90,14 @@ def outcome_from_dict(
     *,
     failure_evidence: str = "",
 ) -> TaskOutcome:
+    """
+    Build an outcome from an attempt file.
+
+    A missing or unreadable file yields an honest FAILED outcome rather
+    than an optimistic guess, so a missing file can never be reported
+    as a success.
+    """
+
     status = str(payload.get("status") or "FAILED")
 
     return TaskOutcome(

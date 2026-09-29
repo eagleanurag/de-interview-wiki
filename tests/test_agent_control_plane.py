@@ -1539,6 +1539,20 @@ def test_workflow_report_job_collects_the_attempt_file(workflow):
 
     steps = workflow["jobs"]["report"]["steps"]
 
+    download = next(
+        step
+        for step in steps
+        if step.get("name") == "Download agent attempt result"
+    )
+
+    assert download["if"] == "always()"
+    assert download["uses"] == "actions/download-artifact@v4"
+    assert (
+        download["with"]["name"]
+        == "opencode-agent-logs-${{ github.run_id }}"
+    )
+    assert download["with"]["path"] == ".agent-logs"
+
     collect = next(
         step
         for step in steps
@@ -1546,9 +1560,65 @@ def test_workflow_report_job_collects_the_attempt_file(workflow):
     )
 
     assert collect["if"] == "always()"
-    assert "gh run download" in collect["run"]
-    assert "attempt-1.json" in collect["run"]
-    assert "opencode-agent-logs" in collect["run"]
+    assert ".agent-logs/attempt-1.json" in collect["run"]
+    assert "collected=true" in collect["run"]
+
+    # The collect step must not shell out to gh for the download: it
+    # has no token in scope, so a silenced gh failure would look like a
+    # missing file.
+    assert "gh run download" not in collect["run"]
+
+
+def test_report_job_fallback_status_comes_from_the_agent_job(
+    workflow,
+):
+    """
+    When the attempt file is unavailable, the report must fall back to
+    the status the agent job published rather than defaulting to
+    FAILED, which would misreport a successful task.
+    """
+
+    steps = workflow["jobs"]["report"]["steps"]
+
+    collect = next(
+        step
+        for step in steps
+        if step.get("name") == "Collect the agent attempt result"
+    )
+
+    env = collect["env"]
+
+    assert (
+        env["AGENT_STATUS"] == "${{ needs.agent.outputs.status }}"
+    )
+    assert (
+        env["AGENT_HEAD_SHA"] == "${{ needs.agent.outputs.head_sha }}"
+    )
+    assert (
+        env["AGENT_VALIDATION_RUN"]
+        == "${{ needs.agent.outputs.validation_run }}"
+    )
+
+
+def test_agent_publishes_its_outcome_as_job_outputs(workflow):
+    agent = workflow["jobs"]["agent"]
+
+    assert agent["outputs"] == {
+        "status": "${{ steps.result.outputs.status }}",
+        "head_sha": "${{ steps.result.outputs.head_sha }}",
+        "validation_run": "${{ steps.result.outputs.validation_run }}",
+    }
+
+    result = next(
+        step
+        for step in agent["steps"]
+        if step.get("name") == "Run OpenCode and validate"
+    )
+
+    # Even a non-zero agent exit must still publish its outcome, so the
+    # report job is never left guessing.
+    assert "exit 0" in result["run"]
+    assert "attempt-1.json" in result["run"]
 
 
 def test_workflow_report_job_never_claims_success_without_evidence(
@@ -1569,8 +1639,7 @@ def test_workflow_report_job_never_claims_success_without_evidence(
     )
 
     assert "steps.attempt.outputs.collected" in publish["run"]
-    assert "AGENT_STATUS" in publish["env"]
-    assert "AGENT_HEAD_SHA" in publish["env"]
+    assert 'ATTEMPT_ARGS=(--attempt attempt-1.json)' in publish["run"]
 
 
 def test_report_bridge_round_trip():
