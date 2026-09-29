@@ -3,3 +3,4 @@ PyMuPDF>=1.24
 Pillow>=10.0
 python-dotenv>=1.0
 pytest>=8.0
+PyYAML>=6.0,<7.0

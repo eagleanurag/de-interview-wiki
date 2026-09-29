@@ -8,8 +8,12 @@ jobs:
     name: Discover posts
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+
     outputs:
       matrix: ${{ steps.posts.outputs.matrix }}
+      post_count: ${{ steps.posts.outputs.post_count }}
 
     steps:
       - name: Checkout repository
@@ -55,12 +59,18 @@ jobs:
               output.write(
                   f"matrix={matrix_json}\n"
               )
+              output.write(
+                  f"post_count={len(posts)}\n"
+              )
           PY
 
   worker:
     name: Worker - ${{ matrix.post_id }}
     needs: discover
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
 
     strategy:
       fail-fast: false
@@ -161,6 +171,8 @@ jobs:
 
         with:
           name: cloud-worker-result-${{ matrix.post_id }}
+          retention-days: 7
+          if-no-files-found: error
 
           path: |
             data/jobs/cloud_worker_${{ matrix.post_id }}_${{ github.run_id }}.json
@@ -169,3 +181,106 @@ jobs:
       - name: Cloud worker completed
         run: |
           echo "Worker completed successfully for ${{ matrix.post_id }}."
+
+  aggregate:
+    name: Aggregate knowledge base
+    needs: [discover, worker]
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download worker artifacts
+        uses: actions/download-artifact@v4
+
+        with:
+          pattern: cloud-worker-result-*
+          path: aggregation/worker-results
+
+      - name: List downloaded worker artifacts
+        run: |
+          find aggregation/worker-results \
+            -type f \
+            -name "cloud_worker_*.json" \
+            | sort
+
+      - name: Run aggregation
+        env:
+          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
+
+        run: |
+          python -m src.aggregation.aggregator \
+            --input-dir aggregation/worker-results \
+            --output aggregation/knowledge_base.json \
+            --expected-post-count "${EXPECTED_POST_COUNT}"
+
+      - name: Verify canonical knowledge base
+        env:
+          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
+
+        run: |
+          test -s aggregation/knowledge_base.json
+
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path("aggregation/knowledge_base.json")
+
+          payload = json.loads(
+              path.read_text(encoding="utf-8")
+          )
+
+          expected = int(
+              os.environ["EXPECTED_POST_COUNT"]
+          )
+
+          aggregated = payload["stats"][
+              "posts_aggregated"
+          ]
+
+          print(f"Expected posts: {expected}")
+          print(f"Aggregated posts: {aggregated}")
+          print(
+              f"Skipped files: "
+              f"{payload['stats']['files_skipped']}"
+          )
+
+          if aggregated != expected:
+              raise SystemExit(
+                  "Canonical knowledge base post count does "
+                  "not match discovered post count."
+              )
+
+          for post in payload["posts"]:
+              print(f"  - {post['id']}")
+          PY
+
+      - name: Upload canonical knowledge base
+        uses: actions/upload-artifact@v4
+
+        with:
+          name: knowledge-base-${{ github.run_id }}
+          retention-days: 30
+          if-no-files-found: error
+          path: aggregation/knowledge_base.json
+
+      - name: Aggregation completed
+        run: |
+          echo "Canonical knowledge base uploaded as artifact:"
+          echo "  knowledge-base-${{ github.run_id }}"
