@@ -46,7 +46,15 @@ def build_parser() -> argparse.ArgumentParser:
         )
     )
 
-    parser.add_argument("--event-name", required=True)
+    parser.add_argument(
+        "--event-file",
+        default="",
+        help=(
+            "JSON document describing the event. Preferred, because "
+            "no untrusted value passes through the shell."
+        ),
+    )
+    parser.add_argument("--event-name", default="")
     parser.add_argument("--actor", default="")
     parser.add_argument("--owner", default="")
     parser.add_argument("--issue-number", default="")
@@ -104,11 +112,93 @@ def _issue_number(value: str) -> int | None:
         return None
 
 
+def load_event(path: str) -> dict:
+    """
+    Read the event document produced by the workflow.
+
+    An unreadable or malformed document is an empty mapping, so the
+    authorization functions deny rather than raise on missing data.
+    """
+
+    if not path:
+        return {}
+
+    file = Path(path)
+
+    if not file.is_file():
+        return {}
+
+    try:
+        payload = json.loads(
+            file.read_text(encoding="utf-8", errors="replace")
+        )
+    except json.JSONDecodeError:
+        return {}
+
+    return payload if isinstance(payload, dict) else {}
+
+
 def resolve(args: argparse.Namespace) -> Trigger:
-    """Map the event onto the right authorization function."""
+    """
+    Map the event onto the right authorization function.
+
+    ``--event-file`` is authoritative when present. Individual flags
+    exist for local testing and are only consulted when no event
+    document was supplied.
+    """
+
+    context = _read_context(args.context_file)
+    payload = load_event(args.event_file)
+
+    if payload:
+        event_name = str(payload.get("event") or "")
+        actor = str(payload.get("actor") or "")
+        title = str(payload.get("title") or "")
+        task = str(payload.get("task") or "")
+        number = _issue_number(payload.get("issue_number"))
+        body = str(payload.get("body") or "")
+        ref = str(payload.get("ref") or "")
+
+        if event_name == "issues":
+            return authorize_issue_event(
+                actor=actor,
+                owner=args.owner,
+                title=title,
+                body=body,
+                issue_number=number,
+            )
+
+        if event_name == "issue_comment":
+            return authorize_comment_event(
+                actor=actor,
+                owner=args.owner,
+                body=body,
+                issue_number=number,
+                original_task=str(context.get("original_task", "")),
+                issue_title=title,
+                prior_comments=list(context.get("prior_comments", [])),
+            )
+
+        if event_name == "workflow_dispatch":
+            trigger = authorize_dispatch_event(
+                actor=actor,
+                owner=args.owner,
+                task=task,
+                issue_number=number,
+            )
+
+            # Preserve the requested branch so the workflow can push
+            # and validate on it.
+            if ref:
+                trigger.branch = ref
+
+            return trigger
+
+        raise TriggerRejected(
+            f"unsupported event name: {event_name!r}"
+        )
 
     body = _read_text(args.body_file)
-    context = _read_context(args.context_file)
     number = _issue_number(args.issue_number)
 
     if args.event_name == "issues":
@@ -153,6 +243,7 @@ def trigger_to_dict(trigger: Trigger) -> dict:
         "issue_title": trigger.issue_title,
         "actor": trigger.actor,
         "prior_context": trigger.prior_context,
+        "branch": trigger.branch,
         "summary": trigger.summary,
     }
 

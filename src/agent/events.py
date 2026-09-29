@@ -60,7 +60,7 @@ class TriggerRejected(Exception):
         self.reason = reason
 
 
-@dataclass(frozen=True)
+@dataclass
 class Trigger:
     """A validated request to run the agent."""
 
@@ -71,6 +71,7 @@ class Trigger:
     issue_title: str = ""
     actor: str = ""
     prior_context: str = ""
+    branch: str = ""
 
     @property
     def is_issue_driven(self) -> bool:

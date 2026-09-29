@@ -83,83 +83,102 @@ jobs:
             --out context.json \
             --repository "${GITHUB_REPOSITORY}"
 
-      - name: Write issue body for preflight
-        id: bodies
+      - name: Extract event fields
+        id: event
         shell: bash
+        # GitHub does not create per-field environment variables for the
+        # event payload. The payload is a JSON document on disk at
+        # GITHUB_EVENT_PATH, so it is read from there with jq.
         run: |
+          set -euo pipefail
+
           mkdir -p .agent
-          if [ "${GITHUB_EVENT_NAME}" = "issues" ]; then
-            {
-              echo "event=issues"
-              echo "actor=${GITHUB_EVENT_ISSUE_USER_LOGIN}"
-              echo "title=${GITHUB_EVENT_ISSUE_TITLE}"
-              echo "issue_number=${GITHUB_EVENT_ISSUE_NUMBER}"
-            } > .agent/event.env
-            printf '%s' "${GITHUB_EVENT_ISSUE_BODY}" > .agent/body.md
-          elif [ "${GITHUB_EVENT_NAME}" = "issue_comment" ]; then
-            {
-              echo "event=issue_comment"
-              echo "actor=${GITHUB_EVENT_COMMENT_USER_LOGIN}"
-              echo "issue_number=${GITHUB_EVENT_ISSUE_NUMBER}"
-            } > .agent/event.env
-            printf '%s' "${GITHUB_EVENT_COMMENT_BODY}" > .agent/body.md
-          else
-            {
-              echo "event=workflow_dispatch"
-              echo "actor=${GITHUB_ACTOR}"
-              echo "issue_number=${{ inputs.issue_number }}"
-              echo "task=${{ inputs.task }}"
-              echo "ref=${{ inputs.branch || 'main' }}"
-            } > .agent/event.env
-            : > .agent/body.md
-          fi
+
+          # Fields are collected into a JSON document with jq, never
+          # into a sourced shell file. An issue title or body containing
+          # quotes, newlines or shell metacharacters cannot corrupt or
+          # inject into a later step.
+          case "${GITHUB_EVENT_NAME}" in
+            issues)
+              jq -n \
+                --arg actor "$(jq -r '.issue.user.login // ""' "${GITHUB_EVENT_PATH}")" \
+                --arg title "$(jq -r '.issue.title // ""' "${GITHUB_EVENT_PATH}")" \
+                --arg body "$(jq -r '.issue.body // ""' "${GITHUB_EVENT_PATH}")" \
+                --arg number "$(jq -r '.issue.number // ""' "${GITHUB_EVENT_PATH}")" \
+                '{event: "issues", actor: $actor, title: $title,
+                  body: $body, issue_number: $number}' \
+                > .agent/event.json
+              ;;
+            issue_comment)
+              jq -n \
+                --arg actor "$(jq -r '.comment.user.login // ""' "${GITHUB_EVENT_PATH}")" \
+                --arg title "$(jq -r '.issue.title // ""' "${GITHUB_EVENT_PATH}")" \
+                --arg body "$(jq -r '.comment.body // ""' "${GITHUB_EVENT_PATH}")" \
+                --arg number "$(jq -r '.issue.number // ""' "${GITHUB_EVENT_PATH}")" \
+                '{event: "issue_comment", actor: $actor, title: $title,
+                  body: $body, issue_number: $number}' \
+                > .agent/event.json
+              ;;
+            *)
+              jq -n \
+                --arg actor "${GITHUB_ACTOR}" \
+                --arg number "${{ inputs.issue_number }}" \
+                --arg task "${{ inputs.task }}" \
+                --arg ref "${{ inputs.branch }}" \
+                '{event: "workflow_dispatch", actor: $actor, title: "",
+                  body: "", issue_number: $number, task: $task,
+                  ref: $ref}' \
+                > .agent/event.json
+              ;;
+          esac
+
+          echo "Event: $(jq -r '.event' .agent/event.json)"
+          echo "Actor: $(jq -r '.actor' .agent/event.json)"
+          echo "Issue: $(jq -r '.issue_number' .agent/event.json)"
 
       - name: Validate actor, convention and task text
         id: check
         shell: bash
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
         run: |
-          set -a
-          # shellcheck disable=SC1091
-          . .agent/event.env
-          set +a
+          set -uo pipefail
 
           CONTEXT_ARGS=()
           if [ -f context.json ]; then
             CONTEXT_ARGS=(--context-file context.json)
           fi
 
+          # Every event-derived value is read from JSON by Python and
+          # passed as an argv element. No untrusted text is ever
+          # expanded by the shell.
           set +e
           python -m src.agent.preflight \
-            --event-name "${event}" \
-            --actor "${actor}" \
-            --owner "${GITHUB_REPOSITORY_OWNER}" \
-            --issue-number "${issue_number:-}" \
-            --title "${title:-}" \
-            --task "${task:-}" \
-            --body-file .agent/body.md \
+            --event-file .agent/event.json \
+            --owner "${REPO_OWNER}" \
             "${CONTEXT_ARGS[@]}" \
             --out .agent/trigger.json
           STATUS=$?
           set -e
 
-          if [ "${STATUS}" -eq 0 ]; then
-            echo "authorized=true" >> "${GITHUB_OUTPUT}"
-          else
+          if [ "${STATUS}" -ne 0 ]; then
             echo "authorized=false" >> "${GITHUB_OUTPUT}"
             echo "Preflight declined the event (exit ${STATUS})."
             exit 0
           fi
 
-          KIND=$(python -c \
-            "import json;print(json.load(open('.agent/trigger.json'))['kind'])")
-          NUMBER=$(python -c \
-            "import json;print(json.load(open('.agent/trigger.json')).get('issue_number') or '')")
+          {
+            echo "authorized=true"
+            jq -r '
+              "trigger_kind=" + .kind,
+              "issue_number=" + ((.issue_number // "") | tostring),
+              "ref=" + (if (.ref // "") == "" then "main" else .ref end)
+            ' .agent/trigger.json
+          } >> "${GITHUB_OUTPUT}"
 
-          echo "trigger_kind=${KIND}" >> "${GITHUB_OUTPUT}"
-          echo "issue_number=${NUMBER}" >> "${GITHUB_OUTPUT}"
-          echo "ref=${ref:-main}" >> "${GITHUB_OUTPUT}"
+          echo "Authorized $(jq -r '.kind' .agent/trigger.json) task"
+          NUMBER=$(jq -r '.issue_number // ""' .agent/trigger.json)
 
-          echo "Authorized ${KIND} task"
           if [ -n "${NUMBER}" ]; then
             echo "Reports will be posted to issue #${NUMBER}"
           else
@@ -243,22 +262,19 @@ jobs:
         id: prompt
         env:
           WORKFLOW: run-python-worker.yml
+          REF: ${{ needs.preflight.outputs.ref }}
         run: |
-          set -a
-          # shellcheck disable=SC1091
-          . .agent/event.env
-          set +a
-
-          python - "$WORKFLOW" "${needs.preflight.outputs.ref}" <<'PY'
+          python - <<'PY'
           import json
-          import sys
+          import os
 
-          from src.agent.prompt import build_prompt
           from src.agent.events import Trigger
+          from src.agent.prompt import build_prompt
 
-          workflow, ref = sys.argv[1], sys.argv[2]
-
-          payload = json.load(open(".agent/trigger.json", encoding="utf-8"))
+          with open(
+              ".agent/trigger.json", encoding="utf-8"
+          ) as handle:
+              payload = json.load(handle)
 
           trigger = Trigger(
               kind=payload["kind"],
@@ -268,16 +284,21 @@ jobs:
               issue_title=payload["issue_title"],
               actor=payload["actor"],
               prior_context=payload["prior_context"],
+              branch=payload.get("branch", ""),
           )
 
           prompt = build_prompt(
-              trigger, workflow=workflow, ref=ref
+              trigger,
+              workflow=os.environ["WORKFLOW"],
+              ref=os.environ.get("REF") or "main",
           )
 
-          with open("agent-prompt.md", "w", encoding="utf-8") as handle:
+          with open(
+              "agent-prompt.md", "w", encoding="utf-8"
+          ) as handle:
               handle.write(prompt)
 
-          print("Prompt written to agent-prompt.md")
+          print(f"Prompt written for {trigger.kind} task.")
           PY
 
       - name: Run OpenCode and validate

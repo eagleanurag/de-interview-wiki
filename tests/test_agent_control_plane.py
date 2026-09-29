@@ -1063,6 +1063,310 @@ def test_report_without_issue_still_renders():
 # ---------------------------------------------------------------------
 
 
+def write_event(tmp_path: Path, **fields) -> str:
+    path = tmp_path / "event.json"
+    path.write_text(json.dumps(fields), encoding="utf-8")
+
+    return str(path)
+
+
+def test_preflight_reads_the_event_document(tmp_path):
+    """
+    The workflow passes event fields as JSON, not as shell-expanded
+    variables, so this path is the one that runs in production.
+    """
+
+    from src.agent import preflight
+
+    event = write_event(
+        tmp_path,
+        event="issues",
+        actor="eagleanurag",
+        title="[OpenCode] health check",
+        body="Inspect and report.",
+        issue_number="42",
+    )
+
+    out = tmp_path / "trigger.json"
+
+    code = preflight.main(
+        [
+            "--event-file",
+            event,
+            "--owner",
+            "eagleanurag",
+            "--out",
+            str(out),
+        ]
+    )
+
+    assert code == EXIT_OK
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+
+    assert payload["kind"] == events.TRIGGER_ISSUE
+    assert payload["issue_number"] == 42
+    assert "health check" in payload["task"]
+
+
+def test_preflight_denies_a_stranger_from_the_event_document(tmp_path):
+    from src.agent import preflight
+
+    event = write_event(
+        tmp_path,
+        event="issues",
+        actor="random-user",
+        title="[OpenCode] do something",
+        body="task",
+        issue_number="7",
+    )
+
+    code = preflight.main(
+        [
+            "--event-file",
+            event,
+            "--owner",
+            "eagleanurag",
+            "--out",
+            str(tmp_path / "trigger.json"),
+        ]
+    )
+
+    assert code == EXIT_IGNORED
+
+
+def test_preflight_requires_the_owner_context(tmp_path):
+    """
+    A missing owner must deny. Otherwise a misconfigured workflow
+    would authorize everyone.
+    """
+
+    from src.agent import preflight
+
+    event = write_event(
+        tmp_path,
+        event="issues",
+        actor="eagleanurag",
+        title="[OpenCode] task",
+        body="body",
+        issue_number="1",
+    )
+
+    code = preflight.main(
+        [
+            "--event-file",
+            event,
+            "--owner",
+            "",
+            "--out",
+            str(tmp_path / "trigger.json"),
+        ]
+    )
+
+    assert code == EXIT_IGNORED
+
+
+def test_event_document_survives_shell_metacharacters(tmp_path):
+    """
+    Untrusted text must survive intact rather than being interpreted.
+    """
+
+    from src.agent import preflight
+
+    hostile = (
+        'Fix "; rm -rf / #" and `whoami` and $(id) and '
+        "a\nnewline and 'quotes'"
+    )
+
+    event = write_event(
+        tmp_path,
+        event="issues",
+        actor="eagleanurag",
+        title="[OpenCode] hostile title",
+        body=hostile,
+        issue_number="3",
+    )
+
+    out = tmp_path / "trigger.json"
+
+    code = preflight.main(
+        [
+            "--event-file",
+            event,
+            "--owner",
+            "eagleanurag",
+            "--out",
+            str(out),
+        ]
+    )
+
+    assert code == EXIT_OK
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+
+    # Every fragment arrived verbatim.
+    assert "rm -rf /" in payload["task"]
+    assert "whoami" in payload["task"]
+    assert "hostile title" in payload["task"]
+
+
+def test_event_document_dispatch_preserves_branch(tmp_path):
+    from src.agent import preflight
+
+    event = write_event(
+        tmp_path,
+        event="workflow_dispatch",
+        actor="eagleanurag",
+        title="",
+        body="",
+        issue_number="",
+        task="run a check",
+        ref="feature-branch",
+    )
+
+    out = tmp_path / "trigger.json"
+
+    code = preflight.main(
+        [
+            "--event-file",
+            event,
+            "--owner",
+            "eagleanurag",
+            "--out",
+            str(out),
+        ]
+    )
+
+    assert code == EXIT_OK
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+
+    assert payload["branch"] == "feature-branch"
+
+
+def test_event_document_comment_uses_continuation_command(tmp_path):
+    from src.agent import preflight
+
+    event = write_event(
+        tmp_path,
+        event="issue_comment",
+        actor="eagleanurag",
+        title="[OpenCode] original",
+        body="/continue do the next thing",
+        issue_number="9",
+    )
+
+    context = tmp_path / "context.json"
+    context.write_text(
+        json.dumps({"original_task": "original work"}),
+        encoding="utf-8",
+    )
+
+    out = tmp_path / "trigger.json"
+
+    code = preflight.main(
+        [
+            "--event-file",
+            event,
+            "--owner",
+            "eagleanurag",
+            "--context-file",
+            str(context),
+            "--out",
+            str(out),
+        ]
+    )
+
+    assert code == EXIT_OK
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+
+    assert payload["kind"] == events.TRIGGER_CONTINUE
+    assert payload["task"] == "original work"
+    assert payload["instruction"] == "do the next thing"
+
+
+def test_malformed_event_document_is_denied(tmp_path):
+    from src.agent import preflight
+
+    path = tmp_path / "event.json"
+    path.write_text("{not json", encoding="utf-8")
+
+    code = preflight.main(
+        [
+            "--event-file",
+            str(path),
+            "--owner",
+            "eagleanurag",
+            "--out",
+            str(tmp_path / "trigger.json"),
+        ]
+    )
+
+    assert code == EXIT_IGNORED
+
+
+def test_missing_event_file_is_denied(tmp_path):
+    from src.agent import preflight
+
+    code = preflight.main(
+        [
+            "--event-file",
+            str(tmp_path / "absent.json"),
+            "--owner",
+            "eagleanurag",
+            "--out",
+            str(tmp_path / "trigger.json"),
+        ]
+    )
+
+    assert code == EXIT_IGNORED
+
+
+def test_workflow_uses_event_payload_not_per_field_env_vars():
+    """
+    Regression guard: GitHub does not create per-field environment
+    variables for the event payload. Reading the actor from
+    GITHUB_EVENT_PATH is what makes authorization actually work.
+    """
+
+    yaml = pytest.importorskip("yaml")
+
+    workflow = yaml.safe_load(
+        WORKFLOW.read_text(encoding="utf-8")
+    )
+
+    combined = "\n".join(
+        step.get("run", "")
+        for job in workflow["jobs"].values()
+        for step in job.get("steps", [])
+    )
+
+    assert "GITHUB_EVENT_PATH" in combined
+    assert "--event-file" in combined
+
+    for phantom in (
+        "GITHUB_EVENT_ISSUE_USER_LOGIN",
+        "GITHUB_EVENT_ISSUE_BODY",
+        "GITHUB_EVENT_COMMENT_BODY",
+        "GITHUB_EVENT_COMMENT_USER_LOGIN",
+        "GITHUB_EVENT_ISSUE_TITLE",
+    ):
+        assert phantom not in combined, phantom
+
+
+def test_workflow_does_not_source_event_text():
+    """
+    Event-derived text must not be sourced into the shell, where a
+    title or body could redefine a variable or inject a command.
+    """
+
+    workflow_text = WORKFLOW.read_text(encoding="utf-8")
+
+    assert ". .agent/event.env" not in workflow_text
+    assert "source .agent/" not in workflow_text
+
+
 def test_preflight_round_trip(tmp_path, monkeypatch, capsys):
     from src.agent import preflight
 
@@ -1468,7 +1772,19 @@ def test_declined_events_are_recorded_not_executed(workflow):
     )
 
     assert "src.agent.preflight" in check["run"]
-    assert "GITHUB_REPOSITORY_OWNER" in check["run"]
+    assert "--event-file" in check["run"]
+
+    # The owner comes from the repository context and is passed
+    # through the environment, not spliced into the script.
+    assert (
+        check["env"]["REPO_OWNER"]
+        == "${{ github.repository_owner }}"
+    )
+    assert '${REPO_OWNER}' in check["run"]
+
+    # A declined event must not fail the workflow; it exits cleanly so
+    # unrelated comments and issues are simply ignored.
+    assert "authorized=false" in check["run"]
 
     upload = next(
         step
