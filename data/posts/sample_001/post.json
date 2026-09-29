@@ -1,0 +1,29 @@
+{
+  "id": "sample_001",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample-post",
+    "captured_at": "2026-09-29T18:15:00+05:30",
+    "author": "Sample Author"
+  },
+  "original_text": "Interview question: You have a large Delta Lake table in Databricks. The query is taking too long. How would you investigate and optimize the workload? Consider partitioning, data skipping, Z-Ordering, Spark execution plans, and file sizes.",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks",
+    "secondary_topics": [
+      "Apache Spark",
+      "Delta Lake",
+      "Performance Optimization"
+    ],
+    "interview_relevant": true
+  }
+}

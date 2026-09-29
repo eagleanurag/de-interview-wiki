@@ -1,0 +1,37 @@
+﻿name: Cloud Worker Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  opencode-worker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install OpenCode
+        run: npm install --global @opencode/cli
+
+      - name: Verify OpenCode
+        run: |
+          opencode --version
+          opencode --help
+
+      - name: Run OpenCode cloud smoke test
+        run: |
+          opencode run \
+            --standalone \
+            --auto \
+            --model opencode/space-bunny-free \
+            --format json \
+            "Return ONLY a JSON object with exactly these fields: status, message. Set status to success and message to github-cloud-worker-test."
+
+      - name: Cloud worker completed
+        run: echo "OpenCode cloud smoke test completed."

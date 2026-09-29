@@ -1,0 +1,180 @@
+{
+  "id": "sample_001",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample-post",
+    "captured_at": "2026-09-29T18:15:00+05:30",
+    "author": "Sample Author"
+  },
+  "original_text": "Interview question: You have a large Delta Lake table in Databricks. The query is taking too long. How would you investigate and optimize the workload? Consider partitioning, data skipping, Z-Ordering, Spark execution plans, and file sizes.",
+  "media": [
+    {
+      "type": "image",
+      "path": "data\\posts\\sample_001\\media\\databricks_dashboard.png",
+      "description": "PNG image, 1200x700 pixels",
+      "extracted_text": null
+    },
+    {
+      "type": "pdf",
+      "path": "data\\posts\\sample_001\\media\\interview_notes.pdf",
+      "description": null,
+      "extracted_text": "--- Page 1 ---\nDatabricks Interview Question\nHow would you optimize a large Delta Lake table?\nConsider partitioning, data skipping, Z-Ordering, and file sizes."
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A diagnostic-first playbook for a slow query against a large Delta Lake table in Databricks. The opening move is measurement, not guesswork: pull the Query Plan and Spark UI DAG, and classify the workload as scan-bound, shuffle/join-bound, skew-bound, or cluster-bound using stage metrics (input bytes, files read, shuffle read/write, spill, task duration distribution at p50 vs p90). Then attack the table's physical design, which is where most Delta slowness actually originates. Partitioning is a pruning and file-size control mechanism, not a universal speed switch: partition only on low-to-moderate-cardinality columns that are heavily filtered, because near-unique values cause directory explosion, tiny files, and planning-time overhead that outweighs pruning gains. When filters land on non-partition columns, rely on data skipping - per-file min/max and null-count statistics stored in Add File entries of the Delta transaction log, Parquet row-group and column-chunk statistics, and Bloom filters for IN/equality predicates on high-cardinality keys. Skipping only helps when it is measured (files read vs files scanned); it degrades when min/max ranges overlap heavily, which is exactly what Z-Ordering (or the modern liquid clustering) is designed to fix by tightening those ranges, at the cost of a full rewrite. File size is the quiet root cause behind most complaints: many small files impose per-file planning, listing, and task-scheduling overhead (Databricks guidance is roughly 128 MB to 1 GB per file), so the fix is to correct the write path (Optimize Write, auto compaction / predictive optimization, sane target file size) before running OPTIMIZE to repair history. Finally, verify the optimizer is actually helping - confirm predicate pushdown, column pruning, and partition pruning in the physical plan; keep AQE on for shuffle-partition coalescing, runtime broadcast-hash-join conversion, and skew handling; refresh statistics with ANALYZE before blaming the plan. A strong answer closes by insisting on before/after measurement of files scanned, input bytes, and shuffle bytes, and by ranking fixes by leverage and risk: query and table structure before buying bigger clusters or enabling Photon.",
+    "topics": [
+      "Databricks",
+      "Delta Lake",
+      "Apache Spark",
+      "Performance Optimization"
+    ],
+    "subtopics": [
+      "Partitioning Strategy and Partition Pruning",
+      "Data Skipping and File-Level Statistics",
+      "Z-Ordering and Liquid Clustering",
+      "Small File Problem and File Size Tuning",
+      "OPTIMIZE, Auto Compaction, and Predictive Optimization",
+      "VACUUM and Time Travel Trade-offs",
+      "Delta Transaction Log and Checkpoints",
+      "Predicate Pushdown and Column Pruning",
+      "Spark Execution Plans and the Query Plan UI",
+      "Adaptive Query Execution (AQE)",
+      "Join Strategy Selection and Broadcast Joins",
+      "Shuffle, Spill, and Skew Handling",
+      "Bloom Filters, Row Group Stats, and Deletion Vectors",
+      "ANALYZE and Cardinality Estimation",
+      "Photon, Delta Cache, and Cluster Sizing",
+      "Materialized Views and Pre-aggregation",
+      "Benchmarking and Optimization Validation"
+    ],
+    "concepts": [
+      "Delta Transaction Log and Add File Statistics",
+      "Partition Pruning",
+      "Partition Cardinality Trade-offs",
+      "File-Level Data Skipping",
+      "Parquet Row Group and Column Chunk Statistics",
+      "Bloom Filters",
+      "Z-Ordering (ZORDER BY)",
+      "Liquid Clustering",
+      "Small File Problem",
+      "Target File Size and Optimize Write",
+      "OPTIMIZE and Compaction",
+      "Auto Compaction and Predictive Optimization",
+      "VACUUM and Time Travel",
+      "Predicate Pushdown and Column Pruning",
+      "Physical Execution Plan and the Query Plan UI",
+      "Adaptive Query Execution (AQE)",
+      "Join Strategy Selection and Broadcast Joins",
+      "Shuffle, Spill, and Data Skew",
+      "ANALYZE and Cardinality Estimation",
+      "Deletion Vectors",
+      "Photon, Delta Cache, and Cluster Sizing",
+      "Materialized Views and Pre-aggregation",
+      "Optimization Validation and Benchmarking"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A query against a large Delta table in Databricks is taking too long. Walk me through your investigation from the moment you open the ticket.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Start from measurement: Query Plan plus Spark UI SQL tab, per-stage input bytes, shuffle bytes, spill, and task duration distribution\nClassify the bottleneck before choosing a fix: scan-bound, shuffle/join-bound, skew-bound, or cluster/queueing-bound\nCheck the table's physical facts first: file count and size distribution, partition cardinality, Z-order or clustering keys, and Delta log health\nConfirm the optimizer is working as expected: predicate pushdown, column pruning, partition pruning, and fresh statistics\nRank fixes by leverage and risk: query and table structure first, cluster size and Photon last\nState how the result will be validated: same query, comparable data volume, files read and input bytes, not just wall clock"
+    },
+    {
+      "question": "When should you partition a Delta table, and what are the concrete failure modes of over-partitioning?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Partition for directory-level pruning and file-size control, not as a generic speed switch\nChoose low-to-moderate-cardinality columns that are genuinely used in filters; avoid near-unique or frequently changing values\nFailure modes: millions of tiny files, long listing and planning time, expensive small-file writes on every append, and futile Z-Ordering on a partition column\nUnderstand that partition pruning requires a direct predicate - a function wrapping the partition column defeats it\nMention liquid clustering as the modern alternative that allows adding or dropping keys with a metadata-only change\nFor backfills, use dynamic partition overwrite with a deliberate output file size rather than overwriting partition by partition"
+    },
+    {
+      "question": "Explain how data skipping works in Delta Lake and the conditions under which it stops helping.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Per-file min/max and null-count statistics live in Add File actions of the Delta transaction log; the scan prunes files that cannot match\nSkipping needs statistics at write time; unindexed or hand-written data skips less, and Delta indexes a bounded number of leading columns by default\nSkipping degrades when min/max ranges overlap the whole domain, which is typical for low-selectivity filters on high-cardinality columns\nMin/max handles range predicates; Bloom filters add value for equality and IN predicates on high-cardinality keys\nParquet row group and column chunk stats stack on top of file skipping, so row group size is a real tuning knob\nMeasure it: files read vs files scanned, and the Z-order skip ratio in scan metrics, rather than assuming skipping is working"
+    },
+    {
+      "question": "A table is Z-ordered on customer_id, but a query filtering on order_date is still slow. Explain why and what you would do.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Z-Ordering only clusters the columns named in the ZORDER clause, so skipping on order_date is unchanged\nMulti-column Z-Ordering returns diminish sharply past roughly three keys because of the Z-order curve's dimensional behavior\nOptions: add order_date to the ZORDER clause and re-optimize, partition on a date-derived column if the filter is always a range, or migrate to liquid clustering with both keys\nWeigh the cost: a Z-order rewrite is a full read plus write, so schedule it rather than running it on every write\nNote the cases where Z-ordering is a poor fit: UUID-like high-cardinality keys and columns already used as the partition\nValidate with skip ratio and files read before and after, not with intuition"
+    },
+    {
+      "question": "Your Delta table has 250,000 files averaging 1.2 MB. How do you fix it, and what would you deliberately not do?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Quantify first with file count and size distribution from DESCRIBE DETAIL or the files metadata table, and separate count from total size\nFind the root cause - high-cardinality partition, frequent small appends, MERGE churn, or undersized shuffle output - because compaction alone is a treadmill\nFix the write path with Optimize Write, a deliberate delta.targetFileSize in the 128 MB to 1 GB range, and auto compaction or predictive optimization\nThen remediate history with OPTIMIZE, optionally with ZORDER BY or liquid clustering\nSequence matters: write path first, then compaction, then VACUUM with a retention window that respects time-travel needs\nExplicitly reject raising shuffle partition counts blindly or repartitioning to an arbitrary number; repartition is a layout tool, not a substitute for correct write-time sizing"
+    },
+    {
+      "question": "How do you read a Spark execution plan, and what tells you a query is scan-bound versus shuffle-bound versus skew-bound?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Understand that exchanges mark stage boundaries and are the dominant cost centers; joins appear as BroadcastHashJoin or SortMergeJoin\nScan-bound: high input bytes and duration at the scan, filters not pushed down, little shuffle - fix with pruning, skipping, layout, or Photon\nShuffle-bound: large shuffle read/write and spill - fix with AQE partition coalescing, broadcast of a small side, or a pre-aggregated input\nSkew-bound: a few tasks far above the stage median in duration or records, often a null or hot key - fix with AQE skew handling or salting\nDisk spill signals memory pressure; memory spill is normal unless it dominates runtime\nInsist that a plan without metrics is not a diagnosis, and that EXPLAIN FORMATTED and the Query Plan are complementary"
+    },
+    {
+      "question": "When would you choose a broadcast join over a sort-merge join on Databricks, and how do you get the optimizer to pick it?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Broadcast when one side genuinely fits in aggregate executor memory and is reused across many joins, not merely because it is the smaller relation\nImprove estimates first with ANALYZE so the optimizer picks correctly on its own\nUse a BROADCAST hint or raise spark.sql.autoBroadcastJoinThreshold, which defaults to only 10 MB\nPrefer AQE's runtime conversion from sort-merge to broadcast hash join, since it uses actual shuffled sizes rather than static estimates\nCaution: an oversized broadcast causes OOM and slow task startup - project and pre-filter the dimension side instead\nFor repeated star-schema joins, note that a serving table or materialized view is often the better answer than join tuning"
+    },
+    {
+      "question": "Explain how Adaptive Query Execution improves a bad plan, and what happens if you turn it off.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "AQE uses runtime shuffle statistics at stage boundaries rather than only static estimates\nThree core behaviors: coalescing dynamically-sized shuffle partitions, runtime sort-merge to broadcast hash join conversion, and skew join splitting\nDisabling it means fixed shuffle partition counts, join strategies based on possibly stale statistics, and no skew mitigation\nThe usual symptom of disabling it is either massive spill from too-large partitions or a long tail of near-empty tasks\nThe right response is tuning, not disabling: advisoryPartitionSizeInBytes, autoBroadcastJoinThreshold, and skew join settings\nAQE is on by default on modern runtimes, so confirm the setting rather than assume it"
+    },
+    {
+      "question": "A dashboard query joins a 900 MB dimension to a 4 TB fact table and takes 25 minutes. Diagnose and fix it.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Read the plan for BroadcastExchange versus SortMergeJoin to classify the bottleneck before changing anything\nSlim the broadcast candidate: project only needed columns and pre-filter or pre-aggregate the dimension below the threshold\nConsider pre-aggregating the fact table to the dashboard's grain via a materialized view or serving table, usually the largest single win\nCheck the join keys for skew, mismatched types, and unexpected nulls, all of which silently produce a bad plan\nEnsure data skipping is active on the fact table's filter columns and evaluate Photon for a CPU-bound scan/join\nRe-measure with files read, input bytes, and shuffle bytes to confirm the change actually helped"
+    },
+    {
+      "question": "A downstream consumer says OPTIMIZE and VACUUM broke their time-travel report. What actually happened, and how would you have sequenced it?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "OPTIMIZE is safe for readers - it rewrites whole files and commits atomically, so old snapshots remain valid\nVACUUM is the destructive one: it deletes files no longer referenced by retained snapshots, irreversibly\nSet the retention window above the longest time-travel or audit requirement, and never shorten it to save storage\nCorrect sequence: fix write-side file sizing and auto-compaction, run OPTIMIZE on a cadence, then VACUUM within a deliberate retention window\nUse operation history and information_schema to audit vacuum runs and see who shortened retention\nFor long-term reproducibility, have consumers pin a released version or a materialized view rather than depend on time travel"
+    },
+    {
+      "question": "How would you optimize a query that selects 60 columns but uses 5, and how would you prove it worked?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Verify column pruning in the physical plan: only referenced columns under the scan, with no wrapping projection forcing extra reads\nVerify the filter is pushed below the scan so Parquet row group and column chunk statistics are usable\nExplain the nuance: unused column chunks cost little in bytes but still cost in planning and metadata reads\nMeasure input bytes and records per scan in the Query Plan, plus files and rows read, before and after\nSecondary levers: a materialized view or serving table with only needed columns if the pattern is pervasive, and Photon for the scan itself\nCall out culprits that defeat pruning: SELECT star patterns and UDFs that consume whole rows"
+    },
+    {
+      "question": "Compare partitioning, Z-Ordering, and liquid clustering. If you inherited a table partitioned by year with a daily event_id column, what would you change?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Partitioning is physical layout with cheap directory pruning, fixed at creation and dangerous at high cardinality\nZ-Ordering is a rewrite-based clustering that tightens min/max ranges, only benefits its own columns, and is not compatible with liquid clustering\nLiquid clustering uses CLUSTER BY with metadata-only key changes, self-heals on read-compaction, and is the recommended default on modern runtimes\nFor the inherited table: identify which partitions are actually filtered on, which are tiny, and which columns drive real query predicates\nDescribe a safe migration: build the target table, backfill, dual-write or cut over, validate with benchmarks and skip-ratio metrics\nKeep the write path tuned throughout, otherwise clustering is immediately undone by the next batch of small files"
+    },
+    {
+      "question": "How would you decide between optimizing the query, the table, or the cluster for this workload?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Classify the bottleneck first: scan-bound, shuffle/join-bound, skew-bound, or cluster-bound with spill everywhere\nPrefer the highest-leverage, lowest-risk layer: query plan and write path before larger clusters or Photon\nTable layer: partitioning, Z-order or liquid clustering, compaction, file size, materialized views\nQuery layer: predicate pushdown, column pruning, join selection and broadcasting, caching or pre-aggregation\nPlatform layer: autoscaling workers, Photon for CPU-bound work, Delta Cache for repeated metadata access, warehouse sizing to avoid queueing\nState the trade-offs explicitly: OPTIMIZE costs compute, over-partitioning costs planning time, broadcast costs memory, caching costs memory"
+    },
+    {
+      "question": "Your ingestion job writes one small file per micro-batch and the downstream table is getting slower each month. What do you do?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Identify the root cause as micro-batched writes without coalescing, producing a small-file problem that compounds over time\nFix at the sink: use a copy-on-write or merge pattern that produces properly sized files, or write in micro-batches and compact on a schedule\nEnable Optimize Write and auto compaction, and set delta.targetFileSize deliberately rather than accepting whatever each batch produces\nReconsider the partition scheme if partition count is the driver of the file count\nRun a one-time OPTIMIZE to repair the accumulated files, then VACUUM within a retention window\nAdd monitoring on file count and median file size so the regression is caught before users feel it"
+    },
+    {
+      "question": "How do you validate that a Z-Ordering change actually improved performance rather than just moving the row order around?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Compare files read versus files scanned before and after, and read the Z-order skip ratio reported in the scan metrics\nCompare input bytes and duration on the Query Plan, not just total wall clock, and control for caching and cluster state\nUse EXPLAIN or captured plans to confirm the physical scan did not change in some other confounding way\nBe explicit about the cost side: bytes rewritten and compute consumed by the OPTIMIZE itself\nTest with representative queries across the workload, since a change that helps one predicate can hurt another\nKnow the expected ceiling: skipping helps only if filters are selective enough that tighter ranges actually exclude whole files"
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks",
+    "secondary_topics": [
+      "Apache Spark",
+      "Delta Lake",
+      "Performance Optimization"
+    ],
+    "interview_relevant": true
+  }
+}
