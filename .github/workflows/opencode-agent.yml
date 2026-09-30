@@ -314,6 +314,7 @@ jobs:
         id: result
         env:
           GH_TOKEN: ${{ github.token }}
+          AGENT_PUSH_TOKEN: ${{ secrets.OPENCODE_AGENT_TOKEN }}
           # Read by the redaction helpers so a credential echoed by a
           # tool can never reach an issue comment or an artifact.
           AGENT_REDACT: "true"
