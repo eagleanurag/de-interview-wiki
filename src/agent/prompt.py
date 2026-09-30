@@ -7,18 +7,36 @@ repair, and finally report. The parts that must never be guessed at,
 such as which workflow validates the project and how many repair
 attempts are allowed, are injected from the workflow rather than
 hardcoded, so the prompt cannot drift away from the pipeline.
+
+The module is also the prompt-building step of the control plane:
+
+    python -m src.agent.prompt \\
+      --trigger trigger.json \\
+      --permissions-file .github/workflows/opencode-agent.yml \\
+      --out agent-prompt.md
+
+It reads the agent job's granted permissions out of the control plane
+itself, and the workflow-file boundary out of the credential the run
+actually has, so the prompt states the real authorization rather than
+a description of it that can go stale.
 """
 
 from __future__ import annotations
 
+import argparse
+import json
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
+from src.agent.credentials import credential_armed
 from src.agent.events import Trigger
 
 
 # Bounded by the workflow, mirrored here for the prompt text only.
 MAX_REPAIR_ATTEMPTS = 3
+
+# The agent job in the control plane's own workflow.
+AGENT_JOB = "agent"
 
 # The agent job's own permissions, used as the fallback when the
 # workflow YAML cannot be read. The workflow injects the real set, so
@@ -395,3 +413,118 @@ def build_prompt(
         )
 
     return "\n".join(section.strip() for section in sections) + "\n"
+
+
+def load_trigger(path: str | Path) -> Trigger:
+    """
+    Rebuild a trigger from the preflight job's resolved record.
+
+    A missing or unreadable file yields an empty trigger rather than
+    raising: the prompt is still renderable, and an empty task is
+    visible in the output instead of crashing the step.
+    """
+
+    payload: Any = {}
+
+    file = Path(path)
+
+    if file.is_file():
+        try:
+            payload = json.loads(
+                file.read_text(encoding="utf-8", errors="replace")
+            )
+        except json.JSONDecodeError:
+            payload = {}
+
+    if not isinstance(payload, dict):
+        payload = {}
+
+    return Trigger(
+        kind=str(payload.get("kind", "unknown")),
+        task=str(payload.get("task", "")),
+        instruction=str(payload.get("instruction", "")),
+        issue_number=payload.get("issue_number"),
+        issue_title=str(payload.get("issue_title", "")),
+        actor=str(payload.get("actor", "")),
+        prior_context=str(payload.get("prior_context", "")),
+        branch=str(payload.get("branch", "")),
+    )
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Render the task prompt for a resolved trigger."
+    )
+
+    parser.add_argument("--trigger", required=True)
+    parser.add_argument("--out", required=True)
+    parser.add_argument("--workflow", default="run-python-worker.yml")
+    parser.add_argument("--ref", default="")
+    parser.add_argument(
+        "--permissions-file",
+        default="",
+        help=(
+            "Control plane workflow to read the agent job's granted "
+            "permissions from. Without it the documented default is "
+            "used."
+        ),
+    )
+    parser.add_argument(
+        "--job",
+        default=AGENT_JOB,
+        help="Job whose permissions describe this run.",
+    )
+    parser.add_argument(
+        "--max-attempts", type=int, default=MAX_REPAIR_ATTEMPTS
+    )
+
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    """
+    Write the prompt for the resolved trigger.
+
+    Two facts are read rather than assumed: the grant comes from the
+    control plane's own workflow, and the workflow-file boundary comes
+    from whether this run has the external credential. Nothing here
+    reads, logs or writes a credential value.
+    """
+
+    args = build_parser().parse_args(argv)
+
+    trigger = load_trigger(args.trigger)
+
+    granted = (
+        permissions_from_workflow(args.permissions_file, job=args.job)
+        if args.permissions_file
+        else ()
+    )
+
+    armed = credential_armed()
+
+    prompt = build_prompt(
+        trigger,
+        workflow=args.workflow,
+        ref=args.ref or trigger.branch or "main",
+        max_attempts=args.max_attempts,
+        permissions=granted,
+        workflow_credential=armed,
+    )
+
+    Path(args.out).write_text(prompt, encoding="utf-8")
+
+    described = ", ".join(granted) or "documented default"
+
+    print(f"Prompt written for {trigger.kind} task.")
+    print(f"PROMPT_PERMISSIONS={described}")
+    print(
+        "PROMPT_WORKFLOW_CREDENTIAL="
+        + ("armed" if armed else "absent")
+    )
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

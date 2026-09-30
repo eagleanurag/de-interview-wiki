@@ -38,6 +38,14 @@ from typing import Callable, Mapping
 # secret everywhere it might be echoed.
 PUSH_TOKEN_ENV = "AGENT_PUSH_TOKEN"
 
+# A boolean, not the value. A step that only needs to know *whether*
+# the owner supplied a credential takes this instead, filled by the
+# workflow from `${{ secrets.OPENCODE_AGENT_TOKEN != '' }}`, so the
+# credential itself stays confined to the step that hands it to git.
+CREDENTIAL_ARMED_ENV = "AGENT_CREDENTIAL_ARMED"
+
+_TRUTHY = frozenset({"true", "1", "yes", "on"})
+
 ASKPASS_ENV = "GIT_ASKPASS"
 TERMINAL_PROMPT_ENV = "GIT_TERMINAL_PROMPT"
 
@@ -138,6 +146,24 @@ def resolve_push_token(
     source = os.environ if environ is None else environ
 
     return (source.get(PUSH_TOKEN_ENV) or "").strip()
+
+
+def credential_armed(environ: Mapping[str, str] | None = None) -> bool:
+    """
+    Whether this run has an external push credential configured.
+
+    Read from the boolean flag rather than from the credential, so the
+    prompt can state the real workflow-file boundary without any step
+    that renders text ever holding the secret. An unset flag, an
+    empty one and an unreadable value are all "not armed": a prompt
+    must never promise a push the job cannot make.
+    """
+
+    source = os.environ if environ is None else environ
+
+    return (source.get(CREDENTIAL_ARMED_ENV) or "").strip().lower() in (
+        _TRUTHY
+    )
 
 
 def write_askpass_helper(git_dir: str | Path) -> Path:

@@ -13,6 +13,7 @@ the suite is deterministic and fast.
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -2086,18 +2087,101 @@ def test_concurrency_is_per_issue_and_never_cancels(workflow):
 
 
 def test_agent_permissions_are_scoped(workflow):
+    """
+    The agent job's grant is exactly the six scopes the task contract
+    needs, each one named. A bare `write-all` would be broader than the
+    contract and broader than any task in it, and it would silently
+    widen whenever GitHub adds a scope, so the grant is enumerated.
+    """
+
     permissions = workflow["jobs"]["agent"]["permissions"]
 
     assert permissions == {
         "contents": "write",
         "issues": "write",
         "actions": "write",
+        "pull-requests": "write",
+        "checks": "write",
+        "statuses": "write",
     }
 
     # Pages permissions must never appear here.
     assert "pages" not in permissions
     assert "id-token" not in permissions
 
+
+def test_no_job_asks_for_write_all(workflow):
+    """`write-all` is a grant of everything, including what no task needs."""
+
+    for job_name, job in workflow["jobs"].items():
+        permissions = job.get("permissions") or {}
+
+        assert "write-all" not in permissions, job_name
+        assert "read-all" not in permissions, job_name
+
+
+def test_the_prompt_names_the_scopes_the_job_actually_holds(workflow):
+    """
+    The prompt is built from the grant read out of the workflow, so a
+    scope the job does not hold can never be advertised, and a scope it
+    does hold is never left out of the contract.
+    """
+
+    granted = prompt.permissions_from_workflow(WORKFLOW)
+
+    assert set(granted) == {
+        f"{scope}: {level}"
+        for scope, level in workflow["jobs"]["agent"][
+            "permissions"
+        ].items()
+    }
+
+    # The contract offers pull-request and check/status work, so the
+    # grant has to cover it or the offer is a lie.
+    for scope in ("pull-requests: write", "checks: write", "statuses: write"):
+        assert scope in granted, scope
+
+    text = prompt.build_prompt(
+        build_trigger(),
+        workflow="run-python-worker.yml",
+        permissions=granted,
+    )
+
+    assert f"carries:\n{', '.join(sorted(granted))}" in text
+
+
+def test_the_agent_definition_matches_the_workflow_grant():
+    """
+    Three places state what the token holds: the workflow block, the
+    prompt's documented fallback and the agent definition. They are one
+    statement written three times, so a test keeps them from drifting
+    apart, which is how the first false claim about
+    `workflows: write` got into the agent definition in the first
+    place.
+    """
+
+    granted = set(prompt.permissions_from_workflow(WORKFLOW))
+
+    # The prompt's documented fallback is the real grant.
+    assert set(prompt.DEFAULT_TOKEN_PERMISSIONS) == granted
+
+    text = " ".join(
+        agent_file_path(REPO_ROOT).read_text(encoding="utf-8").split()
+    )
+
+    sentence = text.split(
+        "The `GITHUB_TOKEN` in this job carries ", 1
+    )[1].split(".", 1)[0]
+
+    listed = {
+        item.strip("`") for item in re.findall(r"`([^`]+)`", sentence)
+    }
+
+    assert listed == granted
+
+    # Nothing beyond the grant, and no scope that cannot exist.
+    assert "workflows: write" not in text
+    assert "pages: write" not in text
 
 
 def test_agent_grants_no_unrelated_permissions(workflow):
@@ -2143,9 +2227,13 @@ def test_only_the_agent_job_holds_write_permissions(workflow):
 
     report = workflow["jobs"]["report"]["permissions"]
 
+    # It posts the report and reads the validation run's failing-step
+    # logs, so it needs exactly those two and nothing more.
     assert set(report) <= {"contents", "issues", "actions"}
     assert report.get("issues") == "write"
     assert report.get("contents", "read") == "read"
+    assert report.get("actions") == "read"
+    assert "write" not in report.get("actions")
     assert "workflows" not in report
     assert "pull-requests" not in report
 
@@ -2386,6 +2474,320 @@ def test_readme_documents_the_manual_configuration():
     assert "repository only" in readme
 
 
+# ---------------------------------------------------------------------
+# How the credential is handed to the control plane
+# ---------------------------------------------------------------------
+
+
+def test_the_push_token_reaches_only_the_step_that_pushes(workflow):
+    """
+    The value is scoped to the one step that hands it to git. A secret
+    on the job, on the workflow, or on an earlier step would widen its
+    reach to every command in the run, including any command the agent
+    itself runs.
+    """
+
+    holders = {
+        job_name: [
+            step.get("name")
+            for step in job.get("steps", [])
+            if credentials.PUSH_TOKEN_ENV in (step.get("env") or {})
+        ]
+        for job_name, job in workflow["jobs"].items()
+        if any(
+            credentials.PUSH_TOKEN_ENV in (step.get("env") or {})
+            for step in job.get("steps", [])
+        )
+    }
+
+    assert holders == {"agent": ["Run OpenCode and validate"]}
+
+    source = WORKFLOW.read_text(encoding="utf-8")
+
+    # The value is bound to exactly one variable name.
+    assert source.count("secrets.OPENCODE_AGENT_TOKEN }}") == 1
+
+    # And never used anywhere but that binding: not in a shell script,
+    # not in a condition, not in an output.
+    assert "secrets.OPENCODE_AGENT_TOKEN }}" not in "\n".join(
+        step.get("run", "")
+        for job in workflow["jobs"].values()
+        for step in job.get("steps", [])
+    )
+
+
+def test_the_prompt_step_learns_only_whether_a_credential_exists(workflow):
+    """
+    The prompt has to state the real workflow-file boundary, which
+    needs to know whether the run has a credential. It gets a boolean
+    derived from the secret's presence, so the step that renders text
+    never holds the value.
+    """
+
+    step = next(
+        step
+        for step in workflow["jobs"]["agent"]["steps"]
+        if step.get("name") == "Build task prompt"
+    )
+
+    armed = step["env"][credentials.CREDENTIAL_ARMED_ENV]
+
+    assert "secrets.OPENCODE_AGENT_TOKEN" in armed
+    assert "!=" in armed
+    assert armed.strip() == "${{ secrets.OPENCODE_AGENT_TOKEN != '' }}"
+
+    # The value itself must not be in that step.
+    assert credentials.PUSH_TOKEN_ENV not in step["env"]
+
+
+def test_the_prompt_step_reads_the_grant_from_the_control_plane(workflow):
+    """
+    Reading the grant out of the workflow is the only way the prompt
+    can describe the real one. This was the difference between a
+    control plane and a document that could be wrong about itself.
+    """
+
+    step = next(
+        step
+        for step in workflow["jobs"]["agent"]["steps"]
+        if step.get("name") == "Build task prompt"
+    )
+
+    assert "src.agent.prompt" in step["run"]
+    assert (
+        "--permissions-file .github/workflows/opencode-agent.yml"
+        in step["run"]
+    )
+
+
+def test_the_armed_flag_is_read_from_the_environment_only():
+    """
+    A boolean, never a value. Anything else in the variable, including
+    a credential pasted into it, is treated as "not armed", so a
+    mistake cannot turn into a claim that the job can do something it
+    cannot.
+    """
+
+    for value in ("true", "TRUE", " true ", "1", "yes", "on"):
+        assert credentials.credential_armed(
+            {credentials.CREDENTIAL_ARMED_ENV: value}
+        ) is True, value
+
+    for value in ("", "   ", "false", "0", "no", "maybe", None):
+        assert credentials.credential_armed(
+            {credentials.CREDENTIAL_ARMED_ENV: value}
+        ) is False, value
+
+    assert credentials.credential_armed({}) is False
+
+
+def test_the_armed_flag_is_not_a_credential(monkeypatch):
+    """
+    A secret-shaped value must not be promoted to a claim. The flag is
+    read for its boolean meaning, so a token dropped into it reads as
+    absent rather than as an armed run.
+    """
+
+    token = CREDENTIAL_FIXTURES["github_fine_grained"]
+
+    monkeypatch.setenv(credentials.CREDENTIAL_ARMED_ENV, token)
+
+    assert credentials.credential_armed() is False
+    assert token not in prompt.build_prompt(
+        build_trigger(),
+        workflow="run-python-worker.yml",
+        workflow_credential=credentials.credential_armed(),
+    )
+
+
+# ---------------------------------------------------------------------
+# The prompt-building step
+# ---------------------------------------------------------------------
+
+
+def trigger_record(tmp_path, **overrides) -> Path:
+    """A resolved trigger as the preflight job writes it."""
+
+    payload = {
+        "kind": events.TRIGGER_ISSUE,
+        "task": "add a health check script",
+        "instruction": "",
+        "issue_number": 12,
+        "issue_title": "add a health check script",
+        "actor": "owner",
+        "prior_context": "",
+        "branch": "",
+    }
+    payload.update(overrides)
+
+    record = tmp_path / "trigger.json"
+    record.write_text(json.dumps(payload), encoding="utf-8")
+
+    return record
+
+
+def test_the_prompt_step_states_the_real_grant(tmp_path, monkeypatch):
+    """
+    End to end through the module the workflow runs: the prompt on
+    disk names the six scopes the control plane actually grants, and
+    the workflow-file boundary matches the run's credential state.
+    """
+
+    out = tmp_path / "agent-prompt.md"
+
+    monkeypatch.setenv(credentials.CREDENTIAL_ARMED_ENV, "true")
+
+    assert (
+        prompt.main(
+            [
+                "--trigger", str(trigger_record(tmp_path)),
+                "--workflow", "run-python-worker.yml",
+                "--ref", "main",
+                "--permissions-file", str(WORKFLOW),
+                "--out", str(out),
+            ]
+        )
+        == 0
+    )
+
+    text = out.read_text(encoding="utf-8")
+
+    for scope in prompt.permissions_from_workflow(WORKFLOW):
+        assert scope in text, scope
+
+    assert "external repository credential armed for git" in text
+    assert "no external repository credential" not in text
+
+
+def test_the_prompt_step_reports_an_unarmed_run_honestly(
+    tmp_path, monkeypatch
+):
+    """
+    Without the secret the prompt must not promise a workflow-file
+    push, and must name the configuration that would authorize it.
+    """
+
+    out = tmp_path / "agent-prompt.md"
+
+    monkeypatch.delenv(credentials.CREDENTIAL_ARMED_ENV, raising=False)
+
+    prompt.main(
+        [
+            "--trigger", str(trigger_record(tmp_path)),
+            "--workflow", "run-python-worker.yml",
+            "--permissions-file", str(WORKFLOW),
+            "--out", str(out),
+        ]
+    )
+
+    text = out.read_text(encoding="utf-8")
+
+    assert "no external repository credential" in text
+    assert "credential armed for git" not in text
+    assert "OPENCODE_AGENT_TOKEN" in text
+
+
+def test_the_prompt_step_falls_back_to_the_documented_grant(
+    tmp_path, monkeypatch
+):
+    """
+    An unreadable control plane must not leave the prompt without a
+    permission list, and must not invent one either.
+    """
+
+    out = tmp_path / "agent-prompt.md"
+
+    monkeypatch.setenv(credentials.CREDENTIAL_ARMED_ENV, "true")
+
+    prompt.main(
+        [
+            "--trigger", str(trigger_record(tmp_path)),
+            "--workflow", "run-python-worker.yml",
+            "--permissions-file", str(tmp_path / "absent.yml"),
+            "--out", str(out),
+        ]
+    )
+
+    text = out.read_text(encoding="utf-8")
+
+    for scope in prompt.DEFAULT_TOKEN_PERMISSIONS:
+        assert scope in text, scope
+
+
+def test_a_missing_trigger_record_still_renders(tmp_path, monkeypatch):
+    """
+    The step must fail loudly enough to be noticed in its output, not
+    by raising on a missing key and losing the run.
+    """
+
+    out = tmp_path / "agent-prompt.md"
+
+    monkeypatch.setenv(credentials.CREDENTIAL_ARMED_ENV, "true")
+
+    assert (
+        prompt.main(
+            [
+                "--trigger", str(tmp_path / "absent.json"),
+                "--workflow", "run-python-worker.yml",
+                "--out", str(out),
+            ]
+        )
+        == 0
+    )
+
+    assert out.read_text(encoding="utf-8")
+
+
+def test_a_corrupt_trigger_record_is_not_fatal(tmp_path, monkeypatch):
+    record = tmp_path / "trigger.json"
+    record.write_text("{not json", encoding="utf-8")
+
+    out = tmp_path / "agent-prompt.md"
+
+    monkeypatch.setenv(credentials.CREDENTIAL_ARMED_ENV, "true")
+
+    assert (
+        prompt.main(
+            [
+                "--trigger", str(record),
+                "--workflow", "run-python-worker.yml",
+                "--out", str(out),
+            ]
+        )
+        == 0
+    )
+
+    trigger = prompt.load_trigger(record)
+
+    assert trigger.kind == "unknown"
+    assert trigger.task == ""
+
+
+def test_the_prompt_step_prefers_the_resolved_ref(tmp_path, monkeypatch):
+    """
+    Validation runs against the branch the task was authorized on, so
+    an unset ref must not silently become the default branch when the
+    trigger already names one.
+    """
+
+    out = tmp_path / "agent-prompt.md"
+
+    monkeypatch.setenv(credentials.CREDENTIAL_ARMED_ENV, "true")
+
+    prompt.main(
+        [
+            "--trigger",
+            str(trigger_record(tmp_path, branch="release/9")),
+            "--workflow", "run-python-worker.yml",
+            "--out", str(out),
+        ]
+    )
+
+    text = out.read_text(encoding="utf-8")
+
+    assert "gh workflow run run-python-worker.yml --ref release/9" in text
+
+
 def test_a_refused_workflow_push_asks_for_the_credential(
     tmp_path, monkeypatch
 ):
@@ -2441,9 +2843,20 @@ def test_the_agent_environment_carries_askpass_only_when_armed(
     """
     An absent credential must not change how the agent authenticates,
     and a present one must reach git without being copied anywhere.
+
+    The runner's own askpass variables are cleared first. This suite
+    runs inside a control-plane job, and that job arms git with an
+    askpass helper of its own, so an inherited variable would make the
+    "absent" case look armed. The assertion is about what
+    `push_environment` contributes, not about the surrounding shell.
     """
 
-    monkeypatch.delenv(credentials.PUSH_TOKEN_ENV, raising=False)
+    for name in (
+        credentials.PUSH_TOKEN_ENV,
+        credentials.ASKPASS_ENV,
+        credentials.TERMINAL_PROMPT_ENV,
+    ):
+        monkeypatch.delenv(name, raising=False)
 
     unarmed = credentials.arm_push_authentication(
         repository_root=tmp_path,

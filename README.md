@@ -344,10 +344,25 @@ Permissions granted to the agent job:
 | `contents: write` | push the agent's commit |
 | `issues: write` | post the task report |
 | `actions: write` | dispatch and read the validation run |
+| `pull-requests: write` | the pull-request work the task contract offers |
+| `checks: write` | publish the check run a task may report against |
+| `statuses: write` | publish a commit status |
+
+The report job is narrower still: `contents: read`, `issues: write`
+and `actions: read`, the last one so it can actually fetch the failing
+validation logs it reports. The preflight job holds `contents: read`
+and `issues: read` only and can never write. There is no `write-all`
+anywhere, and each grant is deliberate, because a job-level
+`permissions` block replaces the top-level one rather than merging
+with it.
 
 Pages deployment permissions (`pages: write`, `id-token: write`) stay
 exclusively in the existing `Run Python Workers` workflow. The agent
 cannot deploy Pages and cannot modify that workflow's permissions.
+
+The grant is also read back out of the workflow when the prompt is
+built, so the prompt tells the agent what its token really holds
+instead of a list that can drift away from the control plane.
 
 ### The workflow-file boundary
 
@@ -370,10 +385,11 @@ and the same refusal happens when git authenticates through an askpass
 helper instead of the checkout credential, so the limit is
 authorization rather than authentication method.
 
-**Manual configuration required (once, by the repository owner).** The
+**Manual configuration, done once by the repository owner.** The
 control plane reads an optional external credential from the
 `AGENT_PUSH_TOKEN` environment variable, which the workflow fills from
-the `OPENCODE_AGENT_TOKEN` repository secret:
+the `OPENCODE_AGENT_TOKEN` repository secret. It is currently
+configured; recreate it if it is ever removed, using:
 
 1. Create a fine-grained personal access token: **Settings →
    Developer settings → Personal access tokens → Fine-grained
@@ -399,6 +415,12 @@ contains no secret and reads the environment variable at call time; the
 helper lives in `.git/`, which is never committed. The environment
 variable name contains `TOKEN`, so the existing redaction helpers
 scrub the value from agent logs and artifacts as well.
+
+Only the step that hands the credential to git receives the value. The
+step that builds the prompt receives
+`${{ secrets.OPENCODE_AGENT_TOKEN != '' }}` instead, a boolean, so the
+prompt can state the real workflow-file boundary without any step that
+renders text ever holding the secret.
 
 ### OpenCode execution
 

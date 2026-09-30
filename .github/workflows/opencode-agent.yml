@@ -210,6 +210,16 @@ jobs:
       issues: write
       # Required to dispatch and read the validation workflow.
       actions: write
+      # Required for the pull-request work the task contract offers.
+      pull-requests: write
+      # Required to publish the check run or commit status a task may
+      # report against.
+      checks: write
+      statuses: write
+      # Everything else stays off: no write-all, no deployments, no
+      # packages, no pages, no id-token. The push of a file under
+      # .github/workflows/ is authorized by the external credential
+      # below, not by any scope in this block.
 
     outputs:
       status: ${{ steps.result.outputs.status }}
@@ -267,53 +277,36 @@ jobs:
           node --version
           gh --version | head -n 1
 
+      # The prompt tells the agent what its token really holds, so the
+      # grant is read out of this file instead of being restated, and
+      # the workflow-file boundary is stated from the credential the
+      # run actually has.
       - name: Build task prompt
         id: prompt
         env:
           WORKFLOW: run-python-worker.yml
           REF: ${{ needs.preflight.outputs.ref }}
+          # A boolean derived from the secret's presence, never the
+          # value: this step only needs to know whether a credential
+          # exists, so it never holds the credential itself.
+          AGENT_CREDENTIAL_ARMED: ${{ secrets.OPENCODE_AGENT_TOKEN != '' }}
         run: |
-          python - <<'PY'
-          import json
-          import os
-
-          from src.agent.events import Trigger
-          from src.agent.prompt import build_prompt
-
-          with open(
-              ".agent/trigger.json", encoding="utf-8"
-          ) as handle:
-              payload = json.load(handle)
-
-          trigger = Trigger(
-              kind=payload["kind"],
-              task=payload["task"],
-              instruction=payload["instruction"],
-              issue_number=payload["issue_number"],
-              issue_title=payload["issue_title"],
-              actor=payload["actor"],
-              prior_context=payload["prior_context"],
-              branch=payload.get("branch", ""),
-          )
-
-          prompt = build_prompt(
-              trigger,
-              workflow=os.environ["WORKFLOW"],
-              ref=os.environ.get("REF") or "main",
-          )
-
-          with open(
-              "agent-prompt.md", "w", encoding="utf-8"
-          ) as handle:
-              handle.write(prompt)
-
-          print(f"Prompt written for {trigger.kind} task.")
-          PY
+          python -m src.agent.prompt \
+            --trigger .agent/trigger.json \
+            --workflow "${WORKFLOW}" \
+            --ref "${REF}" \
+            --permissions-file .github/workflows/opencode-agent.yml \
+            --out agent-prompt.md
 
       - name: Run OpenCode and validate
         id: result
         env:
           GH_TOKEN: ${{ github.token }}
+          # Optional external repository credential. The control plane
+          # never reads the value: git authenticates through an askpass
+          # helper that holds no secret and reads this variable at call
+          # time. Without it the built-in token is used unchanged and
+          # a workflow-file push is refused.
           AGENT_PUSH_TOKEN: ${{ secrets.OPENCODE_AGENT_TOKEN }}
           # Read by the redaction helpers so a credential echoed by a
           # tool can never reach an issue comment or an artifact.
@@ -369,6 +362,8 @@ jobs:
     permissions:
       contents: read
       issues: write
+      # Required to read the validation run and its failing-step logs.
+      actions: read
 
     steps:
       - name: Checkout repository
