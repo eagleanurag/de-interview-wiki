@@ -24,6 +24,8 @@ from pathlib import Path
 
 from src.agent.events import Trigger
 from src.agent.reporting import (
+    STATUS_FAILED,
+    TASK_STATUSES,
     ReportContext,
     TaskOutcome,
     build_job_summary,
@@ -95,14 +97,22 @@ def outcome_from_dict(
 
     A missing or unreadable file yields an honest FAILED outcome rather
     than an optimistic guess, so a missing file can never be reported
-    as a success.
+    as a success. The status is also rejected when it is not a status
+    the control plane can actually produce, so a corrupted or
+    hand-edited attempt file cannot claim SUCCESS either.
     """
 
     status = str(payload.get("status") or "FAILED")
 
+    if status not in TASK_STATUSES:
+        status = STATUS_FAILED
+
     return TaskOutcome(
         status=status,
-        commit_sha=str(payload.get("head_sha") or ""),
+        reason=str(payload.get("reason") or payload.get("error") or ""),
+        commit_sha=str(payload.get("head_sha") or "")
+        if payload.get("commit_created", True)
+        else "",
         tests=str(payload.get("tests") or "not recorded"),
         validation_run=str(payload.get("validation_run") or ""),
         validation_url=str(payload.get("validation_url") or ""),

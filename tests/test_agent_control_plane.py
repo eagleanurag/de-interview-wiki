@@ -19,8 +19,11 @@ from pathlib import Path
 import pytest
 
 from src.agent import ci, events, prompt, redaction, reporting
+from src.agent import run_agent as run_agent_module
+from src.agent import verdict as verdict_module
 from src.agent.opencode import (
     OpenCodeError,
+    OpenCodeResult,
     OpenCodeRunner,
     agent_file_path,
     extract_final_text,
@@ -32,6 +35,18 @@ from src.agent.preflight import (
     trigger_to_dict,
 )
 from src.agent.report import outcome_from_dict, trigger_from_dict
+from src.agent.verdict import (
+    PUSH_NOT_PUSHED,
+    PUSH_PUSHED,
+    PUSH_UNKNOWN,
+    STATUS_DIRTY_NO_COMMIT,
+    STATUS_FAILED,
+    STATUS_NO_CHANGES,
+    STATUS_PUSH_FAILED,
+    STATUS_PUSH_UNVERIFIED,
+    STATUS_SUCCESS,
+    classify_task,
+)
 from src.agent import issue_context
 
 
@@ -2025,3 +2040,629 @@ def test_agent_runs_the_control_plane_modules(workflow):
 
 def test_agent_has_a_timeout(workflow):
     assert workflow["jobs"]["agent"]["timeout-minutes"] == 180
+
+
+# ---------------------------------------------------------------------
+# Verdict: a clean agent exit is not evidence of a delivered task
+# ---------------------------------------------------------------------
+
+
+def classify(**overrides):
+    """A successful, committed and pushed attempt by default."""
+
+    arguments = {
+        "agent_succeeded": True,
+        "start_sha": "aaa",
+        "head_sha": "bbb",
+        "dirty_files": [],
+        "push_state": PUSH_PUSHED,
+        "tests_passed": True,
+    }
+    arguments.update(overrides)
+
+    return classify_task(**arguments)
+
+
+def test_implemented_committed_and_pushed_is_a_success():
+    verdict = classify()
+
+    assert verdict.status == STATUS_SUCCESS
+    assert verdict.is_success
+    assert verdict.commit_created is True
+    assert verdict.is_recoverable is False
+    assert verdict.human_action == "none"
+
+
+def test_read_only_task_with_no_changes_is_distinct_from_success():
+    """
+    A task that legitimately changes nothing is a success, but it is
+    not the same claim as "implemented, committed and pushed", so it
+    must never be reported as a bare SUCCESS.
+    """
+
+    verdict = classify(head_sha="aaa", push_state=PUSH_UNKNOWN)
+
+    assert verdict.status == STATUS_NO_CHANGES
+    assert verdict.is_success
+    assert verdict.commit_created is False
+    assert verdict.status != STATUS_SUCCESS
+
+
+def test_uncommitted_changes_are_never_a_success():
+    """
+    Regression guard for the first end-to-end run: the agent created
+    the ingestion layer, left it uncommitted in the working tree, and
+    the report said SUCCESS with PUSHED=False.
+
+    An exit code of 0 must not be able to claim success for work that
+    exists only on the runner.
+    """
+
+    verdict = classify(
+        head_sha="aaa",
+        dirty_files=[
+            "src/ingestion/importer.py",
+            "tests/test_ingestion.py",
+        ],
+        push_state=PUSH_UNKNOWN,
+    )
+
+    assert verdict.status == STATUS_DIRTY_NO_COMMIT
+    assert not verdict.is_success
+    assert verdict.is_recoverable
+    assert "src/ingestion/importer.py" in verdict.reason
+    assert "never committed" in verdict.human_action.lower()
+
+
+def test_dirty_tree_wins_over_a_pushed_commit():
+    """
+    A pushed commit plus leftover junk is still not a clean delivery,
+    and the report must say which files are uncommitted.
+    """
+
+    verdict = classify(dirty_files=["site/"])
+
+    assert verdict.status == STATUS_DIRTY_NO_COMMIT
+    assert verdict.dirty_files == ("site/",)
+
+
+def test_a_dirty_tree_reports_the_right_remedy():
+    """
+    The remedy differs depending on whether anything was committed, and
+    the report must not tell the reader that nothing was committed when
+    a commit did land.
+    """
+
+    uncommitted = classify(
+        head_sha="aaa",
+        dirty_files=["src/a.py"],
+        push_state=PUSH_UNKNOWN,
+    )
+    partial = classify(
+        dirty_files=["src/a.py"], push_state=PUSH_PUSHED
+    )
+
+    assert "never committed" in uncommitted.human_action
+    assert "only on this runner" in uncommitted.reason
+
+    assert "Commit the remaining changes" in partial.human_action
+    assert "not clean" in partial.reason
+    assert partial.commit_created is True
+
+
+def test_commit_without_a_push_is_not_a_success():
+    verdict = classify(push_state=PUSH_NOT_PUSHED)
+
+    assert verdict.status == STATUS_PUSH_FAILED
+    assert not verdict.is_success
+    assert verdict.commit_created is True
+    assert "not on the remote branch" in verdict.reason
+
+
+def test_unverifiable_push_is_not_a_success():
+    verdict = classify(push_state=PUSH_UNKNOWN)
+
+    assert verdict.status == STATUS_PUSH_UNVERIFIED
+    assert not verdict.is_success
+    assert "could not be verified" in verdict.reason
+
+
+def test_failed_agent_is_not_a_success_even_when_pushed():
+    verdict = classify(agent_succeeded=False)
+
+    assert verdict.status == STATUS_FAILED
+    assert not verdict.is_success
+
+
+def test_timed_out_agent_is_not_a_success():
+    verdict = classify(agent_succeeded=False, agent_timed_out=True)
+
+    assert verdict.status == STATUS_FAILED
+    assert "time limit" in verdict.reason
+
+
+def test_a_red_test_suite_is_not_a_success():
+    """
+    A commit can be pushed and still be wrong. The suite is run by the
+    control plane precisely so a broken attempt is never reported as
+    delivered work.
+    """
+
+    assert classify(tests_passed=False).status == STATUS_FAILED
+    assert (
+        classify(
+            head_sha="aaa", push_state=PUSH_UNKNOWN, tests_passed=False
+        ).status
+        == STATUS_FAILED
+    )
+
+
+def test_every_failure_status_is_distinct():
+    statuses = {
+        classify().status,
+        classify(head_sha="aaa", push_state=PUSH_UNKNOWN).status,
+        classify(dirty_files=["a"]).status,
+        classify(push_state=PUSH_NOT_PUSHED).status,
+        classify(push_state=PUSH_UNKNOWN).status,
+        classify(agent_succeeded=False).status,
+    }
+
+    assert len(statuses) == 6
+
+
+def test_only_real_successes_are_marked_successful():
+    successful = {
+        classify().status,
+        classify(head_sha="aaa", push_state=PUSH_UNKNOWN).status,
+    }
+
+    assert successful == {STATUS_SUCCESS, STATUS_NO_CHANGES}
+    assert STATUS_SUCCESS not in {
+        classify(dirty_files=["a"]).status,
+        classify(push_state=PUSH_NOT_PUSHED).status,
+        classify(push_state=PUSH_UNKNOWN).status,
+        classify(agent_succeeded=False).status,
+    }
+
+
+def test_reporting_uses_the_verdict_statuses():
+    """
+    The report must not be able to describe an outcome the classifier
+    does not produce.
+    """
+
+    assert reporting.STATUS_SUCCESS == STATUS_SUCCESS
+    assert STATUS_DIRTY_NO_COMMIT in reporting.TASK_STATUSES
+    assert STATUS_PUSH_FAILED in reporting.TASK_STATUSES
+    assert STATUS_PUSH_UNVERIFIED in reporting.TASK_STATUSES
+
+
+def test_report_renders_the_reason():
+    outcome = reporting.TaskOutcome(
+        status=STATUS_DIRTY_NO_COMMIT,
+        reason="2 file(s) are still uncommitted.",
+        human_action="Re-run the task.",
+    )
+
+    text = reporting.build_report(
+        make_context(outcome=outcome)
+    )
+
+    assert "Status: DIRTY_NO_COMMIT" in text
+    assert "2 file(s) are still uncommitted." in text
+    assert "Re-run the task." in text
+
+
+def test_job_summary_renders_the_reason():
+    outcome = reporting.TaskOutcome(
+        status=STATUS_PUSH_FAILED,
+        reason="the commit is not on the remote branch",
+    )
+
+    text = reporting.build_job_summary(
+        make_context(outcome=outcome)
+    )
+
+    assert "**Why:**" in text
+    assert "not on the remote branch" in text
+
+
+def test_an_unusable_status_cannot_be_reported():
+    """
+    A corrupted or hand-edited attempt file must not be able to claim
+    SUCCESS by writing an arbitrary status.
+    """
+
+    outcome = outcome_from_dict({"status": "totally fine"})
+
+    assert outcome.status == STATUS_FAILED
+    assert not outcome.is_success
+
+
+def test_the_report_keeps_the_verdict_reason(tmp_path):
+    outcome = outcome_from_dict(
+        {
+            "status": STATUS_DIRTY_NO_COMMIT,
+            "reason": "2 file(s) are still uncommitted.",
+            "head_sha": "abc1234",
+            "human_action": "Re-run the task.",
+        }
+    )
+
+    assert outcome.reason == "2 file(s) are still uncommitted."
+    assert outcome.human_action == "Re-run the task."
+    assert not outcome.is_success
+
+
+def test_a_verdict_without_a_commit_records_no_commit(tmp_path):
+    outcome = outcome_from_dict(
+        {
+            "status": STATUS_NO_CHANGES,
+            "head_sha": "abc1234",
+            "commit_created": False,
+        }
+    )
+
+    assert outcome.commit_sha == ""
+
+
+# ---------------------------------------------------------------------
+# run_agent wiring: the reported bug itself
+# ---------------------------------------------------------------------
+
+
+class FakeValidationController:
+    """Records what the agent tried to dispatch."""
+
+    def __init__(self, *args, **kwargs) -> None:
+        self.triggers: list[str] = []
+        self.searched: list[str] = []
+        self.run = None
+
+    def trigger(self) -> str:
+        self.triggers.append("triggered")
+        return "ok"
+
+    def find_run_for_commit(self, commit_sha: str):
+        self.searched.append(commit_sha)
+        return self.run
+
+
+def write_trigger_and_prompt(tmp_path: Path) -> tuple[str, str]:
+    trigger = tmp_path / "trigger.json"
+    trigger.write_text(
+        json.dumps(
+            {
+                "kind": events.TRIGGER_ISSUE,
+                "task": "build the ingestion layer",
+                "issue_number": 7,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    prompt = tmp_path / "prompt.md"
+    prompt.write_text("do the task", encoding="utf-8")
+
+    return str(trigger), str(prompt)
+
+
+def run_agent_with(
+    tmp_path: Path,
+    monkeypatch,
+    *,
+    start_sha: str = "aaa",
+    head_sha_value: str = "aaa",
+    dirty: list[str] | None = None,
+    push: str = PUSH_UNKNOWN,
+    agent_exit_code: int = 0,
+    tests_passed: bool = True,
+) -> dict:
+    """Run src.agent.run_agent against a faked agent and repository."""
+
+    trigger, prompt = write_trigger_and_prompt(tmp_path)
+    out = tmp_path / "attempt-1.json"
+
+    monkeypatch.chdir(tmp_path)
+
+    # head_sha() is read once before the agent runs and once after, so
+    # a commit exists when the second value differs from the first.
+    shas = iter([start_sha, head_sha_value])
+
+    monkeypatch.setattr(
+        run_agent_module,
+        "head_sha",
+        lambda: next(shas, head_sha_value),
+    )
+    monkeypatch.setattr(
+        run_agent_module,
+        "changed_files",
+        lambda: list(dirty or []),
+    )
+    monkeypatch.setattr(
+        run_agent_module,
+        "last_commit_summary",
+        lambda *args, **kwargs: "bbb add the ingestion layer",
+    )
+    monkeypatch.setattr(
+        run_agent_module,
+        "resolve_push_state",
+        lambda *args, **kwargs: push,
+    )
+    monkeypatch.setattr(
+        run_agent_module,
+        "test_result",
+        lambda: ("PASSED (0)\n311 passed", tests_passed),
+    )
+    monkeypatch.setattr(
+        run_agent_module,
+        "ValidationController",
+        FakeValidationController,
+    )
+    monkeypatch.setattr(
+        run_agent_module.OpenCodeRunner,
+        "run",
+        lambda self, text, continue_session=False: OpenCodeResult(
+            text="I implemented the ingestion layer.",
+            session_id="ses_1",
+            exit_code=agent_exit_code,
+            stdout="",
+            stderr="",
+        ),
+    )
+
+    exit_code = run_agent_module.main(
+        [
+            "--trigger",
+            trigger,
+            "--prompt",
+            prompt,
+            "--out",
+            str(out),
+        ]
+    )
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    payload["_exit_code"] = exit_code
+
+    return payload
+
+
+def test_uncommitted_work_is_never_reported_as_success(
+    tmp_path, monkeypatch
+):
+    """
+    The reported bug, end to end: the agent exits 0, writes the
+    implementation, and never commits it. The attempt file must not
+    say SUCCESS.
+    """
+
+    payload = run_agent_with(
+        tmp_path,
+        monkeypatch,
+        dirty=["src/ingestion/importer.py"],
+    )
+
+    assert payload["status"] == STATUS_DIRTY_NO_COMMIT
+    assert payload["pushed"] is False
+    assert payload["_exit_code"] == 1
+    assert "uncommitted" in payload["reason"]
+    assert payload["recoverable"] is True
+    assert payload["validation_run"] == ""
+
+
+def test_validation_is_not_triggered_for_uncommitted_work(
+    tmp_path, monkeypatch
+):
+    """
+    Dispatching validation for work that never left the runner would
+    validate the previous commit and report it as this task's result.
+    """
+
+    payload = run_agent_with(
+        tmp_path, monkeypatch, dirty=["src/ingestion/importer.py"]
+    )
+
+    assert "no commit was created" in payload["ci_result"]
+
+
+def test_a_pushed_commit_is_reported_as_success(tmp_path, monkeypatch):
+    payload = run_agent_with(
+        tmp_path,
+        monkeypatch,
+        head_sha_value="bbb",
+        push=PUSH_PUSHED,
+    )
+
+    assert payload["status"] == STATUS_SUCCESS
+    assert payload["pushed"] is True
+    assert payload["commit_created"] is True
+    assert payload["head_sha"] == "bbb"
+    assert payload["_exit_code"] == 0
+    assert payload["recoverable"] is False
+
+
+def test_a_local_commit_without_a_push_is_not_a_success(
+    tmp_path, monkeypatch
+):
+    payload = run_agent_with(
+        tmp_path,
+        monkeypatch,
+        head_sha_value="bbb",
+        push=PUSH_NOT_PUSHED,
+    )
+
+    assert payload["status"] == STATUS_PUSH_FAILED
+    assert payload["_exit_code"] == 1
+    assert "not triggered" in payload["ci_result"]
+
+
+def test_a_read_only_task_is_reported_as_no_changes(
+    tmp_path, monkeypatch
+):
+    payload = run_agent_with(tmp_path, monkeypatch)
+
+    assert payload["status"] == STATUS_NO_CHANGES
+    assert payload["commit_created"] is False
+    assert payload["_exit_code"] == 0
+
+
+def test_a_failed_agent_run_is_reported_as_failed(tmp_path, monkeypatch):
+    payload = run_agent_with(
+        tmp_path,
+        monkeypatch,
+        head_sha_value="bbb",
+        push=PUSH_PUSHED,
+        agent_exit_code=1,
+    )
+
+    assert payload["status"] == STATUS_FAILED
+    assert payload["_exit_code"] == 1
+
+
+def test_a_red_suite_is_not_reported_as_success(tmp_path, monkeypatch):
+    payload = run_agent_with(
+        tmp_path,
+        monkeypatch,
+        head_sha_value="bbb",
+        push=PUSH_PUSHED,
+        tests_passed=False,
+    )
+
+    assert payload["status"] == STATUS_FAILED
+    assert payload["tests_passed"] is False
+    assert payload["_exit_code"] == 1
+
+
+def test_a_missing_opencode_binary_is_reported_as_blocked(
+    tmp_path, monkeypatch
+):
+    trigger, prompt = write_trigger_and_prompt(tmp_path)
+    out = tmp_path / "attempt-1.json"
+
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(
+        run_agent_module.OpenCodeRunner,
+        "run",
+        lambda self, text, continue_session=False: (_ for _ in ()).throw(
+            OpenCodeError("Could not locate the opencode executable.")
+        ),
+    )
+
+    assert run_agent_module.main(
+        ["--trigger", trigger, "--prompt", prompt, "--out", str(out)]
+    ) == 1
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+
+    assert payload["status"] == "BLOCKED"
+    assert payload["pushed"] is False
+    assert "Could not locate" in payload["reason"]
+
+
+def test_a_green_suite_is_recorded_as_passing(monkeypatch):
+    """
+    The control plane runs the suite itself so a red attempt cannot be
+    reported as delivered work. It must record the verdict, not just
+    the output.
+    """
+
+    monkeypatch.setattr(
+        run_agent_module.subprocess,
+        "run",
+        lambda *args, **kwargs: FakeCompleted("311 passed in 2s\n", "", 0),
+    )
+
+    summary, passed = run_agent_module.test_result()
+
+    assert passed is True
+    assert summary.startswith("PASSED")
+    assert "311 passed" in summary
+
+
+def test_a_red_suite_is_recorded_as_failing(monkeypatch):
+    monkeypatch.setattr(
+        run_agent_module.subprocess,
+        "run",
+        lambda *args, **kwargs: FakeCompleted("1 failed\n", "", 1),
+    )
+
+    summary, passed = run_agent_module.test_result()
+
+    assert passed is False
+    assert summary.startswith("FAILED")
+
+
+def test_push_state_reads_the_remote_tracking_ref(monkeypatch):
+    """
+    A successful push updates the local remote-tracking ref, so the
+    push can be confirmed without a network call.
+    """
+
+    calls: list[list[str]] = []
+
+    def fake_git(arguments):
+        calls.append(arguments)
+        return FakeCompleted("", "", 0)
+
+    monkeypatch.setattr(verdict_module, "_git", fake_git)
+
+    assert verdict_module.push_state("bbb") == PUSH_PUSHED
+    assert ["merge-base", "--is-ancestor", "bbb", "origin/main"] in calls
+
+
+def test_push_state_reports_a_missing_commit():
+    assert verdict_module.push_state("") == PUSH_UNKNOWN
+
+
+def test_push_state_detects_a_commit_the_remote_lacks(monkeypatch):
+    def fake_git(arguments):
+        if arguments[0] == "merge-base":
+            return FakeCompleted("", "", 1)
+        return FakeCompleted("", "", 0)
+
+    monkeypatch.setattr(verdict_module, "_git", fake_git)
+
+    assert verdict_module.push_state("bbb") == PUSH_NOT_PUSHED
+
+
+def test_push_state_falls_back_to_asking_the_remote(monkeypatch):
+    """
+    When no remote-tracking ref is available, the remote itself is
+    asked, so a push git did not record locally is still recognised.
+    """
+
+    def fake_git(arguments):
+        if arguments[0] == "merge-base" and arguments[-1] == "origin/main":
+            return FakeCompleted("", "", 128)
+
+        if arguments[0] == "ls-remote":
+            return FakeCompleted("bbb\trefs/heads/main\n", "", 0)
+
+        if arguments[0] == "merge-base":
+            return FakeCompleted("", "", 0)
+
+        return FakeCompleted("", "", 0)
+
+    monkeypatch.setattr(verdict_module, "_git", fake_git)
+
+    assert verdict_module.push_state("bbb") == PUSH_PUSHED
+
+
+def test_push_state_is_unknown_without_a_remote(monkeypatch):
+    def fake_git(arguments):
+        return FakeCompleted("", "no such remote", 128)
+
+    monkeypatch.setattr(verdict_module, "_git", fake_git)
+
+    assert verdict_module.push_state("bbb") == PUSH_UNKNOWN
+
+
+def test_is_ancestor_does_not_guess_when_git_fails(monkeypatch):
+    monkeypatch.setattr(
+        verdict_module,
+        "_git",
+        lambda arguments: FakeCompleted("", "boom", 128),
+    )
+
+    assert verdict_module.is_ancestor("a", "b") is None

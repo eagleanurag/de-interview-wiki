@@ -11,12 +11,35 @@ from dataclasses import dataclass, field
 
 from src.agent.events import Trigger
 from src.agent.redaction import redact, truncate_for_comment
+from src.agent.verdict import (
+    STATUS_DIRTY_NO_COMMIT,
+    STATUS_FAILED,
+    STATUS_NO_CHANGES,
+    STATUS_PUSH_FAILED,
+    STATUS_PUSH_UNVERIFIED,
+    STATUS_SUCCESS,
+)
 
 
-STATUS_SUCCESS = "SUCCESS"
+# The outcome statuses are owned by src.agent.verdict, so a report can
+# never describe an outcome the classifier does not produce. These two
+# are report-only, and stay here for their existing importers.
 STATUS_BLOCKED = "BLOCKED"
-STATUS_FAILED = "FAILED"
 STATUS_BLOCKED_BUDGET = "BLOCKED_AFTER_3_ATTEMPTS"
+
+# Every status a task may end in, for validation and rendering.
+TASK_STATUSES = frozenset(
+    {
+        STATUS_SUCCESS,
+        STATUS_NO_CHANGES,
+        STATUS_DIRTY_NO_COMMIT,
+        STATUS_PUSH_FAILED,
+        STATUS_PUSH_UNVERIFIED,
+        STATUS_FAILED,
+        STATUS_BLOCKED,
+        STATUS_BLOCKED_BUDGET,
+    }
+)
 
 MAX_COMMENT_CHARACTERS = 6000
 
@@ -36,11 +59,15 @@ class TaskOutcome:
     files_changed: str = "none recorded"
     summary: str = ""
     human_action: str = "none"
+    reason: str = ""
     failure_evidence: str = ""
 
     @property
     def is_success(self) -> bool:
-        return self.status == STATUS_SUCCESS
+        return self.status in {
+            STATUS_SUCCESS,
+            STATUS_NO_CHANGES,
+        }
 
 
 @dataclass
@@ -76,6 +103,16 @@ def build_report(context: ReportContext) -> str:
         "",
         f"Status: {clean(outcome.status, STATUS_FAILED)}",
         "",
+    ]
+
+    if outcome.reason:
+        lines += [
+            "Why:",
+            _block(clean(outcome.reason, "")),
+            "",
+        ]
+
+    lines += [
         "Task:",
         _block(trigger.summary),
         "",
@@ -152,6 +189,7 @@ def build_job_summary(context: ReportContext) -> str:
 
     rows = [
         ("Status", redact(outcome.status, secrets=secrets)),
+        ("Why", redact(outcome.reason or "not recorded", secrets=secrets)),
         ("Entry mode", trigger.kind),
         ("Issue", str(trigger.issue_number or "n/a")),
         ("Commit", redact(outcome.commit_sha or "none", secrets=secrets)),

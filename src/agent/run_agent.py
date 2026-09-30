@@ -22,7 +22,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from src.agent.ci import ValidationController
+from src.agent.ci import ValidationController, ValidationRun
 from src.agent.opencode import (
     DEFAULT_AGENT,
     DEFAULT_MODEL,
@@ -35,9 +35,18 @@ from src.agent.prompt import MAX_REPAIR_ATTEMPTS, build_prompt
 from src.agent.redaction import redact
 from src.agent.reporting import (
     STATUS_BLOCKED,
-    STATUS_FAILED,
-    STATUS_SUCCESS,
     TaskOutcome,
+)
+from src.agent.verdict import (
+    PUSH_NOT_PUSHED,
+    PUSH_PUSHED,
+    PUSH_UNKNOWN,
+    Verdict,
+    classify_task,
+    dirty_files as changed_files,
+    head_sha,
+    last_commit_summary,
+    push_state as resolve_push_state,
 )
 
 
@@ -103,71 +112,12 @@ def _load_json(path: str) -> dict:
     return payload if isinstance(payload, dict) else {}
 
 
-def head_sha() -> str:
-    completed = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
-        shell=False,
-    )
+def test_result() -> tuple[str, bool]:
+    """Run the project test suite and summarize it.
 
-    return completed.stdout.strip()
-
-
-def changed_files() -> list[str]:
-    """Files the agent changed, as a short list."""
-
-    completed = subprocess.run(
-        ["git", "status", "--porcelain"],
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
-        shell=False,
-    )
-
-    files: list[str] = []
-
-    for line in completed.stdout.splitlines():
-        if len(line) < 4:
-            continue
-
-        path = line[3:].strip()
-
-        if " -> " in path:
-            path = path.split(" -> ", 1)[1]
-
-        if path:
-            files.append(path)
-
-    return files
-
-
-def last_commit_summary(limit: int = 1) -> str:
-    completed = subprocess.run(
-        [
-            "git",
-            "log",
-            f"-{max(1, limit)}",
-            "--pretty=format:%h %s",
-        ],
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
-        shell=False,
-    )
-
-    return completed.stdout.strip()
-
-
-def test_result() -> str:
-    """Run the project test suite and summarize it."""
+    Returns the summary and whether the suite passed, so a red suite
+    can never be reported as a success.
+    """
 
     completed = subprocess.run(
         [sys.executable, "-m", "pytest", "-q"],
@@ -184,9 +134,9 @@ def test_result() -> str:
 
     if completed.returncode != 0:
         failures = (completed.stdout or "")[-4000:]
-        return f"FAILED ({completed.returncode})\n\n{failures}"
+        return f"FAILED ({completed.returncode})\n\n{failures}", False
 
-    return f"PASSED ({completed.returncode})\n{summary}"
+    return f"PASSED ({completed.returncode})\n{summary}", True
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -223,7 +173,15 @@ def main(argv: list[str] | None = None) -> int:
                 {
                     "status": STATUS_BLOCKED,
                     "error": str(exc),
+                    "reason": f"OpenCode could not be run: {exc}",
                     "head_sha": before,
+                    "pushed": False,
+                    "commit_created": False,
+                    "push_state": PUSH_UNKNOWN,
+                    "human_action": (
+                        "OpenCode must be installable on the runner "
+                        "before a task can run."
+                    ),
                     "agent_text": "",
                 },
                 indent=2,
@@ -234,38 +192,54 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     after = head_sha()
-    pushed = after != before and bool(after)
+    files = changed_files()
+    commits = last_commit_summary()
 
-    # Give the remote a moment to see the push before dispatching.
-    if pushed:
+    tests_summary, tests_passed = test_result()
+
+    # Whether the commit actually reached the remote branch, rather
+    # than merely existing in the checkout. A local commit is not a
+    # delivered one, and validation is dispatched on the remote.
+    if after and after != before:
+        push = resolve_push_state(after, ref=args.ref)
+    else:
+        push = PUSH_UNKNOWN
+
+    pushed = push == PUSH_PUSHED
+
+    verdict = classify_task(
+        agent_succeeded=result.succeeded,
+        start_sha=before,
+        head_sha=after,
+        dirty_files=files,
+        push_state=push,
+        tests_passed=tests_passed,
+        agent_timed_out=result.timed_out,
+    )
+
+    # Only a confirmed push may trigger validation: dispatching for a
+    # commit the remote has never seen would validate the previous
+    # commit and report it as this task's result.
+    if verdict.commit_created and pushed:
         try:
             controller.trigger()
             print(f"Triggered {args.workflow} for {after}")
         except Exception as exc:  # noqa: BLE001
             print(f"TRIGGER_FAILED={exc}", file=sys.stderr)
 
-    run = controller.find_run_for_commit(after) if pushed else None
+    run = (
+        controller.find_run_for_commit(after)
+        if verdict.commit_created and pushed
+        else None
+    )
 
-    ci_result = "no commit was created; validation not triggered"
-
-    if run is not None:
-        ci_result = (
-            f"validation run {run.run_id} "
-            f"({run.status}/{run.conclusion or 'pending'})"
-        )
-
-    files = changed_files()
-    commits = last_commit_summary()
-
-    status = STATUS_SUCCESS if result.succeeded else STATUS_FAILED
-
-    if not result.succeeded and not result.text.strip():
-        status = STATUS_FAILED
+    ci_result = _ci_result(verdict, push, after, run)
 
     outcome = TaskOutcome(
-        status=status,
-        commit_sha=after if pushed else "",
-        tests=test_result(),
+        status=verdict.status,
+        reason=verdict.reason,
+        commit_sha=after if verdict.commit_created else "",
+        tests=tests_summary,
         validation_run=run.run_id if run else "",
         validation_url=run.url if run else "",
         ci_result=ci_result,
@@ -275,28 +249,34 @@ def main(argv: list[str] | None = None) -> int:
             ", ".join(files) if files else "no uncommitted changes"
         ),
         summary=result.text or "OpenCode produced no final message.",
-        human_action="none",
+        human_action=verdict.human_action,
     )
 
     payload = {
         "status": outcome.status,
+        "reason": verdict.reason,
         "head_sha": after,
         "pushed": pushed,
+        "commit_created": verdict.commit_created,
+        "push_state": push,
         "commits": commits,
         "agent_exit_code": result.exit_code,
         "agent_session_id": result.session_id,
         "agent_text": outcome.summary,
         "agent_timed_out": result.timed_out,
         "tests": outcome.tests,
+        "tests_passed": tests_passed,
         "validation_run": outcome.validation_run,
         "validation_url": outcome.validation_url,
         "ci_result": outcome.ci_result,
         "files_changed": outcome.files_changed,
-        "recoverable": bool(pushed),
+        "human_action": outcome.human_action,
+        "recoverable": verdict.is_recoverable,
         "version": args.version,
         "model": args.model,
         "agent": args.agent,
         "attempt": args.attempt,
+        "max_attempts": args.max_attempts,
     }
 
     Path(args.out).write_text(
@@ -322,12 +302,51 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     print(f"AGENT_STATUS={outcome.status}")
+    print(f"AGENT_REASON={verdict.reason}")
     print(f"HEAD_SHA={after}")
     print(f"PUSHED={pushed}")
     print(f"VALIDATION_RUN={outcome.validation_run}")
     print(f"COMMITS={commits}")
 
-    return 0 if result.succeeded else 1
+    return 0 if verdict.is_success else 1
+
+
+def _ci_result(
+    verdict: Verdict,
+    push: str,
+    sha: str,
+    run: ValidationRun | None,
+) -> str:
+    """Describe what happened to validation, honestly."""
+
+    if run is not None:
+        return (
+            f"validation run {run.run_id} "
+            f"({run.status}/{run.conclusion or 'pending'})"
+        )
+
+    if not verdict.commit_created:
+        return (
+            "no commit was created, so validation was not triggered; "
+            "the repository is unchanged"
+        )
+
+    if push == PUSH_NOT_PUSHED:
+        return (
+            f"commit {sha} is not on the remote branch, so "
+            "validation was not triggered"
+        )
+
+    if push == PUSH_UNKNOWN:
+        return (
+            f"the push of {sha} could not be verified, so validation "
+            "was not triggered"
+        )
+
+    return (
+        f"validation was dispatched for {sha} but no run was found "
+        "for that commit"
+    )
 
 
 def _known_secrets() -> tuple[str, ...]:
