@@ -19,6 +19,7 @@ import shutil
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Mapping
 
 
 DEFAULT_VERSION = "2.0.20"
@@ -69,12 +70,18 @@ class OpenCodeRunner:
         version: str = DEFAULT_VERSION,
         timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
         working_directory: str | Path | None = None,
+        extra_environment: Mapping[str, str] | None = None,
     ) -> None:
         self.model = model
         self.agent = agent
         self.version = version
         self.timeout_seconds = timeout_seconds
         self.working_directory = working_directory
+        # Additions the control plane makes for the agent's own tools,
+        # such as git's askpass helper when an external push credential
+        # is configured. Applied after the inherited environment, and
+        # before the invariants below, which always win.
+        self.extra_environment = dict(extra_environment or {})
 
     def build_command(
         self,
@@ -186,6 +193,7 @@ class OpenCodeRunner:
         """
 
         environment = dict(os.environ)
+        environment.update(self.extra_environment)
 
         environment["OPENCODE_DISABLE_AUTOUPDATE"] = "true"
         environment.setdefault(

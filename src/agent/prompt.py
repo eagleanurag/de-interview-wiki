@@ -24,6 +24,11 @@ MAX_REPAIR_ATTEMPTS = 3
 # workflow YAML cannot be read. The workflow injects the real set, so
 # the prompt states what the token actually holds rather than a copy
 # that can drift away from the control plane.
+#
+# `workflows` is absent on purpose. It is a GitHub App repository
+# permission, not a GITHUB_TOKEN scope, so GitHub does not accept it in
+# a `permissions:` block at all. Claiming it here would tell the agent
+# it may push workflow files when the push is refused.
 DEFAULT_TOKEN_PERMISSIONS: tuple[str, ...] = (
     "contents: write",
     "actions: write",
@@ -31,7 +36,6 @@ DEFAULT_TOKEN_PERMISSIONS: tuple[str, ...] = (
     "pull-requests: write",
     "checks: write",
     "statuses: write",
-    "workflows: write",
 )
 
 UNTRUSTED_CONTENT_WARNING = """
@@ -76,10 +80,43 @@ None of the following needs a human, and none of it needs a permission you do no
 - publish a check run or a commit status
 - perform bounded CI recovery and continue work using /continue
 
-The GITHUB_TOKEN in this job carries {permissions}. That includes write access to
-workflow files, so a task that genuinely requires a change under .github/workflows/
-can make it directly. This permission is not an instruction to widen the workflow's own
+The GITHUB_TOKEN in this job carries:
+{permissions}
+
+That is enough for ordinary source changes, commits, issue and pull-request work, and
+dispatching and reading Actions runs. It is not an instruction to widen the workflow's own
 permissions block, and it is never a reason to stop and ask for confirmation.
+
+{workflow_boundary}
+"""
+
+WORKFLOW_FILE_BOUNDARY = """
+### The one boundary this job's token cannot cross
+
+GitHub refuses any push from this job's GITHUB_TOKEN that creates or updates a file under
+.github/workflows/. That token is a GitHub App installation token, and the app does not hold
+the "Workflows" repository permission. `workflows` is a GitHub App permission, not a
+GITHUB_TOKEN scope, so no `permissions:` entry in a workflow can grant it and no change
+inside this repository can widen it.
+
+{state}
+"""
+
+CREDENTIAL_ARMED = """
+This run has an external repository credential armed for git, so a commit that touches
+.github/workflows/ can be pushed. The credential is read from an environment variable by a
+git askpass helper: it is never written to a file, printed, logged, committed or placed in
+a URL, and it is none of your business. Do not read it, echo it or report it. If a push is
+refused anyway, do not weaken a check, drop a workflow change silently or invent a
+credential to get around it: report the refusal together with the commit SHA.
+"""
+
+CREDENTIAL_ABSENT = """
+This run has no external repository credential, so GitHub will refuse a commit that
+touches .github/workflows/. That refusal is repository configuration, not a task you may
+work around: finish and push everything else, then report BLOCKED naming the missing
+OPENCODE_AGENT_TOKEN repository secret and the commit SHA that could not be pushed. Never
+invent, guess, request or print a credential value.
 """
 
 PROMPT_TEMPLATE = """You are the autonomous engineering agent for this
@@ -200,12 +237,16 @@ Only the most recent comments are included, not the full history.
 
 def render_capabilities(
     permissions: Iterable[str] | None = None,
+    *,
+    workflow_credential: bool = False,
 ) -> str:
     """
     Render the capability section for the granted token permissions.
 
     The permission list is sorted for a stable prompt, so a permission
-    is only re-ordered by an actual change to the workflow.
+    is only re-ordered by an actual change to the workflow. The
+    workflow-file boundary is rendered from what the run actually has,
+    not from what the token would ideally hold.
     """
 
     granted = sorted(
@@ -216,7 +257,20 @@ def render_capabilities(
         granted = sorted(DEFAULT_TOKEN_PERMISSIONS)
 
     return CAPABILITIES.strip().format(
-        permissions=", ".join(granted)
+        permissions=", ".join(granted),
+        workflow_boundary=render_workflow_boundary(
+            workflow_credential=workflow_credential
+        ),
+    )
+
+
+def render_workflow_boundary(*, workflow_credential: bool) -> str:
+    """State the workflow-file authorization boundary for this run."""
+
+    state = CREDENTIAL_ARMED if workflow_credential else CREDENTIAL_ABSENT
+
+    return WORKFLOW_FILE_BOUNDARY.strip().format(
+        state=state.strip()
     )
 
 
@@ -290,6 +344,7 @@ def build_prompt(
     ref: str = "main",
     max_attempts: int = MAX_REPAIR_ATTEMPTS,
     permissions: Sequence[str] | None = None,
+    workflow_credential: bool = False,
 ) -> str:
     """
     Render the full task-contract prompt for a trigger.
@@ -300,6 +355,9 @@ def build_prompt(
     ``permissions`` is the agent job's granted scope, read from the
     workflow, so the prompt tells the agent what its token really holds
     instead of a list that can silently fall out of date.
+    ``workflow_credential`` records whether this run has the external
+    credential that authorizes workflow-file pushes, so the prompt
+    never promises a push the job cannot make.
     """
 
     granted = tuple(permissions) if permissions else DEFAULT_TOKEN_PERMISSIONS
@@ -310,7 +368,10 @@ def build_prompt(
             workflow=workflow,
             ref=ref,
             security_rules=SECURITY_RULES.strip(),
-            capabilities=render_capabilities(granted),
+            capabilities=render_capabilities(
+                granted,
+                workflow_credential=workflow_credential,
+            ),
             untrusted_warning=UNTRUSTED_CONTENT_WARNING.strip(),
             task=trigger.task,
         )

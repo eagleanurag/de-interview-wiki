@@ -75,9 +75,26 @@ and none of it needs a permission you do not have:
 
 The `GITHUB_TOKEN` in this job carries `contents: write`,
 `actions: write`, `issues: write`, `pull-requests: write`,
-`checks: write`, `statuses: write` and `workflows: write`. The last one
-is what makes a commit that touches `.github/workflows/` pushable at all,
-so a task that genuinely needs a workflow change can make it directly.
+`checks: write` and `statuses: write`. That is enough for ordinary
+source changes, commits, issue and pull-request work, and for
+dispatching and reading Actions runs.
+
+It is *not* enough to update a file under `.github/workflows/`. That
+token is a GitHub App installation token and the app does not hold the
+"Workflows" repository permission, so GitHub refuses such a push with
+"refusing to allow a GitHub App to create or update workflow". The
+`workflows` key is a GitHub App permission, not a `GITHUB_TOKEN` scope,
+so no `permissions:` entry in any workflow can grant it, and nothing
+inside this repository can widen it.
+
+When the repository owner has supplied the external credential, the run
+log says `PUSH_AUTHENTICATION=external repository credential armed` and
+a workflow-file push works. When they have not, such a push is refused.
+Treat that as configuration, not as a puzzle: finish and push everything
+else, then report BLOCKED naming the missing `OPENCODE_AGENT_TOKEN`
+repository secret and the unpushed commit. Never invent, guess, request
+or print a credential value, and never weaken a check to get a push
+through.
 
 Permission here means "you are allowed to act". It is not an
 instruction to widen the workflow's own `permissions:` block, and it is

@@ -23,6 +23,12 @@ import sys
 from pathlib import Path
 
 from src.agent.ci import ValidationController, ValidationRun
+from src.agent.credentials import (
+    arm_push_authentication,
+    is_workflow_push_rejection,
+    push_environment,
+    workflow_push_remedy,
+)
 from src.agent.opencode import (
     DEFAULT_AGENT,
     DEFAULT_MODEL,
@@ -153,11 +159,19 @@ def main(argv: list[str] | None = None) -> int:
 
     before = head_sha()
 
+    # The built-in GITHUB_TOKEN cannot update files under
+    # .github/workflows/. When the repository owner has supplied an
+    # external credential, git uses it for the push; when they have
+    # not, nothing is changed and a refused workflow push is reported
+    # as the configuration problem it is.
+    authentication = arm_push_authentication()
+
     runner = OpenCodeRunner(
         model=args.model,
         agent=args.agent,
         version=args.version,
         timeout_seconds=args.timeout,
+        extra_environment=push_environment(authentication),
     )
 
     try:
@@ -217,6 +231,17 @@ def main(argv: list[str] | None = None) -> int:
         agent_timed_out=result.timed_out,
     )
 
+    # A push refused because it touches a workflow file is an
+    # authorization fact about the token, not an unfinished task. The
+    # report then names the configuration a human has to add, so the
+    # owner is not left guessing why the same task keeps failing.
+    human_action = verdict.human_action
+
+    if not pushed and is_workflow_push_rejection(
+        f"{result.stdout}\n{result.stderr}"
+    ):
+        human_action = workflow_push_remedy()
+
     # Only a confirmed push may trigger validation: dispatching for a
     # commit the remote has never seen would validate the previous
     # commit and report it as this task's result.
@@ -249,7 +274,7 @@ def main(argv: list[str] | None = None) -> int:
             ", ".join(files) if files else "no uncommitted changes"
         ),
         summary=result.text or "OpenCode produced no final message.",
-        human_action=verdict.human_action,
+        human_action=human_action,
     )
 
     payload = {

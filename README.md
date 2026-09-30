@@ -349,6 +349,57 @@ Pages deployment permissions (`pages: write`, `id-token: write`) stay
 exclusively in the existing `Run Python Workers` workflow. The agent
 cannot deploy Pages and cannot modify that workflow's permissions.
 
+### The workflow-file boundary
+
+`GITHUB_TOKEN` **cannot** update a file under `.github/workflows/`. The
+token is a GitHub App installation token, the app does not hold the
+"Workflows" repository permission, and GitHub refuses the ref update:
+
+```
+! [remote rejected] main -> main (refusing to allow a GitHub App to
+create or update workflow `.github/workflows/<file>.yml` without
+`workflows` permission)
+```
+
+`workflows` is a GitHub App repository permission, not a
+`GITHUB_TOKEN` scope. It is therefore not a valid key in a
+`permissions:` block at all, and no workflow change can grant it. This
+was verified against this repository: a source-only push succeeds with
+the built-in token, a push that also touches a workflow file is refused,
+and the same refusal happens when git authenticates through an askpass
+helper instead of the checkout credential, so the limit is
+authorization rather than authentication method.
+
+**Manual configuration required (once, by the repository owner).** The
+control plane reads an optional external credential from the
+`AGENT_PUSH_TOKEN` environment variable, which the workflow fills from
+the `OPENCODE_AGENT_TOKEN` repository secret:
+
+1. Create a fine-grained personal access token: **Settings →
+   Developer settings → Personal access tokens → Fine-grained
+   tokens → Generate new token**.
+2. Restrict it to **this repository only**, and set an expiry.
+3. Grant these repository permissions: **Contents: Read and write**,
+   **Workflows: Read and write**, **Pull requests: Read and write**,
+   **Issues: Read and write**, **Actions: Read and write**, **Checks:
+   Read and write**, **Commit statuses: Read and write**.
+4. Store the value as the repository secret `OPENCODE_AGENT_TOKEN`
+   (**Settings → Secrets and variables → Actions → New repository
+   secret**).
+
+The credential is optional. Without it the control plane behaves
+exactly as before, and a refused workflow push is reported as BLOCKED
+with this configuration request rather than worked around. With it, the
+run log records `PUSH_AUTHENTICATION=external repository credential
+armed` and workflow-file pushes succeed.
+
+The value is never printed, logged, committed or passed on a command
+line. `src/agent/credentials.py` writes a git askpass helper that
+contains no secret and reads the environment variable at call time; the
+helper lives in `.git/`, which is never committed. The environment
+variable name contains `TOKEN`, so the existing redaction helpers
+scrub the value from agent logs and artifacts as well.
+
 ### OpenCode execution
 
 - CLI: `@opencode/cli` pinned to **2.0.20**, installed on the runner

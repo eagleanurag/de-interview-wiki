@@ -19,6 +19,7 @@ from pathlib import Path
 import pytest
 
 from src.agent import ci, events, prompt, redaction, reporting
+from src.agent import credentials
 from src.agent import run_agent as run_agent_module
 from src.agent import verdict as verdict_module
 from src.agent.opencode import (
@@ -473,7 +474,12 @@ def test_prompt_falls_back_to_the_documented_grant(tmp_path):
         build_trigger(), workflow="run-python-worker.yml"
     )
 
-    assert "workflows: write" in text
+    # The fallback is the real grant, which contains no `workflows`
+    # scope, because that scope cannot be granted to GITHUB_TOKEN.
+    for scope in prompt.DEFAULT_TOKEN_PERMISSIONS:
+        assert scope in text, scope
+
+    assert "workflows: write" not in text
 
 
 def test_format_permissions_is_sorted_and_stringly_typed():
@@ -574,18 +580,107 @@ def test_remote_engineer_env_denial_outranks_the_catch_all():
 def test_remote_engineer_agent_may_change_workflow_files():
     """
     The agent instructions must not tell the agent to avoid workflow
-    files, which is what made it abandon a legitimate edit.
+    files, which is what made it abandon a legitimate edit, and must
+    not claim the token can push one either, which is what made it
+    believe a refusal was its own fault.
     """
 
     text = agent_file_path(REPO_ROOT).read_text(encoding="utf-8")
 
-    assert "modify GitHub Actions workflow YAML" in text
-    assert "`workflows: write`" in text
+    # Prose is wrapped, so prose assertions run on one flattened line.
+    flat = " ".join(text.split())
+
+    assert "modify GitHub Actions workflow YAML" in flat
     assert (
-        "You may edit\n  `.github/workflows/*.yml` when a task "
-        "genuinely requires it" in text
+        "You may edit `.github/workflows/*.yml` when a task "
+        "genuinely requires it" in flat
     )
-    assert "never grant\n  the workflows extra permissions" not in text
+    assert "never grant the workflows extra permissions" not in flat
+
+    # The real grant, and no invented one.
+    assert "and `workflows: write`" not in flat
+    assert (
+        "The `workflows` key is a GitHub App permission, not a "
+        "`GITHUB_TOKEN` scope" in flat
+    )
+
+
+def test_prompt_states_the_workflow_file_boundary():
+    """
+    The prompt has to name the one thing the token cannot do, or the
+    agent reads a refused push as its own mistake and tries to work
+    around it.
+    """
+
+    # Prompt prose is wrapped, so prose assertions run flattened.
+    text = " ".join(
+        prompt.build_prompt(
+            build_trigger(), workflow="run-python-worker.yml"
+        ).split()
+    )
+
+    assert "The one boundary this job's token cannot cross" in text
+    assert "GitHub App installation token" in text
+    assert "not a GITHUB_TOKEN scope" in text
+    assert "no `permissions:` entry in a workflow can grant it" in text
+
+
+def test_prompt_without_a_credential_names_the_missing_secret():
+    text = prompt.build_prompt(
+        build_trigger(),
+        workflow="run-python-worker.yml",
+        workflow_credential=False,
+    )
+
+    assert "no external repository credential" in text
+    assert "report BLOCKED naming the missing" in text
+    assert "OPENCODE_AGENT_TOKEN" in text
+    assert (
+        "Never\ninvent, guess, request or print a credential value." in text
+    )
+
+    # A run that cannot push workflow files must not be told it can.
+    assert "credential armed for git" not in text
+
+
+def test_prompt_with_a_credential_says_so_and_forbids_touching_it():
+    text = prompt.build_prompt(
+        build_trigger(),
+        workflow="run-python-worker.yml",
+        workflow_credential=True,
+    )
+
+    assert "external repository credential armed for git" in text
+    assert "askpass helper" in text
+    assert "Do not read it, echo it or report it." in text
+
+    assert "no external repository credential" not in text
+
+
+def test_prompt_permission_list_comes_from_the_workflow(workflow):
+    """
+    The prompt states the grant read out of the control plane, so a
+    widened or narrowed grant cannot drift away from its description.
+    """
+
+    granted = prompt.permissions_from_workflow(WORKFLOW)
+
+    assert granted == tuple(
+        sorted(
+            f"{scope}: {level}"
+            for scope, level in workflow["jobs"]["agent"][
+                "permissions"
+            ].items()
+        )
+    )
+
+    text = prompt.build_prompt(
+        build_trigger(),
+        workflow="run-python-worker.yml",
+        permissions=granted,
+    )
+
+    assert f"carries:\n{', '.join(granted)}" in text
 
 
 def test_prompt_wraps_untrusted_task_text_in_delimiters():
@@ -2060,6 +2155,325 @@ def test_top_level_permission_is_read_only(workflow):
     assert workflow["permissions"] == {"contents": "read"}
 
 
+# ---------------------------------------------------------------------
+# The external credential that authorizes workflow-file pushes
+# ---------------------------------------------------------------------
+
+
+def test_no_credential_is_armed_when_none_is_configured(tmp_path):
+    """
+    Absent a credential, git keeps authenticating exactly as it does
+    today. Nothing is written, no config is touched and the agent
+    environment is unchanged.
+    """
+
+    messages: list[str] = []
+
+    authentication = credentials.arm_push_authentication(
+        repository_root=tmp_path,
+        environ={},
+        log=messages.append,
+    )
+
+    assert authentication.configured is False
+    assert authentication.helper_path == ""
+    assert not list(tmp_path.iterdir())
+
+    environment = credentials.push_environment(
+        authentication, {"PATH": "/usr/bin"}
+    )
+
+    assert environment == {"PATH": "/usr/bin"}
+    assert credentials.push_environment(authentication) == {}
+
+    assert messages
+    assert "no external repository credential" in messages[0]
+
+
+def test_a_blank_credential_is_treated_as_absent(tmp_path):
+    """An unset repository secret arrives as an empty string."""
+
+    for value in ("", "   ", "\n"):
+        authentication = credentials.arm_push_authentication(
+            repository_root=tmp_path,
+            environ={credentials.PUSH_TOKEN_ENV: value},
+            log=lambda message: None,
+        )
+
+        assert authentication.configured is False
+
+
+def test_the_askpass_helper_never_holds_the_credential(tmp_path):
+    """
+    The helper exists so git can read the credential from the
+    environment at call time. A helper that embedded the value would
+    put it on the runner's disk and in any directory listing.
+    """
+
+    token = CREDENTIAL_FIXTURES["github_fine_grained"]
+
+    helper = credentials.write_askpass_helper(tmp_path / ".git")
+
+    body = helper.read_text(encoding="utf-8")
+
+    assert token not in body
+    assert credentials.PUSH_TOKEN_ENV in body
+    assert helper.parent.name == ".git"
+
+    # Read and write for its owner only: a helper any local user can
+    # read is a helper that can be swapped for one that logs.
+    assert helper.stat().st_mode & 0o777 == 0o700
+
+
+def test_a_configured_credential_arms_git_through_the_environment(
+    tmp_path, monkeypatch
+):
+    """
+    With a credential present, the push is authenticated by askpass,
+    and the checkout's own token header is dropped, because git
+    prefers a configured header over an askpass helper.
+    """
+
+    repository = tmp_path / "repo"
+    repository.mkdir()
+
+    subprocess.run(
+        ["git", "init", "--quiet", str(repository)],
+        check=True,
+        capture_output=True,
+    )
+
+    real_git = subprocess.run
+    calls: list[list[str]] = []
+
+    def recording_git(arguments, **kwargs):
+        calls.append(list(arguments))
+        return real_git(arguments, **kwargs)
+
+    monkeypatch.setattr(credentials.subprocess, "run", recording_git)
+
+    authentication = credentials.arm_push_authentication(
+        repository_root=repository,
+        environ={credentials.PUSH_TOKEN_ENV: "credential-value"},
+        log=lambda message: None,
+    )
+
+    assert authentication.configured is True
+
+    helper = Path(authentication.helper_path)
+    assert helper.is_file()
+    assert helper.parent == repository / ".git"
+
+    assert [
+        "git",
+        "config",
+        "--local",
+        "--unset-all",
+        credentials.GITHUB_EXTRAHEADER,
+    ] in calls
+
+    # The helper must be inside .git, which is never committed.
+    tracked = subprocess.run(
+        ["git", "-C", str(repository), "status", "--porcelain"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert tracked.stdout.strip() == ""
+
+    environment = credentials.push_environment(
+        authentication, {"PATH": "/usr/bin"}
+    )
+
+    assert environment[credentials.ASKPASS_ENV] == str(helper)
+    # A prompt would hang an unattended run instead of failing.
+    assert environment[credentials.TERMINAL_PROMPT_ENV] == "0"
+
+    # The value is not copied into the environment the agent sees.
+    assert "credential-value" not in "".join(environment.values())
+
+
+def test_a_credential_outside_a_checkout_is_not_armed(tmp_path):
+    """
+    Without a real git directory there is nowhere correct to put the
+    helper, so nothing is armed and the run reports the built-in
+    token rather than pretending an external credential is in use.
+    """
+
+    authentication = credentials.arm_push_authentication(
+        repository_root=tmp_path,
+        environ={credentials.PUSH_TOKEN_ENV: "credential-value"},
+        log=lambda message: None,
+    )
+
+    assert authentication.configured is False
+    assert "not inside a git checkout" in authentication.reason
+    assert "external repository credential armed" not in (
+        authentication.describe()
+    )
+    assert not list(tmp_path.iterdir())
+
+
+def test_the_credential_value_is_redacted_from_agent_logs(monkeypatch):
+    """
+    The variable name contains TOKEN, so the existing redaction
+    helpers treat the value as a secret wherever a tool echoes it.
+    """
+
+    token = CREDENTIAL_FIXTURES["github_fine_grained"]
+
+    monkeypatch.setenv(credentials.PUSH_TOKEN_ENV, token)
+
+    known = run_agent_module._known_secrets()
+
+    assert token in known
+    assert redaction.redact(f"pushing with {token}", secrets=known) == (
+        f"pushing with {redaction.REDACTED}"
+    )
+
+
+def test_a_refused_workflow_push_is_recognized():
+    rejection = (
+        " ! [remote rejected] main -> main (refusing to allow a "
+        "GitHub App to create or update workflow "
+        "`.github/workflows/opencode-agent.yml` without `workflows` "
+        "permission)"
+    )
+
+    assert credentials.is_workflow_push_rejection(rejection) is True
+
+    # Other push failures must not be misread as an authorization
+    # problem, and the text must never be matched on its own terms.
+    assert (
+        credentials.is_workflow_push_rejection(
+            "! [rejected] main -> main (non-fast-forward)"
+        )
+        is False
+    )
+    assert credentials.is_workflow_push_rejection("") is False
+    assert credentials.is_workflow_push_rejection(None) is False
+
+
+def test_the_remedy_names_the_configuration_and_no_credential():
+    remedy = credentials.workflow_push_remedy()
+
+    assert "OPENCODE_AGENT_TOKEN" in remedy
+    assert "Workflows: Read and write" in remedy
+    assert "fine-grained personal access token" in remedy
+
+    # A remedy is instructions, never a value.
+    assert "github_" + "pat_" not in remedy
+    assert "gh" + "p_" not in remedy
+    assert redaction.redact(remedy) == remedy
+
+
+def test_agent_definition_names_the_same_credential_and_boundary():
+    text = agent_file_path(REPO_ROOT).read_text(encoding="utf-8")
+
+    assert "OPENCODE_AGENT_TOKEN" in text
+    assert "PUSH_AUTHENTICATION=external repository credential armed" in text
+    assert "Never invent, guess, request" in text
+    assert "never weaken a check to get a push" in text
+
+
+def test_readme_documents_the_manual_configuration():
+    readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+
+    assert "### The workflow-file boundary" in readme
+    assert "OPENCODE_AGENT_TOKEN" in readme
+    assert "Workflows: Read and write" in readme
+    assert "repository only" in readme
+
+
+def test_a_refused_workflow_push_asks_for_the_credential(
+    tmp_path, monkeypatch
+):
+    """
+    A push refused for touching a workflow file is an authorization
+    fact, not an unfinished task. The report must name the
+    configuration a human has to add, instead of telling the owner to
+    push the commit themselves and leaving the same task to fail
+    again.
+    """
+
+    payload = run_agent_with(
+        tmp_path,
+        monkeypatch,
+        head_sha_value="bbb",
+        push=PUSH_NOT_PUSHED,
+        agent_stderr=(
+            "! [remote rejected] main -> main (refusing to allow a "
+            "GitHub App to create or update workflow "
+            "`.github/workflows/opencode-agent.yml` without `workflows` "
+            "permission)"
+        ),
+    )
+
+    assert payload["status"] == STATUS_PUSH_FAILED
+    assert "OPENCODE_AGENT_TOKEN" in payload["human_action"]
+    assert "Workflows: Read and write" in payload["human_action"]
+
+
+def test_an_ordinary_push_failure_keeps_its_own_remedy(
+    tmp_path, monkeypatch
+):
+    """
+    A push refused for any other reason is still an unfinished task,
+    and must not be dressed up as a credential problem.
+    """
+
+    payload = run_agent_with(
+        tmp_path,
+        monkeypatch,
+        head_sha_value="bbb",
+        push=PUSH_NOT_PUSHED,
+        agent_stderr="! [rejected] main -> main (non-fast-forward)",
+    )
+
+    assert payload["status"] == STATUS_PUSH_FAILED
+    assert "OPENCODE_AGENT_TOKEN" not in payload["human_action"]
+
+
+def test_the_agent_environment_carries_askpass_only_when_armed(
+    tmp_path, monkeypatch
+):
+    """
+    An absent credential must not change how the agent authenticates,
+    and a present one must reach git without being copied anywhere.
+    """
+
+    monkeypatch.delenv(credentials.PUSH_TOKEN_ENV, raising=False)
+
+    unarmed = credentials.arm_push_authentication(
+        repository_root=tmp_path,
+        environ={},
+        log=lambda message: None,
+    )
+
+    environment = OpenCodeRunner(
+        extra_environment=credentials.push_environment(unarmed)
+    ).build_environment()
+
+    assert credentials.ASKPASS_ENV not in environment
+    assert credentials.TERMINAL_PROMPT_ENV not in environment
+
+    helper = credentials.write_askpass_helper(tmp_path / ".git")
+
+    armed = credentials.PushAuthentication(
+        configured=True, helper_path=str(helper)
+    )
+
+    environment = OpenCodeRunner(
+        extra_environment=credentials.push_environment(armed)
+    ).build_environment()
+
+    assert environment[credentials.ASKPASS_ENV] == str(helper)
+
+    # The runner's own invariants still win over the additions.
+    assert environment["OPENCODE_DISABLE_AUTOUPDATE"] == "true"
+
+
 def test_deployment_permissions_stay_in_the_pages_workflow():
     yaml = pytest.importorskip("yaml")
 
@@ -2602,6 +3016,7 @@ def run_agent_with(
     push: str = PUSH_UNKNOWN,
     agent_exit_code: int = 0,
     tests_passed: bool = True,
+    agent_stderr: str = "",
 ) -> dict:
     """Run src.agent.run_agent against a faked agent and repository."""
 
@@ -2652,7 +3067,7 @@ def run_agent_with(
             session_id="ses_1",
             exit_code=agent_exit_code,
             stdout="",
-            stderr="",
+            stderr=agent_stderr,
         ),
     )
 
