@@ -1,7 +1,33 @@
-import json
+"""
+Reading a normalized post for the worker.
+
+The structure is the one the repository already ships::
+
+    post_directory/
+    ├── post.json
+    └── media/
+        ├── image.png
+        └── document.pdf
+
+``post.json`` may declare its media, in which case the declaration is
+honoured and its description is kept. Files that are present in
+``media/`` but not declared are still discovered, so a post dropped in
+by hand behaves exactly as before.
+
+This module is the reader the enrichment pipeline depends on. Writing
+posts is the job of :mod:`src.ingestion.importer`; nothing here
+modifies a post directory.
+"""
+
 from datetime import datetime
 from pathlib import Path
 
+from src.ingestion.post_document import (
+    IMAGE_EXTENSIONS,
+    PDF_EXTENSIONS,
+    PostDocument,
+    resolve_media_path,
+)
 from src.models import (
     AIAnalysis,
     Classification,
@@ -10,20 +36,6 @@ from src.models import (
     MediaItem,
     SourceInfo,
 )
-
-
-IMAGE_EXTENSIONS = {
-    ".jpg",
-    ".jpeg",
-    ".png",
-    ".webp",
-    ".gif",
-    ".bmp",
-}
-
-PDF_EXTENSIONS = {
-    ".pdf",
-}
 
 
 def load_post(post_directory: str | Path) -> KnowledgePost:
@@ -53,11 +65,11 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
             f"post.json not found in: {post_directory}"
         )
 
-    raw_data = json.loads(
-        post_file.read_text(encoding="utf-8")
-    )
+    document = PostDocument.load(post_directory)
 
-    media_items = _discover_media(post_directory / "media")
+    raw_data = document.data
+
+    media_items = _resolve_media(document, post_directory)
 
     source_data = raw_data.get("source", {})
 
@@ -125,10 +137,61 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
     )
 
 
+def _resolve_media(
+    document: PostDocument,
+    post_directory: Path,
+) -> list[MediaItem]:
+    """
+    Build the media list for a post.
+
+    Declared media comes first, in the order the author declared it,
+    with any description preserved. Everything else in ``media/`` is
+    discovered, so an undeclared file is still ingested exactly as it
+    was before declarations existed.
+    """
+
+    media_items: list[MediaItem] = []
+    declared_paths: set[Path] = set()
+
+    for entry in document.media():
+        target = resolve_media_path(post_directory, entry.path)
+
+        declared_paths.add(target)
+
+        media_items.append(
+            _media_item(
+                media_type=entry.type,
+                path=target,
+                description=entry.description or None,
+            )
+        )
+
+    for item in _discover_media(post_directory / "media"):
+        if Path(item.path) in declared_paths:
+            continue
+
+        media_items.append(item)
+
+    return media_items
+
+
+def _media_item(
+    *,
+    media_type: str,
+    path: Path,
+    description: str | None = None,
+) -> MediaItem:
+    return MediaItem(
+        type=media_type,
+        path=str(path),
+        description=description,
+    )
+
+
 def _discover_media(
     media_directory: Path,
 ) -> list[MediaItem]:
-    """Discover supported media files inside a post's media directory."""
+    """Discover media files inside a post's media directory."""
 
     if not media_directory.exists():
         return []

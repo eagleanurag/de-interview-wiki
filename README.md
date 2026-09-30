@@ -8,9 +8,9 @@ The cloud pipeline is defined in
 [`.github/workflows/run-python-worker.yml`](.github/workflows/run-python-worker.yml)
 and runs in three stages:
 
-1. **Discover** — scans `data/posts/*/post.json` and builds the matrix.
-   No post list is hardcoded, so adding a post directory is enough to
-   add a worker.
+1. **Discover** — scans `data/posts/*/post.json` and builds the
+   matrix. No post list is hardcoded, so adding a post directory is
+   enough to add a worker.
 2. **Worker** — one matrix job per post. Each job creates a job
    manifest, runs the Python worker (`src/workers/cli.py`) to enrich the
    post through OpenCode + Space Bunny, and uploads its own artifact
@@ -20,6 +20,91 @@ and runs in three stages:
    the worker artifacts, runs the Python aggregator, and uploads a
    single canonical `knowledge_base.json` as artifact
    `knowledge-base-<run_id>`.
+
+## Ingestion
+
+Manually captured posts are added with the ingestion layer in
+[`src/ingestion/`](src/ingestion). A post is one directory:
+
+```
+data/posts/<post_id>/
+├── post.json     authored content
+└── media/        screenshots, PDFs
+```
+
+`post.json` uses the structure the repository already ships, so an
+existing post can be edited by hand and a scaffolded one is
+indistinguishable from a hand-written one.
+
+### Adding a post
+
+The quickest path is one command per capture. A *capture bundle* is
+whatever a person has after reading a post by hand: some notes, a
+screenshot, maybe a PDF.
+
+```
+python -m src.ingestion.cli import 2026-01-01-spark-shuffle \
+    ~/captures/spark-shuffle \
+    --platform manual --author "Interviewer" \
+    --primary-topic "Apache Spark" --interview-relevant
+```
+
+A bundle may contain:
+
+| File | Meaning |
+| --- | --- |
+| `notes.md`, `notes.txt`, `post.md`, … | becomes `original_text` |
+| any other file | copied into `media/` and declared in `post.json` |
+| `post.json` | used as the base document, questions included |
+
+The same thing in two steps, when the capture arrives piecemeal:
+
+```
+python -m src.ingestion.cli new 2026-01-02-delta \
+    --text-file notes.md --primary-topic "Delta Lake"
+
+python -m src.ingestion.cli add-media 2026-01-02-delta \
+    screenshot.png --description "The lineage diagram"
+```
+
+`list` shows what the pipeline will discover, and `validate` checks it:
+
+```
+python -m src.ingestion.cli list
+python -m src.ingestion.cli validate
+```
+
+`validate` is the same check the test suite runs over the committed
+posts, so running it is how you find out whether a post is ready to
+commit. It exits non-zero when a post has an error, and only warns
+about posts that will work but are described loosely.
+
+### Behaviour that matters
+
+- **Idempotent.** Re-running an import refreshes the authored fields
+  and reports unchanged media instead of duplicating it, so a capture
+  can be imported again after one more screenshot is added.
+- **Non-destructive.** Enrichment output is never overwritten by an
+  import. Adding a media file whose name exists with different content
+  is refused unless `--force` is given.
+- **Portable.** Declared media paths are relative to the post
+  directory, and a path that would escape it is rejected, so a
+  committed post can never point the loader at a file elsewhere.
+- **Validated before it is written.** An import that would produce an
+  unusable post is refused before anything is touched. `validate`
+  checks the whole tree on demand, and the test suite validates the
+  committed posts on every run, so a post that would break a worker
+  cannot reach `main` unnoticed.
+- **Local only.** The layer has no network client, no scraper and
+  nowhere to put a credential. Content is added by hand or by an
+  explicitly authorised process.
+
+### Post ids
+
+A post id becomes a directory name, part of a worker job id and a URL
+segment, so it must be lowercase, start with a letter or digit, and use
+only letters, digits, `.`, `-` and `_`. The importer refuses anything
+else, and refuses an id that disagrees with the directory it lives in.
 
 ## Aggregation
 
@@ -74,6 +159,11 @@ pytest
 `tests/test_aggregator.py` covers aggregation, manifest skipping,
 duplicate detection, invalid payloads, and deterministic ordering.
 
+`tests/test_ingestion.py` covers the ingestion layer: post ids, the
+authored document, media declaration and conflicts, idempotent
+imports, validation, the CLI, and compatibility with the posts already
+committed under `data/posts/`.
+
 `tests/test_workflow_pipeline.py` validates the workflow structure
 against the Python code, including an end-to-end check of the
 downloaded artifact layout. It needs `PyYAML`, which is a test-only
@@ -90,8 +180,8 @@ OpenCode CLI and are not part of automated collection.
 
 `tests/test_agent_control_plane.py` covers the remote OpenCode control
 plane: actor authorization, trigger conventions, task extraction,
-prompt construction, credential redaction, validation-run resolution
-and report rendering.
+prompt construction, credential redaction, validation-run resolution,
+task-outcome classification and report rendering.
 
 ## Remote OpenCode Control Plane
 
@@ -167,8 +257,10 @@ Each task ends with one comment containing a structured report:
 ```
 ## OpenCode Task Report
 
-Status: SUCCESS | BLOCKED | BLOCKED_AFTER_3_ATTEMPTS | FAILED
-Task / Commit / Tests / Validation workflow / CI result
+Status: SUCCESS | SUCCESS_NO_CHANGES | DIRTY_NO_COMMIT
+        | PUSH_FAILED | PUSH_UNVERIFIED | FAILED
+        | BLOCKED | BLOCKED_AFTER_3_ATTEMPTS
+Why / Task / Commit / Tests / Validation workflow / CI result
 Recovery attempts: n/3
 Files changed / Final result / Human action required
 ```
@@ -179,6 +271,26 @@ report are kept as workflow artifacts:
 
 - `opencode-agent-logs-<run_id>` — stdout, stderr and prompt, 14 days
 - `opencode-report-<run_id>` — report and failure evidence, 30 days
+
+### How a task's status is decided
+
+A clean exit from the agent process is **not** a success on its own.
+The status is derived from observed repository state, so the outcomes
+that look alike from the outside stay apart:
+
+| Status | Meaning |
+| --- | --- |
+| `SUCCESS` | implemented, committed and confirmed pushed |
+| `SUCCESS_NO_CHANGES` | the agent exited cleanly and changed nothing, which is only valid for a read-only task |
+| `DIRTY_NO_COMMIT` | the agent exited cleanly but left changes uncommitted, so the work died with the runner |
+| `PUSH_FAILED` | a commit exists locally but is not on the remote branch |
+| `PUSH_UNVERIFIED` | the commit exists but the push could not be confirmed |
+| `FAILED` | the agent failed, or the test suite did not pass |
+
+A commit counts as pushed only once the remote branch is confirmed to
+contain it, so a local commit is never mistaken for a delivered one and
+validation is never dispatched for a commit the remote has not seen. A
+failing test suite also blocks `SUCCESS`.
 
 ### Retry behaviour
 
@@ -268,6 +380,22 @@ LinkedIn content must remain manually or explicitly authorisedly
 ingested. This control plane does not authorise scraping, and the
 agent is explicitly instructed not to add it. Posts under `data/posts/`
 are added by hand or by an authorised process.
+
+The ingestion layer is local by design: it has no network client, no
+scraper and nowhere to put a credential, so it can only import content
+that is already on the machine. `platform` records provenance, so a
+post added by hand says so rather than implying a named collection
+process.
+
+Its modules:
+
+| Module | Responsibility |
+| --- | --- |
+| `src/ingestion/post_document.py` | the `post.json` shape, atomic writes, media declarations |
+| `src/ingestion/importer.py` | discovery, creating, updating and importing posts |
+| `src/ingestion/validation.py` | the post contract, and every check against it |
+| `src/ingestion/post_loader.py` | reading a post for the worker |
+| `src/ingestion/cli.py` | the command line above |
 
 ### Running the control plane logic locally
 
