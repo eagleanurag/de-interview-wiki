@@ -395,6 +395,199 @@ def test_prompt_forbids_disabling_tests_and_ci():
     assert "bypass existing CI" in text
 
 
+def test_prompt_does_not_forbid_granting_permissions():
+    """
+    Regression guard.
+
+    The task contract used to say "Do not grant the workflow additional
+    permissions", with no statement of what the job already held. An
+    agent that needed a workflow change read that as a prohibition on
+    the work itself and abandoned it. The rule now bounds the grant
+    instead of forbidding it, and the prompt states the real set.
+    """
+
+    text = prompt.build_prompt(
+        build_trigger(), workflow="run-python-worker.yml"
+    )
+
+    assert "Do not grant the workflow additional permissions" not in text
+    assert "Do not grant the workflow permissions beyond" in text
+
+
+def test_prompt_states_what_the_agent_may_do_without_asking():
+    text = prompt.build_prompt(
+        build_trigger(), workflow="run-python-worker.yml"
+    )
+
+    assert "## What you can do without asking" in text
+
+    for capability in (
+        "read the complete repository",
+        "create, edit and delete repository files",
+        "modify source code, tests and documentation",
+        "modify GitHub Actions workflow YAML under .github/workflows/",
+        "git status, git diff, git log",
+        "git commit and git push",
+        "gh run list",
+        "gh run view",
+        "gh workflow run",
+        "gh run view <run-id> --log-failed",
+        "gh issue create",
+        "gh issue edit",
+        "gh pr create",
+        "gh pr edit",
+        "publish a check run or a commit status",
+        "continue work using /continue",
+    ):
+        assert capability in text, capability
+
+    # The affordances must not read as an invitation to widen the
+    # control plane's own grant.
+    assert (
+        "not an instruction to widen the workflow's own" in text
+    )
+
+
+
+def test_prompt_falls_back_to_the_documented_grant(tmp_path):
+    """
+    An unreadable or malformed workflow must not leave the prompt
+    without a permission list, nor invent one.
+    """
+
+    assert prompt.permissions_from_workflow(
+        tmp_path / "absent.yml"
+    ) == ()
+
+    broken = tmp_path / "broken.yml"
+    broken.write_text("jobs: [unclosed\n", encoding="utf-8")
+
+    assert prompt.permissions_from_workflow(broken) == ()
+
+    jobless = tmp_path / "jobless.yml"
+    jobless.write_text("name: x\n", encoding="utf-8")
+
+    assert prompt.permissions_from_workflow(jobless) == ()
+
+    text = prompt.build_prompt(
+        build_trigger(), workflow="run-python-worker.yml"
+    )
+
+    assert "workflows: write" in text
+
+
+def test_format_permissions_is_sorted_and_stringly_typed():
+    assert prompt.format_permissions(
+        {"workflows": "write", "contents": "write", "bad": 1}
+    ) == ("contents: write", "workflows: write")
+
+
+def agent_front_matter() -> dict:
+    """The parsed front matter of an OpenCode agent definition."""
+
+    yaml = pytest.importorskip("yaml")
+
+    text = agent_file_path(REPO_ROOT).read_text(encoding="utf-8")
+
+    return yaml.safe_load(text.split("---")[1])
+
+
+def test_remote_engineer_agent_allows_normal_engineering():
+    """
+    The agent must be able to work unattended: read, create, edit and
+    delete files, run commands and commit, without asking a human.
+    """
+
+    permission = agent_front_matter()["permission"]
+
+    for granted in (
+        "edit",
+        "glob",
+        "grep",
+        "list",
+        "bash",
+        "lsp",
+        "todowrite",
+        "skill",
+        "doom_loop",
+    ):
+        assert permission[granted] == "allow", granted
+
+    # `edit` covers every file-modification tool, so creating, editing
+    # and patching a file need no extra grant, and removal goes
+    # through `bash`.
+    assert permission["task"] == {"*": "allow"}
+    assert permission["webfetch"] == "allow"
+
+    # Autonomy: no interaction, no escape from the checkout.
+    assert permission["question"] == "deny"
+    assert permission["external_directory"] == "deny"
+
+    # Nothing may hang an unattended run or widen its reach.
+    assert permission["websearch"] == "deny"
+
+    for denied in ("edit", "bash", "read", "task"):
+        assert permission[denied] != "deny", denied
+
+
+def test_remote_engineer_agent_keeps_env_files_unreadable():
+    """
+    A bare `read: allow` would replace the built-in `.env` denial, so
+    the agent block restates it. Secret protection must not depend on
+    how the agent block merges with OpenCode's defaults.
+    """
+
+    read = agent_front_matter()["permission"]["read"]
+
+    assert read["*"] == "allow"
+    assert read["*.env"] == "deny"
+    assert read["*.env.*"] == "deny"
+    assert read["*.env.example"] == "allow"
+
+
+def test_remote_engineer_env_denial_outranks_the_catch_all():
+    """
+    OpenCode resolves permissions with "last matching rule wins".
+
+    The catch-all `*` entry is therefore written first and the `.env`
+    denials after it. With the order reversed, `read *` would swallow
+    the denial, and `--auto` would approve reading a `.env` file: the
+    rule is present but has no effect.
+    """
+
+    read = agent_front_matter()["permission"]["read"]
+    patterns = list(read)
+
+    # The catch-all must come first, or it swallows the denials.
+    assert patterns.index("*") < patterns.index("*.env")
+    assert patterns.index("*") < patterns.index("*.env.*")
+
+    # `*.env.*` also matches `*.env.example`, so the allow for the
+    # example file has to come last or the example becomes unreadable.
+    assert patterns.index("*.env") < patterns.index("*.env.example")
+    assert patterns.index("*.env.*") < patterns.index("*.env.example")
+
+    # The catch-all must never be the final read rule.
+    assert patterns[-1] != "*"
+
+
+def test_remote_engineer_agent_may_change_workflow_files():
+    """
+    The agent instructions must not tell the agent to avoid workflow
+    files, which is what made it abandon a legitimate edit.
+    """
+
+    text = agent_file_path(REPO_ROOT).read_text(encoding="utf-8")
+
+    assert "modify GitHub Actions workflow YAML" in text
+    assert "`workflows: write`" in text
+    assert (
+        "You may edit\n  `.github/workflows/*.yml` when a task "
+        "genuinely requires it" in text
+    )
+    assert "never grant\n  the workflows extra permissions" not in text
+
+
 def test_prompt_wraps_untrusted_task_text_in_delimiters():
     text = prompt.build_prompt(
         build_trigger(task="do the thing"),
@@ -1809,6 +2002,58 @@ def test_agent_permissions_are_scoped(workflow):
     # Pages permissions must never appear here.
     assert "pages" not in permissions
     assert "id-token" not in permissions
+
+
+
+def test_agent_grants_no_unrelated_permissions(workflow):
+    """
+    Least privilege. Each of these would let the agent do something no
+    part of this control plane needs.
+    """
+
+    forbidden = (
+        "deployments",
+        "packages",
+        "security-events",
+        "attestations",
+        "id-token",
+        "pages",
+        "repository-projects",
+        "models",
+        "codespaces",
+        "environments",
+    )
+
+    for job_name, job in workflow["jobs"].items():
+        permissions = job.get("permissions") or {}
+
+        for scope in forbidden:
+            assert scope not in permissions, (
+                f"{job_name} must not hold {scope}"
+            )
+
+
+def test_only_the_agent_job_holds_write_permissions(workflow):
+    """
+    A job-level permissions block replaces the top-level one instead of
+    merging with it, so every write grant has to be deliberate. The
+    authorization job must never be able to write at all, and the report
+    job may only write the comment it is there to post.
+    """
+
+    preflight = workflow["jobs"]["preflight"]["permissions"]
+
+    assert preflight == {"contents": "read", "issues": "read"}
+    assert "write" not in preflight.values()
+
+    report = workflow["jobs"]["report"]["permissions"]
+
+    assert set(report) <= {"contents", "issues", "actions"}
+    assert report.get("issues") == "write"
+    assert report.get("contents", "read") == "read"
+    assert "workflows" not in report
+    assert "pull-requests" not in report
+
 
 
 def test_top_level_permission_is_read_only(workflow):
