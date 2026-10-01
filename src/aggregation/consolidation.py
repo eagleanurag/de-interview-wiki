@@ -262,7 +262,12 @@ class TechnologyNode:
 
 @dataclass
 class QuestionNode:
-    """One interview question, traceable to its source."""
+    """
+    One interview question, traceable to every source it came from.
+
+    ``post_ids`` lists them all rather than just the first, so merging
+    a duplicate never loses the fact that two posts asked it.
+    """
 
     id: str
     question: str
@@ -272,6 +277,11 @@ class QuestionNode:
     post_id: str
     source_url: str | None
     topics: list[str] = field(default_factory=list)
+    post_ids: list[str] = field(default_factory=list)
+
+    @property
+    def also_asked_in(self) -> list[str]:
+        return [post for post in self.post_ids if post != self.post_id]
 
     def as_dict(self) -> dict:
         return {
@@ -281,6 +291,7 @@ class QuestionNode:
             "difficulty": self.difficulty,
             "answer": self.answer,
             "post_id": self.post_id,
+            "post_ids": sorted(self.post_ids or [self.post_id]),
             "source_url": self.source_url,
             "topics": sorted(self.topics),
         }
@@ -311,6 +322,157 @@ class KnowledgeIndex:
             "questions": [node.as_dict() for node in self.questions],
             "content_kinds": dict(sorted(self.content_kinds.items())),
         }
+
+
+#: Words that carry no meaning in a question, and stop two questions
+#: from looking alike when only their framing differs.
+_STOP_WORDS = frozenset(
+    {
+        "a",
+        "an",
+        "and",
+        "are",
+        "as",
+        "at",
+        "be",
+        "by",
+        "can",
+        "do",
+        "does",
+        "for",
+        "how",
+        "in",
+        "is",
+        "it",
+        "of",
+        "on",
+        "or",
+        "that",
+        "the",
+        "their",
+        "this",
+        "to",
+        "what",
+        "when",
+        "which",
+        "why",
+        "with",
+        "you",
+        "your",
+    }
+)
+
+#: How alike two questions must be before they are treated as the same
+#: question. Deliberately high: merging two genuinely different
+#: questions because they share vocabulary would lose one of them,
+#: which is worse than showing a reader two similar questions.
+DUPLICATE_THRESHOLD = 0.82
+
+
+def _question_key(text: str) -> str:
+    """
+    A comparison key for a question.
+
+    Case, punctuation and wording order all differ between two
+    renderings of the same question, so none of them is allowed to make
+    it look like a different one.
+    """
+
+    words = re.sub(r"[^a-z0-9 ]+", " ", text.lower()).split()
+
+    significant = [word for word in words if word not in _STOP_WORDS]
+
+    return " ".join(sorted(significant))
+
+
+def _content_words(text: str) -> frozenset:
+    words = re.sub(r"[^a-z0-9 ]+", " ", text.lower()).split()
+
+    return frozenset(word for word in words if word not in _STOP_WORDS)
+
+
+def _similar(left: frozenset, right: frozenset) -> float:
+    """Jaccard overlap of two questions' content words."""
+
+    if not left or not right:
+        return 0.0
+
+    union = left | right
+
+    if not union:
+        return 0.0
+
+    return len(left & right) / len(union)
+
+
+def _merge_questions(nodes: list["QuestionNode"]) -> list["QuestionNode"]:
+    """
+    Fold questions that are the same question into one.
+
+    Two posts that both discuss the same idea will often produce very
+    similar questions. Showing a reader the same question twice is
+    noise, so the repeats are folded together and every post they came
+    from is kept on the surviving question.
+
+    Merging is conservative. Two questions that merely share vocabulary
+    stay separate, because a wrong merge silently deletes a question a
+    reader might have needed.
+    """
+
+    kept: list[QuestionNode] = []
+    keys: list[frozenset] = []
+    seen_exact: dict[str, QuestionNode] = {}
+
+    for node in nodes:
+        key = _question_key(node.question)
+
+        existing_exact = seen_exact.get(key)
+
+        if existing_exact is not None:
+            for post_id in node.post_ids or [node.post_id]:
+                if post_id not in existing_exact.post_ids:
+                    existing_exact.post_ids.append(post_id)
+
+            # The topics have to come with it: two posts asking the same
+            # question sit under different topics, and a merged question
+            # filed under only one of them would hide it from the other.
+            for topic in node.topics:
+                if topic not in existing_exact.topics:
+                    existing_exact.topics.append(topic)
+
+            continue
+
+        words = _content_words(node.question)
+
+        merged = False
+
+        for candidate, candidate_words in zip(kept, keys):
+            if _similar(words, candidate_words) < DUPLICATE_THRESHOLD:
+                continue
+
+            for post_id in node.post_ids or [node.post_id]:
+                if post_id not in candidate.post_ids:
+                    candidate.post_ids.append(post_id)
+
+            for topic in node.topics:
+                if topic not in candidate.topics:
+                    candidate.topics.append(topic)
+
+            seen_exact[key] = candidate
+            merged = True
+            break
+
+        if merged:
+            continue
+
+        if not node.post_ids:
+            node.post_ids = [node.post_id]
+
+        kept.append(node)
+        keys.append(words)
+        seen_exact[key] = node
+
+    return kept
 
 
 def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
@@ -428,6 +590,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
                     post_id=post.id,
                     source_url=post.source.url,
                     topics=topics_of_post,
+                    post_ids=[post.id],
                 )
             )
 
@@ -445,6 +608,8 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
     index.technologies = sorted(
         technologies.values(), key=lambda node: node.name.casefold()
     )
+    index.questions = _merge_questions(index.questions)
+
     index.questions.sort(key=lambda node: (node.post_id, node.id))
 
     return index

@@ -473,3 +473,180 @@ def test_a_slug_is_safe_for_a_url_and_a_directory():
     assert slug == "c-data-eng"
     assert "/" not in slug
     assert " " not in slug
+
+
+# ---------------------------------------------------------------------
+# Question deduplication
+# ---------------------------------------------------------------------
+
+
+def _post_with_questions(post_id: str, questions: list[str]):
+    from src.models import InterviewQuestion
+
+    return make_post(
+        post_id,
+        topics=("Spark",),
+        concepts=("Partitioning",),
+        questions=tuple(
+            (question, "theory", "easy", "Because.") for question in questions
+        ),
+    )
+
+
+def test_an_exactly_repeated_question_is_one_question():
+    """
+    Two posts that both ask the same thing should not show a reader the
+    same question twice.
+    """
+
+    posts = [
+        _post_with_questions("a", ["How does partitioning help?"]),
+        _post_with_questions("b", ["How does partitioning help?"]),
+    ]
+
+    index = consolidate(posts)
+
+    assert len(index.questions) == 1
+
+
+def test_a_merged_question_keeps_both_sources():
+    """
+    Merging must not lose provenance: the reader still needs to know
+    both posts asked it.
+    """
+
+    posts = [
+        _post_with_questions("a", ["How does partitioning help?"]),
+        _post_with_questions("b", ["How does partitioning help?"]),
+    ]
+
+    index = consolidate(posts)
+
+    assert index.questions[0].post_ids == ["a", "b"]
+    assert index.questions[0].also_asked_in == ["b"]
+
+
+def test_the_same_question_in_different_wording_is_one_question():
+    posts = [
+        _post_with_questions("a", ["How does partitioning reduce scan?"]),
+        _post_with_questions("b", ["Does partitioning reduce the scan?"]),
+    ]
+
+    index = consolidate(posts)
+
+    assert len(index.questions) == 1
+
+
+def test_genuinely_different_questions_are_all_kept():
+    """
+    A wrong merge silently deletes a question a reader might have
+    needed, so distinct questions stay separate.
+    """
+
+    posts = [
+        _post_with_questions(
+            "a",
+            [
+                "How does partitioning help?",
+                "How does bucketing help?",
+            ],
+        ),
+        _post_with_questions("b", ["What causes data skew?"]),
+    ]
+
+    index = consolidate(posts)
+
+    assert len(index.questions) == 3
+
+
+def test_questions_sharing_only_keywords_are_kept_apart():
+    """
+    Sharing vocabulary is not the same as being the same question.
+    """
+
+    posts = [
+        _post_with_questions(
+            "a",
+            [
+                "Explain partitioning in Spark.",
+                "What is partitioning in Spark used for?",
+            ],
+        ),
+        _post_with_questions("b", ["How is a Spark cluster sized?"]),
+    ]
+
+    index = consolidate(posts)
+
+    assert len(index.questions) == 3
+
+
+def test_case_and_punctuation_do_not_make_a_new_question():
+    posts = [
+        _post_with_questions("a", ["How does partitioning help?"]),
+        _post_with_questions("b", ["how does partitioning help"]),
+    ]
+
+    index = consolidate(posts)
+
+    assert len(index.questions) == 1
+
+
+def test_a_single_post_keeps_its_own_questions_distinct():
+    posts = [_post_with_questions("a", ["First?", "Second?"])]
+
+    index = consolidate(posts)
+
+    assert len(index.questions) == 2
+
+
+def test_merging_carries_the_topics_of_both_posts():
+    from src.models import AIAnalysis, Classification, KnowledgePost, SourceInfo
+
+    def post(post_id, topic, question):
+        return KnowledgePost(
+            id=post_id,
+            source=SourceInfo(
+                platform="manual",
+                captured_at=datetime(2026, 1, 1, tzinfo=timezone.utc),
+            ),
+            original_text="text",
+            ai_analysis=AIAnalysis(
+                summary="s", topics=[topic], concepts=["Partitioning"]
+            ),
+            interview_questions=[
+                InterviewQuestion(
+                    question=question,
+                    type="theory",
+                    difficulty="easy",
+                    answer="a",
+                )
+            ],
+            classification=Classification(
+                domain="Data Engineering",
+                primary_topic=topic,
+                interview_relevant=True,
+            ),
+        )
+
+    index = consolidate(
+        [
+            post("a", "Spark", "How does partitioning help?"),
+            post("b", "Databricks", "How does partitioning help?"),
+        ]
+    )
+
+    assert len(index.questions) == 1
+    assert sorted(index.questions[0].topics) == ["Databricks", "Spark"]
+
+
+def test_no_question_is_published_without_a_source():
+    posts = [
+        _post_with_questions("a", ["First?"]),
+        _post_with_questions("b", ["First?"]),
+    ]
+
+    index = consolidate(posts)
+
+    for question in index.questions:
+        assert question.post_ids
+        assert question.post_id
