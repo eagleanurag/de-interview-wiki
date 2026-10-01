@@ -7,6 +7,7 @@ from pathlib import Path
 
 from pydantic import ValidationError
 
+from src.aggregation.consolidation import consolidate, verify
 from src.models import KnowledgePost
 
 
@@ -152,8 +153,16 @@ def aggregate_results(
 
     posts.sort(key=lambda post: post.id)
 
+    # Consolidation turns the post list into navigable knowledge areas.
+    # It runs before the payload is written so a reference to a post
+    # that was never aggregated fails the run rather than producing a
+    # knowledge base that points at nothing.
+    index = consolidate(posts)
+
+    verify(index, posts)
+
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": datetime.now(
             timezone.utc
         ).isoformat(),
@@ -161,11 +170,21 @@ def aggregate_results(
             "result_files_found": len(result_files),
             "posts_aggregated": len(posts),
             "files_skipped": len(skipped_files),
+            "topics_consolidated": len(index.topics),
+            "concepts_consolidated": len(index.concepts),
+            "technologies_consolidated": len(index.technologies),
+            "questions_consolidated": len(index.questions),
+            "posts_interview_relevant": sum(
+                1
+                for post in posts
+                if post.classification.interview_relevant
+            ),
         },
         "skipped_files": skipped_files,
         "posts": [
             post.model_dump(mode="json") for post in posts
         ],
+        "knowledge": index.as_dict(),
     }
 
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -184,6 +203,13 @@ def aggregate_results(
     print(
         f"Aggregated {len(posts)} post(s) "
         f"from {len(result_files)} worker file(s)."
+    )
+
+    print(
+        f"Consolidated {len(index.topics)} topic(s), "
+        f"{len(index.concepts)} concept(s), "
+        f"{len(index.technologies)} technology(ies), "
+        f"{len(index.questions)} question(s)."
     )
 
     if skipped_files:

@@ -161,7 +161,9 @@ def test_aggregates_multiple_worker_results(tmp_path):
 
     payload = read_knowledge_base(output_path)
 
-    assert payload["schema_version"] == 1
+    # Version 2 carries the consolidated knowledge areas alongside the
+    # posts they came from.
+    assert payload["schema_version"] == 2
     assert payload["posts"]
     assert payload["stats"]["posts_aggregated"] == len(POST_IDS)
 

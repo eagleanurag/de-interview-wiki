@@ -1,0 +1,257 @@
+"""
+Run the whole pipeline locally, in order.
+
+Discover → enrich → aggregate → generate the site → verify.
+
+Each stage writes its own output and the next stage reads only that, so
+a stage cannot quietly depend on something an earlier stage held in
+memory. A failure in one post costs that post, not the run, because
+enrichment is the only stage that touches untrusted model output.
+
+Outputs go under ``build/``, which is git-ignored, so nothing here
+writes into the committed repository.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import shutil
+import sys
+import tempfile
+import time
+from pathlib import Path
+
+from src.aggregation.aggregator import aggregate_results
+from src.ai.enricher import AIEnricher
+from src.ingestion.importer import discover_posts, validate_posts
+from src.ingestion.post_loader import load_post
+from src.processing.media_processor import process_media
+from src.wiki.generator import generate_site
+
+BUILD_ROOT = Path("build")
+RESULTS_DIR = BUILD_ROOT / "worker-results"
+KNOWLEDGE_BASE = BUILD_ROOT / "knowledge_base.json"
+SITE_DIR = BUILD_ROOT / "site"
+
+
+class StageError(RuntimeError):
+    """Raised when a stage cannot complete."""
+
+
+def log(message: str) -> None:
+    print(f"[pipeline] {message}", flush=True)
+
+
+def discover() -> list[str]:
+    """Every post the repository holds, validated first."""
+
+    report = validate_posts()
+
+    if not report.ok:
+        problems = "; ".join(str(issue) for issue in report.issues)
+
+        raise StageError(f"Posts do not validate: {problems}")
+
+    warnings = [
+        str(issue) for issue in report.issues if "warning" in str(issue).lower()
+    ]
+
+    if warnings:
+        for warning in warnings:
+            log(f"  warning: {warning}")
+
+    identifiers = [
+        summary.post_id for summary in discover_posts()
+    ]
+
+    log(f"discovered {len(identifiers)} post(s)")
+
+    return identifiers
+
+
+def enrich(identifiers: list[str], *, force: bool) -> dict:
+    """
+    Enrich every post into its own worker result.
+
+    One post failing costs that post. The source is never modified and
+    never deleted, so a failed post can simply be retried on the next
+    run, which is what makes the pipeline resumable.
+    """
+
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    written: list[str] = []
+    failed: dict[str, str] = {}
+    skipped: list[str] = []
+
+    enricher = AIEnricher()
+
+    for identifier in identifiers:
+        directory = Path("data/posts") / identifier
+        target = RESULTS_DIR / f"cloud_worker_{identifier}.json"
+
+        if target.is_file() and not force:
+            skipped.append(identifier)
+            continue
+
+        started = time.monotonic()
+
+        try:
+            post = load_post(directory)
+
+            process_media(post)
+
+            enriched = enricher.enrich(post)
+
+            target.write_text(
+                json.dumps(
+                    enriched.model_dump(mode="json"),
+                    indent=2,
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+
+        except Exception as exc:  # noqa: BLE001
+            failed[identifier] = str(exc)
+            log(f"  FAILED {identifier}: {exc}")
+            continue
+
+        written.append(identifier)
+
+        elapsed = time.monotonic() - started
+
+        log(
+            f"  enriched {identifier} "
+            f"({len(enriched.interview_questions)} question(s), "
+            f"relevant={enriched.classification.interview_relevant}, "
+            f"{elapsed:.1f}s)"
+        )
+
+    log(
+        f"enrichment: {len(written)} written, {len(skipped)} reused, "
+        f"{len(failed)} failed"
+    )
+
+    if failed:
+        # Reported rather than raised, so one bad post does not cost
+        # the run. The caller can decide whether the failure matters.
+        log(f"  {len(failed)} post(s) need a retry")
+
+    return {
+        "written": written,
+        "skipped": skipped,
+        "failed": failed,
+    }
+
+
+def aggregate() -> Path:
+    """Build the canonical knowledge base from the worker results."""
+
+    if not any(RESULTS_DIR.glob("cloud_worker_*.json")):
+        raise StageError(
+            f"No worker results under {RESULTS_DIR}; nothing to aggregate."
+        )
+
+    log("aggregating")
+
+    aggregate_results(
+        input_directory=RESULTS_DIR,
+        output_path=KNOWLEDGE_BASE,
+    )
+
+    payload = json.loads(KNOWLEDGE_BASE.read_text(encoding="utf-8"))
+    stats = payload["stats"]
+
+    log(
+        f"  posts={stats['posts_aggregated']} "
+        f"topics={stats.get('topics_consolidated', 0)} "
+        f"concepts={stats.get('concepts_consolidated', 0)} "
+        f"technologies={stats.get('technologies_consolidated', 0)} "
+        f"questions={stats.get('questions_consolidated', 0)}"
+    )
+
+    return KNOWLEDGE_BASE
+
+
+def build_site() -> Path:
+    """Generate the static site from the canonical knowledge base."""
+
+    if not KNOWLEDGE_BASE.is_file():
+        raise StageError(
+            f"{KNOWLEDGE_BASE} does not exist; aggregate first."
+        )
+
+    log("generating the site")
+
+    if SITE_DIR.exists():
+        # A stale file from a removed post would otherwise survive,
+        # so the output is rebuilt from empty.
+        shutil.rmtree(SITE_DIR)
+
+    generate_site(input_path=KNOWLEDGE_BASE, output_dir=SITE_DIR)
+
+    pages = list(SITE_DIR.rglob("*.html"))
+
+    log(f"  {len(pages)} page(s) in {SITE_DIR}")
+
+    return SITE_DIR
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Run the knowledge pipeline locally, end to end."
+    )
+
+    parser.add_argument(
+        "--force-enrich",
+        action="store_true",
+        help=(
+            "Re-enrich posts that already have a worker result. Without "
+            "this an existing result is reused, so a change to the "
+            "enrichment code would have no effect."
+        ),
+    )
+
+    parser.add_argument(
+        "--only",
+        choices=["discover", "enrich", "aggregate", "site"],
+        help="Run one stage instead of the whole pipeline.",
+    )
+
+    args = parser.parse_args()
+
+    try:
+        if args.only == "discover":
+            discover()
+            return 0
+
+        if args.only == "enrich":
+            enrich(discover(), force=args.force_enrich)
+            return 0
+
+        if args.only == "aggregate":
+            aggregate()
+            return 0
+
+        if args.only == "site":
+            build_site()
+            return 0
+
+        identifiers = discover()
+        enrich(identifiers, force=args.force_enrich)
+        aggregate()
+        build_site()
+
+    except StageError as exc:
+        print(f"PIPELINE_ERROR={exc}", file=sys.stderr)
+        return 1
+
+    log("done")
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
