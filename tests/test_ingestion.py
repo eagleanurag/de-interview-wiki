@@ -400,7 +400,11 @@ def test_declared_media_reaches_the_loader(posts_root, tmp_path):
     assert len(post.media) == 1
     assert post.media[0].type == "image"
     assert post.media[0].description == "A diagram"
-    assert post.media[0].path.endswith("media/shot.png")
+    # Compared with forward slashes so the assertion is identical on
+    # Windows and POSIX.
+    assert post.media[0].path.replace("\\", "/").endswith(
+        "media/shot.png"
+    )
 
 
 def test_add_media_is_idempotent(posts_root, tmp_path):

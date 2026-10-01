@@ -13,6 +13,7 @@ the suite is deterministic and fast.
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 from pathlib import Path
@@ -2310,7 +2311,12 @@ def test_the_askpass_helper_never_holds_the_credential(tmp_path):
 
     # Read and write for its owner only: a helper any local user can
     # read is a helper that can be swapped for one that logs.
-    assert helper.stat().st_mode & 0o777 == 0o700
+    #
+    # POSIX permission bits do not exist on Windows, so the check is
+    # applied only where the platform can express it. The underlying
+    # chmod call is still asserted, so the intent stays covered.
+    if os.name != "nt":
+        assert helper.stat().st_mode & 0o777 == 0o700
 
 
 def test_a_configured_credential_arms_git_through_the_environment(
