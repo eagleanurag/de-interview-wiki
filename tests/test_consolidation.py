@@ -377,13 +377,13 @@ def test_technical_content_is_recognised():
     assert classify_content(post) == "technical"
 
 
-def test_content_that_fits_no_category_is_labelled_unclassified():
+def test_content_that_fits_no_category_is_labelled_unknown():
     """
     Not classified is not the same as classified as nothing. The label
     records that nothing matched, which is honest.
     """
 
-    assert classify_content(make_post("a", text="...")) == "unclassified"
+    assert classify_content(make_post("a", text="...")) == "unknown"
 
 
 def test_every_post_gets_a_content_kind():

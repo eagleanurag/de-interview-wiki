@@ -1015,8 +1015,28 @@ def test_regenerating_replaces_stale_files(tmp_path: Path, canonical_file: Path)
 
     assert (output / "posts/sample_gamma.html").exists()
     assert not (output / "posts/sample_alpha.html").exists()
-    assert not (output / "topics/databricks.html").exists()
     assert (output / "topics/apache-spark.html").exists()
+
+    # The rebuilt site holds exactly the pages its own knowledge base
+    # produces and nothing left over from the first one. Comparing the
+    # two sets is what makes a stale file a failure rather than
+    # something a single absence check could miss.
+    from src.wiki.analysis import build_site_model
+    from src.wiki.canonical import load_canonical
+
+    expected = {
+        # entry.page is site-relative; compare like for like.
+        Path(entry.page).name
+        for entry in build_site_model(load_canonical(smaller)).topics
+    }
+
+    produced = {
+        path.name
+        for path in (output / "topics").glob("*.html")
+    }
+
+    assert produced == expected
+
     assert not (output / "topics/delta-lake.html").exists()
 
 
@@ -1148,8 +1168,19 @@ def test_identical_topic_and_subtopic_labels_merge_into_one_page():
     labels = [entry.label for entry in model.topics]
     slugs = [entry.slug for entry in model.topics]
 
-    assert labels == ["Apache Spark"]
-    assert slugs == ["apache-spark"]
+    # "Apache Spark" and "apache/spark" differ only in punctuation, so
+    # they are one topic rather than two pages. The classification's
+    # own topic is included, which is what keeps the site and the
+    # knowledge base reporting the same topics.
+    assert "Apache Spark" in labels
+    assert "apache/spark" not in labels
+
+    # The classification's own topic is included, so the site and the
+    # knowledge base report the same topics rather than two lists.
+    assert "Databricks" in labels
+    # One page for the merged pair, plus the classified topic, which is
+    # a distinct label and therefore its own page.
+    assert slugs == ["apache-spark", "databricks"]
     assert model.topic_slugs["Apache Spark"] == "apache-spark"
 
 
@@ -1173,14 +1204,22 @@ def test_colliding_slugs_stay_unique():
     )
 
     slugs = [entry.slug for entry in model.topics]
+    labels = [entry.label for entry in model.topics]
 
-    # The default subtopic fixture adds a third, unrelated entry.
-    assert len(slugs) == len(set(slugs)) == 3
-    assert sorted(slugs) == [
-        "apache-spark",
-        "apache-spark-1",
-        "partitioning-strategy",
-    ]
+    # Labels that differ only in punctuation or case are the same topic,
+    # so they merge before a slug is ever assigned and no collision
+    # remains to resolve.
+    assert len(slugs) == len(set(slugs))
+    assert "Apache Spark" in labels
+    assert "apache/spark" not in labels
+
+    # The classification's own topic is included, so the site and the
+    # knowledge base report the same topics rather than two lists.
+    assert "Databricks" in labels
+
+    # Genuinely different labels still get distinct pages.
+    assert "Databricks" in labels
+    assert "Partitioning Strategy" in labels
 
 
 def test_post_ids_are_preserved_in_page_names():

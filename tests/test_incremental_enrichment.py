@@ -15,7 +15,6 @@ version would answer differently.
 from __future__ import annotations
 
 import json
-import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -254,11 +253,10 @@ def test_the_fingerprint_is_not_published(tmp_path):
 # ---------------------------------------------------------------------
 
 
-def test_a_matching_result_is_reused():
+def test_a_matching_result_is_reused(tmp_path):
     from src.pipeline import ENRICHER_VERSION, _reusable
 
-    target = Path("build/worker-results/cloud_worker_sample_001.json")
-    target.parent.mkdir(parents=True, exist_ok=True)
+    target = tmp_path / "cloud_worker_sample_001.json"
 
     target.write_text(
         json.dumps(
@@ -276,11 +274,10 @@ def test_a_matching_result_is_reused():
     assert _reusable(target, "abc") is not None
 
 
-def test_a_result_for_changed_content_is_not_reused():
+def test_a_result_for_changed_content_is_not_reused(tmp_path):
     from src.pipeline import ENRICHER_VERSION, _reusable
 
-    target = Path("build/worker-results/cloud_worker_sample_002.json")
-    target.parent.mkdir(parents=True, exist_ok=True)
+    target = tmp_path / "cloud_worker_sample_002.json"
 
     target.write_text(
         json.dumps(
@@ -298,11 +295,10 @@ def test_a_result_for_changed_content_is_not_reused():
     assert _reusable(target, "changed") is None
 
 
-def test_a_result_from_an_older_version_is_not_reused():
+def test_a_result_from_an_older_version_is_not_reused(tmp_path):
     from src.pipeline import ENRICHER_VERSION, _reusable
 
-    target = Path("build/worker-results/cloud_worker_sample_003.json")
-    target.parent.mkdir(parents=True, exist_ok=True)
+    target = tmp_path / "cloud_worker_sample_003.json"
 
     target.write_text(
         json.dumps(
@@ -320,7 +316,7 @@ def test_a_result_from_an_older_version_is_not_reused():
     assert _reusable(target, "abc") is None
 
 
-def test_an_unreadable_result_is_not_reused():
+def test_an_unreadable_result_is_not_reused(tmp_path):
     """
     A truncated result from an interrupted run must be redone rather
     than trusted.
@@ -328,15 +324,14 @@ def test_an_unreadable_result_is_not_reused():
 
     from src.pipeline import _reusable
 
-    target = Path("build/worker-results/cloud_worker_broken.json")
-    target.parent.mkdir(parents=True, exist_ok=True)
+    target = tmp_path / "cloud_worker_broken.json"
 
     target.write_text("{ truncated", encoding="utf-8")
 
     assert _reusable(target, "abc") is None
 
 
-def test_a_result_with_no_fingerprint_is_not_reused():
+def test_a_result_with_no_fingerprint_is_not_reused(tmp_path):
     """
     A result written before fingerprints existed cannot be shown to
     match the current content, so it is redone.
@@ -344,8 +339,7 @@ def test_a_result_with_no_fingerprint_is_not_reused():
 
     from src.pipeline import _reusable
 
-    target = Path("build/worker-results/cloud_worker_legacy.json")
-    target.parent.mkdir(parents=True, exist_ok=True)
+    target = tmp_path / "cloud_worker_legacy.json"
 
     target.write_text(
         json.dumps({"id": "legacy"}), encoding="utf-8"

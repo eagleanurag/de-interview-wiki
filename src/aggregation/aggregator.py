@@ -180,6 +180,7 @@ def aggregate_results(
             "posts_aggregated": len(posts),
             "files_skipped": len(skipped_files),
             "topics_consolidated": len(index.topics),
+            "subtopics_consolidated": len(index.subtopics),
             "concepts_consolidated": len(index.concepts),
             "technologies_consolidated": len(index.technologies),
             "questions_consolidated": len(index.questions),

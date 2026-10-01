@@ -149,27 +149,41 @@ def test_enrichment_coverage_is_reported(knowledge_base):
 
     stats = knowledge_base["stats"]
 
-    assert stats["posts_enriched"] <= stats["posts_aggregated"]
-
-    kinds = knowledge_base["knowledge"]["content_kinds"]
-
-    unenriched = [
-        post_id
-        for post_id, kind in kinds.items()
-        if kind == "unenriched"
-    ]
-
-    assert len(unenriched) == (
-        stats["posts_aggregated"] - stats["posts_enriched"]
-    )
+    assert 0 <= stats["posts_enriched"] <= stats["posts_aggregated"]
 
 
-def test_an_unenriched_post_is_labelled_not_silently_empty(
+def test_content_kind_and_enrichment_state_are_separate(
     knowledge_base,
 ):
     """
-    A post that is present but unenriched must be visibly unenriched,
-    so "nothing here" can be told apart from "nothing processed yet".
+    "This is a job announcement" and "this has not been enriched yet"
+    are different facts. One label cannot carry both, and a post can be
+    obviously one and obviously the other.
+    """
+
+    kinds = knowledge_base["knowledge"]["content_kinds"]
+
+    # A content kind is never a statement about the pipeline.
+    for post_id, kind in kinds.items():
+        assert kind not in {"unenriched", "enriched"}, post_id
+        assert kind in {
+            "technical",
+            "job_announcement",
+            "event",
+            "congratulation",
+            "certification",
+            "appreciation",
+            "social",
+            "unknown",
+        }, kind
+
+
+def test_an_unenriched_post_is_still_classified_from_its_text(
+    knowledge_base,
+):
+    """
+    A post is classifiable from its own words whether or not the model
+    has read it, so content classification does not wait on enrichment.
     """
 
     kinds = knowledge_base["knowledge"]["content_kinds"]
@@ -186,9 +200,17 @@ def test_an_unenriched_post_is_labelled_not_silently_empty(
         kind = kinds[post["id"]]
 
         if not has_analysis:
-            assert kind == "unenriched", post["id"]
+            # Still labelled, from the text, not left out.
+            assert isinstance(kind, str) and kind
         else:
-            assert kind != "unenriched", post["id"]
+            assert kind in {"technical", "unknown"} or kind in {
+                "job_announcement",
+                "event",
+                "congratulation",
+                "certification",
+                "appreciation",
+                "social",
+            }, kind
 
 
 def test_no_post_appears_twice(knowledge_base):
@@ -261,10 +283,14 @@ def test_the_search_index_covers_every_post(site, knowledge_base):
 
     assert payload["posts"] == len(knowledge_base["posts"])
 
-    # Records cover posts and the consolidated sections, so the total
-    # is larger than the post count by design.
-    assert payload["topics"] > 0
-    assert len(payload["records"]) > payload["posts"]
+    # Records cover posts and the consolidated sections. A checkout
+    # whose posts have not been enriched has no topics yet, and that is
+    # an honest state rather than a failure.
+    assert len(payload["records"]) >= payload["posts"]
+    assert (
+        len(payload["records"]) == payload["posts"]
+        or payload["topics"] > 0
+    )
 
     # "i" is the identifier and "u" the page, both compressed to keep
     # the index small. Only post records carry a post identifier.
@@ -781,8 +807,7 @@ def test_every_post_records_what_kind_of_content_it_is(
             "certification",
             "appreciation",
             "social",
-            "unclassified",
-            "unenriched",
+            "unknown",
         }, kinds[post["id"]]
 
 def test_an_unenriched_post_is_still_reachable(site, knowledge_base):
@@ -810,8 +835,18 @@ def test_an_unenriched_post_is_still_reachable(site, knowledge_base):
             encoding="utf-8"
         )
 
-        # The source text is still on the page.
-        assert post["original_text"][:60] in page, post["id"]
+        # The source text is still on the page. Rendered whitespace is
+        # collapsed and long text is excerpted, so the opening words
+        # are matched rather than an arbitrary slice.
+        # Rendered text is HTML-escaped, so the comparison is made
+        # against the same escaping the renderer applies.
+        from html import unescape
+
+        opening = " ".join(post["original_text"].split())[:40]
+
+        rendered = " ".join(unescape(page).split())
+
+        assert opening in rendered, post["id"]
 
 
 def test_the_knowledge_base_holds_every_collected_post(knowledge_base):
@@ -833,3 +868,61 @@ def test_the_knowledge_base_holds_every_collected_post(knowledge_base):
 
     for post_id in on_disk:
         assert post_id in aggregated, post_id
+
+
+def test_the_site_and_the_knowledge_base_report_the_same_things(
+    knowledge_base, site
+):
+    """
+    The knowledge base and the site are two views of one set of posts.
+    If they disagree, a reader who reconciles them finds numbers that
+    cannot both be true.
+    """
+
+    payload = json.loads(
+        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
+    )
+
+    kinds: dict[str, int] = {}
+
+    for record in payload["records"]:
+        kind = record.get("k", "p")
+        kinds[kind] = kinds.get(kind, 0) + 1
+
+    stats = knowledge_base["stats"]
+
+    assert kinds.get("p") == stats["posts_aggregated"]
+    assert kinds.get("c") == stats["concepts_consolidated"]
+    assert kinds.get("x") == stats["technologies_consolidated"]
+
+    # The site renders topics and subtopics as navigable pages. A label
+    # that is both collapses onto one page, so the site count can be one
+    # lower than the two lists combined but never higher.
+    rendered = kinds.get("t", 0)
+    listed = (
+        stats["topics_consolidated"] + stats["subtopics_consolidated"]
+    )
+
+    assert rendered <= listed
+    assert rendered >= max(
+        stats["topics_consolidated"], stats["subtopics_consolidated"]
+    )
+
+
+def test_every_knowledge_node_kind_is_recorded(knowledge_base):
+    """
+    Anything the site can render has to be accounted for in the
+    canonical base, or a page exists with nothing behind it.
+    """
+
+    knowledge = knowledge_base["knowledge"]
+
+    for key in (
+        "topics",
+        "subtopics",
+        "concepts",
+        "technologies",
+        "questions",
+        "content_kinds",
+    ):
+        assert key in knowledge, key

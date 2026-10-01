@@ -162,9 +162,15 @@ def classify_content(post: KnowledgePost) -> str:
     """
     What kind of content a post is.
 
-    Used to explain why a post contributed no knowledge, so it is never
-    silently dropped. A post that teaches something is
+    Read from the post's own text, so it is available whether or not
+    the post has been enriched. A post that teaches something is
     ``"technical"`` regardless of how the classifier is worded.
+
+    This is a statement about the content and nothing else. Whether the
+    enrichment stage has run is a separate fact, reported in the
+    knowledge base statistics, because folding the two together makes
+    both unreadable: a post can be obviously a job announcement and
+    obviously not yet enriched, and one label cannot say both.
     """
 
     body = post.original_text.lower()
@@ -179,14 +185,12 @@ def classify_content(post: KnowledgePost) -> str:
     if post.ai_analysis.concepts or post.ai_analysis.topics:
         return "technical"
 
-    # A post whose enrichment has not run yet is its own case, and it
-    # is labelled as such. Filing it as "unclassified" would read as a
-    # judgement about the content when it is really a statement about
-    # the pipeline.
-    if not (post.ai_analysis.summary or "").strip():
-        return "unenriched"
+    # Media text counts as content the post carries, so a post that is
+    # only a document is still classifiable.
+    if any((media.extracted_text or "").strip() for media in post.media):
+        return "technical"
 
-    return "unclassified"
+    return "unknown"
 
 
 @dataclass
@@ -286,7 +290,13 @@ class QuestionNode:
 class KnowledgeIndex:
     """The consolidated view of a set of posts."""
 
+    # Whether each post has been analysed. Kept apart from
+    # ``content_kinds`` because "this is a job announcement" and "this
+    # has not been enriched yet" are different facts, and merging them
+    # would force one label to carry both."""
+
     topics: list[TopicNode] = field(default_factory=list)
+    subtopics: list[TopicNode] = field(default_factory=list)
     concepts: list[ConceptNode] = field(default_factory=list)
     technologies: list[TechnologyNode] = field(default_factory=list)
     questions: list[QuestionNode] = field(default_factory=list)
@@ -295,6 +305,7 @@ class KnowledgeIndex:
     def as_dict(self) -> dict:
         return {
             "topics": [node.as_dict() for node in self.topics],
+            "subtopics": [node.as_dict() for node in self.subtopics],
             "concepts": [node.as_dict() for node in self.concepts],
             "technologies": [node.as_dict() for node in self.technologies],
             "questions": [node.as_dict() for node in self.questions],
@@ -313,16 +324,17 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
     index = KnowledgeIndex()
 
     topics: dict[str, TopicNode] = {}
+    subtopics: dict[str, TopicNode] = {}
     concepts: dict[str, ConceptNode] = {}
     technologies: dict[str, TechnologyNode] = {}
 
     for post in posts:
         index.content_kinds[post.id] = classify_content(post)
 
-        post_topics = _post_topics(post)
+        topics_of_post = post_topics(post)
         post_technologies = detect_technologies(post.original_text)
 
-        for label in post_topics:
+        for label in topics_of_post:
             key = _normalise(label)
 
             node = topics.get(key)
@@ -330,6 +342,31 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
             if node is None:
                 node = TopicNode(name=label.strip(), slug=_slug(label))
                 topics[key] = node
+
+            # A subtopic is grouped the same way and carried
+            # separately, so a reader reconciling the knowledge base
+            # against the site sees where every page came from.
+            for subtopic in post.ai_analysis.subtopics:
+                sub_key = _normalise(subtopic)
+
+                sub_node = subtopics.get(sub_key)
+
+                if sub_node is None:
+                    sub_node = TopicNode(
+                        name=subtopic.strip(), slug=_slug(subtopic)
+                    )
+                    subtopics[sub_key] = sub_node
+
+                sub_node.post_ids.append(post.id)
+
+                for concept in post.ai_analysis.concepts:
+                    if concept not in sub_node.concepts:
+                        sub_node.concepts.append(concept)
+
+                sub_node.question_count += len(
+                    post.interview_questions
+                )
+
 
             node.post_ids.append(post.id)
 
@@ -356,7 +393,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
 
             node.post_ids.append(post.id)
 
-            for label in post_topics:
+            for label in topics_of_post:
                 if label not in node.topics:
                     node.topics.append(label)
 
@@ -376,7 +413,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
             node.post_ids.append(post.id)
             node.question_count += len(post.interview_questions)
 
-            for label in post_topics:
+            for label in topics_of_post:
                 if label not in node.topics:
                     node.topics.append(label)
 
@@ -390,7 +427,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
                     answer=question.answer or "",
                     post_id=post.id,
                     source_url=post.source.url,
-                    topics=post_topics,
+                    topics=topics_of_post,
                 )
             )
 
@@ -398,6 +435,9 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
     # arrived in.
     index.topics = sorted(
         topics.values(), key=lambda node: node.name.casefold()
+    )
+    index.subtopics = sorted(
+        subtopics.values(), key=lambda node: node.name.casefold()
     )
     index.concepts = sorted(
         concepts.values(), key=lambda node: node.name.casefold()
@@ -410,7 +450,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
     return index
 
 
-def _post_topics(post: KnowledgePost) -> list[str]:
+def post_topics(post: KnowledgePost) -> list[str]:
     """
     The topics a post belongs under.
 
@@ -464,6 +504,7 @@ def verify(index: KnowledgeIndex, posts: Iterable[KnowledgePost]) -> None:
 
     for group, nodes in (
         ("topic", index.topics),
+        ("subtopic", index.subtopics),
         ("concept", index.concepts),
         ("technology", index.technologies),
     ):

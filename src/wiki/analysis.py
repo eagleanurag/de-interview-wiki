@@ -13,7 +13,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from src.aggregation.consolidation import detect_technologies
+from src.aggregation.consolidation import (
+    detect_technologies,
+    post_topics,
+)
 from src.models import KnowledgePost
 from src.wiki.canonical import CanonicalKnowledgeBase
 from src.wiki.naming import (
@@ -316,7 +319,7 @@ def build_site_model(
     questions: list[QuestionEntry] = []
 
     for post, slug in zip(posts, post_slugs):
-        topics_for_post = tuple(post.ai_analysis.topics)
+        topics_for_post = tuple(post_topics(post))
 
         for index, question in enumerate(post.interview_questions):
             questions.append(
@@ -371,9 +374,12 @@ def _build_topics(
             if concept
         ]
 
+        # Topics come from the shared helper, which is the same one the
+        # consolidation layer uses. Deriving them separately here meant
+        # the knowledge base could report a topic the site never
+        # rendered, or the other way round.
         labels: list[tuple[str, str]] = [
-            (TOPIC_KIND, topic)
-            for topic in post.ai_analysis.topics
+            (TOPIC_KIND, topic) for topic in post_topics(post)
         ]
 
         labels += [
@@ -445,7 +451,7 @@ def _build_concepts(
     order: list[str] = []
 
     for post, slug in zip(posts, post_slugs):
-        labels = [topic for topic in post.ai_analysis.topics if topic]
+        labels = post_topics(post)
         found = detect_technologies(post.original_text)
 
         for concept in post.ai_analysis.concepts:
@@ -511,7 +517,7 @@ def _build_technologies(
     grouped: dict[str, dict[str, object]] = {}
 
     for post, slug in zip(posts, post_slugs):
-        topics = [topic for topic in post.ai_analysis.topics if topic]
+        topics = post_topics(post)
 
         for technology in detect_technologies(post.original_text):
             entry = grouped.setdefault(
