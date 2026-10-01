@@ -80,6 +80,9 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
             source_data.get("captured_at")
         ),
         author=source_data.get("author"),
+        # Kept verbatim rather than parsed: a relative form such as
+        # "2 days ago" is only resolvable against the capture date.
+        published_at=source_data.get("published_at"),
     )
 
     ai_data = raw_data.get("ai_analysis", {})
