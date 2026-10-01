@@ -49,6 +49,7 @@ from src.ingestion.sources.base import (
     StopReason,
 )
 from src.ingestion.sources.linkedin import (
+    SUBMIT_SELECTORS,
     LinkedInSource,
     _redact,
 )
@@ -922,27 +923,29 @@ def test_the_submit_selector_cannot_match_an_oauth_button():
     credentials. `:text-is()` matches the trimmed text exactly.
     """
 
-    from src.ingestion.sources.linkedin import SUBMIT_SELECTORS
+    from src.ingestion.sources.linkedin import SUBMIT_SELECTORS as selectors
 
-    for selector in SUBMIT_SELECTORS:
+    for selector in selectors:
         # The broad substring form must not appear anywhere.
         assert ":has-text(" not in selector, selector
 
     # And an exact-match form must be present for the SPA layout.
     assert any(
-        ':text-is("Sign in")' in selector
-        for selector in SUBMIT_SELECTORS
+        ':text-is("Sign in")' in selector for selector in selectors
     )
 
 
 def test_no_oauth_provider_is_selected_as_the_submit():
-    for selector in (
-        "Microsoft",
-        "Apple",
-        "Google",
-        "SSO",
-    ):
-        assert selector not in SUBMIT_SELECTORS
+    """
+    The selector list must never name an identity provider, because a
+    provider button opens a federated popup rather than submitting the
+    configured credentials.
+    """
+
+    joined = " ".join(SUBMIT_SELECTORS)
+
+    for provider in ("Microsoft", "Apple", "Google", "SSO", "Okta"):
+        assert provider.casefold() not in joined.casefold(), provider
 
 
 def test_the_login_form_is_never_submitted_via_enter():
