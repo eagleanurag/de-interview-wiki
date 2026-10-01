@@ -126,6 +126,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Print the report as JSON.",
     )
 
+    run.add_argument(
+        "--login",
+        action="store_true",
+        help=(
+            "Open a browser and pause so you can sign in yourself. "
+            "Saves the session for later runs, which is how a human "
+            "completes a challenge once instead of on every run."
+        ),
+    )
+
     return parser
 
 
@@ -253,6 +263,63 @@ def build_source(args: argparse.Namespace):
     )
 
 
+def interactive_login(args: argparse.Namespace) -> int:
+    """
+    Let the user sign in by hand, once.
+
+    The browser stays open and waits. Whatever the user completes,
+    including a CAPTCHA or an OTP, is saved as a session so later runs
+    reuse it. This is the supported path for any challenge, and it
+    means the credentials are not typed by automation at all.
+    """
+
+    from src.ingestion.sources.linkedin import LinkedInSource
+
+    print("Opening a browser for you to sign in.")
+    print("Complete any challenge yourself, then return here.")
+    print("Nothing is typed or solved automatically.")
+    print()
+
+    source = LinkedInSource(
+        profile=args.profile,
+        headed=True,
+        limits=LinkedInLimits(max_posts=args.max_posts),
+    )
+
+    try:
+        page = source.open_for_manual_login()
+    except CollectionStopped as exc:
+        print(f"Could not open the browser: {exc}")
+        return 1
+
+    print("Browser open. Sign in on the LinkedIn page.")
+    print("Press Enter here once you are signed in...")
+
+    try:
+        input()
+    except (EOFError, KeyboardInterrupt):
+        print()
+
+    if not source.wait_for_manual_session(timeout_seconds=600):
+        print("Still not signed in. Nothing was saved.")
+        return 1
+
+    saved = source.save_session()
+
+    source.close()
+
+    if saved is None:
+        print("Signed in, but the session could not be saved.")
+        return 1
+
+    print()
+    print("Signed in. The session is saved inside the ignored")
+    print(".agent tree and is never committed.")
+    print("Run the collection again to use it.")
+
+    return 0
+
+
 def run_collection(
     args: argparse.Namespace,
     root: str | Path = ".",
@@ -305,6 +372,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "run":
         credential_module.load_local_environment(root / ".env")
+
+        if args.source == "linkedin" and args.login:
+            return interactive_login(args)
 
         if args.source == "linkedin" and not args.dry_run:
             credential_module.require()

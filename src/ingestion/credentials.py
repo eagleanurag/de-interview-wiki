@@ -196,24 +196,28 @@ def browser_profile_directory(
     return ensure_secrets_directory(root) / name
 
 
-def _restrict(path: Path) -> None:
+def restrict_permissions(path: Path) -> None:
     """
     Owner-only permissions where the platform supports them.
 
     On Windows this is effectively a no-op, which is acceptable: the
-    directory is still inside the git-ignored tree and is never
-    committed or uploaded.
+    file is still inside the git-ignored tree and is never committed or
+    uploaded.
     """
 
     if os.name == "nt":
         return
 
     try:
-        path.chmod(0o700)
+        path.chmod(0o600 if path.is_file() else 0o700)
     except OSError:
         # A filesystem that cannot express the mode is not a reason to
         # fail the run; the ignore rules still protect the path.
         pass
+
+
+def _restrict(path: Path) -> None:
+    restrict_permissions(path)
 
 
 def assert_no_credential_in_text(

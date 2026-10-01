@@ -1846,6 +1846,146 @@ def test_sign_in_failure_is_treated_as_a_possible_challenge(
         source._sign_in()
 
 
+def test_a_session_is_saved_only_after_a_real_sign_in(tmp_path):
+    """
+    The saved session is what lets a resume work after a human
+    completes a challenge by hand, so it must live inside the ignored
+    tree and never be written when nothing authenticated.
+    """
+
+    source = LinkedInSource(profile="my-handle", root=tmp_path)
+
+    assert source.save_session() is None
+
+    saved: list[str] = []
+
+    class FakeContext:
+        def storage_state(self, path):
+            Path(path).write_text(
+                '{"cookies": [], "origins": []}', encoding="utf-8"
+            )
+            saved.append(path)
+
+    source._context = FakeContext()
+
+    target = source.save_session()
+
+    assert target is not None
+    assert target.is_file()
+
+    # Inside the ignored tree, never the repository.
+    assert ".agent" in target.parts
+    assert tmp_path.resolve() in target.resolve().parents
+
+
+class _Startable:
+    """Mimics Playwright's sync_playwright().start() entry point."""
+
+    def __init__(self, factory):
+        self._factory = factory
+
+    def start(self):
+        return self._factory()
+
+
+def test_manual_login_only_navigates(monkeypatch, tmp_path):
+    """
+    The manual path exists so automation never types the password.
+
+    With credentials removed from the environment entirely, opening
+    the browser for manual sign-in must still work.
+    """
+
+    monkeypatch.delenv("LINKEDIN_USERNAME", raising=False)
+    monkeypatch.delenv("LINKEDIN_PASSWORD", raising=False)
+
+    source = LinkedInSource(profile="my-handle", root=tmp_path)
+
+    visited: list[str] = []
+
+    class FakePage:
+        url = "https://www.linkedin.com/login"
+
+        def goto(self, url, wait_until=None):
+            visited.append(url)
+
+    class FakeContext:
+        def set_default_timeout(self, value):
+            pass
+
+        def new_page(self):
+            return FakePage()
+
+    class FakeBrowser:
+        def new_context(self):
+            return FakeContext()
+
+        def close(self):
+            pass
+
+    class FakePlaywright:
+        chromium = type(
+            "C",
+            (),
+            {"launch": staticmethod(lambda headless=True: FakeBrowser())},
+        )()
+
+        def stop(self):
+            pass
+
+    # Playwright is imported inside the function, so the fake is
+    # installed on the module the import resolves from.
+    import playwright.sync_api as sync_api
+
+    monkeypatch.setattr(
+        sync_api, "sync_playwright", lambda: _Startable(FakePlaywright)
+    )
+
+    page = source.open_for_manual_login()
+
+    assert visited == ["https://www.linkedin.com/login"]
+    assert page is not None
+
+    source.close()
+
+
+def test_wait_for_manual_session_polls_until_signed_in(tmp_path):
+    source = LinkedInSource(profile="my-handle", root=tmp_path)
+
+    attempts = {"count": 0}
+
+    class FakePage:
+        def wait_for_timeout(self, ms):
+            attempts["count"] += 1
+
+    source._page = FakePage()
+
+    def signed_in():
+        attempts["count"] += 1
+        return attempts["count"] >= 3
+
+    source._signed_in = signed_in
+
+    assert source.wait_for_manual_session(
+        timeout_seconds=10, interval_seconds=1
+    )
+
+
+def test_wait_for_manual_session_gives_up(tmp_path):
+    source = LinkedInSource(profile="my-handle", root=tmp_path)
+
+    class FakePage:
+        def wait_for_timeout(self, ms):
+            pass
+
+    source._page = FakePage()
+    source._signed_in = lambda: False
+
+    assert not source.wait_for_manual_session(
+        timeout_seconds=0, interval_seconds=1
+    )
+
+
 def test_linkedin_close_is_safe_without_a_browser(tmp_path):
     source = LinkedInSource(profile="my-handle")
 

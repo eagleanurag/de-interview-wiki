@@ -278,6 +278,39 @@ class LinkedInSource(Source):
 
         self._ensure_authenticated()
 
+        # Persist the session so a later run does not need to sign in
+        # again. This is what makes a resume possible after a human
+        # completes a challenge by hand.
+        self.save_session()
+
+    def save_session(self) -> Path | None:
+        """
+        Store the authenticated session inside the ignored tree.
+
+        The file holds cookies and is treated as a credential: it lives
+        under ``.agent/secrets/``, is never committed, and its path is
+        never logged.
+        """
+
+        if self._context is None:
+            return None
+
+        directory = credential_module.ensure_secrets_directory(
+            self.root
+        )
+
+        target = directory / "state.json"
+
+        try:
+            self._context.storage_state(path=str(target))
+        except Exception as exc:  # noqa: BLE001
+            self.progress(f"Could not save the session: {_redact(exc)}")
+            return None
+
+        credential_module.restrict_permissions(target)
+
+        return target
+
     def close(self) -> None:
         """Close the browser. Safe to call repeatedly."""
 
@@ -397,6 +430,81 @@ class LinkedInSource(Source):
                 continue
 
         return None
+
+    def open_for_manual_login(self):
+        """
+        Launch a browser and hand it to the user. No automation past
+        this point.
+
+        Used by the ``--login`` path so a human completes any challenge
+        themselves, once, rather than on every run.
+        """
+
+        if not linkedin_installed():
+            raise CollectionStopped(
+                StopReason.FAILED, playwright_install_hint()
+            )
+
+        from playwright.sync_api import sync_playwright
+
+        self._playwright = sync_playwright().start()
+
+        try:
+            self._browser = self._playwright.chromium.launch(
+                headless=False
+            )
+        except Exception as exc:  # noqa: BLE001
+            self.close()
+            raise CollectionStopped(
+                StopReason.FAILED,
+                f"Could not launch the browser: {_redact(exc)}",
+            ) from exc
+
+        self._context = self._browser.new_context()
+        self._context.set_default_timeout(120_000)
+
+        self._page = self._context.new_page()
+
+        page = self._require_page()
+
+        page.goto(
+            f"{PROFILE_URL}/login", wait_until="domcontentloaded"
+        )
+
+        return page
+
+    def wait_for_manual_session(
+        self,
+        *,
+        timeout_seconds: int = 600,
+        interval_seconds: int = 5,
+    ) -> bool:
+        """
+        Poll until the user has signed in by hand.
+
+        Only asks whether the session is authenticated. It never
+        inspects or completes a challenge.
+        """
+
+        page = self._require_page()
+
+        waited = 0
+
+        while waited <= timeout_seconds:
+            try:
+                if self._signed_in():
+                    return True
+            except Exception:  # noqa: BLE001
+                pass
+
+            try:
+                page.wait_for_timeout(interval_seconds * 1000)
+            except Exception:  # noqa: BLE001
+                pass
+
+            waited += interval_seconds
+
+        return False
 
     def _require_page(self):
         """The page, or a clear error if the browser never started."""
