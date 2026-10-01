@@ -19,6 +19,7 @@ posts is the job of :mod:`src.ingestion.importer`; nothing here
 modifies a post directory.
 """
 
+import hashlib
 from datetime import datetime
 from pathlib import Path
 
@@ -31,6 +32,7 @@ from src.ingestion.post_document import (
 from src.models import (
     AIAnalysis,
     Classification,
+    EnrichmentFingerprint,
     InterviewQuestion,
     KnowledgePost,
     MediaItem,
@@ -138,6 +140,15 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
         interview_questions=questions,
         classification=classification,
         directory=str(post_directory),
+        enrichment=EnrichmentFingerprint(
+            **{
+                key: value or ""
+                for key, value in (
+                    document.enrichment_fingerprint().items()
+                )
+                if key in EnrichmentFingerprint.model_fields
+            }
+        ),
     )
 
 
@@ -269,6 +280,40 @@ def _discover_media(
         )
 
     return media_items
+
+
+def source_digest(post: KnowledgePost) -> str:
+    """
+    A digest of everything enrichment actually reads.
+
+    The text, plus the text extracted from each media file and the
+    description the media stage produced. Two posts with the same
+    digest produce the same enrichment, so one can be reused for the
+    other rather than paying for the model again.
+
+    Media file names are included because two files with the same
+    extracted text and different names are not the same evidence.
+    """
+
+    digest = hashlib.sha256()
+
+    digest.update((post.original_text or "").strip().encode(
+        "utf-8", "replace"
+    ))
+
+    for media in sorted(
+        post.media, key=lambda item: item.path
+    ):
+        digest.update(b"\x00")
+        digest.update(media.path.encode("utf-8", "replace"))
+        digest.update((media.extracted_text or "").encode(
+            "utf-8", "replace"
+        ))
+        digest.update((media.description or "").encode(
+            "utf-8", "replace"
+        ))
+
+    return digest.hexdigest()
 
 
 def _parse_datetime(value: str | None) -> datetime:

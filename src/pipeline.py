@@ -25,14 +25,19 @@ from pathlib import Path
 from src.aggregation.aggregator import aggregate_results
 from src.ai.enricher import AIEnricher
 from src.ingestion.importer import discover_posts, validate_posts
-from src.ingestion.post_loader import load_post
-from src.processing.media_processor import process_media
+from src.ingestion.post_loader import load_post, source_digest
+from src.processing.media_processor import MediaReport, process_media
 from src.wiki.generator import generate_site
 
 BUILD_ROOT = Path("build")
 RESULTS_DIR = BUILD_ROOT / "worker-results"
 KNOWLEDGE_BASE = BUILD_ROOT / "knowledge_base.json"
 SITE_DIR = BUILD_ROOT / "site"
+
+#: Bumped when the enrichment contract or the prompt changes. A result
+#: produced under a different version is not reusable, because the
+#: current version would answer differently about the same content.
+ENRICHER_VERSION = "2"
 
 
 class StageError(RuntimeError):
@@ -72,18 +77,25 @@ def discover() -> list[str]:
 
 def enrich(identifiers: list[str], *, force: bool) -> dict:
     """
-    Enrich every post into its own worker result.
+    Enrich every post that needs it, into its own worker result.
 
     One post failing costs that post. The source is never modified and
     never deleted, so a failed post can simply be retried on the next
     run, which is what makes the pipeline resumable.
+
+    Enrichment is incremental. A post whose content has not changed and
+    whose enrichment was produced by the current version keeps the
+    result it has, because calling the model again would spend real
+    time to arrive at the same answer. ``force`` re-enriches
+    everything regardless, which is what a change to the prompt needs.
     """
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
     written: list[str] = []
     failed: dict[str, str] = {}
-    skipped: list[str] = []
+    reused: list[str] = []
+    media_failures: dict[str, list[str]] = {}
 
     enricher = AIEnricher()
 
@@ -91,25 +103,44 @@ def enrich(identifiers: list[str], *, force: bool) -> dict:
         directory = Path("data/posts") / identifier
         target = RESULTS_DIR / f"cloud_worker_{identifier}.json"
 
-        if target.is_file() and not force:
-            skipped.append(identifier)
-            continue
-
         started = time.monotonic()
 
         try:
             post = load_post(directory)
 
-            process_media(post)
+            media_report = MediaReport()
+
+            process_media(post, report=media_report)
+
+            digest = source_digest(post)
+
+            post.enrichment = type(post.enrichment)(
+                source_digest=digest,
+                enricher_version=ENRICHER_VERSION,
+            )
+
+            if target.is_file() and not force:
+                existing = _reusable(target, digest)
+
+                if existing is not None:
+                    reused.append(identifier)
+                    continue
 
             enriched = enricher.enrich(post)
 
+            payload = enriched.model_dump(mode="json")
+
+            # The fingerprint is excluded from the model on purpose, so
+            # it is written alongside. It is what lets a later run skip
+            # this post, and it is build metadata rather than content,
+            # so the aggregator does not read it.
+            payload["_enrichment"] = {
+                "source_digest": digest,
+                "enricher_version": ENRICHER_VERSION,
+            }
+
             target.write_text(
-                json.dumps(
-                    enriched.model_dump(mode="json"),
-                    indent=2,
-                    ensure_ascii=False,
-                ),
+                json.dumps(payload, indent=2, ensure_ascii=False),
                 encoding="utf-8",
             )
 
@@ -120,6 +151,11 @@ def enrich(identifiers: list[str], *, force: bool) -> dict:
 
         written.append(identifier)
 
+        broken = [item.path for item in media_report.failed]
+
+        if broken:
+            media_failures[identifier] = broken
+
         elapsed = time.monotonic() - started
 
         log(
@@ -127,10 +163,11 @@ def enrich(identifiers: list[str], *, force: bool) -> dict:
             f"({len(enriched.interview_questions)} question(s), "
             f"relevant={enriched.classification.interview_relevant}, "
             f"{elapsed:.1f}s)"
+            + (f" media failed: {broken}" if broken else "")
         )
 
     log(
-        f"enrichment: {len(written)} written, {len(skipped)} reused, "
+        f"enrichment: {len(written)} written, {len(reused)} reused, "
         f"{len(failed)} failed"
     )
 
@@ -141,9 +178,41 @@ def enrich(identifiers: list[str], *, force: bool) -> dict:
 
     return {
         "written": written,
-        "skipped": skipped,
+        "reused": reused,
         "failed": failed,
+        "media_failures": media_failures,
     }
+
+
+def _reusable(target: Path, digest: str) -> dict | None:
+    """
+    An existing worker result that still matches the current content.
+
+    Read from the file rather than trusted from a stamp, because the
+    stamp lives in the post and the result lives here, and the two can
+    disagree if a run was interrupted between them.
+    """
+
+    try:
+        payload = json.loads(target.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    if not isinstance(payload, dict):
+        return None
+
+    recorded = payload.get("_enrichment") or {}
+
+    if not isinstance(recorded, dict):
+        return None
+
+    if recorded.get("source_digest") != digest:
+        return None
+
+    if recorded.get("enricher_version") != ENRICHER_VERSION:
+        return None
+
+    return payload
 
 
 def aggregate() -> Path:

@@ -79,6 +79,19 @@ DOCUMENT_KEYS = (
     "ai_analysis",
     "interview_questions",
     "classification",
+    "enrichment",
+)
+
+#: What an enrichment records about itself.
+#:
+#: Without this, enrichment can only be re-done wholesale, because
+#: nothing says whether the analysis on disk still matches the text it
+#: describes. With it, a run can tell a post whose content is unchanged
+#: from one that needs the model again.
+ENRICHMENT_KEYS = (
+    "source_digest",
+    "enricher_version",
+    "enriched_at",
 )
 
 SOURCE_KEYS = (
@@ -344,6 +357,11 @@ class PostDocument:
             "media": [],
             "ai_analysis": empty_ai_analysis(),
             "interview_questions": [],
+            "enrichment": {
+                "source_digest": None,
+                "enricher_version": None,
+                "enriched_at": None,
+            },
             "classification": {
                 "domain": domain or DEFAULT_DOMAIN,
                 "primary_topic": (primary_topic or "").strip() or None,
@@ -444,6 +462,67 @@ class PostDocument:
 
     def set_original_text(self, text: str) -> None:
         self.data["original_text"] = text
+
+    # -----------------------------------------------------------------
+    # Enrichment provenance
+    # -----------------------------------------------------------------
+
+    def enrichment_fingerprint(self) -> dict:
+        """What is known about how this post was enriched."""
+
+        raw = self.data.get("enrichment")
+
+        if not isinstance(raw, dict):
+            return {}
+
+        return {key: raw.get(key) for key in ENRICHMENT_KEYS}
+
+    def mark_enriched(
+        self,
+        *,
+        source_digest: str,
+        enricher_version: str,
+        enriched_at: str | None = None,
+    ) -> None:
+        """
+        Record which content an enrichment describes.
+
+        Stored so a later run can decide whether the analysis on disk
+        still matches the text, instead of paying for the model again on
+        a post that has not changed.
+        """
+
+        self.data["enrichment"] = {
+            "source_digest": source_digest,
+            "enricher_version": enricher_version,
+            "enriched_at": enriched_at
+            or datetime.now().astimezone().isoformat(),
+        }
+
+    def needs_enrichment(
+        self,
+        *,
+        source_digest: str,
+        enricher_version: str,
+    ) -> bool:
+        """
+        Whether this post has to go back to the model.
+
+        Re-enriched when the content changed, or when the enrichment
+        logic itself changed, because an analysis produced by an older
+        version no longer describes what the current version would say.
+        A post that was never enriched is always enriched.
+        """
+
+        fingerprint = self.enrichment_fingerprint()
+
+        if not fingerprint.get("source_digest"):
+            return True
+
+        if fingerprint.get("source_digest") != source_digest:
+            return True
+
+        return fingerprint.get("enricher_version") != enricher_version
 
     def merge_source(
         self,

@@ -183,8 +183,10 @@ def test_new_post_uses_the_committed_document_structure(posts_root):
 
     document = read_document(posts_root / "sample_100")
 
-    # Exactly the keys the repository already ships, so the worker
-    # needs no migration.
+    # The keys the repository ships, plus "enrichment", which records
+    # which content an analysis describes so a later run enriches only
+    # what changed. Everything the worker needs is still present, so no
+    # migration is required.
     assert set(document) == {
         "id",
         "source",
@@ -193,7 +195,11 @@ def test_new_post_uses_the_committed_document_structure(posts_root):
         "ai_analysis",
         "interview_questions",
         "classification",
+        "enrichment",
     }
+
+    # It starts empty, because nothing has enriched the post yet.
+    assert document["enrichment"]["source_digest"] is None
 
     assert document["id"] == "sample_100"
     assert document["original_text"] == "Question about Spark."

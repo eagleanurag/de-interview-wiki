@@ -52,6 +52,20 @@ class Classification(BaseModel):
     interview_relevant: bool = False
 
 
+class EnrichmentFingerprint(BaseModel):
+    """
+    What an enrichment describes and which version produced it.
+
+    Excluded from the canonical knowledge base: it records how this
+    pipeline processed a post, not what the post says, and publishing
+    it would put build metadata into the reader-facing output.
+    """
+
+    source_digest: str = ""
+    enricher_version: str = ""
+    enriched_at: str = ""
+
+
 class KnowledgePost(BaseModel):
     id: str
     source: SourceInfo
@@ -74,3 +88,10 @@ class KnowledgePost(BaseModel):
     # portable the moment it was written anywhere else. Media paths
     # stay relative and are resolved against this.
     directory: str = Field(default="", exclude=True)
+
+    # Which content the analysis describes, and which version of the
+    # enrichment produced it. Lets a later run enrich only what
+    # changed instead of paying for the model on every post.
+    enrichment: EnrichmentFingerprint = Field(
+        default_factory=EnrichmentFingerprint, exclude=True
+    )
