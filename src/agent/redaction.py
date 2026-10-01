@@ -15,6 +15,18 @@ import re
 
 REDACTED = "[REDACTED]"
 
+#: Names for the shapes below, so other code can reason about a single
+#: one of them rather than reimplementing the whole table.
+PATTERN_NAMES = (
+    "github_token",
+    "prefixed_key",
+    "aws_access_key",
+    "google_api_key",
+    "bearer_token",
+    "secret_assignment",
+    "private_key_block",
+)
+
 # Patterns for common credential shapes.
 _PATTERNS: tuple[re.Pattern[str], ...] = (
     # GitHub tokens. One pattern covers every documented prefix:
@@ -64,6 +76,21 @@ _PATTERNS: tuple[re.Pattern[str], ...] = (
 )
 
 _ASSIGNMENT_GROUP = 3
+
+#: The same table, keyed by shape.
+CREDENTIAL_PATTERNS: dict[str, re.Pattern[str]] = dict(
+    zip(PATTERN_NAMES, _PATTERNS)
+)
+
+#: Shapes that identify a value rather than merely a key name. Used to
+#: tell a real credential from a detector's own source text.
+VALUE_SHAPES: tuple[str, ...] = (
+    "github_token",
+    "prefixed_key",
+    "aws_access_key",
+    "google_api_key",
+    "private_key_block",
+)
 
 
 def redact(

@@ -7,6 +7,12 @@ jobs:
   opencode-worker:
     runs-on: ubuntu-latest
 
+    # A smoke test only checks the repository out and runs a command.
+    # Without this the job inherits the repository's default token
+    # scope, which is usually broader than the job needs.
+    permissions:
+      contents: read
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
