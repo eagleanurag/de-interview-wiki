@@ -784,6 +784,10 @@ def test_search_index_excludes_answers_and_metadata(site: Path):
 
     assert "answer" not in record
     assert "original_text" not in record
+    # The key set is asserted exactly, so a field added to the index is
+    # a deliberate change rather than a silent growth in what ships to
+    # every reader's browser. "pb" is the date the source published the
+    # content, which is not the same as the capture date in "d".
     assert set(record) == {
         "a",
         "c",
@@ -791,6 +795,7 @@ def test_search_index_excludes_answers_and_metadata(site: Path):
         "i",
         "n",
         "p",
+        "pb",
         "q",
         "s",
         "sb",
