@@ -30,11 +30,15 @@ _UNSAFE_ID_CHARACTERS = re.compile(r"[^A-Za-z0-9_.-]+")
 ASSETS_DIR = "assets"
 POSTS_DIR = "posts"
 TOPICS_DIR = "topics"
+CONCEPTS_DIR = "concepts"
+TECHNOLOGIES_DIR = "technologies"
 
 INDEX_PAGE = "index.html"
 SEARCH_PAGE = "search.html"
 TOPICS_PAGE = "topics.html"
 QUESTIONS_PAGE = "questions.html"
+CONCEPTS_PAGE = "concepts.html"
+TECHNOLOGIES_PAGE = "technologies.html"
 NOT_FOUND_PAGE = "404.html"
 
 SEARCH_INDEX_FILE = f"{ASSETS_DIR}/search-index.json"
@@ -161,3 +165,15 @@ def topic_page(slug: str) -> str:
     """Site-relative path of a generated topic page."""
 
     return f"{TOPICS_DIR}/{slug}.html"
+
+
+def concept_page(slug: str) -> str:
+    """Site-relative path of a generated concept page."""
+
+    return f"{CONCEPTS_DIR}/{slug}.html"
+
+
+def technology_page(slug: str) -> str:
+    """Site-relative path of a generated technology page."""
+
+    return f"{TECHNOLOGIES_DIR}/{slug}.html"

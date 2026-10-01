@@ -51,13 +51,25 @@ def worker_results(posts_root, tmp_path_factory):
     Aggregation reads worker results matching a glob, so the posts are
     copied in under that name. This keeps the test on the same input
     path the workflow uses instead of testing a second code path.
+
+    Enriched results are preferred when the local pipeline has already
+    produced them, because a knowledge base built from unenriched posts
+    has no topics, concepts or questions to check, and a test that
+    silently skips itself on every run is not a test.
     """
 
     directory = tmp_path_factory.mktemp("worker-results")
 
-    for path in posts_root.glob("*/post.json"):
-        destination = directory / f"cloud_worker_{path.parent.name}.json"
-        shutil.copyfile(path, destination)
+    enriched = Path("build") / "worker-results"
+
+    if enriched.is_dir() and any(enriched.glob(WORKER_RESULT_GLOB)):
+        for path in sorted(enriched.glob(WORKER_RESULT_GLOB)):
+            shutil.copyfile(path, directory / path.name)
+    else:
+        for path in posts_root.glob("*/post.json"):
+            shutil.copyfile(
+                path, directory / f"cloud_worker_{path.parent.name}.json"
+            )
 
     if not list(directory.glob(WORKER_RESULT_GLOB)):
         pytest.skip("no posts available to aggregate")
@@ -107,26 +119,20 @@ def test_the_committed_posts_all_validate(posts_root):
     assert report.ok, [str(issue) for issue in report.issues]
 
 
-def test_every_enriched_post_appears_in_the_knowledge_base(
+def test_every_post_appears_in_the_knowledge_base(
     posts_root, knowledge_base
 ):
     """
-    Aggregation covers what the worker enriched. A post that was never
-    enriched is skipped rather than aggregated as a half-record, so the
-    assertion is against the enriched posts.
+    Every collected post is aggregated, whether or not it has been
+    enriched.
+
+    A post that could not be enriched is still real content with real
+    provenance, so dropping it would lose the source. It is aggregated
+    and labelled instead.
     """
 
-    from src.aggregation.aggregator import REQUIRED_ENRICHED_FIELDS
-
-    def enriched(path: Path) -> bool:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-
-        return REQUIRED_ENRICHED_FIELDS <= set(payload)
-
     expected = {
-        path.parent.name
-        for path in posts_root.glob("*/post.json")
-        if enriched(path)
+        path.parent.name for path in posts_root.glob("*/post.json")
     }
 
     actual = {post["id"] for post in knowledge_base["posts"]}
@@ -134,31 +140,55 @@ def test_every_enriched_post_appears_in_the_knowledge_base(
     assert actual == expected
 
 
-def test_an_unenriched_post_is_skipped_not_half_aggregated(
-    posts_root, knowledge_base
+def test_enrichment_coverage_is_reported(knowledge_base):
+    """
+    A knowledge base with no topics is otherwise indistinguishable from
+    a knowledge base with no content, so coverage is explicit rather
+    than left for a reader to infer from empty sections.
+    """
+
+    stats = knowledge_base["stats"]
+
+    assert stats["posts_enriched"] <= stats["posts_aggregated"]
+
+    kinds = knowledge_base["knowledge"]["content_kinds"]
+
+    unenriched = [
+        post_id
+        for post_id, kind in kinds.items()
+        if kind == "unenriched"
+    ]
+
+    assert len(unenriched) == (
+        stats["posts_aggregated"] - stats["posts_enriched"]
+    )
+
+
+def test_an_unenriched_post_is_labelled_not_silently_empty(
+    knowledge_base,
 ):
     """
-    A bare stub carries no summary and no questions. Aggregating it
-    would put an empty record in the canonical base, so it is left out
-    and reported instead.
+    A post that is present but unenriched must be visibly unenriched,
+    so "nothing here" can be told apart from "nothing processed yet".
     """
 
-    from src.aggregation.aggregator import REQUIRED_ENRICHED_FIELDS
+    kinds = knowledge_base["knowledge"]["content_kinds"]
 
-    unenriched = []
+    for post in knowledge_base["posts"]:
+        analysis = post["ai_analysis"]
 
-    for path in posts_root.glob("*/post.json"):
-        payload = json.loads(path.read_text(encoding="utf-8"))
+        has_analysis = bool(
+            (analysis.get("summary") or "").strip()
+            or analysis.get("topics")
+            or analysis.get("concepts")
+        )
 
-        if not REQUIRED_ENRICHED_FIELDS <= set(payload):
-            unenriched.append(path.parent.name)
+        kind = kinds[post["id"]]
 
-    if not unenriched:
-        pytest.skip("every post has been enriched in this checkout")
-
-    aggregated = {post["id"] for post in knowledge_base["posts"]}
-
-    assert not aggregated.intersection(unenriched)
+        if not has_analysis:
+            assert kind == "unenriched", post["id"]
+        else:
+            assert kind != "unenriched", post["id"]
 
 
 def test_no_post_appears_twice(knowledge_base):
@@ -201,7 +231,14 @@ def test_source_text_is_preserved_verbatim(knowledge_base):
 
 
 def test_the_entry_points_exist(site):
-    for name in ("index.html", "topics.html", "questions.html", "search.html"):
+    for name in (
+        "index.html",
+        "topics.html",
+        "concepts.html",
+        "technologies.html",
+        "questions.html",
+        "search.html",
+    ):
         assert (site / name).is_file(), name
 
 
@@ -222,13 +259,20 @@ def test_the_search_index_covers_every_post(site, knowledge_base):
         (site / "assets" / "search-index.json").read_text(encoding="utf-8")
     )
 
-    assert payload["v"] == 1
     assert payload["posts"] == len(knowledge_base["posts"])
-    assert len(payload["records"]) == len(knowledge_base["posts"])
+
+    # Records cover posts and the consolidated sections, so the total
+    # is larger than the post count by design.
+    assert payload["topics"] > 0
+    assert len(payload["records"]) > payload["posts"]
 
     # "i" is the identifier and "u" the page, both compressed to keep
-    # the index small. The identifier field is what the assertion needs.
-    identifiers = {record["i"] for record in payload["records"]}
+    # the index small. Only post records carry a post identifier.
+    identifiers = {
+        record["i"]
+        for record in payload["records"]
+        if record["k"] == "p"
+    }
 
     assert identifiers == {post["id"] for post in knowledge_base["posts"]}
 
@@ -319,7 +363,13 @@ def test_every_internal_link_resolves(site):
 def test_the_navigation_links_every_top_level_page(site):
     index = (site / "index.html").read_text(encoding="utf-8")
 
-    for page in ("topics.html", "questions.html", "search.html"):
+    for page in (
+        "topics.html",
+        "concepts.html",
+        "technologies.html",
+        "questions.html",
+        "search.html",
+    ):
         assert page in index, page
 
 
@@ -562,3 +612,175 @@ def test_no_page_contains_a_credential_marker(site):
 
         for marker in markers:
             assert marker not in text, f"{path.name}: {marker}"
+
+# ---------------------------------------------------------------------
+# Consolidated sections
+# ---------------------------------------------------------------------
+
+
+def test_every_concept_has_a_page(site, knowledge_base):
+    concepts = knowledge_base["knowledge"]["concepts"]
+
+    if not concepts:
+        pytest.skip("no concepts consolidated in this checkout")
+
+    pages = {path.stem for path in (site / "concepts").glob("*.html")}
+
+    for concept in concepts:
+        assert concept["slug"] in pages, concept["name"]
+
+
+def test_every_technology_has_a_page(site, knowledge_base):
+    technologies = knowledge_base["knowledge"]["technologies"]
+
+    if not technologies:
+        pytest.skip("no technologies recognised in this checkout")
+
+    pages = {path.stem for path in (site / "technologies").glob("*.html")}
+
+    for technology in technologies:
+        assert technology["slug"] in pages, technology["name"]
+
+
+def test_a_concept_page_lists_the_posts_it_came_from(
+    site, knowledge_base
+):
+    """
+    A concept that cannot be traced back to source is a claim nothing
+    supports, so every concept page must name its posts.
+    """
+
+    for concept in knowledge_base["knowledge"]["concepts"]:
+        page = site / "concepts" / f"{concept['slug']}.html"
+        text = page.read_text(encoding="utf-8")
+
+        for post_id in concept["post_ids"]:
+            assert post_id in text, f"{concept['name']} -> {post_id}"
+
+
+def test_a_technology_page_lists_the_posts_that_use_it(
+    site, knowledge_base
+):
+    for technology in knowledge_base["knowledge"]["technologies"]:
+        page = site / "technologies" / f"{technology['slug']}.html"
+        text = page.read_text(encoding="utf-8")
+
+        for post_id in technology["post_ids"]:
+            assert post_id in text, f"{technology['name']} -> {post_id}"
+
+
+def test_a_shared_concept_links_posts_from_more_than_one_source(
+    site, knowledge_base
+):
+    """
+    The point of consolidation: one concept page that gathers several
+    posts, rather than a page per post.
+    """
+
+    shared = [
+        concept
+        for concept in knowledge_base["knowledge"]["concepts"]
+        if len(concept["post_ids"]) > 1
+    ]
+
+    if not shared:
+        pytest.skip("no concept is shared between posts yet")
+
+    for concept in shared:
+        page = site / "concepts" / f"{concept['slug']}.html"
+        text = page.read_text(encoding="utf-8")
+
+        found = sum(1 for post in concept["post_ids"] if post in text)
+
+        assert found == len(concept["post_ids"]), concept["name"]
+
+
+def test_a_technology_links_the_posts_that_use_it(site, knowledge_base):
+    """
+    A technology appears only when a post mentions it, so its page
+    must point at those posts rather than at nothing.
+    """
+
+    for technology in knowledge_base["knowledge"]["technologies"]:
+        page = site / "technologies" / f"{technology['slug']}.html"
+        text = page.read_text(encoding="utf-8")
+
+        assert technology["post_ids"], technology["name"]
+        assert "posts/" in text, technology["name"]
+
+
+def test_no_technology_page_exists_without_a_supporting_post(
+    site, knowledge_base
+):
+    """
+    A technology page with no post behind it would be an invented
+    claim, so the two sets have to match exactly.
+    """
+
+    from_site = {
+        path.stem for path in (site / "technologies").glob("*.html")
+    }
+
+    from_kb = {
+        technology["slug"]
+        for technology in knowledge_base["knowledge"]["technologies"]
+    }
+
+    assert from_site == from_kb
+
+
+def test_the_search_index_covers_concepts_and_technologies(
+    site, knowledge_base
+):
+    """
+    Search that cannot find a concept is not search over the
+    knowledge base, it is search over the posts.
+    """
+
+    payload = json.loads(
+        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
+    )
+
+    records = payload["records"]
+
+    for concept in knowledge_base["knowledge"]["concepts"]:
+        page = f"concepts/{concept['slug']}.html"
+
+        assert any(
+            record["u"] == page for record in records
+        ), concept["name"]
+
+    for technology in knowledge_base["knowledge"]["technologies"]:
+        page = f"technologies/{technology['slug']}.html"
+
+        assert any(
+            record["u"] == page for record in records
+        ), technology["name"]
+
+
+def test_every_post_records_what_kind_of_content_it_is(
+    knowledge_base,
+):
+    """
+    A post that teaches nothing is still stored and still labelled, so
+    a reader can see why it contributed no knowledge.
+    """
+
+    kinds = knowledge_base["knowledge"]["content_kinds"]
+
+    assert kinds, "every post should carry a content kind"
+
+    for post in knowledge_base["posts"]:
+        assert post["id"] in kinds, post["id"]
+
+        assert kinds[post["id"]] in {
+            "technical",
+            "job_announcement",
+            "event",
+            "congratulation",
+            "certification",
+            "appreciation",
+            "social",
+            "unclassified",
+            "unenriched",
+        }, kinds[post["id"]]

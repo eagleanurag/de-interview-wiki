@@ -16,10 +16,12 @@ import json
 
 from src.models import KnowledgePost
 from src.wiki.analysis import (
+    ConceptEntry,
     DIFFICULTIES,
     QuestionEntry,
     SiteModel,
     SUBTOPIC_KIND,
+    TechnologyEntry,
     TopicEntry,
 )
 from src.wiki.components import (
@@ -44,6 +46,7 @@ from src.wiki.components import (
 )
 from src.wiki.layout import render_document
 from src.wiki.naming import (
+    CONCEPTS_PAGE,
     INDEX_PAGE,
     NOT_FOUND_PAGE,
     QUESTIONS_PAGE,
@@ -51,6 +54,7 @@ from src.wiki.naming import (
     SEARCH_INDEX_FILE,
     SEARCH_PAGE,
     SEARCH_SCRIPT,
+    TECHNOLOGIES_PAGE,
     TOPICS_PAGE,
     href,
     post_page,
@@ -294,6 +298,384 @@ def render_topics_index(model: SiteModel) -> str:
         body="".join(parts),
         generated_at=model.generated_at,
     )
+
+
+def render_concepts_index(model: SiteModel) -> str:
+    """Every concept the knowledge base has extracted."""
+
+    page = CONCEPTS_PAGE
+
+    entries = model.concept_entries
+
+    if not entries:
+        return render_document(
+            page=page,
+            title="Concepts",
+            description="Concepts extracted from collected posts.",
+            body=empty_state(
+                "No concepts yet",
+                "Concepts appear once posts have been enriched.",
+            ),
+        )
+
+    shared = sum(
+        1 for entry in entries if entry.post_count > 1
+    )
+
+    cards = []
+
+    for entry in entries:
+        cards.append(
+            "".join(
+                [
+                    '<a class="card topic-card" ',
+                    f'href="{esc(href(page, entry.page))}">',
+                    f"<h3>{esc(entry.label)}</h3>",
+                    '<div class="badge-row">',
+                    badge(
+                        str(entry.post_count),
+                        "badge badge-quiet",
+                        title="Posts mentioning this concept",
+                    ),
+                    badge(
+                        str(len(entry.technologies)),
+                        "badge badge-quiet",
+                        title="Technologies it relates to",
+                    ),
+                    "</div>",
+                    "</a>",
+                ]
+            )
+        )
+
+    body = "".join(
+        [
+            _explainer(),
+            '<div class="stat-row">',
+            stat_tile(len(entries), "Concepts"),
+            stat_tile(shared, "Mentioned by more than one post"),
+            stat_tile(model.technology_count, "Technologies"),
+            "</div>",
+            section(
+                "All concepts",
+                f'<div class="topic-grid">{"".join(cards)}</div>',
+                subtitle=(
+                    "Grouped from post analysis. Each concept keeps the "
+                    "posts it came from."
+                ),
+            ),
+        ]
+    )
+
+    return render_document(
+        page=page,
+        title="Concepts",
+        description="Technical concepts extracted from collected posts.",
+        body=body,
+        generated_at=model.generated_at,
+    )
+
+
+def render_concept_detail(
+    model: SiteModel,
+    concept: ConceptEntry,
+) -> str:
+    """One concept: the posts that mention it, and what it relates to."""
+
+    page = concept.page
+
+    posts_by_slug = dict(zip(model.post_slugs, model.posts))
+
+    pairs = [
+        (posts_by_slug[slug], slug)
+        for slug in concept.post_slugs
+        if slug in posts_by_slug
+    ]
+
+    parts = [
+        _breadcrumb(
+            page,
+            [("Concepts", CONCEPTS_PAGE), (concept.label, None)],
+        ),
+        '<section class="hero hero-compact">',
+        '<div class="badge-row">',
+        badge("Concept", "badge badge-kind"),
+        "</div>",
+        f"<h1>{esc(concept.label)}</h1>",
+        "</section>",
+        stat_grid(
+            [
+                stat_tile(concept.post_count, "Posts mentioning this"),
+                stat_tile(len(concept.topics), "Related topics"),
+                stat_tile(
+                    len(concept.technologies), "Related technologies"
+                ),
+            ],
+            aria_label=f"{concept.label} totals",
+        ),
+    ]
+
+    if concept.technologies:
+        parts.append(
+            _related_links(
+                page,
+                concept.technologies,
+                model,
+                "technologies",
+                "Related technologies",
+            )
+        )
+
+    if concept.topics:
+        parts.append(
+            _related_links(
+                page,
+                concept.topics,
+                model,
+                "topics",
+                "Related topics",
+            )
+        )
+
+    if pairs:
+        parts.append(
+            _post_card_grid(
+                model,
+                pairs,
+                page,
+                title="Posts that mention this concept",
+                subtitle=(
+                    "The source material this concept was extracted "
+                    "from, in canonical order."
+                ),
+            )
+        )
+    else:
+        parts.append(
+            empty_state(
+                "No source posts",
+                "This concept has no post to trace it back to.",
+            )
+        )
+
+    return render_document(
+        page=page,
+        title=concept.label,
+        description=(
+            f"Posts mentioning {concept.label}, with the topics and "
+            f"technologies around it."
+        ),
+        body="".join(parts),
+        generated_at=model.generated_at,
+    )
+
+
+def render_technologies_index(model: SiteModel) -> str:
+    """Every technology the knowledge base recognises in use."""
+
+    page = TECHNOLOGIES_PAGE
+
+    entries = model.technology_entries
+
+    if not entries:
+        return render_document(
+            page=page,
+            title="Technologies",
+            description="Technologies the collected posts use.",
+            body=empty_state(
+                "No technologies yet",
+                "Technologies appear once posts mention them.",
+            ),
+        )
+
+    cards = []
+
+    for entry in entries:
+        cards.append(
+            "".join(
+                [
+                    '<a class="card topic-card" ',
+                    f'href="{esc(href(page, entry.page))}">',
+                    f"<h3>{esc(entry.label)}</h3>",
+                    '<div class="badge-row">',
+                    badge(
+                        str(entry.post_count),
+                        "badge badge-quiet",
+                        title="Posts using this technology",
+                    ),
+                    badge(
+                        str(entry.question_count),
+                        "badge badge-quiet",
+                        title="Related questions",
+                    ),
+                    "</div>",
+                    "</a>",
+                ]
+            )
+        )
+
+    body = "".join(
+        [
+            _explainer(),
+            section(
+                "All technologies",
+                f'<div class="topic-grid">{"".join(cards)}</div>',
+                subtitle=(
+                    "Recognised from the text of collected posts, so "
+                    "nothing appears without a post that mentions it."
+                ),
+            ),
+        ]
+    )
+
+    return render_document(
+        page=page,
+        title="Technologies",
+        description="Technologies the collected posts use.",
+        body=body,
+        generated_at=model.generated_at,
+    )
+
+
+def render_technology_detail(
+    model: SiteModel,
+    technology: TechnologyEntry,
+) -> str:
+    """One technology: the posts that use it and their questions."""
+
+    page = technology.page
+
+    posts_by_slug = dict(zip(model.post_slugs, model.posts))
+
+    pairs = [
+        (posts_by_slug[slug], slug)
+        for slug in technology.post_slugs
+        if slug in posts_by_slug
+    ]
+
+    parts = [
+        _breadcrumb(
+            page,
+            [("Technologies", TECHNOLOGIES_PAGE), (technology.label, None)],
+        ),
+        '<section class="hero hero-compact">',
+        '<div class="badge-row">',
+        badge("Technology", "badge badge-kind"),
+        "</div>",
+        f"<h1>{esc(technology.label)}</h1>",
+        "</section>",
+        stat_grid(
+            [
+                stat_tile(technology.post_count, "Posts using this"),
+                stat_tile(technology.question_count, "Related questions"),
+                stat_tile(len(technology.topics), "Related topics"),
+            ],
+            aria_label=f"{technology.label} totals",
+        ),
+    ]
+
+    if technology.topics:
+        parts.append(
+            _related_links(
+                page,
+                technology.topics,
+                model,
+                "topics",
+                "Related topics",
+            )
+        )
+
+    if pairs:
+        parts.append(
+            _post_card_grid(
+                model,
+                pairs,
+                page,
+                title="Posts using this technology",
+                subtitle=(
+                    "The collected posts that mention it, in canonical "
+                    "order."
+                ),
+            )
+        )
+    else:
+        parts.append(
+            empty_state(
+                "No source posts",
+                "This technology has no post to trace it back to.",
+            )
+        )
+
+    return render_document(
+        page=page,
+        title=technology.label,
+        description=(
+            f"Posts using {technology.label}, with the topics and "
+            f"questions around it."
+        ),
+        body="".join(parts),
+        generated_at=model.generated_at,
+    )
+
+
+def _related_links(
+    page: str,
+    labels: tuple[str, ...],
+    model: SiteModel,
+    kind: str,
+    heading: str,
+) -> str:
+    """A row of links into another section, skipping unknown labels."""
+
+    targets = _pages_for_labels(labels, model, kind)
+
+    if not targets:
+        return ""
+
+    chips = "".join(
+        '<li><a class="chip" href="{href}">{label}</a></li>'.format(
+            href=esc(href(page, target)),
+            label=esc(label),
+        )
+        for label, target in targets
+    )
+
+    return section(
+        heading,
+        f'<ul class="chip-row">{chips}</ul>',
+        subtitle="Cross-links into the rest of the knowledge base.",
+    )
+
+
+def _pages_for_labels(
+    labels: tuple[str, ...],
+    model: SiteModel,
+    kind: str,
+) -> list[tuple[str, str]]:
+    """
+    Resolve labels to pages in another section.
+
+    A label with no page is skipped rather than rendered as a dead
+    link, which is what keeps every link on the site working.
+    """
+
+    if kind == "topics":
+        lookup = {entry.label: entry.page for entry in model.topics}
+    elif kind == "concepts":
+        lookup = {
+            entry.label: entry.page for entry in model.concept_entries
+        }
+    elif kind == "technologies":
+        lookup = {
+            entry.label: entry.page
+            for entry in model.technology_entries
+        }
+    else:
+        return []
+
+    return [
+        (label, lookup[label]) for label in labels if label in lookup
+    ]
 
 
 def render_topic_detail(

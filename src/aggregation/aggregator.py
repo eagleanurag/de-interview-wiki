@@ -179,6 +179,15 @@ def aggregate_results(
                 for post in posts
                 if post.classification.interview_relevant
             ),
+            # How many posts actually carry an analysis, as opposed to
+            # being present but not yet enriched. Reported because a
+            # knowledge base with empty topics is otherwise
+            # indistinguishable from a knowledge base with no content.
+            "posts_enriched": sum(
+                1
+                for post in posts
+                if (post.ai_analysis.summary or "").strip()
+            ),
         },
         "skipped_files": skipped_files,
         "posts": [

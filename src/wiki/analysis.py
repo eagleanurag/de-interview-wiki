@@ -13,12 +13,15 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from src.aggregation.consolidation import detect_technologies
 from src.models import KnowledgePost
 from src.wiki.canonical import CanonicalKnowledgeBase
 from src.wiki.naming import (
     SlugRegistry,
+    concept_page,
     post_page,
     safe_id,
+    technology_page,
     topic_page,
 )
 
@@ -47,6 +50,52 @@ class TopicEntry:
     @property
     def page(self) -> str:
         return topic_page(self.slug)
+
+    @property
+    def sort_key(self) -> tuple[str, int, str]:
+        return (self.label.casefold(), self.post_count, self.label)
+
+
+@dataclass(frozen=True)
+class ConceptEntry:
+    """One concept, with the posts that mention it."""
+
+    label: str
+    slug: str
+    post_slugs: tuple[str, ...]
+    topics: tuple[str, ...]
+    technologies: tuple[str, ...]
+
+    @property
+    def post_count(self) -> int:
+        return len(self.post_slugs)
+
+    @property
+    def page(self) -> str:
+        return concept_page(self.slug)
+
+    @property
+    def sort_key(self) -> tuple[str, int, str]:
+        return (self.label.casefold(), self.post_count, self.label)
+
+
+@dataclass(frozen=True)
+class TechnologyEntry:
+    """One recognised technology and the posts that use it."""
+
+    label: str
+    slug: str
+    post_slugs: tuple[str, ...]
+    topics: tuple[str, ...]
+    question_count: int
+
+    @property
+    def post_count(self) -> int:
+        return len(self.post_slugs)
+
+    @property
+    def page(self) -> str:
+        return technology_page(self.slug)
 
     @property
     def sort_key(self) -> tuple[str, int, str]:
@@ -96,6 +145,8 @@ class SiteModel:
     topics: tuple[TopicEntry, ...]
     topic_slugs: dict[str, str]
     questions: tuple[QuestionEntry, ...]
+    concept_entries: tuple[ConceptEntry, ...]
+    technology_entries: tuple[TechnologyEntry, ...]
     concepts: tuple[str, ...]
     generated_at: str | None
     stats: dict[str, int] = field(default_factory=dict)
@@ -111,6 +162,14 @@ class SiteModel:
     @property
     def concept_count(self) -> int:
         return len(self.concepts)
+
+    @property
+    def concept_page_count(self) -> int:
+        return len(self.concept_entries)
+
+    @property
+    def technology_count(self) -> int:
+        return len(self.technology_entries)
 
     @property
     def question_count(self) -> int:
@@ -250,6 +309,10 @@ def build_site_model(
         key=str.casefold,
     )
 
+    concept_entries = _build_concepts(posts, post_slugs)
+
+    technology_entries = _build_technologies(posts, post_slugs)
+
     questions: list[QuestionEntry] = []
 
     for post, slug in zip(posts, post_slugs):
@@ -280,6 +343,8 @@ def build_site_model(
             sorted(questions, key=lambda item: item.sort_key)
         ),
         concepts=tuple(concepts),
+        concept_entries=concept_entries,
+        technology_entries=technology_entries,
         generated_at=knowledge_base.generated_at,
         stats=knowledge_base.stats.model_dump(),
     )
@@ -361,3 +426,126 @@ def _build_topics(
             ),
         )
     )
+
+
+def _build_concepts(
+    posts: tuple[KnowledgePost, ...],
+    post_slugs: tuple[str, ...],
+) -> tuple[ConceptEntry, ...]:
+    """
+    Group concepts across posts, keeping every post that mentions one.
+
+    A concept mentioned by several posts is the case that matters: it
+    is what turns a list of posts into a navigable concept, and the
+    reason a reader can follow a concept back to each source.
+    """
+
+    registry = SlugRegistry()
+    grouped: dict[str, dict[str, object]] = {}
+    order: list[str] = []
+
+    for post, slug in zip(posts, post_slugs):
+        labels = [topic for topic in post.ai_analysis.topics if topic]
+        found = detect_technologies(post.original_text)
+
+        for concept in post.ai_analysis.concepts:
+            label = concept.strip()
+
+            if not label:
+                continue
+
+            entry = grouped.get(label)
+
+            if entry is None:
+                entry = {
+                    "slug": registry.register(label),
+                    "posts": [],
+                    "topics": [],
+                    "technologies": [],
+                }
+                grouped[label] = entry
+                order.append(label)
+
+            posts_for: list[str] = entry["posts"]  # type: ignore[assignment]
+            posts_for.append(slug)
+
+            topics_for: list[str] = entry["topics"]  # type: ignore[assignment]
+            technologies_for: list[str] = entry["technologies"]  # type: ignore[assignment]
+
+            for topic in labels:
+                if topic not in topics_for:
+                    topics_for.append(topic)
+
+            for technology in found:
+                if technology not in technologies_for:
+                    technologies_for.append(technology)
+
+    entries = [
+        ConceptEntry(
+            label=label,
+            slug=str(grouped[label]["slug"]),
+            post_slugs=tuple(grouped[label]["posts"]),  # type: ignore[arg-type]
+            topics=tuple(grouped[label]["topics"]),  # type: ignore[arg-type]
+            technologies=tuple(grouped[label]["technologies"]),  # type: ignore[arg-type]
+        )
+        for label in order
+    ]
+
+    return tuple(sorted(entries, key=lambda item: item.sort_key))
+
+
+def _build_technologies(
+    posts: tuple[KnowledgePost, ...],
+    post_slugs: tuple[str, ...],
+) -> tuple[TechnologyEntry, ...]:
+    """
+    Group recognised technologies across posts.
+
+    Detection is the shared one from the consolidation layer, so the
+    site and the canonical knowledge base never disagree about which
+    technologies a post uses. A technology only appears when the post
+    text actually mentions it.
+    """
+
+    registry = SlugRegistry()
+    grouped: dict[str, dict[str, object]] = {}
+
+    for post, slug in zip(posts, post_slugs):
+        topics = [topic for topic in post.ai_analysis.topics if topic]
+
+        for technology in detect_technologies(post.original_text):
+            entry = grouped.setdefault(
+                technology,
+                {
+                    "slug": registry.register(technology),
+                    "posts": [],
+                    "topics": [],
+                    "questions": 0,
+                },
+            )
+
+            posts_for: list[str] = entry["posts"]  # type: ignore[assignment]
+            topics_for: list[str] = entry["topics"]  # type: ignore[assignment]
+
+            posts_for.append(slug)
+
+            for topic in topics:
+                if topic not in topics_for:
+                    topics_for.append(topic)
+
+            entry["questions"] = int(entry["questions"]) + len(  # type: ignore[arg-type]
+                post.interview_questions
+            )
+
+    entries = [
+        TechnologyEntry(
+            label=label,
+            slug=str(entry["slug"]),
+            post_slugs=tuple(entry["posts"]),  # type: ignore[arg-type]
+            topics=tuple(entry["topics"]),  # type: ignore[arg-type]
+            question_count=int(entry["questions"]),  # type: ignore[arg-type]
+        )
+        for label, entry in grouped.items()
+    ]
+
+    return tuple(sorted(entries, key=lambda item: item.sort_key))

@@ -29,20 +29,26 @@ from pathlib import Path
 from src.wiki.analysis import build_site_model
 from src.wiki.canonical import WikiError, load_canonical
 from src.wiki.naming import (
+    CONCEPTS_PAGE,
     INDEX_PAGE,
     MANIFEST_FILE,
     NOT_FOUND_PAGE,
     QUESTIONS_PAGE,
     SEARCH_INDEX_FILE,
     SEARCH_PAGE,
+    TECHNOLOGIES_PAGE,
     TOPICS_PAGE,
 )
 from src.wiki.pages import (
+    render_concept_detail,
+    render_concepts_index,
     render_home,
     render_not_found,
     render_post_detail,
     render_questions,
     render_search,
+    render_technology_detail,
+    render_technologies_index,
     render_topic_detail,
     render_topics_index,
 )
@@ -113,6 +119,8 @@ def _write_site(model, staging: Path) -> list[str]:
         INDEX_PAGE: render_home(model),
         SEARCH_PAGE: render_search(model),
         TOPICS_PAGE: render_topics_index(model),
+        CONCEPTS_PAGE: render_concepts_index(model),
+        TECHNOLOGIES_PAGE: render_technologies_index(model),
         QUESTIONS_PAGE: render_questions(model),
         NOT_FOUND_PAGE: render_not_found(model),
     }
@@ -123,6 +131,14 @@ def _write_site(model, staging: Path) -> list[str]:
 
     for topic in model.topics:
         pages[topic.page] = render_topic_detail(model, topic)
+
+    for concept in model.concept_entries:
+        pages[concept.page] = render_concept_detail(model, concept)
+
+    for technology in model.technology_entries:
+        pages[technology.page] = render_technology_detail(
+            model, technology
+        )
 
     for relative, document in pages.items():
         _write_text(staging, relative, document)

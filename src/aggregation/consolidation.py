@@ -179,6 +179,13 @@ def classify_content(post: KnowledgePost) -> str:
     if post.ai_analysis.concepts or post.ai_analysis.topics:
         return "technical"
 
+    # A post whose enrichment has not run yet is its own case, and it
+    # is labelled as such. Filing it as "unclassified" would read as a
+    # judgement about the content when it is really a statement about
+    # the pipeline.
+    if not (post.ai_analysis.summary or "").strip():
+        return "unenriched"
+
     return "unclassified"
 
 

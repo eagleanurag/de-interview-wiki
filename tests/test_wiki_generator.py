@@ -517,7 +517,20 @@ def test_search_index_is_generated_and_compact(site: Path):
 
     assert index["posts"] == 2
     assert index["questions"] == 3
-    assert len(index["records"]) == 2
+
+    # Records cover posts and the consolidated sections, because a
+    # reader searching "delta lake" should find the topic page, not
+    # only the posts that mention it.
+    assert index["topics"] > 0
+    assert len(index["records"]) == (
+        index["posts"] + index["topics"]
+    ) + index["concepts"] + index["technologies"]
+
+    assert all("k" in record for record in index["records"])
+
+    kinds = {record["k"] for record in index["records"]}
+
+    assert {"p", "t"} <= kinds
 
     record = index["records"][0]
 
@@ -793,6 +806,7 @@ def test_search_index_excludes_answers_and_metadata(site: Path):
         "c",
         "d",
         "i",
+        "k",
         "n",
         "p",
         "pb",

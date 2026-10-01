@@ -25,10 +25,23 @@ from src.wiki.components import (
     collapse_whitespace,
     truncate,
 )
-from src.wiki.naming import post_page
+from src.wiki.naming import (
+    concept_page,
+    post_page,
+    technology_page,
+    topic_page,
+)
 
 
-INDEX_FORMAT_VERSION = 1
+INDEX_FORMAT_VERSION = 2
+
+#: What a record points at. A reader searching "delta lake" should find
+#: the post, the topic, the concept and the technology, not only the
+#: post.
+KIND_POST = "p"
+KIND_TOPIC = "t"
+KIND_CONCEPT = "c"
+KIND_TECHNOLOGY = "x"
 
 
 def build_search_records(
@@ -51,6 +64,7 @@ def build_search_records(
                 # Identifier and where to go.
                 "i": post.id,
                 "u": post_page(slug),
+                "k": KIND_POST,
                 # Attribution, so results stay sourced.
                 "p": source.platform,
                 "a": source.author or "",
@@ -75,6 +89,86 @@ def build_search_records(
             }
         )
 
+    records.extend(_group_records(model))
+
+    return records
+
+
+def _group_records(model: SiteModel) -> list[dict]:
+    """
+    One record per topic, concept and technology.
+
+    Search that only covers posts cannot find a concept that appears
+    in several posts, because nothing links the posts together except
+    the concept itself. These records are what make the consolidated
+    knowledge reachable by name.
+
+    Answers are still excluded, for the same reason as on posts: it
+    is the label a reader searches for.
+    """
+
+    records: list[dict] = []
+
+    for topic in model.topics:
+        records.append(
+            {
+                "i": f"topic:{topic.label}",
+                "u": topic.page,
+                "k": KIND_TOPIC,
+                "p": "wiki",
+                "a": "",
+                "d": "",
+                "pb": "",
+                "s": "",
+                "x": "",
+                "tp": [topic.label],
+                "sb": [],
+                "c": list(topic.concepts),
+                "q": [],
+                "n": topic.question_count,
+            }
+        )
+
+    for concept in model.concept_entries:
+        records.append(
+            {
+                "i": f"concept:{concept.label}",
+                "u": concept.page,
+                "k": KIND_CONCEPT,
+                "p": "wiki",
+                "a": "",
+                "d": "",
+                "pb": "",
+                "s": "",
+                "x": "",
+                "tp": list(concept.topics),
+                "sb": [],
+                "c": [concept.label],
+                "q": [],
+                "n": 0,
+            }
+        )
+
+    for technology in model.technology_entries:
+        records.append(
+            {
+                "i": f"technology:{technology.label}",
+                "u": technology.page,
+                "k": KIND_TECHNOLOGY,
+                "p": "wiki",
+                "a": "",
+                "d": "",
+                "pb": "",
+                "s": "",
+                "x": "",
+                "tp": list(technology.topics),
+                "sb": [],
+                "c": [technology.label],
+                "q": [],
+                "n": technology.question_count,
+            }
+        )
+
     return records
 
 
@@ -83,10 +177,26 @@ def build_search_index(model: SiteModel) -> dict:
 
     records = build_search_records(model)
 
+    by_kind: dict[str, int] = {}
+
+    for record in records:
+        kind = record.get("k", KIND_POST)
+        by_kind[kind] = by_kind.get(kind, 0) + 1
+
     return {
         "v": INDEX_FORMAT_VERSION,
-        "posts": len(records),
-        "questions": sum(record["n"] for record in records),
+        "posts": sum(
+            1 for record in records
+            if record.get("k", KIND_POST) == KIND_POST
+        ),
+        "topics": by_kind.get(KIND_TOPIC, 0),
+        "concepts": by_kind.get(KIND_CONCEPT, 0),
+        "technologies": by_kind.get(KIND_TECHNOLOGY, 0),
+        "questions": sum(
+            record["n"]
+            for record in records
+            if record.get("k", KIND_POST) == KIND_POST
+        ),
         "records": records,
     }
 

@@ -13,9 +13,11 @@ import json
 from src.wiki.components import SITE_NAME, esc
 from src.wiki.naming import (
     INDEX_PAGE,
+    CONCEPTS_PAGE,
     QUESTIONS_PAGE,
     SEARCH_PAGE,
     STYLE_FILE,
+    TECHNOLOGIES_PAGE,
     TOPICS_PAGE,
     href,
 )
@@ -25,6 +27,8 @@ NAV_ITEMS = (
     ("Home", INDEX_PAGE),
     ("Search", SEARCH_PAGE),
     ("Topics", TOPICS_PAGE),
+    ("Concepts", CONCEPTS_PAGE),
+    ("Technologies", TECHNOLOGIES_PAGE),
     ("Questions", QUESTIONS_PAGE),
 )
 
