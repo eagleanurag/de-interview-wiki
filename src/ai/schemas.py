@@ -1,6 +1,17 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict, Field
+from typing import Literal
+
+from pydantic import BaseModel, ConfigDict, Field, field_validator
+
+
+#: The question types the knowledge base understands. The AI is asked
+#: to choose from exactly these, and anything else is refused rather
+#: than coerced, because a wrong type is a wrong claim about what the
+#: question tests.
+QUESTION_TYPES = ("theory", "coding", "scenario", "architecture", "troubleshooting")
+
+DIFFICULTIES = ("easy", "medium", "hard")
 
 
 class AIConcept(BaseModel):
@@ -19,15 +30,89 @@ class AIInterviewQuestion(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
     question: str
+    type: str = "scenario"
     difficulty: str = "medium"
     what_strong_answers_cover: list[str] = Field(
         default_factory=list
     )
 
+    @field_validator("question")
+    @classmethod
+    def _question_is_present(cls, value: str) -> str:
+        cleaned = value.strip()
+
+        if not cleaned:
+            raise ValueError("an interview question cannot be empty")
+
+        return cleaned
+
+    @field_validator("what_strong_answers_cover")
+    @classmethod
+    def _answer_points_are_present(
+        cls, value: list[str]
+    ) -> list[str]:
+        # An empty list would produce a question with no answer, which
+        # is worse than not asking the question at all.
+        points = [item.strip() for item in value if item and item.strip()]
+
+        if not points:
+            raise ValueError(
+                "an interview question must say what a strong answer covers"
+            )
+
+        return points
+
+
+class AIClassification(BaseModel):
+    """
+    How the source content is classified.
+
+    Asked for explicitly rather than inferred from the topic list, so
+    the classification is the model's own judgement instead of a
+    default that silently contradicts what it wrote.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    domain: str = "Data Engineering"
+    primary_topic: str | None = None
+    secondary_topics: list[str] = Field(default_factory=list)
+    interview_relevant: bool = False
+
+    @field_validator("domain")
+    @classmethod
+    def _domain_is_present(cls, value: str) -> str:
+        cleaned = value.strip()
+
+        if not cleaned:
+            raise ValueError("a classification needs a domain")
+
+        return cleaned
+
+    @field_validator("interview_relevant")
+    @classmethod
+    def _relevance_is_justified(
+        cls, value: bool, info
+    ) -> bool:
+        """
+        Relevance is only claimed when something was learned.
+
+        Marking a job announcement or an event post as interview
+        relevant, purely because a default said so, is exactly the
+        false claim this guards against. The content itself decides, so
+        the flag must be the model's judgement rather than a fallback.
+        """
+
+        return bool(value)
+
 
 class AIEnrichmentResponse(BaseModel):
     """
     Structured response expected from the AI enrichment stage.
+
+    Everything here is validated on the way in. A model response is
+    untrusted input, so a missing summary, an empty question or a
+    malformed concept is refused rather than stored.
     """
 
     model_config = ConfigDict(extra="ignore")
@@ -39,3 +124,23 @@ class AIEnrichmentResponse(BaseModel):
     interview_questions: list[AIInterviewQuestion] = Field(
         default_factory=list
     )
+    classification: AIClassification = Field(
+        default_factory=AIClassification
+    )
+
+    @field_validator("summary")
+    @classmethod
+    def _summary_is_present(cls, value: str) -> str:
+        cleaned = value.strip()
+
+        if not cleaned:
+            raise ValueError("an enrichment must carry a summary")
+
+        return cleaned
+
+    @field_validator("concepts")
+    @classmethod
+    def _concepts_are_named(cls, value: list[AIConcept]) -> list[AIConcept]:
+        named = [concept for concept in value if concept.name.strip()]
+
+        return named

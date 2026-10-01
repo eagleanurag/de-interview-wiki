@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import argparse
 import sys
@@ -17,10 +17,20 @@ def main() -> int:
         help="Path to the WorkerJob JSON manifest.",
     )
 
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help=(
+            "Re-run a job that already completed. Without this a "
+            "completed manifest is skipped, so a change to the "
+            "enrichment code would otherwise have no effect."
+        ),
+    )
+
     args = parser.parse_args()
 
     try:
-        job = run_job(args.job)
+        job = run_job(args.job, force=args.force)
 
         print(f"JOB_ID={job.job_id}")
         print(f"STATUS={job.status}")

@@ -53,11 +53,19 @@ def save_job(
 
 def run_job(
     job_path: str | Path,
+    *,
+    force: bool = False,
 ) -> WorkerJob:
     """
     Execute one WorkerJob.
 
     The job manifest is updated as it moves through its lifecycle.
+
+    A manifest that already completed is skipped, so re-running a
+    pipeline step never repeats work that is already recorded.
+    ``force`` re-runs it anyway, which is what makes a change to the
+    enrichment code take effect: without it a stale "completed"
+    manifest silently reproduced the previous result.
     """
 
     job_path = Path(job_path)
@@ -73,7 +81,7 @@ def run_job(
         )
     )
 
-    if job.status == "completed":
+    if job.status == "completed" and not force:
         return job
 
     job.attempt += 1
