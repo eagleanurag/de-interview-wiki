@@ -212,6 +212,13 @@ def write(checkpoint: Checkpoint, root: str | Path = ".") -> Path:
 
     checkpoint.touch()
 
+    # The two must never disagree. A checkpoint whose id lags its
+    # phase would make a resume pick the wrong starting point.
+    if not checkpoint.checkpoint_id:
+        checkpoint.checkpoint_id = checkpoint.phase
+    elif checkpoint.checkpoint_id != checkpoint.phase:
+        checkpoint.checkpoint_id = checkpoint.phase
+
     payload = asdict(checkpoint)
 
     _assert_clean(payload)

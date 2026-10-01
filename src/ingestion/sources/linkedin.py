@@ -189,6 +189,11 @@ class LinkedInSource(Source):
         self._page = None
         self._seen: set[str] = set()
 
+        #: The profile actually read, resolved from the session when
+        #: no handle was configured. Recorded so a run can be audited
+        #: without exposing credentials.
+        self.resolved_profile: str = ""
+
     # -----------------------------------------------------------------
     # Lifecycle
     # -----------------------------------------------------------------
@@ -517,23 +522,30 @@ class LinkedInSource(Source):
     # -----------------------------------------------------------------
 
     def _go_to_activity(self) -> None:
-        """Open the configured profile's activity feed."""
+        """
+        Open the authenticated user's own activity feed.
+
+        When no profile handle was configured, the slug is resolved
+        from the signed-in session via ``/in/me/``, which redirects to
+        the real profile. That avoids making the user look up their own
+        public handle, and it guarantees the feed belongs to the
+        authenticated account rather than someone else's.
+        """
 
         assert self._page is not None
 
         page = self._page
 
-        if not self.profile:
+        slug = self._resolve_slug()
+
+        if not slug:
             raise CollectionStopped(
                 StopReason.FAILED,
-                "No LinkedIn profile was configured. Set "
-                "--profile or LINKEDIN_PROFILE.",
+                "Could not resolve the authenticated profile. Pass "
+                "--profile with your LinkedIn handle.",
             )
 
-        slug = self.profile.strip().strip("/")
-
-        if slug.startswith("in/"):
-            slug = slug[3:]
+        self.resolved_profile = slug
 
         page.goto(
             f"{PROFILE_URL}/in/{slug}/recent-activity/all/",
@@ -541,6 +553,66 @@ class LinkedInSource(Source):
         )
 
         self._assert_no_challenge("navigation")
+
+    def _resolve_slug(self) -> str:
+        """
+        Determine which profile to read.
+
+        A configured handle wins. Otherwise the session's own profile
+        is resolved, so the collector only ever reads the account the
+        user actually authenticated as.
+        """
+
+        configured = self.profile.strip().strip("/")
+
+        if configured:
+            if configured.startswith("in/"):
+                configured = configured[3:]
+
+            return configured
+
+        assert self._page is not None
+
+        try:
+            self._page.goto(
+                f"{PROFILE_URL}/in/me/", wait_until="domcontentloaded"
+            )
+        except Exception as exc:  # noqa: BLE001
+            raise CollectionStopped(
+                StopReason.FAILED,
+                f"Could not resolve the signed-in profile: {exc}",
+            ) from exc
+
+        self._assert_no_challenge("profile resolution")
+
+        url = ""
+
+        try:
+            url = self._page.url or ""
+        except Exception:  # noqa: BLE001
+            url = ""
+
+        match = re.search(
+            r"linkedin\.com/in/([^/?#]+)", url
+        )
+
+        if match and match.group(1) not in {"me", ""}:
+            return match.group(1)
+
+        # Some responses do not change the URL, so fall back to the
+        # profile link rendered in the navigation.
+        try:
+            link = self._page.locator(
+                self.selectors.profile_link
+            ).first
+
+            href = link.get_attribute("href") or ""
+        except Exception:  # noqa: BLE001
+            return ""
+
+        match = re.search(r"/in/([^/?#]+)", href)
+
+        return match.group(1) if match else ""
 
     def _expand_truncated_posts(self) -> None:
         """

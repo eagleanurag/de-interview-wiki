@@ -206,6 +206,27 @@ def test_every_documented_phase_exists():
     )
 
 
+def test_checkpoint_id_always_matches_its_phase(tmp_path):
+    """
+    The id and the phase must never disagree. A checkpoint whose id
+    lagged its phase would make a resume start from the wrong place.
+    """
+
+    stale = checkpoint_module.Checkpoint(
+        checkpoint_id=checkpoint_module.CP0_SYNC,
+        phase=checkpoint_module.CP6_COLLECTION_RUNNING,
+    )
+
+    path = checkpoint_module.write(stale, tmp_path)
+
+    saved = json.loads(path.read_text(encoding="utf-8"))
+
+    assert saved["checkpoint_id"] == saved["phase"]
+    assert saved["checkpoint_id"] == (
+        checkpoint_module.CP6_COLLECTION_RUNNING
+    )
+
+
 def test_checkpoint_writes_its_readme(tmp_path):
     checkpoint_module.write(
         checkpoint_module.Checkpoint(), tmp_path
@@ -1070,7 +1091,7 @@ class FakeNode:
 class FakePage:
     """A page whose content grows when scrolled."""
 
-    def __init__(self, rounds, *, body_text=""):
+    def __init__(self, rounds, *, body_text="", current_url=""):
         self.rounds = rounds
         self.round = 0
         self.body_text = body_text
@@ -1078,8 +1099,24 @@ class FakePage:
         self.expanded = 0
         self.signed_in = True
         self.goto_calls = []
+        self.current_url = current_url
 
     # -- content ----------------------------------------------------
+    def url_after_goto(self):
+        """
+        Where a goto lands.
+
+        Models ``/in/me/`` redirecting to the real profile, which is how
+        the collector resolves the signed-in account.
+        """
+
+        last = self.goto_calls[-1] if self.goto_calls else ""
+
+        if "/in/me/" in last:
+            return self.current_url
+
+        return last
+
     def matches(self, selector):
         """
         Return the nodes a selector would match.
@@ -1117,6 +1154,21 @@ class FakePage:
         if "profile photo" in selector or "nav_profile" in selector:
             return [{"_text": "signed in"}]
 
+        if "app-navigation__link" in selector and "/in/" in selector:
+            # No current_url means the session could not be resolved,
+            # so no navigation profile link is available either.
+            if not self.current_url:
+                return []
+
+            return [
+                {
+                    "href": (
+                        "https://www.linkedin.com/in/"
+                        f"{self.current_url}/"
+                    )
+                }
+            ]
+
         return []
 
     # -- playwright surface ----------------------------------------
@@ -1129,6 +1181,10 @@ class FakePage:
 
     def goto(self, url, wait_until=None):
         self.goto_calls.append(url)
+
+    @property
+    def url(self):
+        return self.url_after_goto()
 
     def inner_text(self, selector, timeout=None):
         return self.body_text
@@ -1396,9 +1452,58 @@ def test_linkedin_navigates_to_the_configured_profile(tmp_path):
     )
 
 
-def test_linkedin_requires_a_profile(tmp_path):
+def test_linkedin_resolves_the_profile_from_the_session(tmp_path):
+    """
+    With no configured handle, the collector must read the profile the
+    user actually authenticated as, resolved from /in/me/.
+    """
+
+    rounds = [[linkedin_post(1)]]
+
     source = LinkedInSource(profile="")
-    source._page = FakePage([[]])
+    page = FakePage(
+        rounds,
+        current_url="https://www.linkedin.com/in/actual-handle/",
+    )
+    source._page = page
+    source._context = object()
+
+    collected = []
+
+    try:
+        for post in source.discover(max_posts=1):
+            collected.append(post)
+    except CollectionStopped:
+        pass
+
+    assert source.resolved_profile == "actual-handle"
+    assert any(
+        "/in/actual-handle/recent-activity/all/" in url
+        for url in page.goto_calls
+    )
+    assert collected
+
+
+def test_linkedin_prefers_a_configured_handle(tmp_path):
+    rounds = [[linkedin_post(1)]]
+
+    source, page = make_source(rounds)
+
+    try:
+        for _ in source.discover(max_posts=1):
+            pass
+    except CollectionStopped:
+        pass
+
+    assert source.resolved_profile == "my-handle"
+
+    # No profile lookup was needed.
+    assert not any("/in/me/" in url for url in page.goto_calls)
+
+
+def test_linkedin_stops_when_no_profile_can_be_resolved(tmp_path):
+    source = LinkedInSource(profile="")
+    source._page = FakePage([[]], current_url="")
     source._context = object()
 
     with pytest.raises(CollectionStopped) as error:
