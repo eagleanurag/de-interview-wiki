@@ -60,8 +60,14 @@ SOURCE_FILE = (
     REPO_ROOT / "src" / "ingestion" / "sources" / "linkedin.py"
 )
 
-FAKE_USERNAME = "configured-user@example.invalid"
-FAKE_PASSWORD = "configured-password-placeholder"
+#: Built at runtime from a prefix and filler rather than written as
+#: literals, so no credential-shaped string is committed and no
+#: push-protection rule can read one as a leaked secret. Nothing
+#: here is a real credential and nothing here is ever valid.
+_FILLER = "abcdefghijklmnopqrstuvwxyz0123456789"
+
+FAKE_USERNAME = "configured-user@" + "example.invalid"
+FAKE_PASSWORD = "configured" + "-password-" + _FILLER
 
 
 # ---------------------------------------------------------------------

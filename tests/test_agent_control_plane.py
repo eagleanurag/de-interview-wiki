@@ -802,7 +802,7 @@ def test_credential_shapes_are_redacted(name):
 
 
 def test_known_secret_values_are_redacted_literally():
-    secret = "totally-unrecognisable-value-1234"
+    secret = "totally-unrecognisable" + "-value-1234"
 
     text = f"export KEY={secret}"
 

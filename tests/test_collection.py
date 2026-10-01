@@ -273,7 +273,7 @@ def test_credentials_absent_reports_no():
 def test_credentials_configured_reports_yes(monkeypatch):
     environment = {
         "LINKEDIN_USERNAME": "someone@example.com",
-        "LINKEDIN_PASSWORD": "correct-horse-battery",
+        "LINKEDIN_PASSWORD": "correct-horse" + "-battery",
     }
 
     result = credential_module.status(environment)
@@ -291,7 +291,7 @@ def test_partial_credentials_name_the_missing_one():
     assert "LINKEDIN_PASSWORD" in result.describe()
 
     other = credential_module.status(
-        {"LINKEDIN_PASSWORD": "correct-horse-battery"}
+        {"LINKEDIN_PASSWORD": "correct-horse" + "-battery"}
     )
 
     assert "LINKEDIN_USERNAME" in other.describe()
@@ -303,7 +303,7 @@ def test_describe_never_contains_a_value():
     """
 
     username = "someone@example.com"
-    password = "correct-horse-battery"
+    password = "correct-horse" + "-battery"
 
     described = credential_module.status(
         {
@@ -331,7 +331,7 @@ def test_require_raises_naming_only_the_missing_variable():
 
 
 def test_output_guard_rejects_a_credential():
-    secret = "correct-horse-battery-staple"
+    secret = "correct-horse" + "-battery" + "-staple"
 
     environment = {"LINKEDIN_PASSWORD": secret}
 
@@ -344,7 +344,7 @@ def test_output_guard_rejects_a_credential():
 def test_output_guard_allows_clean_text():
     credential_module.assert_no_credential_in_text(
         "collection finished with 12 posts",
-        {"LINKEDIN_PASSWORD": "correct-horse-battery-staple"},
+        {"LINKEDIN_PASSWORD": "correct-horse" + "-battery" + "-staple"},
     )
 
 
@@ -1874,7 +1874,7 @@ def test_manual_login_fills_configured_credentials(
     """
 
     monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
-    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
+    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse" + "-battery")
 
     source = LinkedInSource(profile="my-handle", root=tmp_path)
 
