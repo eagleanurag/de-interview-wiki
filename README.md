@@ -2,11 +2,49 @@
 
 Data Engineering interview knowledge base, built from normalized posts.
 
+## Architecture
+
+```
+authorized source          LinkedInSource  ·  ManualSource
+        ↓
+collection                bounded, resumable, read-only
+        ↓
+data/posts/<id>/post.json source text, provenance, media
+        ↓
+enrichment                one worker per post, validated output
+        ↓
+consolidation             topics · concepts · technologies · questions
+        ↓
+canonical knowledge base   one authoritative JSON
+        ↓
+static wiki               posts · topics · concepts · technologies · questions · search
+        ↓
+GitHub Pages
+```
+
+Every source implements one contract in
+[`src/ingestion/sources/base.py`](src/ingestion/sources/base.py), so the
+pipeline never depends on a source being LinkedIn. Adding a source means
+adding a class, not editing the collector.
+
+## Running the whole pipeline locally
+
+```bash
+python -m src.pipeline                    # discover → enrich → aggregate → site
+python -m src.pipeline --only enrich      # one stage
+python -m src.pipeline --force-enrich     # re-enrich everything
+```
+
+Output goes under `build/`, which is git-ignored, so nothing in this
+command writes into the committed repository. Enrichment is the only
+stage that touches untrusted model output, and one post failing costs
+that post rather than the run.
+
 ## Pipeline
 
 The cloud pipeline is defined in
 [`.github/workflows/run-python-worker.yml`](.github/workflows/run-python-worker.yml)
-and runs in three stages:
+and runs in four stages:
 
 1. **Discover** — scans `data/posts/*/post.json` and builds the
    matrix. No post list is hardcoded, so adding a post directory is
@@ -20,6 +58,65 @@ and runs in three stages:
    the worker artifacts, runs the Python aggregator, and uploads a
    single canonical `knowledge_base.json` as artifact
    `knowledge-base-<run_id>`.
+4. **Generate and deploy** — renders the static site and publishes it to
+   GitHub Pages.
+
+## Collection
+
+Collection reads an authorized source and writes normalized posts. It is
+strictly read-only: it navigates, expands truncated text and submits the
+sign-in form, and does nothing else.
+
+```bash
+# One-off sign-in. Fills the credentials in .env, and hands the browser
+# to you only if LinkedIn presents a challenge.
+python -m src.ingestion.collect_cli run --source linkedin --login --headed
+
+# Collect, bounded and resumable.
+python -m src.ingestion.collect_cli run --source linkedin --max-posts 10
+
+python -m src.ingestion.collect_cli status
+```
+
+Configuration lives in a git-ignored `.env`:
+
+```
+LINKEDIN_USERNAME=
+LINKEDIN_PASSWORD=
+```
+
+Credentials are read through
+[`src/ingestion/credentials.py`](src/ingestion/credentials.py), which
+reports only whether they are configured. Values are never printed,
+logged, written to a checkpoint, or committed.
+
+### Authentication
+
+Sign-in is automatic: the configured username and password are filled and
+submitted, then authentication is *verified* rather than assumed. A run
+that cannot prove it is signed in does not save a session and does not
+report success.
+
+Every browser operation is bounded. If LinkedIn presents a CAPTCHA, OTP,
+2FA or any other verification step, the run stops and asks the human to
+complete it in the open browser; nothing here attempts to solve or work
+around a challenge. After the human confirms, verification runs once,
+also under a bound.
+
+The saved session lives in the git-ignored `.agent/secrets/` tree. It
+expires; when it does, the next run signs in again automatically and
+saves a fresh one.
+
+### Content kinds
+
+A profile exposes more than posts. The collector walks each kind under one
+shared budget:
+
+- posts, keyed by their feed permalink URN
+- authored articles, keyed by their slug
+
+Both produce `data/posts/<id>/post.json` with full provenance, so a
+refreshed post is updated in place and never duplicated.
 
 ## Ingestion
 
@@ -137,17 +234,50 @@ Output payload:
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generated_at": "...",
   "stats": {
-    "result_files_found": 6,
-    "posts_aggregated": 3,
-    "files_skipped": 3
+    "result_files_found": 7,
+    "posts_aggregated": 7,
+    "files_skipped": 0,
+    "posts_enriched": 7,
+    "posts_interview_relevant": 1,
+    "topics_consolidated": 29,
+    "concepts_consolidated": 19,
+    "technologies_consolidated": 8,
+    "questions_consolidated": 2
   },
-  "skipped_files": ["...: worker job manifest"],
-  "posts": []
+  "skipped_files": [],
+  "posts": [],
+  "knowledge": {
+    "topics": [],
+    "concepts": [],
+    "technologies": [],
+    "questions": [],
+    "content_kinds": {}
+  }
 }
 ```
+
+### Consolidation
+
+[`src/aggregation/consolidation.py`](src/aggregation/consolidation.py)
+turns a list of posts into navigable knowledge. Topics, concepts and
+technologies that several posts contribute to become one node that keeps
+every post behind it, so a reader can go from a concept back to the
+original text.
+
+Nothing is invented. A topic only exists because a post recorded it, a
+technology only appears when a post's text mentions it, and a question
+only exists when enrichment produced one for material it actually read.
+Consolidation refuses to publish a node referencing a post it never saw.
+
+Labels that differ only in case or punctuation consolidate into one node,
+and every node keeps its provenance, so merging never loses a source.
+
+`content_kinds` records what each post *is* — `technical`,
+`job_announcement`, `event`, `unenriched` and so on — so a post that
+contributed no knowledge is labelled rather than silently dropped.
 
 ## Tests
 
@@ -175,6 +305,29 @@ pip install pyyaml
 
 The other files under `tests/` are manual scripts that call the live
 OpenCode CLI and are not part of automated collection.
+
+`tests/test_authentication.py` covers the authentication state machine:
+credential handling, redaction, challenge routing, bounded verification,
+and that a `KeyboardInterrupt` never yields a success exit code.
+
+`tests/test_collection.py` covers the collector and the LinkedIn source:
+bounded collection, deduplication, refresh-in-place, resume, and the
+read-only guarantee.
+
+`tests/test_page_scripts.py` runs the JavaScript the collector executes
+against a **real DOM** through Playwright, so post extraction, submit
+resolution, profile resolution and scroll-container detection are
+verified as behaviour rather than as source strings. It skips
+automatically when Chromium is unavailable.
+
+`tests/test_consolidation.py` covers consolidation: grouping, case- and
+punctuation-insensitive merging, provenance, technology recognition and
+determinism.
+
+`tests/test_pipeline_e2e.py` runs the whole pipeline — validate,
+aggregate, generate — over the committed data and checks the properties a
+reader depends on: every post reachable, every link relative, every link
+resolving, and a byte-identical rebuild.
 
 `tests/test_wiki_generator.py` covers the static wiki generator.
 
