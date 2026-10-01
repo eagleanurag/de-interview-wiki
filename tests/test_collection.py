@@ -947,9 +947,12 @@ def test_manual_source_reads_jsonl(tmp_path):
     except CollectionStopped:
         pass
 
-    assert len(collected) == 1
-    assert "First" in collected[0].text
-    assert "Second" in collected[0].text
+    # One post per line. JSON Lines exists to express one record per
+    # line, so merging them would produce one document that answers to
+    # none of them and could never be deduplicated against its source.
+    assert len(collected) == 2
+    assert [post.text for post in collected] == ["First", "Second"]
+    assert [post.source_post_id for post in collected] == ["a", "b"]
 
 
 def test_manual_source_respects_max_posts(tmp_path):
