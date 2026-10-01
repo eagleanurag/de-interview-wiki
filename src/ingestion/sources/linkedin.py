@@ -141,23 +141,74 @@ PASSWORD_SELECTORS = (
 
 # Submit selectors.
 #
-# Exact text matching is essential. `:has-text()` is a substring
-# match, so "Sign in with Microsoft" and "Sign in with Apple" would
-# both match "Sign in" and the first of them would win, opening an
-# OAuth popup instead of submitting the credentials form. `:text-is()`
-# compares the trimmed text exactly, so only the real submit button
-# matches.
-#
-# LinkedIn's login page is a React application with no <form>
-# element at all, so pressing Enter on the password field is not a
-# fallback and the button click is the only route.
+# Two findings from the live page shaped this list. LinkedIn's login is
+# a React application with no <form> element, so pressing Enter is not
+# a fallback. And `:has-text()` is a substring match, so "Sign in with
+# Microsoft" and "Sign in with Apple" both match "Sign in" and the
+# first would win, opening an OAuth popup instead of submitting the
+# credentials. Exact matching is therefore mandatory, and
+# `_resolve_submit` resolves the button inside the page where an exact
+# comparison is reliable, because Playwright's `:text-is()` engine
+# returned no match for a button whose textContent was exactly
+# "Sign in".
 SUBMIT_SELECTORS = (
     'button[type="submit"]',
-    'button:text-is("Sign in")',
-    'button:text-is("sign in")',
-    'button:text-is("Sign in with password")',
     'input[type="submit"]',
+    'button[data-oc-submit="1"]',
 )
+
+#: Attribute used to mark the resolved submit button.
+SUBMIT_MARKER = "data-oc-submit"
+
+#: Labels accepted as the credentials submit, compared exactly after
+#: whitespace is collapsed. A federated provider button is never in
+#: this set, so it can never be selected.
+SUBMIT_LABELS = ("sign in", "sign in with password", "log in")
+
+# Resolves the submit button inside the page and tags it, so the click
+# targets exactly one known element instead of relying on a text
+# engine that does not match this page.
+SUBMIT_RESOLVER_JS = r"""
+(options) => {
+  const tag = options.tag;
+  const labels = options.labels || [];
+
+  const visible = (el) => !!el && (
+    el.offsetWidth > 0 || el.offsetHeight > 0 ||
+    el.getClientRects().length > 0
+  );
+  const clean = (value) => (value || '').replace(/\s+/g, ' ').trim();
+
+  document.querySelectorAll('[' + tag + ']').forEach(
+    (el) => el.removeAttribute(tag)
+  );
+
+  const wanted = new Set(labels);
+
+  const candidates = Array.from(
+    document.querySelectorAll(
+      'button, input[type="submit"], [role="button"]'
+    )
+  );
+
+  for (const el of candidates) {
+    if (!visible(el)) continue;
+
+    const label = clean(
+      el.textContent || el.value || ''
+    ).toLowerCase();
+
+    // Exact membership only, so a provider button cannot match.
+    if (!wanted.has(label)) continue;
+
+    el.setAttribute(tag, '1');
+
+    return label;
+  }
+
+  return '';
+}
+"""
 
 
 @dataclass
@@ -520,15 +571,19 @@ class LinkedInSource(Source):
                 )
             )
 
-        submit = self._first_visible_locator(
-            SUBMIT_SELECTORS, limit=8
+        submit = self._resolve_submit(
+            deadline=deadline
         )
 
         if submit is None:
             return self.journal.record(
                 AuthObservation(
                     state=AuthState.UNKNOWN,
-                    detail="The sign-in button could not be located.",
+                    detail=(
+                        "The credentials submit button could not be "
+                        "located. LinkedIn's login layout may have "
+                        "changed."
+                    ),
                     url=self.page_url(),
                 )
             )
@@ -692,6 +747,51 @@ class LinkedInSource(Source):
                 continue
 
         return None
+
+    def _resolve_submit(
+        self,
+        *,
+        deadline: Deadline,
+    ):
+        """
+        Find and return the credentials submit button.
+
+        Resolution happens inside the page with an exact label
+        comparison, because Playwright's text engine matched nothing on
+        this page even though the button's text was exactly
+        "Sign in". An exact comparison also guarantees a federated
+        provider button, whose label merely contains "Sign in", is
+        never chosen.
+        """
+
+        page = self._require_page()
+
+        budget = deadline.slice_ms(
+            cap_ms=AUTH_PROBE_TIMEOUT_MS, default_ms=8_000
+        )
+
+        try:
+            page.set_default_timeout(budget)
+
+            matched = page.evaluate(
+                SUBMIT_RESOLVER_JS,
+                {
+                    "tag": SUBMIT_MARKER,
+                    "labels": list(SUBMIT_LABELS),
+                },
+            )
+        except Exception:  # noqa: BLE001
+            return None
+
+        if not matched:
+            return None
+
+        try:
+            return page.locator(
+                f'[{SUBMIT_MARKER}="1"]'
+            ).first
+        except Exception:  # noqa: BLE001
+            return None
 
     def _first_visible_locator(
         self,

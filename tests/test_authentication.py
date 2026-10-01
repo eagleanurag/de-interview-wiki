@@ -912,6 +912,28 @@ def test_the_journal_records_transitions_without_credentials():
 # ---------------------------------------------------------------------
 
 
+def test_the_submit_resolver_takes_one_options_object():
+    """
+    `page.evaluate` passes a single argument, so the resolver must
+    destructure an object. Passing a list gave `tag` the whole list,
+    producing an invalid selector and no match.
+    """
+
+    source = SOURCE_FILE.read_text(encoding="utf-8")
+
+    assert '"tag": SUBMIT_MARKER' in source
+    assert '"labels": list(SUBMIT_LABELS)' in source
+
+    resolver = source.split("SUBMIT_RESOLVER_JS = r\"\"\"", 1)[1]
+    resolver = resolver.split('"""', 1)[0]
+
+    # Destructure a single options parameter, never two positional
+    # ones.
+    assert "(options) =>" in resolver
+    assert "const tag = options.tag;" in resolver
+    assert "const labels = options.labels || [];" in resolver
+
+
 def test_the_submit_selector_cannot_match_an_oauth_button():
     """
     Regression guard from the live run.
@@ -920,19 +942,27 @@ def test_the_submit_selector_cannot_match_an_oauth_button():
     "Sign in with Microsoft" and "Sign in with Apple" as sibling
     buttons. `:has-text()` is a substring match, so it selected the
     Microsoft button, opened an OAuth popup, and never submitted the
-    credentials. `:text-is()` matches the trimmed text exactly.
+    credentials. Resolution is therefore an exact in-page comparison.
     """
 
-    from src.ingestion.sources.linkedin import SUBMIT_SELECTORS as selectors
+    from src.ingestion.sources.linkedin import (
+        SUBMIT_LABELS,
+        SUBMIT_RESOLVER_JS,
+        SUBMIT_SELECTORS as selectors,
+    )
 
     for selector in selectors:
-        # The broad substring form must not appear anywhere.
         assert ":has-text(" not in selector, selector
+        assert ":text-is(" not in selector, selector
 
-    # And an exact-match form must be present for the SPA layout.
-    assert any(
-        ':text-is("Sign in")' in selector for selector in selectors
-    )
+    # Exact labels only, and never a provider.
+    assert "sign in" in SUBMIT_LABELS
+    assert "sign in with microsoft" not in SUBMIT_LABELS
+    assert "sign in with apple" not in SUBMIT_LABELS
+
+    # The resolver compares against the label set exactly.
+    assert "new Set(labels)" in SUBMIT_RESOLVER_JS
+    assert "wanted.has(label)" in SUBMIT_RESOLVER_JS
 
 
 def test_no_oauth_provider_is_selected_as_the_submit():
