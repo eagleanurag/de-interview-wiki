@@ -219,18 +219,58 @@ EXTRACT_JS = r"""
   );
   const clean = (value) => (value || '').replace(/ /g, ' ').trim();
 
-  // "Jan 15, 2025" or "15 Jan 2025" or "3 days ago".
-  const dateLine = /^(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*,?\s+\d{1,2},?\s+\d{4}$|^\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?,?\s+\d{4}$|^(?:\d+\s+)?(?:second|minute|hour|day|week|month|year)s?\s+ago$/i;
+  // "Jan 15, 2025", "15 Jan 2025", "Jan 15, 2025 - Edited",
+  // "Jan 15, 2025 at 4:15 PM", and relative forms like "2 days ago".
+  // Month-first comes first because that is how LinkedIn renders it;
+  // the day-first and year-first orders are kept for older caches and
+  // other locales.
+  const MONTHS = 'jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec';
 
-  const isChrome = (line) => {
+  const DATE_LINE = new RegExp(
+    '^(?:' +
+      '(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*,?\\s+\\d{1,2}(?:,?\\s+\\d{4})?' +
+      '|' + '(?:' + MONTHS + ')[a-z]*\\.?\\s+\\d{1,2}(?:,?\\s+\\d{4})?' +
+      '|' + '\\d{1,2}\\s+(?:' + MONTHS + ')[a-z]*\\.?(?:,?\\s+\\d{4})?' +
+      '|' + '\\d{4}\\s+(?:' + MONTHS + ')[a-z]*\\s+\\d{1,2}' +
+    ')' +
+    '(?:\\s*(\\u2022|\\u00b7)?\\s*(?:edited|at\\s+\\d{1,2}(:\\d{2})?\\s*(am|pm)?))?$' +
+    '|' +
+    '^(?:\\d+\\s+)?(?:second|minute|hour|day|week|month|year)s?\\s+ago$',
+    'i'
+  );
+
+  // " - Edited", " \u2022 Edited", " at 4:15 PM", " \u00b7 Edited".
+  const EDITION_SUFFIX =
+    /\s*(?:\u2022|\u00b7|-)?\s*(?:edited|at\s+\d{1,2}(:\d{2})?\s*(?:am|pm)?)\s*$/i;
+
+  const COUNTER_LINE =
+    /^\d+(?:[.,]\d+)?\s*[km]?\s*(reaction|comment|repost)s?$/i;
+
+  // Interface text, not post content.
+  // `lineAbove` is the line that precedes this one, because the rule
+  // below depends on position rather than on content alone.
+  const isChrome = (line, lineAbove) => {
     const text = clean(line).toLowerCase();
+
     if (!text) return true;
     if (chrome.has(text)) return true;
-    // Reaction and comment counters: "15 reactions", "4 comments".
-    if (/^\d+\s+(reaction|comment|repost)s?$/.test(text)) return true;
-    if (/^·?\s*(you|following|public|private)?$/.test(text)) return true;
+    if (COUNTER_LINE.test(text)) return true;
+    if (/^\u00b7?\s*(you|following|public|private)?$/.test(text)) {
+      return true;
+    }
     if (/^\d+\/\d+$/.test(text)) return true;
-    if (text.endsWith(" more") && text.length < 20) return true;
+
+    // A bare figure directly below a counter is that same tally
+    // rendered a second time in the accessible text. Only that
+    // position counts, so a post whose body is genuinely "15" keeps
+    // it.
+    if (/^\d{1,3}$/.test(text)) {
+      const above = clean(lineAbove || '').toLowerCase();
+      if (COUNTER_LINE.test(above)) return true;
+    }
+
+    if (text.endsWith(' more') && text.length < 24) return true;
+
     return false;
   };
 
@@ -281,19 +321,35 @@ EXTRACT_JS = r"""
     let headerEnd = -1;
 
     for (let index = 0; index < lines.length; index += 1) {
-      if (dateLine.test(lines[index])) {
+      if (DATE_LINE.test(lines[index])) {
         headerEnd = index;
         break;
       }
     }
 
-    const published = headerEnd >= 0 ? lines[headerEnd] : '';
+    // The rendered date line can carry an annotation, as in
+    // "Jan 15, 2025 - Edited" or "Jan 15, 2025 at 4:15 PM". Only the
+    // date belongs in the timestamp, so the annotation is dropped.
+    let published = '';
+
+    if (headerEnd >= 0) {
+      published = clean(lines[headerEnd])
+        .replace(EDITION_SUFFIX, '')
+        .trim();
+    }
 
     let body = headerEnd >= 0 ? lines.slice(headerEnd + 1) : lines;
 
-    // Strip trailing interface chrome.
-    while (body.length > 0 && isChrome(body[body.length - 1])) {
-      body = body.pop();
+    // Strip trailing interface chrome. `pop()` is never assigned back:
+    // it returns the removed element, which would turn the array into
+    // a string on the next iteration.
+    while (body.length > 0) {
+      const last = body[body.length - 1];
+      const above = body.length >= 2 ? body[body.length - 2] : '';
+
+      if (!isChrome(last, above)) break;
+
+      body.pop();
     }
 
     const text = body.join('\n').trim();
@@ -312,20 +368,39 @@ EXTRACT_JS = r"""
       if (match) author = match[1];
     }
 
+    // Post media only. A post renders the author's avatar and the
+    // actor headline image inside its container, and both are served
+    // from media.licdn.com, so the path identifies what an image
+    // actually is rather than trusting its host.
+    const AVATAR = [
+      'profile-displayphoto',
+      'profile-displ',
+      'profile_photo',
+      'faces/',
+      'person_'
+    ];
+
     const media = Array.from(container.querySelectorAll('img'))
-      .filter((img) => {
-        const src =
-          img.getAttribute('data-delayed-url') ||
-          img.getAttribute('src') ||
-          '';
-        return src.indexOf('media.licdn.com') !== -1;
-      })
       .map((img) => {
         const src =
           img.getAttribute('data-delayed-url') ||
           img.getAttribute('src') ||
           '';
         return src.split('?')[0];
+      })
+      .filter((src) => {
+        if (src.indexOf('media.licdn.com') === -1) return false;
+
+        const lowered = src.toLowerCase();
+
+        for (const marker of AVATAR) {
+          if (lowered.indexOf(marker) !== -1) return false;
+        }
+
+        // Tracking pixels and placeholders are not post media.
+        if (lowered.indexOf('/dms/image/') === -1) return false;
+
+        return true;
       })
       .filter((src, index, all) => all.indexOf(src) === index)
       .slice(0, 4);

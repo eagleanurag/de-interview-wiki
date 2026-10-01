@@ -1,0 +1,26 @@
+{
+  "id": "urn-li-share-6143311257098276864",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:share:6143311257098276864/",
+    "captured_at": "2026-10-01T03:07:21.525446+00:00",
+    "author": "eagleanurag",
+    "published_at": "May 31, 2016"
+  },
+  "original_text": "A Simple Pick & Place Robot By The Team\n@eagleanurag",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  }
+}

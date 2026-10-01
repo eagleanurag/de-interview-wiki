@@ -1619,6 +1619,23 @@ def test_an_empty_extraction_is_not_a_layout_change(tmp_path):
     assert error.value.reason is StopReason.NO_NEW_CONTENT
 
 
+def test_chrome_stripping_does_not_discard_the_body_array():
+    """
+    Regression guard from the live run.
+
+    `body = body.pop()` returns the removed element, so the next
+    iteration called `.join` on a string and the extractor raised
+    TypeError mid-page, turning a working feed into a layout change.
+    """
+
+    source = SOURCE.read_text(encoding="utf-8")
+
+    assert "body = body.pop()" not in source
+
+    # The array is trimmed in place instead.
+    assert "body.pop();" in source
+
+
 def test_the_extractor_keys_posts_on_permalinks(tmp_path):
     """
     The activity feed's containers carry hashed class names and no

@@ -133,6 +133,7 @@ class CollectedPost:
             url=self.url,
             author=self.author,
             captured_at=captured_at,
+            published_at=self.published_at,
         )
 
         for item in self.media:

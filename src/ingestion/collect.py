@@ -433,6 +433,7 @@ class Collector:
             url=collected.url,
             author=collected.author,
             captured_at=collected.extra.get("collected_at"),
+            published_at=collected.published_at,
         )
 
         if existing.source != before:
@@ -483,6 +484,7 @@ class Collector:
                     url=incoming.get("url"),
                     author=incoming.get("author"),
                     captured_at=incoming.get("captured_at"),
+                    published_at=incoming.get("published_at"),
                 )
 
                 if document.data.get("original_text"):

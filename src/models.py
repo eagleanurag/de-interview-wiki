@@ -17,6 +17,12 @@ class SourceInfo(BaseModel):
     captured_at: datetime
     author: str | None = None
 
+    # When the source itself published the content, exactly as it
+    # rendered it. A string rather than a datetime because a relative
+    # form such as "2 days ago" is only resolvable against the capture
+    # date, and a wrong timestamp would be worse than the original.
+    published_at: str | None = None
+
 
 class AIAnalysis(BaseModel):
     summary: str | None = None

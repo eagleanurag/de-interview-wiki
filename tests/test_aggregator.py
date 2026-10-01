@@ -30,6 +30,7 @@ def make_post(
             "url": f"https://example.com/{post_id}",
             "captured_at": "2026-09-29T18:30:00+05:30",
             "author": "Sample Author",
+            "published_at": "Jan 15, 2025",
         },
         "original_text": f"Original text for {post_id}.",
         "media": [],

@@ -1,0 +1,26 @@
+{
+  "id": "urn-li-ugcpost-7005106152258605056",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7005106152258605056/",
+    "captured_at": "2026-10-01T03:07:21.525429+00:00",
+    "author": null,
+    "published_at": null
+  },
+  "original_text": "Moments from\n#infosys X UNLEASH event 2022, where young minds have gathered to find sustainable solutions for a greener future. 🎈🥳\nCome, let's #UNLEASHWithInfy 🌳♻️🌱🌎",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  }
+}

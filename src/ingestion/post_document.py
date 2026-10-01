@@ -81,7 +81,13 @@ DOCUMENT_KEYS = (
     "classification",
 )
 
-SOURCE_KEYS = ("platform", "url", "captured_at", "author")
+SOURCE_KEYS = (
+    "platform",
+    "url",
+    "captured_at",
+    "author",
+    "published_at",
+)
 
 AI_ANALYSIS_KEYS = (
     "summary",
@@ -300,6 +306,7 @@ class PostDocument:
         url: str | None = None,
         author: str | None = None,
         captured_at: str | None = None,
+        published_at: str | None = None,
         domain: str = DEFAULT_DOMAIN,
         primary_topic: str | None = None,
         secondary_topics: tuple[str, ...] = (),
@@ -326,6 +333,12 @@ class PostDocument:
                 "captured_at": captured_at
                 or datetime.now().astimezone().isoformat(),
                 "author": (author or "").strip() or None,
+                # When the source itself published the content, kept
+                # exactly as rendered. Not normalised to a timestamp,
+                # because a relative form like "2 days ago" cannot be
+                # resolved without knowing the capture date, and a
+                # wrong timestamp would be worse than the original.
+                "published_at": (published_at or "").strip() or None,
             },
             "original_text": text or "",
             "media": [],
@@ -439,6 +452,7 @@ class PostDocument:
         url: str | None = None,
         author: str | None = None,
         captured_at: str | None = None,
+        published_at: str | None = None,
     ) -> None:
         """
         Update provenance without discarding what is already there.
@@ -454,6 +468,7 @@ class PostDocument:
             ("url", url),
             ("author", author),
             ("captured_at", captured_at),
+            ("published_at", published_at),
         ):
             if value is None:
                 continue

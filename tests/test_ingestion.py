@@ -31,6 +31,7 @@ from src.ingestion import (
     add_media,
     create_post,
     discover_posts,
+    discover_posts,
     import_post,
     load_post,
     normalize_post_id,
@@ -1297,11 +1298,172 @@ def test_committed_posts_are_all_valid():
     report = validate_posts(root=REAL_POSTS_ROOT)
 
     assert report.ok, [str(issue) for issue in report.issues]
-    assert {post.post_id for post in report.posts} == {
-        "sample_001",
-        "sample_002",
-        "sample_003",
+
+    # The samples are the committed fixtures. Posts collected from an
+    # authorized source live alongside them and must validate too, so
+    # the assertion is a superset check rather than an exact one.
+    assert {"sample_001", "sample_002", "sample_003"} <= {
+        post.post_id for post in report.posts
     }
+
+
+def test_collected_posts_keep_their_provenance():
+    """
+    A post collected from a source must remain traceable to where it
+    came from, and must not claim provenance it does not have.
+    """
+
+    identifiers = [
+        summary.post_id
+        for summary in discover_posts(REAL_POSTS_ROOT)
+        if summary.post_id.startswith("urn-li-")
+    ]
+
+    if not identifiers:
+        pytest.skip("no collected posts are present in this checkout")
+
+    for identifier in identifiers:
+        post = load_post(REAL_POSTS_ROOT / identifier)
+
+        assert post.source.platform == "linkedin"
+        assert post.source.captured_at
+        assert post.source.url
+        assert post.original_text.strip()
+
+        # The identifier is the source permalink URN, slugged so it is
+        # a safe directory name. That keeps it stable across runs and
+        # traceable back to the original.
+        assert post.id.startswith("urn-li-")
+        assert "urn:li:" in post.source.url
+        assert post.source.url.endswith("/")
+
+
+def test_collected_posts_carry_no_credential_shaped_text():
+    """
+    Collected text comes from a page rendered by a browser that was
+    signed in with local credentials. Nothing in a stored post may
+    carry one of those values.
+    """
+
+    import os
+
+    username = os.environ.get("LINKEDIN_USERNAME", "")
+    password = os.environ.get("LINKEDIN_PASSWORD", "")
+
+    if not username and not password:
+        pytest.skip("no credentials are configured in this environment")
+
+    blob = ""
+
+    for path in REAL_POSTS_ROOT.rglob("*.json"):
+        blob += path.read_text(encoding="utf-8")
+
+    for secret in (username, password):
+        if secret:
+            assert secret not in blob
+
+
+def test_a_published_date_reaches_the_document(tmp_path):
+    """
+    The date the source rendered is provenance the collector read, so it
+    must survive into the stored post rather than being dropped between
+    the source and the document.
+    """
+
+    from src.ingestion.sources.base import CollectedPost
+
+    collected = CollectedPost(
+        source_post_id="urn:li:activity:4242",
+        text="A post about bronze medallion architecture.",
+        url="https://www.linkedin.com/feed/update/urn:li:activity:4242/",
+        published_at="Jan 15, 2025",
+        author="someone",
+    )
+
+    document = collected.to_document(
+        post_id="urn-li-activity-4242",
+        platform="linkedin",
+    )
+
+    assert document.source["published_at"] == "Jan 15, 2025"
+
+
+def test_a_missing_published_date_stays_missing(tmp_path):
+    """
+    Nothing is invented. A post whose source rendered no date has none,
+    rather than a fabricated timestamp.
+    """
+
+    from src.ingestion.sources.base import CollectedPost
+
+    document = CollectedPost(
+        source_post_id="urn:li:activity:99",
+        text="A post with no rendered date.",
+    ).to_document(post_id="urn-li-activity-99", platform="linkedin")
+
+    assert document.source["published_at"] is None
+
+
+def test_the_published_date_survives_a_refresh(tmp_path):
+    """
+    A re-collection that yields no date must not erase the one already
+    recorded, exactly as a missing author is preserved.
+    """
+
+    from src.ingestion.importer import create_post
+
+    create_post(
+        root=tmp_path,
+        post_id="urn-li-activity-77",
+        text="Original body.",
+        platform="linkedin",
+        published_at="Feb 2, 2024",
+    )
+
+    directory = tmp_path / "urn-li-activity-77"
+
+    from src.ingestion.importer import import_post
+    from src.ingestion.post_document import PostDocument
+
+    existing = PostDocument.load_file(directory / "post.json")
+    existing.merge_source(published_at=None)
+    existing.save(directory)
+
+    reloaded = PostDocument.load_file(directory / "post.json")
+
+    assert reloaded.source["published_at"] == "Feb 2, 2024"
+
+
+def test_a_relative_published_date_is_kept_verbatim():
+    """
+    "2 days ago" cannot be resolved into a date without the capture
+    time, and guessing would put a wrong timestamp into the knowledge
+    base. It is stored as rendered.
+    """
+
+    from src.ingestion.sources.base import CollectedPost
+
+    document = CollectedPost(
+        source_post_id="urn:li:activity:88",
+        text="A post from this week.",
+        published_at="2 days ago",
+    ).to_document(post_id="urn-li-activity-88", platform="linkedin")
+
+    assert document.source["published_at"] == "2 days ago"
+
+
+def test_every_collected_post_validates_against_the_schema():
+    """The canonical schema is what the rest of the pipeline reads."""
+
+    report = validate_posts(root=REAL_POSTS_ROOT)
+
+    collected = [
+        issue
+        for issue in report.issues
+        if "urn-li-" in str(issue)
+    ]
+
+    assert collected == []
 
 
 @pytest.mark.parametrize(

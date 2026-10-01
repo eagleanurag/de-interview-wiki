@@ -136,9 +136,13 @@ PAGE_PROBE_JS = r"""
     'img[alt*="profile photo"], button[aria-label*="profile"], ' +
     'a[href*="/in/"][aria-label*="profile"]'
   );
+  // Posts are keyed by permalink, matching the collector's extractor.
+  // The container selectors kept here only cover cached pages; a page
+  // whose posts carry no data-id still reports its permalinks, so the
+  // state machine cannot disagree with what the extractor will find.
   const feed = all(
-    '[data-id^="urn:li:activity"], div.feed-shared-update-v2, ' +
-    'main [data-id^="urn:li:"]'
+    'a[href*="/feed/update/urn:li:"], ' +
+    '[data-id^="urn:li:activity"], div.feed-shared-update-v2'
   );
   const alerts = text(
     all('[role="alert"], .error-form__message, #error, ' +
@@ -171,8 +175,8 @@ PAGE_SETTLED_JS = r"""
       'img[alt*="profile photo"]') !== null
   );
   const hasFeed = (
-    document.querySelector('[data-id^="urn:li:activity"], ' +
-      'div.feed-shared-update-v2') !== null
+    document.querySelector('a[href*="/feed/update/urn:li:"], ' +
+      '[data-id^="urn:li:activity"]') !== null
   );
   const hasAlert = (
     document.querySelector('[role="alert"], .error-form__message, #error')

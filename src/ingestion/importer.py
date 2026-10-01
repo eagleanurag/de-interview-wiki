@@ -254,6 +254,7 @@ def create_post(
     url: str | None = None,
     author: str | None = None,
     captured_at: str | None = None,
+    published_at: str | None = None,
     domain: str | None = None,
     primary_topic: str | None = None,
     secondary_topics: tuple[str, ...] = (),
@@ -294,6 +295,7 @@ def create_post(
                 url=url,
                 author=author,
                 captured_at=captured_at,
+                published_at=published_at,
                 domain=domain,
                 primary_topic=primary_topic,
                 secondary_topics=secondary_topics,
@@ -380,6 +382,7 @@ def import_post(
     url: str | None = None,
     author: str | None = None,
     captured_at: str | None = None,
+    published_at: str | None = None,
     domain: str | None = None,
     primary_topic: str | None = None,
     secondary_topics: tuple[str, ...] = (),
@@ -438,6 +441,7 @@ def import_post(
         url=url,
         author=author,
         captured_at=captured_at,
+        published_at=published_at,
     )
 
     if domain or primary_topic or secondary_topics or (
@@ -562,6 +566,7 @@ def _new_post_options(
     url: str | None,
     author: str | None,
     captured_at: str | None,
+    published_at: str | None = None,
     domain: str | None,
     primary_topic: str | None,
     secondary_topics: tuple[str, ...],
@@ -582,6 +587,9 @@ def _new_post_options(
 
     if captured_at is not None:
         options["captured_at"] = captured_at
+
+    if published_at is not None:
+        options["published_at"] = published_at
 
     if domain is not None:
         options["domain"] = domain
