@@ -49,3 +49,12 @@ Thumbs.db
 # committing it would put build artifacts and enriched copies of posts
 # into the repository alongside the sources they came from.
 build/
+
+# The manual capture drop zone.
+#
+# A user drops authorized material here and it is ingested into
+# data/posts. It is deliberately not committed: the material is
+# whatever the user captured, which may be large, private, or already
+# published somewhere else, and none of that belongs in this
+# repository's history. Only the ingested result is committed.
+data/incoming/

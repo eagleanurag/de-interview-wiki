@@ -40,6 +40,12 @@ command writes into the committed repository. Enrichment is the only
 stage that touches untrusted model output, and one post failing costs
 that post rather than the run.
 
+Enrichment is incremental. Each result records a fingerprint of the
+content it describes, so a post whose text and media have not changed
+keeps the analysis it has and the model is not called again. Editing a
+post, or changing the enrichment contract, invalidates exactly the
+results that no longer apply.
+
 ## Pipeline
 
 The cloud pipeline is defined in
@@ -60,6 +66,66 @@ and runs in four stages:
    `knowledge-base-<run_id>`.
 4. **Generate and deploy** — renders the static site and publishes it to
    GitHub Pages.
+
+## Adding your own material
+
+The pipeline is not LinkedIn-specific. Anything you have already
+captured and are authorized to use can go in.
+
+Put a bundle in `data/incoming/`. A bundle is a directory holding your
+text and any media beside it:
+
+```
+data/incoming/
+    spark-partitioning/
+        notes.md
+        query-plan.png
+    slow-query-investigation/
+        notes.md
+        traces.pdf
+    capture.json
+```
+
+Then:
+
+```bash
+python -m src.ingestion.collect_cli run --source manual --dry-run
+python -m src.ingestion.collect_cli run --source manual
+python -m src.pipeline
+```
+
+Nothing needs to be written as JSON. A directory of notes becomes one
+post, an image or PDF beside it is attached, and a `.jsonl` export
+becomes one post per line. Running it again refreshes what changed
+rather than creating a second copy.
+
+| In a bundle | Read as |
+|---|---|
+| `capture.json` or `post.json` | the post, with the metadata it declares |
+| `*.md`, `*.txt` | the post's text |
+| `*.png`, `*.jpg`, `*.webp`, `*.gif` | attached media |
+| `*.pdf` | attached media; its text is extracted |
+| `*.jsonl` at the root | one post per line |
+
+A directory with only a PDF or only an image is still a post: it
+carries its media, and the text appears once the media stage reads it.
+
+`data/incoming/` is git-ignored. Captured material may be large, private
+or already published somewhere, and none of that belongs in this
+repository's history. Only the ingested result under `data/posts/` is
+committed.
+
+### Identity and duplicates
+
+A bundle that declares its own identifier keeps it. One that does not is
+identified by a digest of its content and its media, with a readable
+prefix taken from its opening words. Two copies of the same capture
+therefore resolve to the same post however they are named, and editing a
+file makes it a different post rather than a silently ignored duplicate.
+
+Nothing is invented. A PDF that cannot be read records why and carries
+no text, and a post with no analysis is still stored, labelled and
+reachable rather than dropped.
 
 ## Collection
 
@@ -278,6 +344,28 @@ and every node keeps its provenance, so merging never loses a source.
 `content_kinds` records what each post *is* — `technical`,
 `job_announcement`, `event`, `unenriched` and so on — so a post that
 contributed no knowledge is labelled rather than silently dropped.
+
+## Recovery
+
+Every stage is resumable, and none of them overwrites work that is
+already done.
+
+| Interrupted at | What the next run does |
+|---|---|
+| Collection | Known posts are refreshed in place, not re-imported |
+| Media | A file that failed is recorded and retried; the post survives |
+| Enrichment | Posts whose fingerprint matches are reused |
+| Aggregation | The knowledge base is written atomically via a `.tmp` file |
+| Wiki | Output is staged and swapped in, so a partial site is never served |
+
+A failure is reported, never swallowed. One unreadable PDF costs that
+PDF. One rejected model response costs that post, and its source text
+stays where it was.
+
+`git status` is the first thing to check when something looks wrong. A
+ref file that loses its contents leaves every file looking untracked and
+the branch unreferenced, which is silent until something is committed on
+top of it.
 
 ## Tests
 

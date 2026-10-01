@@ -87,8 +87,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     run.add_argument(
         "--bundle-root",
-        default="captures",
-        help="Capture bundles, for the manual source.",
+        default="data/incoming",
+        help=(
+            "Directory of capture bundles, for the manual source. "
+            "Each subdirectory becomes one post, with any images and "
+            "PDFs beside its text. Loose .md, .txt and .jsonl files "
+            "in the root are read directly."
+        ),
     )
 
     run.add_argument(
