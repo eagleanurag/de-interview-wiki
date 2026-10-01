@@ -531,6 +531,12 @@ def render_post_detail(
         ),
     ]
 
+    if source.published_at:
+        # Shown as the source rendered it, which may be a relative form
+        # such as "2 days ago". Converting that to a date would mean
+        # guessing, so the original wording is kept.
+        pairs.append(("Published", esc(source.published_at)))
+
     if source.author:
         pairs.append(("Author", esc(source.author)))
 

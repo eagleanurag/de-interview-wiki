@@ -482,6 +482,69 @@ def test_generation_refuses_a_missing_input(tmp_path):
         )
 
 
+def test_the_published_date_is_shown_on_the_post_page(
+    site, knowledge_base
+):
+    """
+    A reader needs to know when the source published the content, which
+    is not the same as when it was collected.
+    """
+
+    for post in knowledge_base["posts"]:
+        published = post["source"].get("published_at")
+
+        if not published:
+            continue
+
+        page = site / "posts" / f"{post['id']}.html"
+
+        assert published in page.read_text(encoding="utf-8"), (
+            post["id"],
+            published,
+        )
+
+
+def test_a_collected_post_page_links_back_to_the_original(
+    site, knowledge_base
+):
+    """
+    Provenance has to be one click away, or a reader cannot check a
+    claim against its source.
+    """
+
+    checked = 0
+
+    for post in knowledge_base["posts"]:
+        url = post["source"].get("url")
+
+        if not url:
+            continue
+
+        page = site / "posts" / f"{post['id']}.html"
+
+        assert url in page.read_text(encoding="utf-8"), post["id"]
+
+        checked += 1
+
+    if not checked:
+        pytest.skip("no post carries a source url")
+
+
+def test_the_search_index_carries_the_published_date(
+    site, knowledge_base
+):
+    payload = json.loads(
+        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
+    )
+
+    by_id = {record["i"]: record for record in payload["records"]}
+
+    for post in knowledge_base["posts"]:
+        published = post["source"].get("published_at")
+
+        assert by_id[post["id"]]["pb"] == (published or ""), post["id"]
+
+
 def test_no_page_contains_a_credential_marker(site):
     """
     A rendered page must never carry something credential-shaped, so a

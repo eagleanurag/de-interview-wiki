@@ -55,6 +55,11 @@ def build_search_records(
                 "p": source.platform,
                 "a": source.author or "",
                 "d": source.captured_at.strftime("%Y-%m-%d"),
+                # When the source published it, as rendered. Kept
+                # separate from "d" because a relative form is not a
+                # date, and overwriting one with the other would lose
+                # information.
+                "pb": source.published_at or "",
                 # Searchable content.
                 "s": _text(post.ai_analysis.summary, INDEX_SUMMARY_LIMIT),
                 "x": _text(post.original_text, INDEX_SOURCE_EXCERPT_LIMIT),
