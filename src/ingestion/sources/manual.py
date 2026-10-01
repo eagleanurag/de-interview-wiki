@@ -177,9 +177,15 @@ class ManualSource(Source):
         """
         Every bundle under the root, in a stable order.
 
-        A directory holding recognisable content is one bundle. A
-        directory that only *contains* bundles is not itself a bundle,
-        so a nested layout does not turn the parent into a post.
+        Discovery works on directories, top down. A directory that
+        directly holds text, media or a capture is one bundle and its
+        files belong to it; a directory that only holds other
+        directories is not a bundle itself, so a nested layout does not
+        turn the parent into a post.
+
+        Working top down is what stops a bundle's own images from each
+        becoming a separate post, which is what treating files
+        individually would do.
         """
 
         if self.bundle_root.is_file():
@@ -187,73 +193,120 @@ class ManualSource(Source):
 
         bundles: list[Path] = []
 
-        for path in sorted(self.bundle_root.rglob("*")):
-            if self._is_own_bundle(path):
-                bundles.append(path)
-
-        # A directory whose only content is a capture is still a
-        # bundle. Dropping it would lose the capture entirely, because
-        # the capture file on its own is deliberately not a post.
-        for path in sorted(self.bundle_root.rglob("*")):
-            if not path.is_dir():
+        for directory in self._directories():
+            if directory == self.bundle_root:
+                # The root is a container of bundles, not a bundle. Two
+                # notes dropped side by side are two posts; merging them
+                # would invent a document the user never wrote.
+                bundles.extend(self._loose_files(directory))
                 continue
 
-            if any((path / name).is_file() for name in CAPTURE_NAMES):
-                bundles.append(path)
+            files = [
+                path
+                for path in sorted(directory.iterdir())
+                if path.is_file()
+            ]
+
+            if not files:
+                continue
+
+            names = {path.name for path in files}
+
+            if names & set(CAPTURE_NAMES):
+                # The directory is the bundle; the capture is not also
+                # a post of its own.
+                bundles.append(directory)
+                continue
+
+            exports = [
+                path
+                for path in files
+                if path.suffix.lower() == ".jsonl"
+            ]
+
+            if exports:
+                # An export is a bundle in its own right, one post per
+                # line, so its lines stay separable.
+                bundles.extend(exports)
+                continue
+
+            text = [
+                path
+                for path in files
+                if path.suffix.lower() in TEXT_SUFFIXES
+            ]
+
+            media = [
+                path
+                for path in files
+                if path.suffix.lower() in MEDIA_SUFFIXES
+            ]
+
+            payloads = [
+                path
+                for path in files
+                if path.suffix.lower() == ".json"
+            ]
+
+            if text or media:
+                bundles.append(directory)
+                continue
+
+            # A directory holding only loose JSON has no declared
+            # structure, so each object is offered as a bundle in its
+            # own right.
+            bundles.extend(payloads)
 
         return _dedupe(bundles)
 
-    def _is_own_bundle(self, path: Path) -> bool:
-        if not path.is_file():
-            return False
+    def _loose_files(self, directory: Path) -> list[Path]:
+        """
+        Files sitting directly in the root.
 
-        if path.name in CAPTURE_NAMES:
-            # The capture belongs to its directory, and the directory is
-            # the bundle, so the capture itself is not a second post.
-            return False
+        Each is its own bundle, because the root holds bundles rather
+        than being one.
+        """
 
-        suffix = path.suffix.lower()
+        bundles: list[Path] = []
 
-        if suffix in IGNORED_SUFFIXES:
-            return False
+        for path in sorted(directory.iterdir()):
+            if not path.is_file():
+                continue
 
-        if suffix == ".jsonl":
-            return True
+            if path.name in CAPTURE_NAMES:
+                bundles.append(directory)
+                continue
 
-        if suffix in TEXT_SUFFIXES:
-            # A directory that has its own capture takes its text from
-            # there instead, so stray notes beside it are not posts.
-            if path.parent != self.bundle_root:
-                if any(
-                    (path.parent / name).is_file()
-                    for name in CAPTURE_NAMES
-                ):
-                    return False
+            suffix = path.suffix.lower()
 
-            return True
+            if suffix in IGNORED_SUFFIXES:
+                continue
 
-        if suffix in IMAGE_SUFFIXES or suffix in DOCUMENT_SUFFIXES:
-            return True
+            if (
+                suffix in TEXT_SUFFIXES
+                or suffix == ".jsonl"
+                or suffix == ".json"
+                or suffix in MEDIA_SUFFIXES
+            ):
+                bundles.append(path)
 
-        if suffix == ".json":
-            # A bare .json is only a bundle when nothing else claims it.
-            return not self._claimed_by_sibling(path)
+        return bundles
 
-        return False
+    def _directories(self) -> list[Path]:
+        """Every directory under the root, shallowest first."""
 
-    def _claimed_by_sibling(self, path: Path) -> bool:
-        """Whether a directory's own capture already covers this file."""
+        found = [
+            self.bundle_root,
+            *self.bundle_root.rglob("*"),
+        ]
 
-        parent = path.parent
+        directories = [
+            path for path in found if path.is_dir()
+        ]
 
-        for candidate in CAPTURE_NAMES:
-            if (parent / candidate).is_file():
-                return True
-
-        return any(
-            sibling.suffix.lower() in TEXT_SUFFIXES
-            for sibling in parent.iterdir()
-            if sibling.is_file()
+        return sorted(
+            directories,
+            key=lambda path: (len(path.parts), str(path)),
         )
 
     # -----------------------------------------------------------------
@@ -276,7 +329,9 @@ class ManualSource(Source):
                 return self._read_jsonl_bundle(bundle)
 
             if suffix in TEXT_SUFFIXES:
-                return [self._read_text_bundle(bundle)]
+                collected = self._read_text_bundle(bundle)
+
+                return [collected] if collected is not None else []
 
             if suffix == ".json":
                 payload = self._read_json(bundle)
@@ -308,7 +363,14 @@ class ManualSource(Source):
         if not text and not media:
             return []
 
-        return [self._from_files(bundle, text, media)]
+        collected = self._from_files(bundle, text, media)
+
+        if collected.text or collected.media:
+            return [collected]
+
+        # A file with neither content nor media is nothing. Storing it
+        # would publish an empty page.
+        return []
 
     def _read_jsonl_bundle(self, bundle: Path) -> list[CollectedPost]:
         """
@@ -364,14 +426,22 @@ class ManualSource(Source):
 
         return collected
 
-    def _read_text_bundle(self, bundle: Path) -> CollectedPost:
-        """A single text file, with any media sitting beside it."""
+    def _read_text_bundle(self, bundle: Path) -> CollectedPost | None:
+        """
+        A single text file, with any media sitting beside it.
+
+        Returns None when the file has no content, so an empty note is
+        not stored as an empty post.
+        """
 
         text = bundle.read_text(
             encoding="utf-8", errors="replace"
         ).strip()
 
         media = self._sibling_media(bundle)
+
+        if not text and not media:
+            return None
 
         return self._from_files(bundle, text, media)
 
