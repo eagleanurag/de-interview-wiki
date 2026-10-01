@@ -13,6 +13,8 @@ prints or asserts against a real credential.
 from __future__ import annotations
 
 import json
+import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -1571,6 +1573,53 @@ def test_no_secret_file_is_tracked():
         assert "browser_profile" not in path
         assert "cookies" not in path
         assert "storage_state" not in path
+
+
+def test_the_cli_honours_an_explicit_posts_root(tmp_path):
+    """
+    Regression guard: the CLI once ignored --posts-root and wrote into
+    the repository's real data/posts/, which contaminated committed
+    data during a smoke test.
+    """
+
+    import subprocess
+
+    bundle = tmp_path / "captures" / "b1"
+    bundle.mkdir(parents=True)
+    (bundle / "capture.json").write_text(
+        json.dumps({"id": "urn:li:activity:5", "text": "Scoped."}),
+        encoding="utf-8",
+    )
+
+    target = tmp_path / "elsewhere" / "posts"
+
+    completed = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "src.ingestion.collect_cli",
+            "run",
+            "--source",
+            "manual",
+            "--bundle-root",
+            str(tmp_path / "captures"),
+            "--posts-root",
+            str(target),
+        ],
+        cwd=str(Path(__file__).resolve().parents[1]),
+        capture_output=True,
+        text=True,
+        check=False,
+        shell=False,
+    )
+
+    assert completed.returncode == 0, completed.stderr
+
+    assert (target / "urn-li-activity-5" / "post.json").is_file()
+
+    # The repository's own posts directory must be untouched.
+    repository_posts = Path(__file__).resolve().parents[1] / "data" / "posts"
+    assert not (repository_posts / "urn-li-activity-5").exists()
 
 
 def test_env_example_declares_no_values():

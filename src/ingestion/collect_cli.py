@@ -271,7 +271,7 @@ def run_collection(
 
     collector = Collector(
         source,
-        root=root / DEFAULT_POSTS_DIRECTORY,
+        root=Path(args.posts_root),
         limits=limits,
         checkpoint=checkpoint_module.read(root),
         progress=(
