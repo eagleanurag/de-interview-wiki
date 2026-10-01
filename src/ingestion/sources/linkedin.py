@@ -32,9 +32,19 @@ import shutil
 from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any, Callable, Iterator
 
 from src.ingestion import credentials as credential_module
+from src.ingestion.auth_state import (
+    AuthJournal,
+    AuthObservation,
+    AuthState,
+    Deadline,
+    classify,
+    current_url as auth_current_url,
+    probe as auth_probe,
+    settle,
+)
 from src.ingestion.sources.base import (
     CollectedPost,
     CollectionStopped,
@@ -50,30 +60,6 @@ FEED_SELECTOR = 'div.feed-shared-update-v2, [data-id^="urn:li:activity"]'
 
 POST_ID_PATTERN = re.compile(r"urn:li:(activity|share|ugcPost):(\d+)")
 
-# Text that indicates the account is being challenged or blocked.
-CHALLENGE_MARKERS = (
-    ("captcha", "captcha"),
-    ("recaptcha", "recaptcha"),
-    ("hcaptcha", "hcaptcha"),
-    ("verify it is you", "unusual_login"),
-    ("verify it's you", "unusual_login"),
-    ("unusual activity", "unusual_login"),
-    ("security verification", "security_verification"),
-    ("identity verification", "identity_verification"),
-    ("verify your identity", "identity_verification"),
-    ("two-step verification", "two_factor"),
-    ("two factor", "two_factor"),
-    ("enter the code", "otp"),
-    ("verification code", "otp"),
-    ("one-time code", "otp"),
-    ("authenticate to continue", "authentication"),
-    ("please sign in to continue", "authentication"),
-    ("sign in to confirm", "authentication"),
-    ("access denied", "access_denied"),
-    ("account restricted", "account_restricted"),
-    ("temporarily restricted", "account_restricted"),
-)
-
 # Controls that may be clicked. Anything else is left alone.
 EXPAND_SELECTORS = (
     'button[aria-label*="Show more"]',
@@ -87,6 +73,21 @@ DEFAULT_IDLE_ROUNDS = 3
 
 # Bounded so a single post cannot pull an unbounded number of images.
 MAX_MEDIA_PER_POST = 4
+
+# Authentication budgets, all explicit and finite.
+#
+# The previous implementation inherited a 120s context timeout and
+# polled in a Python loop, so one slow call multiplied the total wait
+# and the process appeared to hang. Nothing here is unbounded.
+AUTH_DEFAULT_TIMEOUT_MS = 10_000
+AUTH_NAVIGATE_TIMEOUT_MS = 30_000
+AUTH_PROBE_TIMEOUT_MS = 8_000
+AUTH_FIELD_TIMEOUT_MS = 8_000
+AUTH_SETTLE_TIMEOUT_MS = 25_000
+AUTH_TOTAL_TIMEOUT_SECONDS = 90.0
+
+# How long the human may take before verification is attempted anyway.
+AUTH_HUMAN_WAIT_SECONDS = 900
 
 
 def linkedin_installed() -> bool:
@@ -201,12 +202,14 @@ class LinkedInSource(Source):
         selectors: SelectorSet | None = None,
         limits: LinkedInLimits | None = None,
         env_file: str | Path = ".env",
+        progress: Callable[[str], None] | None = None,
     ) -> None:
         self.profile = (profile or "").strip()
         self.headed = headed
         self.root = Path(root)
         self.selectors = selectors or SelectorSet()
         self.limits = limits or LinkedInLimits()
+        self.progress = progress or (lambda message: None)
 
         credential_module.load_local_environment(env_file)
 
@@ -221,13 +224,64 @@ class LinkedInSource(Source):
         #: without exposing credentials.
         self.resolved_profile: str = ""
 
+        #: Every authentication transition, for diagnosis. In memory
+        #: only, so nothing here can reach a checkpoint.
+        self.journal = AuthJournal()
+
     # -----------------------------------------------------------------
     # Lifecycle
     # -----------------------------------------------------------------
 
+    def launch(self, *, headed: bool = False) -> None:
+        """
+        Create the browser, context and page.
+
+        Split out from :meth:`start` so the login path and the
+        collection path share one lifecycle, and so teardown is always
+        the same set of objects in the same order.
+        """
+
+        from playwright.sync_api import sync_playwright
+
+        self._playwright = sync_playwright().start()
+
+        try:
+            self._browser = self._playwright.chromium.launch(
+                headless=not headed
+            )
+        except Exception as exc:  # noqa: BLE001
+            self.close()
+            raise CollectionStopped(
+                StopReason.FAILED,
+                f"Could not launch the browser: {_redact(exc)}",
+            ) from exc
+
+        state_file = (
+            credential_module.browser_profile_directory(self.root)
+            / "state.json"
+        )
+
+        self._context = self._browser.new_context(
+            storage_state=(
+                str(state_file) if state_file.is_file() else None
+            )
+        )
+
+        # A short default so no call can inherit an unbounded wait.
+        self._context.set_default_timeout(AUTH_DEFAULT_TIMEOUT_MS)
+
+        try:
+            self._context.set_extra_http_headers(
+                {"Accept-Language": "en-US,en;q=0.9"}
+            )
+        except Exception:  # noqa: BLE001
+            pass
+
+        self._page = self._context.new_page()
+
     def start(self) -> None:
         """
-        Launch the browser and authenticate if needed.
+        Launch the browser and authenticate.
 
         Raises SecurityChallenge rather than attempting to get past a
         challenge.
@@ -238,49 +292,15 @@ class LinkedInSource(Source):
                 StopReason.FAILED, playwright_install_hint()
             )
 
-        from playwright.sync_api import sync_playwright
-
         credential_module.require()
 
-        profile_directory = credential_module.browser_profile_directory(
-            self.root
-        )
-
-        self._playwright = sync_playwright().start()
-
-        try:
-            self._browser = self._playwright.chromium.launch(
-                headless=not self.headed
-            )
-        except Exception as exc:  # noqa: BLE001
-            self.close()
-            raise CollectionStopped(
-                StopReason.FAILED,
-                f"Could not launch the browser: {exc}",
-            ) from exc
-
-        self._context = self._browser.new_context(
-            storage_state=(
-                str(profile_directory / "state.json")
-                if (profile_directory / "state.json").is_file()
-                else None
-            )
-        )
-
-        # Defaults that reduce automation fingerprints without evading
-        # any access control.
-        self._context.set_default_timeout(30_000)
-        self._context.set_extra_http_headers(
-            {"Accept-Language": "en-US,en;q=0.9"}
-        )
-
-        self._page = self._context.new_page()
+        self.launch(headed=self.headed)
 
         self._ensure_authenticated()
 
-        # Persist the session so a later run does not need to sign in
-        # again. This is what makes a resume possible after a human
-        # completes a challenge by hand.
+        # Persist the session so a later run does not sign in again,
+        # which is what makes a resume possible after a human has
+        # completed a challenge by hand.
         self.save_session()
 
     def save_session(self) -> Path | None:
@@ -312,13 +332,26 @@ class LinkedInSource(Source):
         return target
 
     def close(self) -> None:
-        """Close the browser. Safe to call repeatedly."""
+        """
+        Close page, context, browser and Playwright, in order.
 
-        for attribute in ("_context", "_browser", "_playwright"):
+        Runs on success, failure, unknown state and KeyboardInterrupt,
+        because every caller uses it inside a finally block. Teardown
+        failures are collected rather than raised, so cleanup can never
+        mask the real outcome, and are reported instead.
+        """
+
+        problems: list[str] = []
+
+        for attribute in ("_page", "_context", "_browser", "_playwright"):
             handle = getattr(self, attribute, None)
 
             if handle is None:
                 continue
+
+            # Cleared first, so a failed close cannot leave a stale
+            # handle behind for a later attempt to reuse.
+            setattr(self, attribute, None)
 
             closer = getattr(handle, "close", None) or getattr(
                 handle, "stop", None
@@ -329,11 +362,19 @@ class LinkedInSource(Source):
 
             try:
                 closer()
-            except Exception:  # noqa: BLE001
-                # Teardown must never mask the real outcome.
-                pass
+            except Exception as exc:  # noqa: BLE001
+                problems.append(f"{attribute}: {_redact(exc, 120)}")
 
-            setattr(self, attribute, None)
+        if problems:
+            self.progress(
+                "Cleanup reported: " + "; ".join(problems)
+            )
+
+    def __enter__(self) -> "LinkedInSource":
+        return self
+
+    def __exit__(self, *exception: object) -> None:
+        self.close()
 
     # -----------------------------------------------------------------
     # Authentication
@@ -341,42 +382,281 @@ class LinkedInSource(Source):
 
     def _ensure_authenticated(self) -> None:
         """
-        Reach the profile feed, signing in only if required.
+        Reach an authenticated session, signing in only if required.
 
-        Any challenge found here stops collection and asks the human.
+        Credentials come from the local environment, so the ordinary
+        path is fully automatic. A challenge stops the run and asks the
+        human; it is never worked around.
         """
 
-        self._require_page().goto(
-            f"{PROFILE_URL}/feed/", wait_until="domcontentloaded"
-        )
+        self.navigate(f"{PROFILE_URL}/feed/")
 
-        self._assert_no_challenge("sign in")
+        observation = self.probe()
 
-        if self._signed_in():
+        if observation.is_usable:
             return
 
-        self._sign_in()
+        if observation.needs_human:
+            self.journal.record(observation)
+            raise SecurityChallenge(
+                observation.challenge or "security_challenge",
+                observation.detail,
+            )
 
-    def _signed_in(self) -> bool:
-        """Whether the session is authenticated."""
+        if observation.state is AuthState.BROWSER_UNAVAILABLE:
+            raise CollectionStopped(
+                StopReason.FAILED,
+                "The browser became unavailable during sign-in.",
+            )
+
+        self.journal.record(observation)
+
+        self.authenticate_automatically()
+
+    # -----------------------------------------------------------------
+    # The authentication state machine
+    # -----------------------------------------------------------------
+
+    def authenticate_automatically(self) -> AuthObservation:
+        """
+        Fill the configured credentials and submit the normal form.
+
+        Nothing is typed unless a form was positively observed, and the
+        whole sequence shares one wall-clock budget, so it cannot hang.
+        """
+
+        status = credential_module.status()
+
+        if not status.configured:
+            raise CollectionStopped(
+                StopReason.FAILED,
+                "LinkedIn credentials are not configured.",
+            )
+
+        observation = self.probe()
+
+        if observation.is_usable:
+            return self.journal.record(observation)
+
+        if observation.needs_human:
+            return self.journal.record(observation)
+
+        if observation.state is not AuthState.LOGIN_FORM:
+            # A form we cannot see is a layout change, not a reason to
+            # retry blindly.
+            return self.journal.record(
+                observation
+                if observation.state is not AuthState.UNKNOWN
+                else AuthObservation(
+                    state=AuthState.UNKNOWN,
+                    detail=(
+                        "No sign-in form was found. LinkedIn's login "
+                        "layout may have changed."
+                    ),
+                    url=observation.url,
+                )
+            )
+
+        deadline = Deadline(AUTH_TOTAL_TIMEOUT_SECONDS)
+
+        username_field = self._first_visible_locator(
+            USERNAME_SELECTORS, limit=8
+        )
+        password_field = self._first_visible_locator(
+            PASSWORD_SELECTORS, limit=8
+        )
+
+        if username_field is None or password_field is None:
+            return self.journal.record(
+                AuthObservation(
+                    state=AuthState.UNKNOWN,
+                    detail=(
+                        "The sign-in form was observed but its fields "
+                        "could not be located."
+                    ),
+                    url=observation.url,
+                )
+            )
+
+        # Values are read one at a time, immediately before use, and
+        # never stored on the instance or written anywhere.
+        try:
+            username_field.fill(
+                _credential("LINKEDIN_USERNAME"),
+                timeout=deadline.slice_ms(
+                    cap_ms=AUTH_FIELD_TIMEOUT_MS, default_ms=10_000
+                ),
+            )
+            password_field.fill(
+                _credential("LINKEDIN_PASSWORD"),
+                timeout=deadline.slice_ms(
+                    cap_ms=AUTH_FIELD_TIMEOUT_MS, default_ms=10_000
+                ),
+            )
+        except Exception as exc:  # noqa: BLE001
+            # The driver's error text embeds what was typed, so it is
+            # redacted before being surfaced.
+            return self.journal.record(
+                AuthObservation(
+                    state=AuthState.UNKNOWN,
+                    detail=(
+                        "Could not fill the sign-in form: "
+                        f"{_redact(exc)}"
+                    ),
+                    url=self.page_url(),
+                )
+            )
+
+        submit = self._first_visible_locator(
+            SUBMIT_SELECTORS, limit=8
+        )
+
+        if submit is None:
+            return self.journal.record(
+                AuthObservation(
+                    state=AuthState.UNKNOWN,
+                    detail="The sign-in button could not be located.",
+                    url=self.page_url(),
+                )
+            )
+
+        try:
+            submit.click(
+                timeout=deadline.slice_ms(
+                    cap_ms=AUTH_FIELD_TIMEOUT_MS, default_ms=10_000
+                )
+            )
+        except Exception as exc:  # noqa: BLE001
+            return self.journal.record(
+                AuthObservation(
+                    state=AuthState.UNKNOWN,
+                    detail=(
+                        f"Could not submit the sign-in form: "
+                        f"{_redact(exc)}"
+                    ),
+                    url=self.page_url(),
+                )
+            )
+
+        self.journal.record(
+            AuthObservation(
+                state=AuthState.LOGIN_SUBMITTED,
+                detail="The sign-in form was submitted.",
+                url=self.page_url(),
+            )
+        )
+
+        return self.wait_for_outcome(deadline)
+
+    def wait_for_outcome(
+        self,
+        deadline: Deadline,
+        *,
+        last_action: str = "submit",
+    ) -> AuthObservation:
+        """
+        Wait for the submitted form to resolve. Bounded.
+
+        One bounded driver wait followed by bounded probes, rather than
+        a Python loop of locator calls.
+        """
+
+        remaining_ms = int(deadline.remaining * 1000)
+
+        if remaining_ms > 0:
+            settle(
+                self._require_page(),
+                timeout_ms=min(remaining_ms, AUTH_SETTLE_TIMEOUT_MS),
+            )
+
+        observation = self.probe(last_action=last_action)
+
+        if observation.state is AuthState.UNKNOWN:
+            # One more bounded pass, so a page that was still
+            # rendering gets a chance to be classified. It cannot
+            # extend the budget.
+            if not deadline.expired:
+                settle(
+                    self._require_page(),
+                    timeout_ms=deadline.slice_ms(
+                        cap_ms=AUTH_SETTLE_TIMEOUT_MS, default_ms=5_000
+                    ),
+                )
+
+                observation = self.probe(last_action=last_action)
+
+        return self.journal.record(observation)
+
+    def probe(
+        self,
+        *,
+        last_action: str = "",
+    ) -> AuthObservation:
+        """
+        Observe the page once and classify it.
+
+        A single bounded evaluation. Never raises, so a wedged page
+        becomes ``UNKNOWN`` instead of hanging the run.
+        """
+
+        page = self._page
+
+        if page is None:
+            return AuthObservation(
+                state=AuthState.BROWSER_UNAVAILABLE,
+                detail="The browser is not running.",
+            )
+
+        result = auth_probe(
+            page, timeout_ms=AUTH_PROBE_TIMEOUT_MS
+        )
+
+        if result is None:
+            return AuthObservation(
+                state=AuthState.UNKNOWN,
+                detail="The page could not be inspected.",
+                url=self.page_url(),
+            )
+
+        return classify(
+            result,
+            url=self.page_url(),
+            last_action=last_action,
+        )
+
+    def navigate(self, url: str) -> bool:
+        """Navigate with an explicit, bounded timeout."""
 
         page = self._require_page()
 
         try:
-            if self._first_visible(USERNAME_SELECTORS):
-                return False
-
-            for selector in (
-                'img[alt*="profile photo"]',
-                'button[aria-label*="profile"]',
-                'a[data-tracking-control-name="nav_profile"]',
-            ):
-                if page.locator(selector).count():
-                    return True
-        except Exception:  # noqa: BLE001
+            page.set_default_timeout(AUTH_NAVIGATE_TIMEOUT_MS)
+            page.goto(
+                url,
+                wait_until="domcontentloaded",
+                timeout=AUTH_NAVIGATE_TIMEOUT_MS,
+            )
+        except Exception as exc:  # noqa: BLE001
+            self.progress(f"Could not open {url}: {_redact(exc)}")
             return False
 
-        return False
+        return True
+
+    def page_url(self) -> str:
+        """The current URL, or empty when the page has gone."""
+
+        return auth_current_url(self._page) if self._page else ""
+
+    def _signed_in(self) -> bool:
+        """
+        Whether the session is authenticated.
+
+        One bounded probe, not a chain of locator calls. This is what
+        the previous implementation polled, and polling it was what
+        appeared to hang.
+        """
+
+        return self.probe().state.is_terminal_success
 
     def _first_visible(self, selectors: tuple[str, ...]) -> str | None:
         """
@@ -433,11 +713,11 @@ class LinkedInSource(Source):
 
     def open_for_manual_login(self):
         """
-        Launch a browser and hand it to the user. No automation past
-        this point.
+        Launch a headed browser and sign in with the local credentials.
 
-        Used by the ``--login`` path so a human completes any challenge
-        themselves, once, rather than on every run.
+        Credentials are filled automatically. The browser is left open
+        so that if LinkedIn presents a challenge, the human can complete
+        it by hand. Nothing about a challenge is solved here.
         """
 
         if not linkedin_installed():
@@ -445,66 +725,60 @@ class LinkedInSource(Source):
                 StopReason.FAILED, playwright_install_hint()
             )
 
-        from playwright.sync_api import sync_playwright
-
-        self._playwright = sync_playwright().start()
-
-        try:
-            self._browser = self._playwright.chromium.launch(
-                headless=False
-            )
-        except Exception as exc:  # noqa: BLE001
-            self.close()
-            raise CollectionStopped(
-                StopReason.FAILED,
-                f"Could not launch the browser: {_redact(exc)}",
-            ) from exc
-
-        self._context = self._browser.new_context()
-        self._context.set_default_timeout(120_000)
-
-        self._page = self._context.new_page()
+        self.launch(headed=True)
 
         page = self._require_page()
 
-        page.goto(
-            f"{PROFILE_URL}/login", wait_until="domcontentloaded"
-        )
+        self.navigate(f"{PROFILE_URL}/login")
 
-        return page
+        observation = self.probe()
+
+        if observation.is_usable:
+            return observation
+
+        if observation.state is AuthState.LOGIN_FORM:
+            observation = self.authenticate_automatically()
+
+        return observation
 
     def wait_for_manual_session(
         self,
         *,
-        timeout_seconds: int = 600,
+        timeout_seconds: int = 900,
         interval_seconds: int = 5,
-    ) -> bool:
+    ) -> AuthObservation:
         """
-        Poll until the user has signed in by hand.
+        Wait for the human to complete any challenge, then verify once.
 
-        Only asks whether the session is authenticated. It never
-        inspects or completes a challenge.
+        The wait itself may be long, because a person is involved. The
+        *verification* after they return is bounded, so pressing Enter
+        can never lead to an unbounded browser wait.
+
+        Reports UNKNOWN rather than hanging if the browser disappears
+        while the user is working.
         """
 
-        page = self._require_page()
+        deadline = Deadline(timeout_seconds)
 
-        waited = 0
+        while not deadline.expired:
+            observation = self.probe()
 
-        while waited <= timeout_seconds:
+            if observation.is_usable:
+                return observation
+
+            # The browser or page closed: nothing can be verified, so
+            # report it rather than waiting out the budget.
+            if observation.state is AuthState.BROWSER_UNAVAILABLE:
+                return observation
+
             try:
-                if self._signed_in():
-                    return True
+                self._require_page().wait_for_timeout(
+                    interval_seconds * 1000
+                )
             except Exception:  # noqa: BLE001
-                pass
+                return self.probe()
 
-            try:
-                page.wait_for_timeout(interval_seconds * 1000)
-            except Exception:  # noqa: BLE001
-                pass
-
-            waited += interval_seconds
-
-        return False
+        return self.probe()
 
     def _require_page(self):
         """The page, or a clear error if the browser never started."""
@@ -517,81 +791,6 @@ class LinkedInSource(Source):
 
         return self._page
 
-    def _sign_in(self) -> None:
-        """
-        Sign in with locally configured credentials.
-
-        Credentials are typed through Playwright's ``fill`` rather than
-        being interpolated into a selector, a URL, or a log line. The
-        password never appears anywhere else in the process.
-        """
-
-        page = self._require_page()
-
-        state = credential_module.status()
-
-        if not state.configured:
-            raise CollectionStopped(
-                StopReason.FAILED,
-                "LinkedIn credentials are not configured.",
-            )
-
-        username_field = self._first_visible_locator(USERNAME_SELECTORS)
-        password_field = self._first_visible_locator(PASSWORD_SELECTORS)
-
-        if username_field is None or password_field is None:
-            raise CollectionStopped(
-                StopReason.LAYOUT_CHANGED,
-                "Could not find the sign-in form. LinkedIn's login "
-                "layout appears to have changed; the collector's "
-                "selectors need updating.",
-            )
-
-        submit = self._first_visible_locator(SUBMIT_SELECTORS)
-
-        if submit is None:
-            raise CollectionStopped(
-                StopReason.LAYOUT_CHANGED,
-                "Could not find the sign-in button.",
-            )
-
-        try:
-            # The located element is used directly rather than its
-            # selector. Re-resolving the selector would pick the first
-            # match, which on this page is a hidden panel.
-            username_field.fill(_credential("LINKEDIN_USERNAME"))
-            password_field.fill(_credential("LINKEDIN_PASSWORD"))
-
-            submit.click()
-
-            page.wait_for_load_state("domcontentloaded")
-        except Exception as exc:  # noqa: BLE001
-            # The driver's error text can echo the value that was
-            # typed, so it is redacted before being reported or
-            # printed. This is the difference between a failed sign-in
-            # and a leaked username.
-            raise CollectionStopped(
-                StopReason.FAILED,
-                "Sign-in did not complete: "
-                + _redact(exc)
-                + ". If the form was found but not editable, the "
-                "page layout may have changed.",
-            ) from None
-
-        self._assert_no_challenge("sign in")
-
-        if not self._signed_in():
-            # Either the credentials are wrong or the account needs a
-            # challenge. Either way this is the human's call, and the
-            # distinction is not guessable from the page.
-            raise SecurityChallenge(
-                "authentication",
-                "Sign-in did not succeed. The credentials may be "
-                "incorrect, or the account may require an additional "
-                "verification step. Complete any challenge in the open "
-                "browser window, then resume.",
-            )
-
     # -----------------------------------------------------------------
     # Challenge detection
     # -----------------------------------------------------------------
@@ -600,29 +799,21 @@ class LinkedInSource(Source):
         """
         Stop if the page shows a security challenge.
 
-        Detection is deliberately broad and biased toward stopping. A
-        false positive costs the user one confirmation; a false
-        negative would mean bypassing a challenge, which is not an
-        acceptable trade.
+        Uses the same bounded probe as the state machine, so it cannot
+        hang and cannot disagree with what the machine concluded.
         """
 
-        self._require_page()
+        observation = self.probe()
 
-        try:
-            body = (
-                self._page.inner_text("body", timeout=5_000) or ""
-            ).lower()
-        except Exception:  # noqa: BLE001
-            return
+        if observation.needs_human:
+            kind = observation.challenge.replace("_", " ")
 
-        for marker, kind in CHALLENGE_MARKERS:
-            if marker in body:
-                raise SecurityChallenge(
-                    kind,
-                    f"LinkedIn presented a {kind} challenge during "
-                    f"{stage}. Complete it in the open browser window, "
-                    f"then resume.",
-                )
+            raise SecurityChallenge(
+                observation.challenge or "security_challenge",
+                f"LinkedIn presented a {kind} challenge during "
+                f"{stage}. Complete it in the open browser window, "
+                f"then resume. {observation.detail}",
+            )
 
     # -----------------------------------------------------------------
     # Discovery
@@ -763,9 +954,10 @@ class LinkedInSource(Source):
 
         self.resolved_profile = slug
 
-        page.goto(
-            f"{PROFILE_URL}/in/{slug}/recent-activity/all/",
-            wait_until="domcontentloaded",
+        # Bounded, and through the same helper as the sign-in
+        # navigation, so no navigation can block indefinitely.
+        self.navigate(
+            f"{PROFILE_URL}/in/{slug}/recent-activity/all/"
         )
 
         self._assert_no_challenge("navigation")
@@ -790,10 +982,8 @@ class LinkedInSource(Source):
         self._require_page()
 
         try:
-            self._page.goto(
-                f"{PROFILE_URL}/in/me/", wait_until="domcontentloaded"
-            )
-        except Exception as exc:  # noqa: BLE001
+            self.navigate(f"{PROFILE_URL}/in/me/")
+        except CollectionStopped as exc:
             raise CollectionStopped(
                 StopReason.FAILED,
                 f"Could not resolve the signed-in profile: {exc}",

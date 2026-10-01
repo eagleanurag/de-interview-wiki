@@ -265,19 +265,32 @@ def build_source(args: argparse.Namespace):
 
 def interactive_login(args: argparse.Namespace) -> int:
     """
-    Let the user sign in by hand, once.
+    Sign in automatically, and hand over only if LinkedIn requires it.
 
-    The browser stays open and waits. Whatever the user completes,
-    including a CAPTCHA or an OTP, is saved as a session so later runs
-    reuse it. This is the supported path for any challenge, and it
-    means the credentials are not typed by automation at all.
+    The normal path needs nothing from the user: the credentials in
+    `.env` are filled and submitted. The browser is left open only if
+    LinkedIn presents a challenge, which is completed by hand and then
+    verified once, under a bound.
+
+    Exits non-zero unless authentication was actually verified. A
+    KeyboardInterrupt is reported as a failure, never as success.
     """
 
-    from src.ingestion.sources.linkedin import LinkedInSource
+    from src.ingestion.sources.linkedin import (
+        AUTH_HUMAN_WAIT_SECONDS,
+        LinkedInSource,
+    )
 
-    print("Opening a browser for you to sign in.")
-    print("Complete any challenge yourself, then return here.")
-    print("Nothing is typed or solved automatically.")
+    if not credential_module.status().configured:
+        print(
+            "LinkedIn credentials configured: no\n"
+            "Set LINKEDIN_USERNAME and LINKEDIN_PASSWORD in .env, "
+            "then run again."
+        )
+        return 1
+
+    print("LinkedIn credentials configured: yes")
+    print("Opening a browser. Signing in automatically...")
     print()
 
     source = LinkedInSource(
@@ -286,38 +299,97 @@ def interactive_login(args: argparse.Namespace) -> int:
         limits=LinkedInLimits(max_posts=args.max_posts),
     )
 
-    try:
-        page = source.open_for_manual_login()
-    except CollectionStopped as exc:
-        print(f"Could not open the browser: {exc}")
-        return 1
-
-    print("Browser open. Sign in on the LinkedIn page.")
-    print("Press Enter here once you are signed in...")
+    needs_human = False
 
     try:
-        input()
-    except (EOFError, KeyboardInterrupt):
+        try:
+            observation = source.open_for_manual_login()
+        except CollectionStopped as exc:
+            print(f"Could not complete sign-in: {exc}")
+            return 1
+
+        print(f"Sign-in state: {observation.state.value}")
+        print(f"Detail: {observation.detail}")
+
+        if observation.is_usable:
+            saved = source.save_session()
+
+            if saved is None:
+                print("Signed in, but the session could not be saved.")
+                return 1
+
+            print("Signed in. Session saved inside the ignored tree.")
+            print("Browser closing.")
+            return 0
+
+        if observation.state.value != "human_challenge":
+            # Not authenticated, and nothing for the user to do about
+            # it from inside the browser.
+            print()
+            print("Not authenticated. Nothing was saved.")
+            return 1
+
+        needs_human = True
+
         print()
+        print("=" * 66)
+        print("ACTION REQUIRED")
+        print("=" * 66)
+        print(f"LinkedIn is showing a {observation.challenge} challenge.")
+        print()
+        print("The browser window is open and holds a live session.")
+        print("Your credentials have already been supplied.")
+        print()
+        print("DO:")
+        print("  - complete the challenge in that browser window")
+        print("  - complete any CAPTCHA, OTP or 2FA yourself")
+        print()
+        print("DO NOT:")
+        print("  - share your credentials with me or anyone else")
+        print("  - ask me to bypass or defeat the challenge")
+        print()
+        print("When the page shows you as signed in, press Enter here.")
 
-    if not source.wait_for_manual_session(timeout_seconds=600):
-        print("Still not signed in. Nothing was saved.")
+        try:
+            input()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            print("Interrupted before confirming. Nothing was saved.")
+            return 1
+
+        print()
+        print("Verifying the session (bounded)...")
+
+        verified = source.wait_for_manual_session(
+            timeout_seconds=AUTH_HUMAN_WAIT_SECONDS
+        )
+
+        print(f"Verification state: {verified.state.value}")
+        print(f"Detail: {verified.detail}")
+
+        if not verified.is_usable:
+            print()
+            print("Still not authenticated. Nothing was saved.")
+            return 1
+
+        saved = source.save_session()
+
+        if saved is None:
+            print("Authenticated, but the session could not be saved.")
+            return 1
+
+        print()
+        print("Authenticated and saved. Browser closing.")
+        return 0
+
+    except KeyboardInterrupt:
+        print()
+        print("Interrupted. Nothing was saved.")
         return 1
-
-    saved = source.save_session()
-
-    source.close()
-
-    if saved is None:
-        print("Signed in, but the session could not be saved.")
-        return 1
-
-    print()
-    print("Signed in. The session is saved inside the ignored")
-    print(".agent tree and is never committed.")
-    print("Run the collection again to use it.")
-
-    return 0
+    finally:
+        source.close()
+        if needs_human:
+            print("Browser closed. Rerun to use the saved session.")
 
 
 def run_collection(

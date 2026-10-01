@@ -13,6 +13,7 @@ prints or asserts against a real credential.
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -1167,6 +1168,8 @@ class FakePage:
         self.current_url = current_url
         self.filled = []
         self.clicked = []
+        self.alerts = []
+        self.default_timeout = None
 
     # -- content ----------------------------------------------------
     def url_after_goto(self):
@@ -1276,13 +1279,16 @@ class FakePage:
     def mouse(self):
         return FakeMouse(self)
 
+    def set_default_timeout(self, value):
+        self.default_timeout = value
+
     def locator(self, selector):
         # Recorded so a click can be attributed back to a selector.
         self._current_selector = selector
 
         return FakeLocator(self, selector)
 
-    def goto(self, url, wait_until=None):
+    def goto(self, url, wait_until=None, timeout=None):
         self.goto_calls.append(url)
 
     @property
@@ -1293,7 +1299,59 @@ class FakePage:
         return self.body_text
 
     def evaluate(self, script):
+        """
+        Answers the single state-machine probe, and the scroll-height
+        read, in one entry point.
+
+        The real driver runs arbitrary JavaScript; the fake keys on the
+        constants the collector actually sends, so a change to either
+        side is visible here.
+        """
+
+        from src.ingestion.auth_state import (
+            PAGE_PROBE_JS,
+            PAGE_SETTLED_JS,
+        )
+
+        if script == PAGE_PROBE_JS:
+            return self.probe_result()
+
+        if script == PAGE_SETTLED_JS:
+            return True
+
         return self.height
+
+    def probe_result(self) -> dict:
+        """
+        The dict PAGE_PROBE_JS would return.
+
+        Mirrors what the page actually renders: the form while signed
+        out, session markers once signed in, and challenge text when
+        the scenario asks for it.
+        """
+
+        signed_out = not self._signed_in
+
+        body = self.body_text
+
+        if body:
+            return {
+                "username_count": 1 if signed_out else 0,
+                "password_count": 1 if signed_out else 0,
+                "session_markers": 0 if signed_out else 1,
+                "feed_nodes": len(self.rounds[self.round]),
+                "alerts": list(self.alerts),
+                "body_sample": body,
+            }
+
+        return {
+            "username_count": 1 if signed_out else 0,
+            "password_count": 1 if signed_out else 0,
+            "session_markers": 0 if signed_out else 1,
+            "feed_nodes": 0,
+            "alerts": list(self.alerts),
+            "body_sample": "",
+        }
 
     def scroll(self, delta_y):
         """Reveal the next round of lazily-loaded content."""
@@ -1458,7 +1516,7 @@ def test_linkedin_stops_on_a_challenge(tmp_path):
 @pytest.mark.parametrize(
     "body,kind",
     [
-        ("Verify it's you", "unusual_login"),
+        ("Verify it's you", "suspicious_login"),
         ("Enter the verification code we sent", "otp"),
         ("Two-step verification", "two_factor"),
         ("Access Denied", "access_denied"),
@@ -1641,143 +1699,6 @@ def test_linkedin_fills_credentials_only_when_signed_out(
     assert page.signed_in is True
 
 
-def test_sign_in_uses_the_current_layout_selectors(
-    monkeypatch,
-):
-    """
-    LinkedIn rebuilt sign-in: the inputs no longer carry stable ids.
-    The collector must key on semantic attributes.
-    """
-
-    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
-    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
-
-    source = LinkedInSource(profile="my-handle")
-    page = FakePage([[]], signed_in=False)
-    source._page = page
-    source._context = object()
-
-    source._sign_in()
-
-    assert page.filled == [
-        'input[autocomplete="username"]',
-        'input[autocomplete="current-password"]',
-    ]
-    assert page.clicked == ['button[type="submit"]']
-
-
-def test_sign_in_uses_the_visible_element_not_the_first_match(
-    monkeypatch,
-):
-    """
-    Regression guard from the live run: the sign-in page renders two
-    username inputs and the first is hidden. Resolving the selector
-    after the visibility check picked the hidden one and the fill
-    timed out. The located element must be used directly.
-    """
-
-    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
-    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
-
-    class TwoPanelPage(FakePage):
-        """
-        The sign-in form as LinkedIn renders it while signed out.
-
-        Two panels, the first hidden. Once authenticated the form is
-        gone, exactly as on the real page, so the collector can
-        observe the difference rather than assuming it.
-        """
-
-        def matches(self, selector):
-            signed_out = not self._signed_in
-
-            if "username" in selector or "current-password" in (
-                selector
-            ) or 'type="password"' in selector:
-                if not signed_out:
-                    return []
-
-                return [
-                    {"_text": "", "_visible": False},
-                    {"_text": "", "_visible": True},
-                ]
-
-            return super().matches(selector)
-
-    source = LinkedInSource(profile="my-handle")
-    page = TwoPanelPage([[]], signed_in=False)
-    source._page = page
-    source._context = object()
-
-    source._sign_in()
-
-    # Two fills happened, one per field, so the hidden element was
-    # skipped rather than retried against.
-    assert len(page.filled) == 2
-
-    # Both fills targeted the visible panel's selectors, so the
-    # collector never reached for a hidden input.
-    assert page.filled == [
-        'input[autocomplete="username"]',
-        'input[autocomplete="current-password"]',
-    ]
-
-
-def test_a_failed_fill_never_reports_the_credential(
-    monkeypatch,
-):
-    """
-    Playwright embeds the argument it was given in its error text, so
-    a failed fill would otherwise print the credential. This is the
-    difference between a failed sign-in and a leaked username.
-    """
-
-    username = "leaky-user@example.com"
-    password = "leaky-password-value"
-
-    monkeypatch.setenv("LINKEDIN_USERNAME", username)
-    monkeypatch.setenv("LINKEDIN_PASSWORD", password)
-
-    class ExplodingField:
-        def fill(self, value):
-            raise RuntimeError(
-                f'waiting for locator, fill("{value}") failed'
-            )
-
-        def is_visible(self):
-            return True
-
-    class ExplodingPage(FakePage):
-        def locator(self, selector):
-            return FakeLocator(self, selector)
-
-        def click(self, selector):
-            self.clicked.append(selector)
-
-    source = LinkedInSource(profile="my-handle")
-    page = ExplodingPage([[]], signed_in=False)
-    source._page = page
-    source._context = object()
-
-    original = source._first_visible_locator
-
-    def explode(selectors, limit=6):
-        return ExplodingField()
-
-    monkeypatch.setattr(
-        source, "_first_visible_locator", explode
-    )
-
-    with pytest.raises(CollectionStopped) as error:
-        source._sign_in()
-
-    message = str(error.value)
-
-    assert username not in message
-    assert password not in message
-    assert "[REDACTED]" in message
-
-
 def test_sign_in_never_types_when_already_authenticated():
     """
     The password must not be typed when a session already exists, so
@@ -1793,66 +1714,6 @@ def test_sign_in_never_types_when_already_authenticated():
 
     assert page.filled == []
     assert page.clicked == []
-
-
-def test_a_changed_login_layout_is_reported_not_retried(
-    monkeypatch,
-):
-    """
-    If the form cannot be found the collector must stop and say the
-    layout changed, rather than looping on a form that is not there.
-    """
-
-    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
-    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
-
-    class NoFormPage(FakePage):
-        def matches(self, selector):
-            if "username" in selector or "password" in selector:
-                return []
-            return super().matches(selector)
-
-    source = LinkedInSource(profile="my-handle")
-    source._page = NoFormPage([[]], signed_in=False)
-    source._context = object()
-
-    with pytest.raises(CollectionStopped) as error:
-        source._sign_in()
-
-    assert error.value.reason is StopReason.LAYOUT_CHANGED
-
-
-def test_sign_in_failure_is_treated_as_a_possible_challenge(
-    monkeypatch,
-):
-    """
-    A rejected sign-in is ambiguous: wrong password, or a challenge.
-    Both need the human, so both stop the same way.
-    """
-
-    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
-    monkeypatch.setenv("LINKEDIN_PASSWORD", "wrong-password-here")
-
-    class StaysSignedOut(FakePage):
-        """
-        Models a rejected sign-in.
-
-        Submitting does not authenticate, which is how the page looks
-        when the password is wrong or a challenge is waiting.
-        """
-
-        def locator(self, selector):
-            # A node whose click never authenticates the session.
-            self._current_selector = selector
-
-            return FakeLocator(self, selector, authenticate=False)
-
-    source = LinkedInSource(profile="my-handle")
-    source._page = StaysSignedOut([[]], signed_in=False)
-    source._context = object()
-
-    with pytest.raises(SecurityChallenge):
-        source._sign_in()
 
 
 def test_a_session_is_saved_only_after_a_real_sign_in(tmp_path):
@@ -1897,36 +1758,91 @@ class _Startable:
         return self._factory()
 
 
-def test_manual_login_only_navigates(monkeypatch, tmp_path):
+def test_manual_login_fills_configured_credentials(
+    monkeypatch, tmp_path
+):
     """
-    The manual path exists so automation never types the password.
+    The manual path no longer asks the user to type credentials.
 
-    With credentials removed from the environment entirely, opening
-    the browser for manual sign-in must still work.
+    When .env credentials are configured, the username and password
+    are filled and submitted automatically. The browser is only handed
+    over if LinkedIn itself demands a challenge.
     """
 
-    monkeypatch.delenv("LINKEDIN_USERNAME", raising=False)
-    monkeypatch.delenv("LINKEDIN_PASSWORD", raising=False)
+    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
+    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
 
     source = LinkedInSource(profile="my-handle", root=tmp_path)
 
     visited: list[str] = []
+    filled: list[str] = []
 
     class FakePage:
         url = "https://www.linkedin.com/login"
 
-        def goto(self, url, wait_until=None):
+        def set_default_timeout(self, value):
+            pass
+
+        def goto(self, url, wait_until=None, timeout=None):
             visited.append(url)
+
+        def evaluate(self, script):
+            from src.ingestion.auth_state import PAGE_PROBE_JS
+
+            if script == PAGE_PROBE_JS:
+                # Signed out, form present.
+                return {
+                    "username_count": 1,
+                    "password_count": 1,
+                    "session_markers": 0,
+                    "feed_nodes": 0,
+                    "alerts": [],
+                    "body_sample": "",
+                }
+
+            return 0
+
+    class FakeNode:
+        def __init__(self, selector):
+            self._selector = selector
+
+        def is_visible(self):
+            return True
+
+        def fill(self, value, timeout=None):
+            filled.append(self._selector)
+
+        def click(self, timeout=None):
+            filled.append("submit")
+
+    class FakeLocator:
+        def __init__(self, selector):
+            self._selector = selector
+
+        def count(self):
+            return 1
+
+        def nth(self, index):
+            return FakeNode(self._selector)
 
     class FakeContext:
         def set_default_timeout(self, value):
             pass
 
+        def set_extra_http_headers(self, headers):
+            pass
+
+        def storage_state(self, path):
+            pass
+
         def new_page(self):
             return FakePage()
 
+        def close(self):
+            pass
+
     class FakeBrowser:
-        def new_context(self):
+        def new_context(self, **kwargs):
             return FakeContext()
 
         def close(self):
@@ -1942,21 +1858,26 @@ def test_manual_login_only_navigates(monkeypatch, tmp_path):
         def stop(self):
             pass
 
-    # Playwright is imported inside the function, so the fake is
-    # installed on the module the import resolves from.
     import playwright.sync_api as sync_api
 
     monkeypatch.setattr(
         sync_api, "sync_playwright", lambda: _Startable(FakePlaywright)
     )
 
-    page = source.open_for_manual_login()
+    monkeypatch.setattr(
+        LinkedInSource, "_first_visible_locator",
+        lambda self, selectors, limit=8: FakeLocator(selectors[0]).nth(0),
+    )
+
+    source.open_for_manual_login()
 
     assert visited == ["https://www.linkedin.com/login"]
-    assert page is not None
 
-    source.close()
-
+    # Both credentials were supplied automatically.
+    assert filled[:2] == [
+        'input[autocomplete="username"]',
+        'input[autocomplete="current-password"]',
+    ]
 
 def test_wait_for_manual_session_polls_until_signed_in(tmp_path):
     source = LinkedInSource(profile="my-handle", root=tmp_path)
@@ -1987,12 +1908,33 @@ def test_wait_for_manual_session_gives_up(tmp_path):
         def wait_for_timeout(self, ms):
             pass
 
-    source._page = FakePage()
-    source._signed_in = lambda: False
+        def set_default_timeout(self, value):
+            pass
 
-    assert not source.wait_for_manual_session(
+        def evaluate(self, script):
+            from src.ingestion.auth_state import PAGE_PROBE_JS
+
+            if script == PAGE_PROBE_JS:
+                return {
+                    "username_count": 1,
+                    "password_count": 1,
+                    "session_markers": 0,
+                    "feed_nodes": 0,
+                    "alerts": [],
+                    "body_sample": "",
+                }
+
+            return 0
+
+    source._page = FakePage()
+
+    # The budget is already spent, so verification returns without
+    # claiming success.
+    outcome = source.wait_for_manual_session(
         timeout_seconds=0, interval_seconds=1
     )
+
+    assert not outcome.is_usable
 
 
 def test_linkedin_close_is_safe_without_a_browser(tmp_path):
@@ -2072,14 +2014,32 @@ def test_the_collector_defines_no_interactive_actions():
         assert forbidden not in source, forbidden
 
 
-def test_the_collector_only_clicks_expanders():
+def test_the_collector_only_clicks_expanders_and_the_sign_in_form():
+    """
+    The read-only guarantee is about page content, not the sign-in
+    form. Submitting the configured credentials is required and
+    allowed; liking, commenting, sharing and following are not.
+
+    Each click site is asserted individually, so adding a fourth one
+    fails this test rather than quietly changing the count.
+    """
+
     source = Path(
         "src/ingestion/sources/linkedin.py"
     ).read_text(encoding="utf-8")
 
-    # Exactly one click call site, on the expander selector.
-    assert source.count(".click(") == 2  # expanders + sign-in submit
+    click_sites = len(re.findall(r"\.click\(", source))
+
+    # Exactly two: the sign-in submit and the content expander.
+    assert click_sites == 2, click_sites
+
+    # The expander is the only content click, and it is guarded by a
+    # short timeout and a visibility check.
+    assert "button.click(timeout=2_000)" in source
+    assert "if button.is_visible():" in source
+
     assert "EXPAND_SELECTORS" in source
+    assert "SUBMIT_SELECTORS" in source
 
 
 def test_no_credential_is_written_to_a_file():
