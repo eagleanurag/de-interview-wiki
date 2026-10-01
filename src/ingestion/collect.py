@@ -61,6 +61,19 @@ class CollectionLimits:
     dry_run: bool = False
 
 
+#: Stop reasons that mean the run did not complete its objective.
+#: A run that ended this way must exit non-zero, even if no
+#: individual post errored, or the caller would read a failure as a
+#: success.
+FAILED_STOP_REASONS = frozenset(
+    {
+        StopReason.FAILED.value,
+        StopReason.LAYOUT_CHANGED.value,
+        StopReason.SCROLL_LIMIT.value,
+    }
+)
+
+
 @dataclass
 class CollectionReport:
     """What a run did, for logging and checkpointing."""
@@ -75,7 +88,18 @@ class CollectionReport:
 
     @property
     def succeeded(self) -> bool:
-        return not self.failed and not self.security_challenge
+        """
+        Whether the run did what was asked.
+
+        A run that stopped because it could not finish did not
+        succeed, even with no per-post failures. Reporting that as
+        success would be a false positive.
+        """
+
+        if self.failed or self.security_challenge:
+            return False
+
+        return self.stopped_because not in FAILED_STOP_REASONS
 
     def summary(self) -> str:
         return (

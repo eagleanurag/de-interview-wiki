@@ -100,6 +100,14 @@ def test_malformed_checkpoint_is_not_trusted(tmp_path):
 # block the push, which it already did once for an equivalent fixture.
 _FILLER = "abcdefghijklmnopqrstuvwxyz0123456789"
 
+SOURCE = (
+    Path(__file__).resolve().parents[1]
+    / "src"
+    / "ingestion"
+    / "sources"
+    / "linkedin.py"
+)
+
 FAKE_GITHUB_TOKEN = "gh" + "p_" + _FILLER
 FAKE_GITHUB_PAT = "github_" + "pat_" + "11" + _FILLER
 FAKE_AWS_KEY = "AKIA" + "IOSFODNN7EXAMPL1"
@@ -1170,6 +1178,8 @@ class FakePage:
         self.clicked = []
         self.alerts = []
         self.default_timeout = None
+        self.emitted: set[str] = set()
+        self.consumed: set[str] = set()
 
     # -- content ----------------------------------------------------
     def url_after_goto(self):
@@ -1181,9 +1191,6 @@ class FakePage:
         """
 
         last = self.goto_calls[-1] if self.goto_calls else ""
-
-        if "/in/me/" in last:
-            return self.current_url
 
         return last
 
@@ -1250,8 +1257,6 @@ class FakePage:
             return [{"_text": "signed in" if self.signed_in else ""}]
 
         if "app-navigation__link" in selector and "/in/" in selector:
-            # No current_url means the session could not be resolved,
-            # so no navigation profile link is available either.
             if not self.current_url:
                 return []
 
@@ -1298,10 +1303,13 @@ class FakePage:
     def inner_text(self, selector, timeout=None):
         return self.body_text
 
-    def evaluate(self, script):
+    def evaluate(self, script, arg=None):
         """
-        Answers the single state-machine probe, and the scroll-height
-        read, in one entry point.
+        Answers the state-machine probe, the extractor, the profile and
+        submit resolvers, and the scroll-height read.
+
+        One entry point, because the real driver dispatches on the
+        expression it is given.
 
         The real driver runs arbitrary JavaScript; the fake keys on the
         constants the collector actually sends, so a change to either
@@ -1319,7 +1327,37 @@ class FakePage:
         if script == PAGE_SETTLED_JS:
             return True
 
+        from src.ingestion.sources.linkedin import (
+            EXTRACT_JS,
+            PROFILE_RESOLVER_JS,
+        )
+
+        if script == EXTRACT_JS:
+            # Mirrors the real feed: posts keyed by permalink URN and
+            # still rendered. The collector deduplicates, so returning
+            # everything the page shows is faithful.
+            return list(self.all_posts)
+
+        if script == PROFILE_RESOLVER_JS:
+            return self.current_url
+
         return self.height
+
+    @property
+    def all_posts(self) -> list[dict]:
+        """
+        Every post revealed so far, oldest round first.
+
+        The fake accumulates like a scrolling feed, so a later round
+        still contains everything above it.
+        """
+
+        accumulated: list[dict] = []
+
+        for round_index in range(self.round + 1):
+            accumulated.extend(self.rounds[round_index])
+
+        return accumulated
 
     def probe_result(self) -> dict:
         """
@@ -1401,24 +1439,25 @@ def make_source(rounds, **kwargs):
     return source, page
 
 
-def linkedin_post(index, text="A post", when="2 days ago"):
+def linkedin_post(index, text="A post", when="Jan 15, 2025"):
     """
     One post as the fake page holds it.
 
-    Keys mirror what FakeNode.get_attribute and FakeNode.inner_text
-    read, so the fake exercises the same extraction path as a real
-    page.
+    The real activity feed keys posts by permalink URN and carries no
+    data-id on the container, so the fake models exactly that.
     """
 
     identifier = f"urn:li:activity:{7000000 + index}"
 
     return {
-        "data-id": identifier,
-        "_text": text,
-        "href": (
+        "urn": identifier,
+        "url": (
             f"https://www.linkedin.com/feed/update/{identifier}/"
         ),
-        "when": when,
+        "text": text,
+        "published": when,
+        "author": "my-handle",
+        "media": [],
     }
 
 
@@ -1538,9 +1577,18 @@ def test_every_challenge_kind_stops_collection(
 
 
 def test_linkedin_stops_when_the_layout_is_unreadable(tmp_path):
+    """
+    A page the extractor cannot read must stop the run as a layout
+    change, rather than yielding zero posts and being mistaken for an
+    exhausted feed.
+    """
+
     class BrokenPage(FakePage):
-        def matches(self, selector):
-            raise RuntimeError("selector engine exploded")
+        def evaluate(self, script, arg=None):
+            if script == EXTRACT_JS:
+                raise RuntimeError("selector engine exploded")
+
+            return super().evaluate(script, arg)
 
     source = LinkedInSource(profile="my-handle")
     source._page = BrokenPage([[]])
@@ -1551,6 +1599,44 @@ def test_linkedin_stops_when_the_layout_is_unreadable(tmp_path):
             pass
 
     assert error.value.reason is StopReason.LAYOUT_CHANGED
+
+
+def test_an_empty_extraction_is_not_a_layout_change(tmp_path):
+    """
+    A page that legitimately renders no posts is an exhausted feed,
+    not a broken layout.
+    """
+
+    source = LinkedInSource(profile="my-handle")
+    page = FakePage([[], [], [], []])
+    source._page = page
+    source._context = object()
+
+    with pytest.raises(CollectionStopped) as error:
+        for _ in source.discover():
+            pass
+
+    assert error.value.reason is StopReason.NO_NEW_CONTENT
+
+
+def test_the_extractor_keys_posts_on_permalinks(tmp_path):
+    """
+    The activity feed's containers carry hashed class names and no
+    data-id. The permalink URN is the only stable handle, and it is
+    also the best identifier.
+    """
+
+    from src.ingestion.sources.linkedin import (
+        PERMALINK_SELECTOR,
+    )
+
+    assert "feed/update/urn:li:" in PERMALINK_SELECTOR
+
+    source = SOURCE.read_text(encoding="utf-8")
+
+    # Extraction is one in-page call, not a chain of locators.
+    assert "EXTRACT_JS" in source
+    assert "urn:li:" in source
 
 
 def test_linkedin_skips_posts_without_a_stable_id(tmp_path):
@@ -1618,16 +1704,17 @@ def test_linkedin_navigates_to_the_configured_profile(tmp_path):
 def test_linkedin_resolves_the_profile_from_the_session(tmp_path):
     """
     With no configured handle, the collector must read the profile the
-    user actually authenticated as, resolved from /in/me/.
+    user actually authenticated as.
+
+    `/in/me/` does not redirect once authenticated, so the handle
+    comes from a rendered profile link. The point is that the
+    collector never guesses whose content it is reading.
     """
 
     rounds = [[linkedin_post(1)]]
 
     source = LinkedInSource(profile="")
-    page = FakePage(
-        rounds,
-        current_url="https://www.linkedin.com/in/actual-handle/",
-    )
+    page = FakePage(rounds, current_url="actual-handle")
     source._page = page
     source._context = object()
 
