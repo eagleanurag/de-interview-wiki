@@ -1058,11 +1058,17 @@ class FakeLocator:
             for node in self._page.matches(self._selector)
         ]
 
+    def nth(self, index):
+        nodes = self._page.matches(self._selector)
+
+        if 0 <= index < len(nodes):
+            return FakeNode(self._page, nodes[index])
+
+        return FakeNode(self._page, {})
+
     @property
     def first(self):
-        nodes = self.all()
-
-        return nodes[0] if nodes else FakeNode(self._page, {})
+        return self.nth(0)
 
 
 class FakeNode:
@@ -1082,24 +1088,38 @@ class FakeNode:
         return FakeLocator(self._page, selector)
 
     def is_visible(self):
-        return bool(self._data)
+        return bool(self._data) and bool(
+            self._data.get("_visible", True)
+        )
 
     def click(self, timeout=None):
+        self._page.clicked.append(
+            self._page._current_selector or ""
+        )
         self._page.expanded += 1
 
 
 class FakePage:
     """A page whose content grows when scrolled."""
 
-    def __init__(self, rounds, *, body_text="", current_url=""):
+    def __init__(
+        self,
+        rounds,
+        *,
+        body_text="",
+        current_url="",
+        signed_in=True,
+    ):
         self.rounds = rounds
         self.round = 0
         self.body_text = body_text
         self.height = 1000
         self.expanded = 0
-        self.signed_in = True
+        self._signed_in = signed_in
         self.goto_calls = []
         self.current_url = current_url
+        self.filled = []
+        self.clicked = []
 
     # -- content ----------------------------------------------------
     def url_after_goto(self):
@@ -1132,7 +1152,7 @@ class FakePage:
             return current
 
         if "Show more" in selector or "see more" in selector:
-            return [{"_text": "", "_expand": True}]
+            return [{"_text": "", "_expand": True, "_visible": True}]
 
         if "show-more-text" in selector or "update-components-text" in (
             selector
@@ -1148,11 +1168,36 @@ class FakePage:
         if "img" in selector or "figure" in selector:
             return []
 
-        if "session_key" in selector:
-            return [{"_text": ""}]
+        if "session_key" in selector or "username" in selector or (
+            'type="email"' in selector
+        ):
+            # Mirrors the current page: the sign-in form exists only
+            # while signed out.
+            if self.signed_in:
+                return []
+
+            return [{"_text": "", "_visible": True}]
+
+        if "current-password" in selector or 'type="password"' in selector:
+            if self.signed_in:
+                return []
+
+            return [{"_text": "", "_visible": True}]
+
+        if 'button[type="submit"]' in selector:
+            if self.signed_in:
+                return []
+
+            return [{"_text": "Sign in", "_visible": True}]
+
+        if "Sign in" in selector or "sign in" in selector:
+            if self.signed_in:
+                return []
+
+            return [{"_text": "Sign in", "_visible": True}]
 
         if "profile photo" in selector or "nav_profile" in selector:
-            return [{"_text": "signed in"}]
+            return [{"_text": "signed in" if self.signed_in else ""}]
 
         if "app-navigation__link" in selector and "/in/" in selector:
             # No current_url means the session could not be resolved,
@@ -1173,10 +1218,21 @@ class FakePage:
 
     # -- playwright surface ----------------------------------------
     @property
+    def signed_in(self):
+        return self._signed_in
+
+    @signed_in.setter
+    def signed_in(self, value):
+        self._signed_in = bool(value)
+
+    @property
     def mouse(self):
         return FakeMouse(self)
 
     def locator(self, selector):
+        # Recorded so a click can be attributed back to a selector.
+        self._current_selector = selector
+
         return FakeLocator(self, selector)
 
     def goto(self, url, wait_until=None):
@@ -1208,12 +1264,14 @@ class FakePage:
         return None
 
     def fill(self, selector, value):
-        raise AssertionError(
-            "credentials must not be typed when already signed in"
-        )
+        self.filled.append(selector)
 
     def click(self, selector):
-        raise AssertionError("no click expected while signed in")
+        self.clicked.append(selector)
+
+        # Submitting the form authenticates the session.
+        if 'submit' in selector or "Sign in" in selector:
+            self._signed_in = True
 
 
 class FakeMouse:
@@ -1534,6 +1592,105 @@ def test_linkedin_fills_credentials_only_when_signed_out(
         pass
 
     assert page.signed_in is True
+
+
+def test_sign_in_uses_the_current_layout_selectors(
+    monkeypatch,
+):
+    """
+    LinkedIn rebuilt sign-in: the inputs no longer carry stable ids.
+    The collector must key on semantic attributes.
+    """
+
+    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
+    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
+
+    source = LinkedInSource(profile="my-handle")
+    page = FakePage([[]], signed_in=False)
+    source._page = page
+    source._context = object()
+
+    source._sign_in()
+
+    assert page.filled == [
+        'input[autocomplete="username"]',
+        'input[autocomplete="current-password"]',
+    ]
+    assert page.clicked == ['button[type="submit"]']
+
+
+def test_sign_in_never_types_when_already_authenticated():
+    """
+    The password must not be typed when a session already exists, so
+    the credential is never put on a page unnecessarily.
+    """
+
+    source = LinkedInSource(profile="my-handle")
+    page = FakePage([[]], signed_in=True)
+    source._page = page
+    source._context = object()
+
+    source._ensure_authenticated()
+
+    assert page.filled == []
+    assert page.clicked == []
+
+
+def test_a_changed_login_layout_is_reported_not_retried(
+    monkeypatch,
+):
+    """
+    If the form cannot be found the collector must stop and say the
+    layout changed, rather than looping on a form that is not there.
+    """
+
+    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
+    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
+
+    class NoFormPage(FakePage):
+        def matches(self, selector):
+            if "username" in selector or "password" in selector:
+                return []
+            return super().matches(selector)
+
+    source = LinkedInSource(profile="my-handle")
+    source._page = NoFormPage([[]], signed_in=False)
+    source._context = object()
+
+    with pytest.raises(CollectionStopped) as error:
+        source._sign_in()
+
+    assert error.value.reason is StopReason.LAYOUT_CHANGED
+
+
+def test_sign_in_failure_is_treated_as_a_possible_challenge(
+    monkeypatch,
+):
+    """
+    A rejected sign-in is ambiguous: wrong password, or a challenge.
+    Both need the human, so both stop the same way.
+    """
+
+    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
+    monkeypatch.setenv("LINKEDIN_PASSWORD", "wrong-password-here")
+
+    class StaysSignedOut(FakePage):
+        """
+        Models a rejected sign-in.
+
+        Submitting does not authenticate, which is how the page looks
+        when the password is wrong or a challenge is waiting.
+        """
+
+        def click(self, selector):
+            self.clicked.append(selector)
+
+    source = LinkedInSource(profile="my-handle")
+    source._page = StaysSignedOut([[]], signed_in=False)
+    source._context = object()
+
+    with pytest.raises(SecurityChallenge):
+        source._sign_in()
 
 
 def test_linkedin_close_is_safe_without_a_browser(tmp_path):

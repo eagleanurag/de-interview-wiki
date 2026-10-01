@@ -119,6 +119,33 @@ class LinkedInLimits:
     idle_rounds: int = DEFAULT_IDLE_ROUNDS
 
 
+# LinkedIn rebuilt its sign-in page. The username and password inputs
+# no longer carry `session_key`/`password` ids or a named form, and the
+# ids are regenerated per render. Semantic attributes are stable, so
+# they are what the collector keys on. Several alternatives are listed
+# because the page renders more than one copy (a sign-in panel and a
+# join panel); the first visible match is used.
+USERNAME_SELECTORS = (
+    'input[autocomplete="username"]',
+    'input[type="email"]',
+    'input#session_key',
+    'input[name="session_key"]',
+)
+
+PASSWORD_SELECTORS = (
+    'input[autocomplete="current-password"]',
+    'input[type="password"]',
+    'input#password',
+)
+
+SUBMIT_SELECTORS = (
+    'button[type="submit"]',
+    'button:has-text("Sign in")',
+    'button:has-text("sign in")',
+    'input[type="submit"]',
+)
+
+
 @dataclass
 class SelectorSet:
     """
@@ -286,9 +313,7 @@ class LinkedInSource(Source):
         Any challenge found here stops collection and asks the human.
         """
 
-        assert self._page is not None
-
-        self._page.goto(
+        self._require_page().goto(
             f"{PROFILE_URL}/feed/", wait_until="domcontentloaded"
         )
 
@@ -302,14 +327,10 @@ class LinkedInSource(Source):
     def _signed_in(self) -> bool:
         """Whether the session is authenticated."""
 
-        assert self._page is not None
-
-        page = self._page
+        page = self._require_page()
 
         try:
-            if page.locator(
-                'input#session_key, input[name="session_key"]'
-            ).count():
+            if self._first_visible(USERNAME_SELECTORS):
                 return False
 
             for selector in (
@@ -324,19 +345,53 @@ class LinkedInSource(Source):
 
         return False
 
+    def _first_visible(self, selectors: tuple[str, ...]) -> str | None:
+        """
+        The first selector with a visible match.
+
+        The sign-in page renders several overlapping panels, so a
+        selector that matches only a hidden element is treated as no
+        match.
+        """
+
+        page = self._require_page()
+
+        for selector in selectors:
+            try:
+                located = page.locator(selector)
+                count = located.count()
+
+                for index in range(min(count, 4)):
+                    if located.nth(index).is_visible():
+                        return selector
+            except Exception:  # noqa: BLE001
+                continue
+
+        return None
+
+    def _require_page(self):
+        """The page, or a clear error if the browser never started."""
+
+        if self._page is None:
+            raise CollectionStopped(
+                StopReason.FAILED,
+                "The browser is not running. Call start() first.",
+            )
+
+        return self._page
+
     def _sign_in(self) -> None:
         """
         Sign in with locally configured credentials.
 
-        The password is typed through Playwright's ``fill`` rather than
-        being interpolated into a selector or URL, and is never logged.
+        Credentials are typed through Playwright's ``fill`` rather than
+        being interpolated into a selector, a URL, or a log line. The
+        password never appears anywhere else in the process.
         """
 
-        assert self._page is not None
+        page = self._require_page()
 
-        from src.ingestion import credentials as credentials_module
-
-        state = credentials_module.status()
+        state = credential_module.status()
 
         if not state.configured:
             raise CollectionStopped(
@@ -344,18 +399,34 @@ class LinkedInSource(Source):
                 "LinkedIn credentials are not configured.",
             )
 
-        page = self._page
+        username_selector = self._first_visible(USERNAME_SELECTORS)
+        password_selector = self._first_visible(PASSWORD_SELECTORS)
+
+        if not username_selector or not password_selector:
+            raise CollectionStopped(
+                StopReason.LAYOUT_CHANGED,
+                "Could not find the sign-in form. LinkedIn's login "
+                "layout appears to have changed; the collector's "
+                "selectors need updating.",
+            )
+
+        submit_selector = self._first_visible(SUBMIT_SELECTORS)
+
+        if not submit_selector:
+            raise CollectionStopped(
+                StopReason.LAYOUT_CHANGED,
+                "Could not find the sign-in button.",
+            )
 
         try:
             page.fill(
-                'input#session_key',
-                _credential("LINKEDIN_USERNAME"),
+                username_selector, _credential("LINKEDIN_USERNAME")
             )
             page.fill(
-                'input#password',
-                _credential("LINKEDIN_PASSWORD"),
+                password_selector, _credential("LINKEDIN_PASSWORD")
             )
-            page.click('button[type="submit"]')
+            page.click(submit_selector)
+
             page.wait_for_load_state("domcontentloaded")
         except Exception as exc:  # noqa: BLE001
             raise CollectionStopped(
@@ -367,11 +438,14 @@ class LinkedInSource(Source):
 
         if not self._signed_in():
             # Either the credentials are wrong or the account needs a
-            # challenge. Either way this is the human's call.
+            # challenge. Either way this is the human's call, and the
+            # distinction is not guessable from the page.
             raise SecurityChallenge(
                 "authentication",
                 "Sign-in did not succeed. The credentials may be "
-                "wrong, or the account may require verification.",
+                "incorrect, or the account may require an additional "
+                "verification step. Complete any challenge in the open "
+                "browser window, then resume.",
             )
 
     # -----------------------------------------------------------------
@@ -388,7 +462,7 @@ class LinkedInSource(Source):
         acceptable trade.
         """
 
-        assert self._page is not None
+        self._require_page()
 
         try:
             body = (
@@ -421,7 +495,7 @@ class LinkedInSource(Source):
         if self._page is None:
             self.start()
 
-        assert self._page is not None
+        self._require_page()
 
         effective = self.limits
 
@@ -532,9 +606,7 @@ class LinkedInSource(Source):
         authenticated account rather than someone else's.
         """
 
-        assert self._page is not None
-
-        page = self._page
+        page = self._require_page()
 
         slug = self._resolve_slug()
 
@@ -571,7 +643,7 @@ class LinkedInSource(Source):
 
             return configured
 
-        assert self._page is not None
+        self._require_page()
 
         try:
             self._page.goto(
@@ -622,7 +694,7 @@ class LinkedInSource(Source):
         collection. Nothing else is clicked.
         """
 
-        assert self._page is not None
+        self._require_page()
 
         try:
             buttons = self._page.locator(
@@ -647,9 +719,7 @@ class LinkedInSource(Source):
         is handled without guessing at timings.
         """
 
-        assert self._page is not None
-
-        page = self._page
+        page = self._require_page()
 
         before = self._page_height()
 
@@ -674,7 +744,7 @@ class LinkedInSource(Source):
             pass
 
     def _page_height(self) -> int:
-        assert self._page is not None
+        self._require_page()
 
         try:
             return int(
@@ -689,7 +759,7 @@ class LinkedInSource(Source):
     def _extract_current(self) -> list[CollectedPost]:
         """Extract every post currently rendered."""
 
-        assert self._page is not None
+        self._require_page()
 
         try:
             nodes = self._page.locator(
