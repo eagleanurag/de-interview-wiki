@@ -349,7 +349,7 @@ def test_skips_json_arrays_and_partial_objects(tmp_path):
 
     skipped = "\n".join(payload["skipped_files"])
     assert "not a JSON object" in skipped
-    assert "missing enriched KnowledgePost fields" in skipped
+    assert "missing required KnowledgePost fields" in skipped
 
 
 def test_post_ordering_is_deterministic(tmp_path):

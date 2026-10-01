@@ -784,3 +784,52 @@ def test_every_post_records_what_kind_of_content_it_is(
             "unclassified",
             "unenriched",
         }, kinds[post["id"]]
+
+def test_an_unenriched_post_is_still_reachable(site, knowledge_base):
+    """
+    A post with no analysis is still content with real provenance, so it
+    must appear in the knowledge base and have a page. Dropping it would
+    lose the source, and a reader would have no way to reach it.
+    """
+
+    unenriched = [
+        post
+        for post in knowledge_base["posts"]
+        if not (post["ai_analysis"].get("summary") or "").strip()
+    ]
+
+    if not unenriched:
+        pytest.skip("every post has been enriched in this checkout")
+
+    pages = {path.stem for path in (site / "posts").glob("*.html")}
+
+    for post in unenriched:
+        assert post["id"] in pages, post["id"]
+
+        page = (site / "posts" / f"{post['id']}.html").read_text(
+            encoding="utf-8"
+        )
+
+        # The source text is still on the page.
+        assert post["original_text"][:60] in page, post["id"]
+
+
+def test_the_knowledge_base_holds_every_collected_post(knowledge_base):
+    """
+    Aggregation must not silently drop a post for lacking analysis. The
+    count of posts in the base equals the count on disk, which is what
+    makes a missing post visible rather than invisible.
+    """
+
+    on_disk = {
+        path.parent.name for path in (REAL_POSTS_ROOT).glob("*/post.json")
+    }
+
+    aggregated = {post["id"] for post in knowledge_base["posts"]}
+
+    # Only posts that are staged for aggregation are required. The
+    # fixture may use enriched results, which cover the same ids.
+    assert aggregated <= on_disk or aggregated == on_disk
+
+    for post_id in on_disk:
+        assert post_id in aggregated, post_id

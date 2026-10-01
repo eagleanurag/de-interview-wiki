@@ -13,15 +13,24 @@ from src.models import KnowledgePost
 
 WORKER_RESULT_GLOB = "cloud_worker_*.json"
 
-REQUIRED_ENRICHED_FIELDS = frozenset(
+#: What makes a payload a post rather than something else. These are
+#: the fields that carry identity and provenance.
+#:
+#: Enrichment fields are deliberately not required. A post that has not
+#: been enriched is still real content with real provenance, and
+#: requiring its analysis to aggregate it would drop the source
+#: entirely. It is aggregated, labelled "unenriched", and carried
+#: through to the site so a reader can still reach it.
+REQUIRED_POST_FIELDS = frozenset(
     {
         "id",
         "source",
-        "ai_analysis",
-        "interview_questions",
-        "classification",
+        "original_text",
     }
 )
+
+#: Retained under the old name for callers that referenced it.
+REQUIRED_ENRICHED_FIELDS = REQUIRED_POST_FIELDS
 
 
 class AggregationError(RuntimeError):
@@ -119,10 +128,10 @@ def aggregate_results(
             )
             continue
 
-        if not REQUIRED_ENRICHED_FIELDS.issubset(raw):
+        if not REQUIRED_POST_FIELDS.issubset(raw):
             skipped_files.append(
                 f"{_describe(result_file, input_dir)}: "
-                f"missing enriched KnowledgePost fields"
+                f"missing required KnowledgePost fields"
             )
             continue
 
