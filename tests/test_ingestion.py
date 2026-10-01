@@ -1330,12 +1330,19 @@ def test_collected_posts_keep_their_provenance():
         assert post.source.url
         assert post.original_text.strip()
 
-        # The identifier is the source permalink URN, slugged so it is
-        # a safe directory name. That keeps it stable across runs and
-        # traceable back to the original.
+        # The identifier is derived from the source's own identifier,
+        # slugged so it is a safe directory name. That keeps it stable
+        # across runs and traceable back to the original.
         assert post.id.startswith("urn-li-")
-        assert "urn:li:" in post.source.url
-        assert post.source.url.endswith("/")
+        assert post.source.url.startswith("https://www.linkedin.com/")
+
+        # A post links to its feed permalink; an article links to its
+        # own slug page. Either way the identifier and the URL agree
+        # about which kind of content this is.
+        if post.id.startswith("urn-li-article-"):
+            assert "/pulse/" in post.source.url
+        else:
+            assert "/feed/update/urn:li:" in post.source.url
 
 
 def test_collected_posts_carry_no_credential_shaped_text():

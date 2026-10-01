@@ -98,8 +98,8 @@ AUTH_HUMAN_WAIT_SECONDS = 900
 #: Profile resolution gets its own budget rather than borrowing the
 #: sign-in one, because a slow first paint of the feed is expected
 #: and must not eat the time available to detect a challenge.
-ARTICLE_RESOLVE_TIMEOUT_SECONDS = 45.0
-ARTICLE_RESOLVE_SETTLE_MS = 6_000
+PROFILE_RESOLVE_TIMEOUT_SECONDS = 45.0
+PROFILE_RESOLVE_SETTLE_MS = 6_000
 
 
 def linkedin_installed() -> bool:
@@ -130,6 +130,13 @@ class LinkedInLimits:
     until: str | None = None
     scroll_limit: int = DEFAULT_SCROLL_LIMIT
     idle_rounds: int = DEFAULT_IDLE_ROUNDS
+
+    # How long to keep looking for the signed-in profile. A limit
+    # rather than a constant, so a caller that is waiting on a human
+    # can shorten it and a test does not have to pay for it.
+    resolve_timeout_seconds: float = (
+        PROFILE_RESOLVE_TIMEOUT_SECONDS
+    )
 
 
 # LinkedIn rebuilt its sign-in page. The username and password inputs
@@ -1883,7 +1890,7 @@ class LinkedInSource(Source):
 
         page = self._require_page()
 
-        budget = Deadline(ARTICLE_RESOLVE_TIMEOUT_SECONDS)
+        budget = Deadline(self.limits.resolve_timeout_seconds)
 
         while not budget.expired:
             if not self.navigate(f"{PROFILE_URL}/feed/"):
@@ -1910,7 +1917,7 @@ class LinkedInSource(Source):
             settle(
                 page,
                 timeout_ms=budget.slice_ms(
-                    cap_ms=ARTICLE_RESOLVE_SETTLE_MS, default_ms=5_000
+                    cap_ms=PROFILE_RESOLVE_SETTLE_MS, default_ms=5_000
                 ),
             )
 

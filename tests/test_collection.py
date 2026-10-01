@@ -1837,7 +1837,10 @@ def test_linkedin_prefers_a_configured_handle(tmp_path):
 
 
 def test_linkedin_stops_when_no_profile_can_be_resolved(tmp_path):
-    source = LinkedInSource(profile="")
+    source = LinkedInSource(
+        profile="",
+        limits=LinkedInLimits(resolve_timeout_seconds=0.0),
+    )
     source._page = FakePage([[]], current_url="")
     source._context = object()
 
@@ -2068,8 +2071,10 @@ def test_wait_for_manual_session_polls_until_signed_in(tmp_path):
 
     source._signed_in = signed_in
 
+    # The loop runs until the session reports in, so the budget only
+    # has to be larger than the number of attempts it takes.
     assert source.wait_for_manual_session(
-        timeout_seconds=10, interval_seconds=1
+        timeout_seconds=3, interval_seconds=0
     )
 
 
