@@ -98,6 +98,18 @@ AUTH_HUMAN_WAIT_SECONDS = 900
 #: Profile resolution gets its own budget rather than borrowing the
 #: sign-in one, because a slow first paint of the feed is expected
 #: and must not eat the time available to detect a challenge.
+#: What to say when no profile can be resolved.
+#:
+#: The overwhelmingly common cause is a saved session that is no longer
+#: signed in, so the message says that and names the recovery, rather
+#: than reporting a missing --profile that would send the reader
+#: looking in the wrong place.
+_UNRESOLVED_PROFILE_MESSAGE = (
+    "The signed-in profile could not be resolved. The saved session is "
+    "most likely no longer signed in. Run with --login to sign in again "
+    "and save a fresh session."
+)
+
 PROFILE_RESOLVE_TIMEOUT_SECONDS = 45.0
 PROFILE_RESOLVE_SETTLE_MS = 6_000
 
@@ -1645,7 +1657,7 @@ class LinkedInSource(Source):
         if not slug:
             raise CollectionStopped(
                 StopReason.FAILED,
-                "Could not resolve the profile whose articles to read.",
+                _UNRESOLVED_PROFILE_MESSAGE,
             )
 
         self.navigate(
