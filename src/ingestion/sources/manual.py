@@ -515,16 +515,17 @@ class ManualSource(Source):
         and an anonymous one still has a stable one.
         """
 
-        stem = bundle.stem if bundle.is_file() else bundle.name
-
-        readable = _ID_SAFE.sub("-", stem.strip().lower()).strip("-")
-
         digest = content_digest(text, [str(item) for item in media])
 
-        if not readable or readable in {"content", "capture", "post"}:
-            identifier = f"manual-{digest[:12]}"
-        else:
-            identifier = f"{readable}-{digest[:8]}"
+        # The readable part of an identifier is derived from the
+        # content, never from the file or directory name. Two copies of
+        # the same capture sit in directories with different names, so a
+        # name-derived prefix would make them resolve to two posts
+        # instead of one. Deriving it from the content keeps the
+        # identifier readable and still lets a duplicate collapse.
+        readable = _readable_prefix(text, bundle) or "post"
+
+        identifier = f"{readable}-{digest[:12]}"
 
         return CollectedPost(
             source_post_id=identifier,
@@ -692,6 +693,32 @@ class ManualSource(Source):
 
 
 _ID_SAFE = re.compile(r"[^a-z0-9._-]+")
+
+
+def _readable_prefix(text: str, bundle: Path) -> str:
+    """
+    A short, readable stem for an identifier.
+
+    Taken from the opening words of the content, because those are the
+    same in every copy of the same capture. The document's own heading
+    is preferred when it has one, since that is what a reader would
+    call it.
+    """
+
+    source = text.strip()
+
+    for line in source.splitlines():
+        cleaned = line.strip().lstrip("#").strip()
+
+        if len(cleaned) >= 12:
+            source = cleaned
+            break
+
+    words = _ID_SAFE.sub("-", source.lower()).strip("-").split("-")
+
+    stem = "-".join(words[:5])[:36].strip("-")
+
+    return stem or _ID_SAFE.sub("-", bundle.stem.lower()).strip("-")
 
 
 def _dedupe(paths: list[Path]) -> list[Path]:

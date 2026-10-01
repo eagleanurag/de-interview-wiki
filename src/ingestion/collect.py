@@ -450,7 +450,7 @@ class Collector:
                 captured_at=_now(),
             )
 
-            directory = self._persist(document)
+            directory = self._persist(document, collected)
         except Exception as exc:  # noqa: BLE001
             self._state.failed += 1
             report.failed.append(post_id)
@@ -537,7 +537,11 @@ class Collector:
 
         return True
 
-    def _persist(self, document: PostDocument) -> Path:
+    def _persist(
+        self,
+        document: PostDocument,
+        collected: CollectedPost | None = None,
+    ) -> Path:
         """
         Save one post, preserving enrichment already in place.
 
@@ -576,7 +580,79 @@ class Collector:
 
         document.save(directory)
 
+        if collected is not None:
+            self._copy_media(document, directory, collected)
+
         return directory
+
+    def _copy_media(
+        self,
+        document: PostDocument,
+        directory: Path,
+        collected: CollectedPost,
+    ) -> None:
+        """
+        Copy the media a source supplied into the post.
+
+        A document declares media by name, but a declaration without the
+        file is a broken post: validation fails on it, the wiki renders
+        a missing-image link, and the bytes are lost. So the bytes are
+        copied here, using the same containment the manual import path
+        already applies.
+
+        A source that cannot supply a file costs that file rather than
+        the post, because the text is still worth storing.
+        """
+
+        sources = [
+            path for path in collected.media if Path(path).is_file()
+        ]
+
+        missing = [
+            str(path)
+            for path in collected.media
+            if not Path(path).is_file()
+        ]
+
+        for item in missing:
+            self.progress(
+                f"Media file is missing and was not stored: {item}"
+            )
+
+        if not sources:
+            return
+
+        from src.ingestion.importer import _ingest_media
+
+        try:
+            added, skipped, renamed = _ingest_media(
+                document,
+                directory,
+                sources,
+                description="",
+                force=False,
+            )
+        except Exception as exc:  # noqa: BLE001
+            # A conflicting filename is a real problem worth reporting,
+            # but it is not worth losing the post over.
+            self.progress(
+                f"Could not store media for "
+                f"{document.post_id}: {exc}"
+            )
+            return
+
+        for original, safe in renamed:
+            self.progress(
+                f"Media name made safe: {original} -> {safe}"
+            )
+
+        if added or skipped:
+            document.save(directory)
+
+        self.progress(
+            f"Stored {len(added)} media file(s) "
+            f"for {document.post_id}"
+        )
 
     @staticmethod
     def _read_existing(path: Path) -> PostDocument | None:

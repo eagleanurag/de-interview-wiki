@@ -1,0 +1,10 @@
+{
+  "id": "capture-spark-skew",
+  "text": "Data skew means one task in a stage does far more work than the others, so the stage waits for it. Salting a hot key, or splitting it across several keys, spreads the work.",
+  "url": "https://example.invalid/capture-spark-skew",
+  "author": "fixture-author",
+  "published_at": "2026-02-02T12:00:00+00:00",
+  "media": [
+    "diagram.png"
+  ]
+}

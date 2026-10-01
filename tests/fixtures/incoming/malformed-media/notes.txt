@@ -1,0 +1,1 @@
+This bundle carries a document that failed to download, so the extraction stage has to survive it.

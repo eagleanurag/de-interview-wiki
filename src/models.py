@@ -67,3 +67,10 @@ class KnowledgePost(BaseModel):
     classification: Classification = Field(
         default_factory=Classification
     )
+
+    # Where this post was loaded from. Excluded from the serialized
+    # form because it is a fact about this machine, not about the
+    # content: a knowledge base that carried it would stop being
+    # portable the moment it was written anywhere else. Media paths
+    # stay relative and are resolved against this.
+    directory: str = Field(default="", exclude=True)

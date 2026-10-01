@@ -137,6 +137,7 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
         ai_analysis=ai_analysis,
         interview_questions=questions,
         classification=classification,
+        directory=str(post_directory),
     )
 
 
@@ -161,16 +162,24 @@ def _resolve_media(
 
         declared_paths.add(target)
 
+        # The declared path is kept, not the resolved one. Resolving it
+        # here would put this machine's directory layout into the post
+        # and then into the rendered site, where a visitor would see a
+        # path from the machine that built it.
         media_items.append(
             _media_item(
                 media_type=entry.type,
-                path=target,
+                path=entry.path,
                 description=entry.description or None,
             )
         )
 
-    for item in _discover_media(post_directory / "media"):
-        if Path(item.path) in declared_paths:
+    for item in _discover_media(
+        post_directory / "media", post_directory
+    ):
+        if Path(item.path).name in {
+            Path(declared).name for declared in declared_paths
+        }:
             continue
 
         media_items.append(item)
@@ -181,25 +190,58 @@ def _resolve_media(
 def _media_item(
     *,
     media_type: str,
-    path: Path,
+    path: Path | str,
     description: str | None = None,
 ) -> MediaItem:
+    """
+    Build a media item, normalising its path to POSIX separators.
+
+    A stored path is always relative and always uses forward slashes, so
+    the repository reads the same on every platform and nothing depends
+    on the working directory of whichever runner loaded the post.
+    """
+
+    declared = Path(path)
+
+    if declared.is_absolute():
+        relative = declared
+    else:
+        relative = declared
+
+    parts = [
+        part for part in relative.parts if part not in {"..", "."}
+    ]
+
     return MediaItem(
         type=media_type,
-        path=str(path),
+        path="/".join(parts),
         description=description,
     )
 
 
 def _discover_media(
     media_directory: Path,
+    post_directory: Path,
 ) -> list[MediaItem]:
-    """Discover media files inside a post's media directory."""
+    """
+    Discover media files inside a post's media directory.
+
+    The recorded path is relative to the post directory, in POSIX form,
+    because a discovered file has no declared path to keep and an
+    absolute one would tie the post to the machine that read it. The
+    post's own directory is passed separately so a relative path can be
+    rebuilt here.
+    """
 
     if not media_directory.exists():
         return []
 
     media_items: list[MediaItem] = []
+
+    try:
+        base = post_directory.resolve()
+    except OSError:
+        base = post_directory
 
     for file_path in sorted(media_directory.iterdir()):
 
@@ -217,11 +259,13 @@ def _discover_media(
         else:
             media_type = "other"
 
+        try:
+            relative = file_path.resolve().relative_to(base)
+        except (OSError, ValueError):
+            relative = Path("media") / file_path.name
+
         media_items.append(
-            MediaItem(
-                type=media_type,
-                path=str(file_path),
-            )
+            _media_item(media_type=media_type, path=relative)
         )
 
     return media_items

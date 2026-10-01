@@ -1,0 +1,2 @@
+{"id": "export-1", "text": "Z-Ordering co-locates related rows so a predicate can skip whole files."}
+{"id": "export-2", "text": "Partitioning is about pruning; clustering is about ordering. They answer different questions."}

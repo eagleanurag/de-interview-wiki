@@ -382,8 +382,12 @@ def test_an_anonymous_bundle_still_gets_a_stable_identifier(tmp_path):
 
     collected = collect(ManualSource(tmp_path))
 
-    assert collected[0].source_post_id.startswith("manual-")
-    assert len(collected[0].source_post_id) > 8
+    identifier = collected[0].source_post_id
+
+    # Derived from the content, so it is readable and stable even when
+    # the file name says nothing useful.
+    assert identifier.startswith("unnamed-but-real-content")
+    assert len(identifier) > 8
 
 
 def test_two_different_anonymous_bundles_do_not_collide(tmp_path):
@@ -654,3 +658,70 @@ def test_the_platform_can_be_overridden(tmp_path):
 
     assert source.platform == "book"
     assert source.name == "manual"
+
+
+def test_two_copies_of_one_capture_collapse_onto_one_post(tmp_path):
+    """
+    The property that makes a repeated drop safe. Two copies sit in
+    directories with different names, so an identifier derived from the
+    name would treat them as two posts.
+    """
+
+    for name in ("copy-one", "copy-two"):
+        directory = bundle(tmp_path, name)
+        (directory / "post.txt").write_text(
+            "The same captured material, saved twice.", encoding="utf-8"
+        )
+
+    collected = collect(ManualSource(tmp_path))
+
+    assert len(collected) == 2
+
+    # Same identifier, because the identifier comes from the content.
+    assert (
+        collected[0].source_post_id == collected[1].source_post_id
+    )
+
+
+def test_different_material_does_not_collapse(tmp_path):
+    for name in ("first", "second"):
+        directory = bundle(tmp_path, name)
+        (directory / "post.txt").write_text(
+            f"Distinctly different material in {name}.", encoding="utf-8"
+        )
+
+    collected = collect(ManualSource(tmp_path))
+
+    assert (
+        collected[0].source_post_id != collected[1].source_post_id
+    )
+
+
+def test_an_identifier_is_readable(tmp_path):
+    """
+    A reader meets these identifiers in URLs and directory names, so
+    they have to say something about the content.
+    """
+
+    directory = bundle(tmp_path, "opaque-name")
+    (directory / "post.txt").write_text(
+        "Star schema denormalisation tradeoffs", encoding="utf-8"
+    )
+
+    collected = collect(ManualSource(tmp_path))
+
+    assert collected[0].source_post_id.startswith("star-schema")
+
+
+def test_a_markdown_heading_becomes_the_identifier(tmp_path):
+    directory = bundle(tmp_path, "heading")
+    (directory / "content.md").write_text(
+        "# Slowly Changing Dimensions\n\nType 2 keeps the history.",
+        encoding="utf-8",
+    )
+
+    collected = collect(ManualSource(tmp_path))
+
+    assert collected[0].source_post_id.startswith(
+        "slowly-changing-dimensions"
+    )

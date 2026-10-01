@@ -1,0 +1,28 @@
+# Binary fixtures and assets are never line-ending converted.
+#
+# A PDF cross-reference table is a table of fixed-width byte offsets, so
+# rewriting a line ending inside one invalidates the file. Git's
+# whitespace check also flags the trailing space the format requires at
+# the end of each entry, which is why these are marked binary rather
+# than left to text normalisation.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+
+# Python and documentation are checked out with native line endings on
+# Windows and LF elsewhere, so a repository written on one platform
+# does not show every file as changed on another.
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+
+# Workflow files must not gain a BOM, which GitHub Actions rejects.
+.github/workflows/*.yml text eol=lf
