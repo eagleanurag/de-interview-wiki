@@ -44,6 +44,16 @@ CP8_ENRICHMENT_COMPLETE = "CP8_ENRICHMENT_COMPLETE"
 #: after it are still unreached.
 CP8_SAVED_ITEMS_IMPORT_READY = "CP8_SAVED_ITEMS_IMPORT_READY"
 
+#: Saved Items intake and enrichment quality: the drop zone, the capture
+#: contract, the four commands, source-grounded questions, capture
+#: quality, and the Saved Items page.
+#:
+#: Named CP9 rather than taking the mission's slot, because
+#: ``CP9_KNOWLEDGE_BASE_COMPLETE`` is a phase of its own and this work
+#: did not complete it. Two constants claiming one number would make
+#: the order a guess.
+CP9_SAVED_ITEMS_INTAKE_READY = "CP9_SAVED_ITEMS_INTAKE_READY"
+
 CP9_KNOWLEDGE_BASE_COMPLETE = "CP9_KNOWLEDGE_BASE_COMPLETE"
 CP10_WIKI_COMPLETE = "CP10_WIKI_COMPLETE"
 CP11_TESTS_GREEN = "CP11_TESTS_GREEN"
@@ -67,6 +77,7 @@ PHASE_ORDER = (
     CP7_COLLECTION_COMPLETE,
     CP8_ENRICHMENT_COMPLETE,
     CP8_SAVED_ITEMS_IMPORT_READY,
+    CP9_SAVED_ITEMS_INTAKE_READY,
     CP9_KNOWLEDGE_BASE_COMPLETE,
     CP10_WIKI_COMPLETE,
     CP11_TESTS_GREEN,

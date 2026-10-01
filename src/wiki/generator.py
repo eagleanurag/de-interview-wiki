@@ -34,11 +34,13 @@ from src.wiki.naming import (
     MANIFEST_FILE,
     NOT_FOUND_PAGE,
     QUESTIONS_PAGE,
+    SAVED_ITEMS_PAGE,
     SEARCH_INDEX_FILE,
     SEARCH_PAGE,
     TECHNOLOGIES_PAGE,
     TOPICS_PAGE,
 )
+from src.wiki.saved_items import render_saved_items
 from src.wiki.pages import (
     render_concept_detail,
     render_concepts_index,
@@ -122,6 +124,7 @@ def _write_site(model, staging: Path) -> list[str]:
         CONCEPTS_PAGE: render_concepts_index(model),
         TECHNOLOGIES_PAGE: render_technologies_index(model),
         QUESTIONS_PAGE: render_questions(model),
+        SAVED_ITEMS_PAGE: render_saved_items(model),
         NOT_FOUND_PAGE: render_not_found(model),
     }
 

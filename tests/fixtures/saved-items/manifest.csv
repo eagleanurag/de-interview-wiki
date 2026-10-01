@@ -1,0 +1,13 @@
+URL,Saved Date,Title,Author,Notes
+https://www.linkedin.com/posts/alice_delta-lake-101,2026-01-01,Delta Lake,Fixture Author,note delta-lake
+https://www.linkedin.com/posts/bob_sql-window-202,2026-01-02,Sql Window,Fixture Author,note sql-window
+https://www.linkedin.com/pulse/carol_pyspark-303,2026-01-03,Pyspark Joins,Fixture Author,note pyspark-joins
+https://www.linkedin.com/posts/dan_databricks-404,2026-01-04,Databricks,Fixture Author,note databricks
+https://www.linkedin.com/posts/erin_data-factory-505,2026-01-05,Data Factory,Fixture Author,note data-factory
+https://www.linkedin.com/posts/frank_architecture-606,2026-01-06,Architecture,Fixture Author,note architecture
+https://www.linkedin.com/posts/grace_hiring-707,2026-01-07,Hiring,Fixture Author,note hiring
+https://www.linkedin.com/posts/heidi_diagram-808,2026-01-08,Image Only,Fixture Author,note image-only
+https://www.linkedin.com/posts/ivan_backpressure-909,2026-01-09,Document,Fixture Author,note document
+https://www.linkedin.com/posts/judy_never-captured-1010,2026-01-10,Metadata Only,Fixture Author,note metadata-only
+https://www.linkedin.com/posts/ken_corrupt-1110,2026-01-11,Corrupt,Fixture Author,note corrupt
+https://www.linkedin.com/posts/alice_delta-lake-101,2026-01-12,Duplicate,Fixture Author,note duplicate

@@ -56,6 +56,7 @@
         record.tp,
         record.sb,
         record.c,
+        record.t,
         record.q
       ];
 

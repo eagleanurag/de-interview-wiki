@@ -388,6 +388,15 @@ def test_the_remote_agent_still_requires_owner_control() -> None:
 
 
 def saved_items_sources() -> list[Path]:
+    """
+    Every module the saved-items package is made of.
+
+    The package rather than the whole pipeline, because the package is
+    exclusively this phase: a capability it gained is a capability the
+    phase has. The files it shares with other phases are checked
+    separately, scoped to the code this phase added to them.
+    """
+
     return sorted(
         (REPO_ROOT / "src" / "ingestion" / "saved_items").rglob("*.py")
     )
@@ -420,14 +429,129 @@ def imported_modules(path: Path) -> set[str]:
     return modules
 
 
+def qualified_calls(path: Path) -> set[str]:
+    """
+    Every call a file makes, as ``owner.name`` or a bare name.
+
+    Qualified, because the difference matters: ``re.compile`` builds a
+    pattern and ``compile`` runs a string as a program. A check that
+    treated the two the same would fire on ordinary code and would
+    therefore be switched off.
+    """
+
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+
+    names: set[str] = set()
+
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.Call):
+            continue
+
+        target = node.func
+
+        if isinstance(target, ast.Name):
+            names.add(target.id)
+
+        elif isinstance(target, ast.Attribute):
+            owner = getattr(target.value, "id", None)
+
+            names.add(
+                f"{owner}.{target.attr}" if owner else target.attr
+            )
+
+    return names
+
+
+def bare_calls(path: Path, only: tuple[str, ...] = ()) -> set[str]:
+    """
+    Unqualified calls, optionally inside some functions only.
+
+    ``only`` scopes the check to the code this phase added to a file it
+    shares with something else. ``collect_cli`` also hosts the LinkedIn
+    sign-in path, which legitimately has capabilities this phase must
+    not, and holding a whole file to the stricter rule would either fail
+    on the wrong code or be loosened until it checked nothing.
+    """
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+
+    found: set[str] = set()
+
+    def scan(node: ast.AST) -> None:
+        for child in ast.walk(node):
+            if (
+                isinstance(child, ast.Call)
+                and isinstance(child.func, ast.Name)
+            ):
+                found.add(child.func.id)
+
+    if not only:
+        scan(tree)
+
+        return found
+
+    for node in ast.walk(tree):
+        if (
+            isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+            and node.name in only
+        ):
+            scan(node)
+
+    return found
+
+
+#: The functions this phase added to modules it shares with other work.
+SAVED_ITEM_FUNCTIONS = (
+    "saved_items_bundle_root",
+    "run_saved_items",
+    "run_saved_items_init",
+    "run_saved_items_status",
+    "run_saved_items_validate",
+    "_preview",
+    "_adopt_orphans",
+    "_knowledge_counts",
+    "_validation_exit",
+    "saved_items_bundle_root",
+)
+
+
+#: Calls that would mean material from a capture was executed rather
+#: than read. A module-level regex compiler is not one of them, which is
+#: why these are matched as bare names.
+EXECUTION_CALLS = {
+    "eval",
+    "exec",
+    "compile",
+    "__import__",
+    "system",
+    "popen",
+    "spawn",
+    "spawnl",
+    "execv",
+    "execve",
+    "run",
+    "Popen",
+    "call",
+    "check_output",
+    "check_call",
+}
+
+PROCESS_MODULES = {
+    "subprocess",
+    "shlex",
+    "pty",
+    "commands",
+    "multiprocessing",
+}
+
+
 def test_saved_items_needs_no_credential() -> None:
     """
     The saved-items path must not be able to reach a credential.
 
     A saved list is a file the user exported; there is nothing for it to
-    authenticate with. A saved-items module that could read the
-    credential store would mean the phase had quietly acquired a way to
-    act as the user, which is the opposite of what it is for.
+    authenticate with. A module that could read the credential store
+    would mean the phase had quietly acquired a way to act as the user,
+    which is the opposite of what it is for.
     """
 
     banned = {
@@ -436,6 +560,8 @@ def test_saved_items_needs_no_credential() -> None:
         "playwright",
         "keyring",
         "netrc",
+        "getpass",
+        "browser_cookie3",
     }
 
     offenders: list[str] = []
@@ -452,16 +578,19 @@ def test_saved_items_reads_no_environment_variable() -> None:
     """
     The saved-items path takes its input from files the user put in a
     directory. Reading the environment would give it a channel the user
-    did not choose.
+    did not choose, and one that differs between a local run and CI.
     """
+
+    banned = {"os", "getpass", "dotenv"}
 
     offenders: list[str] = []
 
     for path in saved_items_sources():
-        if "os" in imported_modules(path):
-            offenders.append(path.name)
+        for name in imported_modules(path):
+            if name in banned:
+                offenders.append(f"{path.name}: {name}")
 
-    assert offenders == []
+    assert offenders == [], sorted(set(offenders))
 
 
 def test_saved_items_opens_no_connection() -> None:
@@ -486,6 +615,7 @@ def test_saved_items_opens_no_connection() -> None:
         "ftplib",
         "telnetlib",
         "xmlrpc",
+        "asyncio",
     }
 
     offenders: list[str] = []
@@ -512,7 +642,225 @@ def test_saved_items_needs_no_browser() -> None:
             if "playwright" in name or "selenium" in name:
                 offenders.append(f"{path.name}: {name}")
 
+        for name in qualified_calls(path):
+            if name.endswith(
+                (".launch", ".new_page", ".new_context", ".goto")
+            ):
+                offenders.append(f"{path.name}: {name}()")
+
     assert offenders == [], sorted(set(offenders))
+
+
+def test_saved_items_runs_no_command() -> None:
+    """
+    A capture is a file the user put in a directory. Nothing in it may
+    ever be run, and nothing may be handed to a shell.
+    """
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        for name in imported_modules(path):
+            if name in PROCESS_MODULES:
+                offenders.append(f"{path.name}: {name}")
+
+        for name in bare_calls(path):
+            if name in EXECUTION_CALLS:
+                offenders.append(f"{path.name}: {name}()")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_the_saved_item_commands_run_nothing() -> None:
+    """
+    The command surface holds the same line.
+
+    Scoped to the saved-items functions, because ``collect_cli`` also
+    hosts the LinkedIn sign-in path, which legitimately has capabilities
+    this phase must not have.
+    """
+    path = REPO_ROOT / "src" / "ingestion" / "collect_cli.py"
+
+    offenders = sorted(
+        bare_calls(path, only=SAVED_ITEM_FUNCTIONS)
+        & EXECUTION_CALLS
+    )
+
+    assert offenders == []
+
+
+def test_the_saved_item_commands_read_no_environment() -> None:
+    path = REPO_ROOT / "src" / "ingestion" / "collect_cli.py"
+
+    offenders = sorted(
+        bare_calls(path, only=SAVED_ITEM_FUNCTIONS)
+        & {"getenv", "environ", "putenv", "load_local_environment"}
+    )
+
+    assert offenders == []
+
+
+def test_the_enrichment_check_runs_nothing() -> None:
+    """
+    Grounding reads the model's answer and the post's text. Neither is
+    a program.
+    """
+    for path in (
+        REPO_ROOT / "src" / "ai" / "grounding.py",
+        REPO_ROOT / "src" / "wiki" / "saved_items.py",
+    ):
+        for name in imported_modules(path):
+            assert name not in PROCESS_MODULES, f"{path.name}: {name}"
+
+        for name in bare_calls(path):
+            assert name not in EXECUTION_CALLS, f"{path.name}: {name}()"
+
+
+def test_saved_items_never_looks_up_a_cookie_or_a_session() -> None:
+    """
+    Browser state is not this phase's business.
+
+    Named explicitly because a cookie jar is the obvious thing to reach
+    for when the goal is "the content the user already has", and reaching
+    for it would turn a local import into a session reader.
+    """
+
+    banned = (
+        "cookie",
+        "storage_state",
+        "browser_profile",
+        "user_data_dir",
+        "csrf",
+    )
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        for name in imported_modules(path):
+            for word in banned:
+                if word in name.lower():
+                    offenders.append(f"{path.name}: {name}")
+
+        for name in qualified_calls(path):
+            for word in banned:
+                if word in name.lower():
+                    offenders.append(f"{path.name}: {name}()")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_saved_html_is_parsed_as_data() -> None:
+    """
+    A saved page is a document, not a program.
+
+    The phase parses HTML to read the text a page declares about itself.
+    It must never run a script from that page, follow a link out of it,
+    or fetch a resource it names, because a capture is untrusted input
+    and a saved page is the easiest place to hide something hostile.
+    """
+
+    banned = EXECUTION_CALLS | {
+        "load_module",
+        "spec_from_file_location",
+        "module_from_spec",
+        "urlretrieve",
+        "urlopen",
+    }
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        for name in bare_calls(path):
+            if name in banned:
+                offenders.append(f"{path.name}: {name}()")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_saved_html_is_parsed_by_the_standard_library() -> None:
+    """
+    The HTML parser is the standard library's, and it parses.
+
+    A third-party parser with a resolver, a network fetcher and a
+    scripting hook attached would be able to do all three things the
+    tests above forbid, while importing nothing this repository asked
+    for.
+    """
+
+    allowed = {"html.parser", "html"}
+
+    third_party = {"bs4", "lxml", "html5lib", "selectolax", "pyquery"}
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        for name in imported_modules(path):
+            if name in third_party:
+                offenders.append(f"{path.name}: {name}")
+
+            if "parser" in name and name not in allowed:
+                offenders.append(f"{path.name}: {name}")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_a_saved_page_cannot_reach_out_of_itself():
+    """
+    A capture folder holding a page that names a remote resource must
+    not cause anything to be requested.
+
+    Checked by construction as well as by import: the parser is handed
+    the file's bytes and returns text, and nothing in the pipeline has
+    anywhere to send a URL that a page supplied.
+    """
+    import tempfile
+
+    from src.ingestion.saved_items.bundles import read_bundle
+
+    with tempfile.TemporaryDirectory() as root:
+        drop = Path(root) / "capture"
+        drop.mkdir()
+
+        (drop / "page.html").write_text(
+            '<html><head><base href="https://example.com/">'
+            '<link rel="stylesheet" href="https://example.com/x.css">'
+            '<script src="https://example.com/x.js"></script>'
+            '<img src="https://example.com/tracker.gif">'
+            '<meta http-equiv="refresh" '
+            'content="0;url=https://example.com/go">'
+            "</head><body>"
+            "<p>Real content that is long enough to be the body.</p>"
+            '<iframe src="https://example.com/frame"></iframe>'
+            "</body></html>",
+            encoding="utf-8",
+        )
+
+        content = read_bundle("capture", root=root)
+
+        # The text is read. Nothing is fetched, so the remote addresses
+        # are simply not part of the result.
+        assert "Real content" in content.text
+
+        for address in ("tracker.gif", "x.js", "x.css", "example.com"):
+            assert address not in content.text
+
+
+def test_saved_items_reads_only_inside_the_drop_zone() -> None:
+    """
+    A capture may name a file, and it may only name one inside the
+    directory the user pointed at.
+    """
+    import tempfile
+
+    from src.ingestion.saved_items.bundles import _within
+
+    with tempfile.TemporaryDirectory() as outside:
+        escape = Path(outside) / "elsewhere.md"
+        escape.write_text("private", encoding="utf-8")
+
+        assert not _within(escape, REPO_ROOT)
+
+        assert _within(REPO_ROOT / "src", REPO_ROOT)
 
 
 def test_a_saved_item_cannot_hold_a_credential_field() -> None:

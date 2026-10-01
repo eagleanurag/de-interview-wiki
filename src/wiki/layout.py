@@ -15,6 +15,7 @@ from src.wiki.naming import (
     INDEX_PAGE,
     CONCEPTS_PAGE,
     QUESTIONS_PAGE,
+    SAVED_ITEMS_PAGE,
     SEARCH_PAGE,
     STYLE_FILE,
     TECHNOLOGIES_PAGE,
@@ -30,6 +31,7 @@ NAV_ITEMS = (
     ("Concepts", CONCEPTS_PAGE),
     ("Technologies", TECHNOLOGIES_PAGE),
     ("Questions", QUESTIONS_PAGE),
+    ("Saved Items", SAVED_ITEMS_PAGE),
 )
 
 

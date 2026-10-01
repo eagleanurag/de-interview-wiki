@@ -1,0 +1,3 @@
+A BroadcastHashJoin in PySpark avoids a shuffle when one side of the join is small enough to sit in memory on every executor. Spark picks it automatically, but it is worth checking the plan, because a table that was small yesterday can stop being small after a backfill.
+
+A SortMergeJoin is the other side of the trade: it streams, so it handles either side being large, at the cost of sorting both. A skewed key defeats it either way, and salting the hot key is the usual repair.

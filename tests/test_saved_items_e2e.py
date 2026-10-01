@@ -883,15 +883,16 @@ class TestTheWholePipeline:
         site = generate(knowledge, tmp_path_factory)
 
         # Post pages are named by slug, so the page is found by what it
-        # says rather than by what it is called.
+        # says rather than by what it is called. Scoped to the post
+        # directory because the saved-items index also links here on
+        # purpose.
         carrying = [
             path
-            for path in site.rglob("*.html")
+            for path in (site / "posts").glob("*.html")
             if ARTICLE_SPARK in path.read_text(encoding="utf-8")
         ]
 
         assert len(carrying) == 1
-        assert carrying[0].parent.name == "posts"
 
     def test_a_saved_item_page_states_how_it_was_captured(
         self, imported, knowledge, tmp_path_factory
@@ -902,7 +903,7 @@ class TestTheWholePipeline:
 
         page = next(
             path
-            for path in site.rglob("*.html")
+            for path in (site / "posts").glob("*.html")
             if ARTICLE_SPARK in path.read_text(encoding="utf-8")
         ).read_text(encoding="utf-8")
 
@@ -921,7 +922,7 @@ class TestTheWholePipeline:
 
         page = next(
             path
-            for path in site.rglob("*.html")
+            for path in (site / "posts").glob("*.html")
             if ARTICLE_SPARK in path.read_text(encoding="utf-8")
         ).read_text(encoding="utf-8")
 
@@ -952,7 +953,7 @@ class TestTheWholePipeline:
 
         carrying = [
             path.read_text(encoding="utf-8")
-            for path in site.rglob("*.html")
+            for path in (site / "posts").glob("*.html")
             if "No body text was supplied" in path.read_text(
                 encoding="utf-8"
             )

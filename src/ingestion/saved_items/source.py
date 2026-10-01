@@ -26,12 +26,16 @@ from datetime import date, datetime
 from pathlib import Path
 
 from src.ingestion.saved_items.bundles import (
-    BundleAssociation,
+    MATCH_BY_ID,
+    MATCH_BY_MANIFEST,
+    MATCH_BY_NAME,
+    MATCH_BY_URL,
+    MATCH_NONE,
+    QUALITY_METADATA_ONLY,
     BundleError,
+    BundleIndex,
     CapturedContent,
-    association_for,
     content_digest,
-    discover_bundles,
     read_bundle,
 )
 from src.ingestion.saved_items.manifest import (
@@ -58,15 +62,15 @@ from src.ingestion.sources.base import (
 from src.ingestion.sources.manual import parse_day
 
 
-#: How a bundle was matched to an item, in the order the match is
-#: tried. A name is cheapest and least ambiguous, so it is tried first,
-#: and which one matched is recorded on the post: it is the difference
-#: between "found by its own name" and "guessed from a link inside it".
-MATCH_BY_NAME = "directory name"
-MATCH_BY_ID = "source id in capture.json"
-MATCH_BY_URL = "canonical url in capture.json"
-MATCH_BY_MANIFEST = "bundle named in the manifest"
-MATCH_NONE = "no bundle"
+#: Re-exported so callers do not have to know which module a match
+#: reason was defined in.
+__all_match_reasons__ = (
+    MATCH_BY_NAME,
+    MATCH_BY_ID,
+    MATCH_BY_URL,
+    MATCH_BY_MANIFEST,
+    MATCH_NONE,
+)
 
 
 class SavedItemsSource(Source):
@@ -105,7 +109,7 @@ class SavedItemsSource(Source):
         #: rest of the run.
         self.issues: list[str] = []
 
-        self._bundles: list[Path] | None = None
+        self._bundle_index: BundleIndex | None = None
         self._claimed: set[str] = set()
         self._content: dict[str, CapturedContent] = {}
         self._match: dict[str, str] = {}
@@ -116,6 +120,12 @@ class SavedItemsSource(Source):
         self._changed = 0
         self._unchanged = 0
         self._captured = 0
+
+        #: When set, nothing is written. A preview that rewrites the
+        #: state file is not a preview, and the one file that records
+        #: what has already been imported is the last thing to touch
+        #: speculatively.
+        self.read_only = False
 
     # -----------------------------------------------------------------
     # Manifests
@@ -146,7 +156,8 @@ class SavedItemsSource(Source):
 
             discovered += self._absorb_manifest(read)
 
-        self.manifest.save()
+        if not self.read_only:
+            self.manifest.save()
 
         return discovered
 
@@ -218,7 +229,8 @@ class SavedItemsSource(Source):
                     f"Reached the configured limit of {max_posts}.",
                 )
 
-        self.manifest.save()
+        if not self.read_only:
+            self.manifest.save()
 
         raise CollectionStopped(StopReason.EXHAUSTED)
 
@@ -297,6 +309,16 @@ class SavedItemsSource(Source):
         for note in content.unreadable:
             self.issues.append(f"{item.canonical_url}: {note}")
 
+        if content.unreadable:
+            # Recorded on the item as well as in this run's issues. A
+            # file that would not open is a fact about the capture that
+            # outlives the run that found it, and the post page is where
+            # a reader meets it.
+            item.capture_notes = [
+                *item.capture_notes,
+                *content.unreadable,
+            ]
+
         digest = content_digest(content)
 
         if not digest:
@@ -308,6 +330,7 @@ class SavedItemsSource(Source):
             item.content_path = None
             item.content_digest = None
             item.media_paths = []
+            item.capture_quality = QUALITY_METADATA_ONLY
 
             self._content.pop(item.source_id, None)
 
@@ -351,7 +374,21 @@ class SavedItemsSource(Source):
         item.content_path = bundle
         item.content_digest = digest
         item.media_paths = [path.name for path in content.media]
-        item.capture_notes = list(content.notes)
+
+        # Both kinds of note are kept. One says what the capture was, the
+        # other says what could not be read out of it, and a reader
+        # deciding whether to trust a summary needs to know both.
+        item.capture_notes = [
+            *content.notes,
+            *content.unreadable,
+        ]
+        item.capture_quality = content.quality()
+
+        if item.bundle != bundle:
+            # Recorded so the next run does not have to rediscover which
+            # folder this item's capture is in, and so a user reading the
+            # manifest can see where their material was picked up from.
+            item.bundle = bundle
 
         if content.title and not item.title:
             item.title = content.title
@@ -386,86 +423,61 @@ class SavedItemsSource(Source):
         The bundle belonging to an item, as a root-relative name.
 
         A bundle is claimed by at most one item, so two items cannot end
-        up sharing the same capture and being given the same body.
+        up sharing the same capture and being given the same body. The
+        index does the matching, and it is built once, so a large saved
+        list costs one read per capture rather than one per pair.
         """
         if item.bundle:
-            candidate = item.bundle
+            found = self.bundle_index().find_by_name(item.bundle)
 
-            if (self.bundle_root / candidate).exists():
-                self._match[item.source_id] = MATCH_BY_MANIFEST
+            if found is not None:
+                name, reason = found
 
-                return candidate
-
-        for bundle in self._bundle_list():
-            key = str(bundle)
-
-            if key in self._claimed:
-                continue
-
-            association = self._associate(bundle)
-
-            reason = self._match_reason(item, association)
-
-            if reason is not None:
-                self._claimed.add(key)
                 self._match[item.source_id] = reason
+                self._claimed.add(name)
 
-                return key
+                return name
 
-        return None
+        found = self.bundle_index().find(item)
 
-    def _bundle_list(self) -> list[Path]:
-        if self._bundles is None:
+        if found is None:
+            return None
+
+        name, reason = found
+
+        self._match[item.source_id] = reason
+        self._claimed.add(name)
+
+        return name
+
+    def bundle_index(self) -> BundleIndex:
+        """
+        The capture index, built on first use.
+
+        Deferred so constructing a source costs nothing, which matters
+        for the commands that only read the manifest. Public because the
+        intake commands need to ask what a capture claims before deciding
+        whether to create an item for it.
+        """
+        if self._bundle_index is None:
             try:
-                self._bundles = discover_bundles(self.bundle_root)
+                self._bundle_index = BundleIndex(self.bundle_root)
 
             except BundleError as exc:
                 self.issues.append(str(exc))
-                self._bundles = []
 
-        return self._bundles
+                self._bundle_index = BundleIndex.__new__(BundleIndex)
+                self._bundle_index.root = Path(self.bundle_root)
+                self._bundle_index.bundles = []
+                self._bundle_index._by_key = {}
+                self._bundle_index._by_url = {}
+                self._bundle_index.associations = {}
+                self._bundle_index.problems = []
+                self._bundle_index._claimed = set()
 
-    def _associate(self, bundle: Path) -> BundleAssociation | None:
-        try:
-            return association_for(bundle, root=self.bundle_root)
+            self.issues.extend(self._bundle_index.problems)
 
-        except (BundleError, OSError) as exc:
-            self.issues.append(f"{bundle.name}: {exc}")
-
-            return None
-
-    def _match_reason(
-        self,
-        item: SavedItem,
-        association: BundleAssociation | None,
-    ) -> str | None:
-        """How a bundle claims an item, or None if it does not."""
-        if association is None:
-            return None
-
-        if association.url and association.url == item.canonical_url:
-            return MATCH_BY_URL
-
-        keys = {item.source_id, _safe(item.source_id)}
-
-        if item.identifier:
-            keys.add(item.identifier)
-            keys.add(_safe(item.identifier))
-
-        if item.post_id:
-            keys.add(item.post_id)
-            keys.add(_safe(item.post_id))
-
-        claims = set(association.claim_keys)
-
-        if keys & claims:
-            return (
-                MATCH_BY_ID
-                if association.source_id == item.source_id
-                else MATCH_BY_NAME
-            )
-
-        return None
+        return self._bundle_index
 
     # -----------------------------------------------------------------
     # Posts
@@ -502,9 +514,11 @@ class SavedItemsSource(Source):
                 "capture_match": self._match.get(
                     item.source_id, MATCH_BY_MANIFEST
                 ),
+                "capture_quality": item.capture_quality,
                 "capture_notes": list(item.capture_notes),
                 "saved_notes": item.notes,
-                "metadata_only": False,
+                "metadata_only": item.capture_quality
+                == QUALITY_METADATA_ONLY,
             },
         )
 
@@ -676,7 +690,7 @@ def reconcile(
             item.touch()
             changed += 1
 
-    if changed:
+    if changed and not getattr(manifest, "read_only", False):
         manifest.save()
 
     return changed

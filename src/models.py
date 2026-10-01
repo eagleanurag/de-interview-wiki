@@ -100,6 +100,12 @@ class SavedItemProvenance(BaseModel):
     url_kind: str | None = None
     capture_state: str | None = None
     capture_match: str | None = None
+
+    # How complete the capture is, read off what it contained: a link
+    # on its own, a screenshot, a document, or text. Not a score,
+    # because a number with nothing behind it cannot be checked.
+    capture_quality: str | None = None
+
     capture_notes: list[str] = Field(default_factory=list)
     saved_notes: str | None = None
     metadata_only: bool = False

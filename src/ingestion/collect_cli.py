@@ -37,12 +37,27 @@ from src.ingestion.collect import (
     read_state,
     write_state,
 )
+from src.aggregation.consolidation import detect_technologies
 from src.ingestion.post_document import PostDocument
+from src.ingestion.post_loader import load_post
+from src.ingestion.saved_items import diagnostics as diag
+from src.ingestion.saved_items import intake
+from src.ingestion.saved_items import plan as plan_module
 from src.ingestion.saved_items.manifest import (
     ManifestUnreadable,
+    SavedItemsManifest,
     manifest_path,
 )
+from src.ingestion.saved_items.model import SavedItem
+from src.ingestion.saved_items.readers import (
+    ManifestError,
+    read_manifest,
+)
 from src.ingestion.saved_items.source import SavedItemsSource, reconcile
+from src.ingestion.saved_items.urls import (
+    SavedItemUrlError,
+    normalize_linkedin_url,
+)
 from src.ingestion.sources.base import (
     CollectionState,
     CollectionStopped,
@@ -223,7 +238,37 @@ def build_parser() -> argparse.ArgumentParser:
     saved.add_argument(
         "--dry-run",
         action="store_true",
-        help="Report what would be imported without writing.",
+        help=(
+            "Say exactly what would happen and change nothing. Nothing "
+            "is written: not a post, not the manifest, not a report "
+            "file."
+        ),
+    )
+
+    saved.add_argument(
+        "--plan",
+        action="store_true",
+        help=(
+            "Print every item grouped by what would happen to it: NEW, "
+            "CHANGED, UNCHANGED, DUPLICATE, MISSING_CAPTURE, INVALID "
+            "or FAILED. Implies --dry-run."
+        ),
+    )
+
+    saved.add_argument(
+        "--adopt-orphans",
+        action="store_true",
+        help=(
+            "Add a saved item for any capture that names a usable "
+            "LinkedIn URL but has no manifest item yet. A capture with "
+            "no URL is still reported, never adopted."
+        ),
+    )
+
+    saved.add_argument(
+        "--debug",
+        action="store_true",
+        help="Show the full traceback when something fails.",
     )
 
     saved.add_argument("--max-posts", type=int, default=None)
@@ -231,6 +276,160 @@ def build_parser() -> argparse.ArgumentParser:
     saved.add_argument("--until", default=None)
 
     saved.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the report as JSON.",
+    )
+
+    # ---------------------------------------------------------------
+    # Building the list
+    # ---------------------------------------------------------------
+
+    init = subcommands.add_parser(
+        "saved-items-init",
+        help=(
+            "Build or update the saved-items list from links, a "
+            "spreadsheet, or a browser bookmark export."
+        ),
+    )
+
+    init.add_argument(
+        "--from",
+        action="append",
+        default=[],
+        dest="sources",
+        metavar="FILE",
+        help=(
+            "A file of links, a .csv/.tsv/.json/.jsonl list, or a "
+            "browser bookmark export. May be given more than once."
+        ),
+    )
+
+    init.add_argument(
+        "--url",
+        action="append",
+        default=[],
+        dest="urls",
+        metavar="URL",
+        help="A single saved link. May be given more than once.",
+    )
+
+    init.add_argument(
+        "--output",
+        default=None,
+        metavar="FILE",
+        help=(
+            "Where to write the list. Defaults to manifest.csv in the "
+            "saved-items directory."
+        ),
+    )
+
+    init.add_argument(
+        "--bundle-root",
+        default=None,
+        help=(
+            "The saved-items directory. Defaults to "
+            "data/incoming/saved-items."
+        ),
+    )
+
+    init.add_argument(
+        "--replace",
+        action="store_true",
+        help=(
+            "Write only what was passed in, discarding the existing "
+            "list. Captures and enrichment are never touched either "
+            "way, so this only changes which links are known."
+        ),
+    )
+
+    init.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the result as JSON.",
+    )
+
+    # ---------------------------------------------------------------
+    # Status
+    # ---------------------------------------------------------------
+
+    status = subcommands.add_parser(
+        "saved-items-status",
+        help=(
+            "Report what is saved, what has a capture, and what has "
+            "already been imported. Reads only; changes nothing."
+        ),
+    )
+
+    status.add_argument(
+        "--bundle-root",
+        default=None,
+        help=(
+            "The saved-items directory. Defaults to "
+            "data/incoming/saved-items."
+        ),
+    )
+
+    status.add_argument(
+        "--posts-root",
+        default=str(DEFAULT_POSTS_DIRECTORY),
+    )
+
+    status.add_argument(
+        "--show-pending",
+        action="store_true",
+        help="List every item still waiting for a capture.",
+    )
+
+    status.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the report as JSON.",
+    )
+
+    # ---------------------------------------------------------------
+    # Validation
+    # ---------------------------------------------------------------
+
+    check = subcommands.add_parser(
+        "saved-items-validate",
+        help=(
+            "Check the whole saved-items inbox and report every problem, "
+            "with the fix for each."
+        ),
+    )
+
+    check.add_argument(
+        "--input",
+        action="append",
+        default=[],
+        dest="inputs",
+        metavar="FILE",
+        help="A list to read as well as the stored one.",
+    )
+
+    check.add_argument(
+        "--bundle-root",
+        default=None,
+        help=(
+            "The saved-items directory. Defaults to "
+            "data/incoming/saved-items."
+        ),
+    )
+
+    check.add_argument(
+        "--strict",
+        action="store_true",
+        help="Treat warnings as errors.",
+    )
+
+    check.add_argument(
+        "--debug",
+        action="store_true",
+        help="Show the full traceback when something fails.",
+    )
+
+    check.add_argument(
         "--json",
         action="store_true",
         help="Print the report as JSON.",
@@ -347,10 +546,487 @@ def saved_items_bundle_root(args: argparse.Namespace) -> Path:
     if args.bundle_root:
         return Path(args.bundle_root)
 
-    if args.inputs:
+    if getattr(args, "inputs", None):
         return Path(args.inputs[0]).expanduser().resolve().parent
 
     return Path(DEFAULT_SAVED_ITEMS_DIRECTORY)
+
+
+# ---------------------------------------------------------------------
+# Building the list
+# ---------------------------------------------------------------------
+
+
+def run_saved_items_init(
+    args: argparse.Namespace,
+    root: str | Path = ".",
+) -> int:
+    """
+    Build or update the saved-items list.
+
+    Reads whatever the user has and writes the one list the importer
+    understands. Existing links are kept and enriched from the new input
+    rather than replaced, so running this twice with different sources
+    produces the union instead of the last one read.
+
+    Only the list is written. A capture is the user's own material and an
+    enrichment is real work that has already been paid for, so neither is
+    touched by this command under any flag.
+    """
+    bundle_root = (
+        Path(args.bundle_root)
+        if args.bundle_root
+        else Path(DEFAULT_SAVED_ITEMS_DIRECTORY)
+    )
+
+    output = (
+        Path(args.output)
+        if args.output
+        else bundle_root / "manifest.csv"
+    )
+
+    incoming: list = []
+
+    problems: list[str] = []
+
+    for entry in args.sources or []:
+        source = Path(entry).expanduser()
+
+        try:
+            read = intake.read_input(source)
+
+        except ManifestError as exc:
+            print(f"Could not read {source}: {exc}")
+            return 1
+
+        except Exception as exc:  # noqa: BLE001
+            if args.debug:
+                raise
+
+            print(
+                diag.diagnostic_from_exception(str(source), exc).render()
+            )
+            return 1
+
+        incoming.extend(read.items)
+        problems.extend(str(issue) for issue in read.issues)
+
+    for entry in args.urls or []:
+        try:
+            incoming.append(
+                SavedItem.from_url(normalize_linkedin_url(entry))
+            )
+
+        except SavedItemUrlError as exc:
+            problems.append(f"--url {entry}: {exc}")
+
+    if not incoming and not problems:
+        print("Nothing to add.")
+        print()
+        print("Pass links or a file:")
+        print()
+        print("  python -m src.ingestion.collect_cli saved-items-init \\")
+        print("      --url https://www.linkedin.com/posts/...")
+        print()
+        print("  python -m src.ingestion.collect_cli saved-items-init \\")
+        print("      --from my-saved-posts.txt")
+        print()
+        print("  python -m src.ingestion.collect_cli saved-items-init \\")
+        print("      --from bookmarks-export.html")
+        return 1
+
+    existing: list = []
+
+    if output.is_file() and not args.replace:
+        try:
+            existing = read_manifest(output).items
+
+        except ManifestError as exc:
+            # The list on file is the user's own record of what they
+            # saved. It is never overwritten because it could not be
+            # read.
+            print(f"Could not read the existing list {output}: {exc}")
+            print()
+            print("Nothing was written. Fix the file, or pass")
+            print("--replace to write a new list from what you pass in.")
+            return 1
+
+    result = intake.merge_into(existing, incoming)
+
+    items = incoming if args.replace else existing
+
+    try:
+        written = intake.write_list(output, items)
+
+    except OSError as exc:
+        print(f"Could not write {output}: {exc}")
+        return 1
+
+    if args.json:
+        print(
+            json.dumps(
+                {
+                    "list": str(written),
+                    "items": len(items),
+                    **result.as_dict(),
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+
+        return 0 if not problems else 1
+
+    print(f"Wrote {len(items)} link(s) to {written}")
+    print(f"  {result.line()}")
+
+    if problems:
+        print()
+        print(f"Skipped {len(problems)} problem(s):")
+
+        for problem in problems[:20]:
+            print(f"  {problem}")
+
+        if len(problems) > 20:
+            print(f"  ... and {len(problems) - 20} more")
+
+    print()
+    print("Next:")
+    print(f"  python -m src.ingestion.collect_cli saved-items-validate "
+          f"--bundle-root {bundle_root}")
+    print(f"  python -m src.ingestion.collect_cli saved-items "
+          f"--input {written}")
+
+    return 0 if not problems else 1
+
+
+# ---------------------------------------------------------------------
+# Status
+# ---------------------------------------------------------------------
+
+
+def run_saved_items_status(
+    args: argparse.Namespace,
+    root: str | Path = ".",
+) -> int:
+    """
+    Say where the saved list has got to.
+
+    Every number comes from the manifest, the captures on disk and the
+    posts that exist. Nothing is estimated, and a section with nothing in
+    it says so rather than being omitted, because an absent number reads
+    as a forgotten one.
+    """
+    bundle_root = (
+        Path(args.bundle_root)
+        if args.bundle_root
+        else Path(DEFAULT_SAVED_ITEMS_DIRECTORY)
+    )
+
+    if not bundle_root.is_dir():
+        print(f"The saved-items directory does not exist: {bundle_root}")
+        print()
+        print("Create it, or point at the one you use:")
+        print(f"  mkdir {bundle_root}")
+        return 1
+
+    manifest_path = bundle_root / "saved-items-manifest.json"
+
+    if not manifest_path.is_file():
+        print(f"No saved-items manifest yet in {bundle_root}.")
+        print()
+        print("Build the list first:")
+        print(f"  python -m src.ingestion.collect_cli saved-items-init "
+              f"--bundle-root {bundle_root}")
+        return 1
+
+    try:
+        manifest = SavedItemsManifest.load(manifest_path)
+
+    except ManifestUnreadable as exc:
+        print(str(exc))
+        return 1
+
+    plan = plan_module.build_plan(bundle_root, manifest=manifest)
+
+    knowledge = _knowledge_counts(Path(args.posts_root))
+
+    manifest_items = plan.manifest_items()
+    with_capture = plan.with_capture()
+    metadata_only = plan.metadata_only()
+    importable = plan.importable()
+    already = plan.already_imported()
+
+    counts = plan.counts()
+    changed = counts.get("CHANGED", 0)
+    failed = counts.get("FAILED", 0) + counts.get("INVALID", 0)
+
+    if args.json:
+        print(
+            json.dumps(
+                {
+                    "root": str(bundle_root),
+                    "saved_items": plan.as_dict(),
+                    "knowledge": knowledge,
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+
+        return 0
+
+    print("Saved Items")
+    print("-----------")
+    print(f"{'Manifest items':<24}{manifest_items:>6}")
+    print(f"{'With captures':<24}{with_capture:>6}")
+    print(f"{'Metadata only':<24}{metadata_only:>6}")
+    print(f"{'Ready to import':<24}{importable:>6}")
+    print(f"{'Already imported':<24}{already:>6}")
+    print(f"{'Changed':<24}{changed:>6}")
+    print(f"{'Failed':<24}{failed:>6}")
+    print(f"{'Pending':<24}{metadata_only:>6}")
+
+    qualities = plan.by_quality()
+
+    if any(qualities.values()):
+        print()
+        print("Capture quality")
+        print("---------------")
+
+        for label, value in qualities.items():
+            if value:
+                print(f"{label:<24}{value:>6}")
+
+    if plan.content_types:
+        print()
+        print("Content types")
+        print("-------------")
+
+        for label, count in sorted(plan.content_types.items()):
+            print(f"{label:<24}{count:>6}")
+
+    print()
+    print("Knowledge")
+    print("---------")
+
+    for label, value in knowledge.items():
+        print(f"{label:<24}{value:>6}")
+
+    if plan.orphans:
+        print()
+        print(f"Orphan captures: {len(plan.orphans)}")
+
+        for folder in plan.orphans[:10]:
+            print(f"  {folder}")
+
+        if len(plan.orphans) > 10:
+            print(f"  ... and {len(plan.orphans) - 10} more")
+
+    if args.show_pending:
+        pending = sorted(
+            (
+                item
+                for item in manifest.items.values()
+                if not item.has_content
+            ),
+            key=lambda entry: entry.canonical_url,
+        )
+
+        print()
+        print(f"Pending ({len(pending)})")
+        print("-" * (10 + len(str(len(pending)))))
+
+        for item in pending[:50]:
+            print(f"  {item.canonical_url}")
+            print(f"    folder: captures/"
+                  f"{item.source_id.replace(':', '-')}")
+
+        if len(pending) > 50:
+            print(f"  ... and {len(pending) - 50} more")
+
+    return 0
+
+
+# ---------------------------------------------------------------------
+# Validation
+# ---------------------------------------------------------------------
+
+
+def run_saved_items_validate(
+    args: argparse.Namespace,
+    root: str | Path = ".",
+) -> int:
+    """
+    Check the whole inbox and report every problem with its fix.
+
+    Exits non-zero when there is a real error, and zero when there are
+    only warnings. A command that failed on every warning would be a
+    command users stop running, and the warnings here are mostly the
+    expected state of a saved list: most of what a person saved has no
+    capture, and that is a backlog rather than a fault.
+    """
+    bundle_root = (
+        Path(args.bundle_root)
+        if args.bundle_root
+        else Path(DEFAULT_SAVED_ITEMS_DIRECTORY)
+    )
+
+    if not bundle_root.is_dir():
+        print(f"The saved-items directory does not exist: {bundle_root}")
+        return 1
+
+    inputs = [Path(entry).expanduser() for entry in args.inputs or []]
+
+    if not inputs:
+        # The list the user put in the drop zone is the obvious thing to
+        # check, and asking them to name it again would mean giving the
+        # same path twice.
+        inputs = _candidate_lists(bundle_root)
+
+    try:
+        plan = plan_module.build_plan(bundle_root, inputs=inputs)
+
+    except Exception as exc:  # noqa: BLE001
+        if args.debug:
+            raise
+
+        print(
+            diag.diagnostic_from_exception(str(bundle_root), exc).render()
+        )
+        return 1
+
+    if args.json:
+        print(json.dumps(plan.as_dict(), indent=2, sort_keys=True))
+
+        return _validation_exit(plan, strict=args.strict)
+
+    counts = plan.counts()
+
+    print("Saved Items Check")
+    print("-----------------")
+    print(f"{'Directory':<24}{bundle_root}")
+
+    for outcome in plan_module.OUTCOMES:
+        if counts.get(outcome):
+            print(f"{outcome:<24}{counts[outcome]:>6}")
+
+    print()
+    print(f"{'Errors':<24}{len(plan.errors):>6}")
+    print(f"{'Warnings':<24}{len(plan.warnings):>6}")
+
+    if plan.problems:
+        print()
+
+        ordered = sorted(
+            plan.problems,
+            key=lambda item: (not item.is_error, item.code, item.location),
+        )
+
+        # Each problem is printed in full, with its fix, so only a
+        # bounded number are shown. The counts above are exact and
+        # ``--json`` returns the rest, so nothing is hidden from
+        # anything that asks properly.
+        for entry in ordered[: plan_module.Plan.MAX_LISTED]:
+            print()
+            print(entry.render())
+
+        hidden = len(ordered) - plan_module.Plan.MAX_LISTED
+
+        if hidden > 0:
+            print()
+            print(
+                f"... and {hidden} more problem(s) not shown. "
+                "Re-run with --json for all of them."
+            )
+
+    if not plan.problems:
+        print()
+        print("Nothing to fix.")
+
+    return _validation_exit(plan, strict=args.strict)
+
+
+def _validation_exit(plan, *, strict: bool) -> int:
+    if plan.errors:
+        return 1
+
+    if strict and plan.warnings:
+        return 1
+
+    return 0
+
+
+def _knowledge_counts(posts_root: Path) -> dict[str, int]:
+    """
+    What is actually in the knowledge base.
+
+    Read from the posts on disk rather than from a stored total, so the
+    number cannot drift from the thing it describes. Every value is a
+    count of files that exist; nothing is carried over from a previous
+    run.
+    """
+    counts = {
+        "Imported posts": 0,
+        "Interview relevant": 0,
+        "Questions generated": 0,
+        "Topics": 0,
+        "Concepts": 0,
+        "Technologies": 0,
+    }
+
+    if not posts_root.is_dir():
+        return counts
+
+    topics: set[str] = set()
+    concepts: set[str] = set()
+    technologies: set[str] = set()
+
+    for directory in sorted(posts_root.iterdir()):
+        if not directory.is_dir():
+            continue
+
+        path = directory / "post.json"
+
+        if not path.is_file():
+            continue
+
+        try:
+            post = load_post(directory)
+
+        except Exception:  # noqa: BLE001
+            # A post being written right now, or one that is not this
+            # project's. Either way it is not a number to report.
+            continue
+
+        counts["Imported posts"] += 1
+
+        if post.classification.interview_relevant:
+            counts["Interview relevant"] += 1
+
+        counts["Questions generated"] += len(post.interview_questions)
+
+        topics.update(
+            topic for topic in post.ai_analysis.topics if topic.strip()
+        )
+        concepts.update(
+            concept
+            for concept in post.ai_analysis.concepts
+            if concept.strip()
+        )
+
+        # Read the same way consolidation reads it, so the number here
+        # is the number the knowledge base holds rather than a second
+        # opinion about what the posts mention.
+        technologies.update(
+            detect_technologies(post.original_text)
+        )
+
+    counts["Topics"] = len(topics)
+    counts["Concepts"] = len(concepts)
+    counts["Technologies"] = len(technologies)
+
+    return counts
 
 
 def run_saved_items(
@@ -369,7 +1045,13 @@ def run_saved_items(
     report distinguishes an item that was imported from one that is only
     a link, because the difference decides whether there is anything in
     the knowledge base to read.
+
+    With ``--dry-run`` nothing is written at all, and the run is decided
+    from the same reading of the inbox that a real import would use, so
+    the preview and the import cannot disagree.
     """
+    dry_run = bool(args.dry_run or args.plan)
+
     bundle_root = saved_items_bundle_root(args)
 
     if not bundle_root.is_dir():
@@ -389,8 +1071,8 @@ def run_saved_items(
     ):
         print(f"No saved-items list found in {bundle_root}.")
         print()
-        print("Export your saved items, or write a .csv with a url")
-        print("column, and put it in that directory. Example:")
+        print("Build one with saved-items-init, or write a .csv with a")
+        print("url column and put it in that directory. Example:")
         print("  URL,Saved Date,Title,Notes")
         print("  https://www.linkedin.com/posts/... ,2026-01-02,,")
         return 1
@@ -400,6 +1082,9 @@ def run_saved_items(
         if args.manifest_file
         else manifest_path(bundle_root)
     )
+
+    if dry_run:
+        return _preview(args, bundle_root, state_file, inputs)
 
     try:
         source = SavedItemsSource(
@@ -413,6 +1098,12 @@ def run_saved_items(
         # imported is exactly what could not be read.
         print(f"Cannot read the saved-items manifest: {exc}")
         return 1
+
+    if args.adopt_orphans:
+        adopted = _adopt_orphans(source)
+
+        for line in adopted:
+            print(f"  {line}")
 
     source.read_manifests(inputs)
 
@@ -441,8 +1132,7 @@ def run_saved_items(
     # The importer is the only thing that knows what was really stored,
     # so the manifest is brought up to date from the posts themselves
     # rather than from what the source intended.
-    if not args.dry_run:
-        reconcile(source.manifest, posts_root=Path(args.posts_root))
+    reconcile(source.manifest, posts_root=Path(args.posts_root))
 
     report = source.report()
 
@@ -474,13 +1164,9 @@ def run_saved_items(
                 f"{report.metadata_only} item(s) are links only. Each one "
                 "is a URL from your export with no body text behind it."
             )
-            print(
-                "To add one, create a directory named after it in:"
-            )
-            print(f"  {bundle_root}")
-            print(
-                "and put the text, HTML, PDF or a screenshot inside."
-            )
+            print()
+            print("To capture one, create a folder named after it:")
+            print(f"  {bundle_root / 'captures' / '<source_id>'}")
 
     if args.report:
         destination = Path(args.report)
@@ -497,7 +1183,7 @@ def run_saved_items(
 
     problems: list[str] = []
 
-    if args.validate and not args.dry_run:
+    if args.validate:
         problems = validate_imported(
             source.manifest,
             posts_root=Path(args.posts_root),
@@ -516,6 +1202,135 @@ def run_saved_items(
         )
 
     return 0 if succeeded else 1
+
+
+def _preview(
+    args: argparse.Namespace,
+    bundle_root: Path,
+    state_file: Path,
+    inputs: list[Path],
+) -> int:
+    """
+    Say what an import would do, and write nothing.
+
+    The plan is built against a copy of the manifest held in memory, so
+    reading a list cannot record that it was read. That matters most for
+    the list file itself and the manifest: those are the two things a
+    user might reasonably expect a preview to leave alone, and a preview
+    that quietly updated either would be worse than no preview.
+    """
+    try:
+        manifest = SavedItemsManifest.load(state_file)
+
+    except ManifestUnreadable as exc:
+        print(f"Cannot read the saved-items manifest: {exc}")
+        return 1
+
+    plan = plan_module.build_plan(
+        bundle_root,
+        manifest=manifest,
+        inputs=[path for path in inputs if path.is_file()],
+    )
+
+    if args.plan:
+        if args.json:
+            print(json.dumps(plan.as_dict(), indent=2, sort_keys=True))
+        else:
+            print(plan.render(title="Saved Items Plan (dry run)"))
+
+            print()
+            print("Nothing was written. Run without --dry-run to import.")
+
+        return 0
+
+    counts = plan.counts()
+
+    if args.json:
+        print(
+            json.dumps(
+                {"dry_run": True, **plan.as_dict()}, indent=2, sort_keys=True
+            )
+        )
+
+        return 0
+
+    print("Dry run")
+    print("-------")
+    print(f"{'Would import':<24}{counts['NEW']:>6}")
+    print(f"{'Would re-import':<24}{counts['CHANGED']:>6}")
+    print(f"{'Unchanged':<24}{counts['UNCHANGED']:>6}")
+    print(f"{'Duplicate rows':<24}{counts['DUPLICATE']:>6}")
+    print(f"{'Missing capture':<24}{counts['MISSING_CAPTURE']:>6}")
+    print(f"{'Invalid':<24}{counts['INVALID']:>6}")
+    print(f"{'Failed':<24}{counts['FAILED']:>6}")
+
+    if plan.orphans:
+        print(f"{'Orphan captures':<24}{len(plan.orphans):>6}")
+
+    print()
+    print("Nothing was written. Run without --dry-run to import.")
+
+    return 0
+
+
+def _adopt_orphans(source: SavedItemsSource) -> list[str]:
+    """
+    Add an item for a capture that names a URL but has no item yet.
+
+    Only after every known item has had a chance to claim its own
+    capture. Adopting first would hand a capture to a brand new item
+    while the item it actually belongs to was still unmatched, which
+    reports a capture the user never orphaned as one they did.
+
+    Only when the URL is real. A capture with nothing usable in it is
+    left alone and reported, because adopting it would mean inventing
+    the link it belongs to, and a post attributed to the wrong saved item
+    is worse than a capture waiting for its link.
+    """
+    index = source.bundle_index()
+
+    for item in sorted(
+        source.manifest.items.values(), key=lambda entry: entry.source_id
+    ):
+        if item.bundle:
+            found = index.find_by_name(item.bundle)
+
+            if found is not None:
+                index.claim(found[0])
+
+        index.find(item)
+
+    adopted: list[str] = []
+
+    for folder in index.unclaimed():
+        association = index.associations.get(folder)
+
+        if association is None or not association.url:
+            continue
+
+        try:
+            item = SavedItem.from_url(
+                normalize_linkedin_url(association.url)
+            )
+
+        except SavedItemUrlError:
+            continue
+
+        if source.manifest.get(item.source_id) is not None:
+            # Already known under this link. It is not an orphan; it is
+            # a capture the earlier matching pass could not attach, and
+            # saying otherwise would send the user looking for a
+            # problem that is somewhere else.
+            continue
+
+        source.manifest.upsert(item)
+
+        adopted.append(f"Adopted {item.canonical_url} from {folder}")
+
+    if adopted:
+        source.manifest.save()
+
+    return adopted
 
 
 def _candidate_lists(bundle_root: Path) -> list[Path]:
@@ -779,6 +1594,15 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "saved-items":
         return run_saved_items(args, root)
+
+    if args.command == "saved-items-init":
+        return run_saved_items_init(args, root)
+
+    if args.command == "saved-items-status":
+        return run_saved_items_status(args, root)
+
+    if args.command == "saved-items-validate":
+        return run_saved_items_validate(args, root)
 
     if args.command == "run":
         credential_module.load_local_environment(root / ".env")

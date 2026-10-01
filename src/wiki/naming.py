@@ -39,6 +39,7 @@ TOPICS_PAGE = "topics.html"
 QUESTIONS_PAGE = "questions.html"
 CONCEPTS_PAGE = "concepts.html"
 TECHNOLOGIES_PAGE = "technologies.html"
+SAVED_ITEMS_PAGE = "saved-items.html"
 NOT_FOUND_PAGE = "404.html"
 
 SEARCH_INDEX_FILE = f"{ASSETS_DIR}/search-index.json"

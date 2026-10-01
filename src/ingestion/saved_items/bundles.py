@@ -42,6 +42,7 @@ from dataclasses import dataclass, field
 from html.parser import HTMLParser
 from pathlib import Path
 
+from src.ingestion.saved_items import capture as _capture
 from src.ingestion.saved_items.model import SavedItem
 from src.ingestion.saved_items.urls import (
     SavedItemUrlError,
@@ -58,14 +59,25 @@ from src.ingestion.sources.manual import (
 #: HTML pages the user saved from a browser.
 HTML_SUFFIXES = frozenset({".html", ".htm"})
 
+#: Directories that hold bundles rather than being one.
+#:
+#: A capture inbox is a folder of capture folders, and reading the
+#: folder as a single bundle would merge every saved post into one post
+#: and invent a document the user never wrote. Naming the container keeps
+#: the directory-first rule intact: the inbox is a container, and the
+#: folders inside it are the bundles.
+CONTAINER_NAMES = frozenset({"captures", "capture", "inbox", "bundles"})
+
 #: Every format a bundle may hold.
 BUNDLE_SUFFIXES = (
     TEXT_SUFFIXES | HTML_SUFFIXES | MEDIA_SUFFIXES | frozenset({".json", ".jsonl"})
 )
 
 #: A JSON file inside a bundle, which is how a bundle says which item it
-#: belongs to and may also carry the text itself.
-CAPTURE_NAMES = ("capture.json", "saved-item.json", "post.json")
+#: belongs to and may also carry the text itself. The names and the
+#: shape are defined once, in the capture contract, and used from there
+#: so the reader, the matcher and the diagnostics cannot disagree.
+CAPTURE_NAMES = _capture.CAPTURE_NAMES
 
 #: Files that are never part of a capture, whatever they are named.
 IGNORED_SUFFIXES = frozenset(
@@ -93,6 +105,31 @@ _DROPPED_TAGS = frozenset(
 
 class BundleError(ValueError):
     """Raised when a bundle cannot be used and the caller must say so."""
+
+
+#: How complete a capture actually is.
+#:
+#: Every value here is something the pipeline observed rather than a
+#: score it invented. There is deliberately no confidence number: a
+#: figure with no basis behind it is worse than naming the situation,
+#: because a reader has no way to tell a measured 0.9 from a guessed
+#: one.
+QUALITY_METADATA_ONLY = "metadata_only"
+QUALITY_IMAGE_ONLY = "image_only"
+QUALITY_DOCUMENT_ONLY = "document_only"
+QUALITY_PARTIAL = "partial"
+QUALITY_TEXT = "text"
+QUALITY_TEXT_AND_MEDIA = "text_and_media"
+
+#: Every value, for validating one that arrives from elsewhere.
+CAPTURE_QUALITIES = (
+    QUALITY_METADATA_ONLY,
+    QUALITY_IMAGE_ONLY,
+    QUALITY_DOCUMENT_ONLY,
+    QUALITY_PARTIAL,
+    QUALITY_TEXT,
+    QUALITY_TEXT_AND_MEDIA,
+)
 
 
 @dataclass
@@ -141,6 +178,41 @@ class CapturedContent:
             parts.append(f"{len(self.unreadable)} unreadable")
 
         return ", ".join(parts) if parts else "no content"
+
+    def quality(self) -> str:
+        """
+        How complete this capture is.
+
+        Read off what is actually in it, so a reader can tell a
+        transcript from a link from a screenshot from a document. A
+        capture that carries text but also has a file that would not
+        open is ``partial`` rather than ``text``, because the difference
+        between "this is all there is" and "this is all that could be
+        read" is the one a reader needs.
+        """
+
+        if not self.has_anything:
+            return QUALITY_METADATA_ONLY
+
+        if not self.has_text:
+            documents = [
+                path
+                for path in self.media
+                if path.suffix.lower() in DOCUMENT_SUFFIXES
+            ]
+
+            if len(documents) == len(self.media):
+                return QUALITY_DOCUMENT_ONLY
+
+            return QUALITY_IMAGE_ONLY
+
+        if self.unreadable:
+            return QUALITY_PARTIAL
+
+        if self.media:
+            return QUALITY_TEXT_AND_MEDIA
+
+        return QUALITY_TEXT
 
 
 def directory_names(item: SavedItem) -> tuple[str, ...]:
@@ -204,6 +276,15 @@ def discover_bundles(root: str | Path) -> list[Path]:
     a directory is a bundle. A single file at the root is a bundle
     too, so a user who drops one saved page in still gets it read.
 
+    A directory named as a container is descended into rather than read
+    as a bundle, so a capture inbox is a container of captures and not
+    one enormous capture.
+
+    Anything that resolves outside the root is left out entirely rather
+    than returned and refused later. A capture is user-supplied content
+    and must not be able to name a file anywhere on the machine, and the
+    cheapest place to guarantee that is before the path is ever read.
+
     Returns paths relative to the root, so a discovered bundle can be
     handed straight back to :func:`read_bundle` with the same root and
     resolve to the same place.
@@ -215,18 +296,69 @@ def discover_bundles(root: str | Path) -> list[Path]:
 
     bundles: list[Path] = []
 
+    def consider(directory: Path) -> None:
+        """Add the bundles in a directory, descending into containers."""
+        for entry in sorted(directory.iterdir(), key=lambda item: item.name):
+            if entry.name.startswith("."):
+                continue
+
+            if not entry.is_dir():
+                if (
+                    entry.suffix.lower() in BUNDLE_SUFFIXES
+                    and not _is_state_file(entry)
+                ):
+                    bundles.append(entry.relative_to(base))
+
+                continue
+
+            if not _within(entry, base):
+                # A link out of the drop zone. Not listed, not read, and
+                # reported by the index as a problem rather than being
+                # silently absent.
+                continue
+
+            if entry.name.lower() in CONTAINER_NAMES:
+                # A container, not a bundle. Depth is bounded so a
+                # folder nested inside itself cannot loop forever.
+                if len(entry.relative_to(base).parts) < _MAX_DEPTH:
+                    consider(entry)
+
+                continue
+
+            if _has_content(entry):
+                bundles.append(entry.relative_to(base))
+
+    consider(base)
+
+    return bundles
+
+
+def discover_rejected(root: str | Path) -> list[Path]:
+    """
+    Entries directly inside a root that resolve outside it.
+
+    Reported rather than ignored, so a link the user made is visible as
+    a problem instead of appearing to be a capture that was never found.
+    """
+    base = Path(root)
+
+    if not base.is_dir():
+        return []
+
+    rejected: list[Path] = []
+
     for entry in sorted(base.iterdir(), key=lambda item: item.name):
         if entry.name.startswith("."):
             continue
 
-        if entry.is_dir():
-            if _has_content(entry):
-                bundles.append(entry.relative_to(base))
+        if entry.is_dir() and not _within(entry, base):
+            rejected.append(entry)
 
-        elif entry.is_file() and entry.suffix.lower() in BUNDLE_SUFFIXES:
-            bundles.append(entry.relative_to(base))
+        elif entry.is_file() and entry.is_symlink():
+            if not _within(entry, base):
+                rejected.append(entry)
 
-    return bundles
+    return rejected
 
 
 def _has_content(directory: Path) -> bool:
@@ -243,6 +375,29 @@ def _has_content(directory: Path) -> bool:
             return True
 
     return False
+
+
+#: How deep a container may nest. Bounded so a loop of directories
+#: cannot make discovery unbounded, and generous enough for an inbox
+#: inside a dated folder.
+_MAX_DEPTH = 4
+
+#: Files that are this project's own state rather than anything the user
+#: captured. Read as a bundle they would be attached to whichever item
+#: happened to sort first, which is how a record of saved items ends up
+#: quoted as the body of a LinkedIn post.
+STATE_FILES = frozenset(
+    {
+        "saved-items-manifest.json",
+        "saved-items-manifest.json.tmp",
+        "saved-items-state.json",
+    }
+)
+
+
+def _is_state_file(path: Path) -> bool:
+    """Whether a file is pipeline state rather than a capture."""
+    return path.name.lower() in STATE_FILES
 
 
 def _association_file(resolved: Path) -> Path | None:
@@ -602,41 +757,43 @@ def _apply_structured(payload: dict, content: CapturedContent) -> None:
     A capture file may carry the text itself, and it may name the item
     it belongs to. Only fields that are present are read; a capture
     with a URL and no text contributes the URL and nothing more.
+
+    Read through the capture contract rather than a second list of key
+    names, so the fields accepted here and the fields a user is told
+    about cannot drift apart. A field that names a credential is dropped
+    and reported.
     """
-    for key in ("text", "content", "body", "original_text", "post_text"):
-        value = payload.get(key)
+    for entry in _capture.credential_fields(payload):
+        content.unreadable.append(
+            f"{entry}: names a credential and was not read"
+        )
 
-        if isinstance(value, str) and value.strip():
-            content.text = _join(content.text, value)
-            break
+    text = _capture.first_string(payload, _capture.CAPTURE_TEXT_KEYS)
 
-    for key in ("title", "headline", "name"):
-        value = payload.get(key)
+    if text and text.strip():
+        content.text = _join(content.text, text)
 
-        if isinstance(value, str) and value.strip() and not content.title:
-            content.title = value.strip()
-            break
+    title = _capture.first_string(payload, _capture.CAPTURE_TITLE_KEYS)
 
-    for key in ("author", "authorName", "author_name", "byline"):
-        value = payload.get(key)
+    if title and not content.title:
+        content.title = title
 
-        if isinstance(value, str) and value.strip() and not content.author:
-            content.author = value.strip()
-            break
+    author = _capture.first_string(payload, _capture.CAPTURE_AUTHOR_KEYS)
 
-    for key in ("published_at", "publishedAt", "date", "timestamp"):
-        value = payload.get(key)
+    if author and not content.author:
+        content.author = author
 
-        if isinstance(value, str) and value.strip() and not content.published_at:
-            content.published_at = value.strip()
-            break
+    published = _capture.first_string(
+        payload, _capture.CAPTURE_DATE_KEYS
+    )
 
-    for key in ("notes", "note", "annotation"):
-        value = payload.get(key)
+    if published and not content.published_at:
+        content.published_at = published
 
-        if isinstance(value, str) and value.strip():
-            content.text = _join(content.text, value)
-            break
+    notes = _capture.first_string(payload, _capture.CAPTURE_NOTES_KEYS)
+
+    if notes and notes.strip():
+        content.text = _join(content.text, notes)
 
 
 def _read_text(path: Path, content: CapturedContent) -> str:
@@ -1079,6 +1236,234 @@ def association_for(
             )
 
     return association
+
+
+#: Why a bundle matched, in the order a match is preferred. A name is
+#: cheapest and least ambiguous, so it is tried first.
+MATCH_BY_NAME = "directory name"
+MATCH_BY_ID = "source id in capture.json"
+MATCH_BY_URL = "canonical url in capture.json"
+MATCH_BY_MANIFEST = "bundle named in the manifest"
+MATCH_NONE = "no bundle"
+
+
+class BundleIndex:
+    """
+    Every bundle under a root, indexed by what each one claims.
+
+    Built once, because the alternative is catastrophic at any real
+    size: asking each item to consider each bundle reopens each bundle's
+    ``capture.json`` every time, so a thousand items against a thousand
+    captures is a million file reads before anything is imported. An
+    index reads each capture file exactly once and then answers in
+    constant time, which is what makes a large saved list usable at all.
+
+    A bundle is claimed by at most one item, so two items can never end
+    up sharing the same capture and being given the same body.
+    """
+
+    def __init__(self, root: str | Path) -> None:
+        self.root = Path(root)
+
+        #: Every bundle, in a stable order.
+        self.bundles: list[Path] = discover_bundles(self.root)
+
+        #: Key to the bundle that claims it, in preference order.
+        self._by_key: dict[str, list[tuple[int, str]]] = {}
+        self._by_url: dict[str, tuple[int, str]] = {}
+
+        #: What each bundle declared, for the orphan report.
+        self.associations: dict[str, BundleAssociation] = {}
+
+        self.problems: list[str] = []
+
+        self._claimed: set[str] = set()
+
+        # Checked at the top level and one level down, because that is
+        # where a capture inbox puts its captures and where a link out
+        # of the drop zone would be.
+        for rejected in discover_rejected(self.root):
+            self.problems.append(
+                f"{rejected.name}: resolves outside the capture root"
+            )
+
+        for container in sorted(
+            (
+                entry
+                for entry in self.root.iterdir()
+                if entry.is_dir() and not entry.is_symlink()
+                and entry.name.lower() in CONTAINER_NAMES
+            ),
+            key=lambda item: item.name,
+        ):
+            for rejected in discover_rejected(container):
+                self.problems.append(
+                    f"{rejected.name}: resolves outside the capture root"
+                )
+
+        self._build()
+
+    # -----------------------------------------------------------------
+    # Building
+    # -----------------------------------------------------------------
+
+    def _build(self) -> None:
+        for position, bundle in enumerate(self.bundles):
+            key = str(bundle)
+
+            try:
+                association = association_for(bundle, root=self.root)
+
+            except (BundleError, OSError) as exc:
+                self.problems.append(f"{bundle.name}: {exc}")
+                continue
+
+            self.associations[key] = association
+
+            if association.url:
+                # First claim wins, so a duplicate capture file cannot
+                # take a bundle away from the folder named for it.
+                self._by_url.setdefault(
+                    association.url, (position, MATCH_BY_URL)
+                )
+
+            for claim in association.claim_keys:
+                self._by_key.setdefault(claim, []).append(
+                    (position, MATCH_BY_NAME)
+                )
+
+            if association.source_id:
+                for claim in (association.source_id, _safe_name(
+                    association.source_id
+                )):
+                    self._by_key[claim] = [
+                        (position, MATCH_BY_ID)
+                    ] + self._by_key.get(claim, [])
+
+    # -----------------------------------------------------------------
+    # Lookup
+    # -----------------------------------------------------------------
+
+    def lookup_keys(self, item: "object") -> list[str]:
+        """
+        Every key an item could be found by, most specific first.
+
+        The item's own identifier is preferred over its name, because a
+        folder named after the id is an unambiguous claim and a folder
+        named after a human-readable title is not.
+        """
+
+        keys: list[str] = []
+
+        def add(value: object) -> None:
+            if not isinstance(value, str):
+                return
+
+            cleaned = value.strip()
+
+            if cleaned and cleaned not in keys:
+                keys.append(cleaned)
+
+        add(getattr(item, "source_id", None))
+        add(getattr(item, "identifier", None))
+        add(getattr(item, "post_id", None))
+
+        for name in (
+            getattr(item, "source_id", None),
+            getattr(item, "identifier", None),
+            getattr(item, "post_id", None),
+        ):
+            if isinstance(name, str) and name.strip():
+                add(_safe_name(name))
+
+        return keys
+
+    def find(self, item: "object") -> tuple[str, str] | None:
+        """
+        The bundle that belongs to an item, and why it was chosen.
+
+        Returns the bundle as a root-relative name and the reason, so
+        the post can record how its capture was found.
+        """
+        for key in self.lookup_keys(item):
+            candidates = self._by_key.get(key)
+
+            if not candidates:
+                continue
+
+            for position, reason in candidates:
+                name = str(self.bundles[position])
+
+                if name not in self._claimed:
+                    self._claimed.add(name)
+
+                    return name, reason
+
+        url = getattr(item, "canonical_url", None)
+
+        if isinstance(url, str) and url:
+            found = self._by_url.get(url)
+
+            if found is not None:
+                position, reason = found
+
+                name = str(self.bundles[position])
+
+                if name not in self._claimed:
+                    self._claimed.add(name)
+
+                    return name, reason
+
+        return None
+
+    def find_by_name(self, name: str) -> tuple[str, str] | None:
+        """
+        The bundle a manifest names directly.
+
+        A manifest that points at its own captures is the most explicit
+        claim there is, so it is honoured even when a folder is named
+        after something else.
+        """
+        candidate = Path(name)
+
+        for bundle in self.bundles:
+            if str(bundle) == name:
+                return name, MATCH_BY_MANIFEST
+
+        if (self.root / candidate).exists():
+            for bundle in self.bundles:
+                if str(bundle) == str(candidate):
+                    return name, MATCH_BY_MANIFEST
+
+        return None
+
+    def unclaimed(self) -> list[str]:
+        """Bundles no item has taken, which is what an orphan is."""
+
+        return [
+            str(bundle)
+            for bundle in self.bundles
+            if str(bundle) not in self._claimed
+        ]
+
+    def claim(self, name: str) -> bool:
+        """
+        Take a bundle for an item that already knows which one it wants.
+
+        Used when a manifest names its own capture, which is a claim
+        made directly by the user rather than inferred. Recorded the same
+        way as any other claim, so a bundle cannot end up serving two
+        items.
+        """
+        if name in self._claimed:
+            return False
+
+        self._claimed.add(name)
+
+        return True
+
+    def __len__(self) -> int:
+        return len(self.bundles)
 
 
 def _first_string(payload: dict, keys: tuple[str, ...]) -> str | None:

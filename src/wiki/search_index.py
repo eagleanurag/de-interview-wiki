@@ -56,6 +56,18 @@ def build_search_records(
 
     records = []
 
+    # Technologies by the post that carries them. Without this a search
+    # for "Azure Data Factory" finds the technology page and nothing
+    # else, so the posts that actually discuss it stay unreachable by the
+    # name a reader would type.
+    technologies_by_slug: dict[str, list[str]] = {}
+
+    for technology in model.technology_entries:
+        for slug in technology.post_slugs:
+            technologies_by_slug.setdefault(slug, []).append(
+                technology.label
+            )
+
     for post, slug in zip(model.posts, model.post_slugs):
         source = post.source
 
@@ -80,6 +92,7 @@ def build_search_records(
                 "tp": list(post.ai_analysis.topics),
                 "sb": list(post.ai_analysis.subtopics),
                 "c": list(post.ai_analysis.concepts),
+                "t": sorted(technologies_by_slug.get(slug, [])),
                 "q": [
                     collapse_whitespace(question.question)
                     for question in post.interview_questions
@@ -124,6 +137,7 @@ def _group_records(model: SiteModel) -> list[dict]:
                 "tp": [topic.label],
                 "sb": [],
                 "c": list(topic.concepts),
+                "t": [],
                 "q": [],
                 "n": topic.question_count,
             }
@@ -144,6 +158,7 @@ def _group_records(model: SiteModel) -> list[dict]:
                 "tp": list(concept.topics),
                 "sb": [],
                 "c": [concept.label],
+                "t": [],
                 "q": [],
                 "n": 0,
             }
@@ -164,6 +179,7 @@ def _group_records(model: SiteModel) -> list[dict]:
                 "tp": list(technology.topics),
                 "sb": [],
                 "c": [technology.label],
+                "t": [technology.label],
                 "q": [],
                 "n": technology.question_count,
             }

@@ -800,7 +800,10 @@ def test_search_index_excludes_answers_and_metadata(site: Path):
     # The key set is asserted exactly, so a field added to the index is
     # a deliberate change rather than a silent growth in what ships to
     # every reader's browser. "pb" is the date the source published the
-    # content, which is not the same as the capture date in "d".
+    # content, which is not the same as the capture date in "d". "t" is
+    # the technologies the post discusses, added so searching for a
+    # technology by name reaches the posts that use it and not only the
+    # technology's own page.
     assert set(record) == {
         "a",
         "c",
@@ -813,6 +816,7 @@ def test_search_index_excludes_answers_and_metadata(site: Path):
         "q",
         "s",
         "sb",
+        "t",
         "tp",
         "u",
         "x",

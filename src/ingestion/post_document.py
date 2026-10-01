@@ -85,6 +85,7 @@ PROVENANCE_FIELDS = (
     "url_kind",
     "capture_state",
     "capture_match",
+    "capture_quality",
     "capture_notes",
     "saved_notes",
     "metadata_only",

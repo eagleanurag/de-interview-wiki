@@ -130,6 +130,12 @@ class SavedItem:
     content_digest: str | None = None
     media_paths: list[str] = field(default_factory=list)
 
+    #: How complete the capture is, read off what it actually contains.
+    #: A link on its own, a screenshot and a transcript are different
+    #: things to a reader, and calling them all "content" would hide the
+    #: difference that matters.
+    capture_quality: str = "metadata_only"
+
     #: What was actually found in the capture, and what was not. Kept
     #: so a report can say "a screenshot with no text" rather than
     #: implying a body was recovered.
@@ -195,6 +201,7 @@ class SavedItem:
             self.content_path = other.content_path
             self.media_paths = list(other.media_paths)
             self.capture_notes = list(other.capture_notes)
+            self.capture_quality = other.capture_quality
             self.state = SavedItemState.CAPTURED
 
         elif other.content_digest and not self.content_digest:
@@ -202,6 +209,7 @@ class SavedItem:
             self.content_path = other.content_path
             self.media_paths = list(other.media_paths)
             self.capture_notes = list(other.capture_notes)
+            self.capture_quality = other.capture_quality
             self.state = SavedItemState.CAPTURED
 
         if other.state.rank > self.state.rank:
@@ -230,6 +238,7 @@ class SavedItem:
             "bundle": self.bundle,
             "content_path": self.content_path,
             "content_digest": self.content_digest,
+            "capture_quality": self.capture_quality,
             "media": list(self.media_paths),
             "capture_notes": list(self.capture_notes),
             "post_id": self.post_id,
@@ -257,6 +266,7 @@ class SavedItem:
             bundle=payload.get("bundle"),
             content_path=payload.get("content_path"),
             content_digest=payload.get("content_digest"),
+            capture_quality=_quality(payload.get("capture_quality")),
             media_paths=[
                 str(item) for item in (payload.get("media") or [])
             ],
@@ -307,3 +317,24 @@ def _capture_method(value: object) -> CaptureMethod:
         return CaptureMethod(str(value))
     except ValueError:
         return CaptureMethod.USER_EXPORT
+
+
+def _quality(value: object) -> str:
+    """
+    A recorded capture quality, or the most cautious reading of it.
+
+    An unrecognised value is read as ``metadata_only`` rather than
+    trusted. A stored quality that claims text the pipeline has never
+    seen would put a transcript in front of a reader who then finds a
+    bare link, and the cautious reading is the one that cannot lie.
+    """
+
+    from src.ingestion.saved_items.bundles import (
+        CAPTURE_QUALITIES,
+        QUALITY_METADATA_ONLY,
+    )
+
+    if isinstance(value, str) and value in CAPTURE_QUALITIES:
+        return value
+
+    return QUALITY_METADATA_ONLY

@@ -140,6 +140,50 @@ class QuestionEntry:
 
 
 @dataclass(frozen=True)
+class SavedItemEntry:
+    """
+    One post that came from a saved item.
+
+    Only what a reader needs to tell it apart from an ordinary post and
+    to get back to the link it came from. The capture quality is the
+    important one: a post built from a screenshot is not the same thing
+    as a post built from a transcript, and presenting them identically
+    would be a small lie.
+    """
+
+    label: str
+    slug: str
+    source_url: str
+    saved_date: str
+    captured_at: str
+    author: str
+    quality: str
+    capture_method: str
+    interview_relevant: bool
+    question_count: int
+    topic_labels: tuple[str, ...]
+    concept_labels: tuple[str, ...]
+    technology_labels: tuple[str, ...]
+
+    @property
+    def page(self) -> str:
+        return post_page(self.slug)
+
+    @property
+    def sort_key(self) -> tuple[str, str, str]:
+        # Newest save first, so the top of the list is what was saved
+        # most recently rather than whichever id sorts first.
+        return (
+            "".join(
+                character if character.isdigit() else " "
+                for character in self.saved_date
+            ).strip(),
+            self.label.casefold(),
+            self.label,
+        )
+
+
+@dataclass(frozen=True)
 class SiteModel:
     """Everything the pages need, fully ordered and counted."""
 
@@ -151,7 +195,8 @@ class SiteModel:
     concept_entries: tuple[ConceptEntry, ...]
     technology_entries: tuple[TechnologyEntry, ...]
     concepts: tuple[str, ...]
-    generated_at: str | None
+    saved_items: tuple[SavedItemEntry, ...] = ()
+    generated_at: str | None = None
     stats: dict[str, int] = field(default_factory=dict)
 
     @property
@@ -348,9 +393,59 @@ def build_site_model(
         concepts=tuple(concepts),
         concept_entries=concept_entries,
         technology_entries=technology_entries,
+        saved_items=_build_saved_items(posts, post_slugs),
         generated_at=knowledge_base.generated_at,
         stats=knowledge_base.stats.model_dump(),
     )
+
+
+def _build_saved_items(
+    posts: tuple[KnowledgePost, ...],
+    post_slugs: list[str],
+) -> tuple[SavedItemEntry, ...]:
+    """
+    The posts that came from a saved item.
+
+    A post with no saved-item provenance is not here. The difference
+    matters: a post collected by an authorized run and a post a person
+    exported are both real, and only one of them came from a list of
+    things someone meant to come back to. Listing every post as though
+    it had been saved would say something untrue about all of them.
+    """
+    technologies_by_slug: dict[str, list[str]] = {
+        slug: detect_technologies(post.original_text)
+        for post, slug in zip(posts, post_slugs)
+    }
+
+    entries: list[SavedItemEntry] = []
+
+    for post, slug in zip(posts, post_slugs):
+        saved = post.saved_item
+
+        if saved is None or not saved.saved_item_id:
+            continue
+
+        entries.append(
+            SavedItemEntry(
+                label=post.id,
+                slug=slug,
+                source_url=saved.canonical_url or post.source.url or "",
+                saved_date=saved.saved_date or "",
+                captured_at=post.source.captured_at.strftime("%Y-%m-%d"),
+                author=post.source.author or "",
+                quality=saved.capture_quality or "text",
+                capture_method=post.source.capture_method or "",
+                interview_relevant=post.classification.interview_relevant,
+                question_count=len(post.interview_questions),
+                topic_labels=tuple(post_topics(post)),
+                concept_labels=tuple(post.ai_analysis.concepts),
+                technology_labels=tuple(
+                    technologies_by_slug.get(slug, [])
+                ),
+            )
+        )
+
+    return tuple(sorted(entries, key=lambda entry: entry.sort_key))
 
 
 def _build_topics(

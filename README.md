@@ -11,13 +11,15 @@ collection                bounded, resumable, read-only
         ↓
 data/posts/<id>/post.json source text, provenance, media
         ↓
-enrichment                one worker per post, validated output
+enrichment                one worker per post, validated output,
+                          checked against the post it came from
         ↓
 consolidation             topics · concepts · technologies · questions
         ↓
 canonical knowledge base   one authoritative JSON
         ↓
-static wiki               posts · topics · concepts · technologies · questions · search
+static wiki               posts · topics · concepts · technologies ·
+                          questions · saved items · search
         ↓
 GitHub Pages
 ```
@@ -143,17 +145,72 @@ It needs no credentials, no browser and no network. Nothing is fetched
 to fill a gap, so the pipeline does not depend on how LinkedIn's web
 interface is laid out today, and a change to it cannot break this.
 
-### 1. Put the list in
+Everything here is a local folder you control. The project reads what
+you put in it; it never goes and gets anything.
 
-Export your saved items, or write the links down. Drop the file in:
+### The whole workflow
 
+```bash
+# 1. Build the list from whatever you have.
+python -m src.ingestion.collect_cli saved-items-init \
+    --from my-saved-posts.txt
+
+# 2. Put content you captured yourself beside it, one folder per post.
+#    data/incoming/saved-items/captures/<source_id>/content.md
+
+# 3. Check the inbox and read every problem it reports.
+python -m src.ingestion.collect_cli saved-items-validate
+
+# 4. See exactly what would happen. Writes nothing at all.
+python -m src.ingestion.collect_cli saved-items --plan
+
+# 5. Import.
+python -m src.ingestion.collect_cli saved-items \
+    --input data/incoming/saved-items/manifest.csv
+
+# 6. Enrich, and generate the site.
+python -m src.pipeline
 ```
-data/incoming/saved-items/
-    manifest.csv
+
+`saved-items-status` tells you where you are at any point, and
+`saved-items-validate` is the one to run first: it is the command that
+tells you what is wrong rather than what happened.
+
+### 1. Build the list
+
+The command takes whatever you happen to have and turns it into the one
+list the importer reads.
+
+```bash
+# A file of links, one per line.
+python -m src.ingestion.collect_cli saved-items-init \
+    --from saved-links.txt
+
+# A spreadsheet. Columns are matched by name, so the header need not be
+# exact.
+python -m src.ingestion.collect_cli saved-items-init \
+    --from saved-posts.csv
+
+# A browser bookmark export.
+python -m src.ingestion.collect_cli saved-items-init \
+    --from bookmarks.html
+
+# One link at a time.
+python -m src.ingestion.collect_cli saved-items-init \
+    --url https://www.linkedin.com/posts/...
 ```
 
-`.csv`, `.tsv`, `.txt`, `.json` and `.jsonl` are all read. Columns are
-matched by name, so the header does not have to be exact:
+It writes `data/incoming/saved-items/manifest.csv`. Running it again
+with another source **merges** rather than replaces, so two exports
+produce the union and not whichever was read last. It never touches a
+capture and never touches an enrichment, under any flag.
+
+A PDF of saved posts is refused, with the reason: which line of a
+paginated document belongs to which post cannot be established
+reliably, and attaching the wrong text to the right link is worse than
+not importing.
+
+Column names, all matched case-insensitively:
 
 | Meaning | Accepted as |
 |---|---|
@@ -176,76 +233,173 @@ posts never collapse into one.
 
 ### 2. Add the content you captured
 
-Where you have the post itself, put it in a folder beside the list.
+Where you have the post itself, put it in a folder under `captures/`.
 The folder claims one item, in whichever way is easiest:
 
 ```
 data/incoming/saved-items/
     manifest.csv
-    urn-li-saved-3a22fed0239f2912/     # named after the item's id
-        content.md
-        screenshot.png
-        document.pdf
-    any-folder-name/
-        capture.json                   # {"source_id": "urn:li:saved:..."}
-        page.html
-    another-folder/
-        capture.json                   # {"url": "https://www.linkedin.com/..."}
-        page.html
+    captures/
+        urn-li-saved-3a22fed0239f2912/     # named after the item's id
+            content.md
+            screenshot.png
+            document.pdf
+        any-folder-name/
+            capture.json                   # {"source_id": "urn:li:saved:..."}
+            page.html
+        another-folder/
+            capture.json                   # {"url": "https://www.linkedin.com/..."}
+            page.html
 ```
 
-`.md`, `.txt`, `.json`, `.jsonl`, `.html`, `.pdf`, `.png`, `.jpg`,
-`.webp`, `.gif` and `.bmp` are all read. A `capture.json` may also
-carry the text itself, in which case no other file is needed.
+`captures/` is a container, not a capture. A folder inside it is one
+saved post; nothing inside it needs to be listed anywhere, and a
+screenshot beside a transcript needs no line in a manifest.
 
-Every item's id is in `data/incoming/saved-items/saved-items-manifest.json`
-once you have run the command once, and the report prints the folder name
-to use when an item has no content yet.
+`saved-items-status --show-pending` prints the folder name for every item
+still waiting for content, so you never have to work out an id yourself.
 
-### 3. Import
+### 3. `capture.json`
+
+One small file, and only the URL is required:
+
+```json
+{
+  "url": "https://www.linkedin.com/posts/..."
+}
+```
+
+Everything else is optional — `title`, `author`, `notes`, `captured_at`,
+`text` — and a capture with one field is complete. Fields naming a
+credential are dropped and reported rather than stored; the report names
+the field so you can find it, and never quotes its value.
+
+### 4. Check it first
 
 ```bash
-python -m src.ingestion.collect_cli saved-items \
-    --input data/incoming/saved-items/manifest.csv
-
-python -m src.pipeline
+python -m src.ingestion.collect_cli saved-items-validate
 ```
 
-The report tells you what happened:
+It checks the manifest, every URL, duplicate links, capture association,
+path containment, corrupt files, credential-shaped fields, orphan
+captures and missing captures. It exits non-zero when there is a real
+error, and zero when there are only warnings — most of what you saved
+has no capture yet, and that is a backlog rather than a fault. Add
+`--strict` to treat warnings as errors.
+
+Every problem is reported the same way, because a bare `ERROR` tells you
+nothing you can act on:
 
 ```
-Saved Items Report
-------------------
-Discovered      : 500
-New             : 470
-Duplicates      : 30
-Known items     : 500
-With content    : 320
-Metadata only   : 150
-Imported        : 320
-Enriched        : 318
-Failed          : 2
-Pending         : 150
+ORPHAN_CAPTURE
+
+Where:
+  captures/example
+
+Reason:
+  No source_id or LinkedIn URL was found in this folder, so it cannot be
+  attached to a saved item. Nothing was imported from it and nothing was
+  deleted.
+
+Fix:
+  Add capture.json to this folder containing at least:
+
+  {
+    "url": "https://www.linkedin.com/posts/..."
+  }
+
+  Alternatively, rename the folder to the saved item's id.
 ```
 
-`Metadata only` is the backlog, not a failure: those are saved links
-waiting for you to supply the post. `Discovered`, `New` and `Duplicates`
-describe the list you just read; the rest describe every item the
-manifest knows about.
+Stack traces appear only with `--debug`.
 
-Useful options: `--dry-run`, `--validate` (check every imported post),
-`--report FILE`, `--max-posts N`, and `--json`.
+### 5. Preview, then import
+
+```bash
+python -m src.ingestion.collect_cli saved-items --plan
+```
+
+`--plan` groups every item by what would happen to it — `NEW`,
+`CHANGED`, `UNCHANGED`, `DUPLICATE`, `MISSING_CAPTURE`, `INVALID`,
+`FAILED` — and lists the problems and orphan captures. `--dry-run` gives
+the same answer as a summary. Neither writes anything: not a post, not
+the manifest, not a report file.
+
+Then import for real. `--adopt-orphans` creates a saved item for a
+capture that names a usable LinkedIn URL but has no manifest item yet. A
+capture with no usable URL is still reported, never adopted: attaching it
+would mean inventing the post it belongs to.
+
+Useful options: `--report FILE`, `--max-posts N`, `--json`,
+`--posts-root DIR`.
+
+### 6. Status
+
+```bash
+python -m src.ingestion.collect_cli saved-items-status
+```
+
+Every number is counted from the manifest, the captures on disk and the
+posts that exist. Nothing is estimated, and a section with nothing in it
+says so rather than being left out, because an absent number reads as a
+forgotten one.
+
+```
+Saved Items
+-----------
+Manifest items              500
+With captures                42
+Metadata only               458
+Ready to import              10
+Already imported             32
+Changed                       2
+Failed                        0
+Pending                     458
+
+Capture quality
+---------------
+text                        25
+text_and_media               8
+image_only                   6
+document_only                2
+partial                      1
+
+Content types
+-------------
+Markdown         25
+HTML              5
+PDF               8
+Images           17
+
+Knowledge
+---------
+Imported posts               40
+Interview relevant           31
+Questions generated        186
+Topics                      27
+Technologies                19
+```
+
+Add `--show-pending` to list the items still waiting for a capture, and
+`--json` for the whole thing.
 
 ### What it will not do
 
 - **It will not fetch anything.** A missing post stays missing. No
-  LinkedIn page is ever requested to complete an item.
+  LinkedIn page is ever requested to complete an item, and a resource a
+  captured page names is never requested either.
 - **It will not invent a body.** A URL and a date produce a saved item
   with a URL and a date. Only content you supplied becomes post text.
+- **It will not invent a link.** A capture folder that says nothing about
+  which post it is is reported, not guessed at.
 - **It will not read a credential.** There is nothing here to
   authenticate with, so the code has no way to try.
 - **It will not OCR.** An image is kept as an image and says so. Until
   you write the text beside it, it contributes no words.
+- **It will not invent an interview question.** A post that supports no
+  useful question produces none, and a question naming a technology the
+  post never mentions is removed before it is stored. A hiring notice
+  stays a hiring notice.
 - **It will not act on LinkedIn.** No like, comment, share, follow,
   connection, message, post, delete or setting change. There is no
   Saved Posts crawler here and none is planned.
@@ -254,14 +408,34 @@ Useful options: `--dry-run`, `--validate` (check every imported post),
 
 Every imported post records `capture_method` — `user_provided`,
 `user_saved_page` or `user_export` — and a `saved_item` block naming the
-item, its save date and how the capture was matched. A post that came
-from an authorized collection run is not the same thing as a post you
-supplied, and the difference survives into the published wiki, where the
-post page says which it is and links back to the item.
+item, its save date, how the capture was matched, and what the capture
+actually was. A post that came from an authorized collection run is not
+the same thing as a post you supplied, and the difference survives into
+the published wiki, where the post page says which it is and links back
+to the item.
+
+The capture quality is named rather than scored, because every value is
+something the pipeline observed and none of them is a number it made up:
+
+| Quality | What it means |
+|---|---|
+| `text` | The post's text was captured |
+| `text_and_media` | Text, with a file or two beside it |
+| `partial` | Text, but at least one supplied file could not be read |
+| `image_only` | A screenshot, kept as an image; no text was read from it |
+| `document_only` | A document was captured but yielded no text |
+| `metadata_only` | A saved link with no content behind it |
 
 Running it again imports nothing new: an item is identified by its
 canonical URL, and only a capture whose content actually changed is
 re-read. Editing one file re-enriches that one post.
+
+On the published site, the **Saved Items** page lists what was actually
+captured, grouped by how complete the capture was, and links each entry
+to its post and back to the original source. It is one page rather than
+one per item, because a saved list runs to hundreds of links and most of
+them never get a capture — a link with nothing behind it has no page
+worth reading, and it stays in your drop zone where you can act on it.
 
 ## Collection
 
@@ -855,8 +1029,25 @@ Its modules:
 | `src/ingestion/validation.py` | the post contract, and every check against it |
 | `src/ingestion/post_loader.py` | reading a post for the worker |
 | `src/ingestion/cli.py` | the command line above |
-| `src/ingestion/saved_items/` | saved-list import: URL identity, bundle matching, the manifest |
-| `src/ingestion/collect_cli.py` | `saved-items`, alongside the collection commands |
+| `src/ingestion/saved_items/` | saved-list import: URL identity, capture contract, bundle matching, the manifest |
+| `src/ingestion/collect_cli.py` | `saved-items`, `saved-items-init`, `saved-items-status` and `saved-items-validate` |
+| `src/ai/grounding.py` | checking generated questions against the post they came from |
+| `src/wiki/saved_items.py` | the Saved Items page |
+
+The saved-items package in full:
+
+| Module | Responsibility |
+| --- | --- |
+| `urls.py` | normalisation, validation, stable source ids |
+| `model.py` | one saved item, its state, and how two records merge |
+| `readers.py` | CSV, TSV, TXT, JSON and JSONL saved lists |
+| `capture.py` | the `capture.json` contract, and the fields it refuses |
+| `bundles.py` | capture discovery, containment, extraction, fingerprints |
+| `manifest.py` | the atomic record of what has been imported |
+| `plan.py` | one read of the inbox, answering what a run would do |
+| `diagnostics.py` | where, why, and the fix — for every problem |
+| `intake.py` | building the list from links, a spreadsheet or bookmarks |
+| `source.py` | the source contract the collector drives |
 
 ### Running the control plane logic locally
 

@@ -13,6 +13,7 @@ because a post that could not be enriched is still worth having.
 
 from __future__ import annotations
 
+from src.ai import grounding
 from src.ai.opencode import OpenCodeClient
 from src.ai.schemas import (
     DIFFICULTIES,
@@ -35,6 +36,12 @@ class AIEnricher:
     ) -> None:
         self.client = client or OpenCodeClient()
 
+        #: What the last run's grounding check removed. Held for the
+        #: caller to record rather than written onto the post, because it
+        #: is a fact about how the pipeline processed the post and not
+        #: about what the post says.
+        self.last_grounding: grounding.GroundingReport | None = None
+
     def enrich(self, post: KnowledgePost) -> KnowledgePost:
         """
         Enrich in place and return the same post.
@@ -55,20 +62,58 @@ class AIEnricher:
                 f"structure: {exc}"
             ) from exc
 
-        post.ai_analysis.summary = enrichment.summary
-        post.ai_analysis.topics = _clean_list(enrichment.topics)
-        post.ai_analysis.subtopics = _clean_list(enrichment.subtopics)
-        post.ai_analysis.concepts = _clean_list(
-            [concept.name for concept in enrichment.concepts]
+        # Checked against the post rather than trusted. A prompt asks the
+        # model not to invent; it does not make it stop, and an invented
+        # technology in a question is indistinguishable from a real one
+        # once it is in the knowledge base.
+        topics, concepts, questions, report = grounding.check(
+            self._source_text(post),
+            topics=enrichment.topics,
+            concepts=[
+                concept.name for concept in enrichment.concepts
+            ],
+            questions=[
+                question.question
+                for question in enrichment.interview_questions
+            ],
         )
 
+        kept = set(questions)
+
+        post.ai_analysis.summary = enrichment.summary
+        post.ai_analysis.topics = _clean_list(topics)
+        post.ai_analysis.subtopics = _clean_list(enrichment.subtopics)
+        post.ai_analysis.concepts = _clean_list(concepts)
+
         post.interview_questions = [
-            _question(question) for question in enrichment.interview_questions
+            _question(question)
+            for question in enrichment.interview_questions
+            if question.question in kept
         ]
+
+        self.last_grounding = report
 
         self._apply_classification(post, enrichment)
 
         return post
+
+    @staticmethod
+    def _source_text(post: KnowledgePost) -> str:
+        """
+        Everything the post actually contains.
+
+        The body and the text carried by its media, because a question
+        about something shown in a diagram the post attaches is as
+        grounded as one about something it says.
+        """
+
+        parts = [post.original_text or ""]
+
+        for media in post.media:
+            if media.extracted_text:
+                parts.append(media.extracted_text)
+
+        return "\n\n".join(parts)
 
     # -----------------------------------------------------------------
     # Classification
@@ -177,8 +222,14 @@ Rules:
 - "summary" must describe what this content actually says. If the
   content is truncated, incomplete, or not technical, say that plainly
   rather than filling the gap.
-- Every question must be answerable from this content. Do not ask
-  about material the source never mentions.
+- Every topic, subtopic, concept and question must be answerable from
+  this content. Do not ask about material the source never mentions.
+- Name only technologies this content actually mentions. If the post
+  discusses Azure Data Factory, Databricks and Delta Lake, those are the
+  ones you may use. Do not introduce Snowflake, Kafka, Airflow or
+  anything else that is not in the text above, even as a passing
+  mention inside a question. Anything you name that is not supported is
+  removed before the post is stored.
 - Choose "type" from: {", ".join(QUESTION_TYPES)}.
 - Choose "difficulty" from: {", ".join(DIFFICULTIES)}.
 - Every question must list at least one point a strong answer covers.
@@ -187,6 +238,13 @@ Rules:
   technical knowledge someone could be interviewed on. A job
   announcement, an event post, a hiring notice or personal news is
   not interview relevant, and its topics should be left empty.
+- Return an empty "interview_questions" list when this content does not
+  support a useful question. An empty list is a correct answer and a
+  better one than padding the knowledge base with questions nobody can
+  answer from the source. Do not write a question to reach a number.
+- Fewer good questions beat more questions. Three questions a candidate
+  could actually be asked about are worth more than ten where eight are
+  about things the post never mentioned.
 
 Original content:
 {post.original_text}

@@ -37,7 +37,13 @@ SITE_DIR = BUILD_ROOT / "site"
 #: Bumped when the enrichment contract or the prompt changes. A result
 #: produced under a different version is not reusable, because the
 #: current version would answer differently about the same content.
-ENRICHER_VERSION = "2"
+#:
+#: Version 3 added source grounding, so a result from version 2 may
+#: contain a question about a technology the source never mentioned.
+#: Those results are not reusable even though the underlying analysis is
+#: largely right: the point of the check is that the knowledge base never
+#: holds one, and a cached result would put it straight back.
+ENRICHER_VERSION = "3"
 
 
 class StageError(RuntimeError):
@@ -148,10 +154,24 @@ def enrich(identifiers: list[str], *, force: bool) -> dict:
             # it is written alongside. It is what lets a later run skip
             # this post, and it is build metadata rather than content,
             # so the aggregator does not read it.
-            payload["_enrichment"] = {
+            fingerprint = {
                 "source_digest": digest,
                 "enricher_version": ENRICHER_VERSION,
             }
+
+            grounding_report = getattr(
+                enricher, "last_grounding", None
+            )
+
+            if grounding_report is not None and not grounding_report.clean:
+                # Kept beside the fingerprint for the same reason: what
+                # the pipeline removed is worth being able to audit, and
+                # is not part of the knowledge a reader consumes.
+                fingerprint["grounding"] = grounding_report.as_dict()
+
+                log(f"  {identifier}: {grounding_report.summary()}")
+
+            payload["_enrichment"] = fingerprint
 
             target.write_text(
                 json.dumps(payload, indent=2, ensure_ascii=False),
