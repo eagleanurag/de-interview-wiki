@@ -1181,6 +1181,17 @@ class FakePage:
         self.emitted: set[str] = set()
         self.consumed: set[str] = set()
 
+        # Scroll model. The feed is a container taller than the window,
+        # and scrolling it reveals the next round of posts. This is the
+        # structure the real page has, and modelling only a
+        # document-level scroll is what hid the bug where collection
+        # stopped at three posts.
+        self.row_height = 900
+        self.window_height = 700
+        self.scroll_top = 0
+        self.total_rows = sum(len(r) for r in self.rounds)
+        self.advance_count = 0
+
     # -- content ----------------------------------------------------
     def url_after_goto(self):
         """
@@ -1330,7 +1341,31 @@ class FakePage:
         from src.ingestion.sources.linkedin import (
             EXTRACT_JS,
             PROFILE_RESOLVER_JS,
+            SCROLL_ADVANCE_JS,
+            SCROLL_STATE_JS,
         )
+
+        if script == SCROLL_STATE_JS:
+            # Models an inner scrolling container, which is what
+            # LinkedIn actually renders: the document stays pinned to
+            # the viewport while the container holds the whole feed.
+            revealed = self.rounds[self.round] if self.rounds else []
+            visible = max(1, len(revealed))
+            content = visible * self.row_height
+            at_bottom = (
+                self.scroll_top + self.window_height >= content - 8
+            )
+            return {
+                "inWindow": False,
+                "scrollTop": self.scroll_top,
+                "scrollHeight": content,
+                "clientHeight": self.window_height,
+                "atBottom": at_bottom,
+            }
+
+        if script == SCROLL_ADVANCE_JS:
+            self.advance(int(arg.get("step", 0)) if arg else 0)
+            return {"moved": True, "atBottom": self.at_bottom()}
 
         if script == EXTRACT_JS:
             # Mirrors the real feed: posts keyed by permalink URN and
@@ -1342,6 +1377,35 @@ class FakePage:
             return self.current_url
 
         return self.height
+
+    def advance(self, step: int) -> int:
+        """
+        Scroll the container and reveal whatever that exposes.
+
+        Returns the new scroll position. The container refuses to move
+        once every post has been revealed, which is how a real feed
+        signals its end.
+        """
+
+        self.advance_count += 1
+
+        if self.round + 1 >= len(self.rounds):
+            # Already at the end; the container will not move.
+            self.scroll_top = self.total_rows * self.row_height
+            return self.scroll_top
+
+        self.round += 1
+        self.scroll_top = min(
+            self.scroll_top + step,
+            self.total_rows * self.row_height,
+        )
+
+        return self.scroll_top
+
+    def at_bottom(self) -> bool:
+        content = self.total_rows * self.row_height
+
+        return self.scroll_top + self.window_height >= content - 8
 
     @property
     def all_posts(self) -> list[dict]:
@@ -1495,10 +1559,14 @@ def test_linkedin_scrolls_until_content_appears(tmp_path):
         for post in source.discover():
             collected.append(post)
     except CollectionStopped as exc:
-        assert exc.reason is StopReason.NO_NEW_CONTENT
+        # The scroll container reported its end, which is a more precise
+        # reason than "nothing new appeared": the feed was walked to its
+        # last post rather than stalling.
+        assert exc.reason is StopReason.EXHAUSTED
 
     assert len(collected) == 3
     assert page.expanded > 0
+    assert page.advance_count >= 2
 
 
 def test_linkedin_deduplicates_within_a_run(tmp_path):

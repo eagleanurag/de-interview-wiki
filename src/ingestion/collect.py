@@ -264,12 +264,7 @@ class Collector:
         reached_budget = False
 
         try:
-            for collected in self.source.discover(
-                max_posts=self.limits.max_posts,
-                since=self.limits.since,
-                until=self.limits.until,
-                scroll_limit=self.limits.scroll_limit,
-            ):
+            for collected in self._discover_all():
                 if budget is not None and self._state.persisted >= budget:
                     reached_budget = True
                     break
@@ -310,6 +305,91 @@ class Collector:
     # -----------------------------------------------------------------
     # One post
     # -----------------------------------------------------------------
+
+    def _discover_all(self):
+        """
+        Walk every content kind the source offers, in order.
+
+        A source may expose more than one kind of content. The walk is
+        driven from here rather than from the source so that the
+        collector keeps one budget across all of them, and so a source
+        that only implements the base contract still works.
+
+        A pass that stops for its own ordinary reason does not end the
+        run: the next kind is still worth walking. A challenge, a
+        failure or a budget exhaustion does end it.
+        """
+
+        limits = {
+            "max_posts": self.limits.max_posts,
+            "since": self.limits.since,
+            "until": self.limits.until,
+            "scroll_limit": self.limits.scroll_limit,
+        }
+
+        passes = [("post", self.source.discover)]
+
+        articles = getattr(self.source, "discover_articles", None)
+
+        if callable(articles):
+            passes.append(("article", articles))
+
+        last_reason = ""
+
+        for index, (kind, walk) in enumerate(passes):
+            remaining = None
+
+            if self.limits.max_posts is not None:
+                # The budget is shared, so each pass is told only what
+                # is left rather than the full allowance.
+                remaining = max(
+                    0, self.limits.max_posts - self._state.persisted
+                )
+
+                if remaining == 0:
+                    raise CollectionStopped(
+                        StopReason.MAX_POSTS,
+                        f"Reached the configured limit of "
+                        f"{self.limits.max_posts} posts.",
+                    )
+
+            pass_limits = dict(limits)
+
+            if remaining is not None:
+                pass_limits["max_posts"] = remaining
+
+            try:
+                for collected in walk(**pass_limits):
+                    yield collected
+
+            except CollectionStopped as exc:
+                last_reason = exc.reason.value
+
+                # A challenge or a hard failure ends the whole run.
+                if exc.reason in {
+                    StopReason.SECURITY_CHALLENGE,
+                    StopReason.FAILED,
+                    StopReason.MAX_POSTS,
+                    StopReason.UNTIL_DATE,
+                }:
+                    raise
+
+                if index < len(passes) - 1:
+                    # Ordinary end-of-content for this kind. The next
+                    # kind may still hold material.
+                    self.progress(
+                        f"No more {kind} content ({exc.reason.value})."
+                    )
+
+                    continue
+
+                raise
+
+        if last_reason:
+            self.progress(
+                f"Walked {len(passes)} content kind(s); "
+                f"last stop reason: {last_reason}."
+            )
 
     def _handle(
         self,

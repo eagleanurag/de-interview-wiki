@@ -27,6 +27,7 @@ committed.
 
 from __future__ import annotations
 
+import hashlib
 import re
 import shutil
 from dataclasses import dataclass, replace
@@ -68,6 +69,11 @@ EXPAND_SELECTORS = (
 )
 
 SCROLL_SETTLE_TIMEOUT_MS = 1500
+
+#: Pixels advanced per scroll. A large step reaches the end of a
+#: feed in fewer round trips, and a short container makes a small
+#: step waste iterations on content already rendered.
+SCROLL_STEP_PIXELS = 2400
 DEFAULT_SCROLL_LIMIT = 400
 DEFAULT_IDLE_ROUNDS = 3
 
@@ -88,6 +94,12 @@ AUTH_TOTAL_TIMEOUT_SECONDS = 90.0
 
 # How long the human may take before verification is attempted anyway.
 AUTH_HUMAN_WAIT_SECONDS = 900
+
+#: Profile resolution gets its own budget rather than borrowing the
+#: sign-in one, because a slow first paint of the feed is expected
+#: and must not eat the time available to detect a challenge.
+ARTICLE_RESOLVE_TIMEOUT_SECONDS = 45.0
+ARTICLE_RESOLVE_SETTLE_MS = 6_000
 
 
 def linkedin_installed() -> bool:
@@ -217,6 +229,21 @@ EXTRACT_JS = r"""
     el.offsetWidth > 0 || el.offsetHeight > 0 ||
     el.getClientRects().length > 0
   );
+
+  // How many different posts an element holds. Anchors, not URNs: a
+  // single post links to itself several times.
+  const distinct_permalinks = (root) => {
+    const urns = new Set();
+
+    for (const link of root.querySelectorAll(permalinkSelector)) {
+      const href = link.getAttribute('href') || '';
+      const urn = (href.match(/urn:li:[A-Za-z]+:\d+/) || [])[0];
+
+      if (urn) urns.add(urn);
+    }
+
+    return urns.size;
+  };
   const clean = (value) => (value || '').replace(/ /g, ' ').trim();
 
   // "Jan 15, 2025", "15 Jan 2025", "Jan 15, 2025 - Edited",
@@ -290,8 +317,13 @@ EXTRACT_JS = r"""
     // on every run.
     if (!urn || seen.has(urn)) continue;
 
-    // Climb to the post container: the nearest ancestor holding
-    // exactly this post's permalink and some text.
+    // Climb to the post container: the nearest ancestor that holds
+    // this post and no other.
+    //
+    // Distinct permalinks are counted, not anchors. A post renders its
+    // permalink more than once (a timestamp and an "ago" label both
+    // link to it), so counting anchors rejects the very posts that
+    // duplicate their own link, and they were being dropped silently.
     let element = anchor;
     let container = null;
 
@@ -299,7 +331,7 @@ EXTRACT_JS = r"""
       element = element.parentElement;
       if (!element) break;
 
-      const inner = element.querySelectorAll(permalinkSelector).length;
+      const inner = distinct_permalinks(element);
       const text = clean(element.innerText);
 
       if (inner === 1 && text.length > 20) {
@@ -488,6 +520,264 @@ SUBMIT_RESOLVER_JS = r"""
 
 
 PERMALINK_SELECTOR = 'a[href*="/feed/update/urn:li:"]'
+
+
+def article_post_id(slug: str) -> str:
+    """
+    A short, stable identifier for an article.
+
+    Article slugs run to a hundred characters, and a post identifier is
+    capped well below that because it also becomes a directory name, a
+    job id and a URL segment. The slug is truncated for legibility and a
+    digest of the whole slug is appended, so two articles whose slugs
+    share a prefix cannot collide and the identifier never changes for
+    a given slug.
+    """
+
+    digest = hashlib.sha256(slug.encode("utf-8")).hexdigest()[:10]
+
+    readable = "".join(
+        character if character.isalnum() or character in "-_" else "-"
+        for character in slug.lower()
+    ).strip("-")
+
+    readable = re.sub(r"-{2,}", "-", readable)[:36].strip("-")
+
+    if not readable:
+        readable = "article"
+
+    return f"urn:li:article:{readable}-{digest}"
+
+
+#: Articles live under ``/pulse/<slug>`` rather than under a feed
+#: permalink, so they are identified separately. The listing already
+#: carries each article's title and opening text, which is the
+#: authorized content; the article page itself refuses to render
+#: without an in-app navigation, so nothing is invented to stand in for
+#: a body that did not load.
+ARTICLE_LINK_SELECTOR = 'a[href*="/pulse/"]'
+
+#: Extracts the article cards from the listing.
+#:
+#: The card is the nearest ancestor whose text is substantial but still
+#: smaller than the whole list, which is where a further climb would
+#: swallow the next article.
+EXTRACT_ARTICLES_JS = r"""
+(options) => {
+  const clean = (value) => (value || '').replace(/\s+/g, ' ').trim();
+
+  // The reading time is a reading time, not content.
+  const isReadingTime = (text) =>
+    /^\s*\d+\s*(?:min|mins|minute|minutes)\s+read\s*$/i.test(text) ||
+    /^\s*\d+\s*(?:sec|secs|hour|hours)\s+read\s*$/i.test(text);
+
+  const anchors = Array.from(
+    document.querySelectorAll(options.link)
+  );
+
+  const results = [];
+  const seen = new Set();
+
+  for (const anchor of anchors) {
+    const href = anchor.getAttribute('href') || '';
+
+    const slug = (href.match(/\/pulse\/([^/?#]+)/) || [])[1];
+
+    if (!slug || seen.has(slug)) continue;
+    seen.add(slug);
+
+    // Everything belonging to the article lives inside its own link:
+    // a paragraph holding the title, a paragraph holding the opening
+    // text, and a reading time. Walking outward to find a card
+    // instead swallowed the profile header and the whole site
+    // footer, so the link is the boundary.
+    const blocks = Array.from(anchor.querySelectorAll('p'))
+      .map((el) => clean(el.innerText))
+      .filter((text) => text.length > 0 && !isReadingTime(text));
+
+    if (blocks.length === 0) continue;
+
+    // The title is the opening block; the excerpt is the longest,
+    // because a listing truncates the body but never the heading.
+    const title = blocks[0].slice(0, 200);
+    const excerpt = blocks.reduce(
+      (longest, block) =>
+        block.length > longest.length ? block : longest,
+      ''
+    );
+
+    const parts = [title];
+
+    if (excerpt && excerpt !== title) parts.push(excerpt);
+
+    const text = parts.join('\n\n');
+
+    // Without a body there is nothing to learn from the article.
+    if (text.length < 60) continue;
+
+    const media = Array.from(anchor.querySelectorAll('img'))
+      .map((img) => {
+        const src =
+          img.getAttribute('data-delayed-url') ||
+          img.getAttribute('src') ||
+          '';
+        return src.split('?')[0];
+      })
+      .filter((src) => {
+        if (src.indexOf('media.licdn.com') === -1) return false;
+
+        const lowered = src.toLowerCase();
+
+        return !lowered.includes('profile-displayphoto') &&
+               !lowered.includes('profile-displ') &&
+               lowered.includes('/dms/image/');
+      })
+      .filter((src, index, all) => all.indexOf(src) === index)
+      .slice(0, 4);
+
+    results.push({
+      slug: slug,
+      url: href.startsWith('http') ? href : options.base + href,
+      title: title,
+      text: text,
+      author: options.handle || '',
+      media: media
+    });
+  }
+
+  return results;
+}
+"""
+
+# Identifies the element that actually scrolls, and reports how far
+# along it is.
+#
+# LinkedIn renders the activity feed inside a scrolling container, not
+# into the document: the document height is pinned to the viewport
+# while the container holds several thousand pixels of posts. Scrolling
+# the mouse or reading document.body.scrollHeight therefore does
+# nothing, which is why collection stopped at three posts.
+#
+# The container is found structurally, by walking up from a permalink
+# to the nearest element that can scroll, rather than by naming an id
+# or a class, because those change with every build.
+SCROLL_STATE_JS = r"""
+(permalink) => {
+  const anchor = document.querySelector(permalink);
+
+  const scrolls = (el) => {
+if (!el) return false;
+if (el.scrollHeight <= el.clientHeight + 20) return false;
+return ['auto', 'scroll'].includes(getComputedStyle(el).overflowY);
+  };
+
+  // Prefer the nearest scrolling ancestor of a post, because that is
+  // the container the feed actually lives in.
+  let container = null;
+
+  let node = anchor ? anchor.parentElement : null;
+
+  while (node) {
+if (scrolls(node)) {
+  container = node;
+  break;
+}
+node = node.parentElement;
+  }
+
+  // Fall back to the largest scrolling element on the page, which
+  // covers a feed that renders before a post is present.
+  if (!container) {
+let best = null;
+
+for (const el of document.querySelectorAll('*')) {
+  if (!scrolls(el)) continue;
+
+  if (!best || el.scrollHeight > best.scrollHeight) {
+    best = el;
+  }
+}
+
+container = best;
+  }
+
+  if (!container) {
+// No inner scroller, so the document itself is the scroller.
+const root = document.scrollingElement || document.documentElement;
+
+return {
+  inWindow: true,
+  scrollTop: window.scrollY,
+  scrollHeight: root.scrollHeight,
+  clientHeight: window.innerHeight,
+  atBottom: true
+};
+  }
+
+  const atBottom =
+container.scrollTop + container.clientHeight >=
+container.scrollHeight - 8;
+
+  return {
+inWindow: false,
+scrollTop: container.scrollTop,
+scrollHeight: container.scrollHeight,
+clientHeight: container.clientHeight,
+atBottom: atBottom
+  };
+}
+"""
+
+# Advances the container by one page and reports the new position.
+# Assigning scrollTop is used rather than a synthetic wheel event
+# because it works headless and cannot land on the wrong element.
+SCROLL_ADVANCE_JS = r"""
+(options) => {
+  const step = options.step;
+  const selector = options.permalink;
+
+  const scrolls = (el) => {
+if (!el) return false;
+if (el.scrollHeight <= el.clientHeight + 20) return false;
+return ['auto', 'scroll'].includes(getComputedStyle(el).overflowY);
+  };
+
+  const anchor = document.querySelector(selector);
+
+  let container = null;
+  let node = anchor ? anchor.parentElement : null;
+
+  while (node) {
+if (scrolls(node)) { container = node; break; }
+node = node.parentElement;
+  }
+
+  if (!container) {
+window.scrollBy(0, step);
+
+return {
+  moved: window.scrollY > 0,
+  atBottom:
+    window.innerHeight + window.scrollY >=
+    document.documentElement.scrollHeight - 8
+};
+  }
+
+  const before = container.scrollTop;
+
+  container.scrollTop = before + step;
+
+  // A container that refuses to move is the end of the feed, and the
+  // caller's idle-round check decides what that means.
+  const moved = container.scrollTop > before;
+
+  const atBottom =
+container.scrollTop + container.clientHeight >=
+container.scrollHeight - 8;
+
+  return { moved: moved, atBottom: atBottom };
+}
+"""
 
 
 @dataclass
@@ -1308,6 +1598,17 @@ class LinkedInSource(Source):
                     f"change.",
                 )
 
+            # The container reporting its end is a stronger signal than
+            # an idle round, because a feed can hold thousands of
+            # pixels of already-loaded content that yields nothing new.
+            # Checked after the idle rounds so a transient stall at the
+            # end of a page is still retried.
+            if idle_rounds and self._feed_exhausted():
+                raise CollectionStopped(
+                    StopReason.EXHAUSTED,
+                    "Reached the end of the available activity.",
+                )
+
             if scrolls >= effective.scroll_limit:
                 raise CollectionStopped(
                     StopReason.SCROLL_LIMIT,
@@ -1321,6 +1622,203 @@ class LinkedInSource(Source):
     # -----------------------------------------------------------------
     # Navigation and extraction
     # -----------------------------------------------------------------
+
+    def _go_to_articles(self) -> None:
+        """
+        Open the authored-articles tab of the same profile.
+
+        Articles are the profile's own long-form content and are part
+        of the same authorized source as the posts, but they are a
+        different content kind: they carry a slug rather than a feed
+        permalink, so they are collected and identified separately.
+        """
+
+        slug = self._resolve_slug()
+
+        if not slug:
+            raise CollectionStopped(
+                StopReason.FAILED,
+                "Could not resolve the profile whose articles to read.",
+            )
+
+        self.navigate(
+            f"{PROFILE_URL}/in/{slug}/recent-activity/articles/"
+        )
+
+        self._assert_no_challenge("article listing")
+
+    def _extract_articles(self) -> list[CollectedPost]:
+        """
+        Extract every article currently rendered in the listing.
+
+        One bounded in-page call, keyed on the article slug. A slug is
+        stable and unique, so an article keeps the same identifier
+        across runs and cannot be collected twice.
+        """
+
+        page = self._require_page()
+
+        try:
+            page.set_default_timeout(AUTH_PROBE_TIMEOUT_MS)
+
+            payload = page.evaluate(
+                EXTRACT_ARTICLES_JS,
+                {
+                    "link": ARTICLE_LINK_SELECTOR,
+                    "base": PROFILE_URL,
+                    "handle": self.resolved_profile,
+                },
+            )
+        except Exception as exc:  # noqa: BLE001
+            raise CollectionStopped(
+                StopReason.LAYOUT_CHANGED,
+                f"Could not read articles from the page: {_redact(exc)}",
+            ) from exc
+
+        if not isinstance(payload, list):
+            raise CollectionStopped(
+                StopReason.LAYOUT_CHANGED,
+                "The article listing returned an unexpected result.",
+            )
+
+        extracted: list[CollectedPost] = []
+
+        for entry in payload:
+            if not isinstance(entry, dict):
+                continue
+
+            slug = str(entry.get("slug") or "").strip()
+
+            if not slug:
+                # Without a slug there is no stable identity, so a
+                # generated one would duplicate on every run.
+                continue
+
+            text = str(entry.get("text") or "").strip()
+
+            if not text:
+                continue
+
+            title = str(entry.get("title") or "").strip()
+
+            # The title is already part of the card text, so it is not
+            # prepended again. It is carried separately for the wiki to
+            # use as a heading.
+            extracted.append(
+                CollectedPost(
+                    source_post_id=article_post_id(slug),
+                    text=text,
+                    url=str(entry.get("url") or "").strip() or None,
+                    # The listing renders no publication date, so
+                    # none is claimed rather than one being inferred
+                    # from the article slug.
+                    published_at=None,
+                    author=(
+                        str(entry.get("author") or "").strip() or None
+                    ),
+                    media_urls=[
+                        str(item) for item in (entry.get("media") or [])
+                    ],
+                    extra={
+                        "collected_at": _now(),
+                        "kind": "article",
+                        "title": title or None,
+                    },
+                )
+            )
+
+        return extracted
+
+    def discover_articles(
+        self, **limits: object
+    ) -> Iterator[CollectedPost]:
+        """
+        Yield the profile's authored articles.
+
+        Bounded by the same limit and idle rules as the post walk, so a
+        long article list cannot produce an unbounded run.
+        """
+
+        if self._page is None:
+            self.start()
+
+        self._require_page()
+
+        effective = self.limits
+
+        if limits.get("max_posts") is not None:
+            effective = replace(
+                effective, max_posts=int(limits["max_posts"])
+            )
+
+        self._go_to_articles()
+
+        produced = 0
+        idle_rounds = 0
+        scrolls = 0
+        seen: set[str] = set(self._seen)
+
+        while True:
+            self._assert_no_challenge("article collection")
+
+            new_this_round = 0
+
+            for collected in self._extract_articles():
+                if collected.source_post_id in seen:
+                    continue
+
+                seen.add(collected.source_post_id)
+                self._seen.add(collected.source_post_id)
+                new_this_round += 1
+
+                if (
+                    effective.max_posts is not None
+                    and produced >= effective.max_posts
+                ):
+                    raise CollectionStopped(
+                        StopReason.MAX_POSTS,
+                        f"Reached the configured limit of "
+                        f"{effective.max_posts} articles.",
+                    )
+
+                produced += 1
+
+                yield collected
+
+            idle_rounds = 0 if new_this_round else idle_rounds + 1
+
+            if (
+                effective.max_posts is not None
+                and produced >= effective.max_posts
+            ):
+                raise CollectionStopped(
+                    StopReason.MAX_POSTS,
+                    f"Reached the configured limit of "
+                    f"{effective.max_posts} articles.",
+                )
+
+            if idle_rounds >= effective.idle_rounds:
+                raise CollectionStopped(
+                    StopReason.NO_NEW_CONTENT,
+                    f"No new articles after {idle_rounds} passes with "
+                    f"no change.",
+                )
+
+            if idle_rounds and self._feed_exhausted():
+                raise CollectionStopped(
+                    StopReason.EXHAUSTED,
+                    "Reached the end of the available articles.",
+                )
+
+            if scrolls >= effective.scroll_limit:
+                raise CollectionStopped(
+                    StopReason.SCROLL_LIMIT,
+                    f"Reached the configured scroll limit of "
+                    f"{effective.scroll_limit}.",
+                )
+
+            scrolls += 1
+            self._scroll_once()
 
     def _go_to_activity(self) -> None:
         """
@@ -1360,8 +1858,14 @@ class LinkedInSource(Source):
 
         A configured handle wins. Otherwise the session's own profile
         is resolved from the links the page renders, so the collector
-        only ever reads the account the user actually authenticated
-        as rather than someone else's.
+        only ever reads the account the user actually authenticated as
+        rather than someone else's.
+
+        ``/in/me/`` is not used: it does not redirect once
+        authenticated, so there is nothing to follow. The handle comes
+        from a rendered link instead, which is not on the page
+        immediately, so the read is retried under a bound rather than
+        trusted on the first attempt.
         """
 
         configured = self.profile.strip().strip("/")
@@ -1372,20 +1876,45 @@ class LinkedInSource(Source):
 
             return configured
 
+        # A handle resolved earlier in this run is still the right
+        # answer, and reusing it avoids a second round trip.
+        if self.resolved_profile:
+            return self.resolved_profile
+
         page = self._require_page()
 
-        # `/in/me/` does not redirect once authenticated, so the
-        # handle is read from a rendered profile link instead.
-        self.navigate(f"{PROFILE_URL}/feed/")
+        budget = Deadline(ARTICLE_RESOLVE_TIMEOUT_SECONDS)
 
-        try:
-            page.set_default_timeout(AUTH_PROBE_TIMEOUT_MS)
+        while not budget.expired:
+            if not self.navigate(f"{PROFILE_URL}/feed/"):
+                break
 
-            handle = page.evaluate(PROFILE_RESOLVER_JS)
-        except Exception:  # noqa: BLE001
-            return ""
+            handle = ""
 
-        return str(handle or "").strip()
+            try:
+                page.set_default_timeout(AUTH_PROBE_TIMEOUT_MS)
+
+                handle = str(
+                    page.evaluate(PROFILE_RESOLVER_JS) or ""
+                ).strip()
+            except Exception:  # noqa: BLE001
+                handle = ""
+
+            if handle:
+                self.resolved_profile = handle
+
+                return handle
+
+            # The navigation shell renders before the profile link
+            # does, so one bounded settle before asking again.
+            settle(
+                page,
+                timeout_ms=budget.slice_ms(
+                    cap_ms=ARTICLE_RESOLVE_SETTLE_MS, default_ms=5_000
+                ),
+            )
+
+        return ""
 
     def _expand_truncated_posts(self) -> None:
         """
@@ -1412,50 +1941,140 @@ class LinkedInSource(Source):
                 # A single stubborn expander must not end the run.
                 continue
 
-    def _scroll_once(self) -> None:
+    def _scroll_state(self) -> dict:
         """
-        Scroll and wait for an observable change.
+        Where the feed is scrolled to, and whether it is exhausted.
 
-        Waits on page height rather than a fixed sleep, so a slow feed
-        is handled without guessing at timings.
+        Reads the container rather than the document, because LinkedIn
+        renders the feed into an inner scroller: the document height is
+        pinned to the viewport, so reading it reported a page that was
+        always already "the same height" and never advanced.
         """
 
         page = self._require_page()
 
-        before = self._page_height()
+        try:
+            page.set_default_timeout(AUTH_PROBE_TIMEOUT_MS)
+
+            state = page.evaluate(
+                SCROLL_STATE_JS, PERMALINK_SELECTOR
+            )
+        except Exception:  # noqa: BLE001
+            return {}
+
+        return state if isinstance(state, dict) else {}
+
+    def _scroll_once(self) -> None:
+        """
+        Advance the feed and wait for it to load more.
+
+        The container is scrolled by assigning its scroll position
+        rather than by synthesising a wheel event, because an
+        assignment is deterministic, works headless, and cannot land on
+        the wrong element when the pointer position is unknown.
+
+        Waits on the container's height rather than sleeping, so a slow
+        feed is handled without guessing at timings.
+        """
+
+        page = self._require_page()
+
+        before = self._scroll_state()
 
         self._expand_truncated_posts()
 
         try:
-            page.mouse.wheel(0, 4000)
+            page.set_default_timeout(AUTH_PROBE_TIMEOUT_MS)
+
+            page.evaluate(
+                SCROLL_ADVANCE_JS,
+                {
+                    "step": SCROLL_STEP_PIXELS,
+                    "permalink": PERMALINK_SELECTOR,
+                },
+            )
         except Exception:  # noqa: BLE001
             return
 
-        # Bounded wait for the height to change, which is the signal
-        # that content actually loaded.
+        target = int(before.get("scrollHeight") or 0)
+
+        if target <= 0:
+            return
+
+        # Bounded wait for the container to grow, which is the signal
+        # that more content actually loaded.
         try:
             page.wait_for_function(
-                "previous => document.body.scrollHeight > previous",
-                arg=before,
+                """
+                options => {
+                  const scrolls = (el) => {
+                    if (!el) return false;
+                    if (el.scrollHeight <= el.clientHeight + 20) return false;
+                    return [
+                      'auto',
+                      'scroll'
+                    ].includes(getComputedStyle(el).overflowY);
+                  };
+
+                  const anchor = document.querySelector(options.permalink);
+
+                  let node = anchor ? anchor.parentElement : null;
+
+                  while (node) {
+                    if (scrolls(node)) {
+                      return node.scrollHeight > options.target;
+                    }
+                    node = node.parentElement;
+                  }
+
+                  return (
+                    document.documentElement.scrollHeight >
+                    options.target
+                  );
+                }
+                """,
+                arg={
+                    "target": target,
+                    "permalink": PERMALINK_SELECTOR,
+                },
                 timeout=SCROLL_SETTLE_TIMEOUT_MS,
             )
         except Exception:  # noqa: BLE001
-            # No change within the bound. The caller's idle-round check
+            # No growth within the bound. The caller's idle-round check
             # decides whether that means the end of the feed.
             pass
 
     def _page_height(self) -> int:
+        """
+        How much content the feed holds.
+
+        Read from the scroll container, falling back to the document,
+        so a page that scrolls in the window is still measured.
+        """
+
+        state = self._scroll_state()
+
+        height = state.get("scrollHeight")
+
+        if isinstance(height, int) and height > 0:
+            return height
+
         self._require_page()
 
         try:
             return int(
                 self._page.evaluate(
-                    "() => document.body.scrollHeight"
+                    "() => document.documentElement.scrollHeight"
                 )
                 or 0
             )
         except Exception:  # noqa: BLE001
             return 0
+
+    def _feed_exhausted(self) -> bool:
+        """Whether the feed has reached its end."""
+
+        return bool(self._scroll_state().get("atBottom"))
 
     def _extract_current(self) -> list[CollectedPost]:
         """

@@ -28,6 +28,8 @@ from src.ingestion.sources.linkedin import (
     PERMALINK_SELECTOR,
     PROFILE_RESOLVER_JS,
     PROFILE_URL,
+    SCROLL_ADVANCE_JS,
+    SCROLL_STATE_JS,
     SUBMIT_LABELS,
     SUBMIT_MARKER,
     SUBMIT_RESOLVER_JS,
@@ -772,3 +774,159 @@ def test_the_extract_contract_is_a_list_of_dicts(browser):
             "author",
             "media",
         }
+
+# ---------------------------------------------------------------------
+# Scroll container
+# ---------------------------------------------------------------------
+#
+# The bug these cover: the collector scrolled the mouse and measured
+# document.body.scrollHeight, but LinkedIn renders the feed into an
+# inner scrolling container. The document height was pinned to the
+# viewport, so every poll saw "no change", collection stopped after the
+# three posts already on screen, and nothing reported an error.
+
+
+# A container that genuinely overflows, which is what makes it the
+# scroller. A container whose content fits its window is correctly not
+# treated as one, so the fixture has to hold more than it can show.
+FEED_MARKUP = """
+<main id="workspace" style="height:200px;overflow-y:scroll">
+  <div class="post">
+    <div>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:1/">
+        permalink</a>
+    </div>
+    <div>Jan 15, 2025</div>
+    <div>Window functions compute across a partition.</div>
+  </div>
+  <div style="height:3000px">the rest of the feed</div>
+</main>
+"""
+
+
+def scroll_state(page):
+    return page.evaluate(SCROLL_STATE_JS, PERMALINK_SELECTOR)
+
+
+def test_the_scroll_state_finds_the_inner_container(browser):
+    """
+    The document is 720px tall in a 720px viewport, so it is not the
+    scroller. The container holding the feed is.
+    """
+
+    _context, page = render(browser, FEED_MARKUP)
+
+    state = scroll_state(page)
+
+    assert state["inWindow"] is False
+    assert state["clientHeight"] == 200
+    # The container is taller than its window, which is what makes it
+    # the thing worth scrolling.
+    assert state["scrollHeight"] > state["clientHeight"]
+    assert state["atBottom"] is False
+
+
+def test_the_scroll_state_falls_back_to_the_window(browser):
+    """A page that scrolls the window has no inner container."""
+
+    _context, page = render(browser, "<main>Short.</main>")
+
+    state = scroll_state(page)
+
+    assert state["inWindow"] is True
+
+
+def test_advancing_scrolls_the_container_not_the_window(browser):
+    """
+    The container's position moves and the window's does not. A wheel
+    event aimed at the window would have changed nothing.
+    """
+
+    _context, page = render(browser, FEED_MARKUP)
+
+    before = scroll_state(page)
+
+    result = page.evaluate(
+        SCROLL_ADVANCE_JS,
+        {"step": 400, "permalink": PERMALINK_SELECTOR},
+    )
+
+    after = scroll_state(page)
+
+    assert result["moved"] is True
+    assert after["scrollTop"] > before["scrollTop"]
+
+
+def test_advancing_reports_the_end_of_the_feed(browser):
+    """A container that has reached its end reports atBottom."""
+
+    _context, page = render(browser, FEED_MARKUP)
+
+    state = scroll_state(page)
+    assert state["atBottom"] is False
+
+    page.evaluate(
+        SCROLL_ADVANCE_JS,
+        {"step": 100000, "permalink": PERMALINK_SELECTOR},
+    )
+
+    assert scroll_state(page)["atBottom"] is True
+
+
+def test_a_container_that_cannot_move_reports_no_movement(browser):
+    """
+    The end of a feed is the container refusing to scroll further. The
+    caller turns that into a stop rather than looping forever.
+    """
+
+    _context, page = render(browser, FEED_MARKUP)
+
+    for _ in range(4):
+        page.evaluate(
+            SCROLL_ADVANCE_JS,
+            {"step": 100000, "permalink": PERMALINK_SELECTOR},
+        )
+
+    result = page.evaluate(
+        SCROLL_ADVANCE_JS,
+        {"step": 100000, "permalink": PERMALINK_SELECTOR},
+    )
+
+    # It reports being at the bottom even though the position cannot
+    # advance any further.
+    assert result["atBottom"] is True
+
+
+def test_the_scroll_state_survives_a_page_without_posts(browser):
+    """An empty feed must not raise; it simply has nothing to scroll."""
+
+    _context, page = render(browser, "<main>Nothing here.</main>")
+
+    state = scroll_state(page)
+
+    assert isinstance(state, dict)
+    assert "atBottom" in state
+
+
+def test_the_scroll_state_is_bounded_by_the_caller(browser):
+    """
+    Every scroll read is a single evaluation, so a poll cannot
+    accumulate the per-call waits that made the original loop appear
+    to hang.
+    """
+
+    calls: list[str] = []
+
+    _context, page = render(browser, FEED_MARKUP)
+
+    original = page.evaluate
+
+    def counting(expression, arg=None):
+        calls.append(expression)
+        return original(expression, arg)
+
+    page.evaluate = counting
+
+    scroll_state(page)
+
+    assert calls.count(SCROLL_STATE_JS) == 1
