@@ -1045,16 +1045,19 @@ def test_collected_post_normalizes_into_a_document():
 class FakeLocator:
     """Enough of Playwright's Locator for extraction."""
 
-    def __init__(self, page, selector):
+    def __init__(self, page, selector, *, authenticate=True):
         self._page = page
         self._selector = selector
+        self._authenticate = authenticate
 
     def count(self):
         return len(self._page.matches(self._selector))
 
     def all(self):
         return [
-            FakeNode(self._page, node)
+            FakeNode(
+                self._page, node, self._authenticate, self._selector
+            )
             for node in self._page.matches(self._selector)
         ]
 
@@ -1062,9 +1065,16 @@ class FakeLocator:
         nodes = self._page.matches(self._selector)
 
         if 0 <= index < len(nodes):
-            return FakeNode(self._page, nodes[index])
+            return FakeNode(
+                self._page,
+                nodes[index],
+                self._authenticate,
+                self._selector,
+            )
 
-        return FakeNode(self._page, {})
+        return FakeNode(
+            self._page, {}, self._authenticate, self._selector
+        )
 
     @property
     def first(self):
@@ -1072,9 +1082,30 @@ class FakeLocator:
 
 
 class FakeNode:
-    def __init__(self, page, data):
+    """
+    One matched element.
+
+    Supports the element methods the collector uses, including
+    ``fill``, which records the selector rather than the value so a
+    test can never print a credential.
+    """
+
+    def __init__(
+        self,
+        page,
+        data,
+        authenticate=True,
+        selector="",
+    ):
         self._page = page
         self._data = data
+        self._authenticate = authenticate
+        # Captured at construction, because the page's "current"
+        # selector changes as the collector resolves later elements.
+        self._selector = selector
+
+    def fill(self, value, timeout=None):
+        self._page.filled.append(self._selector)
 
     def get_attribute(self, name):
         return self._data.get(name)
@@ -1093,10 +1124,17 @@ class FakeNode:
         )
 
     def click(self, timeout=None):
-        self._page.clicked.append(
-            self._page._current_selector or ""
-        )
+        selector = self._selector
+
+        self._page.clicked.append(selector)
         self._page.expanded += 1
+
+        # Submitting the sign-in form authenticates the session,
+        # unless the fake is modelling a rejected attempt.
+        if self._authenticate and (
+            "submit" in selector or "Sign in" in selector
+        ):
+            self._page._signed_in = True
 
 
 class FakePage:
@@ -1619,6 +1657,118 @@ def test_sign_in_uses_the_current_layout_selectors(
     assert page.clicked == ['button[type="submit"]']
 
 
+def test_sign_in_uses_the_visible_element_not_the_first_match(
+    monkeypatch,
+):
+    """
+    Regression guard from the live run: the sign-in page renders two
+    username inputs and the first is hidden. Resolving the selector
+    after the visibility check picked the hidden one and the fill
+    timed out. The located element must be used directly.
+    """
+
+    monkeypatch.setenv("LINKEDIN_USERNAME", "someone@example.com")
+    monkeypatch.setenv("LINKEDIN_PASSWORD", "correct-horse-battery")
+
+    class TwoPanelPage(FakePage):
+        """
+        The sign-in form as LinkedIn renders it while signed out.
+
+        Two panels, the first hidden. Once authenticated the form is
+        gone, exactly as on the real page, so the collector can
+        observe the difference rather than assuming it.
+        """
+
+        def matches(self, selector):
+            signed_out = not self._signed_in
+
+            if "username" in selector or "current-password" in (
+                selector
+            ) or 'type="password"' in selector:
+                if not signed_out:
+                    return []
+
+                return [
+                    {"_text": "", "_visible": False},
+                    {"_text": "", "_visible": True},
+                ]
+
+            return super().matches(selector)
+
+    source = LinkedInSource(profile="my-handle")
+    page = TwoPanelPage([[]], signed_in=False)
+    source._page = page
+    source._context = object()
+
+    source._sign_in()
+
+    # Two fills happened, one per field, so the hidden element was
+    # skipped rather than retried against.
+    assert len(page.filled) == 2
+
+    # Both fills targeted the visible panel's selectors, so the
+    # collector never reached for a hidden input.
+    assert page.filled == [
+        'input[autocomplete="username"]',
+        'input[autocomplete="current-password"]',
+    ]
+
+
+def test_a_failed_fill_never_reports_the_credential(
+    monkeypatch,
+):
+    """
+    Playwright embeds the argument it was given in its error text, so
+    a failed fill would otherwise print the credential. This is the
+    difference between a failed sign-in and a leaked username.
+    """
+
+    username = "leaky-user@example.com"
+    password = "leaky-password-value"
+
+    monkeypatch.setenv("LINKEDIN_USERNAME", username)
+    monkeypatch.setenv("LINKEDIN_PASSWORD", password)
+
+    class ExplodingField:
+        def fill(self, value):
+            raise RuntimeError(
+                f'waiting for locator, fill("{value}") failed'
+            )
+
+        def is_visible(self):
+            return True
+
+    class ExplodingPage(FakePage):
+        def locator(self, selector):
+            return FakeLocator(self, selector)
+
+        def click(self, selector):
+            self.clicked.append(selector)
+
+    source = LinkedInSource(profile="my-handle")
+    page = ExplodingPage([[]], signed_in=False)
+    source._page = page
+    source._context = object()
+
+    original = source._first_visible_locator
+
+    def explode(selectors, limit=6):
+        return ExplodingField()
+
+    monkeypatch.setattr(
+        source, "_first_visible_locator", explode
+    )
+
+    with pytest.raises(CollectionStopped) as error:
+        source._sign_in()
+
+    message = str(error.value)
+
+    assert username not in message
+    assert password not in message
+    assert "[REDACTED]" in message
+
+
 def test_sign_in_never_types_when_already_authenticated():
     """
     The password must not be typed when a session already exists, so
@@ -1682,8 +1832,11 @@ def test_sign_in_failure_is_treated_as_a_possible_challenge(
         when the password is wrong or a challenge is waiting.
         """
 
-        def click(self, selector):
-            self.clicked.append(selector)
+        def locator(self, selector):
+            # A node whose click never authenticates the session.
+            self._current_selector = selector
+
+            return FakeLocator(self, selector, authenticate=False)
 
     source = LinkedInSource(profile="my-handle")
     source._page = StaysSignedOut([[]], signed_in=False)

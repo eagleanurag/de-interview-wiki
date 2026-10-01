@@ -349,9 +349,7 @@ class LinkedInSource(Source):
         """
         The first selector with a visible match.
 
-        The sign-in page renders several overlapping panels, so a
-        selector that matches only a hidden element is treated as no
-        match.
+        Used for detection only, where the selector string is enough.
         """
 
         page = self._require_page()
@@ -364,6 +362,37 @@ class LinkedInSource(Source):
                 for index in range(min(count, 4)):
                     if located.nth(index).is_visible():
                         return selector
+            except Exception:  # noqa: BLE001
+                continue
+
+        return None
+
+    def _first_visible_locator(
+        self,
+        selectors: tuple[str, ...],
+        limit: int = 6,
+    ):
+        """
+        The first *visible element* matching any selector.
+
+        The element itself is returned, not its selector. The sign-in
+        page renders several overlapping panels, and re-resolving a
+        selector afterwards picks the first match, which is one of the
+        hidden ones.
+        """
+
+        page = self._require_page()
+
+        for selector in selectors:
+            try:
+                located = page.locator(selector)
+                count = located.count()
+
+                for index in range(min(count, limit)):
+                    element = located.nth(index)
+
+                    if element.is_visible():
+                        return element
             except Exception:  # noqa: BLE001
                 continue
 
@@ -399,10 +428,10 @@ class LinkedInSource(Source):
                 "LinkedIn credentials are not configured.",
             )
 
-        username_selector = self._first_visible(USERNAME_SELECTORS)
-        password_selector = self._first_visible(PASSWORD_SELECTORS)
+        username_field = self._first_visible_locator(USERNAME_SELECTORS)
+        password_field = self._first_visible_locator(PASSWORD_SELECTORS)
 
-        if not username_selector or not password_selector:
+        if username_field is None or password_field is None:
             raise CollectionStopped(
                 StopReason.LAYOUT_CHANGED,
                 "Could not find the sign-in form. LinkedIn's login "
@@ -410,29 +439,36 @@ class LinkedInSource(Source):
                 "selectors need updating.",
             )
 
-        submit_selector = self._first_visible(SUBMIT_SELECTORS)
+        submit = self._first_visible_locator(SUBMIT_SELECTORS)
 
-        if not submit_selector:
+        if submit is None:
             raise CollectionStopped(
                 StopReason.LAYOUT_CHANGED,
                 "Could not find the sign-in button.",
             )
 
         try:
-            page.fill(
-                username_selector, _credential("LINKEDIN_USERNAME")
-            )
-            page.fill(
-                password_selector, _credential("LINKEDIN_PASSWORD")
-            )
-            page.click(submit_selector)
+            # The located element is used directly rather than its
+            # selector. Re-resolving the selector would pick the first
+            # match, which on this page is a hidden panel.
+            username_field.fill(_credential("LINKEDIN_USERNAME"))
+            password_field.fill(_credential("LINKEDIN_PASSWORD"))
+
+            submit.click()
 
             page.wait_for_load_state("domcontentloaded")
         except Exception as exc:  # noqa: BLE001
+            # The driver's error text can echo the value that was
+            # typed, so it is redacted before being reported or
+            # printed. This is the difference between a failed sign-in
+            # and a leaked username.
             raise CollectionStopped(
                 StopReason.FAILED,
-                f"Sign-in did not complete: {exc}",
-            ) from exc
+                "Sign-in did not complete: "
+                + _redact(exc)
+                + ". If the form was found but not editable, the "
+                "page layout may have changed.",
+            ) from None
 
         self._assert_no_challenge("sign in")
 
@@ -943,6 +979,34 @@ class LinkedInSource(Source):
         """Skip posts already persisted in an earlier run."""
 
         self._seen = set(seen)
+
+
+def _redact(error: object, limit: int = 400) -> str:
+    """
+    Summarize an error without anything sensitive in it.
+
+    Playwright's messages embed the argument that was passed, so a
+    failed ``fill`` would otherwise print the credential. Every
+    configured credential is removed, and the result is bounded so a
+    verbose driver trace cannot flood the log either.
+    """
+
+    text = str(error)
+
+    for name in credential_module.CREDENTIAL_ENVIRONMENT_VARIABLES:
+        import os
+
+        value = os.environ.get(name, "")
+
+        if value and len(value) >= 4:
+            text = text.replace(value, "[REDACTED]")
+
+    text = " ".join(text.split())
+
+    if len(text) <= limit:
+        return text
+
+    return text[:limit] + " [truncated]"
 
 
 def _credential(name: str) -> str:
