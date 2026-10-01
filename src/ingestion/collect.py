@@ -14,6 +14,8 @@ mistaken for a complete one.
 from __future__ import annotations
 
 import json
+import os
+import time
 import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -140,7 +142,13 @@ def write_state(
     state: CollectionState,
     root: str | Path = ".",
 ) -> Path:
-    """Persist collection state so a later run can resume."""
+    """
+    Persist collection state so a later run can resume.
+
+    Written atomically, because a state file half-written by an
+    interrupted run would be unreadable and the run after it would have
+    nothing to resume from.
+    """
 
     state.updated_at = _now()
 
@@ -153,9 +161,35 @@ def write_state(
         json.dumps(state.to_dict(), indent=2, sort_keys=True),
         encoding="utf-8",
     )
-    temporary.replace(path)
+
+    _replace(temporary, path)
 
     return path
+
+
+def _replace(temporary: Path, target: Path, *, attempts: int = 5) -> None:
+    """
+    Move a temporary file onto its target, retrying a transient refusal.
+
+    Windows denies a replace while any handle to the target is open,
+    which happens when a reader, an indexer or another process happens
+    to hold it at that moment. It clears on its own, so the write is
+    retried briefly rather than failing a run over a transient lock.
+
+    Every attempt is real, so a refusal that is genuinely permanent
+    raises on the last attempt rather than being swallowed.
+    """
+
+    for attempt in range(attempts):
+        try:
+            os.replace(temporary, target)
+            return
+
+        except PermissionError:
+            if attempt == attempts - 1:
+                raise
+
+            time.sleep(0.05 * (attempt + 1))
 
 
 def post_id_for(source_post_id: str) -> str:

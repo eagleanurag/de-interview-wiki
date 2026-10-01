@@ -166,6 +166,7 @@ def test_ingestion_persists_every_bundle(tmp_path, collected):
         ManualSource(FIXTURES),
         root=root,
         limits=CollectionLimits(),
+        repository_root=tmp_path,
     )
 
     report = collector.run()
@@ -182,7 +183,8 @@ def test_ingestion_persists_every_bundle(tmp_path, collected):
 def test_every_ingested_post_validates(tmp_path, collected):
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     report = validate_posts(root=root)
 
@@ -198,11 +200,13 @@ def test_ingesting_twice_creates_no_second_copy(tmp_path, collected):
 
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     first = {path.name for path in root.iterdir() if path.is_dir()}
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     second = {path.name for path in root.iterdir() if path.is_dir()}
 
@@ -223,7 +227,8 @@ def test_a_changed_bundle_refreshes_rather_than_duplicates(
 
     root = tmp_path / "posts"
 
-    Collector(ManualSource(drop), root=root).run()
+    Collector(ManualSource(drop), root=root,
+        repository_root=tmp_path).run()
 
     before = {path.name for path in root.iterdir() if path.is_dir()}
 
@@ -231,7 +236,8 @@ def test_a_changed_bundle_refreshes_rather_than_duplicates(
         "Second version of the note, corrected.", encoding="utf-8"
     )
 
-    Collector(ManualSource(drop), root=root).run()
+    Collector(ManualSource(drop), root=root,
+        repository_root=tmp_path).run()
 
     after = {path.name for path in root.iterdir() if path.is_dir()}
 
@@ -254,7 +260,8 @@ def test_pdf_text_is_extracted(tmp_path, collected):
 
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     from src.ingestion.post_loader import load_post as load
 
@@ -289,7 +296,8 @@ def test_a_corrupt_pdf_yields_no_text_and_does_not_raise(tmp_path):
 
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     report = MediaReport()
 
@@ -322,7 +330,8 @@ def test_a_broken_pdf_does_not_stop_the_run(tmp_path, collected):
 
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     from src.ingestion.post_loader import load_post
 
@@ -346,7 +355,8 @@ def test_images_are_ingested_without_claiming_a_description(
 
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     from src.ingestion.post_loader import load_post
 
@@ -370,7 +380,8 @@ def test_images_are_ingested_without_claiming_a_description(
 def test_media_paths_stay_inside_the_post(tmp_path, collected):
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     for directory in root.iterdir():
         if not directory.is_dir():
@@ -398,7 +409,8 @@ def test_the_full_pipeline_runs_on_the_fixtures(tmp_path, collected):
 
     root = tmp_path / "posts"
 
-    Collector(ManualSource(FIXTURES), root=root).run()
+    Collector(ManualSource(FIXTURES), root=root,
+        repository_root=tmp_path).run()
 
     results = tmp_path / "worker-results"
     results.mkdir()
