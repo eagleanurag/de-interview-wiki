@@ -901,11 +901,25 @@ def test_the_saved_items_drop_zone_is_ignored() -> None:
         assert ok, f"{pattern} is not ignored"
 
 
+#: The committed synthetic fixture. A directory name, deliberately the
+#: same shape as the drop zone so the reader can tell them apart.
+SAVED_ITEMS_FIXTURE = "tests/fixtures/saved-items/"
+
+
 def test_saved_items_state_is_not_committed() -> None:
     """
-    The manifest records the user's saved list: links, titles, dates and
-    their own notes. That is the user's material and does not belong in
-    this repository's history, the same as the drop zone it lives in.
+    The drop zone and the manifest are the user's material and do not
+    belong in this repository's history.
+
+    The rule names the drop zone rather than any path containing
+    ``saved-items``, because a synthetic fixture lives at
+    ``tests/fixtures/saved-items/`` on purpose and a rule that could not
+    tell the two apart would be a rule somebody eventually switches off.
+    What is refused is unchanged: the whole of ``data/incoming/``, and
+    any manifest state file wherever it appears.
+
+    The fixture is not simply allowed through. The next test proves it
+    is synthetic, which is what makes allowing it safe.
     """
 
     tracked = git("ls-files").splitlines()
@@ -914,10 +928,82 @@ def test_saved_items_state_is_not_committed() -> None:
         path
         for path in tracked
         if path.endswith("saved-items-manifest.json")
-        or "saved-items/" in path
+        or path.startswith("data/incoming/")
     ]
 
-    assert offenders == []
+    assert offenders == [], sorted(offenders)
+
+
+def test_the_committed_saved_items_fixture_is_synthetic() -> None:
+    """
+    The one committed saved-items directory is generated, not collected.
+
+    Proved by rebuilding it and comparing, rather than by trusting a
+    comment. A fixture is the only way to test this phase end to end, so
+    the question is not whether to have one but whether it could be
+    somebody's real export pasted in. It cannot: the builder writes it
+    from constants in this file, and a rebuilt copy that differs from
+    the committed one is a committed copy nobody can account for.
+    """
+
+    import filecmp
+    import shutil
+    import subprocess
+    import tempfile
+
+    from tests import build_fixtures
+
+    committed = REPO_ROOT / SAVED_ITEMS_FIXTURE
+
+    assert committed.is_dir(), "the fixture is not committed"
+
+    names = {
+        path.relative_to(committed).as_posix()
+        for path in committed.rglob("*")
+        if path.is_file()
+    }
+
+    assert names, "the fixture is empty"
+
+    scratch = Path(tempfile.mkdtemp())
+
+    try:
+        original = build_fixtures.ROOT
+
+        # The builder's root is already ``tests/fixtures``, so a
+        # rebuild under a scratch root lands at ``<scratch>/saved-items``.
+        build_fixtures.ROOT = scratch
+
+        build_fixtures.build_saved_items()
+
+        rebuilt = scratch / "saved-items"
+
+        rebuilt_names = {
+            path.relative_to(rebuilt).as_posix()
+            for path in rebuilt.rglob("*")
+            if path.is_file()
+        }
+
+        assert rebuilt_names == names, (
+            "the committed fixture is not what the builder produces: "
+            f"only rebuilt {sorted(rebuilt_names)[:3]}, "
+            f"committed {sorted(names)[:3]}"
+        )
+
+        differing = [
+            name
+            for name in sorted(names)
+            if not filecmp.cmp(
+                committed / name, rebuilt / name, shallow=False
+            )
+        ]
+
+        assert differing == [], differing
+
+    finally:
+        build_fixtures.ROOT = original
+
+        shutil.rmtree(scratch, ignore_errors=True)
 
 
 def test_saved_items_adds_no_read_only_violation() -> None:
