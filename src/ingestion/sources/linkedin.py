@@ -139,10 +139,23 @@ PASSWORD_SELECTORS = (
     'input#password',
 )
 
+# Submit selectors.
+#
+# Exact text matching is essential. `:has-text()` is a substring
+# match, so "Sign in with Microsoft" and "Sign in with Apple" would
+# both match "Sign in" and the first of them would win, opening an
+# OAuth popup instead of submitting the credentials form. `:text-is()`
+# compares the trimmed text exactly, so only the real submit button
+# matches.
+#
+# LinkedIn's login page is a React application with no <form>
+# element at all, so pressing Enter on the password field is not a
+# fallback and the button click is the only route.
 SUBMIT_SELECTORS = (
     'button[type="submit"]',
-    'button:has-text("Sign in")',
-    'button:has-text("sign in")',
+    'button:text-is("Sign in")',
+    'button:text-is("sign in")',
+    'button:text-is("Sign in with password")',
     'input[type="submit"]',
 )
 

@@ -911,6 +911,52 @@ def test_the_journal_records_transitions_without_credentials():
 # ---------------------------------------------------------------------
 
 
+def test_the_submit_selector_cannot_match_an_oauth_button():
+    """
+    Regression guard from the live run.
+
+    LinkedIn's login page has no <form> element and renders "Sign in",
+    "Sign in with Microsoft" and "Sign in with Apple" as sibling
+    buttons. `:has-text()` is a substring match, so it selected the
+    Microsoft button, opened an OAuth popup, and never submitted the
+    credentials. `:text-is()` matches the trimmed text exactly.
+    """
+
+    from src.ingestion.sources.linkedin import SUBMIT_SELECTORS
+
+    for selector in SUBMIT_SELECTORS:
+        # The broad substring form must not appear anywhere.
+        assert ":has-text(" not in selector, selector
+
+    # And an exact-match form must be present for the SPA layout.
+    assert any(
+        ':text-is("Sign in")' in selector
+        for selector in SUBMIT_SELECTORS
+    )
+
+
+def test_no_oauth_provider_is_selected_as_the_submit():
+    for selector in (
+        "Microsoft",
+        "Apple",
+        "Google",
+        "SSO",
+    ):
+        assert selector not in SUBMIT_SELECTORS
+
+
+def test_the_login_form_is_never_submitted_via_enter():
+    """
+    There is no <form> element, so a press-and-submit fallback would
+    silently do nothing. The button click is the only route.
+    """
+
+    source = SOURCE_FILE.read_text(encoding="utf-8")
+
+    assert "press(\"Enter\")" not in source
+    assert "keyboard.press" not in source
+
+
 def test_no_read_only_action_is_performed():
     """
     The sign-in submit is allowed. Anything interactive on content is
