@@ -77,6 +77,22 @@ SOURCE_CARD_SUBTITLE = (
     "for study and attribution."
 )
 
+#: How each capture method is described to a reader. The point of the
+#: distinction is that material this project was given is not material
+#: it went and collected, and a reader is entitled to know which they
+#: are looking at.
+CAPTURE_METHOD_LABELS = {
+    "user_export": "You exported this from your saved items",
+    "user_provided": "You supplied the content for this",
+    "user_saved_page": "You saved the page and supplied it here",
+    "user_bundle": "You assembled this from your own notes",
+}
+
+SAVED_ITEM_CARD_SUBTITLE = (
+    "Traced back to the entry in your saved list, and to the capture "
+    "that came with it."
+)
+
 
 def render_home(model: SiteModel) -> str:
     """Dashboard: totals plus the most recent knowledge entries."""
@@ -971,6 +987,7 @@ def render_post_detail(
                     "for the full content."
                 ),
             ),
+            _saved_item_card(post),
             _generated_knowledge_card(model, post, page),
             _questions_card(post),
             _source_material_card(post),
@@ -1195,6 +1212,85 @@ def _questions_card(post: KnowledgePost) -> str:
     return section(
         f"Interview questions ({len(post.interview_questions)})",
         cards,
+    )
+
+
+def _saved_item_card(post: KnowledgePost) -> str:
+    """
+    The saved item a post came from.
+
+    Nothing at all for a post that did not come from one: a section
+    headed "saved item" on every page would imply every post was saved,
+    and would bury the one section that actually tells a reader
+    something.
+    """
+    saved = post.saved_item
+
+    if saved is None or not saved.saved_item_id:
+        return ""
+
+    method = post.source.capture_method or ""
+
+    # The reader gets the plain description and the recorded value is
+    # kept alongside it, so the page says what happened in words and
+    # remains traceable back to the manifest in the exact term it used.
+    arrival = esc(
+        CAPTURE_METHOD_LABELS.get(
+            method, method.replace("_", " ") or "not recorded"
+        )
+    )
+
+    if method:
+        arrival += (
+            f' <code class="muted" data-capture-method="{esc(method)}">'
+            f"{esc(method)}</code>"
+        )
+
+    pairs: list[tuple[str, str]] = [
+        ("How it arrived", arrival),
+        ("Saved item", f"<code>{esc(saved.saved_item_id)}</code>"),
+    ]
+
+    if saved.saved_date:
+        pairs.append(("Saved on", esc(saved.saved_date)))
+
+    if saved.url_kind:
+        pairs.append(("Link type", esc(saved.url_kind.replace("_", " "))))
+
+    if saved.capture_match and saved.capture_match != "no bundle":
+        pairs.append(("Content matched by", esc(saved.capture_match)))
+
+    if saved.saved_notes:
+        pairs.append(("Your note", esc(saved.saved_notes)))
+
+    extras = ""
+
+    if saved.capture_notes:
+        items = "".join(
+            f"<li>{esc(note)}</li>"
+            for note in saved.capture_notes
+            if note
+        )
+
+        if items:
+            extras = (
+                '<p class="muted">About this capture</p>'
+                f"<ul>{items}</ul>"
+            )
+
+    if not extras:
+        # The state is stated even when there is nothing to add, so a
+        # reader is never left guessing whether something was missed.
+        extras = (
+            '<p class="muted">The capture was read in full; nothing '
+            "was left unreadable.</p>"
+        )
+
+    return section(
+        "Saved item",
+        definition_list(pairs) + extras,
+        css_class="card card-source",
+        subtitle=SAVED_ITEM_CARD_SUBTITLE,
     )
 
 

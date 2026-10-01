@@ -69,6 +69,27 @@ DEFAULT_PLATFORM = "manual"
 
 DEFAULT_DOMAIN = "Data Engineering"
 
+#: The top-level block a source uses to record provenance the common
+#: blocks do not model. The saved-items source keeps the link back to the
+#: saved item here, so a post says which item it came from and how
+#: complete that item was.
+PROVENANCE_KEY = "saved_item"
+
+#: What may be recorded in that block. An allowlist, for the same
+#: reason the other blocks use one: a post is a committed file, and
+#: nothing should reach it that was not deliberately put there.
+PROVENANCE_FIELDS = (
+    "saved_item_id",
+    "saved_date",
+    "canonical_url",
+    "url_kind",
+    "capture_state",
+    "capture_match",
+    "capture_notes",
+    "saved_notes",
+    "metadata_only",
+)
+
 # The document keys the pipeline understands, in the order the
 # repository writes them.
 DOCUMENT_KEYS = (
@@ -80,6 +101,7 @@ DOCUMENT_KEYS = (
     "interview_questions",
     "classification",
     "enrichment",
+    PROVENANCE_KEY,
 )
 
 #: What an enrichment records about itself.
@@ -100,6 +122,7 @@ SOURCE_KEYS = (
     "captured_at",
     "author",
     "published_at",
+    "capture_method",
 )
 
 AI_ANALYSIS_KEYS = (
@@ -358,9 +381,16 @@ class PostDocument:
             "ai_analysis": empty_ai_analysis(),
             "interview_questions": [],
             "enrichment": {
-                "source_digest": None,
-                "enricher_version": None,
-                "enriched_at": None,
+                # Empty strings, not nulls. A post that has not been
+                # enriched has no fingerprint, and the model declares
+                # these as strings, so writing null here would produce a
+                # document the project's own model refuses to load. That
+                # is not hypothetical: an unenriched post is meant to be
+                # aggregated rather than dropped, and it cannot be while
+                # this block disagrees with the model.
+                "source_digest": "",
+                "enricher_version": "",
+                "enriched_at": "",
             },
             "classification": {
                 "domain": domain or DEFAULT_DOMAIN,
@@ -468,14 +498,27 @@ class PostDocument:
     # -----------------------------------------------------------------
 
     def enrichment_fingerprint(self) -> dict:
-        """What is known about how this post was enriched."""
+        """
+        What is known about how this post was enriched.
+
+        Values that are absent or null come back as an empty string, so
+        a post written before this block existed reads the same as one
+        that has simply not been enriched. Both mean the same thing, and
+        returning a dict of nulls from one shape and empty strings from
+        the other would make every caller handle both.
+        """
 
         raw = self.data.get("enrichment")
 
         if not isinstance(raw, dict):
             return {}
 
-        return {key: raw.get(key) for key in ENRICHMENT_KEYS}
+        return {
+            key: (raw.get(key) or "")
+            if isinstance(raw.get(key), str)
+            else ""
+            for key in ENRICHMENT_KEYS
+        }
 
     def mark_enriched(
         self,
@@ -532,6 +575,7 @@ class PostDocument:
         author: str | None = None,
         captured_at: str | None = None,
         published_at: str | None = None,
+        capture_method: str | None = None,
     ) -> None:
         """
         Update provenance without discarding what is already there.
@@ -548,6 +592,7 @@ class PostDocument:
             ("author", author),
             ("captured_at", captured_at),
             ("published_at", published_at),
+            ("capture_method", capture_method),
         ):
             if value is None:
                 continue
@@ -559,6 +604,44 @@ class PostDocument:
         self.data["source"] = {
             key: source.get(key) for key in SOURCE_KEYS
         }
+
+    def set_provenance(self, **fields: Any) -> None:
+        """
+        Record a named block of provenance at the top level.
+
+        Used by a source that carries provenance the common blocks do
+        not model. The block is rebuilt from an allowlist rather than
+        merged key by key, so a field that is no longer meaningful is
+        cleared instead of lingering with a stale value, and so an
+        unexpected key cannot slip into a committed post.
+        """
+
+        block = self.data.get(PROVENANCE_KEY)
+
+        if not isinstance(block, dict):
+            block = {}
+
+        for name in PROVENANCE_FIELDS:
+            if name in fields:
+                block[name] = fields[name]
+            else:
+                block.pop(name, None)
+
+        if block:
+            self.data[PROVENANCE_KEY] = block
+
+        else:
+            self.data.pop(PROVENANCE_KEY, None)
+
+    def provenance(self) -> dict[str, Any]:
+        """The recorded provenance block, or an empty one."""
+
+        block = self.data.get(PROVENANCE_KEY)
+
+        if isinstance(block, dict):
+            return block
+
+        return {}
 
     def media(self) -> list[MediaEntry]:
         """Declared media entries, in the order they are authored."""

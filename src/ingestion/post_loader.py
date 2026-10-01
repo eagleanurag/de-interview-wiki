@@ -36,6 +36,7 @@ from src.models import (
     InterviewQuestion,
     KnowledgePost,
     MediaItem,
+    SavedItemProvenance,
     SourceInfo,
 )
 
@@ -85,6 +86,11 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
         # Kept verbatim rather than parsed: a relative form such as
         # "2 days ago" is only resolvable against the capture date.
         published_at=source_data.get("published_at"),
+        # How the content reached the project, when the source said so.
+        # A post collected by an authorized run and a post a person
+        # supplied are not the same thing, and the difference has to
+        # survive being loaded or it cannot be shown to a reader.
+        capture_method=source_data.get("capture_method"),
     )
 
     ai_data = raw_data.get("ai_analysis", {})
@@ -140,6 +146,7 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
         interview_questions=questions,
         classification=classification,
         directory=str(post_directory),
+        saved_item=_saved_item(document),
         enrichment=EnrichmentFingerprint(
             **{
                 key: value or ""
@@ -149,6 +156,28 @@ def load_post(post_directory: str | Path) -> KnowledgePost:
                 if key in EnrichmentFingerprint.model_fields
             }
         ),
+    )
+
+
+def _saved_item(document: PostDocument) -> SavedItemProvenance | None:
+    """
+    The saved item a post came from, when it came from one.
+
+    None rather than an empty block for a post that was not saved, so a
+    post that has no saved-item provenance does not carry a block of
+    nulls claiming it does.
+    """
+    raw = document.provenance()
+
+    if not raw:
+        return None
+
+    return SavedItemProvenance(
+        **{
+            key: value
+            for key, value in raw.items()
+            if key in SavedItemProvenance.model_fields
+        }
     )
 
 

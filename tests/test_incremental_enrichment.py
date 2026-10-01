@@ -346,3 +346,83 @@ def test_a_result_with_no_fingerprint_is_not_reused(tmp_path):
     )
 
     assert _reusable(target, "abc") is None
+
+
+# ---------------------------------------------------------------------
+# Provenance on a reused result
+# ---------------------------------------------------------------------
+
+
+def test_a_reused_result_takes_the_current_attribution():
+    """
+    The fingerprint covers the content, so a cached result is reused
+    even after the post gains provenance it did not have. The analysis
+    is still correct and must not be paid for again, but the
+    attribution around it is not, and a knowledge base that kept the
+    stale copy would publish a post that says less than its source does.
+    """
+
+    from src.pipeline import _refresh_provenance
+
+    post = make_post()
+    post.source.capture_method = "user_provided"
+
+    payload = {
+        "id": post.id,
+        "source": {"platform": "manual", "url": None},
+        "original_text": "an older copy of the text",
+        "ai_analysis": {"summary": "Paid for once.", "topics": ["Spark"]},
+        "interview_questions": [
+            {"question": "Explain partitioning.", "type": "theory"}
+        ],
+    }
+
+    refreshed = _refresh_provenance(payload, post)
+
+    assert refreshed["source"]["capture_method"] == "user_provided"
+    assert refreshed["original_text"] == post.original_text
+
+    # What the model produced is untouched.
+    assert refreshed["ai_analysis"] == {
+        "summary": "Paid for once.",
+        "topics": ["Spark"],
+    }
+    assert refreshed["interview_questions"] == [
+        {"question": "Explain partitioning.", "type": "theory"}
+    ]
+
+
+def test_a_reused_result_drops_a_provenance_the_post_no_longer_claims():
+    """
+    A field that is absent from the post is removed rather than left, so
+    a post that has stopped claiming to have been captured stops saying
+    it in the published knowledge base.
+    """
+
+    from src.pipeline import _refresh_provenance
+
+    payload = {
+        "id": "sample_x",
+        "source": {"platform": "linkedin", "capture_method": "user_export"},
+        "saved_item": {"saved_item_id": "urn:li:saved:abc"},
+    }
+
+    refreshed = _refresh_provenance(payload, make_post())
+
+    assert "saved_item" not in refreshed
+    assert "capture_method" not in refreshed["source"]
+
+
+def test_a_reused_result_carries_the_saved_item_through():
+    from src.models import SavedItemProvenance
+
+    from src.pipeline import _refresh_provenance
+
+    post = make_post()
+    post.saved_item = SavedItemProvenance(
+        saved_item_id="urn:li:saved:abc", saved_date="2026-01-02"
+    )
+
+    refreshed = _refresh_provenance({"id": post.id}, post)
+
+    assert refreshed["saved_item"]["saved_item_id"] == "urn:li:saved:abc"

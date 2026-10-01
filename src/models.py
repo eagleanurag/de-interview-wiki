@@ -17,6 +17,20 @@ class SourceInfo(BaseModel):
     captured_at: datetime
     author: str | None = None
 
+    # How the content actually reached the project. A post is either
+    # collected by an authorized automated run, or supplied by a person
+    # as a file. The two are not interchangeable, so the difference is
+    # recorded rather than left to be guessed from the platform: a
+    # LinkedIn post that a user exported and saved says so.
+    #
+    # Omitted from a dump when it is not set, because a post that does
+    # not declare a capture method has nothing to declare, and a null in
+    # every entry of the published knowledge base would be noise.
+    capture_method: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
     # When the source itself published the content, exactly as it
     # rendered it. A string rather than a datetime because a relative
     # form such as "2 days ago" is only resolvable against the capture
@@ -66,6 +80,31 @@ class EnrichmentFingerprint(BaseModel):
     enriched_at: str = ""
 
 
+class SavedItemProvenance(BaseModel):
+    """
+    Which saved item a post came from, and how complete it was.
+
+    A saved list is a list of links, and a link is not a post. This
+    records the difference so a reader can tell material that was
+    captured from material that was only linked, and can get back to the
+    item it came from.
+
+    Kept out of a post that did not come from a saved list, rather than
+    written empty, because a block of nulls on every post would say
+    "this was saved" about posts that were not.
+    """
+
+    saved_item_id: str = ""
+    saved_date: str | None = None
+    canonical_url: str | None = None
+    url_kind: str | None = None
+    capture_state: str | None = None
+    capture_match: str | None = None
+    capture_notes: list[str] = Field(default_factory=list)
+    saved_notes: str | None = None
+    metadata_only: bool = False
+
+
 class KnowledgePost(BaseModel):
     id: str
     source: SourceInfo
@@ -94,4 +133,14 @@ class KnowledgePost(BaseModel):
     # changed instead of paying for the model on every post.
     enrichment: EnrichmentFingerprint = Field(
         default_factory=EnrichmentFingerprint, exclude=True
+    )
+
+    # Which saved item this post came from, for a post that came from
+    # one. Unlike the fields above this is part of the published
+    # knowledge base: it is a fact about where the content came from,
+    # not about how this pipeline processed it, and a reader needs it to
+    # tell a captured post from a link. Omitted when there is none, so a
+    # post that was never saved does not carry a null claiming it was.
+    saved_item: SavedItemProvenance | None = Field(
+        default=None, exclude_if=lambda value: value is None
     )

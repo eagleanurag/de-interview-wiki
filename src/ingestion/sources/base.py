@@ -102,6 +102,18 @@ class CollectedPost:
     media_urls: list = field(default_factory=list)
     extra: dict = field(default_factory=dict)
 
+    #: How the content reached the project, when that is worth saying.
+    #: A post that a user exported and saved is not the same thing as
+    #: one an authorized run collected, and the difference is recorded
+    #: rather than inferred from the platform.
+    capture_method: str | None = None
+
+    #: A named block of provenance written to the top level of
+    #: ``post.json``, for a source that has provenance of its own to
+    #: keep. The saved-items source uses it to record which saved item a
+    #: post came from and how complete that item was.
+    provenance: dict | None = None
+
     def to_document(
         self,
         *,
@@ -145,6 +157,12 @@ class CollectedPost:
                     path=media_path_for(path.name),
                 )
             )
+
+        if self.capture_method:
+            document.merge_source(capture_method=self.capture_method)
+
+        if self.provenance:
+            document.set_provenance(**self.provenance)
 
         return document
 

@@ -5,7 +5,7 @@ Data Engineering interview knowledge base, built from normalized posts.
 ## Architecture
 
 ```
-authorized source          LinkedInSource  ·  ManualSource
+authorized source          LinkedInSource · ManualSource · SavedItemsSource
         ↓
 collection                bounded, resumable, read-only
         ↓
@@ -26,6 +26,11 @@ Every source implements one contract in
 [`src/ingestion/sources/base.py`](src/ingestion/sources/base.py), so the
 pipeline never depends on a source being LinkedIn. Adding a source means
 adding a class, not editing the collector.
+
+Only `LinkedInSource` touches a website, and only under an
+already-authorized sign-in. `ManualSource` and `SavedItemsSource` read
+files you put in a directory, which is what keeps the rest of the
+pipeline testable and keeps it working when a web interface changes.
 
 ## Running the whole pipeline locally
 
@@ -126,6 +131,137 @@ file makes it a different post rather than a silently ignored duplicate.
 Nothing is invented. A PDF that cannot be read records why and carries
 no text, and a post with no analysis is still stored, labelled and
 reachable rather than dropped.
+
+## Saved Items
+
+A saved list is not a document. It is a list of links, and most of them
+have no body text behind them — LinkedIn gives you a URL and a date and
+nothing else. This is the workflow for that case, and the rule it keeps
+is the one that matters: **a link with nothing behind it stays a link.**
+
+It needs no credentials, no browser and no network. Nothing is fetched
+to fill a gap, so the pipeline does not depend on how LinkedIn's web
+interface is laid out today, and a change to it cannot break this.
+
+### 1. Put the list in
+
+Export your saved items, or write the links down. Drop the file in:
+
+```
+data/incoming/saved-items/
+    manifest.csv
+```
+
+`.csv`, `.tsv`, `.txt`, `.json` and `.jsonl` are all read. Columns are
+matched by name, so the header does not have to be exact:
+
+| Meaning | Accepted as |
+|---|---|
+| the link | `url`, `URL`, `link`, `LinkedIn URL`, `Saved URL`, `permalink` |
+| when you saved it | `saved date`, `date saved`, `saved on`, `date`, `created at` |
+| title | `title`, `headline`, `subject` |
+| author | `author`, `saved by`, `owner` |
+| your note | `notes`, `note`, `comment` |
+| a capture folder | `bundle`, `capture`, `content`, `folder` |
+
+A column named for a credential — `password`, `token`, `cookie`,
+`api_key`, `storage_state` — is refused and reported, never read. A
+saved list does not contain credentials, and a file that does is not
+something to copy into a knowledge base.
+
+The same link written two ways is one item. Whitespace, a trailing
+slash, a `#fragment` and tracking parameters are all normalised away;
+the part that identifies the post is preserved exactly, so two different
+posts never collapse into one.
+
+### 2. Add the content you captured
+
+Where you have the post itself, put it in a folder beside the list.
+The folder claims one item, in whichever way is easiest:
+
+```
+data/incoming/saved-items/
+    manifest.csv
+    urn-li-saved-3a22fed0239f2912/     # named after the item's id
+        content.md
+        screenshot.png
+        document.pdf
+    any-folder-name/
+        capture.json                   # {"source_id": "urn:li:saved:..."}
+        page.html
+    another-folder/
+        capture.json                   # {"url": "https://www.linkedin.com/..."}
+        page.html
+```
+
+`.md`, `.txt`, `.json`, `.jsonl`, `.html`, `.pdf`, `.png`, `.jpg`,
+`.webp`, `.gif` and `.bmp` are all read. A `capture.json` may also
+carry the text itself, in which case no other file is needed.
+
+Every item's id is in `data/incoming/saved-items/saved-items-manifest.json`
+once you have run the command once, and the report prints the folder name
+to use when an item has no content yet.
+
+### 3. Import
+
+```bash
+python -m src.ingestion.collect_cli saved-items \
+    --input data/incoming/saved-items/manifest.csv
+
+python -m src.pipeline
+```
+
+The report tells you what happened:
+
+```
+Saved Items Report
+------------------
+Discovered      : 500
+New             : 470
+Duplicates      : 30
+Known items     : 500
+With content    : 320
+Metadata only   : 150
+Imported        : 320
+Enriched        : 318
+Failed          : 2
+Pending         : 150
+```
+
+`Metadata only` is the backlog, not a failure: those are saved links
+waiting for you to supply the post. `Discovered`, `New` and `Duplicates`
+describe the list you just read; the rest describe every item the
+manifest knows about.
+
+Useful options: `--dry-run`, `--validate` (check every imported post),
+`--report FILE`, `--max-posts N`, and `--json`.
+
+### What it will not do
+
+- **It will not fetch anything.** A missing post stays missing. No
+  LinkedIn page is ever requested to complete an item.
+- **It will not invent a body.** A URL and a date produce a saved item
+  with a URL and a date. Only content you supplied becomes post text.
+- **It will not read a credential.** There is nothing here to
+  authenticate with, so the code has no way to try.
+- **It will not OCR.** An image is kept as an image and says so. Until
+  you write the text beside it, it contributes no words.
+- **It will not act on LinkedIn.** No like, comment, share, follow,
+  connection, message, post, delete or setting change. There is no
+  Saved Posts crawler here and none is planned.
+
+### Staying honest about provenance
+
+Every imported post records `capture_method` — `user_provided`,
+`user_saved_page` or `user_export` — and a `saved_item` block naming the
+item, its save date and how the capture was matched. A post that came
+from an authorized collection run is not the same thing as a post you
+supplied, and the difference survives into the published wiki, where the
+post page says which it is and links back to the item.
+
+Running it again imports nothing new: an item is identified by its
+canonical URL, and only a capture whose content actually changed is
+re-read. Editing one file re-enriches that one post.
 
 ## Collection
 
@@ -701,6 +837,15 @@ that is already on the machine. `platform` records provenance, so a
 post added by hand says so rather than implying a named collection
 process.
 
+The saved-items importer holds to the same boundary. It reads a list you
+exported and the captures you put beside it, and it cannot reach a
+credential, open a connection or drive a browser. That is enforced by
+tests that parse its imports rather than matching its text, so refusing
+a column named `token` cannot be mistaken for using one. Nothing is
+fetched to complete an item that arrived as a bare link, and no captcha,
+MFA, OTP, rate limit or access control is bypassed, evaded or worked
+around anywhere in this repository.
+
 Its modules:
 
 | Module | Responsibility |
@@ -710,6 +855,8 @@ Its modules:
 | `src/ingestion/validation.py` | the post contract, and every check against it |
 | `src/ingestion/post_loader.py` | reading a post for the worker |
 | `src/ingestion/cli.py` | the command line above |
+| `src/ingestion/saved_items/` | saved-list import: URL identity, bundle matching, the manifest |
+| `src/ingestion/collect_cli.py` | `saved-items`, alongside the collection commands |
 
 ### Running the control plane logic locally
 

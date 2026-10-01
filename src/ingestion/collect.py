@@ -167,6 +167,24 @@ def write_state(
     return path
 
 
+def replace_file(
+    temporary: Path,
+    target: Path,
+    *,
+    attempts: int = 5,
+) -> None:
+    """
+    Move a temporary file onto its target, retrying a transient refusal.
+
+    The shared entry point for an atomic write. Exposed because the
+    saved-items manifest needs the same guarantee for the same reason:
+    a state file half-written by an interrupted run would leave the run
+    after it with nothing to resume from.
+    """
+
+    _replace(temporary, target, attempts=attempts)
+
+
 def _replace(temporary: Path, target: Path, *, attempts: int = 5) -> None:
     """
     Move a temporary file onto its target, retrying a transient refusal.
@@ -548,10 +566,19 @@ class Collector:
             author=collected.author,
             captured_at=collected.extra.get("collected_at"),
             published_at=collected.published_at,
+            capture_method=collected.capture_method,
         )
 
         if existing.source != before:
             changed = True
+
+        if collected.provenance:
+            before_provenance = existing.provenance()
+
+            existing.set_provenance(**collected.provenance)
+
+            if existing.provenance() != before_provenance:
+                changed = True
 
         if not changed:
             return False

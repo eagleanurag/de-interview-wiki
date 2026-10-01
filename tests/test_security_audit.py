@@ -383,6 +383,233 @@ def test_the_remote_agent_still_requires_owner_control() -> None:
 
 
 # ---------------------------------------------------------------------
+# Saved Items
+# ---------------------------------------------------------------------
+
+
+def saved_items_sources() -> list[Path]:
+    return sorted(
+        (REPO_ROOT / "src" / "ingestion" / "saved_items").rglob("*.py")
+    )
+
+
+def imported_modules(path: Path) -> set[str]:
+    """
+    Every module a file imports, by name.
+
+    Read from the tree rather than matched as text, because a file that
+    *refuses* a column named "password" or "token" contains those words
+    by design, and a text rule would flag the refusal as the use.
+    """
+
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+
+    modules: set[str] = set()
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            for alias in node.names:
+                modules.add(alias.name.split(".")[0])
+                modules.add(alias.name)
+
+        elif isinstance(node, ast.ImportFrom):
+            if node.module:
+                modules.add(node.module.split(".")[0])
+                modules.add(node.module)
+
+    return modules
+
+
+def test_saved_items_needs_no_credential() -> None:
+    """
+    The saved-items path must not be able to reach a credential.
+
+    A saved list is a file the user exported; there is nothing for it to
+    authenticate with. A saved-items module that could read the
+    credential store would mean the phase had quietly acquired a way to
+    act as the user, which is the opposite of what it is for.
+    """
+
+    banned = {
+        "src.ingestion.credentials",
+        "credentials",
+        "playwright",
+        "keyring",
+        "netrc",
+    }
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        for name in imported_modules(path):
+            if name in banned or name.startswith("src.agent"):
+                offenders.append(f"{path.name}: {name}")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_saved_items_reads_no_environment_variable() -> None:
+    """
+    The saved-items path takes its input from files the user put in a
+    directory. Reading the environment would give it a channel the user
+    did not choose.
+    """
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        if "os" in imported_modules(path):
+            offenders.append(path.name)
+
+    assert offenders == []
+
+
+def test_saved_items_opens_no_connection() -> None:
+    """
+    The phase exists so the pipeline does not depend on LinkedIn's web
+    interface. Code that could open a connection would put that
+    dependency back, and the whole point is that a change to a web
+    interface cannot break this.
+    """
+
+    # ``urllib.parse`` is deliberately not here: it is string handling
+    # with no way to open anything, and normalizing a URL needs it.
+    # ``urllib.request`` is the module that can, and it is.
+    banned = {
+        "socket",
+        "ssl",
+        "http",
+        "requests",
+        "httpx",
+        "aiohttp",
+        "urllib.request",
+        "ftplib",
+        "telnetlib",
+        "xmlrpc",
+    }
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        for name in imported_modules(path):
+            if name in banned:
+                offenders.append(f"{path.name}: {name}")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_saved_items_needs_no_browser() -> None:
+    """
+    No saved-items module may drive a browser. The whole phase is local
+    files; a browser dependency would mean it had started reaching for
+    the site.
+    """
+
+    offenders: list[str] = []
+
+    for path in saved_items_sources():
+        for name in imported_modules(path):
+            if "playwright" in name or "selenium" in name:
+                offenders.append(f"{path.name}: {name}")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_a_saved_item_cannot_hold_a_credential_field() -> None:
+    """
+    The record type itself must not offer a place to put one. Refusing
+    a manifest column named for a credential is a second line of
+    defence, not the first: the first is that the record has no such
+    field to fill.
+    """
+
+    from src.ingestion.saved_items.model import SavedItem
+
+    forbidden = (
+        "password",
+        "token",
+        "cookie",
+        "secret",
+        "session",
+        "storage_state",
+        "authorization",
+        "api_key",
+    )
+
+    for name in SavedItem.__dataclass_fields__:
+        for word in forbidden:
+            assert word not in name
+
+
+def test_the_saved_items_drop_zone_is_ignored() -> None:
+    for pattern, ok in ignored(
+        [
+            "data/incoming/",
+            "data/incoming/saved-items/",
+            "data/incoming/saved-items/manifest.csv",
+            "data/incoming/saved-items/saved-items-manifest.json",
+        ]
+    ):
+        assert ok, f"{pattern} is not ignored"
+
+
+def test_saved_items_state_is_not_committed() -> None:
+    """
+    The manifest records the user's saved list: links, titles, dates and
+    their own notes. That is the user's material and does not belong in
+    this repository's history, the same as the drop zone it lives in.
+    """
+
+    tracked = git("ls-files").splitlines()
+
+    offenders = [
+        path
+        for path in tracked
+        if path.endswith("saved-items-manifest.json")
+        or "saved-items/" in path
+    ]
+
+    assert offenders == []
+
+
+def test_saved_items_adds_no_read_only_violation() -> None:
+    """
+    The existing browser source is bounded to reading. A saved-items
+    phase adds no way to act on LinkedIn, so nothing here may name an
+    action verb, a private API or a challenge response.
+    """
+
+    banned = (
+        "like(",
+        "comment(",
+        "share(",
+        "repost",
+        "follow(",
+        "connect(",
+        "sendMessage",
+        "invite",
+        "captcha",
+        "recaptcha",
+        "webdriver",
+        "stealth",
+        "user-agent",
+    )
+
+    offenders = []
+
+    for path in sorted(
+        (REPO_ROOT / "src" / "ingestion" / "saved_items").rglob("*.py")
+    ):
+        source = path.read_text(encoding="utf-8").lower()
+
+        for name in banned:
+            if name.lower() in source:
+                offenders.append(f"{path.name}: {name}")
+
+    assert offenders == []
+
+
+# ---------------------------------------------------------------------
 # What must never be committed
 # ---------------------------------------------------------------------
 

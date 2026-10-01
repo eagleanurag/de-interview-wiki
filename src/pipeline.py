@@ -123,6 +123,20 @@ def enrich(identifiers: list[str], *, force: bool) -> dict:
                 existing = _reusable(target, digest)
 
                 if existing is not None:
+                    # The fingerprint covers the content, so a cached
+                    # result is reused even after the post gains
+                    # provenance it did not have. The analysis is still
+                    # correct; the attribution around it is not, and a
+                    # knowledge base that kept the stale copy would
+                    # publish a post that says less than the source
+                    # does. Refreshing it costs no model call.
+                    _refresh_provenance(existing, post)
+
+                    target.write_text(
+                        json.dumps(existing, indent=2, ensure_ascii=False),
+                        encoding="utf-8",
+                    )
+
                     reused.append(identifier)
                     continue
 
@@ -182,6 +196,42 @@ def enrich(identifiers: list[str], *, force: bool) -> dict:
         "failed": failed,
         "media_failures": media_failures,
     }
+
+
+def _refresh_provenance(
+    payload: dict,
+    post: object,
+) -> dict:
+    """
+    Copy the current post's attribution onto a reused worker result.
+
+    Only the fields that say where the content came from and what it
+    looks like are replaced. The analysis, the questions and the
+    classification are left exactly as they were, because they are what
+    the model was paid for and nothing about them has gone stale.
+
+    A field that is absent from the result is removed rather than left,
+    so a post that has stopped claiming to have been captured stops
+    claiming it.
+    """
+    current = post.model_dump(mode="json")
+
+    for key in ("source", "media"):
+        value = current.get(key)
+
+        if value is None:
+            payload.pop(key, None)
+        else:
+            payload[key] = value
+
+    if current.get("saved_item") is None:
+        payload.pop("saved_item", None)
+    else:
+        payload["saved_item"] = current["saved_item"]
+
+    payload["original_text"] = current.get("original_text", "")
+
+    return payload
 
 
 def _reusable(target: Path, digest: str) -> dict | None:

@@ -555,6 +555,9 @@ class ManualSource(Source):
             if path.suffix.lower() not in TEXT_SUFFIXES:
                 continue
 
+            if not _inside_bundle(path, directory):
+                continue
+
             content = path.read_text(
                 encoding="utf-8", errors="replace"
             ).strip()
@@ -572,6 +575,7 @@ class ManualSource(Source):
             for path in sorted(directory.iterdir())
             if path.is_file()
             and path.suffix.lower() in MEDIA_SUFFIXES
+            and _inside_bundle(path, directory)
         ]
 
     def _sibling_media(self, bundle: Path) -> list[Path]:
@@ -719,6 +723,27 @@ def _readable_prefix(text: str, bundle: Path) -> str:
     stem = "-".join(words[:5])[:36].strip("-")
 
     return stem or _ID_SAFE.sub("-", bundle.stem.lower()).strip("-")
+
+
+def _inside_bundle(path: Path, bundle: Path) -> bool:
+    """
+    Whether a file in a bundle really lives in that bundle.
+
+    A file written inside a bundle can still be a link to somewhere
+    else, and a capture is user-supplied content: it must not be able
+    to name a file anywhere on the machine. Both sides are compared as
+    resolved paths, so a link is judged by where it lands rather than
+    by where it is written.
+    """
+
+    try:
+        resolved = path.resolve()
+        anchor = bundle.resolve()
+
+    except OSError:
+        return False
+
+    return anchor in resolved.parents
 
 
 def _dedupe(paths: list[Path]) -> list[Path]:

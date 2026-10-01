@@ -51,6 +51,7 @@ from src.ingestion.post_document import (
     media_type_for,
     resolve_media_path,
 )
+from src.models import KnowledgePost
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -198,8 +199,15 @@ def test_new_post_uses_the_committed_document_structure(posts_root):
         "enrichment",
     }
 
-    # It starts empty, because nothing has enriched the post yet.
-    assert document["enrichment"]["source_digest"] is None
+    # It starts empty, because nothing has enriched the post yet. Empty
+    # strings rather than nulls, because the model declares these as
+    # strings and a post that has not been enriched still has to load:
+    # an unenriched post is aggregated rather than dropped, so a shape
+    # its own model refuses would cost the post its place in the
+    # knowledge base.
+    assert document["enrichment"]["source_digest"] == ""
+    assert document["enrichment"]["enricher_version"] == ""
+    assert document["enrichment"]["enriched_at"] == ""
 
     assert document["id"] == "sample_100"
     assert document["original_text"] == "Question about Spark."
@@ -213,6 +221,68 @@ def test_new_post_uses_the_committed_document_structure(posts_root):
         "image_descriptions": [],
     }
     assert document["classification"]["domain"] == "Data Engineering"
+
+
+def test_a_new_post_loads_as_a_knowledge_post():
+    """
+    A freshly created post has to satisfy the model the aggregator
+    validates with. It does not: an unenriched post is aggregated rather
+    than dropped, and it cannot be while its own document describes an
+    absent fingerprint as a null the model does not accept.
+    """
+
+    document = PostDocument.new(
+        "sample_fresh", text="Question about Spark."
+    )
+
+    loaded = KnowledgePost.model_validate(document.data)
+
+    assert loaded.id == "sample_fresh"
+    assert loaded.enrichment.source_digest == ""
+
+
+def test_an_unenriched_post_still_reports_that_it_needs_enriching():
+    document = PostDocument.new("sample_fresh", text="Body")
+
+    assert document.needs_enrichment(
+        source_digest="abc", enricher_version="1"
+    )
+
+
+def test_a_post_with_no_enrichment_block_reads_as_an_empty_fingerprint():
+    # Posts committed before the block existed carry none at all, and a
+    # post that has never been enriched carries an empty one. Both mean
+    # the same thing and both have to be reported the same way, or a
+    # caller ends up handling two shapes for one state.
+    document = PostDocument.new("sample_fresh", text="Body")
+
+    document.data["enrichment"] = None
+
+    assert not any(document.enrichment_fingerprint().values())
+    assert document.needs_enrichment(
+        source_digest="abc", enricher_version="1"
+    )
+
+
+def test_a_post_whose_fingerprint_is_null_reads_as_enriched_never():
+    # The shape an earlier version wrote. It has to keep meaning what it
+    # meant, or every post imported before the fix would be re-enriched
+    # and every model call paid for again.
+    document = PostDocument.new("sample_fresh", text="Body")
+
+    document.data["enrichment"] = {
+        "source_digest": None,
+        "enricher_version": None,
+        "enriched_at": None,
+    }
+
+    fingerprint = document.enrichment_fingerprint()
+
+    assert all(value == "" for value in fingerprint.values())
+
+    assert document.needs_enrichment(
+        source_digest="abc", enricher_version="1"
+    )
 
 
 def test_new_post_records_provenance(posts_root):

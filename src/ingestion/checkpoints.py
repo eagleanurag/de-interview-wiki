@@ -36,6 +36,14 @@ CP5_AUTHENTICATION_READY = "CP5_AUTHENTICATION_READY"
 CP6_COLLECTION_RUNNING = "CP6_COLLECTION_RUNNING"
 CP7_COLLECTION_COMPLETE = "CP7_COLLECTION_COMPLETE"
 CP8_ENRICHMENT_COMPLETE = "CP8_ENRICHMENT_COMPLETE"
+
+#: Saved Items capture and import, built once enrichment was working so
+#: it could reuse the fingerprint rather than invent its own. It sits
+#: after CP8 and before CP9 because that is the order the work actually
+#: happened in, not because the mission moved backwards: the phases
+#: after it are still unreached.
+CP8_SAVED_ITEMS_IMPORT_READY = "CP8_SAVED_ITEMS_IMPORT_READY"
+
 CP9_KNOWLEDGE_BASE_COMPLETE = "CP9_KNOWLEDGE_BASE_COMPLETE"
 CP10_WIKI_COMPLETE = "CP10_WIKI_COMPLETE"
 CP11_TESTS_GREEN = "CP11_TESTS_GREEN"
@@ -58,6 +66,7 @@ PHASE_ORDER = (
     CP6_COLLECTION_RUNNING,
     CP7_COLLECTION_COMPLETE,
     CP8_ENRICHMENT_COMPLETE,
+    CP8_SAVED_ITEMS_IMPORT_READY,
     CP9_KNOWLEDGE_BASE_COMPLETE,
     CP10_WIKI_COMPLETE,
     CP11_TESTS_GREEN,
@@ -152,6 +161,13 @@ class Checkpoint:
     tests: dict = field(default_factory=dict)
     ci: dict = field(default_factory=dict)
     collection: dict = field(default_factory=dict)
+
+    #: What was actually verified, as distinct from what was attempted.
+    #: Kept apart from ``tests`` because a suite can be green while the
+    #: thing it covers is broken, and a checkpoint that reported only the
+    #: first would read as more assurance than it is.
+    validation: dict = field(default_factory=dict)
+
     blocker: str = ""
     human_action_required: str = ""
     resume_point: str = ""

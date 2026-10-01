@@ -7,11 +7,18 @@ Collection command line.
         --bundle-root captures/ --max-posts 3
     python -m src.ingestion.collect run --source linkedin \
         --profile my-handle --max-posts 25 --headed
+    python -m src.ingestion.collect_cli saved-items \
+        --input data/incoming/saved-items/manifest.csv
     python -m src.ingestion.collect status
     python -m src.ingestion.collect reset
 
 ``doctor`` reports whether a source is usable without touching a live
 site, and never prints a credential value.
+
+``saved-items`` is the one command that needs no network and no
+credentials at all: it reads a list the user exported from LinkedIn and
+the captures the user placed beside it. Nothing is fetched to fill a
+gap, and a saved link with no capture stays a saved link.
 """
 
 from __future__ import annotations
@@ -31,6 +38,11 @@ from src.ingestion.collect import (
     write_state,
 )
 from src.ingestion.post_document import PostDocument
+from src.ingestion.saved_items.manifest import (
+    ManifestUnreadable,
+    manifest_path,
+)
+from src.ingestion.saved_items.source import SavedItemsSource, reconcile
 from src.ingestion.sources.base import (
     CollectionState,
     CollectionStopped,
@@ -44,9 +56,16 @@ from src.ingestion.sources.linkedin import (
     playwright_install_hint,
 )
 from src.ingestion.sources.manual import ManualSource
+from src.ingestion.validation import (
+    LEVEL_ERROR,
+    describe_report,
+    validate_post_directory,
+)
 
 
 DEFAULT_POSTS_DIRECTORY = Path("data") / "posts"
+
+DEFAULT_SAVED_ITEMS_DIRECTORY = Path("data") / "incoming" / "saved-items"
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -139,6 +158,82 @@ def build_parser() -> argparse.ArgumentParser:
             "Saves the session for later runs, which is how a human "
             "completes a challenge once instead of on every run."
         ),
+    )
+
+    saved = subcommands.add_parser(
+        "saved-items",
+        help=(
+            "Import a list of saved LinkedIn items and any captures "
+            "supplied beside it. Needs no credentials and no network."
+        ),
+    )
+
+    saved.add_argument(
+        "--input",
+        action="append",
+        default=[],
+        dest="inputs",
+        metavar="FILE",
+        help=(
+            "A saved-items list: .csv, .tsv, .txt, .json or .jsonl. "
+            "May be given more than once. Columns are matched by name, "
+            "so url/link/LinkedIn URL and saved date/date saved all "
+            "work."
+        ),
+    )
+
+    saved.add_argument(
+        "--bundle-root",
+        default=None,
+        help=(
+            "Where the capture bundles live. Defaults to the directory "
+            "holding --input, or data/incoming/saved-items."
+        ),
+    )
+
+    saved.add_argument(
+        "--manifest-file",
+        default=None,
+        help=(
+            "Where the saved-items state is kept between runs. Defaults "
+            "to saved-items-manifest.json inside the bundle root. A "
+            "manifest that cannot be read is a stop, not a warning, "
+            "because re-importing it would duplicate every post."
+        ),
+    )
+
+    saved.add_argument(
+        "--posts-root",
+        default=str(DEFAULT_POSTS_DIRECTORY),
+    )
+
+    saved.add_argument(
+        "--report",
+        default=None,
+        metavar="FILE",
+        help="Also write the report to this file.",
+    )
+
+    saved.add_argument(
+        "--validate",
+        action="store_true",
+        help="Validate every post the run imported.",
+    )
+
+    saved.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Report what would be imported without writing.",
+    )
+
+    saved.add_argument("--max-posts", type=int, default=None)
+    saved.add_argument("--since", default=None)
+    saved.add_argument("--until", default=None)
+
+    saved.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the report as JSON.",
     )
 
     return parser
@@ -241,8 +336,243 @@ def reset_state(root: str | Path = ".") -> int:
     return 0
 
 
+def saved_items_bundle_root(args: argparse.Namespace) -> Path:
+    """
+    Where the capture bundles are.
+
+    An explicit ``--bundle-root`` wins. Otherwise the bundles are looked
+    for beside the list that named them, because a user who exports a
+    saved list drops both in the same folder.
+    """
+    if args.bundle_root:
+        return Path(args.bundle_root)
+
+    if args.inputs:
+        return Path(args.inputs[0]).expanduser().resolve().parent
+
+    return Path(DEFAULT_SAVED_ITEMS_DIRECTORY)
+
+
+def run_saved_items(
+    args: argparse.Namespace,
+    root: str | Path = ".",
+) -> int:
+    """
+    Import saved items and the captures supplied beside them.
+
+    Reads a list the user exported, matches any capture bundles to the
+    items they belong to, and hands the results to the same collector
+    every other source uses, so a saved post is stored exactly where a
+    collected one is.
+
+    Nothing here reaches the network, and no credential is read. The
+    report distinguishes an item that was imported from one that is only
+    a link, because the difference decides whether there is anything in
+    the knowledge base to read.
+    """
+    bundle_root = saved_items_bundle_root(args)
+
+    if not bundle_root.is_dir():
+        print(f"The saved-items directory does not exist: {bundle_root}")
+        print()
+        print("Create it and drop your export in:")
+        print(f"  {bundle_root}")
+        return 1
+
+    inputs = [
+        Path(entry).expanduser()
+        for entry in (args.inputs or [bundle_root])
+    ]
+
+    if not args.inputs and not any(
+        path.is_file() for path in _candidate_lists(bundle_root)
+    ):
+        print(f"No saved-items list found in {bundle_root}.")
+        print()
+        print("Export your saved items, or write a .csv with a url")
+        print("column, and put it in that directory. Example:")
+        print("  URL,Saved Date,Title,Notes")
+        print("  https://www.linkedin.com/posts/... ,2026-01-02,,")
+        return 1
+
+    state_file = (
+        Path(args.manifest_file)
+        if args.manifest_file
+        else manifest_path(bundle_root)
+    )
+
+    try:
+        source = SavedItemsSource(
+            bundle_root,
+            manifest_file=state_file,
+        )
+
+    except ManifestUnreadable as exc:
+        # Stopping here is the point. Carrying on would import every
+        # item a second time, because the record of what was already
+        # imported is exactly what could not be read.
+        print(f"Cannot read the saved-items manifest: {exc}")
+        return 1
+
+    source.read_manifests(inputs)
+
+    limits = CollectionLimits(
+        max_posts=args.max_posts,
+        since=args.since,
+        until=args.until,
+        dry_run=args.dry_run,
+    )
+
+    collector = Collector(
+        source,
+        root=Path(args.posts_root),
+        limits=limits,
+        checkpoint=checkpoint_module.read(root),
+        progress=(
+            (lambda message: None)
+            if args.json
+            else (lambda message: print(f"  {message}"))
+        ),
+        repository_root=root,
+    )
+
+    collection = collector.run(resume=False)
+
+    # The importer is the only thing that knows what was really stored,
+    # so the manifest is brought up to date from the posts themselves
+    # rather than from what the source intended.
+    if not args.dry_run:
+        reconcile(source.manifest, posts_root=Path(args.posts_root))
+
+    report = source.report()
+
+    if args.json:
+        print(
+            json.dumps(
+                {
+                    "saved_items": report.as_dict(),
+                    "collection": {
+                        "stopped_because": collection.stopped_because,
+                        "message": collection.message,
+                        "imported": collection.imported,
+                        "duplicates": collection.duplicates,
+                        "failed": collection.failed,
+                    },
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+
+    else:
+        print()
+        print(report.render())
+
+        if report.metadata_only:
+            print()
+            print(
+                f"{report.metadata_only} item(s) are links only. Each one "
+                "is a URL from your export with no body text behind it."
+            )
+            print(
+                "To add one, create a directory named after it in:"
+            )
+            print(f"  {bundle_root}")
+            print(
+                "and put the text, HTML, PDF or a screenshot inside."
+            )
+
+    if args.report:
+        destination = Path(args.report)
+
+        destination.parent.mkdir(parents=True, exist_ok=True)
+
+        destination.write_text(
+            report.render() + "\n", encoding="utf-8"
+        )
+
+        if not args.json:
+            print()
+            print(f"Report written to {destination}")
+
+    problems: list[str] = []
+
+    if args.validate and not args.dry_run:
+        problems = validate_imported(
+            source.manifest,
+            posts_root=Path(args.posts_root),
+        )
+
+        if problems and not args.json:
+            print()
+            print(describe_report_summary(problems))
+
+    succeeded = collection.succeeded and not problems
+
+    if not succeeded and not args.json:
+        print()
+        print(
+            f"Stopping reason: {collection.stopped_because or 'unknown'}"
+        )
+
+    return 0 if succeeded else 1
+
+
+def _candidate_lists(bundle_root: Path) -> list[Path]:
+    """List files in a drop zone that could be a saved-items list."""
+    return [
+        path
+        for path in sorted(bundle_root.iterdir())
+        if path.is_file()
+        and path.suffix.lower() in {".csv", ".tsv", ".txt", ".json", ".jsonl"}
+    ]
+
+
+def validate_imported(
+    manifest,
+    *,
+    posts_root: Path,
+) -> list[str]:
+    """
+    Validate the posts this manifest accounts for.
+
+    Only the posts belonging to a saved item are checked, so a problem
+    elsewhere in ``data/posts`` is not reported as this run's problem.
+    """
+    messages: list[str] = []
+
+    for item in sorted(manifest.items.values(), key=lambda entry: entry.post_id or ""):
+        if not item.post_id:
+            continue
+
+        directory = posts_root / item.post_id
+
+        if not directory.is_dir():
+            messages.append(f"{item.post_id}: the post is not on disk")
+            continue
+
+        for issue in validate_post_directory(directory):
+            if issue.level != LEVEL_ERROR:
+                continue
+
+            messages.append(f"{issue.post_id}: {issue.message}")
+
+    return messages
+
+
+def describe_report_summary(messages: list[str]) -> str:
+    """Name the validation problems without hiding any of them."""
+    if not messages:
+        return "Validation: no errors."
+
+    lines = [f"Validation: {len(messages)} error(s)"]
+
+    lines.extend(f"  {message}" for message in messages)
+
+    return "\n".join(lines)
+
+
 def build_source(args: argparse.Namespace):
-    """Construct the requested source."""
 
     if args.source == "manual":
         return ManualSource(
@@ -446,6 +776,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "reset":
         return reset_state(root)
+
+    if args.command == "saved-items":
+        return run_saved_items(args, root)
 
     if args.command == "run":
         credential_module.load_local_environment(root / ".env")
