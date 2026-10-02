@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-9341c5f6aa477f9c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7306216334671937536",
+    "captured_at": "2026-10-02T00:15:49.587545+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:33:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐇𝐨𝐰 𝐭𝐨 𝐢𝐦𝐩𝐫𝐨𝐯𝐞 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐩𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞?\n\nHere are some of the top ways to improve database performance:\n\n1. Indexing\nCreate the right indexes based on query patterns to speed up data retrieval.\n\n2. Materialized Views\nStore pre-computed query results for quick access, reducing the need to process complex queries repeatedly.\n\n3. Vertical Scaling\nIncrease the capacity of the hashtag#database server by adding more CPU, RAM, or storage.\n\n4. Denormalization\nReduce complex joins by restructuring data, which can improve query performance.\n\n5. Database Caching\nStore frequently accessed data in a faster storage layer to reduce load on the database.\n\n6. Replication\nCreate copies of the primary database on different servers to distribute read load and enhance availability.\n\n7. Sharding\nDivide the database into smaller, manageable pieces, or shards, to distribute load and improve performance.\n\n8. Partitioning\nSplit large tables into smaller, more manageable pieces to improve query performance and maintenance.\n\n9. Query Optimization\nRewrite and fine-tune queries to execute more efficiently.\n\n10. Use of Appropriate Data Types\nSelect the most efficient data types for each column to save space and speed up processing.\n\n11. Limiting Indexes\nAvoid excessive indexing, which can slow down write operations; use indexes judiciously.\n\n12. Archiving Old Data\nMove infrequently accessed data to an archive to keep the active database smaller and faster.\n\nPost credit: Arslan Ahmad",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7306216334671937536_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9341c5f6aa477f9c",
+    "saved_date": "2026-10-01T23:33:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7306216334671937536",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7306216334671937536_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7306216334671937536_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

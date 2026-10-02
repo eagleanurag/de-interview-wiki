@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-d9d68f2f7df28a29",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.546259+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Build Client-native Databricks Apps with Databricks Connect + Streamlit — supercharged on your Lakehouse!\n\nJust dropped a new YouTube video showing how to build interactive, native apps on Databricks using:\n\n✅ Databricks Apps\n👉 A powerful new way to build and share browser-native applications directly on your Lakehouse.\n👉 Think Streamlit-style notebooks, dashboards, and low-code tools — all running securely within Databricks.\n👉 No extra infrastructure. Your data stays governed and performant.\n\n✅ Databricks Connect\n👉 Develop interactively on your laptop (VSCode, Jupyter, Streamlit), while executing code seamlessly on your remote Databricks cluster.\n👉 Debug locally, scale remotely — with zero code change.\n\n✅ Streamlit Jupyter-like interface\n👉 Built a dynamic app where users can:\n\nWrite multiple Python & PySpark cells\n\nExecute them independently (like Jupyter),\n\nMaintain shared state (variables & DataFrames persist across cells),\n\nPreview PySpark DataFrames, run ML, or plot — all in the browser.\n\n🔥 Why this matters:\n✅ Build client-native, shareable tools for analysts & business users, all within the Databricks ecosystem.\n✅ No ETL copy-outs — your app connects directly to your Lakehouse.\n✅ Secure, governed, and infinitely scalable.\n\n#pyspark #databricks #python #streamlit #bigdata \n\nlink in first comment\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d9d68f2f7df28a29",
+    "saved_date": "2026-10-01T23:12:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

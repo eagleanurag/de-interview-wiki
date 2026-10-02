@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-44fe756486ec5b89",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337746532181360641",
+    "captured_at": "2026-10-02T00:15:47.142068+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:09Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nTechnical Lead – Data Engineering @ HCLTech | PySpark, Python, SQL | AWS, Airflow, Snowflake | Big Data & ETL Pipelines | Tableau\n1yr •\n❓ 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗖𝗵𝗲𝗮𝘁𝘀𝗵𝗲𝗲𝘁: 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 + 𝗖𝗹𝗲𝗮𝗻 𝗦𝗼𝗹𝘂𝘁𝗶𝗼𝗻𝘀\n𝗖𝗿𝗮𝗰𝗸 𝗬𝗼𝘂𝗿 𝗡𝗲𝘅𝘁 Data Engineering 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝘄𝗶𝘁𝗵 𝗧𝗵𝗲𝘀𝗲 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀!\nIf you're preparing for a Data Engineer role at top companies,\nPySpark is a must-know skill for any role be AWS\nHere is critical PySpark interview questions that are\n#frequently asked – and provided full solutions to help you understand them better.\n…see more\nPYSPARK INTERVIEW QUESTION & ANSWER",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337746532181360641_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:44fe756486ec5b89",
+    "saved_date": "2026-10-01T23:12:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337746532181360641",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337746532181360641_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

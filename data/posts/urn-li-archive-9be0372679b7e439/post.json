@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-9be0372679b7e439",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.924094+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:26:54Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "13 Core Data Engineering Concepts That Trip Up 80% of Candidates — Master These to Level Up.\n\nHere’s a breakdown (with real interview-style thinking and how to actually practice):\n\n1. Batch vs Streaming\nBatch is cost-effective, but streaming delivers real-time freshness.\n\nMiss the trade-off, and either your budget or your SLAs get wrecked.\n\nTry this: Build a batch pipeline with Spark writing to S3 → then rebuild it using Kafka + Flink → compare cost, latency, and complexity.\n\n\n\n2. Columnar Data Formats (Parquet, ORC)\nCompression + column pruning = massive I/O savings.\n\nCommon mistake: Tiny Parquet files = slow queries + high overhead.\n\nTry this: Run the same SQL over CSV and Parquet → EXPLAIN ANALYZE → compare scan time.\n\n\n\n3. Partitioning & Clustering\nThink beyond rows — partitioned folders reduce scan load.\n\nBut too many partitions? You’ve got a small file storm.\n\nDrill: Partition logs by dt, cluster by user_id, and inspect Spark stage fan-out.\n\n\n\n4. Schema Evolution\nData changes. Your pipelines must keep up.\n\nQ: “How do you backfill a non-nullable column without breaking prod?”\n\nHands-on: Modify Avro schema in Confluent → test all compatibility modes.\n\n\n\n5. Change Data Capture (CDC)\nThe best way to keep your warehouse in sync — minus the full refresh.\n\nWarning: If you mismanage binlogs, expect duplicate or lost updates.\n\nChallenge: Stream MySQL binlog via Debezium → Kafka → Postgres → check row-level accuracy.\n\n\n\n6. Watermarks & Late Data\nTime windows must close — but not before the data shows up.\n\nQ: “What happens if a user's event arrives 3 hours late?”\n\nSimulate: Use Flink’s allowedLateness, send late events, and observe state cleanup.\n\n\n\n7. Idempotency\nRetrying writes? They better not double your numbers.\n\nTry: Write to Delta Lake using MERGE, replay Kafka topic, and validate totals.\n\n\n\n8. Data Lineage & Metadata Tracking\nIf someone asks “why is this number off?” — you need answers.\n\nHands-on: Integrate OpenLineage with Airflow and trace one KPI’s full journey.\n\n\n\n9. Workflow Orchestration\nAirflow/Dagster gives you retriable, backfillable, observable DAGs.\n\nQ: “How do you stop a daily job from running twice?”\n\nPractice: Migrate cron to Airflow → configure depends_on_past & max_active_runs=1.\n\n\n\n10. Incremental vs Full Loads\nFull loads = simple but costly. Incremental loads = efficient but tricky.\n\nExercise: Convert a Redshift COPY from full S3 scan to incremental using manifests.\n\n\nPro tip: Don’t just memorize theory. Build. Break. Observe. Repeat.\n\n#DataEngineering #BigData #Kafka #Flink #Spark #ETL #Airflow #InterviewPrep #SQL #ApacheFlink #DeltaLake #DataPipeline #StreamingData #RealTimeData #DSJobs #DataEngineer\n\nFollow ANKUR SHUKLA for more 👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:9be0372679b7e439",
+    "saved_date": "2026-10-01T23:26:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

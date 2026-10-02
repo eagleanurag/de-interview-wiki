@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-c1d3ab42f3e2dbb1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328694427760185345",
+    "captured_at": "2026-10-02T00:15:51.141187+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:23:33Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🧠 PySpark Interview Challenge from British Petroleum (BP) – Data Engineering Role\n\n🔍 Real-world scenario: How do you retrieve the manager’s name for each employee using PySpark?\n\n👇 Check out this interesting PySpark self-join question that was actually asked during a Data Engineering interview at BP (British Petroleum).\n\n💡 Task: Given an employee table with a managerid, write PySpark code to output each employee’s name along with their respective manager’s name. This requires performing a self-join on the employee DataFrame.\n\n📸 See the image below for the complete code and expected output.\n\n✅ A must-know trick for anyone preparing for data engineering interviews involving PySpark or Apache Spark SQL.\n\n🔁 Feel free to share or tag someone who’s preparing for interviews!\n\n#DataEngineering #PySpark #ApacheSpark #InterviewPrep #BigData #ETL #BritishPetroleum #CodingInterview #SelfJoin #SparkSQL #TechInterview #DataEngineer\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328694427760185345_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c1d3ab42f3e2dbb1",
+    "saved_date": "2026-10-01T23:23:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328694427760185345",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328694427760185345_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

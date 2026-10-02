@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-98ddb5cd1810af69",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7296133645327593473",
+    "captured_at": "2026-10-02T00:15:49.705874+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:35:17Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Lead Data Engineer & Data Evangelist | GCP · Kafka · Databricks · BigQuery | DataCamp Instructor | Speaker: AI Summit, OWASP, AWS | Host, Off The Backlog | Dell Pro Precision Ambassador | DM for Collab\n1yr •\nWant to ace your SQL interviews? 📊\n🚀 I’ve curated a comprehensive PDF with SQL interview questions ranging from beginner to advanced level! Whether you're just starting out or preparing for a tough technical round, this guide has got you covered.\nDrop a 📩 in the comments if you want a copy!\n♻️ 𝙍𝙚𝙥𝙤𝙨𝙩 𝙩𝙝𝙞𝙨 𝙞𝙛 𝙮𝙤𝙪 𝙛𝙞𝙣𝙙 𝙞𝙩 𝙝𝙚𝙡𝙥𝙛𝙪𝙡.\nLet’s talk about your career goals. Book a call with me today! Link is in the Comment below!👇🏻👇🏻👇🏻.\n[SQL interview, database queries, technical preparation, career growth, data engineering]\n#sqlinterview #dataskills #careerprep #sqlquestions #interviewready #datawithdisha\nSQL Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7296133645327593473_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:98ddb5cd1810af69",
+    "saved_date": "2026-10-01T23:35:17Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7296133645327593473",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7296133645327593473_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

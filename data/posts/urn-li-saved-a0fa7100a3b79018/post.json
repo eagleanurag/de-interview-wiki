@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-a0fa7100a3b79018",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328101059829084160",
+    "captured_at": "2026-10-02T00:15:50.150607+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:23:36Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data pipelines have evolved and you need to keep up!\n\nHere's a quick snapshot of the major architectures:\n\n🔹 ETL (Extract, Transform, Load): Preprocesses data before loading to conserve storage and compute (common in the Hadoop era).\n\n🔹 ELT (Extract, Load, Transform): Loads raw data directly into scalable cloud storage, transforming later for agility and flexibility.\n\n🔹 Streaming: Processes data continuously, ideal for real-time applications like fraud detection or live dashboards.\n\n🔹 Zero-ETL: Tightly integrates operational and analytical databases, eliminating explicit pipeline steps for faster, simpler data syncing.\n\n🔹 Data Sharing: Grants direct query access without moving data, perfect for secure external collaboration or cross-departmental data sharing.\n\nEach has its strengths—successful data teams often blend these patterns to suit different business needs. The thing they have in common is that Tobiko SQLMesh is always the right answer 😂 Am I a corporate shill? No - I am an open source shill 😉\n\nWhat architecture does your team use?\n\n#dataengineering #sql #datatransformation\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328101059829084160_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a0fa7100a3b79018",
+    "saved_date": "2026-10-01T23:23:36Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328101059829084160",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328101059829084160_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7328101059829084160_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

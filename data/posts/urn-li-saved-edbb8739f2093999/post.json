@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-edbb8739f2093999",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7302536449503973376",
+    "captured_at": "2026-10-02T00:15:53.105975+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:33:08Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\n🚀 Want to master ETL? Here’s your go-to guide!\nDive into 140+ essential ETL terms and get hands-on with amazing free projects to level up your data skills. 🔥⬇️\nWhether you're learning or brushing up, this is a must-have resource to understand ETL technologies.\n𝗖𝗵𝗲𝗰𝗸 𝗼𝘂𝘁 𝘁𝗵𝗲𝘀𝗲 𝗮𝗺𝗮𝘇𝗶𝗻𝗴 𝗘𝗧𝗟 𝗽𝗿𝗼𝗷𝗲𝗰𝘁𝘀\n◻️ Apache Airflow One Shot- Building End To End ETL Pipeline Using AirFlow And Astro - Krish Naik\nhttps://lnkd.in/e8hxHzji\n◻️ YouTube Data Analysis | END TO END DATA ENGINEERING PROJECT - Darshil Parmar\nhttps://lnkd.in/ePE92Ae8\n◻️ Netflix Data Cleaning and Analysis Project | End to End Data Engineering Project (SQL + Python) - Ankit Bansal\nhttps://lnkd.in/eERHCMve\n◻️ ETL Pipelines in Google Cloud Platform - Analytics Vidhya\nhttps://lnkd.in/eHwMEv8v\n◻️ Python Project for Data Analysis- Exploratory Data Analysis | Data Analyst Project - Rishabh Mishra\nhttps://lnkd.in/eBmm7wXi\n◻️ How to build and automate a python ETL pipeline with airflow on AWS EC2 | Data Engineering Project -\nhttps://lnkd.in/e3m5sFF9\n◻️ Build a Data Pipeline Using Python - Setup Project and Read Table List | Data Engineering - ITVersity, Inc. Durga Gadiraju\nhttps://lnkd.in/e-B4XBMd\n◻️ The ONLY Azure End-To-End Data Engineering Project You NEED in 2025 | [Step-by-Step Guide] - Ansh Lamba\nhttps://lnkd.in/eUQHBR2r\n◻️ SQL Data Warehouse from Scratch | Full Hands-On Data Engineering Project - Baraa Khatib Salkini\nhttps://lnkd.in/eTMENfmV\n◻️ End-to-End DWBI Project: Real-Life Data Integration with Snowflake, Python, SQL & PowerBI\nhttps://lnkd.in/epd8pAXZ\n📙 Doc Credits : Shwetank Singh - Dive in now , save it for future reference!\n🚀 Join Data Community : https://lnkd.in/gy4R55Tj\n🤝 Follow 👨‍💻 Abhisek Sahu for a regular curated feed of data insights and valuable content!\nPlease Like, repost ✅, if you find them useful.\n#DataEngineering #ETL #TechResources\n…see more\n140 ETL Data Terminology",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7302536449503973376_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:edbb8739f2093999",
+    "saved_date": "2026-10-01T23:33:08Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7302536449503973376",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7302536449503973376_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7302536449503973376_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

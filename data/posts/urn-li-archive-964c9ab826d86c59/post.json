@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-964c9ab826d86c59",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.849542+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:23:32Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "LTIMINDTREE Data Engineering interview for candidates with 3-6 years of experience.\nQuestion was asked during the Interview :\n\n1. SQL Question: You have given a sales table, Write a SQL and Pyspark query to find products that have exactly two transactions, and return only the details of the second transaction.\nhashtag\n\n#Without_using_windows_function\nid, product, last_trans_date\n\n1, abc, 6-5-25\n2, abc, 7-5-25\n3, bcd, 6-5-25\n\n2. Scenario Based Azure Pipeline Question:\n\nSuppose you are given 100 files in a source location with different formats such as Parquet, CSV, Avro, and JSON. You also have an Excel file containing metadata about these files. Your goal is to build a pipeline that reads this Excel metadata and moves the files: CSV files to a 'csv' folder and Parquet files to a 'parquet' folder, based on their formats. How would you design this pipeline?\n\n3. Scenario Based Databricks Question:\nThere is one CSV file in the source location with the following structure:\nmarkdown\nCopyEdit\nid | Ph no \n-------------------------\n1 | 91 - 8420740724\nYour goal is to load this file into a Delta table. What are the required steps you would follow to achieve this.\nin Delta table should be in this format\n\nid | Ph no \n-------------------------\n1 | 8420740724\n\nData Warehousing:\n\n4. What is SCD Type 2 ? If you need to implement SCD Type 2 using Databricks, what steps would you follow?\n\nData Warehousing: \n\n5. What are fact and dimension tables? Which of these tables changes more frequently?\n\n6. The difference between Snowflake schema and Star Schema?\n\n7. Write a PySpark code snippet to perform an anti join between two DataFrames ?\n\n\"I will post all my interview questions and share my experiences.\"........ \nfor more update follow Pratik Dhok",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:964c9ab826d86c59",
+    "saved_date": "2026-10-01T23:23:32Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

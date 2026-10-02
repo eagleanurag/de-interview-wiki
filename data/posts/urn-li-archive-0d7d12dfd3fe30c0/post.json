@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-0d7d12dfd3fe30c0",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.942364+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:30:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🎯 I Solved 350+ LeetCode SQL Problems... But Only These 20 Helped Me Crack Interviews. \n\nWish someone had told me this earlier — if you’re prepping for SQL interviews, you don’t need to solve 300+ problems.\nInstead, master these 20 handpicked gems that show up again and again in interviews at FAANG, startups, and top product-based companies.\n\n\n\n📌 Top 20 SQL Questions That Truly Matter: (Save & Share this)\n\n1. Combine two tables: https://lnkd.in/dumdCXC7\n\n\n2. Employees earning > managers: https://lnkd.in/dKqcFmzY\n\n\n3. Duplicate emails: https://lnkd.in/dJSYfs89\n\n\n4. Customers who never order: https://lnkd.in/dPZPAKFf\n\n\n5. Delete duplicate emails: https://lnkd.in/dEKnD9s3\n\n\n6. Rising temperature: https://lnkd.in/dyZvVYvP\n\n\n7. Employee bonus: https://lnkd.in/d9iTXt-V\n\n\n8. Find customer referee: https://lnkd.in/d5cXjXdb\n\n\n9. Big countries: https://lnkd.in/dAnS54qK\n\n\n10. Classes more than 5 students: https://lnkd.in/dfrUiutd\n\n\n11. Sales person: https://lnkd.in/dwRnf5Df\n\n\n12. Triangle judgement: https://lnkd.in/dwzD-hFn\n\n\n13. Biggest single number: https://lnkd.in/d4F5zHDs\n\n\n14. Not boring movies: https://lnkd.in/d5w8_z65\n\n\n15. Swap salary: https://lnkd.in/dnbCtecM\n\n\n16. Product sales analysis 1: https://lnkd.in/dRj3EBuK\n\n\n17. Project employees 1: https://lnkd.in/dvGHsbKQ\n\n\n18. Sales analysis III: https://lnkd.in/d_y_rxPh\n\n\n💡 Key Takeaway:\nIt's not about how many problems you solve — it's about solving the right ones with clarity and confidence.\n\n\n🚀 Tag a friend who's preparing for interviews\n\n📌 Save this post to revise before your next call\n🔁 Repost to help others crack SQL rounds\n\n✅ Follow Aishwarya Pani for real interview stories & data engineering prep. \n\n\n👨‍🏫 SQL experts worth following:\nAnkit Bansal \nDeepak Goyal \nZach Wilson \nBrij kishore Pandey \nShashank Mishra 🇮🇳 \nShubham Wadekar \nSumit Mittal \nDarshil Parmar \nSagar Prajapati \n\n\n#SQL #LeetCode #DataEngineering #InterviewPreparation #FAANG #TechJobs #DataAnalyst #CrackTheInterview #JobSearch #SQLQueries #CareerTips #TechInterview #LinkedInLearning",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:0d7d12dfd3fe30c0",
+    "saved_date": "2026-10-01T23:30:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

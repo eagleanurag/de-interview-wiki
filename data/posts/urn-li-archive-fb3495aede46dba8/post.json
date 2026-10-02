@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-fb3495aede46dba8",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.303168+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:28:55Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Processing 1 TB of data in Databricks!!\n\nInterviewer:\n\nLet’s assume you’re processing 1 TB of data in Databricks. How long do you think it would take on a single machine without using any cluster?\n\nCandidate:\n\nOn a single machine, processing 1 TB of data would take significantly longer because there's no parallelism involved. The speed largely depends on the hardware specifications—specifically CPU, disk speed and RAM capacity. \n\n- For CSV files (which are uncompressed and not optimized for parallel processing), we can estimate that it would take anywhere between 6-8 hours for a single machine due to the high disk I/O, lack of compression, and lack of parallelization. \n\n- For Parquet files (which are columnar and compressed), the process would be more efficient. A single machine with sufficient resources could potentially complete the task in 3-5 hours, assuming it's not heavily transformed. Parquet’s compression and optimized storage significantly reduce the I/O and speed up reading and writing operations compared to CSV.\n\n\n Interviewer:\n\nNow, if we scale this up to using a 4-node cluster in Databricks, what kind of time reduction should we expect?\n\n Candidate:\n\nScaling up to a 4-node cluster distributes the 1 TB dataset into 4 parts, so each node would be processing around 250 GB of data.\n\n- For Parquet data: Since Parquet is optimized for parallelism, we can expect a significant speedup. In the case of 1 TB of Parquet data, assuming good partitioning and high parallelism, the processing time could drop to around 1.5-2 hours. Each node is handling a smaller subset of the data, and with good disk I/O and CPU parallelism, the overall time can be reduced substantially.\n\n- For CSV data: Although CSV is not as optimized as Parquet, the 4-node cluster still offers better performance due to parallel processing. Processing 1 TB of CSV data might take around 3-4 hours on a 4-node cluster, compared to 6-8 hours on a single machine. However, this is still slower than Parquet due to the uncompressed nature of CSV.\n\n\n Interviewer:\n\nWhat about scaling further to an 8-node cluster? \n\n Candidate:\n\nAn 8-node cluster offers even better performance because now each node only needs to handle 125 GB of data. The added parallelism can dramatically reduce processing times.\n\n- For Parquet data: The processing time can drop to 30 minutes to 1 hour. With 8 nodes, the workload is even more distributed, which speeds up reading, processing, and writing operations. Given Parquet’s compression and columnar nature, the data can be processed very efficiently in parallel.\n\n- For CSV data: Since CSV files are larger and not optimized for parallel processing, the improvement is not as dramatic as with Parquet, but you still see a reduction in time. Processing 1 TB of CSV data on an 8-node cluster could take around 1.5-2 hours. The increased parallelism from the 8 nodes allows more efficient data distribution, reducing the time it takes to read and write data.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:fb3495aede46dba8",
+    "saved_date": "2026-10-01T23:28:55Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

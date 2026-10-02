@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-aa7b1f42aab04d2b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7305823652422303744",
+    "captured_at": "2026-10-02T00:15:50.475656+00:00",
+    "author": "Status is online",
+    "published_at": "2026-10-01T23:33:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Databricks is taking over the Data Engineering world. \nHere’s how you can master it by 2025!\n\n1. Introduction to Data Lakehouse | Databricks led training module\n(YT : Databricks)\n🔗 https://lnkd.in/gefjt4QC\n\n2. End to End Databricks series | PySpark, Spark SQL, Delta Live Tables\n(YT : Rajas Data Engineering)\n🔗 https://lnkd.in/gan3FkTK\n\n3. Unity Catalog | More than an Introduction \n(Bhawna Bedi - YT: CloudFitness)\n🔗 https://lnkd.in/g-Cwt_dW\n\n4. End to End Azure Data Engineering Project | Azure Databricks and Azure Data Factory \n(YT : Mr. K Talks Tech)\n🔗 https://lnkd.in/gQ7RT5kJ\n\n5. End to End Databricks Playlist | Databricks for Data Engineering\n(Subham Khandelwal - YT : Ease with Data)\n🔗https://lnkd.in/g_4X__j5\n\nI will be posting end-to-end Databricks tutorials and major FAQs around it. \n\n♻️ Found this useful? Repost it!",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7305823652422303744_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:aa7b1f42aab04d2b",
+    "saved_date": "2026-10-01T23:33:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7305823652422303744",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7305823652422303744_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

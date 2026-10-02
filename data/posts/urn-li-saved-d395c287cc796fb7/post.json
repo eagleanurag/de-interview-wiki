@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-d395c287cc796fb7",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340261895330852864",
+    "captured_at": "2026-10-02T00:15:52.101138+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:04Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Manager Analytics & Data Science||Trainer ||207k LinkedIn ||210k Instagram || 50M+ Impressions || Click “Follow” to learn Data Analytics & Data Science daily ||DM for Collaborations\n1yr •\nComprehensive Guide to Pandas: Data Manipulation and Analysis\nThis PDF provides a thorough exploration of the Pandas library, a powerful tool for data analysis in Python. It includes detailed explanations of key features such as data structures, indexing, and data cleaning techniques. Readers will find practical examples and hands-on exercises that demonstrate how to manipulate and analyze datasets effectively. Whether you are a beginner or looking to enhance your data analysis skills, this guide offers valuable insights and best practices for leveraging Pandas in real-world applications\nPS : If you want to learn data analytics from me ( paid ) then you can connect with me here : https://lnkd.in/gZBCK5T2\nData Analysts Community : https://lnkd.in/dqrdbCqw\nPdf credit goes to respective owner\nFollow Ajay Y. for more resources\nPandas Notes",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340261895330852864_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d395c287cc796fb7",
+    "saved_date": "2026-10-01T23:19:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340261895330852864",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340261895330852864_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-a7242a9608fda57e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7305087695242878976",
+    "captured_at": "2026-10-02T00:15:50.327375+00:00",
+    "author": "Status is online",
+    "published_at": "2026-10-01T23:32:15Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Master SQL for FREE! 💡\n\nWhether you're a beginner or looking to level up your SQL skills, here’s a curated list of free courses to help you get started :\n\n📌 Beginner to Advanced SQL Courses:\n ✅ Learn SQL → 🔗 https://lnkd.in/eBCDY8zN\n ✅ SQL Basics for Data Science Specialization → 🔗 https://lnkd.in/eXJiGbBX\n ✅ SQL for Data Analysis → 🔗 https://lnkd.in/e3tbGvWj\n ✅ Excel to MySQL: Analytic Techniques for Business → 🔗 https://lnkd.in/eUWZWi5X\n ✅ SQL for Data Science → 🔗 https://lnkd.in/eKpHekVr\n ✅ Advanced Databases and SQL Querying → 🔗 https://lnkd.in/enkaBmWh\n ✅ Advanced SQL → 🔗 https://lnkd.in/e-HSWy_9\n ✅ Introduction to Databases and SQL Querying → 🔗 https://lnkd.in/e8jfKgpy\n ✅ Introduction to Structured Query Language (SQL) → 🔗 https://lnkd.in/eUmTqsNY\n ✅ Modern Big Data Analysis with SQL Specialization → 🔗 https://lnkd.in/e9_vH32z\n\n📊 Why Learn SQL?\n ✔️ Essential for Data Science & Analytics\n ✔️ High-demand skill in Finance, Tech, and Business Intelligence\n ✔️ Helps in handling and querying large datasets efficiently\n💬 Which course are you starting with? Drop a comment below! 👇\n\n#sql #data #analytics",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7305087695242878976_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a7242a9608fda57e",
+    "saved_date": "2026-10-01T23:32:15Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7305087695242878976",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7305087695242878976_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7305087695242878976_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

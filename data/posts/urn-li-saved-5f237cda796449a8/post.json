@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-5f237cda796449a8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7350210945224183810",
+    "captured_at": "2026-10-02T00:15:47.975610+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:10:59Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗢𝗻 𝗮 𝗠𝗶𝘀𝘀𝗶𝗼𝗻 𝘁𝗼 𝗺𝗮𝗸𝗲 𝟭𝟬𝟬+ 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗶𝗻 𝗻𝗲𝘅𝘁 𝟰𝟱 𝗗𝗮𝘆𝘀\n1yr •\nI prepared 75 Azure Interview Questions\nGet it on email here: https://lnkd.in/dRA4M3gC\nLike/Share/Support to reach to everyone.\n#interview\n#data #bigdata\nade",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7350210945224183810_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5f237cda796449a8",
+    "saved_date": "2026-10-01T23:10:59Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7350210945224183810",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7350210945224183810_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

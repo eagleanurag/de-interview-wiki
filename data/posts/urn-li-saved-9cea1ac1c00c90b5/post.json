@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-9cea1ac1c00c90b5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7428910228877934592",
+    "captured_at": "2026-10-02T00:15:49.980228+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:08:50Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "You have a 50GB file to process in Databricks. How do you configure your compute?\n\nFor a 50GB file, Spark will create roughly 400 partitions (51,200MB / 128MB). To process all at once, you may opt to take 400 cores, which will be an overkill for sure.\n\nI would suggest a cluster with 40 to 100 cores which is around 10 to 25 worker nodes; assuming 4 cores each. This allows the data to be processed in 4 to 10 'waves.' Regarding memory, I'd recommend at least 4GB of RAM per core which is around 16GB per node to handle the 128MB partition plus the overhead for deserialization, shuffles, and the Spark engine itself.\n\n#Dataengineering #Spark #Databricks",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7428910228877934592_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9cea1ac1c00c90b5",
+    "saved_date": "2026-10-01T23:08:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7428910228877934592",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7428910228877934592_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

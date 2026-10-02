@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-4387e33b667a85d5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.663955+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:17:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Uber Data Engineering interview will be 17X easier with these questions\nCTC= 31+ LPA\n\n1. Write SQL to find the top 3 drivers by average rating, only including drivers with more than 100 trips.\n2. Find users who booked a ride more than once within a 10-minute window (self-join or window functions).\n3. Given a rides table, find the most frequently traveled route in the past 30 days.\n4. Write an efficient query to detect duplicates based on customer ID and timestamp but only return the latest one.\n5. Find the difference in trip counts between two consecutive weeks for each driver.\n\n6. Given a stream of integers, design a data structure to return the median at any time.\n7. Detect a cycle in a directed graph representing trip routes between cities.\n8. Merge K sorted linked lists.\n9. Implement an LRU (Least Recently Used) cache.\n10. Given a list of ride timestamps, find the longest continuous ride streak.\n\n11, Design a distributed pipeline to detect ride anomalies in real time using stream processing.\n12. How would you scale a pipeline that ingests 100M GPS events per day and serves analytics queries under 1s?\n13. Design a versioned schema system for your data warehouse to handle backward-incompatible changes.\n\n14.How would you implement exactly-once delivery in a Kafka + Spark Structured Streaming setup?\n15. Explain your approach to handling late-arriving data in a real-time processing pipeline (with watermarks, state cleanup, etc.).\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount for next few people.\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4387e33b667a85d5",
+    "saved_date": "2026-10-01T23:17:05Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

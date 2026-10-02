@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-9d9b853d53abd819",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.938594+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:03Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗥𝗼𝗹𝗲 - 𝗗𝗮𝘁𝗮 𝗦𝗰𝗶𝗲𝗻𝘁𝗶𝘀𝘁 𝗮𝘁 𝗔𝗺𝗮𝘇𝗼𝗻\n𝗖𝗧𝗖 - 𝗥𝘀 𝟯𝟲+ 𝗟𝗣𝗔 \n𝗦𝗤𝗟 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀👇\n(𝗜𝗻𝘁𝗲𝗿𝗺𝗲𝗱𝗶𝗮𝘁𝗲 ➡️𝗣𝗿𝗼)\n\n𝗔𝗹𝗹 𝗽𝗿𝗮𝗰𝘁𝗶𝗰𝗮𝗹 𝗯𝗮𝘀𝗲𝗱 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀.\n\n1.⁠ ⁠What is the difference between HAVING and WHERE in SQL? \n2.⁠ ⁠Explain Auto Increment in SQL? \n3.⁠ ⁠Explain about set operators in SQL? \n4.⁠ ⁠Give SQL query to retrieve nth record from an employee table? \n5.⁠ ⁠Explain how to get unique records without using the DISTINCT keyword? \n6.⁠ ⁠How to select all even or all odd records in a table? \n7.⁠ ⁠Explain about clustered index? \n8.⁠ ⁠Explain about non-clustered index? \n9.⁠ ⁠Explain about Recursive CTE with an example? \n10.⁠ ⁠Explain the difference between RANK and DENSE_RANK in SQL? \n11.⁠ ⁠What is a correlated query? \n12.⁠ ⁠What are MAGIC TABLES in SQL? \n13.⁠ ⁠What are the different ways to fetch the first 5 characters of the string in SQL?\n14.⁠ ⁠What is conditional aggregation in SQL?\n15.⁠ ⁠Write a query that delivers the names of all employees who work in the same department as the employee with the highest salary.\n\nThese questions are great to practice but you need more than just skills to crack a data science interview at top tech companies. \n\nAnd you might have a lot of doubts and lack of self-confidence throughout the journey, but don’t worry. \n\nLuckily, today we have platforms like 𝗕𝗼𝘀𝘀𝗰𝗼𝗱𝗲𝗿 𝗔𝗰𝗮𝗱𝗲𝗺𝘆, who’ve helped 2200+ working professionals switch to top data science roles. \n\nCheck them out - http://bit.ly/3J0j2pk \n\nThey stand out by providing structured curriculum, personal mentorship from professionals, real business case studies, placement support and much more. \n\n𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 : Get 25% off in “Independence day sale” on all their courses (limited time offer).\n\n#SQL #tech #interviews #sponsoredpost\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:9d9b853d53abd819",
+    "saved_date": "2026-10-01T23:09:03Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

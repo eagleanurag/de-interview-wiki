@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-38df15437032ea5c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.509619+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:23:36Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "SQL Interview question: \n\n15. Find customers who placed more than 2 orders within any 3-day window.\n\nSELECT DISTINCT o1.customer\nFROM orders o1\nJOIN orders o2 ON o1.customer = o2.customer \n AND o2.order_date BETWEEN o1.order_date AND DATE_ADD(o1.order_date, INTERVAL 2 DAY)\nGROUP BY o1.customer, o1.order_date\nHAVING COUNT(DISTINCT o2.order_id) > 2;\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:38df15437032ea5c",
+    "saved_date": "2026-10-01T23:23:36Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-53cc8473d01ed5bc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7426120115638915072",
+    "captured_at": "2026-10-02T00:15:47.542942+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 12 Data Engineering Concepts You MUST Know Before Your Next Interview (2026)\nIf you’re preparing for a Data Engineer interview, don’t just revise tools — master the core concepts.\n Most candidates fail not because of syntax — but because of weak fundamentals.\nSave this checklist before your next interview 👇1️⃣ ETL vs ELT — When to transform before load vs after load\n 2️⃣ Data Warehousing vs Data Lake — Use cases, cost, schema strategy\n 3️⃣ Batch vs Streaming Pipelines — Latency vs throughput tradeoffs\n 4️⃣ Star vs Snowflake Schema — Query performance vs normalization\n 5️⃣ Partitioning & Bucketing — How to optimize big data queries\n 6️⃣ Data Skew Handling — Join strategies & salting techniques\n 7️⃣ CDC (Change Data Capture) — Incremental data loading patterns\n 8️⃣ Orchestration vs Scheduling — Airflow / ADF / Prefect differences\n 9️⃣ Idempotent Pipelines — Making reruns safe\n 🔟 Data Quality Checks — Nulls, duplicates, constraints, drift\n 1️⃣1️⃣ Slowly Changing Dimensions (SCD Types) — Real warehouse scenarios\n 1️⃣2️⃣ Lakehouse Architecture — Modern hybrid analytics design\nIf you’re preparing for Data Engineer interviews in 2026 (Accenture, TCS, Cognizant, Infosys, UST, Coforge):\n Join 2000+ learners who landed offers at TCS, Deloitte, Infosys, and more —\n not by luck, but by mastering real data engineering scenarios.\n 👉 Data Engineer Interview Mega Pack 👉 https://lnkd.in/gBfGiUpf\n 👉 600+ Real Data Engineer Interview Q&A 👉 https://lnkd.in/gZA3D3-D\n 👉 Top 100 Real Data Engineer Questions (1–4 Years Experience) 👉 https://lnkd.in/g_2VtMR4\n💡 Interview Tip:\n When answering — always explain with a real pipeline example (source → transform → load → monitor). Interviewers love practical thinking more than textbook definitions.\n📌 Want me to post scenario-based interview questions for each concept next? Comment “DATA” and I’ll share it.\n#DataEngineering #DataEngineerInterview #BigData #ETL #AzureDataFactory #Spark #SQL #DataWarehouse #AnalyticsEngineering #InterviewPreparation #CareerGrowth\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7426120115638915072_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:53cc8473d01ed5bc",
+    "saved_date": "2026-10-01T23:09:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7426120115638915072",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7426120115638915072_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-9a8f73a319ea4fef",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348901286022455296",
+    "captured_at": "2026-10-02T00:15:49.846836+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼-𝗕𝗮𝘀𝗲𝗱 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 𝗥𝗲𝗰𝗲𝗻𝘁𝗹𝘆 𝗔𝘀𝗸𝗲𝗱 𝗮𝘁 𝘁𝗵𝗲 𝗕𝗶𝗴 𝟰\n(KPMG Deloitte EY PwC) 👩🏻‍💻\n\n𝟭. How would you design a pipeline in Azure Data Factory to ingest data from a REST API, handle authentication, rate-limiting and manage potential errors or timeouts?\n\n𝟮. If you need to merge and deduplicate data from multiple sources in an Azure SQL Database, how would you structure an Azure Data Factory pipeline to ensure accuracy?\n\n𝟯 Describe the setup for a pipeline in Azure Data Factory that processes large numbers of files from Azure Blob Storage into Azure Synapse Analytics with optimal parallelism.\n\n𝟰. How would you configure a pipeline in Azure Data Factory to handle incremental loads from an on-premises SQL Server to Azure SQL Database?\n\n𝟱. Describe the process of transforming and aggregating IoT data stored in Azure Data Lake Storage for analysis in Azure Synapse Analytics.\n\n𝟲. How would you handle real-time streaming data processing from Azure Event Hubs to Azure Databricks, considering potential data loss and scalability?\n\n7. If you needed to set up data partitioning in Azure Synapse Analytics to enhance performance, what considerations would you take into account?\n\n𝟴. How would you structure a system to automate backup and restore operations for data stored in the Azure SQL Database?\n\n𝟵. How would you optimize a slow-performing query in the Azure SQL Database? Describe key steps for analysis and improvement.\n\n𝟭𝟬. What approach would you use to build a monitoring solution for data pipelines in Azure Data Factory, using Azure Monitor and custom alerts?\n\n𝟭𝟭. Explain how you’d implement row-level security and column encryption in the Azure SQL Database to protect sensitive data.\n\n𝟭𝟮. How would you design a workflow in Azure Logic Apps to trigger data processing in Azure Data Factory upon receiving new files in Azure Blob Storage?\n\n𝟭𝟯. Describe the steps to set up a CI/CD pipeline in Azure DevOps for deploying Azure Data Factory pipelines across multiple environments.\n\n𝟭𝟰 How would you use PolyBase in Azure Synapse Analytics to import data from an external data source?\n\n𝟭𝟱. Explain the process of configuring Delta Lake in Azure Databricks for handling slowly changing dimensions in a data warehouse setup.\n\n\n✅ These questions focus on 𝗱𝗲𝘀𝗶𝗴𝗻𝗶𝗻𝗴, 𝗺𝗮𝗻𝗮𝗴𝗶𝗻𝗴, 𝗮𝗻𝗱 𝗼𝗽𝘁𝗶𝗺𝗶𝘇𝗶𝗻𝗴 𝗱𝗮𝘁𝗮 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲𝘀 and storage within 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝘀𝗲𝗿𝘃𝗶𝗰𝗲𝘀.\n\n\n🔔 Follow Aishwarya Pani for more data prep and project tips\n📌 𝗪𝗮𝗻𝘁 𝗽𝗲𝗿𝘀𝗼𝗻𝗮𝗹 𝗴𝘂𝗶𝗱𝗮𝗻𝗰𝗲 𝘁𝗼 𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲 𝘆𝗼𝘂𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗰𝗮𝗿𝗲𝗲𝗿?\nConnect with me → \nhttps://lnkd.in/gFKyas-g.\n\n\n#DataEngineering #Azure #BigData #DataFactory #Databricks #AzureSQL #Synapse #CloudCareers #DataPipelines #ScenarioBasedQuestions #TechInterviews #KPMG #Deloitte #EY #PwC #InterviewPrep #AzureDataEngineer\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348901286022455296_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9a8f73a319ea4fef",
+    "saved_date": "2026-10-01T23:12:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348901286022455296",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348901286022455296_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

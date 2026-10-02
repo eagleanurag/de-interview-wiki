@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-9f6cf449089d136c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.002286+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:10:24Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "This Pyspark coding question that was asked during #Deloitte_USI #R1 round with 3-5 year of experience candidate try to solve it by own:\n\n1. Could you please introduce yourself and walk me through the key projects you've worked on, particularly highlighting your role, the technologies used, and the impact they had?\n\n2. SQL question:\n2.1 Write an SQL query to retrieve the total sales amount for each product category, but only for sales where the amount is greater than 100, and only include those categories where the total sales exceed 1000.\nThe result should include the category name and total sales amount, sorted in descending order of total sales.\n\n2.2. Write an SQL query to delete only the duplicate records from the Employee table and retain the record with the smallest id among the duplicates.\n\n3. Azure Section:\n3.1 Suppose you are running a data pipeline in Azure Data Factory. You are required to design the pipeline in such a way that, on both successful completion and failure, a notification is sent to a Microsoft Teams channel.\nTask:\nHow would you configure the Azure Data Factory pipeline to achieve this functionality?\nWhat components or steps would you use to send the notifications to Microsoft Teams based on the pipeline's outcome?\n\n3.2 What types of trigger options are available in Azure Data Factory (ADF)?\nPlease explain the different types of triggers that can be used to schedule or initiate pipelines in ADF?\n\n3.3 You are given a requirement where multiple Excel files are present at the source location, and each Excel file contains multiple sheets.\nUsing Azure Data Factory (ADF), you need to design a pipeline that will copy data from each Excel sheet into its corresponding target table.\nTask:\nExplain how you would implement this pipeline in ADF to handle multiple Excel files and multiple sheets dynamically, mapping each sheet to a specific table\n\n3.4 Suppose you are required to copy hundreds of files from a source location to a target destination using Azure Data Factory.\nTask:\nWhat would be your approach to designing this pipeline?\nWould you create 100 separate pipelines—one for each file—or is there a more efficient way to handle this scenario?\nPlease explain your strategy for achieving this in a scalable and maintainable way.\n\n4. Spark Section:\n4.1 What would be the PySpark code to read a nested JSON file stored in Azure Blob Storage?\nAssume the JSON file has a complex/nested structure and is stored in your blob storage container.\nTask:\nProvide a sample PySpark code snippet that reads the nested JSON file and flattens the structure if needed\n\n4.2 Can you write a simple PySpark code example where you use both aggregate functions and window functions?\n\n5. What is you record count of data you process?\n\n6. What are the autoloader and copy into? When you would use each?\n\nI am sharing all the interview question and experiences that was asked during the interview, follow me Sudipta Bhandari 🇮🇳 for more update",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:9f6cf449089d136c",
+    "saved_date": "2026-10-01T23:10:24Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

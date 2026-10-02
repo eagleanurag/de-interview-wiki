@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-a2db79dbd1e3caae",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.038152+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:21:36Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Planning for Data Engineering Interview.\n\nFocus on SQL & Python first. Here are some important questions which you should know.\n\n𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐒𝐐𝐋 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\n1- Find out nth Order/Salary from the tables.\n2- Find the no of output records in each join from given Table 1 & Table 2\n3- YOY,MOM Growth related questions.\n4- Find out Employee ,Manager Hierarchy (Self join related question) or\nEmployees who are earning more than managers.\n5- RANK,DENSERANK related questions\n6- Some row level scanning medium to complex questions using CTE or recursive CTE, like (Missing no /Missing Item from the list etc.)\n7- No of matches played by every team or Source to Destination flight combination using CROSS JOIN.\n8-Use window functions to perform advanced analytical tasks, such as calculating moving averages or detecting outliers.\n9- Implement logic to handle hierarchical data, such as finding all descendants of a given node in a tree structure.\n10-Identify and remove duplicate records from a table.\n\n\n𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐏𝐲𝐭𝐡𝐨𝐧 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\n1- Reversing a String using an Extended Slicing techniques.\n2- Count Vowels from Given words .\n3- Find the highest occurrences of each word from string and sort them in order.\n4- Remove Duplicates from List.\n5-Sort a List without using Sort keyword.\n6-Find the pair of numbers in this list whose sum is n no.\n7-Find the max and min no in the list without using inbuilt functions.\n8-Calculate the Intersection of Two Lists without using Built-in Functions\n9-Write Python code to make API requests to a public API (e.g., weather API) and process the JSON response.\n10-Implement a function to fetch data from a database table, perform data manipulation, and update the database.",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a2db79dbd1e3caae",
+    "saved_date": "2026-10-01T23:21:36Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

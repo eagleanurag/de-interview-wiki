@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-6994a0319aac4e2b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.276679+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:10:21Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 My L2 Interview Experience at Impetus (Data Engineer | 2–5 YOE)\n\n✅ As I cleared L1 Data Engineer interview at Impetus and wanted to share my experience for L2 Round to help others in the community who are preparing for similar roles.\n\n🧠 Round Focus: SQL | PySpark | Python \n🔍 Questions I Was Asked:\n\n✅ SQL Scenarios:\n\nI was given 3 tables:\n Student(stdId, fname, lname, gpa, enrollmentDate, subjects)\n Subjects(stdId, subName, subStartDate)\n Scholarship(stdId, sAmount, sDate)\n\nThey asked me:\nDo all students receive a scholarship?\nFind the student(s) with maximum and minimum scholarship amount.\nHow many subjects can a student have?\nWhat SQL optimization techniques have you applied in your past work?\n\n✅ PySpark Questions:\n\nHow do you read a text file in PySpark?\nA CSV file has Name and Surname with commas inside values – how would you handle and clean such records?\nExample :\nCSV Format: Id,Name,SurName,DOB,Gender\nValue Contains: 1RavindraRaghuBanshi01-01-2020M\nEach column has fixed indexes. How would you extract and create separate columns?\nWrite code to perform a broadcast join.\nWhat optimization techniques do you follow in Spark?\nExplain Spark Architecture in detail.\n\n✅ Python Coding:\n\nFind the biggest word from given string?\nstring = 'I am going to office' → Expected Output: 'office'\nFind all prime numbers from given list of numbers?\n\n💡 Tip: Be prepared with hands-on coding, real-world examples, and optimization scenarios, especially around Spark, Delta Lake, and SQL.\n\n🤝 I hope this helps others preparing for Data Engineering interviews. \nIf you’ve been through something similar or are preparing for one. feel free to connect or drop a message!\n\nI’m truly enjoying this journey of continuous learning and interviewing 💪\nFeel free to connect or drop questions if you're preparing for similar roles!\n\n#DataEngineer #ImpetusTechnologies #SQL #PySpark #Python #InterviewExperience #LinkedInShare #CareerJourney\n#Repost",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:6994a0319aac4e2b",
+    "saved_date": "2026-10-01T23:10:21Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

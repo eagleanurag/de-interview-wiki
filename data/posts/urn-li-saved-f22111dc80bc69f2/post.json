@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-f22111dc80bc69f2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7303044153867710465",
+    "captured_at": "2026-10-02T00:15:53.249299+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:32:17Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\n𝐄𝐓𝐋 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐞𝐬 𝐰𝐢𝐭𝐡 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 🚀\nETL (Extract, Transform, Load) is a fundamental process in data engineering, allowing businesses to efficiently manage and analyze large volumes of data.\nPySpark, the Python API for Apache Spark, is widely used for implementing scalable ETL pipelines.\nPyspark = Python + Apache Spark\n🔹 𝗪𝗵𝘆 𝗨𝘀𝗲 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗳𝗼𝗿 𝗘𝗧𝗟?\n✅ Scalability – Handles massive datasets efficiently.\n✅ Flexibility – Supports multiple data sources and formats.\n✅ Performance – Optimized for distributed data processing.\n🔹 𝗟𝗲𝘁’𝘀 𝗯𝗿𝗲𝗮𝗸 𝗱𝗼𝘄𝗻 𝗮 𝗯𝗮𝘀𝗶𝗰 𝗘𝗧𝗟 𝘄𝗼𝗿𝗸𝗳𝗹𝗼𝘄 𝘂𝘀𝗶𝗻𝗴 𝗣𝘆𝗦𝗽𝗮𝗿𝗸:\n🟫 𝗘𝘅𝘁𝗿𝗮𝗰𝘁:\n📌 The first step is to collect data from various sources, including:\n🔹 File-based sources – CSV, JSON, Parquet, etc.\n🔹 Databases – MySQL, PostgreSQL, etc.\n🔹 Cloud & Distributed Storage – HDFS, Amazon S3, etc.\nPySpark provides built-in methods to read data efficiently from these sources.\n🟫 𝗧𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺:\n📌 After extraction, the data undergoes processing to ensure quality and usability. Common transformations include:\n🔹 Cleaning – Handling missing values, duplicates, and inconsistencies.\n🔹 Filtering & Aggregation – Selecting relevant data and summarizing key insights.\n🔹 Joins & Manipulations – Merging datasets, restructuring columns, and more.\nPySpark’s DataFrame API offers powerful functions for seamless transformations.\n🟫 𝗟𝗼𝗮𝗱:\n📌 The final step is to store the processed data in a target system, such as:\n🔹 Databases – PostgreSQL, MySQL, etc.\n🔹 Data Warehouses – Snowflake, BigQuery, etc.\n🔹 Cloud Storage – S3, Azure Blob, etc.\nPySpark efficiently writes data in multiple formats for easy accessibility.\n📙 Bonus: Here’s a PySpark Cheat Sheet that includes commonly used functions and syntax to help you get started! 🚀 Credit : Waleed Mousa\n🤝 Join Data Engineering Community : https://lnkd.in/gy4R55Tj\n📢 Follow Abhisek Sahu for more\n𝑹𝒆𝒑𝒐𝒔𝒕 ✅ 𝒊𝒇 𝒚𝒐𝒖 𝒇𝒊𝒏𝒅 𝒊𝒕 𝒖𝒔𝒆𝒇𝒖𝒍\n#apachespark #etl #dataengineering #pyspark #spark #python #development\nETL Processes Using Pyspark!!",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7303044153867710465_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f22111dc80bc69f2",
+    "saved_date": "2026-10-01T23:32:17Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7303044153867710465",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7303044153867710465_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

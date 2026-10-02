@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-eb4459ae6d32c01e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7309914421483450368",
+    "captured_at": "2026-10-02T00:15:53.064038+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:32:15Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "!! Microsoft Data Engineer 2 Interview Experience !!\n\nInterview Experience for a Data Engineer 2 role at Microsoft, and it was a deep dive into Big Data, PySpark, Data Warehousing, System Design, and DSA. Sharing key takeaways for those preparing for similar roles!\n\n📌 Round 1: Big Data, PySpark & Data Warehousing\n✅ PySpark Coding & Optimization\nJobs, stages, and tasks - performance tuning techniques\nEfficient transformations (narrow vs. wide dependencies)\nBroadcast joins vs. shuffle joins\nCatalyst optimizer & Tungsten execution\n\n✅ Hadoop Ecosystem\nHDFS - block storage & replication\nYARN - resource allocation & container management\nMapReduce vs. Spark - when to use which\n\n✅ Dimensional Modeling\nFact vs. Dimension tables, partitioning & indexing\nStar vs. Snowflake Schema - trade-offs in query performance\nSCD Type 2 Handling - tracking historical changes efficiently\n\n📌 Round 2: Data Structures & Algorithms (DSA)\n✅ Two LeetCode Medium Questions\nDutch National Flag Algorithm - sorting in-place using two pointers\nInterval merging - optimizing from O(n log n) to O(n)\n\n💡 Key Focus Areas\nStart with brute-force, optimize iteratively\nDiscuss time & space complexity trade-offs\nUse efficient data structures like heaps, hashmaps, stacks\n\n📌 Round 3: System Design & Dimensional Modeling\n✅ Data Pipeline Design\nBatch vs. Streaming ingestion (Kafka/Spark Streaming)\nStorage - Delta Lake, Parquet vs. Avro\nCompute layer - Optimizing ETL with Spark\nQuery layer - Redshift/Snowflake tuning\n\n✅ Dimensional Modeling Challenges\nSCD Type 2, surrogate keys, and partitioning strategies\nMinimizing shuffle operations for optimized queries\n\n📌 Round 4: Managerial & Optimization Round\n✅ Technical Deep Dive on Projects\n✅ Query tuning, caching strategies, distributed processing\n✅ CI/CD for Data Pipelines - Automating ETL workflows, deployment strategies\n✅ Behavioral Questions - Adaptability, problem-solving, decision-making\n\n💡 Key Takeaways:\n🔹 PySpark performance tuning is crucial (jobs, stages, tasks)\n🔹 Dimensional modeling expertise is a must!\n🔹 Optimize code step by step, always move beyond brute-force\n🔹 System design isn’t just about architecture - scalability & performance matter\n🔹 CI/CD for data pipelines is becoming the industry standard\n\n#microsoftinterview #dataengineering #pyspark #bigdata #systemdesign #optimization #etl #dsa #microsoft",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7309914421483450368_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:eb4459ae6d32c01e",
+    "saved_date": "2026-10-01T23:32:15Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7309914421483450368",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7309914421483450368_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

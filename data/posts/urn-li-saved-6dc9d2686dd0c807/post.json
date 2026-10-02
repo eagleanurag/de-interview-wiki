@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-6dc9d2686dd0c807",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7293591844435730432",
+    "captured_at": "2026-10-02T00:15:48.406741+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:35:27Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\nConfused about whether to choose 𝑨𝒛𝒖𝒓𝒆 𝑫𝒂𝒕𝒂 𝑭𝒂𝒄𝒕𝒐𝒓𝒚, 𝑨𝒛𝒖𝒓𝒆 𝑺𝒚𝒏𝒂𝒑𝒔𝒆 𝑨𝒏𝒂𝒍𝒚𝒕𝒊𝒄𝒔, 𝒐𝒓 𝑨𝒛𝒖𝒓𝒆 𝑭𝒂𝒃𝒓𝒊𝒄 for your project?\nLet’s break it down.\nSwipe through the PDF to explore.\nFollow Abhishek Agrawal for more such content.\n🔗 𝑱𝒐𝒊𝒏 𝒐𝒖𝒓 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒕𝒐 𝒔𝒕𝒂𝒚 𝒖𝒑𝒅𝒂𝒕𝒆𝒅 𝒐𝒏 𝑨𝒛𝒖𝒓𝒆 𝑫𝒂𝒕𝒂 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓𝒊𝒏𝒈:\nhttps://lnkd.in/ew4mp24d 📲\n#azuredatafactory #databricks #azure #fabric #azuresynapse\n…see more\nfabric abhishek",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7293591844435730432_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6dc9d2686dd0c807",
+    "saved_date": "2026-10-01T23:35:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7293591844435730432",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7293591844435730432_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

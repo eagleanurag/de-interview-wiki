@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-a901b66b655a9a89",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7355944631584358400",
+    "captured_at": "2026-10-02T00:15:50.417970+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:48Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "SAW a SQL question someone posted, without DDL and Solution.\n\nCREATE TABLE SEMP (\n empno INT PRIMARY KEY,\n emailid VARCHAR(100)\n);\n\n\nINSERT INTO SEMP (empno, emailid) VALUES\n(101, 'hari@kln.com'),\n(102, 'kumar@bcd.com'),\n(103, 'surya.k@abc.com'),\n(104, 'kalyan.h@xyz.co.in');\n\n\nSolution: \n\nSELECT\n empno,\n LEFT(emailid, CHARINDEX('@', emailid) - 1) AS ename,\n SUBSTRING(emailid, CHARINDEX('@', emailid) + 1,\n CHARINDEX('.', emailid, CHARINDEX('@', emailid)) - CHARINDEX('@', emailid) - 1\n ) AS orgname\nFROM SEMP;",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7355944631584358400_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a901b66b655a9a89",
+    "saved_date": "2026-10-01T23:09:48Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7355944631584358400",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7355944631584358400_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

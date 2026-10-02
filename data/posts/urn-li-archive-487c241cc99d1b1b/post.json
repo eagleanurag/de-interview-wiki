@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-487c241cc99d1b1b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.735622+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:49Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Engineer aspirant asked me - Why is SQL so important to learn?\n\nI showed them this list:\n\n- SQL + SELECT = Querying Data\n- SQL + JOIN = Data Integration\n- SQL + WHERE = Data Filtering\n- SQL + GROUP BY = Data Aggregation\n- SQL + ORDER BY = Data Sorting\n- SQL + UNION = Combining Queries\n- SQL + INSERT = Data Insertion\n- SQL + UPDATE = Data Modification\n- SQL + DELETE = Data Removal\n- SQL + CREATE TABLE = Database Design\n- SQL + ALTER TABLE = Schema Modification\n- SQL + DROP TABLE = Table Removal\n- SQL + INDEX = Query Optimization\n- SQL + VIEW = Virtual Tables\n- SQL + Subqueries = Nested Queries\n- SQL + Stored Procedures = Task Automation\n- SQL + Triggers = Automated Responses\n- SQL + CTE = Recursive Queries\n- SQL + Window Functions = Advanced Analytics\n- SQL + Transactions = Data Integrity\n- SQL + ACID Compliance = Reliable Operations\n- SQL + Data Warehousing = Large Data Management\n- SQL + ETL = Data Transformation\n- SQL + Partitioning = Big Data Management\n- SQL + Replication = High Availability\n- SQL + Sharding = Database Scaling\n- SQL + JSON = Semi-Structured Data\n- SQL + XML = Structured Data\n- SQL + Data Security = Data Protection\n- SQL + Performance Tuning = Query Efficiency\n- SQL + Data Governance = Data Quality\n\nThe biggest SQL challenge is bridging the gap between theoretical knowledge and real-world problem-solving. \n\nWhat worked for me was moving beyond tutorials and preparing 1:1 with experienced data professionals. You can do this too. \n\n𝗦𝗶𝗺𝗽𝗹𝘆, 𝗰𝗼𝗻𝗻𝗲𝗰𝘁 𝘄𝗶𝘁𝗵 𝗮 𝘁𝗼𝗽 𝗗𝗮𝘁𝗮 𝗘𝘅𝗽𝗲𝗿𝘁 𝗳𝗼𝗿 𝗙𝗥𝗘𝗘 𝗵𝗲𝗿𝗲: https://lnkd.in/gtikZi9f\n\nThey will help you understand why certain approaches work better in production environments, plus guide you through industry-standard practices that interviews often focus on. \n\nThey will also help you build other essential skills and prepare you end-to-end so you crack your dream data role. 🚀\n\nIf you've read so far, do LIKE the post👍\n\n#SQL #collab #preplacedcollab",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:487c241cc99d1b1b",
+    "saved_date": "2026-10-01T23:30:49Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

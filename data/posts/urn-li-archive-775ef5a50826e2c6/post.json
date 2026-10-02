@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-775ef5a50826e2c6",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.527051+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:18:29Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐞𝐫 : What is the difference between WHERE and HAVING? \n\n𝐂𝐚𝐧𝐝𝐢𝐝𝐚𝐭𝐞: 𝐂𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐞 𝐚𝐜𝐜𝐞𝐩𝐭𝐞𝐝, 𝐥𝐞𝐭'𝐬 𝐠𝐨! \n\n1. WHERE Clause :\n - The `WHERE` clause is used to filter rows before any grouping is done.\n - It applies conditions to individual rows in a table.\n - If you want to filter data based on a column's value, you use `WHERE`.\n - Example: If you want to find all orders where the amount is greater than 100, you would use:\n\n SELECT * FROM orders\n WHERE amount > 100;\n\n2. HAVING Clause :\n - The `HAVING` clause is used to filter groups after the `GROUP BY` operation.\n - It applies conditions to groups of rows that result from the grouping.\n - If you want to filter based on an aggregated value (like the sum, average, etc.), you use `HAVING`.\n - Example: If you want to find customers who have made total purchases over 500, you would use:\n\n SELECT customer_id, SUM(amount) AS total_amount\n FROM orders\n GROUP BY customer_id\n HAVING SUM(amount) > 500;",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:775ef5a50826e2c6",
+    "saved_date": "2026-10-01T23:18:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-3df1b8221c569375",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.529340+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:13:35Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 We're Hiring | GCP Data Engineer\n 📍 Location: Pan India\n 💰 Budget: Up to ₹30 LPA\n 🕐 Experience: 5 to 10 years\nAre you a data engineering expert with a passion for building scalable solutions on Google Cloud Platform (GCP)? We're looking for a GCP Data Engineer with hands-on experience in:\n✅ Apache Beam, Dataflow\n ✅ BigQuery, Python, SQL\n ✅ Dataproc, PySpark\n ✅ Airflow / Cloud Composer\n🛠 Key Responsibilities:\nDesign & build robust data pipelines\nOptimize performance for large-scale data processing\nAutomate workflows using Composer/Airflow\nCollaborate with cross-functional teams to drive data solutions\n📩 Interested? Send your CV to:\n anusha.dwadasi@rapinnotech.de\n#Hiring #DataEngineer #GCP #BigQuery #ApacheBeam #Dataflow #Python #Airflow #PySpark #RemoteJobs #IndiaJobs #TechJobs",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:3df1b8221c569375",
+    "saved_date": "2026-10-01T23:13:35Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

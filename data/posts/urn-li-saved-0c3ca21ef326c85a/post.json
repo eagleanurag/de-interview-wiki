@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-0c3ca21ef326c85a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315004917868359681",
+    "captured_at": "2026-10-02T00:15:44.702203+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:50Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\nData Engineering Most Frequently asked Real time Interview Questions.\nHey Fellow Data Engineer, You might have noticed these questions in your data engineering interview rounds every time, these are some of the real time questions in order to check whether you have really worked on any data engineering project or not .\nEnsure you prepare well before going for any interview.\n1. What cluster Manager you have used in your project ?\n2. What is your cluster Size ?\n3. How does your data comes to your storage location ?\n4. What are the other sources you have used in your project ?\n5. what is the sink for your project /\n6. What is the frequency of the data in your source ?\n7. What is the volume of your data ?\n8. Please explain your project in detail ?\n9. Lets say out of 100 task, 99 tasks completed however the last task is taking long hours to finish/complete, how to handle this issue ?1\n10. What all challenges you have faced and how did you overcome from it ?\n11. what optimization technique you have used in your project and what is the reason for it ?\n12. Have you done spark optimization tuning ? If yes, how you have done that ?\n13. Can you please walk me through the spark-submit command ?\n14. Lets say you are getting your data volume is 100 GB , In your spark you are doing 5 Actions and 3 transformations on the data, explain what goes behind the scene with respect to Stages ,tasks?\n15. how do you take your code to the higher environment ?\n16. How do you schedule your job in production ?\n17. How do you reprocess the data if it failed ?\n18. Tell me one scenario you have gone wrong with your decision making and what you have learnt from that mistake ?\n19. Lets say you have noticed duplicate records loaded in the table for the particular partition, how you resolved such issues ?\n20. What is the frequency of your jobs ?\n21. How do you notify your business/Stakeholders in case of any job failure?\nHope you find these questions useful for your preparation .\n📙 Also attaching an amazing document which explains 'How to Debug Slow Apache Spark Jobs? '\nDocument credits : LinkedIn (Respective owner)\n🔈 Join my Data Community : https://lnkd.in/gy4R55Tj\n♻️ Repost to help others grow\n🔔 Follow Abhisek Sahu for more\nHow to Debug Slow Spark Jobs",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315004917868359681_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0c3ca21ef326c85a",
+    "saved_date": "2026-10-01T23:30:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315004917868359681",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315004917868359681_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

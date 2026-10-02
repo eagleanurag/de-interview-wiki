@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-247bb39612189557",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347829243361312770",
+    "captured_at": "2026-10-02T00:15:45.593729+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:47Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "My friend just cracked a 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 interview at Flipkart 🎯\n\nAnd it wasn’t just about knowing tools like Spark or SQL.\nThey really focused on how you think and solve real problems.\n\nSo I asked him to share the exact questions, and here’s what he got 👇\n\n𝗣𝘆𝘁𝗵𝗼𝗻:\n\n- Reverse a string without using shortcuts\n- Find duplicates in a list\n- What are *args and **kwargs?\n- Explain generators\n\n𝗦𝗤𝗟:\n\n- Find the Nth highest salary\n- Use window functions\n- Write an UPSERT\n- Handle duplicate rows\n\n𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 (𝗙𝗹𝗶𝗽𝗸𝗮𝗿𝘁-𝘀𝘁𝘆𝗹𝗲):\n\n- Kafka vs Kinesis and when to use what\n- Handle schema changes in data lake\n- Debug Airflow pipeline failures\n- Real-time data ingestion\n- How to optimize PySpark jobs\n\nHis tip? \nBe ready for scenario-based questions → they matter the most.\n\nIf you're planning to switch into Data Engineering and need a push,\nBosscoder Academy is worth checking out → https://bit.ly/3GwIYI0\n\nThey’ve helped 800+ professionals with:\n✅ Real projects & tools\n✅ 1:1 mentorship\n✅ Resume + mock interview support\n\n#Dataengineer #Flipkart #Careerswitch #Bigdata #Sponsoredpost #LinkedIn #Etl",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347829243361312770_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:247bb39612189557",
+    "saved_date": "2026-10-01T23:12:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347829243361312770",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347829243361312770_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

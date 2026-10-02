@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-75bafcc07a3a3f59",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.515954+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:10:56Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Capgemini – Azure Data Engineer Interview Questions (L1 Round)\n📌 These are actual questions from recent Capgemini screening rounds — be ready to nail them!\n\n\n---\n\n🧠 Topics Covered: ADF, Databricks, Azure Storage, SQL, Monitoring\n\n1️⃣ How does parameterization work in Azure Data Factory (datasets, pipelines, linked services)?\n2️⃣ What are the key differences between Mapping Data Flows vs Data Flow Activities in ADF?\n3️⃣ How do you debug failures in ADF — what steps do you take to isolate the issue?\n4️⃣ What’s the difference between Azure Blob Storage and ADLS Gen2 in terms of performance and security?\n5️⃣ How do you handle incremental loads in ADF using a watermark or timestamp column?\n6️⃣ What are Mount Points in Azure Databricks, and how do you use them with ADLS?\n7️⃣ Write a SQL query to find second highest salary from an employee table.\n8️⃣ What are the different Integration Runtime types in ADF and their use cases?\n9️⃣ How do you trigger a Databricks notebook from ADF and pass values into it?\n🔟 What is the use of activity dependency conditions (e.g., success, failure, completion) in pipeline flows?",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:75bafcc07a3a3f59",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

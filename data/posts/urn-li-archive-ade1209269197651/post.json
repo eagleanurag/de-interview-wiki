@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-ade1209269197651",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.168384+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:01Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "SQL Must Know Differences:\n\n🔰 RANK vs DENSE_RANK:\nRANK: Provides a ranking with gaps if there are ties.\nDENSE_RANK: Provides a ranking without gaps, even in the case of ties.\n\n🔰 HAVING vs WHERE Clause:\nWHERE: Filters rows before grouping.\nHAVING: Filters groups after the GROUP BY clause.\n\n🔰 UNION vs UNION ALL:\nUNION: Removes duplicates and combines results.\nUNION ALL: Combines results without removing duplicates.\n\n🔰 JOIN vs UNION:\nJOIN: Combines columns from multiple tables.\nUNION: Combines rows from multiple tables with similar structure.\n\n🔰 DELETE vs DROP vs TRUNCATE:\nDELETE: Removes rows, with the option to filter.\nDROP: Removes the entire table or database.\nTRUNCATE: Deletes all rows but keeps the table structure.\n\n🔰 CTE vs TEMP TABLE:\nCTE: Temporary result set used within a single query.\nTEMP TABLE: Physical temporary table that persists for the session.\n\n🔰 SUBQUERIES vs CTE:\nSUBQUERIES: Nested queries inside the main query.\nCTE: Can be more readable and used multiple times in a query.\n\n🔰 ISNULL vs COALESCE:\nISNULL: Replaces NULL with a specified value, accepts two parameters.\nCOALESCE: Returns the first non-NULL value from a list of expressions, accepting multiple parameters.\n\n🔰 INTERSECT vs INNER JOIN:\nINTERSECT: Returns common rows from two queries.\nINNER JOIN: Combines matching rows from two tables based on a condition.\n\n🔰 EXCEPT vs NOT IN:\nEXCEPT: Returns rows in the first query but not in the second.\nNOT IN: Filters rows where a column's value is not in a given list.",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ade1209269197651",
+    "saved_date": "2026-10-01T23:20:01Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

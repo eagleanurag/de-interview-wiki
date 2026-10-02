@@ -1398,18 +1398,45 @@ def test_collected_posts_keep_their_provenance():
     if not identifiers:
         pytest.skip("no collected posts are present in this checkout")
 
+    url_less = 0
+
     for identifier in identifiers:
         post = load_post(REAL_POSTS_ROOT / identifier)
 
         assert post.source.platform == "linkedin"
         assert post.source.captured_at
-        assert post.source.url
         assert post.original_text.strip()
 
         # The identifier is derived from the source's own identifier,
         # slugged so it is a safe directory name. That keeps it stable
         # across runs and traceable back to the original.
         assert post.id.startswith("urn-li-")
+
+        if not post.source.url:
+            # A post can honestly have no link. A local saved-post
+            # archive holds a third of its records with no permalink,
+            # because the card they were captured from exposed none and
+            # nothing else about the record would recover it. Inventing
+            # one would be exactly the false provenance this test
+            # exists to catch, so the alternative is checked instead:
+            # the post is identified by the archive's own namespace,
+            # it says so rather than claiming a link, and it has not
+            # been passed off as a URL-derived item.
+            url_less += 1
+
+            assert post.id.startswith("urn-li-archive-"), post.id
+            assert not post.id.startswith("urn-li-saved-")
+            assert not post.id.startswith("urn-li-article-")
+
+            assert post.saved_item is not None
+            assert post.saved_item.saved_item_id.startswith(
+                "urn:li:archive:"
+            )
+            assert post.saved_item.canonical_url is None
+            assert post.saved_item.url_kind == "identified_by_id"
+
+            continue
+
         assert post.source.url.startswith("https://www.linkedin.com/")
 
         # A post links to its feed permalink; an article links to its

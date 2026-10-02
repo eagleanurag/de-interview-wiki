@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-502eddea229ca963",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341276741132328961",
+    "captured_at": "2026-10-02T00:15:47.429407+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:17:14Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Master PySpark Functions in One Glance! \n\nIf you're preparing for Data Engineering interviews or working with Spark at scale, this 1-page PySpark Functions Cheatsheet will save you hours!\n\n🔥 Whether you're building ETL pipelines, transforming huge datasets, or just brushing up for an interview — knowing these core PySpark functions is a must:\n\n🔹 Column Operations (col, lit, alias)\n🔹 Aggregations (count, sum, avg, collect_list)\n🔹 String Manipulations (concat, substr, regex)\n🔹 Date & Time Logic (current_date, datediff, add_months)\n🔹 Null Handling (when, coalesce, isNull)\n🔹 Window Functions (row_number, rank, lag)\n🔹 JSON & Struct Processing (from_json, struct)\n🔹 Mathematical and Array Functions\n…and more — all categorized and simplified in a visual format.\n\n📌 Save it. Share it. Bookmark it for your next PySpark project!\n✅ Especially useful for anyone targeting roles at EY, PwC, EXL, IBM, or any big data engineering \n\nLet’s connect and grow in the data space! 💡\n\n#PySpark #DataEngineering #BigData #ApacheSpark #ETL #LinkedInLearning #SparkSQL #TechCheatsheet #InterviewPrep #AzureDataEngineer #DataEngineer #LearningNeverStops\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341276741132328961_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:502eddea229ca963",
+    "saved_date": "2026-10-01T23:17:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341276741132328961",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341276741132328961_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-4cd9f54f74c1942e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.849140+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:53Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Give me 2 minutes, I will explain you\n\n25 data terminologies that you need to know as a Data Engineer!\n\n⇥ Data Ingestion – Collecting and importing data from various sources into a storage system (e.g., databases, data lakes)\n\n⇥ ETL (Extract, Transform, Load) – Extracting raw data, transforming it into a usable format, and loading it into a destination system\n\n⇥ ELT (Extract, Load, Transform) – Unlike ETL, data is first loaded into a storage system (like a data lake) before transformation\n\n⇥ Data Pipeline – A series of steps that automate data movement and transformation from one system to another\n\n⇥ Batch Processing – Processing large volumes of data at scheduled intervals rather than in real-time\n\n⇥ Stream Processing – Processing data in real-time as it arrives, often used for live analytics\n\n⇥ Data Lake – A centralized repository that stores raw, structured, and unstructured data for later use\n\n⇥ Data Warehouse – A structured repository optimized for querying and analytics, storing processed data\n\n⇥ Data Mart – A subset of a data warehouse, focused on a specific business domain or department\n\n⇥ OLTP (Online Transaction Processing) – A system designed for handling real-time transactional data, like banking systems\n\n⇥ OLAP (Online Analytical Processing) – A system designed for complex queries and analytical workloads, often used in reporting\n\n⇥ Indexing – A technique to improve database query performance by creating a structured way to access data quickly\n\n⇥ Sharding – Splitting large datasets into smaller, manageable chunks across multiple servers to improve performance\n\n⇥ Partitioning – Dividing a large dataset into smaller parts within a single database to improve query efficiency\n\n⇥ Caching – Temporarily storing frequently accessed data in memory to boost system performance\n\n⇥ Data Governance – Policies ensuring data quality, security, and compliance across an organization\n\n⇥ Data Lineage – Tracking where data originates, how it moves, and how it is transformed\n\n⇥ Schema Evolution – The ability to modify a database or data warehouse structure without affecting existing data\n\n⇥ Big Data – Large and complex datasets requiring specialized tools (e.g., Hadoop, Spark) for processing\n\n⇥ Data Mesh – A decentralized architecture treating data as a product, allowing domain-oriented data ownership\n\n⇥ Data Lakehouse – A hybrid architecture combining the features of data lakes and data warehouses for better flexibility and performance\n\n⇥ Metadata – Data about data, providing information such as structure, source, and usage details\n\n⇥ Data Modeling – Designing a structured format for storing and managing data efficiently\n\n⇥ Data Orchestration – Coordinating various data workflows, often using tools like Apache Airflow\n\n⇥ Lambda Architecture – A data processing architecture handling both real-time and batch data\n\nGet the Interview Call: https://lnkd.in/ges-e-7J\nJoin me: https://lnkd.in/giE3e9yH\nFollow for more 👋\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4cd9f54f74c1942e",
+    "saved_date": "2026-10-01T23:30:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

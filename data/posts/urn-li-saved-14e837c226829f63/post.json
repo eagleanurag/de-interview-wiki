@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-14e837c226829f63",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340234194553327619",
+    "captured_at": "2026-10-02T00:15:44.940979+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:19:08Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nSenior Data Engineer at Epsilon\n1yr •\n⤵️ Myntra Data Engineer Interview Questions💻.\n1️⃣ Python + PySpark Coding –\n🔹 Efficiently reading large CSVs using spark.read options\n🔹 Dealing with missing data using fillna, dropna, na.replace\n🔹 Using Python decorators in UDFs (User Defined Functions) – with examples!\n2️⃣ Key Spark Performance Optimization Strategies.\n3️⃣ Real-time Product Recommendation Pipeline Architecture.\n📘 Whether you're actively interviewing or brushing up on your concepts, this will give you a realistic view of the technical depth expected at top-tier firms like Myntra.\n🔁 Feel free to like, save, or share this post with anyone preparing for a Data Engineering role.\n💬 Grab the PDF and start learning.\n#DataEngineering #Myntra #InterviewPreparation #SQL #Python\n#BigData #ApacheSpark #DataWarehouse #LinkedInLearning #TechCareers #JobSearch #PythonTips\n…see more\nmyntra",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340234194553327619_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:14e837c226829f63",
+    "saved_date": "2026-10-01T23:19:08Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340234194553327619",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340234194553327619_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-ac43b4436d7bc593",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7329705187646824448",
+    "captured_at": "2026-10-02T00:15:50.569403+00:00",
+    "author": "Mohammed Ankoos",
+    "published_at": "2026-10-01T23:23:30Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 2nd\nAZURE DATA ENGINEER at Capgemini |Bigdata|ETL|Azure data factory|Data Bricks|Pyspark|SQL|Python\n1yr •\nReady to Master PySpark? Spark Your Data Engineering Journey!\nI just came across this amazing PySpark Power Guide that covers everything from:\nSparkContext, Py4J, RDDs\nDataFrames & Spark SQL\nFile loading (CSV, JSON, Parquet)\nReal-world Delta Lake usage\nIf you're a Data Engineer or aspiring Big Data professional, this is a must-read!\nI'm currently leveling up my PySpark & Databricks skills to build real-time, scalable pipelines.\nLet’s connect and grow together in this data-driven world!\n#PySpark #DataEngineering #BigData #ApacheSpark #DeltaLake #Databricks #ETL #LinkedInLearning #AzureDataEngineer #CareerGrowth #JobSearch\nReady to Master PySpark? Spark Your Data Engineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7329705187646824448_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ac43b4436d7bc593",
+    "saved_date": "2026-10-01T23:23:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7329705187646824448",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7329705187646824448_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-b92507ea0bc22933",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327558140156149760",
+    "captured_at": "2026-10-02T00:15:50.990084+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:24:43Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Avoid this common mistake in your next analytics interview! [Detailed Solution Video in Comment]\n\n👉🏻Avoid using Limit for problems like - Find the highest Salary of Employee, Find the top 5 products by sales etc.\n\nWhy ❓\n\n✅ As it doesn't handle cases where there will be \"ties\" ! Thus a chance of having more than 5 records in top 5 products is possible !\n\n👉🏻 Use Rank / Dense Rank accordingly and present a complete solution !\n\nfollow Gaurav Agrawal for more !\n\n#analytics #businessanalytics #dataanalytics #sql #interviewprep\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327558140156149760_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b92507ea0bc22933",
+    "saved_date": "2026-10-01T23:24:43Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327558140156149760",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327558140156149760_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-28d5d2e9922fe940",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345654919057612801",
+    "captured_at": "2026-10-02T00:15:45.923124+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:14:14Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Preparing for the placements in the last few months or getting ready to make a switch? Here are 10 LeetCode articles you can't miss for your preparation for companies like Google, Microsoft or Amazon....\n\n1. Sliding Window: Optimize brute force solutions for subarray/substring problems involving contiguous elements. Crucial for array and string manipulation.\nLink: https://lnkd.in/gTPKniq8\n\n2. Two Pointers: Efficiently process pairs or groups of elements without nested loops. Great for sorted arrays, partitioning, and in-place operations.\nLink: https://lnkd.in/gZueEGr9\n\n3. Substring Problems: Techniques to find, compare, or manipulate substrings. Often involves dynamic programming or sliding windows.\nLink: https://lnkd.in/gn7Te8zM\n\n4. Dynamic Programming - Part 1: Introduction to breaking problems into overlapping subproblems with memoization and tabulation.\nLink: https://lnkd.in/gciVHmyT\n\n5. Dynamic Programming - Part 2: Tackle advanced DP problems like matrix DP, interval DP, and multi-dimensional states.\nLink: https://lnkd.in/gjgD46t6\n\n6. Binary Search: Master standard and advanced binary search variations, including rotated arrays and unknown search bounds.\nLink: https://lnkd.in/gxqu6XqS\n\n7. Backtracking: Explore all potential solutions recursively. Essential for permutations, combinations, and puzzles.\nLink: https://lnkd.in/geKFNQsH\n\n8. Tree Patterns: DFS, BFS, recursion, and structural manipulation — the backbone of tree-based problems.\nLink: https://lnkd.in/gDudCzr9\n\n9. Graph Patterns: Traversals, connected components, shortest paths, and topological sorts. Core for advanced interviews.\nLink: https://lnkd.in/gY2AFJac\n\n10. Greedy Algorithms: Make the best choice locally at each step to find optimal global solutions. Common in scheduling, intervals, and path optimization.\nLink: https://lnkd.in/gCazBs6V\n\nMaster these patterns, and you'll approach any interview problem with confidence.\n\nPersonal DSA Sheet: https://lnkd.in/gnH8d4Dh",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345654919057612801_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:28d5d2e9922fe940",
+    "saved_date": "2026-10-01T23:14:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345654919057612801",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345654919057612801_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-b228ac8144b7c4be",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349219212017483777",
+    "captured_at": "2026-10-02T00:15:50.799715+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:11:56Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "This is cool. Materialized views in databricks only getting triggered when input or upstream tables change.\n\nI always had an issue with running materialized views in the workflows. We don't use materilaized views in dlt pipeline, but as a standalone gold tables.\n\nIn workflows, we had to pay the double compute of warehouse and then underneath dlt piepline which refreshes the materialized view.\n\nOther option was to run it on schedule , but we had a depedency on the upstream tables. Now we can trigger the views refresh based on when upstream changes happen.\n\nUse TRIGGER ON UPDATE on your MV's.\n\nNow, what if data is streaming continuously in your streaming table and your views are built on top of it. \n\nDon't you worry, we can define a trigger on how often views can refresh based on upstream changes .\n\nSo, TRIGGER ON UPDATE combining it with AT AMOST every 3 hours.\n\nIt'd run only once every 3 hours whenever upstream data changes.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349219212017483777_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b228ac8144b7c4be",
+    "saved_date": "2026-10-01T23:11:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349219212017483777",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349219212017483777_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

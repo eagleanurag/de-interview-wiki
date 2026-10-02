@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-bbe6d74e6a7278d4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.070606+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:06:54Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Atlassian 𝗼𝗳𝗳𝗲𝗿𝘀 ₹𝟯𝟬–𝟰𝟬 𝗟𝗣𝗔 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜 𝗮𝗻𝗱 ₹𝟱𝟬–𝟲𝟬 𝗟𝗣𝗔 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮\n𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗜 𝗿𝗼𝗹𝗲𝘀.\n\nHere’s the complete Atlassian Data Engineer interview experience that candidates recently faced 👇\n\n𝗥𝗼𝘂𝗻𝗱 𝟭 – 𝗢𝗻𝗹𝗶𝗻𝗲 𝗖𝗼𝗱𝗶𝗻𝗴 𝗔𝘀𝘀𝗲𝘀𝘀𝗺𝗲𝗻𝘁\n1️⃣ Merge overlapping intervals and analyze time/space complexity.\n2️⃣ Design an algorithm to deduplicate millions of records efficiently.\n3️⃣ Write a SQL query using window functions to find the 2nd highest salary or calculate running totals.\n4️⃣ Implement a function to find the longest substring without repeating characters using the sliding window technique.\n\n𝗥𝗼𝘂𝗻𝗱 𝟮 – 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 \n1️⃣ Solve real-time array and string manipulation problems using optimized logic.\n2️⃣ Explain the difference between ROW_NUMBER(), RANK(), and DENSE_RANK() in SQL.\n3️⃣ Write a query to calculate running totals per user using window functions.\n4️⃣ Discuss time complexity and performance optimization for your solution.\n\n𝗥𝗼𝘂𝗻𝗱 𝟯 – 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 \n1️⃣ Design a scalable, fault-tolerant data pipeline for real-time analytics.\n2️⃣ Handle late-arriving data, deduplication, and schema evolution.\n3️⃣ Compare batch vs streaming architectures and their trade-offs.\n4️⃣ Ensure data quality, monitoring, and exactly-once semantics in streaming.\n5️⃣ Design an ETL system capable of processing 1M+ daily events efficiently.\n\n𝗥𝗼𝘂𝗻𝗱 𝟰 – 𝗩𝗮𝗹𝘂𝗲𝘀 & 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n1️⃣ Tell me about a time you failed on a project — what did you learn?\n2️⃣ Describe when you took ownership of a data pipeline beyond your responsibility.\n3️⃣ How do you balance speed vs accuracy during tight deadlines?\n4️⃣ How do you collaborate with cross-functional teams to ensure smooth project delivery?\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗮 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀.\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲 👉 https://lnkd.in/eQRtDTRq\n\nIf you’ve read this far, do LIKE 👍 and RESHARE 🔁 this post to help others preparing for Data Engineer Interviews!",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bbe6d74e6a7278d4",
+    "saved_date": "2026-10-01T23:06:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

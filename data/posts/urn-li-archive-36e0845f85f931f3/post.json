@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-36e0845f85f931f3",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.482741+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:08:48Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Sharing the Data Engineer Interview Questions Asked at Koantek\n\nI recently interviewed for a Data Engineer role, and the discussion reinforced something important: modern Data Engineering interviews are less about memorizing definitions and more about practical problem-solving, real production scenarios, and hands-on experience.\n\nSharing the technical round questions here — hope this helps others preparing for similar roles 👇\n\n🔹 Technical Interview Questions\n1️⃣ Introduce yourself and walk through your professional background.\n2️⃣ Explain your current roles and responsibilities.\n3️⃣ What is an incremental pipeline? How would you design and implement it in production?\n4️⃣ Explain the logic for implementing Slowly Changing Dimension (SCD Type 2).\n5️⃣ In SCD Type 2 using MERGE, does a source row get evaluated once or multiple times? How does it trigger both UPDATE and INSERT?\n6️⃣ Write SQL and PySpark logic to remove duplicate records.\n7️⃣ What are Spark transformations? Explain narrow vs. wide transformations with examples.\n8️⃣ What are the different cluster types in Databricks? When would you use each?\n9️⃣ What is Databricks Auto Loader? In which scenarios is it most useful?\n🔟 Have you ever faced an OutOfMemory (OOM) error? How did you debug and resolve it?\n1️⃣1️⃣ What Spark optimization techniques have you used in real projects?\n1️⃣2️⃣ What SQL optimization techniques do you typically apply?\n1️⃣3️⃣ Write PySpark code to read a CSV file.\n1️⃣4️⃣ What are the key differences between Spark 1.6 and Spark 2.x?\n1️⃣5️⃣ What is Adaptive Query Execution (AQE)? How does it help optimize Spark jobs at runtime?\n1️⃣6️⃣ How would you debug a slow-running Spark job in a production environment?\n\nHope this helps fellow Data Engineers preparing for interviews. Would love to connect and exchange learnings!\n\n#DataEngineering #ApacheSpark #Databricks #PySpark #SQL #InterviewExperience #InterviewQuestions #LearningInPublic #CareerGrowth #Azure",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:36e0845f85f931f3",
+    "saved_date": "2026-10-01T23:08:48Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

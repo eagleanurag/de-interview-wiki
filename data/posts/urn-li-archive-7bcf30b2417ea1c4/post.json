@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-7bcf30b2417ea1c4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.605367+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:27:39Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Top 10 optimization techniques in PySpark.\n\n1. Use DataFrames over RDDs:\nDataFrames are optimized via Catalyst and Tungsten, offering better performance than RDDs.\n\n2. Persist or Cache Smartly:\nUse .cache() or .persist() only when needed to avoid unnecessary memory usage.\n\n3. Avoid Collect():\nAvoid using .collect() on large datasets; it can lead to OOM errors.\n\n4. Use Broadcast Join:\nBroadcast small tables using broadcast(df) to avoid shuffle during joins.\n\n5. Filter Early (Predicate Pushdown):\nApply .filter() or .where() as early as possible to reduce data shuffling.\n\n6. Partitioning Strategy:\nRepartition or coalesce data properly using .repartition() or .coalesce() for balanced load.\n\n7. Avoid UDFs When Possible:\nPrefer built-in Spark SQL functions over UDFs for better performance.\n\n8. Column Pruning:\nSelect only necessary columns using .select() to reduce I/O and memory.\n\n9. Optimize Shuffle Operations:\nReduce shuffles by avoiding wide transformations when possible (e.g., avoid unnecessary .groupBy() or .distinct()).\n\n10. Use Efficient File Formats:\nUse Parquet or ORC with compression for better performance in storage and reading.\n\nHappy Learning!\n\nInterested to learn Data Engineering? DM me for more details and free Demo.\n\n\n#PySpark #DataEngineering #BigData #Hadoop #Cloud #Azure #AWS",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7bcf30b2417ea1c4",
+    "saved_date": "2026-10-01T23:27:39Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

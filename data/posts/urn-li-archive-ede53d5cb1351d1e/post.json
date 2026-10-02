@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-ede53d5cb1351d1e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.981990+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:17:06Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "I moved out of the data analytics field (And this is NOT an advice). \n\nAfter spending ~7 years in analytics, I learned, made mistakes, and grew with projects.\n\nBut as I gained experience and started climbing the corporate ladder, I felt a NEED to change - to explore, more in-demand skills that the market values today. (you know the reason)\n\nThat’s what pulled me towards the Gen AI + Engineering space.\n\nLearning tools like Power Automate, Copilot Studio, Databricks, YAML, and Large Language Models (LLMs) opened gates.\n\nIn the analytics space, I was circling around SQL, Tableau, and Alteryx only. Great tools, but the growth path started feeling...limited.\n\nNot saying this is the right move for you. Your decision depends on:\n → how many years of experience you have\n → what tools you enjoy working with\n → and above all, your curiosity to explore \n\nWhat’s your take on the Data Analytics field today? Or are you exploring Gen AI / Engineering too?\n\n#dataanalytics #engineering #genAI",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ede53d5cb1351d1e",
+    "saved_date": "2026-10-01T23:17:06Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

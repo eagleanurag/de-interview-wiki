@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-148e7051eb89de30",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.052530+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:04Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Disappear till SEPTEMBER 2025 and..\n\nClear all System Design Rounds\n\nHere is HOW can you do in 5 steps. \n\n𝗦𝘁𝗲𝗽 𝟭: 𝗙𝘂𝗻𝗱𝗮𝗺𝗲𝗻𝘁𝗮𝗹𝘀\n - Networking Basics (HTTP, TCP/IP, Load Balancing)\n - API Design (REST vs GraphQL, Rate Limiting, Authentication)\n - Database Basics (SQL vs NoSQL, Indexing, Partitioning)\n - Caching Concepts (Strategies, In-Memory Caching, CDN)\n\n𝗦𝘁𝗲𝗽 𝟮: 𝗦𝗰𝗮𝗹𝗮𝗯𝗶𝗹𝗶𝘁𝘆 & 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲\n - Vertical vs Horizontal Scaling\n - Load Balancing Techniques\n - Database Replication & Sharding\n - Asynchronous Processing & Messaging Queues\n\n𝗦𝘁𝗲𝗽 𝟯: 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗣𝗮𝘁𝘁𝗲𝗿𝗻𝘀\n - Monolithic vs Microservices Architecture\n - Event-Driven vs Request-Response Model\n - CQRS and Event Sourcing\n - Fault Tolerance & High Availability\n\n𝗦𝘁𝗲𝗽 𝟰: 𝗗𝗮𝘁𝗮 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁\n - CAP Theorem & Consistency Models\n - Storage Systems (Relational, NoSQL, Distributed)\n - Data Partitioning & Replication\n - Indexing & Query Optimization\n\n𝗦𝘁𝗲𝗽 𝟱: 𝗛𝗮𝗻𝗱𝘀-𝗼𝗻 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲\n - Design and document real-world systems \n - Explain trade-offs in your design decisions\n - Practice mock system design interviews\n - Get feedback and refine your approach\n\n➤ 𝗛𝗲𝗿𝗲 𝗮𝗿𝗲 𝘀𝗼𝗺𝗲 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝘁𝗼 𝗳𝗼𝗹𝗹𝗼𝘄:\n 1. Rajat Gajbhiye: https://lnkd.in/dWJAXAzJ\n 2. Shrayansh Jain: https://lnkd.in/dUABhnbT\n 3. Hussein Nasser: https://lnkd.in/dubTqr22\n 4. Gaurav Sen: https://lnkd.in/dAPhQyBp\n 5. Arpit Bhayani: https://lnkd.in/du8RyS7R\n\n𝗜’𝘃𝗲 𝗰𝗼𝗺𝗽𝗶𝗹𝗲𝗱 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗶𝗻𝘁𝗼 𝗮 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗞𝗜𝗧 𝘁𝗼 𝗺𝗮𝗸𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗲𝗮𝘀𝗶𝗲𝗿.\n\n𝗚𝗲𝘁 𝗶𝘁 𝗵𝗲𝗿𝗲: https://lnkd.in/dte69Z5N\n\nStay curious, keep learning, and keep sharing!\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:148e7051eb89de30",
+    "saved_date": "2026-10-01T23:19:04Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

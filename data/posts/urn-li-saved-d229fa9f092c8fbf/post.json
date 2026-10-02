@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-d229fa9f092c8fbf",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7335885533325234179",
+    "captured_at": "2026-10-02T00:15:52.075787+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:21:38Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Part 3 of SQL Interview Questions:\n\nOne of the most common #SQL interview questions — and surprisingly, one where many candidates slip up.\n\nTry writing your query solution in comment.\n\nI've asked this question in multiple mock interviews, and I’ve consistently seen avoidable mistakes — either due to misunderstanding the requirement or incorrect use of SQL functions.\n\n📌 I’ve shared a detailed breakdown and multiple approaches in the solution video — pinned in the comments.\n\n Worth a watch if you're preparing for interviews or just want to sharpen your SQL fundamentals.\n\nFollow Gaurav Agrawal for more\n\n#sql #analytics #dataanalyst #interviewprep",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7335885533325234179_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d229fa9f092c8fbf",
+    "saved_date": "2026-10-01T23:21:38Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7335885533325234179",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7335885533325234179_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

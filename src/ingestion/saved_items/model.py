@@ -71,6 +71,16 @@ class SavedItemState(str, Enum):
         return order[self]
 
 
+#: The kind recorded on an item that has no URL and is identified by an
+#: identifier instead.
+#:
+#: Says how the item was identified, not where it came from. A local
+#: archive is the common case, but the name would be wrong for any other
+#: list that carries identifiers rather than links, and the source id
+#: already carries its own namespace for that.
+KIND_IDENTIFIED_BY_ID = "identified_by_id"
+
+
 class CaptureMethod(str, Enum):
     """
     How the content actually entered the system.
@@ -292,6 +302,51 @@ class SavedItem:
             source_id=normalized.source_id,
             kind=normalized.kind,
             identifier=normalized.identifier,
+            capture_method=capture_method,
+        ).touch()
+
+    @classmethod
+    def from_source_id(
+        cls,
+        source_id: str,
+        *,
+        kind: str = KIND_IDENTIFIED_BY_ID,
+        identifier: str | None = None,
+        capture_method: CaptureMethod = CaptureMethod.USER_EXPORT,
+    ) -> "SavedItem":
+        """
+        An item identified by an identifier rather than by a link.
+
+        For material that genuinely has no URL. A local archive of saved
+        posts holds a third of its records with no permalink, because the
+        card they were captured from did not expose one, and there is
+        nothing in the media filenames or the media URLs that would
+        recover it.
+
+        Inventing a URL for those would be the one thing this model
+        exists to prevent: the wiki would render a link that goes
+        nowhere and a reader would believe the project had one. So the
+        item says it has no link, is identified by the identifier it does
+        have, and is stored with an empty ``canonical_url`` -- which the
+        renderer already treats as "render no link".
+
+        The identifier is required and is not checked against a URL
+        namespace, because the caller is stating the identity rather
+        than deriving it. Callers that are deriving an identity use
+        :func:`source_id_for`, which hashes a canonical URL.
+        """
+        if not source_id or not source_id.strip():
+            raise ValueError(
+                "an item with no URL still needs an identifier to be "
+                "identified by"
+            )
+
+        return cls(
+            original_url="",
+            canonical_url="",
+            source_id=source_id.strip(),
+            kind=kind,
+            identifier=identifier,
             capture_method=capture_method,
         ).touch()
 

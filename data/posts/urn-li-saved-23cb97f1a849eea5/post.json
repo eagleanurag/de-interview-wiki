@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-23cb97f1a849eea5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7426107288421031936",
+    "captured_at": "2026-10-02T00:15:45.579525+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:08:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🧠 One of the SQL Interview questions that was asked in PWC.\nPlease find the input and output for this question.\n\nCalculate running account balance \n\nDifficulty level - medium.\n\nPlease try to comment your solutions both in SQL and pyspark.\nI will post the solution in comments.\n\n♻️ 𝗥𝗲𝗽𝗼𝘀𝘁 if this was helpful!\n🔔 𝗙𝗼𝗹𝗹𝗼𝘄 Rajula ChandraSekhar Reddy for more insights on Data Engineering!\n\n#SQLInterviewquestions #dataengineer #carriergrowth #learning #interviewpreparation #SQLTips #Interviews",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7426107288421031936_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:23cb97f1a849eea5",
+    "saved_date": "2026-10-01T23:08:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7426107288421031936",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7426107288421031936_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

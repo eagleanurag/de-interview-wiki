@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-afdc7e2ed133b486",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.177753+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:22:29Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 𝗨𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱𝗶𝗻𝗴 𝘁𝗵𝗲 𝗗𝗘𝗖𝗢𝗗𝗘() 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗶𝗻 𝗦𝗽𝗮𝗿𝗸 𝗦𝗤𝗟 🚀\n\nIf you're working with 𝗦𝗽𝗮𝗿𝗸 𝗦𝗤𝗟, especially transitioning from Oracle or other traditional RDBMS systems, you might come across the need to use the 𝗗𝗘𝗖𝗢𝗗𝗘() function. Let’s break it down! 👇\n\n🔍 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗗𝗘𝗖𝗢𝗗𝗘() ?\nThe DECODE() function in SQL offers a 𝘀𝗶𝗺𝗽𝗹𝗶𝗳𝗶𝗲𝗱 𝘄𝗮𝘆 𝘁𝗼 𝗶𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁 𝗰𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻𝗮𝗹 𝗹𝗼𝗴𝗶𝗰. Think of it as a compact alternative to the 𝗖𝗔𝗦𝗘 statement. It compares an expression to a series of values and returns a corresponding result.\n\n✍️ 𝗦𝘆𝗻𝘁𝗮𝘅 & 𝗘𝘅𝗮𝗺𝗽𝗹𝗲 : \n\n SELECT DECODE(status, \n 'A', 'Active', \n 'I', 'Inactive', \n 'S', 'Suspended', \n 'Unknown') AS status_description\n FROM user_table;\n\n✅ This will return:\n • 'Active' if status = 'A'\n • 'Inactive' if status = 'I'\n • 'Suspended' if status = 'S'\n • 'Unknown' for all other values\n\n🎯 𝗪𝗵𝗲𝗻 𝗦𝗵𝗼𝘂𝗹𝗱 𝗬𝗼𝘂 𝗨𝘀𝗲 𝗗𝗘𝗖𝗢𝗗𝗘()?\nThis function is particularly useful in:\n✅ 𝗗𝗮𝘁𝗮 𝘀𝘁𝗮𝗻𝗱𝗮𝗿𝗱𝗶𝘇𝗮𝘁𝗶𝗼𝗻: Mapping encoded values (like status or category codes) to human-readable descriptions.\n✅ 𝗗𝗮𝘁𝗮 𝗽𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻: Quickly transforming values in queries without adding complexity.\n\n⚠️ 𝗜𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 𝗖𝗼𝗻𝘀𝗶𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻 : - While DECODE() is excellent for 𝘀𝗶𝗺𝗽𝗹𝗲 𝗺𝗮𝗽𝗽𝗶𝗻𝗴𝘀, it is 𝗻𝗼𝘁 𝗶𝗱𝗲𝗮𝗹 𝗳𝗼𝗿 𝗰𝗼𝗺𝗽𝗹𝗲𝘅 𝗰𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻𝗮𝗹 𝗹𝗼𝗴𝗶𝗰. In such cases, use the more flexible CASE WHEN construct.\n 🛠 Use 𝗗𝗘𝗖𝗢𝗗𝗘() for 𝗖𝗹𝗮𝗿𝗶𝘁𝘆. Use 𝗖𝗔𝗦𝗘 for 𝗖𝗼𝗺𝗽𝗹𝗲𝘅𝗶𝘁𝘆.\n\n💬 Have you leveraged DECODE() in your Spark SQL transformations? What’s your go-to method for conditional logic and how are you simplifying logic in your queries ?\n\nLet’s connect and exchange ideas on making data transformations more efficient. 👇\n\n#SparkSQL #DataEngineering #BigData #SQLFunctions #ApacheSpark #TechInsights #SQLBestPractices",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:afdc7e2ed133b486",
+    "saved_date": "2026-10-01T23:22:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

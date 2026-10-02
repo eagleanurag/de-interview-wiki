@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-eff92791193ff9ad",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.053550+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:17:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Where to practice SQL problems for interviews?\n\nYou’ve probably heard of one or two platforms. But there’s more out there...a lot more.\n\nHere’s a solid list shared by someone in the SQL community:\n\n➡️ LeetCode\nStandard for coding interviews.\nGood mix of beginner to advanced SQL problems.\nSome are company-specific.\n\n➡️ HackerRank\nBeginner-friendly interface.\nCategorized questions.\nAlso includes a 30-day SQL challenge.\n\n➡️ StrataScratch\nReal-world interview questions.\nCompanies like Uber, Yelp, Amazon.\nAlso explains solutions in detail.\n\n➡️ Mode Analytics SQL Tutorial\nGreat for learning SQL + analytics workflows.\nNot just solving problems, but understanding data context.\n\n➡️ DataLemur\nFocused on SQL for data science interviews.\nStraight to the point.\nQuestions with explanations.\n\n➡️ 8-Week SQL Challenge (by Data with Danny)\nPerfect for case-study style practice.\nStructured learning + GitHub repo included.\n\n➡️ SQLBolt\nLearn-by-doing style.\nStep-by-step walkthroughs for SQL basics.\n\n➡️ Kaggle Datasets + Notebooks\nNo fixed questions — but plenty of data.\nGreat for exploratory SQL with BigQuery.\n\n➡️ W3Schools SQL\nNot the most exciting,\nbut good for quick syntax refresh.\n\n➡️ DB-Fiddle / SQL Fiddle / SQLite Online\nPlaygrounds to test queries.\nUseful when trying things out quickly.\n\nIf you're prepping for SQL interviews,\nthis is your go-to list.\n\nSave it.\nShare it.\nPractice daily.\n\n#SQL #InterviewPrep",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:eff92791193ff9ad",
+    "saved_date": "2026-10-01T23:17:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

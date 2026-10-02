@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-2f61dba2ca435e25",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458357546396028928",
+    "captured_at": "2026-10-02T00:15:46.155168+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:08:13Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚨 Accenture + MNC Data Engineer interviews in 2026 are on another level now.\nI reviewed the latest Azure Data Engineering interview questions…\n and one thing became crystal clear 👇\n👉 Companies are NOT hiring “tool users” anymore.\n 👉 They are hiring problem solvers.\n📌 (The guide focuses on real Azure Data Engineering scenarios with ADF, Databricks, Delta Lake & Synapse)\n🔥 One of the MOST asked questions:\n👉 “Explain your end-to-end Azure Data Engineering architecture.”\nMost candidates say:\n ❌ “We used ADF and Databricks…”\nThat’s NOT enough anymore.\n💥 What strong candidates explain:\n✔️ Source Systems → ADF Pipelines\n ✔️ ADLS Gen2 → Raw Storage\n ✔️ Databricks → Bronze → Silver → Gold transformations\n ✔️ Synapse SQL Pool → Curated analytics\n ✔️ Power BI → Reporting\n👉 THAT shows architecture thinking.\n🔥 Real Production Scenario They Asked:\nA retail client processed:\n ✔️ 20M+ transactions daily\n ✔️ Multiple ERP systems\n ✔️ Near real-time dashboards\n🚨 Problem?\n Pipeline runtime = 3 HOURS\n💡 Solution:\n ✔️ Parallel activities in ADF\n ✔️ Spark optimization\n ✔️ Delta Lake partitioning\n🔥 Result:\n Execution time reduced from 3 hours → 40 minutes\n📌 (This exact optimization scenario is explained in the guide)\n💥 Another favorite interview trap:\n👉 “ADF vs Databricks?”\nWrong answer:\n ❌ “Both are ETL tools”\nCorrect mindset:\n ✔️ ADF = orchestration\n ✔️ Databricks = large-scale transformation\n👉 They WORK TOGETHER.\nThey explain features…\n📘 Crack Azure Data Engineer Interviews (Topic-wise Q&A)\n👉 https://lnkd.in/gF4_tCQj\n---------------------**********--------------------\n💼 500+ Company-wise Azure Data Engineer Questions\n👉 https://lnkd.in/gZ4NJDzw\n---------------------**********--------------------\n🔥 Data Engineer Mega Pack (1300+ Scenario Q&A)\n👉 https://lnkd.in/gEushWwU\n---------------------**********--------------------\n📊 600+ Real Questions from Top Companies\n👉 https://lnkd.in/gvX-we8v\n instead of explaining:\n ✔️ WHY they used it\n ✔️ WHAT problem it solved\n ✔️ HOW performance improved\n💬 Preparing for Accenture / Deloitte / Infosys / TCS / MNC Data Engineer interviews?\nComment “AZURE” and I’ll share more real interview Q&A 🔥\n#Azure #DataEngineering #Databricks #ADF #BigData #DeltaLake #InterviewPreparation #TechCareers #CareerGrowth #LinkedInGrowth",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7458357546396028928_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2f61dba2ca435e25",
+    "saved_date": "2026-10-01T23:08:13Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7458357546396028928",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7458357546396028928_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

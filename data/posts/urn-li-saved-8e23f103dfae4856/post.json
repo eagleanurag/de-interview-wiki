@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-8e23f103dfae4856",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7310146449428611072",
+    "captured_at": "2026-10-02T00:15:49.408178+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:32:14Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗦𝗤𝗟 𝗤𝘂𝗲𝗿𝘆 𝗘𝘅𝗲𝗰𝘂𝘁𝗶𝗼𝗻 𝗢𝗿𝗱𝗲𝗿\n\nIn SQL, queries are executed in a specific order, which can be quite different from the order in which the clauses are written. \n\nHere’s the logical order of SQL query execution:\n\n1. FROM\nSpecifies the tables from which to retrieve or manipulate data.\n\n2. WHERE\nFilters rows based on specified conditions.\nOnly rows that meet the conditions proceed to the next stage.\n\n3. GROUP BY\nGroups rows into sets based on column(s) specified.\nAny aggregate functions (like SUM, COUNT, etc.) will now apply to each group.\n\n4. HAVING\nApplies filters to groups created by GROUP BY.\nOnly groups meeting these conditions move forward.\n\n5. SELECT\nDetermines which columns and expressions to return.\nExecutes any functions or expressions listed in the SELECT clause.\nDeduplication of rows (DISTINCT) happens here if specified.\n\n6. ORDER BY\nSorts the result based on specified column(s) and sort direction (ASC or DESC).\nDoes not impact the final rows selected, only the display order.\n\n7. LIMIT \nRestricts the number of rows returned by the query.\nUseful for pagination or getting a specific subset of rows.\n\n𝗟𝗲𝘁𝘀 𝘂𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱 𝘄𝗶𝘁𝗵 𝗮𝗻 𝘁𝗵𝗶𝘀 𝘀𝗶𝗺𝗽𝗹𝗲 𝗦𝗤𝗟 𝗾𝘂𝗲𝗿𝘆 \n\nSELECT department, COUNT(employee_id) AS total_employees\nFROM employees\nWHERE status = 'active'\nGROUP BY department\nHAVING total_employees > 5\nORDER BY total_employees DESC\nLIMIT 10;\n\n𝗧𝗵𝗶𝘀 𝗾𝘂𝗲𝗿𝘆 𝘄𝗼𝘂𝗹𝗱 𝗲𝘅𝗲𝗰𝘂𝘁𝗲 𝗶𝗻 𝘁𝗵𝗲 𝗳𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 𝗼𝗿𝗱𝗲𝗿:\n\n1. FROM employees\n2. WHERE status = 'active'\n3. GROUP BY department\n4. HAVING total_employees > 5\n5. SELECT department, COUNT(employee_id) AS total_employees\n6. ORDER BY total_employees DESC\n7. LIMIT 10\n\n✅ This Ankit Bansal's YouTube video gives even more clarity on the SQL execution .\nSQL Order of Execution (Logical Explanation) | Namaste SQL | Ankit Bansal\nhttps://lnkd.in/gbdeWjFd \n\n📌 Follow for Data insights :\nhttps://lnkd.in/eviQ9fnj\n\n𝑹𝒆𝒑𝒐𝒔𝒕 ✅ 𝒊𝒇 𝒚𝒐𝒖 𝒇𝒊𝒏𝒅 𝒊𝒕 𝒖𝒔𝒆𝒇𝒖𝒍 \n\n🤝 Follow 👨‍💻 Abhisek Sahu for more\n\n#sql #dataengineering #dataanalyst #dataanalytics #dataengineer #bigdata #analytics #businessanalyst #interviewquestions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7310146449428611072_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8e23f103dfae4856",
+    "saved_date": "2026-10-01T23:32:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7310146449428611072",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7310146449428611072_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7310146449428611072_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

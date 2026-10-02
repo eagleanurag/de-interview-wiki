@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-58205ad8f0377ee0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338452429295730688",
+    "captured_at": "2026-10-02T00:15:47.755677+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:13:32Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "The ONLY AWS Data Engineering roadmap I suggest if you are looking to switch in 2025.\n\n🚀 AWS Data Engineer Roadmap — Step by Step 🛠️\nA practical roadmap to go from basics to cloud-native pipelines:\n\n🔹 Level 1: Foundations\n 1. SQL – Master joins, windows, CTEs, tuning.\n 2. Python – Automate ETL, handle files, use boto3.\n 3. Data Modeling – OLTP vs OLAP, star/snowflake schemas.\n\n🔹 Level 2: AWS Core\n 4. S3 – Buckets, lifecycle, versioning, partitions.\n 5. IAM – Roles, policies, least privilege.\n 6. EC2 & VPC – Basic compute & network setup.\n\n🔹 Level 3: ETL & Pipelines\n 7. Glue – Spark jobs, crawlers, catalog.\n 8. Lambda – Event-driven mini ETLs.\n 9. Step Functions – Workflow orchestration.\n 10. Kinesis – Real-time streaming pipelines.\n\n🔹 Level 4: Storage & Querying\n 11. Redshift – DWH concepts, COPY, Serverless.\n 12. RDS/Aurora – Managed SQL DBs.\n 13. Athena – Query S3 with SQL + Glue Catalog.\n\n🔹 Level 5: Orchestration & Monitoring\n 14. Airflow (MWAA) – Build DAGs with AWS operators.\n 15. CloudWatch – Logs, alerts, metrics.\n 16. CloudTrail – Audit and trace user activity.\n\n🔹 Level 6: Security & Governance\n 17. Encryption/KMS – Secure S3, Redshift, Athena.\n 18. Lake Formation – Row/column-level access control.\n\n🔹 Level 7: IaC\n 19. Terraform/CloudFormation – Infra as code for repeatable pipelines.\n\n🔹 Level 8: Advanced\n 20. DataOps – CI/CD for ETL jobs.\n 21. ML Integration – Preprocess data for SageMaker.\n 22. Cost Optimization – Monitor & optimize AWS usage.\n\n🔹 Final Step: Projects\n 23. Build:\n• S3 → Glue → Redshift (Batch)\n• Lambda → Kinesis → Redshift (Streaming)\n• Athena + QuickSight dashboard\n• Airflow DAGs for Glue pipelines\n• IaC-based full pipeline\n\n⸻\n\n\n#AWS #DataEngineering #CloudComputing #Glue #Redshift #Airflow #Kinesis #BigData #CareerRoadmap #SQL #Pyspark #Techinterviews\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338452429295730688_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:58205ad8f0377ee0",
+    "saved_date": "2026-10-01T23:13:32Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338452429295730688",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338452429295730688_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

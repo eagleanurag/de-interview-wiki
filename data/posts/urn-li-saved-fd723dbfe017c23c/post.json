@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-fd723dbfe017c23c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341079772573089792",
+    "captured_at": "2026-10-02T00:15:53.662507+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:18:25Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Storyteller | Data Architect | Building Scalable Data & AI Foundations for Enterprise Performance | Linkedin Top Voice 2025,2024 | Open to collaboration\n1yr •\n𝗧𝗵𝗲 𝗘𝗧𝗟 𝗚𝘂𝗶𝗱𝗲 𝗜 𝗪𝗶𝘀𝗵 𝗜 𝗛𝗮𝗱 𝗪𝗵𝗲𝗻 𝗜 𝗦𝘁𝗮𝗿𝘁𝗲𝗱\nEveryone talks about ETL like it’s just a 3-step process — but in the real world, it’s multi-layered, failure-prone, and mission-critical.\nToday, I’m sharing something special:\n✅ A detailed ETL Pipeline Guide (used in real teams)\n✅ A set of 20 handpicked ETL Interview Questions from real interviews — beginner to advanced\nInside the PDF:\n• What does an end-to-end ETL pipeline look like?\n• Tools used across ingestion, orchestration, and transformatio\n• Best practices for real-time vs batch\n• Interview Qs like:\n→ How do you debug a broken pipeline?\n→ What’s your approach to schema evolution?\n→ How do you implement SCD Type 2?\nThis is NOT theory — it’s what gets asked and what gets built in real roles.\nDownload the free PDF here & let me know your thoughts 👇\nFollow the tag → #reeltorealdata to stay tuned with the complete series.\n👉 Learn more about Data Engineering with Pooja Jain!\n#data #engineering #datamining #bigdata #analytics\nETL Guide & Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341079772573089792_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fd723dbfe017c23c",
+    "saved_date": "2026-10-01T23:18:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341079772573089792",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341079772573089792_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-02391a7ac96b4fc5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7335500334980628481",
+    "captured_at": "2026-10-02T00:15:44.420401+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:21:38Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Mastering PySpark Just Got Easier!\n\nWhether you're prepping for a Data Engineering interview or working on big data projects — having a solid grip on PySpark functions is a game-changer! 💡\n\nHere's a handy cheat sheet that covers: 📊 Aggregation Functions\n🔁 Window Functions\n🔡 String Functions\n✅ Conditional Logic\n📦 Array & Map Utilities\n🔄 Type Conversion\n🧩 Miscellaneous Functions\n\nEach function has a purpose — from simplifying data transformations to optimizing distributed processing at scale.\n\n💬 Save it. Share it. Bookmark it for later.\n\n🔗 #PySpark #DataEngineering #BigData #ApacheSpark #SparkSQL #ETL #CheatSheet #DataScience #LinkedInLearning",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7335500334980628481_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:02391a7ac96b4fc5",
+    "saved_date": "2026-10-01T23:21:38Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7335500334980628481",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7335500334980628481_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-d2cb56510ef02aca",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.423041+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "These 20 PySpark questions are enough to crack 90% of Data Engineer interviews.”\nNo theory. Just real, practical challenges you’ll actually face.\n\n\n💻 20 Real PySpark Questions That Actually Get Asked\n 1. Filter records where status = 'active' and score > 80\n 2. Add a new column based on conditions (when / otherwise)\n 3. Count distinct users per day from a log table\n 4. Drop rows with nulls in a specific column\n 5. Join 2 DataFrames and select only common records\n 6. Write a DataFrame to Parquet partitioned by region\n 7. Read a nested JSON and flatten it into columns\n 8. Explode an array column and keep other columns intact\n 9. Repartition a DataFrame before writing to avoid small files\n 10. Broadcast a small lookup table before a join\n 11. Create a window function to get the latest record per user\n 12. Cache a DataFrame — and unpersist it later\n 13. Remove duplicate rows based on multiple columns\n 14. Apply a custom function using .withColumn()\n 15. Handle schema evolution when reading historical data\n 16. Find the top 3 selling products per category\n 17. Extract values from a struct field\n 18. Log number of records before and after filtering\n 19. Use .transform() to apply a pipeline of operations\n 20. Trigger an Airflow DAG after the PySpark job finishes\n\n⸻\n\n✅ These aren’t just for interviews — they are your day-to-day reality as a Data Engineer.\n\n\n\n\n#PySpark #DataEngineering #ApacheSpark #BigData #DEInterview #ETL #SparkJobs #SQL #InterviewPrep\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d2cb56510ef02aca",
+    "saved_date": "2026-10-01T23:11:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

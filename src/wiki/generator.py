@@ -24,6 +24,7 @@ import hashlib
 import json
 import shutil
 import sys
+import time
 from pathlib import Path
 
 from src.wiki.analysis import build_site_model
@@ -102,10 +103,15 @@ def generate_site(
     print(
         f"Wiki generated: {len(written) + 1} file(s) in {output}"
     )
+    # Page counts, not label counts. This line describes what was
+    # written, and it used to print concepts counted before
+    # consolidation beside a topic count counted after, so the two were
+    # never comparable and both disagreed with the knowledge base.
     print(
         f"  posts={model.post_count} "
-        f"topics={model.topic_count} "
-        f"concepts={model.concept_count} "
+        f"topic pages={model.topic_page_count} "
+        f"concept pages={model.concept_page_count} "
+        f"technology pages={model.technology_count} "
         f"questions={model.question_count}"
     )
 
@@ -263,14 +269,36 @@ def _assert_safe_target(output: Path) -> None:
 
 
 def _swap_into_place(staging: Path, output: Path) -> None:
-    """Replace the output directory with the freshly built one."""
+    """
+    Replace the output directory with the freshly built one.
+
+    Built beside the output and swapped in, so a reader never sees a
+    half-written site and a crash leaves the previous one intact.
+
+    The rename is retried because Windows refuses it while any handle to
+    the target is open. Building nine thousand files means an indexer or
+    a virus scanner is following the generator from one to the next, and
+    the wait that a handful of files clears instantly is not long enough
+    for the tail of a site this size. Every attempt is real, so a
+    refusal that is genuinely permanent raises rather than being
+    swallowed and leaving no site at all.
+    """
 
     output.parent.mkdir(parents=True, exist_ok=True)
 
     if output.exists():
         shutil.rmtree(output)
 
-    staging.replace(output)
+    for attempt in range(8):
+        try:
+            staging.replace(output)
+            return
+
+        except PermissionError:
+            if attempt == 7:
+                raise
+
+            time.sleep(min(0.1 * (2**attempt), 2.0))
 
 
 def main() -> int:

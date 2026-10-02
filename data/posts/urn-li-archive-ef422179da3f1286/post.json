@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-ef422179da3f1286",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.004609+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:17:08Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🔥 Real Projects.✅Clean Resume.⛔Still Rejected in PySpark Round. - NTTDATA Data Engineer position \n-----------------------------------------\nOne of my friend recently appeared for a Data Engineering interview at NTT DATA.\nDespite 4+ years of experience…\n❌ He was rejected in the PySpark technical round.\n\n💥 Why?\n🚩Because NTT DATA didn’t ask about .show() or basic APIs.\nThey tested real-world PySpark performance, logic, and debugging.\n\n💣 PySpark Questions Asked in NTT DATA Interview:\n🧠 Spark Internals & Execution\n🔸 Explain the full lifecycle of a Spark job — from code to DAG to task execution.\n🔸 What is the difference between transformations and actions? Why are transformations lazy?\n🔸 What happens under the hood when you call .collect() on a huge dataset?\n\n🧮 Memory & Partition Tuning\n🔸 How do you identify and fix data skew in PySpark joins?\n🔸 What is the impact of incorrect partitioning on performance?\n🔸 When would you increase spark.sql.shuffle.partitions, and what are the risks?\n🔸 What is the role of broadcast joins? When should you avoid them?\n\n🔄 Window Functions & Complex ETL\n🔸 Use a PySpark window function to get the top 3 orders per customer.\n🔸 How would you implement SCD Type 2 with Delta Lake + PySpark?\n🔸 How do you remove duplicates from a dataset based on composite keys?\n\n💾 Delta Lake + Merge Logic\n🔸 What happens if two users try to merge into the same Delta table at the same time?\n🔸 How do you perform an upsert using PySpark on a Delta table?\n🔸 How do you handle schema evolution in Delta tables programmatically?\n\n🌊 Structured Streaming + Watermarking\n🔸 Explain exactly-once semantics in Spark Structured Streaming.\n🔸 Late data is arriving after the window closes — how do you handle it with watermarks?\n🔸 How would you join a real-time stream with a dimension table in PySpark?\n\n🧪 Debugging + Monitoring + Failure Handling\n🔸 Your Spark job ran successfully but processed 0 records — how do you debug that?\n🔸 Explain speculative execution in Spark — when and how do you enable it?\n🔸 How do you use Spark UI to find slow stages or skewed tasks?\n\n🔐 Security, CI/CD, and Production Readiness\n🔸 How do you manage secrets securely in a PySpark job running in Databricks or EMR?\n🔸 Describe your CI/CD pipeline for PySpark using GitHub Actions or Azure DevOps.\n🔸 How do you handle cluster resource allocation (executors, memory) for large jobs?\n\nFollow Arabinda Pani for more posts\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ef422179da3f1286",
+    "saved_date": "2026-10-01T23:17:08Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

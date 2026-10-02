@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-6706d322f8bdbfe2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7294928153871888407",
+    "captured_at": "2026-10-02T00:15:48.170540+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:35:24Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "This is my updated resume having an 𝗔𝗧𝗦 𝗦𝗰𝗼𝗿𝗲 𝗼𝗳 𝗺𝗼𝗿𝗲 𝘁𝗵𝗮𝗻 𝟵𝟬\n\nHere are some strategies I followed while creating this 👇\n\n→ Removed my photograph and personal details.\n\n→ Kept the resume to one page since my experience is less than 4-5 years.\n\n→ Used readable fonts like Arial and Calibri.\n\n→ Eliminated all spelling and grammatical errors.\n\n→ Avoided partitioning the resume for a smoother read.\n\n→ Used bullet points in the work experience section instead of paragraphs.\n\n→ Added relevant keywords based on the job description.\n\n→ My mobile number, email address, LinkedIn, and GitHub are at the top.\n\n→ Used metrics and numbers to quantify the impact of my work.\n\n→ Focused on four key sections: Technical Skills, Work Experience, Education, and Personal Projects/Certifications.\n\nAfter making these changes, I got it reviewed by a Senior Data Engineer, who optimized it further. That's when I realized that despite focusing on key areas, I still missed things like tailoring the skills section.\n\nSo before you hit that submit button, get it reviewed by a data mentor at top companies.\n\n𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝘄𝗶𝘁𝗵 𝘁𝗵𝗲𝗺 𝗳𝗼𝗿 𝗙𝗥𝗘𝗘 𝗵𝗲𝗿𝗲: \nhttps://lnkd.in/gRRQK9Fn\n\nThey have been on both sides of the hiring table and will improve your resume based on current hiring trends. They’ll also guide you in building relevant projects, strengthening your skills, and preparing you for interviews. 🚀\n\nIf you've read so far, do LIKE the post 👍\n\n#dataengineering #collab #preplacedcollab\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7294928153871888407_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6706d322f8bdbfe2",
+    "saved_date": "2026-10-01T23:35:24Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7294928153871888407",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7294928153871888407_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

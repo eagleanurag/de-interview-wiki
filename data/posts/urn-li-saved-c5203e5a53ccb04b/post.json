@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-c5203e5a53ccb04b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7336206983072489472",
+    "captured_at": "2026-10-02T00:15:51.382915+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:18:27Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Ultimate SQL Date Functions Cheatsheet — With Examples! 📅🧠\n\nWhether you’re a Data Analyst, Engineer, or Scientist, mastering date manipulation in SQL is a must-have skill.\n\nHere’s a visual cheatsheet + examples of the most-used SQL date functions👇\n\n\n---\n\n📌 1. CURRENT_DATE\n\nSELECT CURRENT_DATE;\n-- Result: 2024-04-24\n\n📌 2. CURRENT_TIME\n\nSELECT CURRENT_TIME;\n-- Result: 14:30:20\n\n📌 3. DATE_TRUNC\n\nSELECT DATE_TRUNC('hour', '2024-04-24 14:30:20');\n-- Result: 2024-04-24 14:00:00\n\n📌 4. EXTRACT\n\nSELECT EXTRACT(month FROM '2024-04-24');\n-- Result: 4\n\n📌 5. DATE_ADD\n\nSELECT DATE_ADD('2024-04-24', INTERVAL 5 DAY);\n-- Result: 2024-04-29\n\n📌 6. DATE_SUB\n\nSELECT DATE_SUB('2024-04-24', INTERVAL 5 DAY);\n-- Result: 2024-04-19\n\n📌 7. DATEDIFF\n\nSELECT DATEDIFF('2024-04-24', '2024-04-19');\n-- Result: 5\n\n📌 8. DATE_FORMAT\n\nSELECT DATE_FORMAT('2024-04-24', '%d/%m/%Y');\n-- Result: 24/04/2024\n\n\n---\n\n🎯 Pro Tip: These functions work slightly differently in MySQL, PostgreSQL, and SQL Server — tweak syntax as needed!\n\n\n🔁 Like & share to support your network of data lovers!\n\n#SQL #DataEngineering #CheatSheet #SQLFunctions #DateHandling #DataAnalytics #LearningSQL #100DaysOfCode #DataScience #LinkedInLearning #DataTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7336206983072489472_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c5203e5a53ccb04b",
+    "saved_date": "2026-10-01T23:18:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7336206983072489472",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7336206983072489472_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

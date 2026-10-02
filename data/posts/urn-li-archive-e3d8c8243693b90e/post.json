@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-e3d8c8243693b90e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.823606+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:46Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "I Almost Cracked 𝟱𝟬 𝗟𝗣𝗔 at Apple. Here’s What Cost Me the Offer...\n\nI recently went through 3 rounds for a Data Engineering role, and here’s exactly how it went👇\n\n𝗥𝗼𝘂𝗻𝗱 𝟭:SQL + Data Logic (Hackerrank + Live Discussion)\nThey wanted to know if I could think in sets, not rows.\n“Find the top 2 devices by revenue per region (rolling 90-day window)”\n“Deduplicate transactions keeping latest by timestamp”\n“How would you debug a LEFT JOIN returning more rows than expected?”\n“GROUP BY vs PARTITION BY — when would you use each?”\n“Optimize this query for large data volumes — what indexes would you add?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟮: Spark + Data Architecture (System Deep Dive)\nHere’s where things got real.\n“How would you optimize a Spark job running slow on EMR?”\n“What causes shuffle in Spark, and how do you prevent it?”\n“Difference between coalesce() and repartition() — in terms of physical plans?”\n“Design a streaming pipeline to monitor AirPods battery usage in real time”\n“How would you test the integrity of a Spark job after deployment?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟯: System Design + Culture Fit\nApple is BIG on simplicity that scales.\n“Design a global data lake with GDPR compliance”\n“How would you track real-time app crashes and alert instantly?”\n“What would your pipeline look like for new iOS telemetry events?”\n“How do you balance latency vs reliability?”\n“If one region goes down, how would you re-route your ingestion?”\n\nThen they asked me behavioral:\n 16. “Tell us about a time you debugged a broken pipeline at 2AM”\n 17. “How do you handle pushback from product teams on data latency?”\n 18. “Describe a time you scaled a solution beyond its original scope”\n 19. “How do you mentor junior DEs who write unscalable code?”\n 20. “Why Apple?”\n\n🎯 What I Learned:\n1. Being good at tools isn’t enough, you need to speak architecture fluently.\n2. Practice explaining your trade-offs like you’re making a $1M decision.\n\nI have listed all questions and answers here..\nDownload Data Engineering Interview Kits: https://lnkd.in/g_V8gDg3?\nJoin 𝗗𝗮𝘁𝗮𝗚𝗲𝗲𝗸𝘀 Community here: https://lnkd.in/g88ic2Ja\n\n#DataEngineering #Apple #TechInterviews #SQL #Spark #BigData #SystemDesign #CareerGrowth #LearningInPublic #InterviewPrep #LinkedInDiaries",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e3d8c8243693b90e",
+    "saved_date": "2026-10-01T23:09:46Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

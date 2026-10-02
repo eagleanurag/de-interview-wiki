@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-05c219e439fb81ca",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.828701+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:15:22Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "If You’re a Data Engineer, These Terms Should Be in Your DNA\n\n1. Data Lineage: Trace data’s journey from source to destination. \n2. Data Skew: When one node gets overloaded due to uneven data distribution.\n3. Salting: A trick to fix skew by spreading hot keys across partitions using randomness.\n4. Bucketing: Predefined groups to optimize joins.\n5. Partitioning: Divide data into folders based on column values for faster reads.\n6. Backpressure: When downstream systems slow down and push back on upstream data flow. \n7. Data Drift: When incoming data changes slowly over time types, distributions, or meaning.\n8. Data Masking: Hide sensitive info (PII, PHI) via obfuscation or encryption.\n9. Data Governance: Policies, security and access.\n10. Data Artifacts: Models, dashboards, scripts, logs all byproducts of your data workflows.\n11. CDC (Change Data Capture): Real-time detection of DB changes.\n12. DAG (Directed Acyclic Graph): The backbone of orchestrators like Airflow.\n13. Schema Evolution: When your data structure grows (or mutates).\n14. Idempotency: The job should behave the same even if retried.\n15. Backfilling: Filling historical data gaps.\n16. Data Contracts: Define the structure, format, and SLA expectations between producers and consumers.\n17. Orchestration: Scheduling, managing, and monitoring data workflows. (Airflow, Prefect, Dagster)\n18. Observability: Track pipeline health with logs, metrics, alerts.\n19. Medallion Architecture: Bronze (raw), Silver (cleansed), Gold (curated) layers of data.\n20. Sharding: Horizontal database partitioning for scale and speed.\n21. Data Quality: Validate nulls, uniqueness, types, duplicates and drift.\n22. ACID vs BASE: Choose the right consistency model based on your use case. \n\nThese aren't just terms they're building blocks.\n\n#DataEngineering #BigData #ModernDataStack #ETL #PipelineDesign #Streaming #DataQuality #DataGovernance #DataOps #LinkedInTech #Backpressure #DataDrift #Observability\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:05c219e439fb81ca",
+    "saved_date": "2026-10-01T23:15:22Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

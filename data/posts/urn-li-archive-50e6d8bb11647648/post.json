@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-50e6d8bb11647648",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.040609+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:07Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Booking.com Interview Experience.\nCompensation Range: 28LPA + 2.8L variable\nPosition: Data Engineer\nApplication Method: Online through portal\n\n𝗢𝗻𝗹𝗶𝗻𝗲 𝗔𝘀𝘀𝗲𝘀𝘀𝗺𝗲𝗻𝘁 (𝗥𝗼𝘂𝗻𝗱 𝟭)\n- SQL query involving tricky joins\n- Coding question on data aggregation related to hotels\n\n𝗛𝗥 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 (𝗥𝗼𝘂𝗻𝗱 𝟮)\n- Self-introduction and motivation to join\n- Discussion on salary expectations and role\n- Overview of company and work culture\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 (𝗥𝗼𝘂𝗻𝗱 𝟯)\n- Live coding with engineers\n- Medium-level LeetCode-style question (hotel data, aggregation + window functions)\n- Emphasis on explaining the thought process\n- Code ran but solution wasn’t perfect - still got positive feedback to candidate\n\n𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗥𝗼𝘂𝗻𝗱 (𝗥𝗼𝘂𝗻𝗱 𝟰)\n- Design a system to store hotel data with support for both real-time and batch querying\n- Tech stack discussion: optimal databases, deployment strategy, and user interaction\n- Clarified requirements, explained trade-offs, and discussed scaling strategies\n\n𝗛𝗶𝗿𝗶𝗻𝗴 𝗠𝗮𝗻𝗮𝗴𝗲𝗿 𝗥𝗼𝘂𝗻𝗱 (𝗥𝗼𝘂𝗻𝗱 𝟱)\n- Scheduled after 2 months of initial confirmation\n- Behavioral questions: conflict resolution, disagreement handling, team collaboration\n- Final outcome: Rejected for that role, offered a lower-level position with reduced compensation, which candidate declined\n\nIf you are preparing for Data Engineering interviews then you should check these Interview Experiences for 100+ Companies\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\n#dataengineering \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:50e6d8bb11647648",
+    "saved_date": "2026-10-01T23:19:07Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

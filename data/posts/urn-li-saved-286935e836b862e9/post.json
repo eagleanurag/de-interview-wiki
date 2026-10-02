@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-286935e836b862e9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7318987855861596160",
+    "captured_at": "2026-10-02T00:15:45.874435+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:23:34Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🔍 Database vs. Data Warehouse vs. Data Lake – What's the Difference?\n\nWhen it comes to data storage, knowing the right tool for the job is everything. Here's a quick breakdown to help you navigate the landscape:\n\n💾 Database\n → Stores real-time, transactional data (think customer orders, app activity)\n → Best suited for day-to-day operations (OLTP)\n → Examples: PostgreSQL, MySQL, Oracle\n\n📊 Data Warehouse\n → Stores structured, cleaned data ready for reporting and analytics\n → Ideal for business intelligence and historical trends (OLAP)\n → Examples: Snowflake, Amazon Redshift, Google BigQuery\n\n🌊 Data Lake\n → Stores raw data—structured and unstructured\n → Great for AI/ML workloads and exploratory analysis\n → Examples: AWS S3, Azure Data Lake, Hadoop HDFS\n\n\n\n#DataEngineering #DataAnalytics #Database #ETL\n#MachineLearning #BigData #DataWarehouse #DataLake",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7318987855861596160_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:286935e836b862e9",
+    "saved_date": "2026-10-01T23:23:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7318987855861596160",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7318987855861596160_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

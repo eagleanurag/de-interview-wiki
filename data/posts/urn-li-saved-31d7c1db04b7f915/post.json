@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-31d7c1db04b7f915",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455813265567154177",
+    "captured_at": "2026-10-02T00:15:46.288399+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:08:11Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🔥 Data Engineer Interview Prep? Read This Before Your Friday Interview! 🔥\nIf you’ve got a Data Engineer interview lined up this Friday, don’t just revise — prepare smart.\nHere are some high-impact questions that interviewers LOVE (and candidates often underestimate):\n_______________________________________________________________\n💡 1. How would you design a data pipeline from scratch?\n👉 Tip: Talk about ingestion → processing → storage → orchestration → monitoring. Mention tools like Airflow, Kafka, Spark.\n\n💡 2. Batch vs Real-Time Processing — when to use what?\n👉 Show clarity, not confusion. Use real-world examples.\n\n💡 3. How do you handle schema evolution in production pipelines?\n👉 This separates beginners from pros. Mention backward/forward compatibility.\n\n💡 4. Explain partitioning & bucketing in big data systems\n👉 Bonus points if you connect it with query performance optimization.\n\n💡 5. What happens when your pipeline fails at 2 AM?\n👉 Interviewers want to hear: alerting, retry logic, logging, and root cause analysis.\n\n💡 6. Difference between Data Lake, Warehouse & Lakehouse\n👉 Keep it simple, structured, and business-focused.\n\n💡 7. How do you ensure data quality?\n👉 Talk about validation checks, anomaly detection, SLAs.\n\n💡 8. SQL Challenge (Almost Guaranteed)\n👉 Practice window functions, joins, and aggregations.\n____________________________________________________________\n\n📌 Still preparing for interviews with random questions?\nThat’s exactly why most people don’t make it.\nReal interviews are scenario-based, messy, and pressure-driven.\nAnd most prep content doesn’t reflect that.\n💼 These are structured, interview-level resources used by 2000+ learners who landed roles in top MNCs:\n🔹 Data Engineer Interview Mega Pack 👉🏼 https://lnkd.in/gBfGiUpf\n🔹 Crack Azure Data Engineer Interviews (2026) 👉🏼 https://lnkd.in/gEfju-9Z\n🔹 600+ Real Data Engineer Interview Q&A👉🏼 https://lnkd.in/gZA3D3-D\n🔹 Top 100 Real Data Engineer Questions (Mixed Pack)👉🏼 https://lnkd.in/gu-34Ngz\n🔹 Top 100 Questions (4–8 Years Experience)👉🏼 https://lnkd.in/g8eusSPK\n\n____________________________________________________________\n🚀 Pro Tip for Friday Interviews:\nDon’t just answer — think out loud. Interviewers care more about your approach than your final answer.\n💬 And remember:\nYou’re not just a candidate.\nYou’re someone who can turn raw data into business decisions.\n👇 Drop a “Data Engineer” if you want a mock interview checklist before Friday!\n#DataEngineering #InterviewPrep #TechJobs #BigData #CareerGrowth #FridayMotivation",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7455813265567154177_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:31d7c1db04b7f915",
+    "saved_date": "2026-10-01T23:08:11Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7455813265567154177",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7455813265567154177_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

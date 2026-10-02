@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-ce16420ef0e1545a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.293855+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:28:47Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "I’ve been learning PySpark and working with Databricks recently. \n\nI started with the basics, learning how Apache Spark really works :\n- What are jobs, stages, and tasks\n- How lazy evaluation helps optimize performance\n- The difference between transformations and actions\n\nThen I jumped into PySpark hands-on:\n- Worked with DataFrames and Spark SQL\n- Explored Window Functions, UDFs (User Defined Functions)\n- Learned how to handle different file formats like Parquet, Columnar, and Delta\n- Understood the difference between managed and external tables in Spark\n- And even used display() to build simple dashboards right inside Databricks\n\nTo put all this into practice, I chose a real dataset from Netflix and built a Data anlaytics project using Databricks Community Edition.\n\nHere’s what I explored in the project:\n\nDatabrick notebook : https://lnkd.in/eRfK_75C\n\nDatabricks made it really easy to experiment and visualize everything.\n\n#PySpark #Databricks #NetflixData #DataEngineering #BusinessIntelligence #DataScience #SparkSQL",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ce16420ef0e1545a",
+    "saved_date": "2026-10-01T23:28:47Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

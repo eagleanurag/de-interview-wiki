@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-0807b28413f7becc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7352033129559216129",
+    "captured_at": "2026-10-02T00:15:44.594328+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:10:27Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Converting Databricks External Table to Managed tables is much easier now.\n\nManaged Tables provide you with great features like Predictive Optimizations which automatically Analyze, Optimize and do the Vacuuming for you. Also there's no limitations of collecting stats only for first 32 columns.\n\nThere are other features like DROP UNDROP tables and it definitely saves a lot of storage with its Optimizations.\n\nIn order to convert, all you have to do is ALTER with SET MANAGED instead of deep copying your tables.\n\nOther notable Features:\n\n1) ROLLBACK to External tables within 14 days with UNSET MANAGED.\n2) Not much downtime converting to Managed tables.\n3) Concurrency support. What if someone is writing to External table and conversion happening at the same time.\n\nOne thing to be careful of is: Is that table being used by 3rd party tools. \n\nActually, I was researching about; how to query Databricks Managed Tables using Athena. For External tables, I could run Glue crawlers on it to keep transaction logs in sync; not sure how to make it work with Managed tables as well ; still researching \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7352033129559216129_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0807b28413f7becc",
+    "saved_date": "2026-10-01T23:10:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7352033129559216129",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7352033129559216129_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

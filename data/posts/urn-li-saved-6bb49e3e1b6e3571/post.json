@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-6bb49e3e1b6e3571",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339636481692487680",
+    "captured_at": "2026-10-02T00:15:48.358080+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝟭𝟮 𝗠𝘂𝘀𝘁-𝗞𝗻𝗼𝘄 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗧𝗲𝗿𝗺𝘀 \n\nIn the world of data engineering, terminology isn't just jargon—it's architecture, logic, and impact. Whether you’re designing pipelines, building scalable systems, or preparing for your next interview—mastering these 12 terms is foundational.\n\nHere’s a breakdown of the key concepts from the infographic \n\n🔹 1. ETL (Extract, Transform, Load)\nThe core of traditional data workflows. Extract raw data → Transform it for business needs → Load into data warehouses for analytics. Still relevant in batch pipelines and slowly changing dimensions.\n\n🔹 2. Data Lake\nA centralized repository for raw, semi-structured, and unstructured data, often in formats like JSON, Avro, or Parquet. Ideal for scalable, schema-on-read workloads using tools like Spark or Databricks.\n\n🔹 3. Data Warehouse\nStructured, query-optimized storage (like Snowflake, Synapse, BigQuery) used for analytics, BI, and reporting. Supports ACID transactions, indexing, and star/snowflake schema designs.\n\n🔹 4. Streaming\nReal-time ingestion and processing of data (Kafka, Spark Structured Streaming, Flink). Enables low-latency use cases like fraud detection, live analytics, and IoT processing.\n\n🔹 5. Pipeline\nEnd-to-end orchestration of data flow—from ingestion to transformation to storage. Pipelines may be built using tools like Apache Airflow, Azure Data Factory, or custom PySpark code.\n\n🔹 6. Batch Processing\nClassic processing model that handles large data volumes in scheduled intervals. Tools: Hadoop MapReduce, Spark, or ADF pipelines with triggers. High throughput, less latency.\n\n🔹 7. Data Mart\nA subset of a data warehouse designed for a specific business domain—like sales or HR. Promotes performance and team-level autonomy while keeping data structured.\n\n🔹 8. MPP (Massively Parallel Processing)\nThe engine behind most modern warehouses. It splits queries across compute nodes and processes them in parallel—drastically reducing response time for huge datasets.\n\n🔹 9. Data Mesh\nA paradigm shift in architecture—treating data as a product and decentralizing ownership to domain teams. Encourages scalability and accountability in modern enterprises.\n\n🔹 10. Data Quality\nProcesses to ensure accuracy, completeness, and consistency across the pipeline. Tools like Great Expectations, Deequ, and pandera can automate validation.\n\n🔹 11. CDC (Change Data Capture)\nCaptures row-level changes in source systems to support real-time replication and incremental loading. Crucial for minimizing latency and avoiding full reloads.\n\n🔹 12. Data Lineage\nTracks data flow from source to consumption—crucial for compliance, debugging, and impact analysis. Tools like Unity Catalog, OpenLineage, or Azure Purview help visualize this.\n\nFollow Riya Khandelwal for more.\n\n\n#DataEngineering #BigData #ETL #DataPipeline #StreamingData #DataLake #DataWarehouse #DataQuality #CDC #DataLineage #MPP #Spark #Databricks #AzureDataFactory #InterviewPrep",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339636481692487680_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6bb49e3e1b6e3571",
+    "saved_date": "2026-10-01T23:19:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339636481692487680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339636481692487680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

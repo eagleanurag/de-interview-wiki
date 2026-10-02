@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-7928cacd648a958e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341653522993528832",
+    "captured_at": "2026-10-02T00:15:48.511165+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:15:17Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🧠 PySpark Window Functions — The Secret Weapon Most Data Engineers Overlook\n\nIf you’re still relying solely on groupBy() in your PySpark pipelines, it’s time to level up.\n\nWhile groupBy() is great for collapsing data and summarizing across groups, it destroys the row-level context. That’s where Window Functions come in — they give you the power to perform complex analytics without collapsing the data.\n\n⸻\n\n⚙️ What Can You Do With Window Functions?\n\nWith just a few lines of code, you can:\n✅ Get the latest record per user\n✅ Rank items within each category\n✅ Compare a row to its previous or next one\n✅ Compute running totals, moving averages, and more\n\nAll while preserving every row in your dataset.\n\n🎯 Why This Matters\n\nAs Data Engineers, we often work with time-based event logs, user histories, or ranking scenarios.\n\nWindow functions let us solve these problems cleanly, keeping the dataset intact, scalable, and readable.\n\n⸻\n\nIf you’re not using them yet, start today.\nYour future self (and your pipelines) will thank you.\n\n#DataEngineering #PySpark #WindowFunctions #BigData #ETL #SparkSQL #CareerTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341653522993528832_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7928cacd648a958e",
+    "saved_date": "2026-10-01T23:15:17Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341653522993528832",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341653522993528832_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

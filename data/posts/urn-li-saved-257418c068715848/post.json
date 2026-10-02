@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-257418c068715848",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340581665108279299",
+    "captured_at": "2026-10-02T00:15:45.641440+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:01Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Senior Data Engineer | Snowflake, Databricks, AWS, Azure, GCP, PySpark, dbt | 14+ yrs building data platforms\n1yr •\n🚀 Advanced SQL – What to Learn Beyond Basics\nIn the world of data analytics and engineering, knowing basic SQL isn’t enough. Mastering Advanced SQL helps you stand out and solve real-world data problems efficiently.\nHere’s what you should focus on:\n🔹 Window Functions – ROW_NUMBER(), RANK(), LAG(), LEAD()\n🔹 Common Table Expressions (CTEs) & Recursive Queries\n🔹 Query Optimization – Indexing, EXPLAIN, and performance tuning\n🔹 Pivoting & Unpivoting – Rotate data for better insights\n🔹 Advanced Joins – FULL OUTER JOIN, CROSS APPLY, and set operations\n🔹 Aggregate Extensions – ROLLUP, CUBE, GROUPING SETS\n🔹 Stored Procedures & Functions – Encapsulate logic for reuse\n🔹 Handling Big Data – Partitioning, sharding, and scaling strategies\n♻️ 𝙍𝙚𝙥𝙤𝙨𝙩 𝙩𝙝𝙞𝙨 𝙞𝙛 𝙮𝙤𝙪 𝙛𝙞𝙣𝙙 𝙞𝙩 𝙝𝙚𝙡𝙥𝙛𝙪𝙡.\n🔔 Follow Kavitha Lakshminarasaiah for daily insights on data driven jobs\n📌 Attaching a useful SQL Interview Questions & Answers PDF – to help you prep smart and crack your next opportunity!\n#SQL #AdvancedSQL #DataAnalytics #SQLInterview #DataEngineer #BI #SQLTips #CareerGrowth #LearnSQL #InterviewPreparation\nSQL_Interview Q&A",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340581665108279299_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:257418c068715848",
+    "saved_date": "2026-10-01T23:19:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340581665108279299",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340581665108279299_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

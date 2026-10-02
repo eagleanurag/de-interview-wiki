@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-1950d86058615c8e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7308183735705681920",
+    "captured_at": "2026-10-02T00:15:45.215953+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:32:16Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Engineer | LinkedIn Top Data Engineering Voice 🏆 | Python | SQL | Pyspark | DJango | Hadoop | HIVE | DataBricks | AWS | AirFlow | Content Creator\n1yr •\nHello connections!\nPrevious Post\nSALTING in Spark - https://lnkd.in/g_ytNc-e\nSPARK+PYSPARK SERIES 𝗗𝗔𝗬-𝟮𝟭 𝗦𝗣𝗔𝗥𝗞 𝗝𝗢𝗜𝗡 𝗦𝗧𝗥𝗔𝗧𝗘𝗚𝗜𝗘𝗦\n#bigdata\n#bigdataengineer\n#spark\n#apachespark\n#pyspark\n#hadoop\nTagging Experts for better Reach :\nVishal Kaushal\nAnsh Lamba\nAfaque Ahmad\nPrashant Kumar Pandey\nKarthik Kondpak\nAMAN KUMAR\nRaushan Kumar\nDarshil Parmar\nSachin Chandrashekhar 🇮🇳\nDeepak Goyal\n� Don’t forget to like share and comment on my post and follow Vishal Gupta 🟢 for more content like this.\n👉 Comment with suggestions, topics, and your opinion on this.\nSPARK_PYSPARK_DAY_21",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7308183735705681920_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1950d86058615c8e",
+    "saved_date": "2026-10-01T23:32:16Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7308183735705681920",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7308183735705681920_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

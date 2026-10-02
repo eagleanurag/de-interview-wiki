@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-6ccd3756a96d41f6",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7290958913657520129",
+    "captured_at": "2026-10-02T00:15:48.379543+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:37:00Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "300+ Brand Collaborations || Digital Marketing || Web Developer || Content Creator || Helps Brand to Grow || Personal Branding Strategist || Open for Collaboration\n1yr •\nRoadmap for Learning Machine Learning (ML)\nHere’s a concise and point-wise roadmap for learning ML:\n1. Prerequisites\n- Learn programming basics (e.g., Python).\n- Understand mathematics:\n1 - Linear Algebra (vectors, matrices).\n2 - Probability and Statistics (distributions, Bayes’ theorem).\n3 - Calculus (derivatives, gradients).\n4 - Familiarize yourself with data structures and algorithms.\n2. Basics of Machine Learning\n-Understand ML concepts:\nSupervised, unsupervised, and reinforcement learning.\nTraining, validation, and testing datasets.\n- Learn how to preprocess and clean data.\n- Get familiar with Python libraries:\nNumPy, Pandas, Matplotlib, and Seaborn.\n3. Supervised Learning\n- Study regression techniques:\nLinear and Logistic Regression.\n- Explore classification algorithms:\nDecision Trees, Support Vector Machines (SVM), k-NN.\n- Learn model evaluation metrics:\nAccuracy, Precision, Recall, F1 Score, ROC-AUC.\n4. Unsupervised Learning\n- Learn clustering techniques:\nk-Means, DBSCAN, Hierarchical Clustering.\n- Understand Dimensionality Reduction:\nPCA, t-SNE.\n5. Advanced Concepts\n- Explore ensemble methods:\nRandom Forest, Gradient Boosting, XGBoost, LightGBM.\n- Learn hyperparameter tuning techniques:\nGrid Search, Random Search.\n6. Deep Learning (Optional for Advanced ML)\n- Learn neural networks basics:\nForward and Backpropagation.\n- Study Deep Learning libraries:\nTensorFlow, PyTorch, Keras.\nExplore CNNs, RNNs, and Transformers.\n7. Hands-on Practice\n- Work on small projects like:\n1 - Predicting house prices.\n2 - Sentiment analysis on tweets.\n3 - Image classification.\n4 - Explore Kaggle competitions and datasets.\n8. Deployment\n- Learn how to deploy ML models:\nUse Flask, FastAPI, or Django.\n- Explore cloud platforms: AWS, Azure, Google Cloud.\n9. Keep Learning\n- Stay updated with new techniques:\nFollow blogs, papers, and conferences (e.g., NeurIPS, ICML).\n- Dive into specialized fields:\nNLP, Computer Vision, Reinforcement Learning.\nLet's Ace The Machine Learning Game Together ❤️\nFollow Ankit Pandey for more insightful posts like this.\nDoc. Credit : Abhishek Mishra\n#machinelearning #ai #datascience #python #coding\n…see more\nMachine Learning In The AWS Cloud.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7290958913657520129_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6ccd3756a96d41f6",
+    "saved_date": "2026-10-01T23:37:00Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7290958913657520129",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7290958913657520129_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

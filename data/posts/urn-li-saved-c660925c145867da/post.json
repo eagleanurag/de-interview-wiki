@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-c660925c145867da",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7299764429649285121",
+    "captured_at": "2026-10-02T00:15:51.493266+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:34:24Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 𝗥𝗲𝗮𝗹-𝗧𝗶𝗺𝗲 𝗙𝗿𝗮𝘂𝗱 𝗗𝗲𝘁𝗲𝗰𝘁𝗶𝗼𝗻 𝘄𝗶𝘁𝗵 𝗞𝗮𝗳𝗸𝗮, 𝗦𝗽𝗮𝗿𝗸, 𝗙𝗮𝘀𝘁𝗔𝗣𝗜 & 𝗙𝗹𝗮𝘀𝗸\nFraud detection is critical in financial transactions, and real-time processing is key to preventing losses. To tackle this, I built a Real-Time Fraud Detection System using Kafka, Spark, FastAPI, PostgreSQL, and Flask to analyze fraudulent transactions as they happen.\n\n📌 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 & 𝗧𝗲𝗰𝗵 𝗦𝘁𝗮𝗰𝗸\n🔹 Kafka – Streams real-time transactions\n🔹 Spark (Databricks) – Processes & detects fraud patterns\n🔹 FastAPI + PostgreSQL (AWS RDS) – Backend API & database\n🔹 Flask + Chart.js – Fraud analytics dashboard\n\n📌 𝗛𝗼𝘄 𝗜𝘁 𝗪𝗼𝗿𝗸𝘀?\n1️⃣ Kafka ingests live transactions\n2️⃣ Spark Streaming applies fraud detection logic\n3️⃣ FastAPI Backend stores fraud alerts in PostgreSQL (AWS RDS)\n4️⃣ Flask UI visualizes fraud patterns using charts & tables\n\n📌 𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀\n✅ Real-time fraud detection with event-driven architecture\n✅ Top-N fraud locations visualization (Bar Chart)\n✅ Paginated fraud transaction table\n✅ Scalable cloud-based infrastructure\n\n📌 𝗖𝗼𝗱𝗲\n💻 GitHub Repo: https://lnkd.in/gNjrg3we\n\n📌 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲𝘀 & 𝗡𝗲𝘅𝘁 𝗦𝘁𝗲𝗽𝘀\n🔹 Optimizing Spark for low-latency processing\n🔹 Managing Kafka consumer offsets for fault tolerance\n🔹 Deploying with AWS Lambda & API Gateway\n\n💡 How do you approach real-time fraud detection? Let’s discuss! 🚀\n\n#DataEngineering #FraudDetection #Kafka #Spark #AWS #FastAPI #StreamingData #MachineLearning #CyberSecurity #SoftwareEngineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7299764429649285121_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c660925c145867da",
+    "saved_date": "2026-10-01T23:34:24Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7299764429649285121",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7299764429649285121_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

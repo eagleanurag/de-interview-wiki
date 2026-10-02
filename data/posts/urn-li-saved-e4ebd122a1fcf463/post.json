@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e4ebd122a1fcf463",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344573867153047552",
+    "captured_at": "2026-10-02T00:15:52.813722+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:15:20Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\n💰12–15 LPA Package! | 𝐀𝐦𝐞𝐫𝐢𝐜𝐚𝐧 𝐄𝐱𝐩𝐫𝐞𝐬𝐬 - 𝐑𝐞𝐚𝐥 𝐏𝐲𝐭𝐡𝐨𝐧 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n𝐑𝐨𝐥𝐞: Data Analyst (0–3 Years)\n𝐈𝐟 𝐲𝐨𝐮'𝐫𝐞 𝐩𝐫𝐞𝐩𝐚𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰, 𝐭𝐡𝐢𝐬 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐬𝐢𝐠𝐧 𝐭𝐨 𝐠𝐨 𝐛𝐞𝐲𝐨𝐧𝐝 𝐛𝐚𝐬𝐢𝐜 𝐬𝐲𝐧𝐭𝐚𝐱 𝐚𝐧𝐝 𝐟𝐨𝐜𝐮𝐬 𝐨𝐧 𝐫𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝 𝐏𝐲𝐭𝐡𝐨𝐧 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐬𝐨𝐥𝐯𝐢𝐧𝐠.\n📌 These are actual Python questions asked by American Express — designed to test your logic, clarity, and business understanding:\n🔹 Find duplicate rows using Pandas groupby() and filter()\n🔹 Difference between merge(), join(), and concat() — with real-world dataframes\n🔹 Fetch the 𝐬𝐞𝐜𝐨𝐧𝐝-𝐡𝐢𝐠𝐡𝐞𝐬𝐭 𝐬𝐚𝐥𝐚𝐫𝐲 — nlargest() vs rank()\n🔹 Employees earning more than their managers — self-merge logic with Pandas\n🔹 Difference between apply(), map(), lambda, np.where() — and when to use what\n🔹 Detect anomalies or fraud patterns using groupby().filter() and conditional logic\n🔹 Reshape and pivot data — pivot(), pivot_table(), melt(), and stack()/unstack()\n🔹 Working with datetime — parsing, extracting components, and time-based filtering\n🔹 Year-over-Year or Month-over-Month growth — using shift() and pct_change()\n🔹 Optimize Pandas performance — avoid loops, use vectorization and numba if needed\n🔹 Real-world use of itertools, collections.Counter, defaultdict in data handling\n💡 𝐓𝐢𝐩: Don’t just memorize Pandas functions — learn how to think in terms of DataFrames. AmEx wants you to write clean, readable logic — not hacky code.\nDrop a comment if found useful!👇\n…see more\nReal Python Interview Questions American Express",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7344573867153047552_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e4ebd122a1fcf463",
+    "saved_date": "2026-10-01T23:15:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7344573867153047552",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7344573867153047552_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

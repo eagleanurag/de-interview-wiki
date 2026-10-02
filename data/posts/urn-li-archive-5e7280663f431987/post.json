@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-5e7280663f431987",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.201967+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:22:30Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "## Rising Temperature\nGiven a dataset of daily temperatures, how do we find which days were hotter than the previous one?\nQues:- Write a solution in pyspark to find all dates' id with higher temperatures compared to its previous dates (yesterday).\ndata = [\n (1, \"2015-01-01\", 10),\n (2, \"2015-01-02\", 25),\n (3, \"2015-01-03\", 20),\n (4, \"2015-01-04\", 30)\n]\n\nschema = StructType([\n StructField(\"id\", IntegerType(), True),\n StructField(\"recordDate\", StringType(), True),\n StructField(\"temperature\", IntegerType(), True)\n])\n\ndf = spark.createDataFrame(data, schema)\n\nNote : Do not use window function\n\nO/P:-\n+---+\n| Id|\n+---+\n| 2|\n| 4|\n+---+\n\n#pyspark #coding #challange #databricks #interviewques\nSumanta BanerjeePradip AwasthiNITYANAND SINGHMayank Kumar",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5e7280663f431987",
+    "saved_date": "2026-10-01T23:22:30Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

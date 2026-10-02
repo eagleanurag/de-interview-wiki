@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-72d846be1a5a7b07",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.382400+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Persistent Systems Pyspark interview questions for Data Engineer 2025.\n\n1. Explain the differences between RDDs, DataFrames, and Datasets in PySpark. When would you use each?\n\n2. How does PySpark handle lazy evaluation? Can you provide an example demonstrating this concept?\n\n3. Describe the role of the Catalyst optimizer in PySpark. How does it enhance query execution?\n\n4. What are the various types of joins supported in PySpark? How do they differ in terms of performance and use cases?\n\n5. How can you handle missing or null values in a PySpark DataFrame? What strategies are available?\n\n6. Explain the significance of partitioning in PySpark. How does it impact performance, and how do you implement it?\n\n7. What is the difference between the cache() and persist() methods in PySpark? When would you use each?\n\n8. How do you create and register a user-defined function (UDF) in PySpark? What are the performance considerations?\n\n9. Discuss the concept of shuffling in PySpark. How does it affect performance, and how can it be minimized?\n\n10. Describe a scenario where you had to optimize a PySpark job for performance. What steps did you take?\n\n11. How do you read data from and write data to various file formats (e.g., CSV, Parquet, JSON) in PySpark?\n\n12. Explain how you would perform aggregations in PySpark. What functions and methods are commonly used?\n\n13. What are broadcast variables in PySpark? How do they help in improving the performance of join operations?\n\n14. Describe the process of handling schema evolution in PySpark when dealing with changing data structures.\n\n15. Can you provide an example of a complex PySpark transformation pipeline you've implemented? What challenges did you face, and how did you overcome them?\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀 \n\n𝗚𝗲𝘁 𝟭𝟬𝟬+ 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗵𝗲𝗿𝗲 -\nhttps://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:72d846be1a5a7b07",
+    "saved_date": "2026-10-01T23:30:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

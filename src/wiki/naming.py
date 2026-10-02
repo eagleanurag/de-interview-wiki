@@ -18,11 +18,10 @@ import posixpath
 import re
 import unicodedata
 
+from src.aggregation.consolidation import MAX_SLUG_LENGTH, slug_for
 
-MAX_SLUG_LENGTH = 60
+
 MAX_ID_LENGTH = 80
-
-_SLUG_SEPARATOR = re.compile(r"[^a-z0-9]+")
 
 # Keeps word separators (underscore, hyphen, dot) so IDs stay legible.
 _UNSAFE_ID_CHARACTERS = re.compile(r"[^A-Za-z0-9_.-]+")
@@ -55,19 +54,18 @@ def slugify(
     *,
     fallback: str = "untitled",
 ) -> str:
-    """Reduce arbitrary text to a stable, URL-safe slug."""
+    """
+    Reduce arbitrary text to a stable, URL-safe slug.
 
-    normalized = unicodedata.normalize("NFKD", value)
-    ascii_only = normalized.encode(
-        "ascii", "ignore"
-    ).decode("ascii")
+    Delegates to the aggregator rather than deriving one here. The
+    knowledge base is the authoritative artifact and it records each
+    label's slug, so the site has to produce the same string: a reader
+    who follows a concept's ``slug`` out of the JSON must arrive at the
+    page that was generated. Two implementations that agree today would
+    be free to disagree the moment one of them gained a bound.
+    """
 
-    slug = _SLUG_SEPARATOR.sub("-", ascii_only.lower()).strip("-")
-
-    if len(slug) > MAX_SLUG_LENGTH:
-        slug = slug[:MAX_SLUG_LENGTH].rstrip("-")
-
-    return slug or fallback
+    return slug_for(value, fallback=fallback)
 
 
 def safe_id(value: str, *, fallback: str = "post") -> str:

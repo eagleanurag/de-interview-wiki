@@ -18,6 +18,7 @@ from src.models import KnowledgePost
 from src.wiki.analysis import (
     ConceptEntry,
     DIFFICULTIES,
+    label_order,
     QuestionEntry,
     SiteModel,
     SUBTOPIC_KIND,
@@ -814,7 +815,7 @@ def render_questions(model: SiteModel) -> str:
             for question in model.questions
             for topic in question.topics
         },
-        key=str.casefold,
+        key=label_order,
     )
     type_counts = model.question_type_counts()
     difficulty_counts = model.difficulty_counts()

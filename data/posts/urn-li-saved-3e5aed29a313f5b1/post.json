@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-3e5aed29a313f5b1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346027818457161728",
+    "captured_at": "2026-10-02T00:15:46.879764+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:13:40Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\n𝐔𝐧𝐥𝐨𝐜𝐤 𝐘𝐨𝐮𝐫 𝐒𝐐𝐋 𝐌𝐚𝐬𝐭𝐞𝐫𝐲: 𝐄𝐬𝐬𝐞𝐧𝐭𝐢𝐚𝐥 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 :\nThis SQL Resource will help you to perform well in your SQL Interviews, practice these questions to get more hands on.\n𝐓𝐨𝐩𝐢𝐜𝐬 𝐂𝐨𝐯𝐞𝐫𝐞𝐝 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 :\n👉 Complex Query(for 2-5+ year exp)\n👉 Data type Interview Q.(for 2-5+ year exp)\n👉 TCS Tricky Interview Q.(for 2-5+ year exp)\n👉 HCL SQL Interview Q.(for 3-5+ year exp)\n👉 View Interview Questions(for 2-5+ year exp)\n👉 Index Interview Questions(for 2-5+ year exp)\n👉 Stored Proc. Interview Q.(for 2-5+ year exp)\n👉 Temp Table Interview Q.(for 2-5+ year exp)\n👉 Sql S. 2016 Interview Q (for 2-5+ year exp)\n👉 Constraints Interview Q. (for 2-5+ year exp)\n👉 Storage Related Interview Q. (for 2-5+ year exp)\n👉 Basic Sql Server Interview Q.(for 2-5+ year exp)\n👉 Sql Server 2017 Interview Q.(for 0-5+ year exp)\n👉 300 SQL Interview Question(for 0-5+ year exp)\n👉 Basic SQL Interview Q.(for 0-1 year exp)\n👉 String Related Basic Queries(for 0-1 year exp)\n👉 Date Time related Queries(for 0-1 year exp)\n👉 Salary Related Queries (for 0-2 year exp)\n👉 Group By Related Queries(for 0-2 year exp)\n👉 Join Related Queries(for 0-2 year exp)\n👉 Tricky Join Queries(for 0-2 year exp)\n👉 DDL Queries(for 0-2 year exp)\n👉 Very Interesting set(for 2-5+ year exp)\n👉 Very Much Tricky Q.(for 2-5+ year exp)\nCredits: Vikas Ahlawat (interviewquestionspdf)\nSharing this 800+ 𝐒𝐐𝐋 𝐒𝐄𝐑𝐕𝐄𝐑 𝐈𝐍𝐓𝐄𝐑𝐕𝐈𝐄𝐖 𝐐𝐔𝐄𝐒𝐓𝐈𝐎𝐍 𝐀𝐍𝐒𝐖𝐄𝐑𝐒 Document for your reference.\n🔈 Join my Data Community : https://lnkd.in/gy4R55Tj\n♻️ Like, Repost to help others grow\n🔔 Follow Abhisek Sahu for more\n#sql #dataanalyst #dataanalysis #dataengineering #hiring #interview #jobs\n…see more\n800 SQL Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346027818457161728_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3e5aed29a313f5b1",
+    "saved_date": "2026-10-01T23:13:40Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346027818457161728",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346027818457161728_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

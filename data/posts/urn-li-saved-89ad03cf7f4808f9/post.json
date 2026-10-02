@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-89ad03cf7f4808f9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338761969245605889",
+    "captured_at": "2026-10-02T00:15:49.020254+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:53Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "This resume got me #dataengineering interviews at Microsoft, Amazon, Deloitte, BCG, GS, CoinDCX and more!\n\nRecruiters overlooked my Data Analyst experience, so I had to reshape my resume to break into Data Engineering. I focused on 3 key things:\n\n✅ Optimized for scale: Highlighted projects where I built pipelines handling TBs of data, reduced processing time, or improved system efficiency.\n✅ Tech stack with depth: Focused on Spark, Kafka, Airflow, and cloud (AWS/GCP/Azure) with concrete examples of how I used them to solve problems.\n✅ Business impact: Showed how my work led to faster insights, cost savings, or automation, not just that I built pipelines.\n\nI spent a lot of time on my resume, got it reviewed by multiple people, and kept revising it until I received positive feedback.\n\nIf you're transitioning into Data Engineering, don’t rely on guesswork. It took me almost a year, but if you want faster results and fewer rejections, get help from Senior Data Experts with years of hiring experience.\nConnect with them on a FREE call here: https://lnkd.in/eeUpcUKT\n\nThey will review and optimize your resume, prepare you for interviews, help with job applications and even assist with referrals. Try it out! ⚡\nAll the best!\n\n#dataengineering #resume #paidpartnership #resumetips #datainterviews #jobsearch",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338761969245605889_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:89ad03cf7f4808f9",
+    "saved_date": "2026-10-01T23:20:53Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338761969245605889",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338761969245605889_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

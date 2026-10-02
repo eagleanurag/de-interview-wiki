@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-5368d47886a60301",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347527825534439424",
+    "captured_at": "2026-10-02T00:15:47.522951+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:12:10Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Amazon Detailed Interview Experience!\n𝐂𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐭𝐢𝐨𝐧: Base 19.5 LPA , 6.5 L Sign on Bonus Year-1 + 5.18 Sign on bonus Year-2, RSU 15.56 L (Vested in 4 years)\n𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧: SDE1\n𝐂𝐨𝐥𝐥𝐞𝐠𝐞: Not from well known (Can’t disclose the name)\n𝐏𝐫𝐢𝐨𝐫 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐞: 2 yrs 3 months (Worked in Service based company)\n𝐀𝐩𝐩𝐥𝐢𝐞𝐝: HR directly reached out on LinkedIn\n\n𝐑𝐨𝐮𝐧𝐝-𝟏 𝐎𝐧𝐥𝐢𝐧𝐞 𝐀𝐬𝐬𝐞𝐬𝐬𝐦𝐞𝐧𝐭\nDSA Q-1 A medium-level problem based on strings and sorting.\nDSA Q-2 A hard-level problem based on graphs.\nOther: Multiple-choice questions based on Amazon Leadership Principles.\n𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞:Candidate solved all 2 dsa questions and received an interview call.\n\n𝐑𝐨𝐮𝐧𝐝-𝟐 𝐃𝐒𝐀 + 𝐋𝐞𝐚𝐝𝐞𝐫𝐬𝐡𝐢𝐩 (𝐁𝐞𝐡𝐚𝐯𝐢𝐨𝐫𝐚𝐥)\nDSA Q-1 Rotten Orange (BFS + Matrix, medium)\nRef: https://lnkd.in/g6RBg_th\nDSA Q-2 Binary Tree Maximum Path Sum (Dp + Tree, Hard)\nRef: https://lnkd.in/g2xSPCJq\n𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞: Candidate could complete all two questions with optimal TC. \n𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤 𝐑𝐞𝐜𝐞𝐢𝐯𝐞𝐝: Good on coding questions but mixed for the Amazon Leadership Principles.\n\n𝐑𝐨𝐮𝐧𝐝-𝟑 𝐃𝐒𝐀 + 𝐋𝐞𝐚𝐝𝐞𝐫𝐬𝐡𝐢𝐩 (𝐁𝐞𝐡𝐚𝐯𝐢𝐨𝐫𝐚𝐥)\nDSA Q-1 Walls and Gates (Grid Multi Source BFS, Medium)\nRef: https://lnkd.in/gKXJ978T\nDSA Q-2 Group Anagrams (Hashing , Medium)\nRef: https://lnkd.in/gSZX3R2w \nCandidate was also asked 2-3 leadership questions. \n𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞: Candidate could complete all two questions with optimal TC. \n𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤 𝐑𝐞𝐜𝐞𝐢𝐯𝐞𝐝: Coding and Leadership both were positive this time.\n\n𝐑𝐨𝐮𝐧𝐝-𝟒 𝐃𝐒𝐀 + 𝐋𝐞𝐚𝐝𝐞𝐫𝐬𝐡𝐢𝐩 (𝐁𝐞𝐡𝐚𝐯𝐢𝐨𝐫𝐚𝐥)\nDSA Q-1 Maximum Profit in Job Scheduling (Binary Search + DP, Hard)\nRef: https://lnkd.in/gNXiinWG \nCandidate was asked 4-5 leadership questions.\n𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞: Completed DSA question in optimal TC and answered leadership questions using STAR method relating to his personal past experiences. \n𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤 𝐑𝐞𝐜𝐞𝐢𝐯𝐞𝐝: Wait for the final results! Most impatient moments 😰😨\n\nCandidate received an offer from Amazon 🥳🥳! \n\n𝐍𝐨𝐭𝐞: DSA questions were pretty standard but were of medium-hard leetcode level. Leadership principles are very important to get into Amazon, don't neglect this.\n\nStay tuned for more such detailed interview experiences🙌.\n\n#InterviewExperience #Amazon #FAANG #SDE1\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347527825534439424_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5368d47886a60301",
+    "saved_date": "2026-10-01T23:12:10Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347527825534439424",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347527825534439424_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

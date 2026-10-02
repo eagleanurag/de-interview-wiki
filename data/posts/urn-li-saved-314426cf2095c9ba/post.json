@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-314426cf2095c9ba",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344135454503399424",
+    "captured_at": "2026-10-02T00:15:46.229633+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:10:58Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Databricks just made “𝘁𝗮𝗯𝗹𝗲-𝘃𝗮𝗹𝘂𝗲𝗱 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀” (TVFs) as easy as any other DataFrame call.\n\nPreviously, if we wanted to use a TVF like 𝗲𝘅𝗽𝗹𝗼𝗱𝗲 or a custom UDTF, we often had to register a temporary view and then use 𝘀𝗽𝗮𝗿𝗸.𝘀𝗾𝗹() to write a SQL query. This worked, but it could make our Python code feel a bit clunky and less \"DataFrame-native.\"\n\nThe new API, available from DBR 16.1, lets us call these functions directly on our DataFrames. This means:\n • 𝗖𝗹𝗲𝗮𝗻𝗲𝗿 𝗖𝗼𝗱𝗲: Keep your logic entirely within the DataFrame API, making it easier to read and maintain.\n • 𝗕𝗲𝘁𝘁𝗲𝗿 𝗖𝗼𝗺𝗽𝗼𝘀𝗮𝗯𝗶𝗹𝗶𝘁𝘆: Chain TVF calls with other DataFrame transformations like .filter() and .select() seamlessly.\n • 𝗣𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗥𝗼𝘄-𝗹𝗲𝘃𝗲𝗹 𝗢𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀: With lateral joins (in DBR 17.0+), you can apply a TVF to each row of your DataFrame, which is amazing for tasks like generating series or expanding nested data.\n\n📖 𝗗𝗲𝗲𝗽-𝗱𝗶𝘃𝗲 𝗯𝗹𝗼𝗴: https://lnkd.in/dw_iVF8V\n\n𝗟𝗲𝘁'𝘀 𝘀𝗲𝗲 𝗶𝘁 𝗶𝗻 𝗮𝗰𝘁𝗶𝗼𝗻!\nImagine we have a dataset of online orders, where each order contains a list of products. Our goal is to create a new row for each product in each order.\n\n𝗦𝗽𝗮𝗿𝗸 𝗦𝗤𝗟 𝘃𝘀 𝗗𝗮𝘁𝗮𝗙𝗿𝗮𝗺𝗲𝗔𝗣𝗜 𝗮𝗽𝗽𝗿𝗼𝗮𝗰𝗵 𝗳𝗼𝗿 𝗲𝘅𝗽𝗹𝗼𝗱𝗲:\n\n#Databricks #DataEngineering #DiggibyteTechnologies #CuelebreAB",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7344135454503399424_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:314426cf2095c9ba",
+    "saved_date": "2026-10-01T23:10:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7344135454503399424",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7344135454503399424_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

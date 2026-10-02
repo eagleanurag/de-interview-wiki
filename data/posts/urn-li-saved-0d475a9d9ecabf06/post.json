@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-0d475a9d9ecabf06",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341681712310956032",
+    "captured_at": "2026-10-02T00:15:44.717471+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:17:09Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗝𝗼𝗶𝗻𝘀: 𝗬𝗼𝘂𝗿 𝗗𝗮𝘁𝗮’𝘀 𝗣𝗲𝗿𝘀𝗼𝗻𝗮𝗹 𝗠𝗮𝘁𝗰𝗵𝗺𝗮𝗸𝗶𝗻𝗴 𝗦𝗲𝗿𝘃𝗶𝗰𝗲\n\nEver had an inner join silently delete half your records? Welcome to the club! Here's your survival guide to PySpark joins without the headaches.\n\n𝗧𝗵𝗲 𝗘𝘀𝘀𝗲𝗻𝘁𝗶𝗮𝗹 𝗝𝗼𝗶𝗻𝘀 (𝗔𝗻𝗱 𝗪𝗵𝗲𝗻 𝘁𝗼 𝗨𝘀𝗲 𝗧𝗵𝗲𝗺) \n\n𝗜𝗻𝗻𝗲𝗿 𝗝𝗼𝗶𝗻 - Only perfect matches survive. Great for \"show me employees WITH departments.\"\n𝗟𝗲𝗳𝘁 𝗝𝗼𝗶𝗻 - Keep all left records, match what you can. Perfect for \"show me ALL employees, plus their departments if they have one.\"\n𝗥𝗶𝗴𝗵𝘁 𝗝𝗼𝗶𝗻 - Keep all right records. Useful for \"show me ALL departments, plus any employees they have.\"\n𝗙𝘂𝗹𝗹 𝗢𝘂𝘁𝗲𝗿 𝗝𝗼𝗶𝗻 - Everyone gets invited to the party. Use when you need \"show me everything from both tables.\"\n𝗖𝗿𝗼𝘀𝘀 𝗝𝗼𝗶𝗻 - Every possible combination. Warning: This is how you accidentally create billion-row tables!\n𝗦𝗲𝗺𝗶 𝗝𝗼𝗶𝗻 - Left records that have matches (no duplicates). Think \"employees who belong to some department.\"\n𝗔𝗻𝘁𝗶 𝗝𝗼𝗶𝗻 - Left records with NO matches. Perfect for finding orphaned data like \"employees without departments.\"\n𝗦𝗲𝗹𝗳 𝗝𝗼𝗶𝗻 - Table meets itself. Essential for hierarchies like \"employees and their managers.\"\n𝗡𝗮𝘁𝘂𝗿𝗮𝗹 𝗝𝗼𝗶𝗻 - Automatically matches on common column names. Perfect for \"show me employees and departments where column names align.\"\n𝗘𝗾𝘂𝗶 𝗝𝗼𝗶𝗻 - Matches records where specified columns are equal. Great for \"show me employees and departments where dept_id values match.\"\n\n𝗧𝗵𝗲 𝗚𝗼𝘁𝗰𝗵𝗮𝘀 𝗧𝗵𝗮𝘁'𝗹𝗹 𝗚𝗲𝘁 𝗬𝗼𝘂 \n\n𝗡𝗨𝗟𝗟 𝗗𝗿𝗮𝗺𝗮 : NULLs don't match other NULLs. Your \"complete\" join might be missing data.\n𝗗𝘂𝗽𝗹𝗶𝗰𝗮𝘁𝗲 𝗞𝗲𝘆𝘀 : One employee in two departments? Congrats, you just doubled your dataset unexpectedly.\n𝗠𝗲𝗺𝗼𝗿𝘆 𝗘𝘅𝗽𝗹𝗼𝘀𝗶𝗼𝗻𝘀 : Cross joins and unintentional cartesian products will crash your cluster faster than you can say \"oops.\"\n\n𝗧𝗵𝗲 𝗖𝗼𝗻𝗳𝘂𝘀𝗶𝗻𝗴 𝗧𝗿𝗶𝗼: \n𝗜𝗻𝗻𝗲𝗿 𝗝𝗼𝗶𝗻: You explicitly specify the join key (The Good One)\n𝗡𝗮𝘁𝘂𝗿𝗮𝗹 𝗝𝗼𝗶𝗻: Spark automatically matches on ALL columns with identical names (dangerous!)\n𝗘𝗾𝘂𝗶 𝗝𝗼𝗶𝗻: You write the full equality condition for maximum control (Overly Complicated)\n\n𝗥𝗲𝗺𝗲𝗺𝗯𝗲𝗿: 𝗧𝗵𝗲 𝗿𝗶𝗴𝗵𝘁 𝗷𝗼𝗶𝗻 𝘀𝗮𝘃𝗲𝘀 𝘆𝗼𝘂𝗿 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲. 𝗧𝗵𝗲 𝘄𝗿𝗼𝗻𝗴 𝗷𝗼𝗶𝗻 𝗿𝘂𝗶𝗻𝘀 𝘆𝗼𝘂𝗿 𝘄𝗲𝗲𝗸𝗲𝗻𝗱.\n\n#PySpark #ApacheSpark #BigData #DataEngineering #Python #SQL #Joins #Analytics #SparkSQL\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341681712310956032_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0d475a9d9ecabf06",
+    "saved_date": "2026-10-01T23:17:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341681712310956032",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341681712310956032_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

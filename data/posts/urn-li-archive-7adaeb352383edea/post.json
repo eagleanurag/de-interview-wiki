@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-7adaeb352383edea",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.596405+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:21:39Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Data Engineering Interview Questions (Python | PySpark | Spark | SQL)\n\nHere’s a list of questions during Data Engineering interviews:\n\n1. Write a Python program to sort a list of integers in descending order without using the sort() function.\n2. Write Spark code to read a file from a specified location.\n3. Define JDBC and explain how it's used in connecting Spark to databases.\n4. You’re given two CSV files with no common columns — how would you join them?\n5. In PySpark, create two DataFrames with no matching columns and perform a cross join.\n6. A table contains bank statements — write an SQL query to calculate a rolling sum of transactions.\n7. Explain the concept of lazy evaluation in PySpark.\n8. What’s the difference between RDD and DataFrame in Apache Spark?\n9. Write a PySpark query to filter employees where:\nAge > 25\nSalary < 5 lakh\nName starts with 'A'\n\n#DataEngineering #PySpark #Spark #SQL #Python #BigData #InterviewQuestions #DataEngineer\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7adaeb352383edea",
+    "saved_date": "2026-10-01T23:21:39Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

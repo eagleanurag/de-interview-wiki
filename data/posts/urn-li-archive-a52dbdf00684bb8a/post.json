@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-a52dbdf00684bb8a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.078974+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:10:59Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "💼 EY GDS – Azure Data Engineer Interview Questions (L2 Round)\n📌 These were recently asked in second-level technical interviews at EY GDS. Expect scenario-based depth and architectural thinking!\n\n\n---\n\n🧠 L2-Level Questions You Must Prepare For:\n\n1️⃣ You have to ingest 100+ tables from on-prem SQL Server to ADLS using ADF.\n👉 How will you design the pipeline framework to support dynamic ingestion and table-wise control?\n\n2️⃣ A data flow is failing due to schema mismatch in one of the source tables.\n👉 How do you handle schema evolution or drift in ADF?\n\n3️⃣ Explain how you implemented row-level security in Synapse Analytics.\n👉 What are the key steps and how do you audit access?\n\n4️⃣ A Databricks notebook is taking too long during joins.\n👉 How do you troubleshoot and optimize join performance in PySpark?\n\n5️⃣ How do you enable end-to-end logging, error handling, and alerting across ADF and Databricks pipelines?\n\n6️⃣ What is your strategy to maintain CI/CD for ADF and Synapse artifacts using Azure DevOps?\n\n7️⃣ You’re designing a system to load 1 TB daily.\n👉 Would you use PolyBase or COPY INTO? Why?\n\n8️⃣ What are Managed Identity, RBAC, and ACLs, and how do you use them to securely access ADLS?\n\n9️⃣ How do you implement parameterized linked services and reusable datasets in ADF?\n\n🔟 Explain how you use delta tables and merge operations to implement SCD Type 2 logic in Databricks.\n\n\n---\n\n💡 L2 Interview Tip:\nEY expects solid understanding of pipeline orchestration, Spark tuning, Azure security, and cost-efficient design — not just tool clicks.\n\n\n---\n\n📩 Want sample answers or real design templates? Drop “EY L2” in the comments!\n📌 Save this for your EY or Big4 prep journey.\n\n#EYGDS #AzureDataEngineer #DataEngineering #ADF #Synapse #Databricks #BigData #AzureSecurity #AzureDevOps #TechInterview #ETL #LinkedInLearning #MorningLearning ☀️ #CloudEngineer #CareerInTech #DataPipelines",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a52dbdf00684bb8a",
+    "saved_date": "2026-10-01T23:10:59Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

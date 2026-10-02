@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-c22bc70a777aa105",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.194584+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:13:36Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "EY Interview Experience.\nCompensation: 27 LPA\nPosition: Data Engineer\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱 – 𝗦𝗽𝗮𝗿𝗸 + 𝗣𝘆𝘁𝗵𝗼𝗻 + 𝗦𝗤𝗟 (𝗟𝟭 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗥𝗼𝘂𝗻𝗱)\n\nSpark:\n- Repartition vs Coalesce\n- Read Modes in Spark\n- map vs flatMap\n- Shared Variables\n\nPySpark Coding:\n- Calculate min/max marks per student from subject-wise score columns using least() and greatest()\n\nPython:\n- Inheritance behavior with Parent and Child classes\n- Effects of overriding variables across instances\n\nSQL:\n- For each date, return product count and names sold — GROUP_CONCAT() + COUNT(DISTINCT)\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗦𝗤𝗟 + 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 (𝗟𝟮 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗥𝗼𝘂𝗻𝗱)\n\nSQL:\n- Symmetric difference between two tables using UNION of NOT IN queries\nHighest salary per department using DENSE_RANK()\n\nPySpark:\n- Remove duplicates using ROW_NUMBER() over name partition\nKept only row_number = 1 rows\n\n𝟯𝗿𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗖𝗹𝗶𝗲𝗻𝘁 𝗥𝗼𝘂𝗻𝗱 (𝗣𝗿𝗼𝗷𝗲𝗰𝘁 + 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼-𝗕𝗮𝘀𝗲𝗱 𝗤𝘀)\n\nSpark Theoretical:\n- Optimization techniques in Spark\n- What are Delta Tables\n- Delta vs Parquet\n- How does Databricks Catalog work\n- Initial vs Incremental loads\n- Data loss prevention strategies\n\nProject Discussion:\n- Faced challenges and how they were solved\n- Emphasis on real project ownership\n\nPySpark Task:\n- Given process(year, month, day, flag, units) table\n- For each date: compute total units and count of flagged IDs\n- Used groupBy on year, month, day with sum(units) and count(flag) aggregations\n\nInterview referance - https://lnkd.in/gKqgqBTD\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c22bc70a777aa105",
+    "saved_date": "2026-10-01T23:13:36Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

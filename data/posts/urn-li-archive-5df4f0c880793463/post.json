@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-5df4f0c880793463",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.127884+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:50Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "10 lessons I learnt while preparing for #SQL in data engineering interviews:\n1️⃣ You feel #SQL is dead but it mirrors actual reporting and product analytics in every real company.\n2️⃣ Don’t write a query until you’ve broken the problem into mental steps.\n3️⃣ Most SQL interviews don’t test edge cases but your #real project will. Think beyond the happy path that will help in #problem-solving.\n4️⃣ Window functions are the closest thing to miracle to solve any query at granular level. Learn RANK, LAG, and ROW_NUMBER.\n💰 Bonus tip: Practice #lead, #lag more ( I have observed most candidates are avoiding that)\n5️⃣ Filters should come before joins. Joins come before aggregations. Never scan too much it can take forever to execute your query.\n6️⃣ Don’t jump straight into #code. Analyse all the datasets first .Writing the logic in pseudocode first can save hours, same applies to your SQL query. Make the #mental map of your query.\n❌ Never ever hesitate to use pen 🖊️ and paper 📝 .\n7️⃣ Practicing 100 questions badly won’t help. Practicing 20 deeply will.\n🤑 Bonus tip: Go from simple to #medium, stay at medium level unless you have solved the query repetitively at least 5 times in 1 week span. Then go at #hard level and repeat the same.\n8️⃣ Subqueries look cool but CTEs keep your queries debuggable and modular. People can understand it better. #Remember you are a team-player.\nIt will help you write #clean queries.\n9️⃣ #Practice writing the same query three ways. It’ll teach you flexibility in real interviews and you will suddenly feel like #expert in some months.\n🔟 Avoid chaining more than multiple CTEs unless necessary.Be concise & clear.\nBest #SQL developers are known for their 🥇 simplicity, 🥈 clarity not for ❌ complexity.\n✍ I learnt these lessons from my own experience and still #failing and #improving regularly .\n\n🙏 Tagging the best Ankit Bansal Sir for in depth knowledge of #SQL.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5df4f0c880793463",
+    "saved_date": "2026-10-01T23:09:50Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

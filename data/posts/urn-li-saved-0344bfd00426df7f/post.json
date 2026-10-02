@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-0344bfd00426df7f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339148768346259456",
+    "captured_at": "2026-10-02T00:15:44.499683+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:06Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🎬 Day 10 of 30 – SQL Interview Questions Series!\n\nToday’s question:\n What’s the difference between COUNT(*), COUNT(1), COUNT(-1), COUNT(NULL) and COUNT('SQL') in SQL?\n\nIn this video, I explain:\n ✅ What each COUNT expression actually evaluates\n ✅ Why COUNT(1), COUNT(-1), and COUNT('SQL') all return the same result\n ✅ How COUNT(column) behaves differently when NULLs are involved\n ✅ Common misconceptions around COUNT(*) and COUNT(1)\n\n📊 If you're preparing for SQL interviews or want to master SQL internals, this is a must-watch breakdown!\n\n🎥 YouTube video link is in the comment 👇\n\nIf you find this video helpful, consider subscribing to my YouTube channel “Crack DE with Mradul” for more SQL and data engineering content.\n\nI’d love your support as I continue this 30-day SQL Interview Question series!\n\n#CrackDEwithMradul #SQL #SQLInterview #DataEngineering #LearnSQL #SQLTricks #SQLTutorial #Analytics #DataScience\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339148768346259456_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0344bfd00426df7f",
+    "saved_date": "2026-10-01T23:20:06Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339148768346259456",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339148768346259456_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

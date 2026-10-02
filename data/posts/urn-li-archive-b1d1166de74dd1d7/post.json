@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-b1d1166de74dd1d7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.223188+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:06:56Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Your Databricks job isn't slow. \n\nHere’s the checklist I use for every PySpark job in production:\n\n1. Stop using `cache()` everywhere\n`cache()` is lazy and un-reliable. It spills if memory is full.\nUse `df.persist(StorageLevel.MEMORY_AND_DISK)` and only when you reuse a DF 2+ times.\nAnd always `unpersist()` when done.\n\n2. Let AQE do its job\nIf you disabled Adaptive Query Execution, you’re fighting Spark.\nCheck this:\n`spark.conf.set(\"spark.databricks.adaptive.coalescePartitions.enabled\", \"true\")`\n`spark.conf.set(\"spark.sql.adaptive.enabled\", \"true\")`\nIt fixes skew and small file problems automatically.\n\n3. Broadcast the small table. Always.\nThat 50MB dimension table is shuffling 500GB of fact data.\n`from pyspark.sql.functions import broadcast`\n`fact_df.join(broadcast(dim_df), \"customer_id\")`\nNo shuffle. Instant speedup.\nMost performance issues aren’t about writing better code.\nThey’re about removing the bottlenecks you created.\n\n#Databricks #DataEngineering #PySpark #PerformanceTuning",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b1d1166de74dd1d7",
+    "saved_date": "2026-10-01T23:06:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

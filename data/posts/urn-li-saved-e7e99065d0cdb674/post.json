@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e7e99065d0cdb674",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339202820434268163",
+    "captured_at": "2026-10-02T00:15:52.947920+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:33Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Recently, one of my colleagues went through her Data Science interview at PayPal. \n\nSo, sharing the complete experience here: \n\nShe got the interview opportunity through a referral on LinkedIn, and so the interview started.\n\n📍𝗥𝗼𝘂𝗻𝗱 𝟭: 𝗗𝗮𝘁𝗮 𝗦𝗰𝗶𝗲𝗻𝗰𝗲 𝗣𝗿𝗼𝗷𝗲𝗰𝘁𝘀 & 𝗠𝗟\nIn this round she was asked about one of her previous projects from scratch to finish, along with a a lot of cross-questioning around the project.\n\nSome questions asked were:\n→ How did you leverage machine learning algorithms?\n→ What steps did you take to deal with dirty or missing data?\n→ What techniques did you use when feature engineering?\n\n📍𝗥𝗼𝘂𝗻𝗱 𝟮: 𝗦𝗤𝗟, 𝗣𝘆𝘁𝗵𝗼𝗻 𝗖𝗼𝗱𝗶𝗻𝗴, 𝗮𝗻𝗱 𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗖𝗮𝘀𝗲 𝗦𝘁𝘂𝗱𝘆\nThe next round focused on SQL, Python coding, and a business case study. For example, she demonstrated how to aggregate and manipulate tables in SQL, build a machine-learning model in Python, and use APIs.\n\nA scenario-based question asked how she would approach analytics in a particular domain, her thought process in solving a specific problem, etc.\n\n📍𝗥𝗼𝘂𝗻𝗱 𝟯: 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝘂𝗿𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\nThis was the final round with a senior Director, where she was asked a lot of technical data & business analytical questions.\n\nQuestions were like:\n→ How well do you know natural language processing or recommendation systems?\n→ Explain how you would analyze data on user behavior to look for trends or anomalies.\n\nOverall the interview went really well for her & soon she received the job offer too. 🎉\n\n#paypal #interviewexperience #datascience",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339202820434268163_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e7e99065d0cdb674",
+    "saved_date": "2026-10-01T23:11:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339202820434268163",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339202820434268163_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

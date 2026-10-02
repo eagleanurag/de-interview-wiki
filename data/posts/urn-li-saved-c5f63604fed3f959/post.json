@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-c5f63604fed3f959",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346198489967509504",
+    "captured_at": "2026-10-02T00:15:51.420503+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:13:35Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Snowflake Data Superhero ❄️| Azure, Snowflake, Databricks & Fabric Expert | Data Engineering Mentor & Speaker | Building Next-Gen Data Platforms | Content Creator & Writer | 15x Cloud Certified | 76K+ Followers\n1yr •\nSQL CAN'T BE SKIPPED\nIf you’re in data — whether as a Data Engineer, Analyst, BI Developer, or even a Software Engineer — you can’t escape SQL.\nIt’s the universal language to talk to your data.\nI recently came across this excellent breakdown of SQL essentials, which covers everything you should know to become confident and effective at data querying and manipulation.\nHere’s a quick walkthrough of these topics and why each one matters\n✅ 1. Fundamentals of SQL\nGet crystal clear on SELECT, FROM, WHERE. This is where everything starts — fetching data from tables.\n✅ 2. Filtering Commands\nLearn how to use WHERE, IN, BETWEEN, LIKE, and logical operators to filter your data precisely.\n✅ 3. Ordering Commands\nSort your results using ORDER BY. Simple but critical when generating reports.\n✅ 4. Alias\nUse AS to rename columns or tables for readability and cleaner joins.\n✅ 5. Aggregate Commands\nFunctions like SUM, AVG, MIN, MAX, COUNT — vital for dashboards, summaries, and metrics.\n✅ 6. GROUP BY Commands\nBreak down data into groups to run aggregates on. Mastering GROUP BY + HAVING is a game changer.\n✅ 7. Conditional Statements\nUse CASE WHEN to build logic inside your queries. It replaces multiple queries with one smart statement.\n✅ 8. JOINS\nThe heart of relational databases. Understand INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and SELF JOIN.\n✅ 9. Subquery\nRun queries inside queries. Essential for breaking down complex logic.\n✅ 10. VIEW & INDEX\nVIEW: Save complex queries as virtual tables.\nINDEX: Speed up read performance dramatically — learn when and how to create them.\n✅ 11. String Functions\nCONCAT, SUBSTR, REPLACE, LENGTH help you clean and manipulate text data.\n✅ 12. Mathematical Functions\nFrom ROUND to MOD — small tools that make numerical data handling powerful.\n✅ 13. Date-Time Functions\nCalculate age, format dates, or compare timestamps — critical for almost every business analysis.\n✅ 14. Pattern Matching (Regex)\nFind complex patterns inside strings. Think of filtering emails, phone numbers, or specific text structures.\n✅ 15. Data Type Conversion Functions\nCAST and CONVERT are must-haves when your data is not in the type you need.\nPro Tip for Learners:\n✅ Practice with public datasets (Kaggle, Google BigQuery, or sample retail databases).\n✅ Start simple, then write queries combining JOINS, GROUP BY, subqueries, and window functions.\n✅ Use EXPLAIN PLAN to see how your queries execute and optimize them.\n📌𝐅𝐨𝐥𝐥𝐨𝐰 𝐦𝐲 𝐌𝐞𝐝𝐢𝐮𝐦 𝐇𝐚𝐧𝐝𝐥𝐞 𝐭𝐨 𝐬𝐭𝐚𝐲 𝐮𝐩𝐝𝐚𝐭𝐞𝐝 - https://lnkd.in/dHhPyud2\n📌 𝗝𝗼𝗶𝗻 𝗠𝘆 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 - https://lnkd.in/d3F93Y5u\n🔗𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝒘𝒊𝒕𝒉 𝑴𝒆\n📌 𝗙𝗼𝗿 𝗠𝗲𝗻𝘁𝗼𝗿𝘀𝗵𝗶𝗽 - https://lnkd.in/gYn8Q39u\n📌 𝗙𝗼𝗿 𝗖𝗮𝗿𝗲𝗲𝗿 𝗚𝘂𝗶𝗱𝗮𝗻𝗰𝗲 - https://lnkd.in/gfrPMQSj\nFollow Riya Khandelwal\n#SQL #DataEngineering #Database #Analytics #Learning #CareerInData #MySQL #PostgreSQL #BigData #DataScience\nSQL COMMAND",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346198489967509504_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c5f63604fed3f959",
+    "saved_date": "2026-10-01T23:13:35Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346198489967509504",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346198489967509504_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7346198489967509504_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-efa8c9b31acddd86",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505130552052637696",
+    "captured_at": "2026-10-02T00:15:53.162545+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:07:12Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Talent Acquisition Partner @ Sunday || HR ||\n2w •\n**We’re Hiring: Senior Data Engineer**\n📍 Location: Remote\n💼 Experience:5+ years\n⏳ Immediate joiners only.\nWe’re looking for a hands-on Senior Data Engineer to build scalable enterprise data platforms and high-performance data pipelines supporting analytics, AI, and business operations.\n**What you’ll do:**\n* Design and optimize ETL/ELT pipelines and enterprise data architectures.\n* Build high-volume Python ingestion frameworks and REST/GraphQL API integrations.\n* Develop batch, near-real-time, and event-driven data solutions.\n* Ensure data quality, lineage, observability, performance, and cost optimization.\n* Collaborate with AI, architecture, product, and business teams.\n**Must-have skills:**\n* Strong production-grade Python and advanced API engineering.\n* Data architecture, system design, Medallion Architecture, CDC, and enterprise data modeling.\n* Databricks, PySpark, Delta Lake, and Snowflake.\n* Azure Data Factory, ADLS Gen2, Azure Synapse, and Event Hubs.\n* Advanced SQL, data pipeline design, Git, and CI/CD.\n**Preferred:** Apache Airflow, dbt, Kafka, Terraform, Azure OpenAI, and AI/ML data pipelines.\nInterested? Apply here: https://lnkd.in/dS_j_Dqn or share your profile in DM or on isha.yadav@sundaylabs.io\n#Hiring #SeniorDataEngineer #DataEngineering #Python #Databricks #Snowflake #Azure #SQL\nEntiovi is hiring Sr Data Engineer on Sunday.\n10x.sundaylabs.io",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7505130552052637696_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:efa8c9b31acddd86",
+    "saved_date": "2026-10-01T23:07:12Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7505130552052637696",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7505130552052637696_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7505130552052637696_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

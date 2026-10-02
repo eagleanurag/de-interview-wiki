@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-94db10142e911c78",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327573736755286018",
+    "captured_at": "2026-10-02T00:15:49.602362+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:24:44Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "A must-read foundational paper that explores why the RLHF pipeline (Reward Model + PPO) continues to outperform preference fine-tuning methods like DPO, ORPO, and even newer techniques like GRPO.\n\nAt a high level, the paper dissects the interplay between maximum likelihood estimation (MLE), reward modeling, and policy optimization in the context of preference learning. While MLE directly models preferred responses via log-probability maximization (as in DPO/GRPO), RLHF introduces an intermediate reward model trained from human preferences, followed by policy optimization using reinforcement learning (typically PPO). The key tension the paper explores is: why does indirect optimisation via a learned reward signal lead to better final policies than optimising the data likelihood directly? This question sits at the intersection of learning theory, exploration-exploitation tradeoffs, and objective mismatch and the paper addresses it with both formal intuition and empirical evidence.\n\nThe paper is a clean analytical setup - - suppose we have access to human preference data in the form of ranked response pairs. We can either (1) train a reward model (RM) on this preference data and then optimise a policy using RL (PPO) against this RM, or (2).. directly optimise the policy using supervised methods like DPO or GRPO that attempt to model the preferences in a single step. The authors analyse this setup both theoretically and empirically. They show that when the generation-verification gap exists ... meaning the process of generating high-quality responses is structurally distinct from the process of identifying or ranking them the two-stage RM+RL method leads to more expressive, higher-performing policies. They back this with a synthetic environment designed to simulate the gap and demonstrate that PPO can better escape local minima by using the RM as a directional signal for exploration. On real-world benchmarks like Anthropic’s Helpful-Harmless (HH) dataset, the two-stage RLHF pipeline achieved a ~4.5% win-rate gain over direct preference modelling, even when the RM was relatively weak. These results suggest that the inductive bias introduced by separating evaluation from generation is not a liability it’s an advantage, especially for complex alignment tasks.\n\nTakeaways\nUse GRPO/DPO for stable, high-throughput training when rewards are easy to model. Reach for RLHF in high-stakes tasks with ambiguity, reasoning, or verification difficulty. This paper gives us the theoretical lens to make that call with confidence.\n\nHighly recommended if you’re working on LLM alignment, policy optimization, or RL-guided fine-tuning.\n\nPaper Link : https://lnkd.in/gQpkmyuN\n\n#LLMs #RLHF #GRPO #DeepSeek #Optimization #ReinforcementLearning #PreferenceLearning #MachineLearning #AIAlignment #NLP #FundamentalResearch\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327573736755286018_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:94db10142e911c78",
+    "saved_date": "2026-10-01T23:24:44Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327573736755286018",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327573736755286018_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

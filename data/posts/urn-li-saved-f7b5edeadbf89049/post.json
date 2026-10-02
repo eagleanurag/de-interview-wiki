@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-f7b5edeadbf89049",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339509411570163712",
+    "captured_at": "2026-10-02T00:15:53.397176+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:20:04Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nSenior Data Engineer at Epsilon\n1yr •\n❇️ 𝐌𝐚𝐬𝐭𝐞𝐫 𝐒𝐩𝐚𝐫𝐤 𝐋𝐢𝐤𝐞 𝐚 𝐏𝐫𝐨 – 𝟑 𝐅𝐥𝐚𝐯𝐨𝐫𝐬, 𝟏 𝐒𝐞𝐭! ❇️\n🔄𝐖𝐨𝐫𝐤𝐢𝐧𝐠 𝐰𝐢𝐭𝐡 𝐒𝐩𝐚𝐫𝐤 𝐚𝐜𝐫𝐨𝐬𝐬 𝐒𝐜𝐚𝐥𝐚, 𝐏𝐲𝐒𝐩𝐚𝐫𝐤, 𝐚𝐧𝐝 𝐒𝐩𝐚𝐫𝐤 𝐒𝐐𝐋?\nI've compiled hands-on coding scenarios that interviewers love to ask — all tackled in three different Spark styles!\n👉 𝐖𝐡𝐚𝐭’𝐬 𝐢𝐧𝐬𝐢𝐝𝐞?\n1️⃣ Realistic data sets\n2️⃣ Expected outputs\n3️⃣ Logic written in all 3 formats (Scala Spark, PySpark, SQL)\n⬇️ 𝐄𝐱𝐚𝐦𝐩𝐥𝐞𝐬 𝐢𝐧𝐜𝐥𝐮𝐝𝐞:\n✅ Student Grade Classification\n✅ Age & Salary Grouping + Pattern Matching\n✅ Purchase Category Logic with Date Filters\n✅ Data Transformation Based on Status\n✅ High-Value Order Identification\n👉 𝐂𝐡𝐞𝐜𝐤 𝐭𝐡𝐞 𝐚𝐭𝐭𝐚𝐜𝐡𝐞𝐝 𝐏𝐃𝐅 📚\nLet me know if you'd love a 𝐏𝐚𝐫𝐭 𝟐\n🔁 Feel free to like, save, or share this post with anyone preparing for a Data Engineering role.\n#ApacheSpark #PySpark #ScalaSpark #SparkSQL #BigData #DataEngineering #ETL #InterviewPrep #SparkCoding #LinkedInLearning #TechCareers #JobSearch #PythonTips\n…see more\nSpark 1",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339509411570163712_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f7b5edeadbf89049",
+    "saved_date": "2026-10-01T23:20:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339509411570163712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339509411570163712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-fade9182122dec87",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349626062097571840",
+    "captured_at": "2026-10-02T00:15:53.536811+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:11:04Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🎯 Mastering Pivot and Unpivot Transformations in Azure Data Factory\n\nWhether you're reshaping flat files or preparing data for reporting, the Pivot and Unpivot transformations in Azure Data Factory can save you hours of manual effort and scripting. Here's a quick dive into what they do and when to use them. 🛠️\n\n🔄 Pivot Transformation\n📌 What it does: Converts rows into columns.\n 📊 Use Case: Transforming transactional data into summary reports or wide format tables.\n✅ Example:\n Transform a dataset like:\nYear Metric. Value\n2024. Revenue. 1000\n2024. Expenses. 400\n\n👉 Into:\nYear. Revenue. Expenses\n2024. 1000. 400\n\n🔁 Unpivot Transformation\n📌 What it does: Converts columns into rows.\n 📊 Use Case: Normalizing wide datasets for analytics or loading into star schemas.\n\n✅ Example:\n Transform a dataset like:\nYear. Revenue Expenses. \n2024. 1000. 400\n\n👉 Into:\nYear. Metric. Value\n2024. Revenue 1000\n2024. Expenses. 400\n\n💡 These transformations help:\nStandardize incoming data\nSimplify downstream data models\nReduce dependency on pre-transformed source data\n\nHave you used Pivot or Unpivot in your ADF pipelines? Would love to hear how you applied it in real-world scenarios! 🔽\n#AzureDataFactory #DataTransformation #DataEngineering #Pivot #Unpivot #Azure #ADF #ETL #DataModeling #MicrosoftAzure\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349626062097571840_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fade9182122dec87",
+    "saved_date": "2026-10-01T23:11:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349626062097571840",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349626062097571840_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

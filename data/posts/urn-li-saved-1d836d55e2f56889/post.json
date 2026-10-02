@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-1d836d55e2f56889",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7342431147378843648",
+    "captured_at": "2026-10-02T00:15:45.357458+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:17:03Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Python, SQL, PySpark, Azure Data Factory (ADF), Databricks, Delta Lake | Scalable Data Pipelines, ETL/ELT, Data Analytics Solutions\n1yr •\n🎯 SQL That Gets You Hired: The Power of CASE WHEN in Real-Time Analytics\n📄 Just released: My breakdown of a real interview question asked at Walmart and ZS Associates — with a deep dive into how CASE WHEN isn't just syntax... it's strategy.\nIn this PDF, you'll get:\n✅ A real-world SQL use case that powers customer segmentation for millions of users\n✅ Interview-grade explanation tailored for Data Engineers & Analysts\n✅ Pro-level optimization tips to boost performance and reduce pipeline complexity\n✅ Why pushing business logic to SQL saves 💸 compute and improves 📊 dashboard load times\n🛠 Use this to:\n• Ace SQL interviews\n• Build cleaner, audit-friendly pipelines\n• Centralize logic across ETL, BI & analytics\n🌍 Bonus: Telco example with 20M users + daily segmentation logic in SQL 🔥\n🔽 Grab the PDF below. It’s sharp, concise, and job-ready.\nIf you find this valuable:\n🔁 Repost for others\n💬 Drop a comment with your favorite use of CASE\n📩 DM me for the next one in the series: SQL Join Types, Demystified\n#DataEngineering #SQLMastery #InterviewReady #CaseWhen #SQLTips #Databricks #PowerBI #DataPipeline #ADF #Snowflake #SynapseAnalytics #DataAnalyst #WalmartTech #ZSAssociates #LinkedInPDF #ETLDesign #RealTimeData\ns3",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7342431147378843648_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1d836d55e2f56889",
+    "saved_date": "2026-10-01T23:17:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7342431147378843648",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7342431147378843648_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7342431147378843648_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

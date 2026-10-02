@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-4316b2a481bd929a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7464513217633882112",
+    "captured_at": "2026-10-02T00:15:47.053909+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:07:33Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 2nd\n113K+ Fam | 1300+ SQL Problems Solved ➜ (𝑭𝑹𝑬𝑬) Teaching Interview SQL shortcuts | Ranked #1 in SQL & Data Engineer Hackathons | Data Engineer | Data & AI Creator\n4mo •\nI spent 12 months learning PySpark ETL the hard way - so you don’t have to.\nThese are the 33 Spark commands I wish I knew on Day 1.\n(🔖Save this. You’ll thank yourself later.)\n𝐓𝐡𝐞 𝐩𝐫𝐨𝐛𝐥𝐞𝐦:\nYou know SQL and Pandas.\nBut production data = terabytes.\nSQL can't scale.\nPandas runs out of memory.\nPySpark? Built for this.\n𝐓𝐨𝐩 𝟓 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 𝐩𝐚𝐭𝐭𝐞𝐫𝐧𝐬 𝐭𝐡𝐚𝐭 𝐦𝐚𝐭𝐭𝐞𝐫:\n1️⃣ 𝐖𝐢𝐧𝐝𝐨𝐰 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬\nRunning totals without self-joins.\nOne line. Distributed automatically.\n2️⃣ 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐉𝐨𝐢𝐧𝐬\nSmall table + large table?\nbroadcast(df) = 10x faster joins.\n3️⃣ 𝐏𝐚𝐫𝐭𝐢𝐭𝐢𝐨𝐧𝐢𝐧𝐠 𝐃𝐚𝐭𝐚\n.partitionBy('date') for storage.\nQuery only what you need.\n4️⃣ 𝐂𝐚𝐜𝐡𝐢𝐧𝐠\ndf.cache() reused DataFrames.\nNo re-computation. Massive speedup.\n5️⃣ 𝐔𝐃𝐅𝐬 (𝐔𝐬𝐞𝐫-𝐃𝐞𝐟𝐢𝐧𝐞𝐝 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬)\nCustom logic? Write once. Apply everywhere.\n𝐓𝐡𝐞 𝐛𝐫𝐮𝐭𝐚𝐥 𝐭𝐫𝐮𝐭𝐡:\nPandas: Single machine. Gigabytes max.\nPySpark: Distributed. Petabytes scale.\nJunior move: .apply() on Pandas\nSenior move: .transform() on PySpark\n𝐖𝐡𝐚𝐭'𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐜𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭:\n📌 Data Extraction (CSV, JSON, Parquet, JDBC)\n📌 Transformations (groupBy, join, window functions)\n📌 Missing values & data cleaning\n📌 Performance tuning (cache, broadcast, repartition)\n📌 Advanced SQL in PySpark\n📌 Stream processing (Kafka integration)\n📌 ML pipelines with MLlib\n📌 Cloud integration (S3, Azure, GCP)\n📌 Security & compliance patterns\n33 patterns total.\nFrom beginner to production-ready.\n𝐖𝐡𝐲 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 > 𝐏𝐚𝐧𝐝𝐚𝐬:\n✅ Handles terabytes (Pandas crashes at GB)\n✅ Distributed automatically (no code changes)\n✅ Lazy evaluation (optimizes before running)\n✅ SQL + Python (best of both worlds)\nMost Data Engineers hit this wall:\nPandas works locally.\nFails in production.\nPySpark solves this.\nWhich PySpark pattern do you struggle with most?\n♻️ Repost this cheat sheet to your network as well 🤝\n🔔 Hit the Bell, here, [ Anandnarayanan S ] to not miss more cheat sheets.\n33 PySpark commands you must MASTER!.pdf",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7464513217633882112_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4316b2a481bd929a",
+    "saved_date": "2026-10-01T23:07:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7464513217633882112",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7464513217633882112_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

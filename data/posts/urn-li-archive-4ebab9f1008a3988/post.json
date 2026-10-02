@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-4ebab9f1008a3988",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.881478+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:27:42Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "My Data engineer Role Interview Experience with Techmahindra (Round -1)\n\n 1. Explain your current project and your specific role in it.\n 2. What is the difference between ROW_NUMBER, RANK, DENSE_RANK, LAG, and LEAD functions in SQL?\n 3. What is the difference between repartition and coalesce in Spark?\n 4. What is the difference between caching and persisting in Spark?\n 5. What is Unity Catalog in Databricks and how does it help in data governance?\n 6. What is AQT (Advanced Query Tool), and how is it used?\n 7. What is normalization and denormalization in databases?\n 8. Explain Spark optimization techniques. (broadcasting)\n 9. What is the difference between wide and narrow transformations in Spark?\n 10. What is the difference between partitioning and bucketing in Spark?\n 11. How would you decide the cluster configuration if you are processing 100 GB of data?\n 12. Write code to reverse a string without using a built-in function.\n 13. Explain the Parquet file format and its advantages.\n 14. Write a SQL query to find the second highest salary from the employee table.\n\nDuration - 40 mins\nLevel - Easy&Moderate\n\nI hope this will help someone👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4ebab9f1008a3988",
+    "saved_date": "2026-10-01T23:27:42Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

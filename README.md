@@ -24,6 +24,11 @@ static wiki               posts · topics · concepts · technologies ·
 GitHub Pages
 ```
 
+A local saved-post archive enters at the second step, not the first.
+`linkedin-archive` reads files already on the machine and writes them
+out in the form `SavedItemsSource` reads, so there is one ingestion
+path, one manifest and one set of post models rather than two of each.
+
 Every source implements one contract in
 [`src/ingestion/sources/base.py`](src/ingestion/sources/base.py), so the
 pipeline never depends on a source being LinkedIn. Adding a source means
@@ -40,7 +45,14 @@ pipeline testable and keeps it working when a web interface changes.
 python -m src.pipeline                    # discover → enrich → aggregate → site
 python -m src.pipeline --only enrich      # one stage
 python -m src.pipeline --force-enrich     # re-enrich everything
+python -m src.pipeline --jobs 6           # six posts at a time
 ```
+
+`--jobs` runs several posts at once. Each post is already its own
+worker result and CI already runs one job per post, so the work is
+independent; this applies the same fan-out locally. One is the default,
+because a bound nobody asked for is a surprise. With several hundred
+posts the difference is the difference between hours and minutes.
 
 Output goes under `build/`, which is git-ignored, so nothing in this
 command writes into the committed repository. Enrichment is the only
@@ -52,6 +64,27 @@ content it describes, so a post whose text and media have not changed
 keeps the analysis it has and the model is not called again. Editing a
 post, or changing the enrichment contract, invalidates exactly the
 results that no longer apply.
+
+### How the cloud pipeline batches
+
+GitHub allows a matrix of at most **256 jobs per run**, so a local
+archive — which took this repository from seven posts to nearly five
+hundred — could not be enriched one job per post. The workflow
+therefore groups posts into batches of 25 and gives each job a whole
+batch. The job count is a function of the batch size rather than of
+the post count, which is what lets the workflow keep working as
+material is added.
+
+One post failing still costs one post: every post in a batch is
+attempted, the failures are named, and the results that did land are
+uploaded regardless, so aggregation reports the shortfall instead of
+nothing at all. Aggregation compares the count it received against the
+count discovered and fails loudly when they differ.
+
+Set `WORKER_BATCH_SIZE` as a repository variable to change the batch
+size. The default is 25. If a repository ever grows past the limit
+again, the workflow refuses to start and says what to raise it to,
+rather than being cancelled without explanation.
 
 ## Pipeline
 
@@ -436,6 +469,237 @@ to its post and back to the original source. It is one page rather than
 one per item, because a saved list runs to hundreds of links and most of
 them never get a capture — a link with nothing behind it has no page
 worth reading, and it stays in your drop zone where you can act on it.
+
+## A Local LinkedIn Archive
+
+If you already have a saved-posts archive on this machine — a folder
+holding `posts_archive.json` and a `media/` directory — this project can
+read it. It writes the content out in the form the [Saved
+Items](#saved-items) importer already reads, and everything downstream
+is the same pipeline: same models, same enrichment, same aggregation,
+same wiki, same search.
+
+```bash
+python -m src.ingestion.collect_cli linkedin-archive \
+    --input "C:\path\to\linkedin_saved_archive" \
+    --import
+```
+
+Then enrich and build, as usual:
+
+```bash
+python -m src.pipeline --jobs 6
+```
+
+### What this is, and what it is not
+
+It **reads local files**: a JSON list and a folder of already-downloaded
+images. It opens no browser, drives no automation, reads no credential,
+reads no cookie jar, and makes no network request of any kind. The URLs
+inside the archive are kept as provenance and are never treated as
+instructions to fetch something.
+
+The archive's own `chrome_session/` directory is named and skipped. A
+browser session is a credential wearing a different shape, and a reader
+should not have to know that to avoid it.
+
+The archive is treated as read-only input. Nothing in this project opens
+it for writing, and media is hard-linked into the working drop zone
+rather than copied, so the archive stays the single copy of the original
+bytes.
+
+### The format it reads
+
+```
+linkedin_saved_archive/
+├── posts_archive.json
+├── media/
+│   └── ...
+└── chrome_session/          # present or not; never opened
+```
+
+A list of records. Only `post_id` is required; everything else is read
+if it is there and ignored if it is not:
+
+| Field | What it is used for |
+|---|---|
+| `post_id` | the archive's own identifier, kept as provenance |
+| `permalink` | the LinkedIn link, when the archive has one |
+| `text` | the post body, stored exactly as recorded |
+| `author.name` / `.profile_url` / `.headline` | attribution |
+| `scraped_at` | when the archive captured it |
+| `relative_time` | the original relative form, kept verbatim |
+| `media.saved_files` | names, resolved against `media/` |
+| `media.original_urls` | provenance only; never fetched |
+
+A record with no `permalink` is still imported. More than a third of a
+real archive has none, and there is nothing in the media filenames or
+media URLs that would recover it. Those posts are identified by the
+archive's own `post_id` under a separate `urn:li:archive:` namespace,
+and their pages render **no source link** rather than a link that goes
+nowhere.
+
+### What the report says
+
+Every number below is counted off the archive as it was found. Nothing
+is expected, nothing is assumed, and none of these figures is what the
+command will print for a different archive. This is one real run:
+
+```
+Read 485 record(s) from C:\path\to\linkedin_saved_archive
+  valid 485   unreadable 0   repeated content 2
+  media 312 file(s), 23,125,048 bytes, 0 unreadable
+  chrome_session/ is present and was not opened.
+
+LinkedIn Archive
+----------------
+Records
+-------
+Total records                    485
+Valid records                    485
+Invalid records                      0
+Duplicate records                   2
+Unique records                   483
+
+With a permalink                 315
+With no permalink                170
+With an author name              168
+With no text                       0
+
+Media
+-----
+Records with media               312
+Records without media            173
+Records missing a file             0
+
+Files in the archive             312
+Total bytes                  23,125,048
+Images                           312
+Named for a different type        41
+Identical to another file         21
+```
+
+Every number is counted off the archive as read. A section with nothing
+in it says zero rather than being left out.
+
+`Named for a different type` is worth reading rather than skipping: a
+real archive named every asset `.jpg` and a third of them are PNG or
+GIF. The importer detects the format from the bytes, keeps the name the
+record refers to, and says so — a reader told a file is a JPEG and
+handed a PNG has been told something false.
+
+### One bad record costs one record
+
+Every record is read inside its own isolation. A malformed row, an
+unreadable file, a missing permalink or a media name that points
+nowhere is recorded against that record and the rest continue. A
+`post_id` that is missing is refused rather than given a synthetic one,
+because a record the pipeline cannot name is one it will import again
+on the next run.
+
+### Duplicates
+
+Two captures of one post would become two posts, so whole-text
+repetition is collapsed. The digest covers the *whole* text: a prefix
+fingerprint was tried first and folded together two posts that agree
+for a few hundred characters and diverge afterwards, which is worse
+than reporting a duplicate that is not one.
+
+The surviving record is chosen by what is least costly to lose — a
+permalink beats none, media beats none, then the longer text, then the
+identifier. The record that lost is **not deleted**: it stays in the
+archive and in the report, and the surviving record names it.
+
+Media that is byte-identical across posts is detected and reported
+rather than deduplicated away, because each post's media travels with
+that post and a shared file would mean one disappearing when another is
+removed.
+
+### Re-running it
+
+Re-running is cheap and safe. A prepared capture is left alone when its
+text and its media digests are unchanged, and the import reports
+`Already prepared` for each one. Change a post's text, or replace a
+file under the same name, and that one post is re-prepared and
+re-imported. A metadata change alone — a new capture timestamp, say —
+re-prepares nothing, because there is nothing to re-read.
+
+The whole thing is resumable: an interrupted run leaves what it
+finished, and the next run does the rest.
+
+### What it will not do
+
+- **It will not fetch anything.** The URLs in the archive are
+  provenance, never a download list.
+- **It will not open a browser** or use the archive's session.
+- **It will not read a credential**, a cookie, or the environment.
+- **It will not invent a URL** for a post the archive has none for.
+- **It will not rewrite a post's text.** It is stored as recorded.
+- **It will not let a record reach outside the media folder.** A
+  `..` segment, an absolute path, or a symbolic link is refused and
+  reported, using only the filename.
+- **It will not run anything it reads.** An SVG carrying a script is
+  kept as a file and never executed.
+
+### The command
+
+```bash
+python -m src.ingestion.collect_cli linkedin-archive \
+    --input "C:\path\to\linkedin_saved_archive"     # required
+    [--out data/incoming/linkedin-archive]            # the drop zone
+    [--import]                                       # import as well
+    [--include-duplicates]                           # keep repeats
+    [--report FILE]                                  # JSON report
+    [--posts-root DIR]                               # where posts land
+    [--json] [--debug]
+```
+
+`--input` has no default. A path this project guessed at is a path this
+project should not be reading.
+
+Without `--import` the drop zone is written and nothing else happens,
+so you can read the report first and decide:
+
+```bash
+python -m src.ingestion.collect_cli linkedin-archive --input "..." \
+    --report archive-report.json
+
+python -m src.ingestion.collect_cli saved-items-validate \
+    --bundle-root data/incoming/linkedin-archive
+
+python -m src.ingestion.collect_cli saved-items \
+    --bundle-root data/incoming/linkedin-archive
+```
+
+Once the drop zone exists it is an ordinary saved-items inbox, so
+`--plan`, `--dry-run` and `saved-items-status` all work on it.
+
+An inbox has one contract: every supported file in it is a candidate
+list. The importer writes a manifest and capture folders and nothing
+else, because a side-car JSON beside the manifest is read as a list of
+rows with no URL and every saved-items command then reports it. The
+provenance it would have carried is already in the files the reader
+understands — every row has an archive-namespaced `Source ID`, and every
+`capture.json` names the archive post it came from — and the counts are
+in the import report.
+
+```bash
+python -m src.ingestion.collect_cli saved-items-validate \
+    --bundle-root data/incoming/linkedin-archive
+```
+
+### Its modules
+
+| Module | Responsibility |
+|---|---|
+| `identity.py` | source ids, including for records with no permalink |
+| `archive.py` | reading, validation, the media index, per-record isolation |
+| `prepare.py` | writing the drop zone the existing importer reads |
+| `report.py` | the numbers, as text or JSON |
+
+The archive is not committed, and neither is its media. The drop zone
+lives under `data/incoming/`, which is git-ignored, and the posts it
+produces are committed like any other post.
 
 ## Collection
 
@@ -1030,7 +1294,8 @@ Its modules:
 | `src/ingestion/post_loader.py` | reading a post for the worker |
 | `src/ingestion/cli.py` | the command line above |
 | `src/ingestion/saved_items/` | saved-list import: URL identity, capture contract, bundle matching, the manifest |
-| `src/ingestion/collect_cli.py` | `saved-items`, `saved-items-init`, `saved-items-status` and `saved-items-validate` |
+| `src/ingestion/linkedin_archive/` | reading a local saved-post archive, and writing it out as a saved-items drop zone |
+| `src/ingestion/collect_cli.py` | `saved-items`, `saved-items-init`, `saved-items-status`, `saved-items-validate` and `linkedin-archive` |
 | `src/ai/grounding.py` | checking generated questions against the post they came from |
 | `src/wiki/saved_items.py` | the Saved Items page |
 

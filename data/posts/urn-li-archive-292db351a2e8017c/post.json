@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-292db351a2e8017c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.372403+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:24:40Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗣𝗪𝗖 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲 (𝗗𝗮𝘁𝗮 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫) ⭐→\n\nThe whole interview process had 3 rounds of 1 hour each.\n\n🔸 The first round was an extensive discussion about the projects I was handling and a few coding questions on SQL & Python. \n\nThere were questions like the following: \n→ Optimisation techniques used in projects; Issues faced in the project; Hadoop questions.\n\n🔸 After clearing this round, I moved on to the next round, which was a Case-Study based round. \n\nI was asked scenario-based questions & the interviewer asked multiple questions on Spark, like:\n→ Spark job process; Optimizations of spark; Sqoop interview questions.\n \nAfter this, I was asked a few Coding questions & SQL coding questions, which I successfully answered.\n\n🔸 Lastly, there was a Managerial Round where I was asked a lot of technical and advanced questions like:\n→ Architecture of spark, hive, Hadoop; Overview of MapReduce job process; Joins to use in spark; Broadcast join & lastly Different joins available.\n\n*React ❤️ for more Interview tips*",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:292db351a2e8017c",
+    "saved_date": "2026-10-01T23:24:40Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-b642d369d3208200",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347836932237729792",
+    "captured_at": "2026-10-02T00:15:50.903639+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:12:50Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗦𝗤𝗟 𝗝𝗼𝗶𝗻𝘀 𝗗𝗲𝗺𝘆𝘀𝘁𝗶𝗳𝗶𝗲𝗱: 𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗬𝗼𝘂𝗿 𝗗𝗮𝘁𝗮 𝗟𝗶𝗸𝗲 𝗮 𝗣𝗿𝗼\n\nEver felt overwhelmed by SQL joins? You’re not alone. But they don’t have to be a mystery! Here’s your quick-start guide to the most common joins and when to use them:\n\n1️⃣ 𝗜𝗡𝗡𝗘𝗥 𝗝𝗢𝗜𝗡: Finds matching rows in both tables.\n🛠 Example: Identify customers who made purchases.\n\n2️⃣ 𝗟𝗘𝗙𝗧 𝗝𝗢𝗜𝗡: Returns all rows from the left table, with matches from the right.\n🛠 Example: List all customers, even those without orders.\n\n3️⃣ 𝗥𝗜𝗚𝗛𝗧 𝗝𝗢𝗜𝗡: Similar to LEFT JOIN but focuses on the right table.\n🛠 Example: Display all orders, even if some customers are missing.\n\n4️⃣ 𝗙𝗨𝗟𝗟 𝗢𝗨𝗧𝗘𝗥 𝗝𝗢𝗜𝗡: Combines all rows from both tables, filling gaps with NULL.\n🛠 Example: Pinpoint unmatched records between tables.\n\n5️⃣ 𝗖𝗥𝗢𝗦𝗦 𝗝𝗢𝗜𝗡: Matches every row in one table with every row in another.\n🛠 Example: Generate all possible product combinations.\n\n6️⃣ 𝗦𝗘𝗟𝗙 𝗝𝗢𝗜𝗡: When a table joins itself.\n🛠 Example: Map employee-manager relationships.\n\n🔑 Pro Tips for SQL Efficiency:\n👉 Index your join columns for faster queries.\n👉 Use subqueries or CTEs to simplify complex joins.\n👉 Analyze execution plans to optimize performance.\n\n🎓 Want to Learn More?\nCheck out Ankit Bansal's YouTube channel for bite-sized SQL tutorials.\n\nJoin my channels for more such job openings and resources:\n𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦: https://lnkd.in/gg2nGrSc\n𝗪𝗵𝗮𝘁𝘀𝗮𝗽𝗽: https://lnkd.in/g83E7yt8\n𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺: https://lnkd.in/gg4uym3s\n\nCheck out my curated resources for your ultimate job preparation\n🔹️DS/ML Resume Template: https://lnkd.in/gpa8d-H7\n🔹️Data Science Roadmap & Blueprint: https://lnkd.in/gjX6sCju\n🔹️Data Engineering Interview Prep. Kit & Sol.: https://lnkd.in/gf9YDq_n\n🔹️Data Science Interview Prep. Kit + Solution: https://lnkd.in/g3ZyPb3E\n\n#sql #data #interview #fresher",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347836932237729792_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b642d369d3208200",
+    "saved_date": "2026-10-01T23:12:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347836932237729792",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347836932237729792_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7347836932237729792_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

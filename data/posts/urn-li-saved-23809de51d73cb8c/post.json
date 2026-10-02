@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-23809de51d73cb8c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341321351242125316",
+    "captured_at": "2026-10-02T00:15:45.565196+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:17:08Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐌𝐨𝐬𝐭 𝐀𝐬𝐤𝐞𝐝 𝐒𝐩𝐚𝐫𝐤 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\n𝐇𝐨𝐰 𝐝𝐨𝐞𝐬 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐡𝐚𝐬𝐡 𝐣𝐨𝐢𝐧 𝐰𝐨𝐫𝐤?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n𝗛𝗮𝘀𝗵 𝗝𝗼𝗶𝗻 𝗮𝗹𝗴𝗼𝗿𝗶𝘁𝗵𝗺:\nHash Join is performed by first creating a Hash Table based on the join key of the smaller dataset and then looping over the larger table to match the hashed join key values. Rows with the same hash value are considered potential matches. The actual join operation is performed on the matching rows, producing the final result. So, this is only supported for ‘=’ join.\n\n\n𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐇𝐚𝐬𝐡 𝐉𝐨𝐢𝐧: In broadcast hash join, copy of one of the join relations are being sent to all the worker nodes and it saves shuffling cost. Spark uses this join strategy when one of the datasets being joined is smaller than a certain size threshold, which is set by default to 10 megabytes. This threshold is determined by a Spark property called ‘spark.sql.autoBroadcastJoinThreshold’, and it can be configured based on specific requirements and has a max limit of 8GB. In simple terms, when the size of one dataset in a join operation is smaller than the specified threshold, Spark automatically chooses a more optimized join strategy for better performance.\n\nFactors:\na. The dataset being broadcasted must fit entirely into the memory of each executor and the driver. The driver initiates the data transfer process.\nb. Only for “=” as Hash Join algorithm is used \nc. All join types are supported other than Full outer join.\n \n\n\n👍Like this post.\n♻ Feel free to re-share this post if you find it helpful.\n#BigData #PySpark #SQL #DataEngineering #Learn #Join\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341321351242125316_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:23809de51d73cb8c",
+    "saved_date": "2026-10-01T23:17:08Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341321351242125316",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341321351242125316_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

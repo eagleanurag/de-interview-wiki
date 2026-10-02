@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-408381d21a798c90",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339690591162716161",
+    "captured_at": "2026-10-02T00:15:46.945732+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:55Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "1yr •\n𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 - 𝟲 𝗦𝘁𝗲𝗽𝘀 𝘁𝗼 𝗜𝗺𝗽𝗿𝗲𝘀𝘀 𝗬𝗼𝘂𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝗲𝗿\n(Link for putting this into action at the end of the post)\n😬 Most candidates aren't even sure where to begin when faced with a System Design problem.\n🤔 What steps should you take to ensure maximum success?\nHere is a step-by-step roadmap guaranteed to impress your interviewer 💪\n𝟭) 𝗜𝗱𝗲𝗻𝘁𝗶𝗳𝘆 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝗮𝗹 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁𝘀\nThis part should last only take a few minutes.\n🔶 Which features are already covered by the existing services\nor APIs?\n🔶 Which features need to be built?\n🔶 Cover only the core, not every requirement.\nWhen designing Twitter, we need to be able to view feed, post tweets, like tweets etc.\n𝟮) 𝗡𝗼𝗻-𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝗮𝗹 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁𝘀\n🔶 Again, this part should take a few minutes.\n🔶 Think about what the system should do to support the functional requirements.\nDiscuss the following:\n🔶 Scalability\n🔶 Availability\n🔶 Reliability\n🔶 Latency\n🔶 Efficiency\n🔶 Consistency\n♦️ Privacy (Special)\n𝟯) 𝗥𝗲𝘀𝗼𝘂𝗿𝗰𝗲 𝗘𝘀𝘁𝗶𝗺𝗮𝘁𝗶𝗼𝗻 (𝗢𝗽𝘁𝗶𝗼𝗻𝗮𝗹)\nMore common in product design questions like ride-sharing apps or a social media platform.\nThink about:\n🔶 How many daily active users do you need to support?\n🔶 How long should the data be stored (i.e. data retention)?\n🔶 Queries per second, ongoing connections, throughput, storage requirements.\n🔶 Database and Queries per second limitations.\n𝟰) 𝗖𝗼𝗿𝗲 𝗘𝗻𝘁𝗶𝘁𝗶𝗲𝘀 𝗮𝗻𝗱 𝗔𝗣𝗜 𝗗𝗲𝘀𝗶𝗴𝗻\n🔶 Core entities = nouns in the functional requirements, e.g. likes, posts, comments, and users\n🔶 API = contract between service and the end users. These are verbs in the requirements like GET /books or POST /books.\n✅ Keep the API related to functional requirements.\n✅ Keep it simple - one endpoint per functional requirement.\n✅ If there is bidirectional communication, discuss the technologies\nthat facilitate this.\n❌ Do not introduce irrelevant APIs.\n𝟱) 𝗛𝗶𝗴𝗵-𝗟𝗲𝘃𝗲𝗹 𝗗𝗲𝘀𝗶𝗴𝗻\n🔶 Bulk of the interview, it should take 15-20 minutes. Translate functional and non-functional requirements into a diagram.\n✅ Main components interacting with one another.\n✅ Data flow - how does the data move through the system?\n✅ Traffic pattern - how does the system handle varying levels of patterns?\n❌ Do not dive into specific technologies.\n❌ Do not overemphasize buzzwords.\n❌ Avoid adding elements like authentication in this diagram.\n𝟲) 𝗗𝗲𝘁𝗮𝗶𝗹𝗲𝗱 𝗗𝗲𝘀𝗶𝗴𝗻\n✅ Open-ended and relies on interaction with the interviewer.\n✅ Identify parts of the components that could lead to scalability problems and how to handle them.\n✅ Non-functional requirements play a key role in making design decisions here.\n✅ Focus on trade-offs like scalability, latency and consistency.\n---\nStart crushing your System Design Interviews today -> https://lnkd.in/eh2Rqvmf\n6 Steps to Impress Your System Design Interviewer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339690591162716161_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:408381d21a798c90",
+    "saved_date": "2026-10-01T23:11:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339690591162716161",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339690591162716161_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7339690591162716161_slide_0.jpg is listed more than once in this record and was counted once; the archive marked this as multi-slide but supplied 1 distinct file(s), so the remaining slides were not collected; the archive counted 2 media item(s) and 1 were usable",
+    "metadata_only": false
+  }
+}

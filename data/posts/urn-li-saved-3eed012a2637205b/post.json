@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-3eed012a2637205b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347921644906082306",
+    "captured_at": "2026-10-02T00:15:46.908581+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:08Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nGen AI Databricks Engineer\n1yr •\nBefore your next Snowflake Interview,Make sure you have watched these videos.\n1- Virtual warehouse & How multi cluster works?\nhttps://lnkd.in/dxmVJcXJ\n2- Stages in Snowflake and their usages.\nhttps://lnkd.in/gaUkAQFH\n3- Bata Data ingestion with key parameters.\nhttps://lnkd.in/dCwjqcdN\n4-Load Data from S3 to Snowflake.\nhttps://lnkd.in/dGx28Cjh\n5- Continuous batch load using Snowpipe\nhttps://lnkd.in/dtwuVhXS\n6- How to perform Data recovery using Snowflake Time travel?\nhttps://lnkd.in/g9eeZ5-4\n7- Zero copy clone\nhttps://lnkd.in/gsVfxYxR\n8- How data get stored in Storage layer and optimize by Clustering?\nhttps://lnkd.in/gmcMZFZw\n9-Mastering Role Base access control\nhttps://lnkd.in/gWXHSQJ7\n10- SCD type 2 implementation using Task & Streams\nhttps://lnkd.in/gUSWBemz\nCredits to Vishal Kaushal sir for such an amazing collection\n…see more\n#5 Snowflake Virtual warehouse\nyoutube.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347921644906082306_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3eed012a2637205b",
+    "saved_date": "2026-10-01T23:12:08Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347921644906082306",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347921644906082306_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

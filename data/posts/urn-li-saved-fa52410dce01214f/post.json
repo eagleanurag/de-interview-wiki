@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-fa52410dce01214f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7359647311267864578",
+    "captured_at": "2026-10-02T00:15:53.514086+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:09:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Abhirup Pal actually brought up an interesting scenario related to Databricks ALL Purpose Compute and Serverless clusters how they behave differently with respect to casting the columns.\n\n\"Turns out Serverless have Stricter Type casting rules or lacks certain implicit conversions available in All Purpose/Job Cluster Environments.\"\n\nActually he was kind enough to give me an EXAMPLE as well to try it out: Below and in the Screenshot\n\ndata = [\n (\"123\",), # valid\n (\"00456\",), # valid with leading zeros\n (\"abc\",), # invalid\n (\"12.34\",), # invalid for BIGINT\n (\"\",), # empty string\n (None,), # null value\n]\nSo, what do you think the default behavior of spark should be?\n\n1) Should it fail the casting altogether from String to Bigint, and float to bigint?\n2) Should it convert float to integer, and have NULLS for others?\n3) Should it convert float to NULL as well?\n\n\nAll Purpose Compute used : 16.2 DBR\nServerless: Both Version 2,3\n\nEDiT: Sergiibmemtioned the reason related to ansi sql on by default in serverless. \n\nThe question now why it’s off in classic compute and on in serverless?\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7359647311267864578_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fa52410dce01214f",
+    "saved_date": "2026-10-01T23:09:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7359647311267864578",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7359647311267864578_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

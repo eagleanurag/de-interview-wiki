@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-8cd579c259960c84",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7307022837305729025",
+    "captured_at": "2026-10-02T00:15:49.318578+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:33:04Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\nTop 50 Databricks Terms You Need to Know for Data Engineering! 🚀\nDatabricks is a cloud-based platform that unifies data engineering, machine learning, and analytics, empowering teams to work collaboratively and efficiently. Built on Apache Spark, Databricks provides tools to manage and analyze massive datasets with ease. With features like Delta Lake for data lake management, real-time processing, and seamless cloud integration, it has become a go-to platform for modern data engineers. Whether you're optimizing Spark workloads or diving into machine learning, mastering Databricks is key to advancing your data skills!\" 📈💡\nFollow Abhishek Agrawal for more such content.\nDownload the PDF to find out how!\n🔗 Join our WhatsApp channel to stay updated on Data Engineering!\nhttps://lnkd.in/dUuscrch 📲\n#Databricks #DataEngineering #MustKnow #spark #bigdata\ndatabricks",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7307022837305729025_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8cd579c259960c84",
+    "saved_date": "2026-10-01T23:33:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7307022837305729025",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7307022837305729025_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

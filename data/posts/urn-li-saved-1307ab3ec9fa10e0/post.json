@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-1307ab3ec9fa10e0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7312742766722064385",
+    "captured_at": "2026-10-02T00:15:44.883902+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:58Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Analyst | Skilled in SQL, Power BI, Python, and Advanced Excel\n1yr •\nSQL Case Study: Analyzing Noon Food’s Performance\nOverview of the SQL Case Study\nThis case study analyzes Noon Food’s launch in Dubai, focusing on key performance metrics to assess customer acquisition, engagement, and retention. By writing complex SQL queries, we extracted valuable insights from the order data to help the business make data-driven decisions.\nBusiness Impact of the Analysis\n1) Identifying Top-Performing Outlets – Helps Noon Food recognize which cuisine types are driving the most sales, enabling better partnerships and marketing strategies.\n2) Tracking Customer Acquisition Trends – Understanding daily new customer sign-ups allows the business to measure marketing effectiveness and optimize campaigns.\n3) Customer Retention Insights – Finding users who placed only one order in Jan 2025 and didn’t return helps in crafting re-engagement strategies like targeted discounts or personalized offers.\n4) Inactive Customer Analysis – Identifying customers who were acquired through a promo but have been inactive for the last 7 days helps in refining promotional strategies to improve long-term retention.\n5) Promo-Dependent Customers – Detecting users who only order when a promo is available helps the business adjust its promotional spending and encourage organic purchases.\n6) Organic vs. Promo-Based Acquisition – Knowing what percentage of customers placed their first order without a promo code helps in assessing the impact of discounts on customer acquisition and profitability.\nThis case study strengthened my SQL skills in window functions, joins, subqueries, and conditional aggregation, helping me extract actionable business insights.\nA big thank to you Ankit Bansal Sir for the valuable content and guidance! 🙏\n…see more\nSQL_Case_Study",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7312742766722064385_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1307ab3ec9fa10e0",
+    "saved_date": "2026-10-01T23:30:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7312742766722064385",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7312742766722064385_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

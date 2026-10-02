@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-ddaef687d4e5db73",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328241397017288704",
+    "captured_at": "2026-10-02T00:15:52.630061+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:24:39Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n1yr •\n𝗪𝗵𝘆 𝗘𝘃𝗲𝗿𝘆 𝗔𝘀𝗽𝗶𝗿𝗶𝗻𝗴 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗦𝗵𝗼𝘂𝗹𝗱 𝗟𝗲𝗮𝗿𝗻 𝗣𝘆𝗦𝗽𝗮𝗿𝗸\nIf you’re working with large datasets, tools like Pandas can hit limits fast. That’s where 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 comes in—designed to scale effortlessly across big data workloads.\n𝗪𝗵𝗮𝘁 𝗶𝘀 𝗣𝘆𝗦𝗽𝗮𝗿𝗸?\nPySpark is the Python API for Apache Spark—a powerful engine for distributed data processing. It's widely used to build scalable ETL pipelines and handle millions of records efficiently.\n𝗪𝗵𝘆 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝘀 𝗮 𝗠𝘂𝘀𝘁-𝗛𝗮𝘃𝗲 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀:\n✔ Scales to handle massive datasets\n✔ Designed for distributed computing\n✔ Blends SQL with Python for flexible logic\n✔ Perfect for building end-to-end ETL pipelines\n✔ Supports integrations like Hive, Kafka, and Delta Lake\n𝗤𝘂𝗶𝗰𝗸 𝗘𝘅𝗮𝗺𝗽𝗹𝗲:\n```python\nfrom pyspark.sql import SparkSession\nspark = SparkSession.builder.appName(\"Example\").getOrCreate()\ndf = spark.read.csv(\"data.csv\", header=True, inferSchema=True)\ndf.filter(df[\"age\"] > 30).show()\n```\nWhether you're moving into big data, working with real-time systems, or building cloud-native pipelines—𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗶𝘀 𝗮 𝗴𝗮𝗺𝗲-𝗰𝗵𝗮𝗻𝗴𝗲𝗿.\n🔖 Save this for later\n🔁 Repost to help others in their data journey\n📌 Follow Aishwarya Pani for more insights into Data Engineering\n📌 Want to grow in your data journey?\n𝗟𝗲𝘁’𝘀 𝗰𝗼𝗻𝗻𝗲𝗰𝘁: https://lnkd.in/gFKyas-g\n#PySpark #DataEngineering #BigData #ETL #SparkSQL #ApacheSpark #DataPipelines\nPyspark Power Guide",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328241397017288704_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ddaef687d4e5db73",
+    "saved_date": "2026-10-01T23:24:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328241397017288704",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328241397017288704_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

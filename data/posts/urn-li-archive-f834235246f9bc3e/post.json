@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-f834235246f9bc3e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.236613+00:00",
+    "author": "Status is online",
+    "published_at": "2026-10-01T23:28:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "I swear these 10 Videos will 10X your SQL Interviewing Skills:\n\n1. Amazon SQL Interview Question\nLink: https://lnkd.in/gnWyhy3q\n\n2. Tiger Analytics SQL Interview Question\nLink: https://lnkd.in/g7DBiY6y\n\n3. Airbnb SQL Interview Question\nLink: https://lnkd.in/gNsf8DzB\n\n4. FAANG SQL Interview Question\nLink: https://lnkd.in/gnEVmjJH\n\n5. Spotify SQL Interview Question\nLink: https://lnkd.in/guGxdSbE\n\n6. IBM SQL Interview Question\nLink: https://lnkd.in/g6DUQegd\n\n7. Swiggy SQL Interview Question\nLink: https://lnkd.in/g3-sqfmT\n\n8. Infosys SQL Interview Question\nLink: https://lnkd.in/gHkmueXK\n\n9. PWC SQL Interview Question\nLink: https://lnkd.in/gsx-jVq7\n\n10. Google SQL Interview Question\nLink: https://lnkd.in/geZhzztw\n\nSpecial thanks to Ankit Bansal for creating these videos.\nFollow him to Learn and Ace your SQL Skills\n\nIf you found this useful, then please:\n👍Like\n💭Comment\n♻️Reshare\n\nP.S: I post FREE job search Tips and Resources. Connect with me and stay tuned for resources every week!\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f834235246f9bc3e",
+    "saved_date": "2026-10-01T23:28:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

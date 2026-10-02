@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-edbec9004cc98b80",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.960360+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:16:08Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Databricks asked these SQL questions in a Data Engineering interview ( 2+ YOE ) \n(Difficulty level = Intermediate)\n\n1.⁠ ⁠Write a SQL query using Delta tables to compute the cumulative revenue per day\n2.⁠ ⁠Retrieve the first and last login per user from a huge event log table\n3.⁠ ⁠Find the top 3 customers by spend in each region (use window functions)\n4.⁠ ⁠Detect duplicate records in a transactional table and delete extras safely\n5.⁠ ⁠Get users who made purchases in 3 consecutive months\n6.⁠ ⁠Identify skewed joins in SQL and propose fixes using broadcast hints\n7.⁠ ⁠Compute a 7-day moving average of product sales on Delta Lake\n8.⁠ ⁠Pivot daily sales into month-wise columns\n9.⁠ ⁠Find customers who bought products every month in a year\n10.⁠ ⁠Rank products by sales per year, resetting rank each year\n11.⁠ ⁠Find employees earning more than their department average\n12.⁠ ⁠Find the median transaction amount (no built-in median)\n13.⁠ ⁠Get all users who placed their first order in the last 30 days\n14.⁠ ⁠Compare the price change between the two dates for each product\n15.⁠ ⁠Identify customers whose first and last transactions is on the same day\n16.⁠ ⁠Calculate the percentage of returning users for each month\n17.⁠ ⁠Retrieve products that have never been sold\n18.⁠ ⁠Detect schema drift in historical Delta data snapshots\n19.⁠ ⁠Find departments where at least 2 employees have identical salaries\n20.⁠ ⁠Group users by login streaks of 3+ consecutive days\n\n#dataengineeringirl #Spark #PySpark #Dataengineer #Bigdatadeveloper #interviewQuestions\n#PySpark #BigData #DataEngineering #Spark #CareerGrowth #databricks\n \nFollow Sonu Kumar Singh for more\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:edbec9004cc98b80",
+    "saved_date": "2026-10-01T23:16:08Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

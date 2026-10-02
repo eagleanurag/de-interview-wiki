@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e2f882aaed251754",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326471551384473601",
+    "captured_at": "2026-10-02T00:15:52.729903+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:25:51Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Senior ML eng. at Paypal | SDE @ex-Microsoft | 385k+ @Linkedin| 50k+ @X| 100k+ @Instagram| Strategic Brand Advisor| Brand Marketer| Sharing insights on AI, Tech, SDE, ML, Marketing\n1yr •\n𝗔𝗰𝗲 𝗬𝗼𝘂𝗿 𝗦𝗤𝗟 𝗦𝗸𝗶𝗹𝗹𝘀 𝘄𝗶𝘁𝗵 𝗧𝗵𝗲𝘀𝗲 𝗧𝗼𝗽 50 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀!\nSQL remains the backbone of data management and analysis, making it a crucial skill for anyone entering fields like data science, analytics, or backend development. If you’re preparing for an interview or sharpening your database expertise, this is for you!\nI’ve curated the 𝘂𝗹𝘁𝗶𝗺𝗮𝘁𝗲 𝗹𝗶𝘀𝘁 𝗼𝗳 50 𝗦𝗤𝗟 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀—designed to help you master concepts and confidently tackle interview challenges.\nWhat’s included:\n✅ 𝗖𝗼𝗿𝗲 𝗳𝘂𝗻𝗱𝗮𝗺𝗲𝗻𝘁𝗮𝗹𝘀: Joins, indexes, and normalization\n✅ 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗰𝗼𝗻𝗰𝗲𝗽𝘁𝘀: Window functions, performance tuning, and more\n✅ 𝗥𝗲𝗮𝗹-𝘄𝗼𝗿𝗹𝗱 𝘀𝗰𝗲𝗻𝗮𝗿𝗶𝗼𝘀: Writing efficient queries and debugging\nWhy wait? Prepare smarter, not harder.\nGet ahead of the competition and ace your SQL interviews with these targeted questions.\nJoin My community for such amazing resources and job openings:\n𝗪𝗵𝗮𝘁𝘀𝗮𝗽𝗽: https://lnkd.in/g83E7yt8\n𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺: https://lnkd.in/gg4uym3s\n⚡Also, 𝗖𝗵𝗲𝗰𝗸 𝗼𝘂𝘁 𝗺𝘆 𝗧𝗼𝗽𝗺𝗮𝘁𝗲 𝗰𝘂𝗿𝗮𝘁𝗲𝗱 𝗗𝗦/𝗠𝗟 𝗿𝗲𝘀𝗼𝘂𝗿𝗰𝗲 and take the next step toward your dream job: https://lnkd.in/g5qU74ej\n#sql #advanced #interview #Dataanalyst #Datascientist\n…see more\nTop 50 SQL questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326471551384473601_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e2f882aaed251754",
+    "saved_date": "2026-10-01T23:25:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326471551384473601",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326471551384473601_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

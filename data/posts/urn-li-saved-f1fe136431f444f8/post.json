@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-f1fe136431f444f8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7325097644559638528",
+    "captured_at": "2026-10-02T00:15:53.230762+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:27:42Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🔥 12 Excel Functions You've Never Heard Of\nThere are countless functions in the Excel library…with many new ones popping up.\nStay ahead of the game and get familiar with these functions 👇\n\n➡️ HSTACK\n=HSTACK(array1, [array2], ...)\n\nCombines arrays horizontally - perfect when you need to merge columns from different sheets into a single array. It takes your separate columns and puts them side by side automatically.\n\n➡️ VSTACK\n=VSTACK(array1, [array2], ...)\n\nStacks your arrays on top of each other. When you have multiple data sets that need to be combined into one, VSTACK does it in one simple command.\n\n➡️ DROP\n=DROP(array, rows, [cols])\n\nRemoves specific rows from your data range. Whether it's stripping out header rows or removing trailing rows, it cleans your data instantly.\n\n➡️ CHOOSE\n=CHOOSE(index, value1, [value2], ...)\n\nPulls specific values from a list based on position. Need the third item from a range? CHOOSE(3, range) gets it done. Perfect for creating dynamic references or custom dropdown selections.\n\n➡️ EXPAND\n=EXPAND(array, rows, [cols])\n\nStretches your data to fill a specified size. It repeats values to create patterns or fill templates - essential when you need to duplicate data across multiple rows and columns.\n\n➡️ MAP\n=MAP(array, lambda)\n\nApplies a formula to every element in your array. Instead of creating helper columns, MAP processes calculations across entire ranges in one go. Perfect for bulk data transformations.\n\n➡️ GROUPBY\n=GROUPBY(array, groupBy_array, [value_array], [operation])\n\nSummarizes data based on specific criteria without pivot tables. It groups similar items together and performs calculations within those groups, giving you instant summary reports.\n\n➡️ BYCOL\n=BYCOL(array, lambda)\n\nProcesses calculations column by column. Want to sum each column separately? BYCOL handles it efficiently without multiple formulas.\n\n➡️ BYROW\n=BYROW(array, lambda)\n\nProcess entire rows of data with a single command. Perfect for calculating running totals or row-based metrics.\n\n➡️ SCAN\n=SCAN(initial_value, array, lambda)\n\nCreates running calculations across a range. It tracks cumulative totals, running averages, or any progressive calculation you need across your dataset.\n\n➡️ LAMBDA\n=LAMBDA(parameter(s), calculation)\n\nBuilds custom functions directly in Excel. No VBA needed - just write your calculation logic and reuse it anywhere in your workbook.\n\n➡️ PIVOTBY\n=PIVOTBY(values, rows, columns, [aggregate])\n\nCreates pivot-like summaries without the complexity of pivot tables. Get grouped totals and summaries with a single function, making data analysis faster and simpler.\n\n===\n\nOne function can replace hours of manual work.\n\nHave you ever used any of these functions? Let us know in the comments below 👇",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7325097644559638528_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f1fe136431f444f8",
+    "saved_date": "2026-10-01T23:27:42Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7325097644559638528",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7325097644559638528_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

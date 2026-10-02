@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-f439c2a71fa71356",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.180359+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:09:49Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Not a joke, many Data Engineers don’t fully understand the Medallion architecture or their caveats.\n\n\nHere’s a simple, crisp breakdown of the Medallion Architecture and why each layer matters:\n\n\n🔹 Bronze (Raw Ingestion)\n\n- All incoming data lands here-> logs, JSON, CSV, streaming events\n- Data stays in its original form (think Delta Lake tables)\n- Use schema-on-read to keep raw JSON/XML (no forced schema yet)\n- Partition by ingest date/hour for fast file pruning\n- Add audit columns (ingest_timestamp, source_file, batch_id) for full traceability\n\nWhy care? Bronze is your “source of truth.” You can recover, reprocess, or track every record.\n\n\n🔹 Silver (Cleansed & Curated)\n\n- Cleaned, standardized view of Bronze data\n- Enforce data types, drop nulls, fill defaults (schema-on-write)\n- Use joins and dedupe logic (window functions help remove duplicates)\n- Add data profiling and constraints (NOT NULL, CHECK) to stop bad data early\n\nWhy care? Silver gives you reliable, consistent tables for analytics, reports, and ML models.\n\n\n🔹 Gold (Business Aggregations)\n\n- Highly curated, aggregated tables or dimensional models\n- Pre-compute metrics (daily active users, revenue by region)\n- Use Slowly Changing Dimension (SCD) for customer data\n- Partition and Z-order in Delta for super-fast queries\n\n\nWhy care? Gold delivers high-performance datasets for BI tools and ML feature stores.\n\n\nKey Benefits Across Layers\n\n1. Modularity & Maintainability – Keep ingestion, cleaning, and aggregation logic separate\n2. Data Quality – Catch issues step by step\n3. Scalability – Stream and batch workloads scale on their own\n4. Governance & Lineage – Track every change with audit columns and Delta logs\n\n\nWhat else you would like to add here ?\n\n\n♻️ Found this useful? Repost it!\n➕ Follow for more daily insights on building robust data solutions.",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f439c2a71fa71356",
+    "saved_date": "2026-10-01T23:09:49Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

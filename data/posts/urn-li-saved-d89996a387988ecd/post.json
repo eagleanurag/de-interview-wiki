@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-d89996a387988ecd",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7301085983347818496",
+    "captured_at": "2026-10-02T00:15:52.257399+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:34:20Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nLead Data Engineer | Databricks & Azure Data Platform | Team of 7 | $100M Revenue Impact | 7-Eleven | Ex-Maersk | 45K+ Community\n1yr •\nTrust me as a data engineer, you can’t ignore #DSA.\nWhether you are working on a project or preparing for an interview, you must have a good grasp of DSA.\nHere is a document that will help you prepare for the same: Top 100 LeetCode DSA Interview Questions.\n♻ Feel free to re-share this post if you find it helpful.\nFollow Abhay Singh 😀\n𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝒇𝒐𝒓 1 𝒕𝒐 1 𝒈𝒖𝒊𝒅𝒂𝒏𝒄𝒆 : https://lnkd.in/g7Dewhyq\nDsa",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7301085983347818496_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d89996a387988ecd",
+    "saved_date": "2026-10-01T23:34:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7301085983347818496",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7301085983347818496_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

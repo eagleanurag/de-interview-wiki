@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e0b9556a8b00f79d",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315773551188361217",
+    "captured_at": "2026-10-02T00:15:52.651657+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:28:57Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data & AI Architect | Azure | Microsoft Fabric | Databricks | Snowflake | PySpark | Data Platform | Lakehouse | AI-Ready Data Engineering | Team Leadership.\n1yr •\n🚀#Day7: From Struggling Queries to Clean, Performant Code — The Magic of SQL Functions 🔄\nImagine writing the same logic again and again across 20+ reports.\n✅ Copy. ❌ Paste. 🤯 Modify. 😵 Debug.\nBeen there?\nThat was me — until I discovered the real power of Functions in SQL Server.\n🧠 This week, I deep-dived into:\n✅ Why SQL Functions are a game-changer\n✅ Types (Scalar, Inline TVF, Multi-Statement TVF) with simple syntax\n✅ When to use which one\n✅ Hidden performance pitfalls (especially scalar UDFs!)\n✅ Functions vs Stored Procedures — with real-world comparisons\n✅ Reusability + Maintainability best practices\n✅ 3 real-time scenarios where Functions saved my day (and my deadlines)\n🎁 I’ve packed this into a visually engaging, value-loaded PPT ready to share with your teams — and your inner geek!\n👇 Download it, use it, present it, and drop a ❤️ if it helps you!\nLet’s grow together!\n#SQLServer #DataEngineering #MicrosoftSQL #TechStorytelling #LinkedInLearning #PowerOfFunctions #CareerGrowth #CodeClean\n…see more\nSQL Functions by Raghavendra",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315773551188361217_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e0b9556a8b00f79d",
+    "saved_date": "2026-10-01T23:28:57Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315773551188361217",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315773551188361217_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

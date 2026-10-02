@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-072cf7d2f3076a57",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.854868+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:22:35Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲 - 𝗖𝗲𝗹𝗲𝗯𝗮𝗹 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆🚀\n📌 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲: 𝟯 𝗬𝗲𝗮𝗿𝘀\n🎯 𝗥𝗼𝗹𝗲: 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿\n \n🕒 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻: 60 𝗺𝗶𝗻𝘂𝘁𝗲𝘀\n👤 𝗣𝗮𝗻𝗲𝗹: 𝟭 𝗦𝗲𝗻𝗶𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿\n \n🔷𝗦𝗽𝗮𝗿𝗸, 𝗗𝗮𝘁𝗮 𝗜𝗻𝘁𝗲𝗴𝗿𝗮𝘁𝗶𝗼𝗻 & 𝗔𝗗𝗙\n✅What is Medallion Architecture in Data Lakes?\n✅In ADF, how do you ensure that the structure of a source table is copied as-is to the target?\n✅How would you read dynamic nested JSON files in Spark?\n✅How to solve the Small File Problem in Databricks?\n✅PySpark Optimization techniques you've implemented in projects?\n \n🔷𝗦𝗤𝗟\n✅CTE vs View vs Temp Table – what are the differences?\n✅What are Window functions in SQL/PySpark? List types and use-cases.\n✅What is a Cross Join? What are different types of SQL joins?\n✅Rank vs Dense Rank vs Row Number – differences and scenarios?\n✅Lead vs Lag functions and practical examples?\n✅What is Equi Join vs Non-Equi Join? \n \n🔹𝗣𝘆𝘀𝗽𝗮𝗿𝗸 𝗖𝗼𝗱𝗶𝗻𝗴 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲\n✅You’re given a file with delimiter \"|\". Perform the following in PySpark:\nRead the file\n - Drop duplicates based on id and name\n- Replace nulls with \"unknown\"\n- Write to Silver layer in Delta format, overwrite previous data\n- Client says the written data is incorrect — how would you roll back to a previous Delta version?\n \n🔷𝗦𝗤𝗟 𝗖𝗼𝗱𝗶𝗻𝗴 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲\nQ1 - Input\norderID qty amount\n1 5 100\n2 6 200\n3 7 300\n4 8 400\n \nOutput\norderID qty amount total\n1 5 100 500\n2 6 200 1200\n3 7 300 2100\n4 8 400 3200\nTotal 26 1000 26000\n \nQ2 - Input\nTbl A Tbl B\nID ID\n1 1\n2 2\n3 3\n \noutput \nA.ID B.ID\n1 2\n1 3\n2 1\n2 3\n3 1\n3 2\n \nQ3 - Given a column ID perform rank on partitioning it and write the output\nID\n1 \n1 \n2 \n2 \n3 \n3 \n \nThis interview was a good learning experience. I encountered new questions and had the opportunity to tackle multiple scenario-based problems.\n\nFeel free to drop in the comments what you were asked in your last data engineering interview - let’s help the community grow together!\n\n#DataEngineering #Azure #Databricks #PySpark #ADF #InterviewPrep #Infosys #BigData #ETL #TechCareers\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:072cf7d2f3076a57",
+    "saved_date": "2026-10-01T23:22:35Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-f62e1c8c17b8258a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.191944+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:33:10Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Don't pay for Data Engineering projects when you can get them for free.\n\nHere are 10 Data Engineering Projects to build your portfolio.\n\n1. Olympic Data Analytics using Azure\nhttps://lnkd.in/gHNyz_Bg\n\n2. Uber Data Analytics using GCP.\nhttps://lnkd.in/gqE-Y4HS\n\n3. Stock Market Real-time Data Analysis using Kafka\nhttps://lnkd.in/gknh7ZEr\n\n4. Twitter Data Pipeline using Airflow\nhttps://lnkd.in/g7YPnH7G\n\n5. Smart City End to End project using AWS\nhttps://lnkd.in/gh2eWF66\n\n6. Realtime Data Streaming using spark and Kafka\nhttps://lnkd.in/gjH2efgz\n\n7. Zillow Data Analytics - Python, ETL\nhttps://lnkd.in/gvEVZHPR\n\n8. End to end Azure Project\nhttps://lnkd.in/gCVZtNB5\n\n9. End to end project using snowlake\nhttps://lnkd.in/g96n6NbA\n\n10. Data pipeline using Data Fusion\nhttps://lnkd.in/gR5pkeRw\n\n11. End to End Industry Level Data Engineering Project (Additional)\nhttps://lnkd.in/gcpsNtnw\n\n12. Subscribe to my YouTube Channel for more projects\nhttps://lnkd.in/gV_5EFtE\n\n𝗙𝗬𝗜, 𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀\n\n𝗚𝗲𝘁 𝟭𝟬𝟬+ 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗵𝗲𝗿𝗲 -\nhttps://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE and RESHARE the post 👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f62e1c8c17b8258a",
+    "saved_date": "2026-10-01T23:33:10Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-98cbd35f26c25735",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7292198685361192960",
+    "captured_at": "2026-10-02T00:15:49.693457+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:36:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n1yr •\n🚀 Master Delta Lake & Azure Databricks Like a Pro!\nAre you working with Azure Databricks, Delta Lake, or PySpark? Here are the key concepts you need to know to optimize your data workflows:\n🔹 Unity Catalog – Simplify data governance and streamline access control.\n🔹 ACID Transactions in Delta Lake – Ensure data integrity with reliable transactions.\n🔹 External vs. Managed Delta Tables – Understand the differences and know when to use each.\n🔹 Optimization Techniques in Databricks – Improve query performance and reduce costs.\n🔹 Structured Streaming with PySpark – Efficiently process real-time data with ease.\n🔹 Delta Live Tables (ETL Pipelines) – Automate and streamline your ETL workflows for maximum efficiency.\n💡 Whether building scalable pipelines or optimizing big data workloads, mastering these concepts will take your data engineering skills to the next level!\n📢 Like | Save | Share | Follow Aishwarya Pani for career growth tips & data engineering insights!\n#Databricks #DeltaLake #BigData #DataEngineering #PySpark #Azure #ETL #CloudComputing #DataAnalytics #AI #MachineLearning #TechSkills #SQL #DataTransformation #DataGovernance #CareerGrowth #TechCommunity #DataProcessing\n…see more\nDelta Lake with Azure Databricks",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7292198685361192960_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:98cbd35f26c25735",
+    "saved_date": "2026-10-01T23:36:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7292198685361192960",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7292198685361192960_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7292198685361192960_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

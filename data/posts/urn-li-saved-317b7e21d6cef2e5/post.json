@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-317b7e21d6cef2e5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7293931585970552832",
+    "captured_at": "2026-10-02T00:15:46.242795+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:36:47Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nYou will be 100x better at PySpark..\nIf you cover these 4 key topics:\nData Processing and Transformation\n↳ RDD (Resilient Distributed Dataset) operations\n↳ DataFrame and Dataset APIs\n↳ SQL operations on DataFrames\n↳ Data cleaning and preprocessing techniques\n↳ Window functions and aggregations\nAdvanced PySpark Features\n↳ User-Defined Functions (UDFs)\n↳ Broadcast variables and accumulators\n↳ Partitioning and data distribution\n↳ Caching and persistence strategies\n↳ Optimization techniques (e.g., Catalyst optimizer)\nStreaming with PySpark\n↳ Structured Streaming basics\n↳ Windowing operations\n↳ Stateful processing\n↳ Integration with Kafka and other streaming sources\n↳ Handling late and out-of-order data\nPySpark in Production\n↳ Cluster configuration and resource management\n↳ Performance tuning and optimization\n↳ Monitoring and debugging Spark applications\n↳ Integration with data lakes and warehouses\n↳ Best practices for writing efficient PySpark code\nGet your preparation solidified with this interview questionnaire!\nIf you've read so far, do LIKE the post 👍\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\nTop 50+ Apache Spark Interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7293931585970552832_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:317b7e21d6cef2e5",
+    "saved_date": "2026-10-01T23:36:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7293931585970552832",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7293931585970552832_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

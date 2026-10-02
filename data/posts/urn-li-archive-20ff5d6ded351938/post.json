@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-20ff5d6ded351938",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.252511+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:53Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Top Real-World PySpark Scenarios (With Simple, Deep Explanations)\n\n=> If you're preparing for interviews or working on big data projects, here are the most frequently asked PySpark scenario-based questions — with easy-to-understand, real-world answers👇\n--\n--\n🔹 1. Your Spark job is running slowly. What do you do?\n👉 First, I check the Spark DAG using .explain() to understand the stages and where the shuffle is happening.\n 👉 I check if the data is skewed (e.g., some partitions are too large).\n 👉 I try to broadcast smaller tables to avoid shuffle joins.\n 👉 I also use repartition() to distribute data more evenly and cache data if reused.\n\n🔹 2. How do you handle a join that is taking a long time?\n👉 I look at the size of both tables. If one is small (<10MB), I use broadcast().\n 👉 I check for data skew — if one join key has way more rows than others, I add a \"salt\" key to spread the data.\n 👉 I use .explain() to make sure Spark is picking the best join strategy (like Broadcast or Sort Merge).\n\n🔹 3. You need to calculate a new column based on existing columns. What do you do?\n👉 I use .withColumn() like this:\ndf = df.withColumn(\"total_price\", df[\"price\"] * df[\"quantity\"])\n👉 This is a transformation and part of Spark's lazy evaluation model — nothing is executed until an action like .show() or .write() is called.\n\n🔹 4. Your job failed with an Out Of Memory (OOM) error. What steps would you take?\n👉 I would reduce the size of each partition using repartition() or coalesce()\n 👉 Avoid operations like collect() or large groupBy() on huge datasets.\n 👉 Use persist(storageLevel.DISK_ONLY) instead of memory caching if memory is tight.\n 👉 Tune Spark configs like executor. memory, executor.cores, and GC options.\n\n🔹 5. How do you efficiently read a 10GB+ CSV file in Spark?\n👉 Use .option(\"inferSchema\", True) only when needed.\n 👉 Use .repartition() after reading to avoid skew.\n 👉 If used repeatedly, cache it.\n 👉 Convert it to Parquet — a faster and compressed columnar format.\n\n🔹 6. You use the same DataFrame multiple times in your pipeline. What would you do?\n👉 I use .cache() or .persist() after the first expensive transformation.\n 👉 This avoids recomputation and speeds up the pipeline.\n\n#PySpark #DataEngineering #ApacheSpark #BigData #ETL #SparkOptimization #BroadcastJoin #SparkInterview #TechCareers #DataEngineer\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:20ff5d6ded351938",
+    "saved_date": "2026-10-01T23:12:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

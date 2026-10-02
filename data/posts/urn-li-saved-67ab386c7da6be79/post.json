@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-67ab386c7da6be79",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345000541866901504",
+    "captured_at": "2026-10-02T00:15:48.310306+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:15:18Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "✅ Verdict: SELECTED\nNTT DATA Data Engineering Interview Experience \n\n\nThe best way to learn is to learn from someone else's experience. Sharing my interview experience for those who are preparing — hope it helps!👇\n\n🔹 𝐑𝐨𝐮𝐧𝐝 1: 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐑𝐨𝐮𝐧𝐝 \n\n• Cross-questioning on my past projects\n• Hands-on coding round primarily focused on SQL and Python\n• SQL queries and core concepts — primary/foreign keys, normalization, joins, indexing\n• Python core concepts (lists, dictionaries, sets etc)\n• Core concepts of Pandas: join vs merge, series vs dataframe etc\n• Linux basics\n\n🔹 𝐑𝐨𝐮𝐧𝐝 2: 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐚𝐧𝐝 𝐌𝐚𝐧𝐚𝐠𝐞𝐫𝐢𝐚𝐥 𝐑𝐨𝐮𝐧𝐝\n\n• Deep dive into databases\n• AWS concepts (S3, RDS, MYSQL, MWAA etc)\n• Pandas operations\n• Shell scripting\n• Airflow DAGs\n• Snowflake Questions\n\n • Why NTT DATA?\n • Reason for job switch\n • Personal interests & how they influence work\n • Client-facing role mindset\n • Scenario-based behavioral questions\n\n🔹 𝐑𝐨𝐮𝐧𝐝 3: 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐑𝐨𝐮𝐧𝐝\n\n• Scalable data pipeline design\n• Handling real-time & frequent data updates\n• Scenario-based questions on Snowflake\n• Python hands-on coding\n\n🔸 𝐅𝐢𝐧𝐚𝐥 𝐒𝐭𝐞𝐩: 𝐒𝐚𝐥𝐚𝐫𝐲 𝐝𝐢𝐬𝐜𝐮𝐬𝐬𝐢𝐨𝐧 & 𝐧𝐞𝐠𝐨𝐭𝐢𝐚𝐭𝐢𝐨𝐧\n\n📌 To those preparing — focus on fundamentals, real project experience, and hands-on practice. You've got this! 💪\n#NTTDATA #DataEngineer #InterviewExperience #SQL #Python #Airflow #Snowflake #CareerUpdate #JobSearch #DataEngineering #SuccessStory\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345000541866901504_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:67ab386c7da6be79",
+    "saved_date": "2026-10-01T23:15:18Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345000541866901504",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345000541866901504_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

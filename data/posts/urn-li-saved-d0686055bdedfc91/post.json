@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-d0686055bdedfc91",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510541086562410497",
+    "captured_at": "2026-10-02T00:15:51.972440+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:06:57Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🎯This KPMG SQL question looks simple at first.\nFind new and repeat customers for every day.\nMost people jump straight into multiple CTEs.\n\n✅ Input Table:\n1)We are given an Customer_Orders Table with 4 columns(Order_ID, Customer_id, Order_date and Order_amount).\n\n\n🫴That’s where they get stuck.\nThe real challenge is doing it cleanly — without stacking CTEs and keeping the code short.\n\n🫴You need CASE with aggregates, and you have to think about the order of operations carefully.\n\n▶️𝐈 𝐬𝐡𝐚𝐫𝐞 𝐜𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐢𝐧𝐠 𝐒𝐐𝐋 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐨𝐧 𝐦𝐲 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐢𝐧 𝐚 𝐬𝐭𝐞𝐩 𝐛𝐲 𝐬𝐭𝐞𝐩 𝐛𝐫𝐞𝐚𝐤𝐝𝐨𝐰𝐧,𝐡𝐞𝐫𝐞 𝐢𝐬 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐨𝐧𝐞:\nhttps://lnkd.in/gxZt_EEd\n\n💡 Looking for a job switch,check out this Azure Databricks Engineer opportunity at Persistent!\nhttps://lnkd.in/e7EcFhta\n\n➤For more SQL and data engineering tips, please join our 2800+ community: t.me/sqljunction\n\n\nIf you’re preparing for data interviews, this one is worth practicing.\n\nHave you faced a similar “new vs repeat” type question in interviews?\n\n👇I have put both the table creation and insert statements in comments.\n📸 I have attached the input table and expected output snapshot to the post.\nThis question would allow you to learn how to use Case and aggregate function combined.\n\n#SQL #SQLInterview #KPMG #Deloitte #DataAnalyst #SQLChallenge #Big4Interviews #DataEngineer #TechInterviews #InterviewPrep #CareerInTech #DataAnalytics #DataScience #AdityaBansal #SQLJunction\n\nShoutout to other great SQL enthusiasts:\nAnkit Bansal Navya sri Kurapati🧑‍💻 Korrapati Jaswanth 🇮🇳\nLovee Kumar",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7510541086562410497_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d0686055bdedfc91",
+    "saved_date": "2026-10-01T23:06:57Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510541086562410497",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7510541086562410497_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

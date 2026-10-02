@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-3fca0890e9d2cf51",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7311391876236894208",
+    "captured_at": "2026-10-02T00:15:46.922709+00:00",
+    "author": "Kalyani V",
+    "published_at": "2026-10-01T23:26:51Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Transforming User Hobbies into Separate Rows in PySpark \n\n🔍 Problem Statement:\n Given a dataset containing users and their hobbies stored as a comma-separated string in a single column, transform the data so that each hobby is represented as a separate row for each user.\n\n💡 Input Data:\ndata = [(\"Alice\", \"Badminton,Tennis\"), (\"Bob\", \"Tennis,Cricket\"), (\"Julie\",\"Cricket,Carrom\")]\ncolumn = [\"Name\", \"Hobbies\"]\n\n🔧 Solution:\n✅ Step 1: Create a DataFrameCreate a DataFrame\n``` df = spark.createDataFrame(data, column) ```\n\n✅ Step 2: Import necessary functions\n \n```from pyspark.sql.functions import split, explode```\n\n\n✅ Step 3: Split the hobbies column by comma and explode the array\n\n```display(df.select(df.Name, explode(split(df.Hobbies,\",\"))\n.alias(\"Hobbies\")))```\n\n#pyspark #python #databricks #sparkTransformation #explode #split \n#spark #dataEngineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7311391876236894208_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3fca0890e9d2cf51",
+    "saved_date": "2026-10-01T23:26:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7311391876236894208",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7311391876236894208_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

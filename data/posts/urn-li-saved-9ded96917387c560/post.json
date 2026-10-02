@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-9ded96917387c560",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7293871440108392448",
+    "captured_at": "2026-10-02T00:15:50.033288+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:36:48Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "320K @LinkedIn | Data Engineer | Data Analytics | AWS, Azure, GCP.\n1yr •\nWalmart Data Engineering Interview Experience.\nCTC - 35+\nIf you’re targeting a Data Engineering role at a Walmart here’s a in depth PDF to understand the process better.\nLikewise, I have created the end to end processes for 100+ Companies.\nIt took me 2.5 months of consistent work to research and document these authentic experiences for you.\n𝗛𝗲𝗿𝗲 𝗶𝘀 𝗱𝗲𝘁𝗮𝗶𝗹𝗲𝗱 𝗹𝗶𝘀𝘁 𝗼𝗳 𝗰𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n1. MAANG (5)\n2. Product-Based Companies (38)\n3. Service-Based Companies (26)\n4. Data Analytics Companies (12)\n5. BFSI (5)\n6. BIG4 (5)\n7. Big Firms (9)\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗵𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗟𝗮𝘂𝗻𝗰𝗵𝗶𝗻𝗴 𝗢𝗳𝗳𝗲𝗿 -\nUse code 𝗗𝗔𝗧𝗔𝟭𝟬 𝘁𝗼 𝗴𝗲𝘁 𝟭𝟬% 𝗱𝗶𝘀𝗰𝗼𝘂𝗻𝘁 for next few users.\nIf you've read so far, do LIKE and RESHARE the post👍\nWalmart Data Engineering Interview Experience.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7293871440108392448_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9ded96917387c560",
+    "saved_date": "2026-10-01T23:36:48Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7293871440108392448",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7293871440108392448_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-bb7abed63cceeadc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7300054526030450688",
+    "captured_at": "2026-10-02T00:15:51.028247+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:34:24Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "A Redditor Who Landed a FAANG Job Spills the Ultimate Interview Hacks!\n\nStep 1: Dodging the Application Black Hole\n \nSkip the portals! ATS systems filter out most resumes. \nInstead, I reached out directly to engineers and hiring managers on LinkedIn for referrals. \nMy message was short & sharp: \n\"Hey [Name], I'm really interested in [Team/Company] and would love to apply. I have [X years] of experience in [Relevant Skill], and I believe I'd be a great fit. Would you be open to referring me?\" \nResult? Multiple referrals in a week — straight to recruiter screens, no more waiting in the void.\n\nStep 2: Studying Only What Matters \n\nForget solving 500 random LeetCode problems. \nI reverse-engineered interview patterns using Glassdoor, Blind, and LeetCode forums. \nMost companies repeat 10-15 core problems — so I focused on: \n- Top 30 questions per company (sorted by frequency) \n- Recognizing patterns, not just solutions (\"Oh, this is just a sliding window problem with a twist.\") \n- Practiced mock interviews on Pramp and with friends for real-time feedback \n\nResult? Solving questions in under 10 minutes, no brute-forcing needed.\n\nStep 3: Mastering the Behavioral Interview \n\nFAANG behavioral rounds aren’t about \"personality\" — they want structured answers. \nI prepped 5 strong stories using the STAR method (Situation, Task, Action, Result) and adapted them as needed. \nPro Tip: Always highlight impact with metrics. \n- Instead of: \"I helped optimize a backend service.\" \n- Say: \"I optimized the backend, reduced latency by 40%, and saved $500K in cloud costs.\" \n\nHack: When asked about failure, spin it into a win — \"I learned X, which led to Y success later.\"\n\n\nStep 4: Using Hiring Process Loopholes \n\nI timed my interviews so companies knew I had other offers — they moved faster. \nTargeted hiring events and systems like Amazon’s bar-raisers (they can override bad interviewers). \nBuilt a solid relationship with my recruiter — they can fast-track borderline candidates and help with negotiations.\n\n\nStep 5: Crushing Offers & Negotiations \n\nGot my first offer and used it as leverage to speed up other companies. \nPlayed it cool — companies love candidates who seem in demand. \nNegotiated hard: \n- \"I’m excited about this role, but my other offer is at $X — can you match or improve it?\" \n- \"I was hoping for a higher base/signing bonus to align with market rates.\" \n\nResult? An extra +$40K in total comp.\n\n\nThe Final Outcome \n- FAANG offer with $300K+ total comp \n- Less time wasted on pointless prep \n- Lower stress, more control over the process \n\nWork smarter, not harder. You’ve got this!\n\n#faang #google #amazon #netflix",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7300054526030450688_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:bb7abed63cceeadc",
+    "saved_date": "2026-10-01T23:34:24Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7300054526030450688",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7300054526030450688_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

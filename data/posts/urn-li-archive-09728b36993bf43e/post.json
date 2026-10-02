@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-09728b36993bf43e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.929066+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:21:43Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "5 most asked SQL Interview Questions for Data Engineer jobs.\n\n𝟭. 𝗙𝗶𝗻𝗱 𝘁𝗵𝗲 𝗦𝗲𝗰𝗼𝗻𝗱 𝗛𝗶𝗴𝗵𝗲𝘀𝘁 𝗦𝗮𝗹𝗮𝗿𝘆 𝗶𝗻 𝗮 𝗧𝗮𝗯𝗹𝗲\n\nSELECT MAX(salary) AS SecondHighestSalary\nFROM Employee\nWHERE salary < (SELECT MAX(salary) FROM Employee);\n\n𝟮 . 𝗙𝗶𝗻𝗱 𝗼𝘂𝘁 𝗲𝗺𝗽𝗹𝗼𝘆𝗲𝗲𝘀 𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗺𝗼𝗿𝗲 𝘁𝗵𝗮𝗻 𝘁𝗵𝗲𝗶𝗿 𝗺𝗮𝗻𝗮𝗴𝗲𝗿𝘀\n\nSELECT e2.name as Employee\nFROM employee e1\nINNER JOIN employee e2\nON e1.id = e2.managerID\nWHERE e1.salary < e2.salary\n\n𝟯. 𝗙𝗶𝗻𝗱 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿𝘀 𝘄𝗵𝗼 𝗻𝗲𝘃𝗲𝗿 𝗼𝗿𝗱𝗲𝗿\n\nSELECT name as Customers\nFROM Customers\nWHERE id not in (\nSELECT customerId\nFROM Orders);\n\n𝟰. 𝗗𝗲𝗹𝗲𝘁𝗲 𝗱𝘂𝗽𝗹𝗶𝗰𝗮𝘁𝗲 𝗲𝗺𝗮𝗶𝗹𝘀\n\nDELETE p1\nFROM Person p1, Person p2\nWHERE p1.Email = p2.Email AND\np1.Id > p2.Id\n\n𝟱. 𝗖𝗼𝘂𝗻𝘁 𝘁𝗵𝗲 𝗻𝘂𝗺𝗯𝗲𝗿 𝗼𝗳 𝗼𝗿𝗱𝗲𝗿𝘀 𝗽𝗹𝗮𝗰𝗲𝗱 𝗶𝗻 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝘆𝗲𝗮𝗿 𝗮𝗻𝗱 𝗺𝗼𝗻𝘁𝗵.\n\nSELECT COUNT(*) AS order_count\nFROM orders WHERE EXTRACT(YEAR_MONTH FROM order_date) = EXTRACT(YEAR_MONTH FROM CURDATE() - INTERVAL 1 MONTH);\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:09728b36993bf43e",
+    "saved_date": "2026-10-01T23:21:43Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

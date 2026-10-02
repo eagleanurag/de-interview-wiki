@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-43394c511fbb753e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7324837204147539969",
+    "captured_at": "2026-10-02T00:15:47.067576+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:27:43Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Visualizing a SQL query\n\nSQL statements are executed by the database system in several steps, including:\n- Parsing the SQL statement and checking its validity\n- Transforming the SQL into an internal representation, such as relational algebra\n- Optimizing the internal representation and creating an execution plan that utilizes index information\n- Executing the plan and returning the results\n\n-- \nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n\n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7324837204147539969_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:43394c511fbb753e",
+    "saved_date": "2026-10-01T23:27:43Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7324837204147539969",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7324837204147539969_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7324837204147539969_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

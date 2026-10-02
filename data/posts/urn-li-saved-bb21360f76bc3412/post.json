@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-bb21360f76bc3412",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7457995150087299072",
+    "captured_at": "2026-10-02T00:15:51.007388+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:08:10Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Deloitte Data Engineer Interview Questions That Can Actually Help You Crack the Role\nA lot of people prepare for Data Engineer interviews by only focusing on coding.\nBut companies like Deloitte usually test something bigger:\n👉 Problem-solving\n👉 Real-world data scenarios\n👉 Cloud understanding\n👉 SQL optimization\n👉 Communication skills\nHere are some questions candidates are commonly asked in Deloitte Data Engineer interviews 👇\n🔹 Difference between ETL and ELT?\n🔹 How would you optimize a slow SQL query?\n🔹 Explain partitioning vs indexing.\n🔹 What challenges have you faced in data pipelines?\n🔹 Difference between Star Schema and Snowflake Schema?\n🔹 How does Spark handle big data processing?\n🔹 Explain joins with real-time examples.\n🔹 How would you design a scalable data pipeline?\n🔹 What happens when pipeline execution fails?\n🔹 Experience with Azure/AWS/GCP services?\nOne thing I’ve noticed:\nInterviewers care less about textbook definitions and more about how you THINK while solving problems.\nIf you’re preparing for Data Engineer roles in 2026:\n✅ Focus on SQL deeply\n✅ Practice scenario-based questions\n✅ Learn cloud + Spark fundamentals\n✅ Build at least 2 real-world projects\nThe competition is growing fast, but so are the opportunities.\nConsistency > Motivation.\n🔥 Preparation Resources \nTrusted by 2000+ Students who cracked MNCs like TCS, EY, Capgemini, Infosys, Deloitte etc.\n📘 Data Engineer Mega Interview Pack 2026 – 1300+ Real-Time Scenario Q&As\n(Azure | ADF | Databricks | Delta Lake | PySpark | SQL | Data Warehouse)\n👉 https://lnkd.in/g-p7SCEP\n📘 Top 100 Real Data Engineer Interview Q&A (2026) | 0–4 Years\n👉 https://lnkd.in/gJkhdWFE\n📘 100 Real Data Engineer Interview Q&A (2026) | 4–8 Years\n👉 https://lnkd.in/g7qW_sHM\n📘 600+ Real Data Engineer Interview Q&A (Top Companies)\n(EY, Infosys, TCS, Dell, Wipro & more)\n👉 https://lnkd.in/gfP68fVu\nWhat’s the toughest Data Engineering interview question you’ve faced recently? 👇\n#DataEngineer #Deloitte #SQL #BigData #Azure #AWS #Spark #DataEngineering #TechJobs #InterviewPreparation #ETL #CareerGrowth #LinkedInIndia",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7457995150087299072_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:bb21360f76bc3412",
+    "saved_date": "2026-10-01T23:08:10Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7457995150087299072",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7457995150087299072_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7457995150087299072_slide_0.jpg is listed more than once in this record and was counted once; the archive marked this as multi-slide but supplied 1 distinct file(s), so the remaining slides were not collected; the archive counted 2 media item(s) and 1 were usable",
+    "metadata_only": false
+  }
+}

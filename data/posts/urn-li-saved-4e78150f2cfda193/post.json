@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-4e78150f2cfda193",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347822344066727936",
+    "captured_at": "2026-10-02T00:15:47.362947+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:49Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nMicrosoft Fabric Data Architect | Freelance Data Consultant | Azure Data Architect | Azure Data Engineer | Databricks Architect | Power BI\n1yr •\nPreparing for Your Next PySpark Interview??\nIn today’s data-driven world, knowing PySpark is more than a skill—it's a necessity for Data Engineers and Analysts! Whether you're just starting out or have years of experience, acing PySpark interviews requires not just knowledge but real-world scenario-based answers.\nWe at Nitya Cloudtech have compiled some of the most commonly asked yet tricky PySpark questions to give you that extra edge! 🔥\nHere are a few to get you started:\n🔹 What's the difference between RDDs, DataFrames, and Datasets?\n🔹 How do you optimize PySpark jobs to reduce shuffling?\n🔹 What are broadcast variables, and when would you use them?\n🔹 Explain the Catalyst Optimizer and its benefits.\nThese are not just interview questions—they are scenarios you'll face in your day-to-day work!\nWant the full list of 50+ curated PySpark interview scenarios?\nCheck it out attachment!!\n💡 Stay ahead in your Data Engineering career!\nShare this with your network and help others prepare too! 🙌\n#PySpark #DataEngineering #InterviewQuestions #Learning #CareerGrowth #NityaCloudtech\nData Engineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347822344066727936_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4e78150f2cfda193",
+    "saved_date": "2026-10-01T23:12:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347822344066727936",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347822344066727936_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

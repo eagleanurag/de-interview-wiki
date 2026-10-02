@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-1c060075d07ea83b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.181144+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:10:56Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "📌 Recently Asked – Impetus Interview for Big Data Engineer\n📍 Round 1 – Technical (Hands-on + Conceptual)\n\nJust came across these questions asked in the R1 round at Impetus for a Big Data Engineer (3–5 yrs) role:\n\n🔷 Project-Based & Real-Time Scenarios\n1️⃣ Walkthrough of your current project and workflow\n 2️⃣ What was the data source in your project?\n 3️⃣ Any production or lower-environment issue you faced and how you resolved it\n\n🔷 Apache Spark & PySpark\n4️⃣ Spark application internal process\n 5️⃣ What is Data Locality?\n 6️⃣ What is DAG (Directed Acyclic Graph) in Spark?\n 7️⃣ Number of stages in PySpark\n 8️⃣ Partitioning logic for 1GB/2GB of data\n 9️⃣ Default partitions after wide transformations\n 🔟 Handling empty partitions after shuffle\n 1️⃣1️⃣ What is Data Skew? How do you handle it?\n 1️⃣2️⃣ Salting technique in Spark\n 1️⃣3️⃣ How does coalesce() help with skew\n 1️⃣4️⃣ Broadcast joins in Spark\n 1️⃣5️⃣ Adaptive Query Execution (AQE)\n 1️⃣6️⃣ RDD vs DataFrame – Why is DataFrame faster?\n 1️⃣7️⃣ Catalyst Optimizer in Spark\n 1️⃣8️⃣ PySpark Coding Task:\n • Find product names where latest month’s sales > average of last 3 months\n 1️⃣9️⃣ SQL Equivalent:\n • Write a SQL query for the same logic\n\n🔷 Python & Problem Solving\n2️⃣0️⃣ What is a Lambda Function?\n 2️⃣1️⃣ Purpose of __init__ method\n 2️⃣2️⃣ What is a Decorator?\n 2️⃣3️⃣ What is GIL (Global Interpreter Lock)?\n 2️⃣4️⃣ What is Pickling and Unpickling in Python?\n 2️⃣5️⃣ What is use of .format() method?\n 2️⃣6️⃣ Logic: Find the first non-repeating character in a string\n\n\n✅ A great mix of real-time concepts, coding challenges, and optimization questions.\nHope this helps others preparing for Impetus or similar roles.\n\n\n\n\n#Impetus #BigDataEngineer #OpenToWork #BigDataEngineer #DataEngineering #PySpark #ApacheSpark #PythonDeveloper #SQL #Databricks #ADF #InterviewPreparation #Hiring #SparkOptimization #AzureDataEngineer #JobSearch #Recruiters #TechInterview #NowHiring #LinkedInJobs",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:1c060075d07ea83b",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

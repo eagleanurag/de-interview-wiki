@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-6366b151aa68c18b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7320835110730174465",
+    "captured_at": "2026-10-02T00:15:48.075324+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:26:55Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Top 20 AI Concepts You Should Know\n\n1 - Machine Learning: Core algorithms, statistics, and model training techniques.\n2 - Deep Learning: Hierarchical neural networks learning complex representations automatically.\n3 - Neural Networks: Layered architectures efficiently model nonlinear relationships accurately.\n4 - NLP: Techniques to process and understand natural language text.\n5 - Computer Vision: Algorithms interpreting and analyzing visual data effectively\n6 - Reinforcement Learning: Distributed traffic across multiple servers for reliability.\n7 - Generative Models: Creating new data samples using learned data.\n8 - LLM: Generates human-like text using massive pre-trained data.\n9 - Transformers: Self-attention-based architecture powering modern AI models.\n10 - Feature Engineering: Designing informative features to improve model performance significantly.\n11 - Supervised Learning: Learns useful representations without labeled data.\n12 - Bayesian Learning: Incorporate uncertainty using probabilistic model approaches.\n13 - Prompt Engineering: Crafting effective inputs to guide generative model outputs.\n14 - AI Agents: Autonomous systems that perceive, decide, and act.\n15 - Fine-Tuning Models: Customizes pre-trained models for domain-specific tasks.\n16 - Multimodal Models: Processes and generates across multiple data types like images, videos, and text.\n17 - Embeddings: Transforms input into machine-readable vector formats.\n18 - Vector Search: Finds similar items using dense vector embeddings.\n19 - Model Evaluation: Assessing predictive performance using validation techniques.\n20 - AI Infrastructure: Deploying scalable systems to support AI operations.\n\nOver to you: Which other AI concept will you add to the list?\n\n--\nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n \n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7320835110730174465_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6366b151aa68c18b",
+    "saved_date": "2026-10-01T23:26:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7320835110730174465",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7320835110730174465_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

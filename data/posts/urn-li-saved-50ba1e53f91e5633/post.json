@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-50ba1e53f91e5633",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339358389367357440",
+    "captured_at": "2026-10-02T00:15:47.475320+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:07Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Engineer 2 @Flipkart | 🎓 NIT Trichy | 🎥 Content Creator | SQL • Python • Cloud • Databricks • PySpark • Big Data • AI | 🔥 30K+ Community | ⚡ Upskilling Engineers & Helping Brands Go Viral\n1yr •\n🚀 Day 11 of #60DaysOfSpark\n🧱 Strengthening Foundations with Extensions & Recap\nToday I focused on reinforcing key PySpark concepts with:\n✅ SQL-style expressions via selectExpr()\n✅ groupBy() using single & multiple columns\n✅ agg() with multiple aggregations\n✅ Real-world use of groupBy().agg() patterns\nAlso created slides summarizing at the end to revisit and reflect before moving into advanced Spark concepts tomorrow (Window Functions + Pivoting 🔄).\nLet’s build momentum, one transformation at a time. 🚀\n🔄 Feel free to like, comment, or share this with others exploring PySpark!\nPyspark playlist by Subham Khandelwal\nhttps://lnkd.in/gscSM8YE\nDay 10- Dataframe Operation part -2\nhttps://lnkd.in/gPDfkPxx\nDay 12 - Window Functions in Spark\nhttps://lnkd.in/ghGCsAwb\n#PySpark #ApacheSpark #DataEngineering #SparkDataFrame #ETL #BigData #60DaysOfSpark #LearningJourney\n…see more\ngroupBy and Aggregation in Pyspark",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339358389367357440_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:50ba1e53f91e5633",
+    "saved_date": "2026-10-01T23:19:07Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339358389367357440",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339358389367357440_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

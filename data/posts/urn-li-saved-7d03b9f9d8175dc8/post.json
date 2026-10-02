@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-7d03b9f9d8175dc8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339514243995619328",
+    "captured_at": "2026-10-02T00:15:48.582790+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:19:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "📊 Preparing for a SQL Interview? Here's a Visual Shortcut to Your Success! 🔍💼\n\nSQL continues to be one of the most in-demand skills across Data Engineering, Data Science, Analytics, and Backend Development roles. But what if you had a clean, clear visual to help you review the most frequently asked questions before your next big interview?\n\nThat's exactly why I created this SQL Interview Cheatsheet — a visual summary of the 20 most commonly asked SQL questions, split across:\n\n🔹 Basic Concepts – From JOINs, UNION, subqueries, aggregate functions, to primary keys\n 🔹 Intermediate to Advanced Topics – Like window functions, CTEs, RANK(), indexing, and query optimization\n\n🎯 Why This Cheatsheet Helps:\n✅ Fast recall of important interview concepts\n ✅ Perfect for last-minute revision or daily practice\n ✅ Great tool for both beginners and seasoned professionals\n\nWhether you're actively interviewing or just want to sharpen your SQL chops — this guide will help you focus on what really matters.\n\nLet’s keep building, learning, and landing those dream roles 🚀\n#SQL #InterviewPrep #DataEngineering #DataScience #AnalyticsJobs #SQLInterview #LearningSQL #TechInterviews #100DaysOfSQL #MonuKumar #LinkedInLearning #BigData #BackendDevelopment #SQLCheatSheet\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339514243995619328_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7d03b9f9d8175dc8",
+    "saved_date": "2026-10-01T23:19:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339514243995619328",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339514243995619328_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

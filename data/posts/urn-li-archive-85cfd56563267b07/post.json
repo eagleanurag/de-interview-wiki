@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-85cfd56563267b07",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.766387+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:18:29Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "EXL Data Analyst Interview Experience:\nCTC: ₹12–15 LPA\n\nSQL Questions\n • Retrieve the top 3 revenue-generating products within each category.\n • Identify products with revenue higher than the average across all products.\n • Use LAG() and CASE to find customers showing month-over-month spending growth.\n • Mark each user’s first and last transaction in a dataset.\n • Find employees under the same manager who also earn identical salaries.\n\n\nPython Questions\n • Reverse a list manually (without .reverse() or slicing).\n • Convert a mixed string like “abc123xyz” to uppercase without using .upper().\n • Extract keys from a dictionary where values are even.\n • Check if two strings are anagrams using a custom function.\n • Create a frequency map for each character in a string.\n\n\nExcel Questions\n • Practical differences between COUNT, COUNTA, and COUNTBLANK.\n • Use INDEX + MATCH to look up a value to the left of your reference column.\n • Apply IFERROR in nested formulas for error handling.\n • Highlight duplicate values while skipping the first occurrence.\n • Calculate total sales using SUMIFS with multiple criteria (e.g., Region = “West”, Month = “Jan”).\n\n\nPower BI Questions\n • Difference between a calculated column and a measure.\n • Handling many-to-many relationships in your data model.\n • Write a DAX measure for running total (cumulative sales) per customer.\n • Use slicers to apply dynamic filters across visuals.\n • Design a KPI visual comparing current vs. previous month sales.\n\nFollow Digvijay Rajput For More.",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:85cfd56563267b07",
+    "saved_date": "2026-10-01T23:18:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

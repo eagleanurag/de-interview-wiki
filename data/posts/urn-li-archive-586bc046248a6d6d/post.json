@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-586bc046248a6d6d",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.118744+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:22:31Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Most asked question in Data Engineer interview\nDelta Table vs Parquet format-----------------------------------------------------\n***Delta Table is Built on Parquet Format : \n Delta Lake is an enhanced storage layer on top of Parquet files. It inherits Parquet's columnar storage benefits, enabling high performance and efficient compression.\n\n***Delta Adds ACID Transactions to Parquet :\n Unlike Parquet, Delta tables support ACID transactions, ensuring data consistency, reliability, and concurrency control. Supports MERGE, DELETE, UPDATE, which are not possible directly in Parquet.\n\n***Delta Provides Schema Evolution and Enforcement :\n Delta allows schema evolution, making it easier to handle changes in data structure. Schema enforcement ensures data integrity, whereas Parquet lacks strict schema management.\n\n***Delta Offers Time Travel & Versioning :\n Delta maintains multiple versions of data, enabling time travel queries.\n SELECT * FROM my_delta_table VERSION AS OF 5;\n Parquet does not maintain historical versions.\n\n***Delta Supports Optimized Performance & Compaction :\n Delta optimizes small files through auto-compaction and OPTIMIZE commands, reducing performance bottlenecks. It also supports ZORDER BY for faster queries.\n\n#dataengineer #azuredataengineer #databricks",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:586bc046248a6d6d",
+    "saved_date": "2026-10-01T23:22:31Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

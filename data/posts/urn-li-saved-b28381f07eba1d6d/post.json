@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-b28381f07eba1d6d",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7283111675530985473",
+    "captured_at": "2026-10-02T00:15:50.815022+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:36:55Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Big Data Pipeline Cheatsheet for AWS, Azure, and GCP\n\nIn today's data-driven world, leveraging cloud-native big data pipelines is critical for business insights and competitive advantage. \n\nHere's a quick rundown of key components in the big data pipeline across AWS, Azure, and GCP:\n\n1. Data Ingestion\n\n- AWS: Kinesis (real-time) or AWS Data Pipeline for managed workflows.\n- Azure: Azure Event Hubs for real-time streaming and Azure Data Factory for ETL.\n- GCP: Pub/Sub (real-time) and Dataflow (batch & stream processing).\n\n2. Data Lake\n\n- AWS: Amazon S3 with Lake Formation for secure data lakes.\n- Azure: Azure Data Lake Storage (ADLS) integrates well with HDInsight and Azure Synapse.\n- GCP: Google Cloud Storage (GCS) with Big Lake offers unified data management.\n\n3. Compute & Processing\n\n- AWS: EMR for managed Hadoop/Spark clusters, or Glue for server less data integration.\n- Azure: Databricks on Azure for Spark-based analytics and HDInsight for Hadoop.\n- GCP: Dataproc for managed Spark/Hadoop and Dataflow for Apache Beam-based processing.\n\n4. Data Warehouse\n\n- AWS: Redshift, a powerful, scalable data warehouse solution.\n- Azure: Azure Synapse Analytics combines SQL Data Warehouse with big data processing.\n- GCP: Big Query, known for its server less, highly scalable, and cost-effective analytics.\n\n5. Presentation/BI Tools\n\n- AWS: QuickSight for scalable BI and reporting.\n- Azure: Power BI integrates well across the Microsoft ecosystem.\n- GCP: Looker provides flexible data visualization and analytics.\n\nEach platform offers unique strengths, and understanding the right tools in each category can save time and costs. Whether you're dealing with real-time data streaming or deep data warehousing, choosing the right combination across ingestion, storage, compute, and analytics is key to building scalable and cost-effective data pipelines. \n\nImage Credits : ByteByteGo Alex Xu\n\n📌 Join my 4K Data Engineering Community : https://lnkd.in/gy4R55Tj\n\n🤝 Follow 👨‍💻 Abhisek Sahu for a regular curated feed of Data Engineering insights and valuable content!\n\nPlease Like, repost ✅, if you find them useful.\n\n#bigdata #cloudcomputing #dataengineering #engineering #aws #azure \n#data #googlecloud\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7283111675530985473_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b28381f07eba1d6d",
+    "saved_date": "2026-10-01T23:36:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7283111675530985473",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7283111675530985473_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7283111675530985473_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-3b5f113f6dcd2f3e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7294210419810844672",
+    "captured_at": "2026-10-02T00:15:46.634530+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:36:47Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nPassionate Payments Professional | Writes to 30+ | Java Backend Developer | Exploring SWIFT, RTGS, RTP & ISO 20022\n1yr •\nMaster SQL in Just 16 Pages🔥\nSQL is the backbone of data management, and mastering it can unlock countless opportunities. I recently came across a concise yet powerful guide that covers essential SQL concepts in just 16 pages! Here’s a quick breakdown of the key topics covered:\n~ Database Basics: Creating, using, and managing databases\n~ Tables & Data Manipulation: Creating tables, inserting, updating, and deleting records\n~ SQL Commands: DDL, DML, DCL, TCL, and DQL explained\n~ Advanced Queries: Joins, Subqueries, CASE Statements, and Window Functions\n~ Aggregation & Ranking: COUNT, SUM, AVG, RANK, DENSE_RANK, NTILE\n~ Views & Temporary Tables: Creating views, CTEs, and temp tables\n~ Data Cleaning & Formatting: String functions, NULL handling, and removing duplicates\n~ Stored Procedures & Transactions: Writing reusable SQL procedures and managing transactions.\nFor anyone looking to level up their SQL skills, this document is a goldmine.\nIf you're working with databases, whether in backend development, data analysis, or fintech (like me in the payments space 💳), these concepts are a must-know.\nWould you like me to break down any of these topics in detail?\nLet me know in the commens\nDoc Credit- Fang Ying sham\n#SQL #Database #DataManagement #BackendDevelopment #Learning #Tech\nSQL in 16 Pages",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7294210419810844672_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3b5f113f6dcd2f3e",
+    "saved_date": "2026-10-01T23:36:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7294210419810844672",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7294210419810844672_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

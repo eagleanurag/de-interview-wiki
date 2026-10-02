@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-61bfd2e70c6c5983",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7325723643831812096",
+    "captured_at": "2026-10-02T00:15:47.995005+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:24:42Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "AI/ML @ Under Armour | ex-Tesco | ML • Backend • LLMs • RAG • AI Agents • Cloud\n1yr •\nI recently explored a highly valuable PDF that stands out as one of the most comprehensive collections of Data Engineering questions and concepts available.\nWhether you are preparing for interviews, transitioning to a new role, or simply reinforcing your foundational knowledge, this guide offers substantial value.\nKey highlights from the document include:\n• Interview-focused questions covering SQL, Python, Spark, and PySpark\n• Real-world case scenarios involving Azure Data Factory (ADF), Databricks, and Synapse Analytics\n• Concise cheat sheets and practical code snippets for quick reference\n• Suitable for both aspiring and experienced data engineering professionals\nIf you’re working in or moving toward the data engineering space, this resource is definitely worth reviewing.\n#DataEngineering #DataAnalysis #Data #Python\n…see more\nPython Tutorial",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7325723643831812096_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:61bfd2e70c6c5983",
+    "saved_date": "2026-10-01T23:24:42Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7325723643831812096",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7325723643831812096_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

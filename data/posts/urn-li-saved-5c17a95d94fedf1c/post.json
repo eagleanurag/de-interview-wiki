@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-5c17a95d94fedf1c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7272933836760461313",
+    "captured_at": "2026-10-02T00:15:47.928684+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:33:15Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "SDE @Amazon | 120K+ @Linkedin | EX-TCS | 4 YOE | DSA | System Design(LLD + HLD) | Java | Spring Boot | Microservices | Python | AWS | GenAI | SQL | NOSQL\n1yr •\n#radhekrishna\nHow i prepared for Leadership Questions (Behaviourval Questions) asked for Amazon.\nDuring Amazon interview , you will come across question on Leadership Principles in each round and this is really important to get into Amazon.\nSo don't neglect this if you get chance to interview with Amazon.\nHR had told me to answer all Leadership Questions (Behaviourval) using ‘STAR’ pattern.\nS(Situation): Describe the SITUATION you were in.\nT(task): Explain the TASK that needed to be done.\nA(Action): Detail the ACTION that you took to achieve the task.\nR(Result): Reveal the RESULTS of your action.\nHow to answer in better way:\n1) Give all answer using STAR pattern.\n2) Give answer relating to your work experience / projects using technical terms to get good impression rather than giving general answer.\nNote: I gave very generalised answer in 1st round and feedback was mixed for behavioural question.\nWhat all questions i have prepared?\n-> I just researched for few hours and went through a more than 20+ recent interview experiences on Leetcode and noted all unique Leadership questions(behavioural) at once place.\n-> Prepared for each question using STAR pattern relating to my experience with different different technical terms.\n-> For 1-2 questions that i was not able to relate to my experiences in better way, i took help of chatgpt to frame a better answer.\nNote: I encountered most of the exact questions that I had researched and collected. I am sharing a Google Doc link where I noted these questions with two youtube video link inside this.\nGoogle Doc link: https://lnkd.in/gJtmF7YP\nNote: I really liked this “STAR’ technique and we can use in other companies as well to answer behavioral questions.\nBefore my Amazon interview, I used to be very scared of behavioral questions. However, after the interview, I am no longer afraid of them and feel much more confident.\nKeep coding, Keep applying!!\n#softwareengineering #interview #amazon #leadership\n…see more\nAmazon Leadership Questions1\ndocs.google.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7272933836760461313_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5c17a95d94fedf1c",
+    "saved_date": "2026-10-01T23:33:15Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7272933836760461313",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7272933836760461313_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7272933836760461313_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

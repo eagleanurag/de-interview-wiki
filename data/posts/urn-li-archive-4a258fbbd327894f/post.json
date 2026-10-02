@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-4a258fbbd327894f",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.805433+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:10:28Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "I recently appeared for a Data Engineer interview at Wipro and sharing my experience to help others preparing for similar opportunities.\n📅 Experience: 4 Years\n Here’s a quick summary of the questions I was asked:\n\n✅L1 Technical Interview (Duration: 35 mins)\n\n1. Introduction – Brief about myself and total experience in data engineering.\n2. Python Coding – Flatten a nested list into a single list.\n 📝 list = [4, 7, [6, 3, 2, [7, 9, 2], 4], 1, 3]\n3. SQL – Return counts of all types of joins: INNER, LEFT, RIGHT, FULL OUTER using tables like:\nA B \n1 0 \n1 1 \n2 2 \n3 4 \n2 1 \n3 5\n4. PySpark – write a query to find the average sales per product category.\n5. Project Discussion – Walkthrough of my recent/most confident project.\n6. Follow-up Questions on Project:\n a. Types of data sources used\n b. Number of pipelines handled\n c. Team structure and roles\n d. Cluster configuration used\n7. SQL – Difference between RANK() and DENSE_RANK()\n\n✅ L2 Technical Interview (Duration 45 mins)\n\n1. Introduction – Brief about myself and total experience in data engineering.\n2. Write a SQL query that reports most experience employees in each project. If there is tie, report all employees with most experience.\nProject Table Employee Table\nproj_id emp_id emp_id name year_exp\n3. SQL query to find out employees who earn more than their managers.\n4. PySpark – Read a CSV file with pipe '|' delimiter and filter records by date (column: DOJ, DOL)\n5. Project Discussion – walk me through your most recent project—what was the goal, tools used, and your responsibilities?\n6. What kind of performance optimizations have you implemented in your project?\n7. Azure Data Factory (ADF) - which integration runtime you use for on-prem source to cloud copy?\n8. How do you debug ADF pipeline taking longer time to copy from on-prem SQL server to cloud?\n9. Difference between parquet and delta format? follow-up: features of delta lake?\n10. How do you push your code from one environment to other?\n11. How to debug/fix stored procedure taking too long to execute?\n12. Types of clusters in Databricks and their use cases.\n\n🤝 Feel free to share your experience or connect if you're on the same journey!\n\n#DataEngineering #DataEngineer #Interview #InterviewExperience #BigData #PySpark #SQL #Azure #ADF #DeltaLake #Databricks #InterviewPreparation #CareerGrowth #TechInterviews #LinkedInShare\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4a258fbbd327894f",
+    "saved_date": "2026-10-01T23:10:28Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

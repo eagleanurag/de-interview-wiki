@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-32c7f2b9986b6211",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.416952+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:59Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Boosting File Ingestion Performance in PySpark on Databricks! ⚡\n\nWhile working on one of our pipelines, I faced a performance bottleneck when reading files from cloud storage.\nInitially, I used:\n\nall_files = dbutils.fs.ls(path)\nfiltered_files = [f for f in all_files if f.modificationTime > last_refresh]\nThis approach was time-consuming, especially with large directories, since it required listing all files and filtering in Python.\nTime taken: 4+ hours\n\n🔧 Optimization:\n I replaced this with a more efficient method using Spark’s native binaryFile reader and metadata filters:\n\nnew_files_df = spark.read.format(\"binaryFile\") \\\n .option(\"recursiveFileLookup\", \"true\") \\\n .option(\"modifiedAfter\", f\"{last_refresh_date}\") \\\n .option(\"modifiedBefore\", f\"{pipeline_trigger_time_mod}\") \\\n .load(path)\n\nTime Taken: 40+ minutes\n\n📈 Result:\n ✅ Significant reduction in runtime\n ✅ Eliminated unnecessary metadata fetching\n ✅ Fully scalable with Spark's distributed engine\n\nSometimes, the key to performance lies in replacing Python loops with native Spark capabilities. 🚀\n#databricks #spark #dataengineering #performanceoptimization #clouddata #bigdata #pyspark #azure #binaryFile #engineeringwins",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:32c7f2b9986b6211",
+    "saved_date": "2026-10-01T23:19:59Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

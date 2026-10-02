@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-08c5c83911024e80",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7335895978253668353",
+    "captured_at": "2026-10-02T00:15:44.612872+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:21:35Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗜𝗠𝗣𝗟𝗘𝗠𝗘𝗡𝗧𝗜𝗡𝗚 𝗦𝗖𝗗 𝗧𝗬𝗣𝗘 𝟭 𝗜𝗡 𝗣𝗬𝗦𝗣𝗔𝗥𝗞: 𝗢𝗩𝗘𝗥𝗪𝗥𝗜𝗧𝗘 𝗖𝗨𝗦𝗧𝗢𝗠𝗘𝗥 𝗗𝗔𝗧𝗔 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 𝗛𝗜𝗦𝗧𝗢𝗥𝗬\n\nEver needed to refresh your customer records without cluttering your database with past versions? Let’s explore a straightforward PySpark approach to implement SCD Type 1 and keep your data up to date—no history tracking required.\n\n𝗨𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱𝗶𝗻𝗴 𝗦𝗖𝗗 𝗧𝘆𝗽𝗲 𝟭 \nSCD (Slowly Changing Dimension) Type 1 is all about overwriting outdated dimension data with new values. Unlike Type 2, there’s no versioning—think of it as updating your LinkedIn headline: the previous title is gone once you save the change.\n\n𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼:\nImagine your marketing team delivers a daily JSON dump of customer profiles (`customer_id`, `email`, `first_name`, `last_name`, `signup_date`). Updates come through as corrected typos or new email addresses. How do you ensure your master table always reflects the latest truth?\n\n𝗗𝗲𝘀𝗶𝗴𝗻𝗶𝗻𝗴 𝘁𝗵𝗲 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗝𝗼𝗯 \n\n𝟭.𝗗𝗲𝗳𝗶𝗻𝗲 𝗮 𝗦𝘁𝗿𝗶𝗰𝘁 𝗦𝗰𝗵𝗲𝗺𝗮 \n Enforce data types from the start to catch bad records before they crash the job.\n\n𝟮.𝗜𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁 𝗝𝗼𝗶𝗻-𝗕𝗮𝘀𝗲𝗱 𝗠𝗲𝗿𝗴𝗲 𝗟𝗼𝗴𝗶𝗰 - 𝗧𝗵𝗲 𝗛𝗲𝗮𝗿𝘁 𝗼𝗳 𝗦𝗖𝗗 𝗧𝘆𝗽𝗲 𝟭\n\n 𝗜𝗻𝗻𝗲𝗿 𝗝𝗼𝗶𝗻 : Identify existing customers whose records need updating.\n 𝗟𝗲𝗳𝘁 𝗔𝗻𝘁𝗶-𝗝𝗼𝗶𝗻 : Retain customers not present in today’s feed (no change).\n 𝗟𝗲𝗳𝘁 𝗔𝗻𝘁𝗶-𝗝𝗼𝗶𝗻 : Detect brand-new customers for insertion.\n\n𝟯. 𝗔𝘀𝘀𝗲𝗺𝗯𝗹𝗲 𝘄𝗶𝘁𝗵 𝗮 𝗨𝗻𝗶𝗼𝗻 \n Combine updated rows, untouched rows, and new inserts into a single DataFrame that represents the current state.\n\n𝟰. 𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗲 𝘄𝗶𝘁𝗵 𝗖𝗮𝗰𝗵𝗶𝗻𝗴 \n Since the existing customer table is joined three times, caching it avoids repetitive reads and speeds up processing.\n\n𝗪𝗵𝘆 𝗧𝗵𝗶𝘀 𝗠𝗮𝘁𝘁𝗲𝗿𝘀 \n\n𝗟𝗲𝗮𝗻 𝗦𝘁𝗼𝗿𝗮𝗴𝗲 : No historical baggage slowing down queries.\n𝗦𝗶𝗺𝗽𝗹𝗶𝗳𝗶𝗲𝗱 𝗤𝘂𝗲𝗿𝗶𝗲𝘀 : Always query the one “current” version.\n𝗙𝗮𝘀𝘁𝗲𝗿 𝗪𝗿𝗶𝘁𝗲𝘀 : Direct overwrites are more efficient than versioning.\n\nexisting_customers_data =\n [ (1001, \"john.doe@email.com\", \"John\", \"Doe\",datetime.date(2024, 1, 15) ,datetime.datetime(2024, 1, 15, 10, 0, 0) # datetime object ),\n (1002, \"jane.smith@email.com\", \"Jane\", \"Smith\",datetime.date(2024, 2, 20), datetime.datetime(2024, 2, 20, 11, 30, 0) ),\n (1005, \"charlie.davis@email.com\", \"Charlie\", \"Davis\",datetime.date(2024, 1, 1),datetime.datetime(2024, 1, 1, 9, 15, 0))]\n\ndaily_updates_data = \n[(1001, \"john.doe.updated@email.com\", \"John\", \"Doe\", \"2024-01-15\"), \n (1002, \"jane.smith@email.com\", \"Jane\", \"Smith-Johnson\", \"2024-02-20\"), \n (1003, \"bob.wilson@email.com\", \"Robert\", \"Wilson\", \"2024-03-10\"), \n (1004, \"alice.brown@email.com\", \"Alice\", \"Brown\", \"2024-04-05\") ]\n\n#DataEngineering #PySpark #SCDTYPE1 #BigData #ApacheSpark #DataProcessing #ETL #DataPipeline\n#IncrementalLoad #JoinConcepts #AntiJoin",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7335895978253668353_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:08c5c83911024e80",
+    "saved_date": "2026-10-01T23:21:35Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7335895978253668353",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7335895978253668353_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

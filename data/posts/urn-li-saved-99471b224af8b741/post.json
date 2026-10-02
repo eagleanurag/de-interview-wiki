@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-99471b224af8b741",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347851892875534338",
+    "captured_at": "2026-10-02T00:15:49.784667+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:12:46Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\n𝗖𝘂𝗿𝗶𝗼𝘂𝘀 𝗮𝗯𝗼𝘂𝘁 𝘁𝗵𝗲 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗯𝗲𝘁𝘄𝗲𝗲𝗻 𝗟𝗮𝗸𝗲𝗵𝗼𝘂𝘀𝗲 𝗮𝗻𝗱 𝗠𝗲𝗱𝗮𝗹𝗹𝗶𝗼𝗻 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲𝘀? 𝗛𝗲𝗿𝗲'𝘀 𝗮 𝗾𝘂𝗶𝗰𝗸 𝗰𝗼𝗺𝗽𝗮𝗿𝗶𝘀𝗼𝗻 𝘁𝗼 𝗰𝗹𝗲𝗮𝗿 𝗶𝘁 𝘂𝗽!\n𝗟𝗮𝗸𝗲𝗵𝗼𝘂𝘀𝗲 combines the flexibility of data lakes with the performance of data warehouses, supporting both real-time and batch workloads.\n𝗠𝗲𝗱𝗮𝗹𝗹𝗶𝗼𝗻 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 organizes data in Bronze, Silver, and Gold layers to ensure quality and traceability.\n📥 Attaching PDF breakdown.\n🔗 𝑱𝒐𝒊𝒏 𝒐𝒖𝒓 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒕𝒐 𝒔𝒕𝒂𝒚 𝒖𝒑𝒅𝒂𝒕𝒆𝒅 𝑫𝒂𝒕𝒂 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓𝒊𝒏𝒈:\nhttps://lnkd.in/ew4mp24d 📲\n💡 𝗕𝗼𝗻𝘂𝘀: If you're interested in 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴, here are some amazing people you should definitely follow for valuable insights:\n1. Abhishek Agrawal\n2. Abhay Singh\n3.Ajay Kadiyala\n4.Aishwarya Pani\n5.Abhinav Singh\n6. Abhisek Sahu\n7. Ankur Ranjan\n8. Aditya Sharma\n9. Ankit Bansal\n10. Asheesh T.\n11.Abhishek Jha\n12. Andreas Kretz\n13. Alex Freberg\n14. Brij kishore Pandey\n15. Benjamin Rogojan\n16. Disha Mukherjee\n17. Darshil Parmar\n18. Durgesh Yadav\n19. Dhiraj Gupta\n20. Deepak Goyal\n21. Danny Ma\n22. Dawn Choo\n23. Hina Arora\n24. Gina Acosta Gutiérrez\n25. Mandar Patil\n26. Munna Das\n27. Maheer Basha Shaik\n28. Meri Nova\n29. Nishant Kumar\n30. Pooja Jain\n31. Rocky Bhatia\n32. Sai Krishna Chivukula\n33. Sumit Mittal\n34. Shwetank Singh\n35.Shubham Wadekar\n36. Sachin Chandrashekhar 🇮🇳\n37. Venkata Naga Sai Kumar Bysani\n38. Vaishnavi MURALIDHAR\n39. Zach Wilson\nlakehouse vs madallian",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347851892875534338_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:99471b224af8b741",
+    "saved_date": "2026-10-01T23:12:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347851892875534338",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347851892875534338_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

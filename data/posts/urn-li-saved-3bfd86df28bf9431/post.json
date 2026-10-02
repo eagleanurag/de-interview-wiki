@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-3bfd86df28bf9431",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327540020444049411",
+    "captured_at": "2026-10-02T00:15:46.679143+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:23:37Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "AI/ML @ Under Armour | ex-Tesco | ML • Backend • LLMs • RAG • AI Agents • Cloud\n1yr •\nSolving a Classic PySpark Bottleneck: Data Skew in Action\nA few days ago, we ran into a familiar Spark issue: a newly built PySpark job was taking unusually long to complete—and then failed altogether.\nAt first, the logic looked fine. But a closer look at the Spark UI and logs revealed the real culprit: data skew.\nOne partition was carrying a disproportionately large chunk of data, leading to uneven task distribution and slow-running stragglers. A classic “80/20” problem—where a small percentage of data causes a large percentage of processing time.\nHere’s how I fixed it:\n→ Identified the skewed key using the Spark UI’s stage and task metrics\n→ Applied salting to distribute the load more evenly across partitions during joins\n→ Used broadcast joins where possible to reduce shuffles\n→ Tuned spark.sql.shuffle.partitions and enabled adaptive query execution (AQE)\nAfter these changes, the job completed in a fraction of the original time—with much more consistent performance.\nHere is a doc of how to debug spark jobs slow spark jobs.\nDoc Credit- LinkedIn\n#PySpark #DataEngineering #SparkJobs #DataSkew #BigData #PerformanceTuning #SparkUI Databricks #DebuggingTips\n…see more\nSpark optimisation",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327540020444049411_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3bfd86df28bf9431",
+    "saved_date": "2026-10-01T23:23:37Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327540020444049411",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327540020444049411_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

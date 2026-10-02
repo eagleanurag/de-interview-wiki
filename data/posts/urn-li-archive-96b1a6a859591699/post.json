@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-96b1a6a859591699",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.912791+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:53Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Understanding 𝗲𝘅𝗽𝗹𝗼𝗱𝗲() vs 𝗲𝘅𝗽𝗹𝗼𝗱𝗲_𝗼𝘂𝘁𝗲𝗿() in PySpark 🔍\n\nWhen working with nested data like arrays or map in PySpark, it's often useful to flatten those arrays into multiple rows using the explode() function.\n\n ➡️𝗲𝘅𝗽𝗹𝗼𝗱𝗲():\n • explode() is used to 𝗳𝗹𝗮𝘁𝘁𝗲𝗻 an array or map column.\n • It creates a 𝗻𝗲𝘄 𝗿𝗼𝘄 𝗳𝗼𝗿 𝗲𝗮𝗰𝗵 𝗲𝗹𝗲𝗺𝗲𝗻𝘁 in the array.\n • If the array is null, the row is 𝗲𝘅𝗰𝗹𝘂𝗱𝗲𝗱 from the output.\n\n ➡️𝗲𝘅𝗽𝗹𝗼𝗱𝗲_𝗼𝘂𝘁𝗲𝗿():\n • explode_outer() also flattens an array or map into multiple rows.\n • Unlike explode(), it 𝗸𝗲𝗲𝗽𝘀 𝗿𝗼𝘄𝘀 where the array is null and fills the exploded value with null.\n\n𝗘𝘅𝗮𝗺𝗽𝗹𝗲\ndata = [(1, [\"apple\", \"banana\"]), (2, [])]\ndf = spark.createDataFrame(data, [\"id\", \"fruits\"])\n\n🔽𝗲𝘅𝗽𝗹𝗼𝗱𝗲() -->\ndf.select(\"id\", explode(\"fruits\").alias(\"fruit\")).show()\n\nResult:\n+---+---------+\n| id | fruit |\n+---+---------+\n| 1 | apple |\n| 1 | banana |\n+---+---------+\n\n🔽𝗲𝘅𝗽𝗹𝗼𝗱𝗲_𝗼𝘂𝘁𝗲𝗿() -->\ndf.select(\"id\", explode_outer(\"fruits\").alias(\"fruit\")).show()\n\nResult:\n+---+---------+\n| id | fruit |\n+---+---------+\n| 1 | apple |\n| 1 | banana | \n| 2 | null |\n+---+---------+\n\n💡 When to use which?\n ✅ Use explode() when you want to ignore nulls or empty arrays.\n ✅ Use explode_outer() when preserving all original rows is important, even if the array is null.\n\n💬 Hope this clears up the confusion between the two!\n\n#PySpark #BigData #DataEngineering #ApacheSpark #SparkTips #ExplodeFunction\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:96b1a6a859591699",
+    "saved_date": "2026-10-01T23:09:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-d5cbaa81dd09eea0",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.518422+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:23:35Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Lazy Evaluation in PySpark\n\n💡 Lazy Evaluation — One of the key principles of Spark is that transformations are lazy. This means they are not executed until an action is called. The transformations build a logical plan, but the actual computation doesn’t happen until you invoke an action like .show() or .write(). This enables Spark to optimize the execution plan.\nExample:\ndf = spark.read.json(\"/path/to/data\")\n\n# Apply transformations\ndf = df.filter(\"age > 25\").select(\"name\")\n\n# Lazy evaluation: The transformations are not executed until the action is called\ndf.show() # This triggers the execution\n\n📊 Real-life Example: In an analytics pipeline, we had four transformations chained together. Thanks to lazy evaluation, Spark didn’t execute them until we triggered the .show() action. This meant that Spark optimized the transformations into one stage, avoiding redundant computation and saving processing time. The Directed Acyclic Graph (DAG) confirmed that Spark merged the stages for efficiency.\n\n🔍 Interview Tip: When discussing lazy evaluation in an interview, emphasize how Spark tracks the lineage of operations and builds a DAG (Directed Acyclic Graph) of the transformations. Spark only executes the DAG when an action (like .show(), .collect(), or .write()) is invoked. This optimization is key for both performance and fault tolerance.\n\n #DataEngineering\n #PySpark\n #ApacheSpark\n #BigData\n #ETL\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d5cbaa81dd09eea0",
+    "saved_date": "2026-10-01T23:23:35Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

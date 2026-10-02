@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e68a5e7f21c72695",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7312423116813606912",
+    "captured_at": "2026-10-02T00:15:52.905193+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:51Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Analyst SQL Challenge – Amazon Interview\n\n 🚀Are you ready to tackle a real-world SQL challenge?🚀\n\n \nIn a recent Amazon Data Analyst interview, a candidate was given the following SQL task:\n\n📈 Scenario:\nYou’re working with a retail business and need to identify customers who have made purchases exceeding $100.\nYou have two tables:\n\n- customers: Contains customer_id and name\n- orders: Contains order_id, customer_id,and order_amount\n\n 🔎Task:\nJoin these tables to calculate the total purchase amount for each customer, and then select customers whose total purchase amount exceeds $100.\n\n 💡How would you solve this challenge?\nThis problem tests your ability to work with JOINs and aggregate functions in SQL.\n\n👋 Share your solution or thoughts in the comments below!\n\nBonus points if you can also solve it using Python!\n\nFollow Aditya Bansal for more SQL lessons!!\n\n#AmazonInterview #SQL #DataAnalyst #InterviewPrep #Analytics #DataScience #ProblemSolving #SQLQuery\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7312423116813606912_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e68a5e7f21c72695",
+    "saved_date": "2026-10-01T23:30:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7312423116813606912",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7312423116813606912_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

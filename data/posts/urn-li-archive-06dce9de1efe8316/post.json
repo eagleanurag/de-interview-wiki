@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-06dce9de1efe8316",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.841468+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Microsoft Interview Experience \nCompensation Range: 35LPA + 3L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n\n- Be prepared to talk about your experience\n- Be ready to answer technical questions\n- Be prepared to ask questions\n- Show enthusiasm and passion\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝟭\n\n- Be ready to solve coding problems on sql, python, pyspark.\n- How would you handle missing or invalid data in a data pipeline?\n- How do you secure data in a cloud environment?\n- How would you implement a binary search algorithm?\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝟮\n\n- How would you migrate a petabyte-scale database to Azure?\n- How would you implement real-time data ingestion in Azure using Event Hubs?\n- What are the best practices for optimizing storage costs in Azure Data Lake?\n\n𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗮𝗻𝗱 𝗱𝗲𝘀𝗶𝗴𝗻 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n\n- How would you architect a system that ingests and processes 1 TB of data daily?\n- Design a data pipeline that supports both batch and real-time processing.\n- Explain the impact of data skew in real-time stream processing.\n\n𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n\n- Tell me about a time you had to manage someone’s performance. ​\n- Describe an incident where you learned from your past mistakes. ​\n- How do you set and work toward your goals?\n\nIf you are preparing for Data Engineering interviews then you should check these Interview Experiences for 100+ Companies\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\n#dataengineering #interviews #jobs\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:06dce9de1efe8316",
+    "saved_date": "2026-10-01T23:20:05Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

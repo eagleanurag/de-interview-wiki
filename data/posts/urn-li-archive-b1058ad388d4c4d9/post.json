@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-b1058ad388d4c4d9",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.186181+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:54Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Recently interviewed at American Express for Data Engineer role(4-5yrs exp)\n\nBelow are the few sample questions I remember from my interview.Hope it give idea what type of questions to expect for someone giving interview for similar role.\n\nInterview Process\n\nThis is an offline interview you need to go to company \n\nThere will be one assignment round which consisits of sql, python basic questions.\n\nThen there will be one sql round, then one python round after that managerial round.\n\n1)How do you manage and monitor pipeline failures in Azure Data Factory?\n\n2)What is the role of Azure Key Vault in securing data pipelines?\n\n3)Explain the concept of Delta Lake. How is it different from traditional data lakes?\n\n4)How do you orchestrate workflows across multiple Azure services?\n\n5)Describe your experience with Azure Event Hub or Azure Stream Analytics for real-time data processing.\n\n6)Write a SQL query to find the second highest salary from a table without using TOP or LIMIT.\n\n7)Explain different types of joins with examples.\n\n8)What are CTEs (Common Table Expressions)? How are they different from temp tables or subqueries?\n\n9)How do you optimize queries in a large data warehouse (Synapse or SQL Server)?\n\n10)How would you handle deduplication in a SQL table with billions of rows?\n\n11)Explain fact tables and dimension tables with real-life examples.\n\n12)How do you handle late arriving dimensions in a warehouse?\n\n13)Describe a scenario where you implemented an incremental load strategy.\n\n14)Have you worked with pyspark on Azure Databricks? Explain a use case.\n\n15)How would you implement error handling and logging in a Python-based data pipeline?\n\n16)Write a function in Python to remove duplicates from a list of dictionaries based on a key.\n\n#DataEngineer #AzureDataEngineer #SQL #Python #ADF #Synapse #Databricks #DataWarehousing #CloudEngineering #InterviewPreparation #AmericanExpress #DataEngineeringCareers #LinkedInLearning #BigData #ETL #CareerGrowth\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b1058ad388d4c4d9",
+    "saved_date": "2026-10-01T23:09:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

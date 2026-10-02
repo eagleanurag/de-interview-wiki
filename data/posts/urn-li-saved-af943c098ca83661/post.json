@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-af943c098ca83661",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339106266201411587",
+    "captured_at": "2026-10-02T00:15:50.673758+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:15:20Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Sr. Product Engineer @ The Timken Company | Co-Founder @Growthora | Marketer | 150M+ Impressions | 62K+ Community | AI • Career • Workplace | Brand Partnerships & Campaigns | DM to Collaborate\n1yr •\n🛠️ Data Engineering isn’t just ETL. It’s Engineering at Scale.\nEvery byte flowing through your pipeline has a cost — in compute, in time, and in business value.\nHere’s what makes a solid Data Engineer in 2025:\n✅ Understand data modeling: Star, Snowflake, and Lakehouse\n✅ Know when to use batch vs stream processing\n✅ Write efficient SQL, not just working SQL\n✅ Master orchestration tools like Airflow/Dagster\n✅ Optimize pipelines for cost, latency, and reliability\n✅ Treat your pipelines like software — with CI/CD, tests, and logging\n✅ Think in systems: What happens if Kafka goes down? Or a DAG fails?\n📌 Tools change. Principles stay.\nIf you're learning Data Engineering — don’t just learn “how” — learn why.\nDo follow Naresh Reddy Kotha for more!\n#DataEngineering #BigData #ETL #SQL #ApacheSpark #Airflow #Snowflake #DataPipelines #CloudData #TechCareers #SystemDesign #StreamingData #DataOps\n…see more\nETL pipelines!",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339106266201411587_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:af943c098ca83661",
+    "saved_date": "2026-10-01T23:15:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339106266201411587",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339106266201411587_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

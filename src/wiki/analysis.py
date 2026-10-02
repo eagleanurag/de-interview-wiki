@@ -15,6 +15,7 @@ from dataclasses import dataclass, field
 
 from src.aggregation.consolidation import (
     detect_technologies,
+    normalise_label,
     post_topics,
 )
 from src.models import KnowledgePost
@@ -216,6 +217,32 @@ class SiteModel:
         return len(self.concept_entries)
 
     @property
+    def topic_page_count(self) -> int:
+        """
+        Topic pages written, which is topics plus their subtopics.
+
+        A subtopic gets its own page because it is a distinct label a
+        reader can arrive at from the index. Named apart from
+        ``topic_count`` so a report can say how many pages exist without
+        implying the knowledge base holds that many topics.
+        """
+
+        return len(self.topics)
+
+    @property
+    def concept_count(self) -> int:
+        """
+        Concept labels as the posts wrote them, before consolidation.
+
+        Kept because it is a different question from how many concepts
+        the site publishes, and both numbers are real. A report should
+        say which one it means; ``concept_page_count`` is the one a
+        reader can navigate to.
+        """
+
+        return len(self.concepts)
+
+    @property
     def technology_count(self) -> int:
         return len(self.technology_entries)
 
@@ -292,7 +319,7 @@ class SiteModel:
 
     def concept_order_is_sorted(self) -> bool:
         return list(self.concepts) == sorted(
-            self.concepts, key=str.casefold
+            self.concepts, key=label_order
         )
 
     def summary(self) -> str:
@@ -354,7 +381,7 @@ def build_site_model(
             for concept in post.ai_analysis.concepts
             if concept
         },
-        key=str.casefold,
+        key=label_order,
     )
 
     concept_entries = _build_concepts(posts, post_slugs)
@@ -448,6 +475,23 @@ def _build_saved_items(
     return tuple(sorted(entries, key=lambda entry: entry.sort_key))
 
 
+def label_order(value: str) -> tuple[str, str]:
+    """
+    Sort labels the way a reader would expect, and the same way twice.
+
+    Case is the reading order, so it is the first key. The value itself
+    is the second, and that second key is what makes the order total:
+    "ADF activities" and "ADF Activities" fold to the same string, so a
+    sort on casefold alone leaves them in whatever order the set they
+    came from happened to iterate, and Python randomises string hashing
+    per process. Two builds of the same input then produced a different
+    search index and different topic pages, which is the one property
+    this project's output has to keep.
+    """
+
+    return (value.casefold(), value)
+
+
 def _build_topics(
     posts: tuple[KnowledgePost, ...],
     post_slugs: tuple[str, ...],
@@ -511,7 +555,7 @@ def _build_topics(
             kind=str(entry["kind"]),
             post_slugs=tuple(entry["post_slugs"]),
             concepts=tuple(
-                sorted(set(entry["concepts"]), key=str.casefold)
+                sorted(set(entry["concepts"]), key=label_order)
             ),
             question_count=int(entry["question_count"]),
         )
@@ -555,17 +599,20 @@ def _build_concepts(
             if not label:
                 continue
 
-            entry = grouped.get(label)
+            key = normalise_label(label)
+
+            entry = grouped.get(key)
 
             if entry is None:
                 entry = {
                     "slug": registry.register(label),
+                    "label": label,
                     "posts": [],
                     "topics": [],
                     "technologies": [],
                 }
-                grouped[label] = entry
-                order.append(label)
+                grouped[key] = entry
+                order.append(key)
 
             posts_for: list[str] = entry["posts"]  # type: ignore[assignment]
             posts_for.append(slug)
@@ -583,13 +630,13 @@ def _build_concepts(
 
     entries = [
         ConceptEntry(
-            label=label,
-            slug=str(grouped[label]["slug"]),
-            post_slugs=tuple(grouped[label]["posts"]),  # type: ignore[arg-type]
-            topics=tuple(grouped[label]["topics"]),  # type: ignore[arg-type]
-            technologies=tuple(grouped[label]["technologies"]),  # type: ignore[arg-type]
+            label=str(grouped[key]["label"]),
+            slug=str(grouped[key]["slug"]),
+            post_slugs=tuple(grouped[key]["posts"]),  # type: ignore[arg-type]
+            topics=tuple(grouped[key]["topics"]),  # type: ignore[arg-type]
+            technologies=tuple(grouped[key]["technologies"]),  # type: ignore[arg-type]
         )
-        for label in order
+        for key in order
     ]
 
     return tuple(sorted(entries, key=lambda item: item.sort_key))

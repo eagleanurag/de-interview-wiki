@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-26b37091f94cc6a3",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.349148+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:22:32Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "You are given a PySpark DataFrame named web_traffic with the following schema:\n| user_id | page_url | session_id | timestamp | \n\nuser_id: Unique identifier for each user.\npage_url: The URL of the page visited by the user.\nsession_id: Unique identifier for each browsing session.\ntimestamp: The timestamp of the page visit.\n\nYour task is to write a PySpark program to:\nIdentify the top 3 most visited pages (page_url) across all users.\nFor each of these top 3 pages, calculate the average number of unique users visiting the page per session.\nSample Input:\n+---------+-------------------+------------+-------------------+\n| user_id | page_url | session_id | timestamp |\n+---------+-------------------+------------+-------------------+\n| 1 | /home | A | 2025-05-18 10:00 |\n| 2 | /home | A | 2025-05-18 10:05 |\n| 1 | /about | B | 2025-05-18 10:10 |\n| 3 | /home | C | 2025-05-18 10:15 |\n| 3 | /contact | C | 2025-05-18 10:20 |\n| 4 | /home | D | 2025-05-18 10:25 |\n| 4 | /about | D | 2025-05-18 10:30 |\n| 5 | /home | E | 2025-05-18 10:35 |\n| 5 | /contact | E | 2025-05-18 10:40 |\n+---------+-------------------+------------+-------------------+\n\nSample Output:\n+------------+----------------------+\n| page_url | avg_users_per_session |\n+------------+----------------------+\n| /home | 1.75 |\n| /about | 1.50 |\n| /contact | 1.50 |\n+------------+----------------------+\n\n#PySpark #ApacheSpark #DataEngineering #ETL #SparkSQL #DistributedComputing #TechCommunity #ProblemSolving #LearningEveryDay #ProgrammingChallenges",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:26b37091f94cc6a3",
+    "saved_date": "2026-10-01T23:22:32Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

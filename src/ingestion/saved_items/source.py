@@ -298,7 +298,7 @@ class SavedItemsSource(Source):
             content = read_bundle(bundle, root=self.bundle_root)
 
         except BundleError as exc:
-            self.issues.append(f"{item.canonical_url}: {exc}")
+            self.issues.append(f"{_label(item)}: {exc}")
 
             item.state = SavedItemState.FAILED
             item.failure_reason = str(exc)
@@ -307,7 +307,7 @@ class SavedItemsSource(Source):
             return None
 
         for note in content.unreadable:
-            self.issues.append(f"{item.canonical_url}: {note}")
+            self.issues.append(f"{_label(item)}: {note}")
 
         if content.unreadable:
             # Recorded on the item as well as in this run's issues. A
@@ -493,14 +493,19 @@ class SavedItemsSource(Source):
 
         if not text.strip():
             self.issues.append(
-                f"{item.canonical_url}: the capture produced no text"
+                f"{_label(item)}: the capture produced no text"
             )
             return None
 
         return CollectedPost(
             source_post_id=item.source_id,
             text=text,
-            url=item.canonical_url,
+            # None rather than an empty string, so the post records that
+            # it has no link instead of carrying a link that resolves
+            # nowhere. The renderer omits the source link when it is
+            # absent, which is the honest outcome for a post the archive
+            # never had a permalink for.
+            url=item.canonical_url or None,
             published_at=item.saved_date,
             author=item.author,
             media=list(content.media),
@@ -508,7 +513,7 @@ class SavedItemsSource(Source):
             provenance={
                 "saved_item_id": item.source_id,
                 "saved_date": item.saved_date,
-                "canonical_url": item.canonical_url,
+                "canonical_url": item.canonical_url or None,
                 "url_kind": item.kind,
                 "capture_state": SavedItemState.CAPTURED.value,
                 "capture_match": self._match.get(
@@ -539,8 +544,7 @@ class SavedItemsSource(Source):
             return content.text
 
         lines = [
-            f"Saved item from LinkedIn: "
-            f"{item.title or item.canonical_url}"
+            f"Saved item from LinkedIn: {_label(item)}"
         ]
 
         if item.notes:
@@ -549,9 +553,16 @@ class SavedItemsSource(Source):
         lines.extend(
             [
                 "",
-                "No body text was supplied with this capture. The link "
-                "and save date come from the user's saved-items export; "
-                "the material listed below is what the user attached.",
+                "No body text was supplied with this capture. "
+                + (
+                    "The link and save date come from the user's "
+                    "saved-items export; the material listed below is what "
+                    "the user attached."
+                    if item.canonical_url
+                    else "The archive that supplied this record held no "
+                    "permalink for it, so there is no link to give; the "
+                    "material listed below is what came with it."
+                ),
             ]
         )
 
@@ -694,6 +705,25 @@ def reconcile(
         manifest.save()
 
     return changed
+
+
+def _label(item: SavedItem) -> str:
+    """
+    How an item is named in a message.
+
+    Prefers the link, falls back to the identifier. A local archive
+    holds posts with no permalink, and a report that printed an empty
+    field where the subject of the sentence should be would be
+    unreadable exactly where a person most needs to read it.
+    """
+
+    if item.canonical_url:
+        return item.canonical_url
+
+    if item.title:
+        return item.title
+
+    return item.source_id
 
 
 def _safe(value: str) -> str:

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-7f00ffeae5f6f1cf",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348523794187079680",
+    "captured_at": "2026-10-02T00:15:48.649913+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : Accenture (Medium Level)\n#PySpark #SQL Interview Question — Solution\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nAnkur Warikoo, an influential figure in Indian social media, shares a guideline in one of his videos called the 20-6-20 rule for determining whether one can afford to buy a phone or not. The rule for affordability entails three conditions:\n\n \n\n1. Having enough savings to cover a 20 percent down payment.\n2. Utilizing a maximum 6-month EMI plan (no-cost) for the remaining cost.\n3. Monthly EMI should not exceed 20 percent of one's monthly salary.\nGiven the salary and savings of various users, along with data on phone costs, the task is to write an SQL to generate a list of phones (comma-separated) that each user can afford based on these criteria, display the output in ascending order of the user name.\n\n \n\nTable: users\n+----------------+-------------+\n| COLUMN_NAME | DATA_TYPE |\n+----------------+-------------+\n| user_name | varchar(10) |\n| monthly_salary | int |\n| savings | int |\n+----------------+-------------+\nTable: phones\n+-------------+-------------+\n| COLUMN_NAME | DATA_TYPE |\n+-------------+-------------+\n| cost | int |\n| phone_name | varchar(15) |\n+-------------+-------------+\n𝐬𝐜𝐡𝐞𝐦𝐚 \nCREATE TABLE users (\n user_name VARCHAR(50),\n monthly_salary INT,\n savings INT\n);\n\nCREATE TABLE phones (\n phone_name VARCHAR(50),\n cost INT\n);\nINSERT INTO users (user_name, monthly_salary, savings) VALUES\n('Rahul', 40000, 15000),\n('Vivek', 70000, 10000);\n\nINSERT INTO phones (phone_name, cost) VALUES\n('iphone-12', 60000),\n('oneplus-12', 50000),\n('iphone-14', 70000);\n\n\n\nThanks to Ankit Bansal and NamasteSQL for the question\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348523794187079680_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7f00ffeae5f6f1cf",
+    "saved_date": "2026-10-01T23:12:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348523794187079680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348523794187079680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

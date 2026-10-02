@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-5074c82ef7345b34",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.025801+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:10:29Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Recently, I got a 26 LPA Job Offer from Deloitte\nPosition: Data Engineer\nApplication Method: Got a call from Naukri.com\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n- General discussion on profile and past experience\n- No theoretical questions, directly moved to hands-on SQL questions\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱 (𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗖𝗼𝗱𝗶𝗻𝗴)\n- Medium-level SQL query: Calculate total revenue per customer using Orders and Order_Items tables\n- Write SQL to get customers who spent the most in the last month (based on order_date)\n- PySpark scenario: Join two DataFrames with different schema using row numbers\n- Topics discussed:\nㆍ Writing CTEs and using aggregate functions\nㆍDate filtering using functions like DATE_SUB\nㆍ PySpark Window functions for row_number and joining logic\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱 (𝗧𝗲𝗰𝗵 𝗟𝗲𝗮𝗱 𝗗𝗶𝘀𝗰𝘂𝘀𝘀𝗶𝗼𝗻)\n- In-depth discussion on past project architecture\n- What technologies were used and how much data was handled\n- Challenges faced in Spark-based pipelines and how they were resolved\n- PySpark live coding:\nㆍ Write code to find customers who spent more than ₹1000 from store S1 in the last month\nㆍ Required working with three datasets: Customer, Store, and Sales\nㆍ Logic included DataFrame joins, date filtering using add_months(), and aggregation\n\n𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 𝗥𝗼𝘂𝗻𝗱\n- Focused on stakeholder and leadership discussions\n- Real-world project challenges and team collaboration\n- Discussion on how business requirements were translated into scalable pipelines\n\n𝗦𝗶𝗺𝗶𝗹𝗮𝗿𝗹𝘆, 𝗜 𝗵𝗮𝘃𝗲 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗲𝗱 𝟭𝟬𝟬+ 𝗲𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗶𝗻 𝗺𝘆 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗞𝗜𝗧.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5074c82ef7345b34",
+    "saved_date": "2026-10-01T23:10:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

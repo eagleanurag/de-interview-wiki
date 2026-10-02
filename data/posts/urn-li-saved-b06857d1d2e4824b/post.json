@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-b06857d1d2e4824b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7294656361873756160",
+    "captured_at": "2026-10-02T00:15:50.691740+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:35:27Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nETL tools like Informatica, Abinitio, SSIS, Talend, Datastage, etc. are no longer in demand!\nthey are still being used and so are Mainframe based ETL jobs but.\ntheir days of shine and lustre are long gone!!\nLets look at Modern Data Pipelines:\nThe modern data landscape demands agility, scalability, and real-time insights.\nBut how do we tame the ever-growing data & transform it into valuable business intelligence?\nImagine:\n𝐑𝐞𝐚𝐥-𝐭𝐢𝐦𝐞 𝐚𝐧𝐚𝐥𝐲𝐭𝐢𝐜𝐬: No more waiting days for insights. Get notified of critical trends as they happen.\n𝐔𝐧𝐢𝐟𝐢𝐞𝐝 𝐝𝐚𝐭𝐚 𝐥𝐚𝐤𝐞𝐬: Ditch data silos and fragmented information. Access all your data in one, centralized location.\n𝐂𝐥𝐨𝐮𝐝-𝐧𝐚𝐭𝐢𝐯𝐞 𝐚𝐠𝐢𝐥𝐢𝐭𝐲: Spin up pipelines in minutes, not months. Scale seamlessly to meet demand.\nHere are some key ingredients for your modern data pipeline recipe:\n𝐂𝐥𝐨𝐮𝐝 𝐩𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐬: Leverage the power of AWS, Azure, or GCP for elastic, scalable infrastructure.\nChoose AWS - has highest market share.\n𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐭𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬: Embrace Apache Kafka, #aws Kinesis, Apache Flink for real-time data ingestion.\n𝐌𝐢𝐜𝐫𝐨𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐚𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞: Break down monolithic pipelines into modular, manageable components.\n#aws lambda is a game changer here; Use #aws sns and sqs as well.\n𝐂𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫𝐢𝐳𝐚𝐭𝐢𝐨𝐧: Package your pipeline elements for portability and consistency.\n#aws ecs fargate is an amazing container based service.\n𝐎𝐫𝐜𝐡𝐞𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐭𝐨𝐨𝐥𝐬: Use Airflow to automate and schedule tasks seamlessly.\n#aws MWAA shines here.\nWant to learn Modern Data Engineering on AWS?\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\nIf you've read so far, do LIKE the post 👍\n…see more\nData Pipelines Textbook",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7294656361873756160_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b06857d1d2e4824b",
+    "saved_date": "2026-10-01T23:35:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7294656361873756160",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7294656361873756160_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-b2cb8cfc72467267",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327179336220860417",
+    "captured_at": "2026-10-02T00:15:50.867680+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:25:49Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nMicrosoft Fabric Data Architect | Freelance Data Consultant | Azure Data Architect | Azure Data Engineer | Databricks Architect | Power BI\n1yr •\nReady to Crack Your Next Azure Data Engineer Interview??🌟\nIf you're aiming for success in Azure Data Engineer interviews, it's all about mastering real-world scenarios and practical challenges. To help you out, here are a few must-know questions to test your knowledge:\n🔑 Sample Questions\n1️⃣ How would you design a scalable ETL pipeline using Azure Data Factory to process terabytes of data daily?\n2️⃣ Explain how you would handle schema drift in Azure Data Factory for dynamic datasets.\n3️⃣ What are the best practices for optimizing Spark jobs in Azure Databricks for large-scale data processing??\n💡 These are just a glimpse of the 25 most important questions that cover:\n- Azure Data Factory\n- Azure Databricks\n- Azure Synapse Analytics\n- PySpark and More\n📄 Want the complete list with detailed answers to ace your interview?\n👉 Check out the PDF now and take a step closer to success!\nLet me know your thoughts or which topic you'd like to deep dive into next!!\n🚀 Want to ace this and more??\n📥 Grab the PDF with all the steps and insights here:\n👉 [Attach your PDF link via Tompate with 25% discount code: Nitya21]\nhttps://lnkd.in/d9gaEB_H\n✨ What’s inside:\n✅ Step-by-step guidance for this and other must-know Azure scenarios.\n✅ Structured insights to help you tackle even the toughest interview questions.\nProven Success: Hundreds of professionals have cracked their interviews using this guide. Don’t miss out—this could be your key to success!\n✅ Repost if you found this useful\n🚀 Follow Aditya Chandak\n#Azure #DataEngineering #DataFactory #Databricks #Synapse #PySpark #CareerGrowth\n…see more\nData Engineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327179336220860417_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b2cb8cfc72467267",
+    "saved_date": "2026-10-01T23:25:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327179336220860417",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327179336220860417_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

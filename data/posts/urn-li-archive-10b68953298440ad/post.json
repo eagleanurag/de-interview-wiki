@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-10b68953298440ad",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.004354+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:21:37Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 #PySpark Data Engineering Scenario-Based Questions-:\n\n\n1. Incremental Data Processing\nQuestion-: You need to process new data arriving daily without reprocessing historical data. How would you implement an incremental data processing pipeline in PySpark?\n\nAnswer-:\n**Incremental Data Processing in PySpark:**\nUse **watermarking or max timestamp tracking** to identify new data. Filter daily loads using a **timestamp or ID column**, and store the last processed value in **metadata storage** (like a Delta table or checkpoint).\n\n\\#PySpark #IncrementalLoad #DataPipeline #BigData #DataEngineering\n\n2.Handling Large Datasets\nQuestion-:How would you optimize a PySpark job that processes a large dataset (1TB+) to improve performance and reduce execution time?\n\nAnswer-:\n*Handling Large Datasets in PySpark:*\nTo optimize a PySpark job for 1TB+ data, use **partitioning**, **persist intermediate results**, **broadcast small datasets**, **avoid shuffles**, and prefer **DataFrame APIs over RDDs**. Enable **predicate pushdown**, tune **Spark configurations**, and leverage **columnar formats like Parquet** for faster reads.\n\n\\#PySpark #BigData #PerformanceTips #DataEngineering\n\n3. Data Skew Handling\nQuestion-:One of your PySpark jobs is failing due to data skew. How would you identify and resolve the issue?\n\nAnswer-:\n**Handling Data Skew in PySpark:**\nIdentify skew by analyzing key distribution. Fix it using techniques like **salting keys**, **broadcast joins** for small tables, or **repartitioning**. Monitor skewed stages in Spark UI for insights.\n\n\\#PySpark #DataSkew #PerformanceOptimization #BigData #DataEngineering\n\nDeepak Goyal",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:10b68953298440ad",
+    "saved_date": "2026-10-01T23:21:37Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

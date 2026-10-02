@@ -171,7 +171,7 @@ def replace_file(
     temporary: Path,
     target: Path,
     *,
-    attempts: int = 5,
+    attempts: int = 8,
 ) -> None:
     """
     Move a temporary file onto its target, retrying a transient refusal.
@@ -192,7 +192,16 @@ def _replace(temporary: Path, target: Path, *, attempts: int = 5) -> None:
     Windows denies a replace while any handle to the target is open,
     which happens when a reader, an indexer or another process happens
     to hold it at that moment. It clears on its own, so the write is
-    retried briefly rather than failing a run over a transient lock.
+    retried rather than failing a run over a transient lock.
+
+    The wait grows rather than staying short because the contention is
+    not always one reader. A run that writes hundreds of files in quick
+    succession has an indexer following it from one to the next, and a
+    window of a few hundred milliseconds that a single-file write clears
+    easily is not long enough for the tail of a bulk import. Backing off
+    to a few seconds costs nothing when the replace succeeds first time,
+    which it nearly always does, and is the difference between a run that
+    reports one transient failure and one that does not.
 
     Every attempt is real, so a refusal that is genuinely permanent
     raises on the last attempt rather than being swallowed.
@@ -207,7 +216,7 @@ def _replace(temporary: Path, target: Path, *, attempts: int = 5) -> None:
             if attempt == attempts - 1:
                 raise
 
-            time.sleep(0.05 * (attempt + 1))
+            time.sleep(min(0.1 * (2**attempt), 2.0))
 
 
 def post_id_for(source_post_id: str) -> str:

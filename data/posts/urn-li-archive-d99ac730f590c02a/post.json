@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-d99ac730f590c02a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.532838+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:00Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Engineering interviews are usually 𝟯–𝟰 𝗿𝗼𝘂𝗻𝗱𝘀....\nthat can get you paid ₹12 LPA or ₹45 LPA...\n\n𝗥𝗼𝘂𝗻𝗱 𝟭: SQL + Problem Solving\nThis is where 50% of people get rejected.\n→ “Find 2nd latest transaction per user”\n→ “Rank records inside partitions”\n→ “Explain why NULLs break NOT IN”\n\n𝗥𝗼𝘂𝗻𝗱 𝟮: Data Pipeline Design\nThey don’t care if you know Airflow or Spark.\n→ “Build a pipeline for 100M+ daily events”\n→ “What if one batch fails mid-way?”\n→ “How do you deal with schema drift or late-arriving data?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟯: System Design or Architecture\n→ “Design a data lake that scales and survives failures”\n→ “How do you track global ride data in real time?”\n→ “What are the tradeoffs of batch vs stream in this use case?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟰: Stakeholder & Behaviorals\n→ “Explain a failed pipeline to a non-technical manager”\n→ “Tell me a time your data was wrong — what did you do?”\n→ “Can analysts trust what you build?”\n\n\nFollow Me Venkat Sai Kalyanam for more such content 😌 \nComment “CFBR” for better reach",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d99ac730f590c02a",
+    "saved_date": "2026-10-01T23:11:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

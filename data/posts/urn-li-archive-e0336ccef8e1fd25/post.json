@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-e0336ccef8e1fd25",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.766072+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:21:40Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Fractal Interview Experience.\nCompensation Range: 23LPA + 2L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n- SQL and Python assessment\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱\n- Medium-level SQL question\n- Pyspark code optimization\n- Discussion on Kafka architecture\n- Implement a custom function in PySpark\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱\n- Asked about project architecture\n- How to design a scalable ETL system from scratch\n- Followup on handling schema evolution in Delta Lake\n- Discussion about various azure services.\n\n𝟯𝗿𝗱 𝗥𝗼𝘂𝗻𝗱 (𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹)\n- Leadership and stakeholder management questions\n- Writing efficient test cases for ETL pipelines (Live coding)\n- Discussion on real-world project challenges and optimizations\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e0336ccef8e1fd25",
+    "saved_date": "2026-10-01T23:21:40Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

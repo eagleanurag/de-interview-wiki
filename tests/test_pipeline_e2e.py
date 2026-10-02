@@ -220,6 +220,17 @@ def test_no_post_appears_twice(knowledge_base):
 
 
 def test_every_collected_post_kept_its_provenance(knowledge_base):
+    """
+    A collected post must remain traceable to where it came from, and
+    must not claim provenance it does not have.
+
+    A local saved-post archive holds a third of its records with no
+    permalink, because the card they were captured from exposed none.
+    Those posts are held to the alternative claim instead: identified by
+    the archive's own namespace, with no link invented to satisfy a
+    check that every post has one.
+    """
+
     collected = [
         post
         for post in knowledge_base["posts"]
@@ -229,11 +240,39 @@ def test_every_collected_post_kept_its_provenance(knowledge_base):
     if not collected:
         pytest.skip("no collected posts in this checkout")
 
+    url_less = 0
+
     for post in collected:
         assert post["source"]["platform"] == "linkedin"
-        assert post["source"]["url"]
         assert post["source"]["captured_at"]
         assert post["original_text"].strip()
+
+        url = post["source"].get("url")
+
+        if not url:
+            url_less += 1
+
+            assert post["id"].startswith("urn-li-archive-"), post["id"]
+
+            saved = post.get("saved_item") or {}
+
+            assert saved.get("saved_item_id", "").startswith(
+                "urn:li:archive:"
+            )
+            assert saved.get("url_kind") == "identified_by_id"
+            assert not saved.get("canonical_url")
+
+            continue
+
+        assert url.startswith("https://www.linkedin.com/")
+
+    # The archive really does hold posts with no link, so the branch
+    # above is exercised rather than dead code in this checkout.
+    assert url_less == sum(
+        1
+        for post in collected
+        if post["id"].startswith("urn-li-archive-")
+    )
 
 
 def test_source_text_is_preserved_verbatim(knowledge_base):
@@ -384,6 +423,45 @@ def test_every_internal_link_resolves(site):
                 broken.append(f"{path.name} -> {target}")
 
     assert broken == []
+
+
+def test_no_published_page_names_this_machine(site):
+    """
+    A page may not carry the path its material was imported from.
+
+    Local saved-post archives live somewhere particular on somebody's
+    disk, and the importer reads that location. Nothing about it belongs
+    in output anyone else will read, and a leak here is the kind of thing
+    that only shows up once and then cannot be taken back.
+
+    Checked for the drive-letter and folder patterns a Windows path
+    actually has, rather than for a literal directory name, because the
+    test should keep working on a machine that never held this archive
+    at all.
+    """
+
+    patterns = (
+        re.compile(r"[A-Za-z]:\\\\?Users\\\\?"),
+        re.compile(r"[A-Za-z]:/Users/"),
+        re.compile(r"AppData"),
+        re.compile(r"chrome_session"),
+        re.compile(r"linkedin_saved_archive"),
+    )
+
+    offenders: list[str] = []
+
+    for path in sorted(site.rglob("*.html")):
+        body = path.read_text(encoding="utf-8")
+
+        for pattern in patterns:
+            match = pattern.search(body)
+
+            if match:
+                offenders.append(
+                    f"{path.name}: {match.group(0)}"
+                )
+
+    assert offenders == [], offenders[:10]
 
 
 def test_the_navigation_links_every_top_level_page(site):

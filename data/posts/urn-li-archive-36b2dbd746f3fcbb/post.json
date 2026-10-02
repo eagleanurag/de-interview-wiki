@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-36b2dbd746f3fcbb",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.474536+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:14:47Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐒𝐨𝐦𝐞𝐭𝐢𝐦𝐞𝐬 𝐢𝐭'𝐬 𝐧𝐨𝐭 𝐭𝐡𝐞 𝐡𝐚𝐫𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦𝐬 𝐭𝐡𝐚𝐭 𝐭𝐫𝐢𝐩 𝐮𝐬 𝐮𝐩 — 𝐢𝐭'𝐬 𝐭𝐡𝐞 𝐞𝐚𝐬𝐲 𝐨𝐧𝐞𝐬 𝐰𝐞 𝐨𝐯𝐞𝐫𝐥𝐨𝐨𝐤.\n\nIn the rush to prepare for medium to hard-level concepts — complex joins, optimizations, system design — we often forget to revise the basics. But in interviews, missing out on simple questions can cost you the opportunity.\n\nI had seen a similar experience in an 𝐀𝐦𝐚𝐳𝐨𝐧 interview, where the questions were easy on the surface.\n\nHere are a few question examples:\n\n1. Join Counts with Nulls & Duplicates: Given two tables with null and repeated values and calculate row count for all types of joins:\n\n* INNER JOIN\n* LEFT JOIN\n* RIGHT JOIN\n* FULL OUTER JOIN\n* CROSS JOIN\n\n2. UNION vs UNION ALL: Given two tables with duplicate values, explain and write queries to demonstrate UNION and UNION ALL\n\n3. Custom Join Output\nGiven:\nTable 1:x, x, x, x, y, y\nTable 2: x, x, y\n\nExpected Output:\nx x \nx x \nx null \nx null \ny y \ny y\n\nDesign SQL logic to achieve this.\n\n4. What happens when you submit a Spark job: Explain the internal execution flow from DAG creation to task scheduling and execution.\n\n5. Data Modeling + Metrics Calculation: Problem statement required:\n\n* Designing a data model for delivery riders and routes\n* Writing SQL to compute metrics like: Minimum time taken on a given path, Average delivery time per route, etc \n\n𝐊𝐞𝐲 𝐭𝐚𝐤𝐞𝐚𝐰𝐚𝐲: Even “easy” questions demand clarity, speed, and precision. Don't skip revisiting the basics during interview prep — they often matter the most.\n\nLooking to understand the complete set of topics required for thorough preparation - https://lnkd.in/dqW_8dMP\n\nFollow Shubham Y. for more updates and insights!\n\n#DataEngineering #AmazonInterview #SQL #Spark #SystemDesign #InterviewPreparation #BigData #DataModeling #amazon",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:36b2dbd746f3fcbb",
+    "saved_date": "2026-10-01T23:14:47Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

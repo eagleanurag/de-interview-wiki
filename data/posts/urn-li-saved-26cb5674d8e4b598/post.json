@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-26cb5674d8e4b598",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463423405413797888",
+    "captured_at": "2026-10-02T00:15:45.670729+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:08:01Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n4mo •\nMost people don’t fail PySpark interviews because they don’t know it.\nThey fail because they blank out on the basics.\nIn interviews, it’s rarely about writing complex pipelines.\nIt’s about how quickly you can recall and apply the right function.\nAnd under pressure… even simple things feel hard.\nA quick mental checklist that actually helps:\n𝗪𝗼𝗿𝗸𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗱𝗮𝘁𝗮\n→ creating / modifying columns\n→ filtering rows\n→ handling duplicates\n𝗖𝗼𝗺𝗯𝗶𝗻𝗶𝗻𝗴 𝗱𝗮𝘁𝗮𝘀𝗲𝘁𝘀\n→ joins (and when to use which type)\n→ union vs unionByName\n→ partitioning decisions\n𝗔𝗴𝗴𝗿𝗲𝗴𝗮𝘁𝗶𝗼𝗻𝘀\n→ group + aggregate patterns\n→ list vs set behavior\n→ quick profiling of data\n𝗛𝗮𝗻𝗱𝗹𝗶𝗻𝗴 𝗿𝗲𝗮𝗹-𝘄𝗼𝗿𝗹𝗱 𝗺𝗲𝘀𝘀𝗶𝗻𝗲𝘀𝘀\n→ null values\n→ conditional logic\n→ inconsistent data\n𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗯𝘂𝘁 𝗰𝗼𝗺𝗺𝗼𝗻\n→ window functions (ranking, ordering)\n→ date transformations\n→ working with nested / JSON data\nHere’s the catch:\nKnowing the function ≠ clearing the interview.\nWhat actually stands out is:\n• when you use it\n• why you use it\n• how it impacts performance\nThat’s the difference between:\n“I know PySpark”\nvs\n“I can solve problems using PySpark”\nIf you’re preparing right now, don’t just practice syntax.\nPractice thinking.\nThat’s what interviewers are really testing.\n📌 Save this for revision before interviews\n♻️ Repost if this helps someone preparing\n➕ Follow Aishwarya Pani for more Data Engineering interview insights\n#DataEngineering #PySpark #BigData #InterviewPrep #DataEngineer\nPyspark_Functions_Cheatsheet",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7463423405413797888_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:26cb5674d8e4b598",
+    "saved_date": "2026-10-01T23:08:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7463423405413797888",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7463423405413797888_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7463423405413797888_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

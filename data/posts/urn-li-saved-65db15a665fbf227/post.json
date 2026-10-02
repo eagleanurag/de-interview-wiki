@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-65db15a665fbf227",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7307271984038457345",
+    "captured_at": "2026-10-02T00:15:48.151415+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:33:03Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 is taking over the Data Engineering world. \n\nHere’s how you can master it in 2025!\n\n\n1. Introduction to Data Lakehouse | Databricks led training module\n(YT : Databricks)\n🔗 https://lnkd.in/gefjt4QC\n\n2. End to End Databricks series | PySpark, Spark SQL, Delta Live Tables\n(YT : Raja's Data Engineering)\n🔗 https://lnkd.in/gan3FkTK\n\n3. Databricks Tutorial (From Zero to Hero)\n(Ansh Lamba- YT: Ansh Lamba)\n🔗 https://lnkd.in/gsqC69WE\n\n4. End to End Azure Data Engineering Project | Azure Databricks and Azure Data Factory \n(YT : Mr. K Talks Tech)\n🔗 https://lnkd.in/gQ7RT5kJ\n\n5. End to End Databricks Playlist | Databricks for Data Engineering\n(Subham Khandelwal - YT : Ease with Data)\n🔗 https://lnkd.in/g_4X__j5\n\n6. Unity Catalog | Introduction\n🔗 https://lnkd.in/gf2PEryA\n\n7. Databricks and PySpark | Interview Questions\n🔗 https://lnkd.in/gAfqXEKZ\n\n8. Migration from Hive Metastore to Unity Catalog\n🔗 https://lnkd.in/gD7w3r7b\n\n\nDatabricks is here to stay ! Start your learning journey today.\n\nLet me know if you of any other cool resources in the comments below 👇🏾\n\n\n\n📲 𝐂𝐨𝐧𝐧𝐞𝐜𝐭 1 𝐭𝐨1 𝐰𝐢𝐭𝐡 𝐦𝐞 𝐡𝐞𝐫𝐞 :\nhttps://lnkd.in/gH4DeYb4\n\n\n\n♻️ Found this useful? Repost it!\n👋🏼 I post about the Data Career every day. Follow me for more.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7307271984038457345_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:65db15a665fbf227",
+    "saved_date": "2026-10-01T23:33:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7307271984038457345",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7307271984038457345_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

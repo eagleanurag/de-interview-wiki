@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-1e88d79ef4395fc0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338071173940813825",
+    "captured_at": "2026-10-02T00:15:45.400780+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:21:34Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Deloitte – Technical Interview (Round 1) | Azure Data Engineer\nInterview Duration: 40 mins\n\nI recently appeared for the first round of the technical interview at Deloitte for Azure Data Engineer role. The round focused on hands-on problem-solving, cloud architecture, SQL logic, and PySpark-based data processing.\nI’m sharing my experience to help others preparing for similar opportunities.\n\nHere’s a quick summary of the questions I was asked:\n\n1. Project Architecture & Challenges\n • Explained the end-to-end architecture of my project\n • Discussed challenges faced and how I handled them\n2. SQL Joins – Output Rows\n • Explained expected number of rows for INNER, LEFT, RIGHT, and FULL OUTER joins\n3. Removing Duplicates in SQL\n • Shared different approaches to remove duplicate records (using ROW_NUMBER, CTEs, DISTINCT, etc.)\n4. SQL Query – 7th Highest Salary\n • Write a query to fetch the 7th highest salary from a table\n5. PySpark – Gender Percentage Calculation\n • Write a PySpark program to calculate male and female percentage from employee data\n6. ADF + ADLS + SQL Server – SCD Type 2 Implementation\n • Explained how to implement SCD Type 2 using Azure Data Factory with ADLS as source and SQL Server as target\n • Discussed how to handle failures during pipeline execution\n7. Spark Caching – Real Use Case\n • Shared a real project use case where Spark caching improved performance\n8. Optimization Techniques\n • Discussed project-level (not theoretical) optimizations applied for better performance\n9. Problem Solving in Projects\n • Talked about a real issue encountered during the project and how I resolved it\n10. Data Security & Governance\n • Explained how I ensured data security and governance in my pipeline and architecture\nKey Takeaway:\nThe round emphasized practical experience and real-world problem-solving. Highly recommend being confident with:\n • SQL logic and edge cases\n • PySpark transformations\n • Azure Data Factory pipeline design\n • Data security & project-level optimizations\n\nAll the best to everyone preparing for interviews!\n\n#Deloitte #InterviewExperience #DataEngineering #Azure #ADF #SQL #PySpark #BigData #TechCareers #LinkedInTech #DataPipeline",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338071173940813825_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1e88d79ef4395fc0",
+    "saved_date": "2026-10-01T23:21:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338071173940813825",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338071173940813825_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-00bd7b1ba593332c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463624574018965504",
+    "captured_at": "2026-10-02T00:15:44.385808+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:07:33Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Implementing SCD Type 2 in PySpark on Databricks\n\nOne of the most important concepts in Data Engineering is preserving historical data while handling updates efficiently.\n\nIn this implementation, I used PySpark + Databricks Delta Lake to build an SCD Type 2 pipeline that:\n\n✅ Detects changed records\n✅ Expires old records\n✅ Inserts new active records\n✅ Maintains historical tracking\n✅ Supports audit & reporting requirements\n\n📌 Finance Example Used:\nCustomer account balance updates with effective start/end dates and current flags.\n\n💡 Why SCD Type 2 Matters?\nInstead of overwriting existing data, SCD2 preserves history by maintaining multiple versions of records over time.\n\n\n#PySpark #Databricks #SCD2 #DataEngineering #BigData #DeltaLake #Azure #ApacheSpark #ETL #DataWarehouse #CloudComputing #DataEngineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7463624574018965504_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:00bd7b1ba593332c",
+    "saved_date": "2026-10-01T23:07:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7463624574018965504",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7463624574018965504_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

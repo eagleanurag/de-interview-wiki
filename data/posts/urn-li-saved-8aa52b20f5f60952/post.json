@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-8aa52b20f5f60952",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337765415269363712",
+    "captured_at": "2026-10-02T00:15:49.085776+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:00Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Excited to share my latest project: an End-to-End Data Pipeline for Twitter Airline Sentiment Analysis! 📊\nI've built a system that takes raw tweets and transforms them into clear, actionable insights about airline sentiment. It's all about understanding what customers really think!\nHere's the core flow:\nReal-time Data Flow: I used Kafka to ingest tweets continuously.\nBig Data Processing: Spark Streaming processes the data and stores it efficiently on Hadoop (HDFS).\nData Warehousing: Hive lets us query and prepare this data with SQL.\nInteractive Insights: Finally, Power BI brings it all to life with a dynamic dashboard.\nThis project showcases skills in building full data pipelines, from raw data to interactive dashboards, all managed easily with Docker.\nIf you're interested in data engineering, analytics, or just curious about customer sentiment, check out the project on GitHub!\n🔗 GitHub Repo: https://lnkd.in/dBBtNn2R\n#DataEngineering #DataAnalytics #SentimentAnalysis #BigData #Kafka #Spark #Hadoop #Hive #PowerBI #Docker #DataPipeline #Python",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337765415269363712_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8aa52b20f5f60952",
+    "saved_date": "2026-10-01T23:20:00Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337765415269363712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337765415269363712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

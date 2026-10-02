@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-4f7f0accf3efe5a2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.898599+00:00",
+    "author": "Siva Nelluri",
+    "published_at": "2026-10-01T23:11:54Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Yesterday, I attended an L1 technical interview for a Data Engineer position at Eaton, which covered Snowflake, AWS S3, SQL, and ADF.\n========================≠======================\n\nSnowflake\n=========\n1.What are its three‑layer architecture components? \n2.Explain micro‑partitions and their impact on performance.?\n3.How do external stages work especially integration with AWS S3? \n4.What kind of SQL does Snowflake support?\n5.Difference between OLAP vs OLTP which one is Snowflake? \n6.How does data compression work in Snowflake? \n7.What are the Common performance‑tuning techniques?\n\nAWS S3\n======\n1.What are buckets and objects, and how do they form S3’s architecture? \n2.Explain storage classes Standard, Intelligent‑Tiering, Glacier?\n3.Describe consistency model read‑after‑write vs eventual consistency. \n4.How do you monitor access use CloudWatch, CloudTrail, S3 Inventory? \n5.What is S3 lifecycle policy and how to use it? \n6.How does S3 integrate with Lambda or Cloud front?\n\n\n SQL\n====\n\n1.Write a complex SQL query involving CTE and window functions find average monthly ratings, consecutive weekly events.\n2.Explain DML vs DDL vs DCL \n3.Discuss database design principles?\n4.how to convert row‑to‑comma‑separated aggregation\n using?\n\nAzure Data Factory \n≠==≠=====≠======\n1.What is Azure Data Factory and its primary use? \n2.Compare Snowflake vs ADF?\n3.Describe a scenario using ADF pipelines to move data from S3/Azure Blobs to Snowflake. \n4.How do you schedule, monitor, and manage pipelines in ADF?",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4f7f0accf3efe5a2",
+    "saved_date": "2026-10-01T23:11:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

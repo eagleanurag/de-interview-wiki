@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-9d3460c0aefd707a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345405753475616768",
+    "captured_at": "2026-10-02T00:15:50.019868+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:14:45Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐓𝐨𝐩 𝟏𝟎 𝐓𝐞𝐜𝐡 𝐌𝐚𝐡𝐢𝐧𝐝𝐫𝐚 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 (𝟐𝟎𝟐𝟓)\n\n\n.\n.\n.\n\n1. What are the key differences between Apache Hadoop and Apache Spark?\n\n2. Write a SQL query to fetch the second highest salary from an employee's table.\n\n3. Describe a real-world ETL pipeline you have built. What tools did you use?\n\n4. How does partitioning and bucketing improve performance in Hive?\n\n5. How have you used Apache Spark for data transformation and processing?\n\n6. What is a Slowly Changing Dimension (SCD)? Explain Type 1 and Type 2 with examples.\n\n7. What is schema evolution in Parquet or Avro, and how is it handled?\n\n8. How do you manage late-arriving data in a real-time streaming pipeline?\n\n9. Write a PySpark script to read a CSV file, remove nulls, and save it in Parquet format.\n\n10. What methods or tools do you use to ensure data quality in your pipelines?\n\n#DataEngineering #BigData #ApacheSpark #Hadoop #HDFS #ETL #DataPipeline #CloudDataEngineering #AWSDataEngineering #SQL #DataLake #ITInterview #DataEngineerInterview #InterviewPreparation #TechMahindraInterview #TechInterviewTips #GCP #AWS #DistributedSystems #TechMCQ #DataPipeline #CloudDataEngineering #AWSDataEngineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345405753475616768_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9d3460c0aefd707a",
+    "saved_date": "2026-10-01T23:14:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345405753475616768",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345405753475616768_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

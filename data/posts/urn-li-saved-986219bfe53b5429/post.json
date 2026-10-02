@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-986219bfe53b5429",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327875236828258304",
+    "captured_at": "2026-10-02T00:15:49.663959+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:24:38Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "80% of Data Engineering Candidates Struggle with These 14 Interview Topics. Learn them and stand out.\n\n1. Batch vs Streaming\nTradeoff: Batch is cost-efficient; Streaming is real-time. Pick wrong and SLAs/costs go off-track.\nInterview Q: How would late-arriving events affect your daily reports?\nDrill: Build a Spark batch job to S3. Rebuild it with Kafka + Flink. Compare freshness vs compute cost.\n\n2. Columnar Formats (Parquet, ORC)\nWhy: Column pruning & compression = 90% less I/O.\nPitfall: Tiny files destroy performance.\nDrill: Compare SQL scan over CSV vs Parquet with EXPLAIN ANALYZE.\n\n3. Partitioning & Clustering\nWhy: Partitioning skips data; clustering reduces scan depth.\nPitfall: Too many partitions = thousands of tiny tasks.\nDrill: Load logs partitioned by dt, then cluster by user_id. Observe task parallelism.\n\n4. Schema Evolution\nWhy: Real-world data changes constantly.\nInterview Q: “How do you evolve a schema without breaking consumers?”\nDrill: Use Avro + Confluent Registry to evolve a schema. Test compatibility modes.\n\n5. Change Data Capture (CDC)\nWhy: Keeps data fresh without full reloads.\nPitfall: Out-of-order events if binlog tracking fails.\nDrill: Stream MySQL binlogs with Debezium → Kafka → PostgreSQL. Check consistency.\n\n6. Watermarks & Late Data\nWhy: Event-time processing needs cutoffs.\nInterview Q: How do you handle 2-hour-late events in a 1-hour window?\nDrill: In Flink, simulate delayed events. Use allowedLateness. Track watermark state.\n\n7. Idempotent Writes\nWhy: Retries shouldn’t duplicate records.\nDrill: In Delta Lake, write with MERGE. Replay Kafka topic—verify counts remain stable.\n\n8. Data Lineage & Metadata\nWhy: You can’t debug metrics if you don’t know what changed them.\nDrill: Use OpenLineage or Marquez with Airflow. Track lineage for one KPI pipeline.\n\n9. Orchestration (Airflow)\nWhy: Manual scripts fail silently. DAGs bring order.\nInterview Q: How would you prevent accidental re-runs?\nDrill: Convert scripts to Airflow DAGs. Use depends_on_past + max_active_runs.\n\n10. Incremental vs Full Loads\nWhy: Full loads waste time and money; incrementals are harder but efficient.\nDrill: Redesign an S3-to-Redshift pipeline to use manifest-based incremental load.\n\n11. Data Skew\nWhy: One hot key can kill your job.\nInterview Q: Why did one task take 10x longer?\nDrill: Introduce skew in a Spark join. Observe stage duration. Fix with salting or repartitioning.\n\n12. Backpressure in Streaming\nWhy: Streams crash if source outruns processing.\nDrill: Overwhelm a Kafka → Spark Structured Streaming job. Tune maxOffsetsPerTrigger.\n\n13. NoSQL (MongoDB, DynamoDB)\nWhy: Not all data fits in rows and columns.\nQ: When would you use NoSQL over a relational DB?\nDrill: Build a product catalog in MongoDB. Run flexible queries on nested fields.\n\n14. Data Security & Access Control\nWhy: Data breaches = instant failure.\nQ: How do you control access to S3 or ADLS?\nDrill: Configure IAM (AWS) or RBAC (Azure) to grant object-level access.\n\n#DElveWithVani",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327875236828258304_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:986219bfe53b5429",
+    "saved_date": "2026-10-01T23:24:38Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327875236828258304",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327875236828258304_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

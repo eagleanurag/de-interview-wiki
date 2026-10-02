@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-1b3578ad02c46f99",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337803202441973760",
+    "captured_at": "2026-10-02T00:15:45.291537+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:15:59Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nWrites to 14K+ | Data Engineer | @Tredence Inc. | Certified Databricks Data Engineer | Azure Data Engineer | Snowflake | SQL | Pyspark | Python | ADF | ETL | Airflow |\n1yr •\nHere's interview question which was asked in DE interview of 'KPMG'.\nGot better solution? Let me know in comments.\n➕ Do Follow Akhil Rachuri For more Data Engineering content\nBetter reach: Vaishnavi MURALIDHAR Shubham Wadekar Ankita Gulati Ankur Bhattacharya Ankur Ranjan Sumit Mittal Karthik K. Deepak Goyal Sagar Prajapati Shashank Mishra 🇮🇳 Zach Wilson Rajat Gajbhiye Abhishek Jha Andreas Kretz Gowtham SB Robert Sahlin Deepanshu Kalra\ncredit: Ajinkya Gurav\nSave and reshare ✅\n𝑹𝒆𝒑𝒐𝒔𝒕 𝒊𝒇 𝒚𝒐𝒖 𝒇𝒊𝒏𝒅 𝒊𝒕 𝒖𝒔𝒆𝒇𝒖𝒍\n#dataengineering #databricks #bigdata #datamining #analytics #sql #cloudcomputing #interview #databricks #azuresynapse #usa #powerbi #adls #azuredatabricks #dataengineering #azure #azuredataengineer #azuredatabricks #spark #sparksql #sql #uk #bigdata #dataanalytics #azuredatafactory #europe #deltalake #deltatable #connections #techlake #azuredataengineer #interview #azuredevops #clouddata #jobsforfreshers #aws #gcp #connection #engineering #dataengineer #clouddata #microsoft #pyspark #python #linkedinlearning #data #lakehouse #datawarehouse #hiring #jobs #azurecloud #dataengineering #adf #datafactory #europeanunion #interviewpreparation #data #dataengineering #spark #apachespark #performancetuning #sparkoptimization\nKPMG",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337803202441973760_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1b3578ad02c46f99",
+    "saved_date": "2026-10-01T23:15:59Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337803202441973760",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337803202441973760_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7337803202441973760_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-050beb2c8f775262",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315044989753815041",
+    "captured_at": "2026-10-02T00:15:44.545910+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:46Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Built a complete end-to-end real-time data and machine learning pipeline using open-source tools.\nThis project collects air quality data from the WAQI API at 5-minute intervals, streams it via Kafka, processes it using Spark Structured Streaming, performs real-time feature engineering and predictions (t+5, t+10, t+15,.. t+30), and stores results in PostgreSQL.\n\nCore components:\n- ETL: Kafka + Spark structured streaming to Postgres \n- Data ingestion: Python script fetching data from WAQI API.\n- Data pipeline: Kafka for streaming, Spark for real-time processing and ML prediction.\n- Model serving: Flask API with endpoints for prediction, retraining, and testing.\n- Experiment tracking: MLflow for model versioning and experimentation.\n- Orchestration: Apache Airflow for automated retraining workflows.\n- Data warehouse: PostgreSQL for raw data, features, and predictions.\n- Containerization: Docker Compose setup with Confluent Kafka stack and Airflow components.\n\nTo start the system: configure Java and Spark (v3.5.5), set up environment variables, spin up services with Docker, and run ingestion, streaming, and model-serving scripts.\n\nPotential improvements:\n- Integrate Prometheus + Grafana for observability and system metrics.\n- Migrate to Kubernetes for scalable deployment.\n- Build analytical dashboards using Tableau or Power BI for insights.\n\nProject and code available here: https://lnkd.in/dRSaDkCK\nOpen to feedback and suggestions. \n\n#mlops #datascience #apache #confluent",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315044989753815041_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:050beb2c8f775262",
+    "saved_date": "2026-10-01T23:30:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315044989753815041",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315044989753815041_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

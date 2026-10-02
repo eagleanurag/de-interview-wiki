@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-474a4bd86b7cb1b5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.680445+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:24:42Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Day 15 - Real-Time ETL Scenario-Based Questions\n\n🔹 1. Your source has 10 million records. How will you optimize the ETL job?\nAnswer Ideas:\nUse partitioning (Hash or Range) to parallelize processing\nMinimize transformations in memory (avoid Lookups if data is large)\nPush logic to the source DB using SQL override\nUse bulk loading or batch commits\n\n🔹 2. How do you handle a scenario where some records are rejected during transformation?\nAnswer Ideas:\nRedirect bad records to a reject file/table\nCapture error message, source key, and timestamp for debugging\nUse error handling stages (e.g., Reject links in DataStage, Error log in Informatica)\n\n🔹 3. You need to pass different file paths for DEV, QA, and PROD. How would you do this?\nAnswer:\nUse parameter files or environment variables\nDataStage: ParamSet or DSParam file\nInformatica: Parameter file with $$SourceFilePath\n\n🔹 4. How do you implement incremental load (CDC)?\nAnswer:\nUse Last Updated Timestamp or Surrogate Key\nStore last load timestamp in a control table\nFilter source using WHERE last_update > :last_loaded_time\nFor Informatica, consider CDC mappings or Change Data Capture tools\n\n🔹 5. How would you load the most recent record per customer from a transaction table?\nApproach:\nSort by Customer ID and Date in descending order\nUse row_number() or stage logic to pick only first record\nIn Informatica: Use Sorter + Expression to flag first row\nIn DataStage: Use Remove Duplicates or Transformer with stage variables\n\nFor more such content keep following me\n#Keeppreparing #interviewsquestions #mostlyaskedquestions #frequent #data #ETL",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:474a4bd86b7cb1b5",
+    "saved_date": "2026-10-01T23:24:42Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

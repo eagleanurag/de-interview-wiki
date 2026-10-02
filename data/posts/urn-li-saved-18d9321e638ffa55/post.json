@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-18d9321e638ffa55",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326096495571533824",
+    "captured_at": "2026-10-02T00:15:45.194028+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:27:40Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Helping you crack your 1st 12+ LPA | Sr. Data & Business Analyst 🚀 | Azure • ADF • Python • SQL • Power BI • DAX | Microsoft Certified Data Analyst\n1yr •\n💻 Barclays Data Engineer Interview Questions💻\n🚀 Cracking the Barclays Data Engineer Interview (3–4 YOE) 🔍💻\nHey LinkedIn fam! 👋\nOver the past few weeks, I’ve been gathering real interview questions asked for the Data Engineer role at Barclays for professionals with 3–4 years of experience. 📊🧠\nI’ve broken them down into four key areas with detailed explanations:\n1️⃣ SQL – Query optimization, handling NULLs, second highest salary, and HAVING vs WHERE\n2️⃣ Data Modeling – Normalization, star vs snowflake schema, and designing a banking data warehouse\n3️⃣ Big Data Tools – Spark vs Hadoop, partitioning in Spark, and why Parquet is better than CSV\n4️⃣ Python Coding – Handling large CSVs, managing missing data, and using decorators with examples\n📘 Whether you're actively interviewing or brushing up on your concepts, this will give you a realistic view of the technical depth expected at top-tier firms like Barclays.\n🔁 Feel free to like, save, or share this post with anyone preparing for a Data Engineering role.\n💬 Grab the PDF and start learning .\n#DataEngineering #Barclays #InterviewPreparation #SQL #Python #BigData #ApacheSpark #DataWarehouse #LinkedInLearning #TechCareers #JobSearch #PythonTips\nBarclays Data Engineer Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326096495571533824_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:18d9321e638ffa55",
+    "saved_date": "2026-10-01T23:27:40Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326096495571533824",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326096495571533824_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

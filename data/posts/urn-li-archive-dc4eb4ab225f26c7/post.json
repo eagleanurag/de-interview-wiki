@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-dc4eb4ab225f26c7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.693053+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Tiger Analytics keeps asking these Data Engineering questions repeatedly.\nCTC - 21 LPA\nEXP - 4+\n\n1. Describe your project experience, including specific examples and details about your role and contributions.\n2. Explain all concepts related to triggers in Azure Data Factory (ADF).\n3. Describe how to implement all types of Slowly Changing Dimensions (SCD) in PySpark.\n4. How do you restart a pipeline in ADF if it fails?\n5. Explain how to configure Continuous Integration and Continuous Deployment (CI/CD) in notebooks.\n6. List and describe the activities used in ADF.\n7. How would you sample a random row in a huge dataset without throttling the database?\n8. Explain Databricks Delta Live Tables (DLT), and when would you use batch vs. streaming?\n9. Discuss your experience with AWS services like Glue and Redshift.\n10. Describe the architecture and implementation details of your recent projects.\n11. How do you handle schema evolution in your data pipelines?\n12. What strategies do you use for optimizing Spark jobs?\n13. Can you explain the concept of data partitioning and its benefits?\n14. How do you ensure data quality and integrity in your ETL processes?\n15. Describe a challenging data engineering problem you faced and how you resolved it.\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:dc4eb4ab225f26c7",
+    "saved_date": "2026-10-01T23:20:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

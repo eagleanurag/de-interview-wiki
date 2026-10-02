@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-0fb85d38fd969ebb",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.969929+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:10:28Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Today interview questions with# LTImindtree#CGI#&#CGI&\n\n1. Can you give your introduction based on the modules you’ve worked on?\n2. Explain your recent project using Databricks.\n3. What type of clusters have you used?\n4. Have you worked with Databricks Workflows?\n5. Have you implemented SCD Type-2?\n6. What are your roles and responsibilities in your previous organization?\n7. Have you worked in a production environment?\n8. How do you deploy your PySpark applications in production?\n🔹 Spark Concepts\n\n9. What is a wide transformation?\n10. What are the wide transformation functions in your code?\n11. What is Spark architecture?\n12. What is data skewness?\n13. What is the difference between coalesce and repartition?\n14. What is broadcast join in PySpark?\n15. What optimization techniques have you used in Spark?\n16. What is Z-Ordering? How have you used it?\n17. What is Liquid Clustering?\n🔹 Streaming & Failures\n\n18. What issues do you face while working with streaming data?\n19. What happens if a streaming job fails and corrupts data? How do you recover?\n20. How do you know how many records got updated/inserted in a Delta table?\n21. Do you need to enable something for tracking inserts/updates?\n🔹 PySpark Coding\n\n22. Write code to get frequency of each word from a text file.\n23. Get department name with second highest salary (SQL).\n24. Sort a DataFrame by customer ID.\n25. Filter null values from a DataFrame.\n26. Handle duplicate records in PySpark.\n27. Join two DataFrames with similar or different schemas using union.\n28. Add a new column with default value.\n29. Rename a column based on requirement.\n30. Pad a column (e.g., loan number) to a fixed length with leading zeros.\n31. Filter special characters and trim spaces in columns.\n32. Convert string to date format in streaming data.\n33. Convert a column to DecimalType in streaming.\n34. Write the code using class and method (structured way).\n35. Purpose of using overwrite and append modes.\n🔹 Databricks & Azure\n\n36. What is the purpose of clusters in Databricks?\n37. What are mount points in ADF and Databricks?\n38. Why do we use Azure Key Vault?\n39. How do you promote code from lower to higher environments?\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:0fb85d38fd969ebb",
+    "saved_date": "2026-10-01T23:10:28Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

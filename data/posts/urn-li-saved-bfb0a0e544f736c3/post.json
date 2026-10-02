@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-bfb0a0e544f736c3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349649977947693056",
+    "captured_at": "2026-10-02T00:15:51.073747+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:30Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "You may get an unfair advantage in data analytics and engineering interviews if you complete these 8 projects.\n\n\n1 - Superstore data analysis: s3 , aws glue, Athena , SQL , quick sight \n\n2- End to end data analytics ETL project - SQL and Python \n\n3- Netflix data cleaning ELT project - Python and SQL \n\n4- SQL Portfolio Project - SQL \n\n5- Yelp Business reviews analysis- S3 , Python , Snowflake , SQL \n\n6- Food delivery data insights - Advanced SQL project\n\n7- Employees History Salary Reporting - Advanced SQL project.\n\n8- Event based AWS ETL pipeline - AWS S3 , Lambda , IAM , Glue and Athena. \n\nAfter the 8 projects you will feel more confident than ever 😇\n\nLink to the complete playlist in the comments section.\n\n\n#analytics #projects",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349649977947693056_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:bfb0a0e544f736c3",
+    "saved_date": "2026-10-01T23:11:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349649977947693056",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349649977947693056_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

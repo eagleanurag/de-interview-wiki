@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e5549136ef8f0294",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315596015292579840",
+    "captured_at": "2026-10-02T00:15:52.865530+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:03Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\nGoogle, Amazon, American Express, Flipkart, PwC – Most Companies Ask the 𝐒𝐚𝐦𝐞 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 (𝐈𝐧𝐭𝐞𝐫𝐦𝐞𝐝𝐢𝐚𝐭𝐞 𝐭𝐨 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝)\nIf you're preparing for\n𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 | 𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 | 𝗗𝗮𝘁𝗮 𝗦𝗰𝗶𝗲𝗻𝘁𝗶𝘀𝘁 | 𝗣𝗿𝗼𝗱𝘂𝗰𝘁 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 𝗿𝗼𝗹𝗲𝘀 — these are the Data Analyst questions that frequently come up in startups, unicorns, and FAANG:\n📊 𝐓𝐎𝐏 20 𝐌𝐎𝐒𝐓 𝐀𝐒𝐊𝐄𝐃 𝐈𝐍𝐓𝐄𝐑𝐕𝐈𝐄𝐖 𝐐𝐔𝐄𝐒𝐓𝐈𝐎𝐍𝐒:\n1. How do you handle missing values? Compare mean, median, KNN, and interpolation methods.\n2. What are the types of joins in SQL? Real-world scenario where you'd use each.\n3. Explain the difference between correlation and causation with an example.\n4. You’re given 3 tables: Users, Orders, Products. Write a query to get top 5 products per user by revenue.\n5. What are the limitations of Excel when working with large datasets?\n6. How do you handle outliers in a dataset? When would you not remove them?\n7. Difference between UNION and UNION ALL — use case in an analytics project?\n8. What is cohort analysis? Where have you applied it in real life?\n9. How would you A/B test a new product feature? Key metrics and statistical tests involved?\n10. How do you calculate Customer Lifetime Value (CLTV)?\n11. What’s the purpose of using a Window function in SQL?\n12. How to explain a sudden drop in sales in a dashboard? What steps would you take?\n13. Describe the difference between OLAP and OLTP databases in analytics context.\n14. How do you optimize slow SQL queries on large datasets?\n15. What are surrogate keys vs natural keys in data warehousing?\n16. What’s the best way to communicate data insights to non-technical stakeholders?\n17. In an Excel dashboard, how do you build dynamic filters using slicers or pivot tables?\n18. What’s the most complex Excel formula you’ve used? Explain the logic.\n19. How do you identify seasonality and trend in time series data using Python?\n20. What KPIs would you track for an e-commerce business? How would you derive them?\n🎯 𝟭𝟮4𝟬𝟬 + 𝐇𝐑 𝐄𝐦𝐚𝐢𝐥𝐬 𝐚𝐭 𝐉𝐮𝐬𝐭 ₹𝟖𝟗: https://lnkd.in/gGa7zm9g\n📌 𝐏𝐫𝐚𝐜𝐭𝐢𝐜𝐢𝐧𝐠 𝐭𝐡𝐞𝐬𝐞 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐜𝐚𝐧 𝐥𝐞𝐯𝐞𝐥 𝐮𝐩 𝐲𝐨𝐮𝐫 𝐫𝐞𝐚𝐝𝐢𝐧𝐞𝐬𝐬 𝐟𝐨𝐫 𝐡𝐢𝐠𝐡-𝐢𝐦𝐩𝐚𝐜𝐭 𝐝𝐚𝐭𝐚 𝐫𝐨𝐥𝐞𝐬 𝐚𝐜𝐫𝐨𝐬𝐬 𝐝𝐨𝐦𝐚𝐢𝐧𝐬 — 𝐞𝐬𝐩𝐞𝐜𝐢𝐚𝐥𝐥𝐲 𝐰𝐡𝐞𝐧 𝐜𝐨𝐦𝐛𝐢𝐧𝐞𝐝 𝐰𝐢𝐭𝐡 𝐒𝐐𝐋, 𝐏𝐲𝐭𝐡𝐨𝐧, 𝐜𝐚𝐬𝐞 𝐬𝐭𝐮𝐝𝐢𝐞𝐬, 𝐚𝐧𝐝 𝐩𝐫𝐨𝐝𝐮𝐜𝐭 𝐭𝐡𝐢𝐧𝐤𝐢𝐧𝐠.\n💡 𝐁𝐎𝐍𝐔𝐒: Attaching a PDF packed with Real Data Analyst Case Studies, SQL queries, charts, KPI metrics, and problem-solving frameworks — designed to mirror real interview settings.\n💬 𝐖𝐡𝐚𝐭’𝐬 𝐭𝐡𝐞 𝐦𝐨𝐬𝐭 𝐜𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐢𝐧𝐠 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐲𝐨𝐮’𝐯𝐞 𝐟𝐚𝐜𝐞𝐝? 𝐋𝐞𝐭’𝐬 𝐝𝐢𝐬𝐜𝐮𝐬𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐜𝐨𝐦𝐦𝐞𝐧𝐭𝐬.\nFollow Bhavesh Arora\n#DataAnalytics #SQLInterview #CaseStudies #ExcelTips #DataScience #AnalyticsJobs #FAANG #ProductAnalytics\nCrack Any Data Related Interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315596015292579840_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e5549136ef8f0294",
+    "saved_date": "2026-10-01T23:30:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315596015292579840",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315596015292579840_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

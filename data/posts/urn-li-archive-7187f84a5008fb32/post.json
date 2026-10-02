@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-7187f84a5008fb32",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.350463+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:54Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Hey #DataEngineering fam! 👋 My journey has led me to conduct interviews, and I'm spotting questions that go beyond theory – they test real-world experience! (More on those 'not-so-normal' questions soon! 😉)\n\nTo kick things off, let's tackle 5 common, yet crucial, scenarios in ETL. These are the ones where practical know-how shines. What's your go-to solution for these? 👇\n\n1. Optimize an ETL job for 10 million records? 🚀\n* My Take: Don't just SELECT *!\n* Key Strategies:\n* Parallelize: Use Spark partitioning or file-based partitioning (ADLS).\n* Push Logic: Filter/aggregate at source DB (WHERE, GROUP BY).\n* Minimize In-Memory: Be smart with large lookups/joins.\n* Bulk Load: Efficiently write data in batches (ADF Copy Activity, Spark configs).\n\n2. Handle records rejected during transformation? 🚫\n* My Take: One bad record shouldn't break the pipeline!\n* Key Strategies:\n* Redirect: Send bad records to a reject file/table (DLQ in ADLS).\n* Capture Metadata: Log error, source ID, timestamp for debugging.\n* Fault Tolerance: Use ADF's settings or Spark's PERMISSIVE mode / try-except.\n\n3. Pass different file paths for DEV, QA, PROD? ⚙️\n* My Take: Avoid hardcoding at all costs!\n* Key Strategies:\n* Parameterization: Use pipeline parameters in ADF.\n* Environment Variables: Configure paths external to code.\n* Secure Secrets: Use Azure Key Vault for sensitive credentials.\n\n4. Implement Incremental Load (CDC)? 🔄\n* My Take: Efficiently process only new/changed data.\n* Key Strategies:\n* High-Water Mark: Track last_updated_timestamp or max_key.\n* Control Table: Store the last loaded mark for each job.\n* Filtered Query: Pull data using WHERE LastUpdatedTimestamp > :bookmark_value.\n* Delta Lake MERGE: Simplify CDC in Databricks.\n\n5. Load the most recent record per customer from a transaction table? 📊\n* My Take: A classic for getting the latest state of an entity.\n* Key Strategies:\n* Sort & Rank: Group by customer, then sort by date (DESC).\n* Window Functions: Use Spark SQL's ROW_NUMBER() over PARTITION BY CustomerID ORDER BY TransactionDate DESC.\n* Filter: Select WHERE rn = 1 for the latest record.\n\nWhich of these scenarios have you tackled recently? What are your preferred tools or techniques? Share your insights and let's discuss! 👇\n\n#DataEngineering #AzureDatabricks #Databricks #DataFactory #AzureDataFactory #ADF #ADB #AzureDataEngineer #ETL #InterviewQuestions #DataOps #CloudData #Azure #CareerTips #CommunityLearning",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7187f84a5008fb32",
+    "saved_date": "2026-10-01T23:20:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

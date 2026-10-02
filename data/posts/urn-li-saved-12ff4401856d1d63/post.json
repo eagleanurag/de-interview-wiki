@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-12ff4401856d1d63",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343878669532028928",
+    "captured_at": "2026-10-02T00:15:44.851676+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:16:00Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Helping you crack your 1st 12+ LPA | Sr. Data & Business Analyst 🚀 | Azure • ADF • Python • SQL • Power BI • DAX | Microsoft Certified Data Analyst\n1yr •\n🚀 Uber Data Engineer Interview Questions\n💰 CTC: ₹31+ LPA | 💡 Real-world, high-impact scenarios\nAfter deep-diving into Uber’s interview pattern, I’ve compiled 15 must-practice Data Engineering questions that test both your SQL + DSA + System Design skills.\n📌 Topics covered:\n✅ SQL-based analysis (Top Drivers, Duplicate Detection, Weekly Metrics)\n✅ Stream & Real-time Processing (Flink, Spark, Kafka, Watermarking)\n✅ System Design (Exactly-once delivery, schema versioning, scale planning)\n✅ Core DSA Problems (Median in stream, cycle detection, LRU cache)\n🎯 If you’re preparing for Data Engineering/Data Analyst/BI Analyst roles, this PDF is tailor-made to strengthen your practical + system thinking.\n📥 Grab the PDF below\n.\n.\n.\n📚 Want access to 30+ company-specific interview PDFs (Uber, Flipkart, EY, Microsoft, Deloitte, and more)?\n🔗 Check out my Topmate page:\n👉 https://lnkd.in/gtMfC-RK\n200 + SQL Interview Questions\nhttps://lnkd.in/gJ7pCeD9\nAmazon SQL Interview Questions\nhttps://lnkd.in/gCanXviB\nLet’s grow together. 💪\n#dataengineering #datascience #dataanalytics #sql #spark #bigdata #uberinterview #systemdesign #topmate #dataanalyst #bi #kafka #flink #careerprep #interviewquestions #datacommunity\nUber Data Engineer Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343878669532028928_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:12ff4401856d1d63",
+    "saved_date": "2026-10-01T23:16:00Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343878669532028928",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343878669532028928_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7343878669532028928_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

@@ -279,15 +279,19 @@ def _map_header(
                 mapping[field_name] = str(index)
                 break
 
-    if "url" not in mapping:
-        # A manifest with no URL column cannot describe a saved item,
-        # so the file itself is reported rather than each row.
+    if "url" not in mapping and "source_id" not in mapping:
+        # Neither a link nor an identifier, so the file cannot describe
+        # anything, and saying so once beats saying it per row. A file
+        # with an identifier column and no link column is a legitimate
+        # list of posts that have no permalink, and is not reported here.
         result.issues.append(
             ReadIssue(
                 location="header",
                 message=(
                     "no URL column found; looked for "
                     + ", ".join(URL_HEADERS[:4])
+                    + ". A list of posts that have no permalink needs a "
+                    "source id column instead."
                 ),
             )
         )
@@ -544,18 +548,22 @@ def _item_from_fields(
     location: str,
     result: ManifestRead,
 ) -> SavedItem | None:
-    """Build one Saved Item, reporting anything unusable."""
+    """
+    Build one Saved Item, reporting anything unusable.
+
+    A row is normally identified by its URL. A row with no URL is
+    accepted when it carries an identifier instead, because that is a
+    different claim from a row that says nothing: the first knows which
+    post it is and has no link to it, the second does not describe a
+    saved item at all. Refusing both would throw away real posts over a
+    cosmetic difference, and inventing a URL to make the row look
+    complete would be worse still.
+    """
 
     raw_url = fields.get("url")
 
     if not raw_url:
-        result.issues.append(
-            ReadIssue(
-                location=location,
-                message="no URL, so the row does not describe a saved item",
-            )
-        )
-        return None
+        return _item_without_url(fields, location, result)
 
     try:
         normalized = normalize_linkedin_url(raw_url)
@@ -566,6 +574,51 @@ def _item_from_fields(
         return None
 
     item = SavedItem.from_url(normalized)
+
+    item.saved_date = fields.get("saved_date")
+    item.title = fields.get("title")
+    item.author = fields.get("author")
+    item.notes = fields.get("notes")
+    item.bundle = fields.get("bundle")
+
+    return item
+
+
+def _item_without_url(
+    fields: dict[str, str],
+    location: str,
+    result: ManifestRead,
+) -> SavedItem | None:
+    """
+    Build an item a row identifies without a link.
+
+    Only when the row names the identifier itself, or names a bundle
+    whose own capture file carries one. A row with neither still cannot
+    be attached to anything, and is reported exactly as before.
+    """
+
+    source_id = fields.get("source_id")
+
+    if not source_id:
+        result.issues.append(
+            ReadIssue(
+                location=location,
+                message=(
+                    "no URL and no identifier, so the row does not "
+                    "describe a saved item"
+                ),
+            )
+        )
+        return None
+
+    try:
+        item = SavedItem.from_source_id(source_id)
+
+    except ValueError as exc:
+        result.issues.append(
+            ReadIssue(location=location, message=str(exc))
+        )
+        return None
 
     item.saved_date = fields.get("saved_date")
     item.title = fields.get("title")

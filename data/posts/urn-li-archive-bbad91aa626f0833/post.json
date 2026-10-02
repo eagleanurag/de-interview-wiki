@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-bbad91aa626f0833",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.047471+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:13:41Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "If I were to start learning #python again for analytics, this is how I would prioritize topics for learning:\n\nWeek 1: Learning python basics + Control flow Statement\n⏩ Syntax, data types, variables, and basic operations\n⏩If-Else condition, For and While loop ,Functions\n\nWeek 2: Data structures and data manipulations\n⏩Lists and dictionaries\n⏩Working with Text Data\n\nWeek 3 &4: Data Analysis Libraries\n⏩Reading from and writing to files (CSV, XLSX)\n⏩Introduction to Numpy, Pandas & Matplotlib\n\nData Manipulations using pandas:\n⏩Working with data frames and series\n⏩Basic operations Filtering, Merging, Sorting, Aggregating data\n\nData Visualization using Matplotlib/Seaborn:\n⏩Creating Histograms, Scatterplot, Charts (Line, Bar, Pie)\n\nNow start building mini projects. [ Start with basic EDA and keep adding complexities with time]\n\nI will deprioritize learning and implementing ML algo's at the start and focus more on basics initially.\n\nGaurav Agrawal\n\n#analytics #python #datafam\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bbad91aa626f0833",
+    "saved_date": "2026-10-01T23:13:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-f4ed7d34c97f1bbb",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7289482734530412544",
+    "captured_at": "2026-10-02T00:15:53.290838+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:36:58Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "100K+ @Linkedln🚀 | Software Developer | AI & Tech Content Creator | Helping Brands to Grow | Personal Branding Strategist on LinkedIn™ | Open for Collaboration\n1yr •\n10 Things you need to become an AI/ML engineer:\n1. Framing machine learning problems\n2. Weak supervision and active learning\n3. Processing, training, deploying, inference pipelines\n4. Offline evaluation and testing in production\n5. Performing error analysis. Where to work next\n6. Distributed training. Data and model parallelism\n7. Pruning, quantization, and knowledge distillation\n8. Serving predictions. Online and batch inference\n9. Monitoring models and data distribution shifts\n10. Automatic retraining and evaluation of models\nHere are 10 FREE courses you DO NOT want to miss:\n<>. Google Data Analytics:\n🔹https://lnkd.in/gdQQH5UU\n1. Introduction to Data Science\n- https://lnkd.in/g9r3YCKH\n2. IBM Data Science\n- https://lnkd.in/gCKESD_x\n3. Advanced Data Science with IBM\n- https://lnkd.in/gxc8-nH6\n4. Applied Data Science with Python\n- https://lnkd.in/gX_Q6CZc\n5. Data Science: Foundations using R\n- https://lnkd.in/g2aYiqmb\n6. Learn SQL Basics for Data Science\n- https://lnkd.in/g-x3XBGA\n7. Data Science Fundamentals with Python and SQL\n- https://lnkd.in/gDmzqhtJ\n8. Advanced Statistics for Data Science\n- https://lnkd.in/gQAFM-PT\n9. Mathematics for Machine Learning and Data Science\n- https://lnkd.in/gn7kEyFX\n10. Genomic Data Science\n- https://lnkd.in/g6YMKeHA\nHappy Learning! 🙌\n#mitcourses #freecourses #ibmdatascience #datascience #python #sql #statistics #genomic\n…see more\nMachine Learning Roadmap 🛣️",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7289482734530412544_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f4ed7d34c97f1bbb",
+    "saved_date": "2026-10-01T23:36:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7289482734530412544",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7289482734530412544_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

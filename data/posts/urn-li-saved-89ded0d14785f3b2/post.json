@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-89ded0d14785f3b2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340936303015841792",
+    "captured_at": "2026-10-02T00:15:49.037018+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:18:28Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 SQL interview questions for PwC\n\nQuestion:\nYou have a list of products and a purchase log with customer ratings (1–5 stars).\n👉 For each product category, find the lowest price among products that received at least one 4-star or 5-star rating.\nIf no such rating exists in a category, return 0 as the lowest price.\n✅ Output: One row per category, sorted alphabetically by category name.\n\n📊 Table: Product\n\n✅ Columns: \n 1️⃣ id :: INT\n 2️⃣ name :: STRING\n 3️⃣ category :: STRING\n 4️⃣ price :: INT\n\n📊 Table: review\n\n✅ Columns: \n 1️⃣ id :: INT\n 2️⃣ product_id :: INT\n 3️⃣ rating :: INT\n\n\n👇 Can you crack this?\nDrop your query in the comments — \n\nSolution: https://lnkd.in/ghaiWwDe\n\n#SQL \n#DataAnalytics \n#InterviewPrep \n#pwc\n#SQLInterview \n#DataAnalyst\n#businessanalyst",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340936303015841792_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:89ded0d14785f3b2",
+    "saved_date": "2026-10-01T23:18:28Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340936303015841792",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340936303015841792_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

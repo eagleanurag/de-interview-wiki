@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-92a955a7ac3f3724",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327458889296232450",
+    "captured_at": "2026-10-02T00:15:49.515308+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:24:39Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🧠 “Do Data engineers still need to master SQL in 2025?”\nYes. Absolutely.\n\nIn one of my recent projects, I was working with Azure Data Factory + Snowflake + dbt.\n The pipelines looked modern, the tools were shiny — but what was at the heart of every transformation?\n → SQL.\n\nWhether it was:\nWriting incremental models in dbt\nBuilding CTEs for layered logic\nCreating views with optimized joins\nOr debugging slow queries in Snowflake\n\nSQL was everywhere.\n And it wasn’t just about writing queries — it was about thinking in sets, designing for performance, and building clean logic that scales.\n\n💡 What I’ve learned:\n You don’t have to know every modern tool — but if you can write good SQL, you can work with almost any data platform.\n\n📌 If you’re just starting in data engineering, make SQL your foundation. Everything else will build on top of it.\n👉 Curious: What’s the most challenging SQL logic you've written in production?\n#DataEngineering #SQL #BigData #ETL #dbt #Snowflake #AzureDataFactory #LinkedInTopVoiceJourney #DataEngineeringTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327458889296232450_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:92a955a7ac3f3724",
+    "saved_date": "2026-10-01T23:24:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327458889296232450",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327458889296232450_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-1443eb38b950652d",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.033042+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:29Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Databricks pays around 30-40LPA for SDE-1 and 80-90LPA for SDE-2 role😱😱😱\nThis is the question they generally ask\n\nHow would you search blogs by category in a distributed DB when primary key is author_id?\n\n- Searching blogs for a specific user is easy — just partition shards by author_id.\n- But searching by category globally is a real pain. Why?\n\n- What if one shard takes forever to respond?\n- What if a shard is completely down?\n- Even if all shards are healthy, scanning every row is slow\n\n🔑 The answer? Global Secondary Indexes (GSIs)\n\n- You create new shards partitioned by category. \n- These shards can either:\n - Store a reference to the actual blog in the original shard, or\n - Contain a duplicate copy of the blog\n\nBut still 2-3 issues😞😞\n\n- How do you sync data between the main and GSI shards?\n\n- What if the query is: “Find blogs for category X authored by user Y” — can we optimize further?\n\nLet me know your thoughts in comments\n\n#SystemDesign #Databricks #InterviewPrep #SoftwareEngineering",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:1443eb38b950652d",
+    "saved_date": "2026-10-01T23:11:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

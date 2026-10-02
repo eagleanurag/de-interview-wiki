@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-50121e02116d5ac5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.011054+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:09:51Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Wells Fargo Data Analyst Interview Experience (1-3 Years)\nCTC - 16 LPA\n\n\nSQL Questions\n\n 1. You have a table Accounts with columns AccountID, CustomerID, Balance, and LastTransactionDate. Write a query to identify accounts that have been inactive for more than 12 months.\n 2. Given a table Transactions with columns TransactionID, AccountID, Amount, and TransactionDate, find the top 3 accounts with the highest total transaction volume for each month.\n 3. A table LoanApplications contains columns ApplicationID, CustomerID, LoanAmount, ApprovalStatus, and ApplicationDate. Write a query to calculate the average loan amount for approved applications submitted in the last six months.\n 4. Explain how a clustered index works and how it differs from a non-clustered index.\n 5. Describe a scenario where you would use a self-join in SQL and explain its benefits.\n\nPython Questions\n\n 6. Write a Python script to process a JSON file containing customer data and convert it into a structured DataFrame.\n 7. Develop a function to calculate the moving average of a given numerical column in a dataset.\n 8. Explain how you would use Python to validate and clean data received from an external source (e.g., removing duplicates, handling null values, etc.).\n 9. Write a Python program to identify and report outliers in a numerical dataset using the interquartile range (IQR) method.\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:50121e02116d5ac5",
+    "saved_date": "2026-10-01T23:09:51Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

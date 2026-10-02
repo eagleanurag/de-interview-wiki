@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-3c7e687a50aa2457",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339105847597219840",
+    "captured_at": "2026-10-02T00:15:46.724069+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:01Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "SAP PI/PO Consultant @ IBM | Ex TCSer | Ex Infoscian | Marketing | Tech || Driving (Helping) Brands to go viral | Brand Partnership | 36k+ followers|10M Impressions | DM for Collabs\n1yr •\n❌ Stop randomly practicing SQL questions hoping to crack MNC interviews.\n✅ Instead, focus on what actually gets asked — with a twist.\nHere are the Top SQL Questions MNCs Love to Ask 👇\n🔹 Basic Level\n✔️ What are the key differences between SQL and NoSQL databases?\n✔️ Explain different types of SQL joins with examples.\n✔️ What’s the difference between CHAR and VARCHAR?\n🔸 Intermediate Level\n✔️ DELETE vs TRUNCATE — what’s the real difference?\n✔️ How do indexes work, and why do they matter?\n✔️ What are aggregate functions in SQL? Give examples.\n⚠️ Heads-up: Don’t just memorize these. MNC recruiters often twist them to test your thinking, not your memory.\n#SQL #TechInterviews #SQLPrep #SQLInterviewQuestions #SQLTips #LearnSQL #SQLLearning #SQLPractice\nSQL Interview Q & A",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339105847597219840_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3c7e687a50aa2457",
+    "saved_date": "2026-10-01T23:19:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339105847597219840",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339105847597219840_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

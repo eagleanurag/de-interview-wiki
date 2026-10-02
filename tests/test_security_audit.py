@@ -499,6 +499,278 @@ def bare_calls(path: Path, only: tuple[str, ...] = ()) -> set[str]:
     return found
 
 
+def archive_sources() -> list[Path]:
+    """
+    Every module the local-archive importer is made of.
+
+    Held to the same boundary as the saved-items package, because it
+    runs on the same material: a saved-post archive is user-supplied
+    content, and the fact that it arrived as one JSON file rather than a
+    folder of drops does not make it any more trustworthy.
+    """
+    return sorted(
+        (REPO_ROOT / "src" / "ingestion" / "linkedin_archive").rglob(
+            "*.py"
+        )
+    )
+
+
+def test_the_archive_importer_reaches_nothing_it_should_not() -> None:
+    """
+    No credential, no network, no browser, no process.
+
+    The archive is a local folder. Every one of these capabilities
+    would be the importer acquiring a way to act rather than read, and
+    the whole reason the pipeline can be trusted with someone's saved
+    material is that it cannot.
+    """
+
+    banned_modules = {
+        "socket",
+        "ssl",
+        "http",
+        "requests",
+        "httpx",
+        "aiohttp",
+        "urllib.request",
+        "ftplib",
+        "telnetlib",
+        "playwright",
+        "selenium",
+        "keyring",
+        "netrc",
+        "getpass",
+        "subprocess",
+        "shlex",
+        "pty",
+        "multiprocessing",
+        "src.ingestion.credentials",
+        "credentials",
+        "src.agent",
+    }
+
+    offenders: list[str] = []
+
+    for path in archive_sources():
+        for name in imported_modules(path):
+            if name in banned_modules or name.startswith("src.agent"):
+                offenders.append(f"{path.name}: {name}")
+
+        for name in bare_calls(path):
+            if name in EXECUTION_CALLS:
+                offenders.append(f"{path.name}: {name}()")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_the_archive_importer_reads_no_environment_variable() -> None:
+    """
+    Its input is a path the user gave. Reading the environment would
+    give it a channel they did not choose.
+
+    Checked as environment *access* rather than as the ``os`` import,
+    because the importer legitimately uses ``os.link`` to place media
+    without copying it and ``os.replace`` to write atomically. A rule
+    that banned the module would have banned the right behaviour; a
+    rule that bans the reads bans the thing that matters.
+    """
+
+    offenders: list[str] = []
+
+    for path in archive_sources():
+        source = path.read_text(encoding="utf-8")
+
+        if "environ" in source or "getenv" in source:
+            offenders.append(f"{path.name}: reads the environment")
+
+        for name in imported_modules(path):
+            if name in {"getpass", "dotenv", "pathlib.PureEnvPath"}:
+                offenders.append(f"{path.name}: {name}")
+
+        for name in bare_calls(path):
+            if name in {"getenv", "putenv", "load_local_environment"}:
+                offenders.append(f"{path.name}: {name}()")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_the_archive_importer_only_uses_the_filesystem_primitives_it_needs(
+) -> None:
+    """
+    The two ``os`` calls it makes are a hard link and an atomic move.
+
+    Named because a blanket ban on the module would have been the wrong
+    rule, and this states the two that are actually justified: a second
+    name for the same bytes, and a rename that cannot be observed
+    half-finished.
+    """
+
+    used: set[str] = set()
+
+    for path in archive_sources():
+        for name in qualified_calls(path):
+            if name.startswith("os."):
+                used.add(name)
+
+    assert used <= {"os.link", "os.replace"}, sorted(used)
+
+
+def test_the_archive_session_directory_is_named_in_the_code() -> None:
+    """
+    A browser session is a credential in a different shape.
+
+    Named as a constant rather than left alone, so the refusal is
+    something a reader can see instead of an omission somebody has to
+    notice.
+    """
+    from src.ingestion.linkedin_archive.archive import (
+        FORBIDDEN_DIRECTORIES,
+    )
+
+    assert "chrome_session" in FORBIDDEN_DIRECTORIES
+
+
+def test_no_archive_path_reaches_a_tracked_file() -> None:
+    """
+    The drop zone is git-ignored, so no committed file can hold one.
+
+    Checked against the index rather than the working tree, because a
+    path that is ignored now and force-added later is the case that
+    would leak.
+    """
+    import subprocess
+
+    tracked = subprocess.run(
+        ["git", "ls-files"],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        check=True,
+    ).stdout.splitlines()
+
+    offenders = [
+        path
+        for path in tracked
+        if path.startswith("data/incoming/")
+        or "linkedin_saved_archive" in path
+        or "chrome_session" in path
+    ]
+
+    assert offenders == [], offenders
+
+
+def test_no_committed_post_names_a_local_machine() -> None:
+    """
+    A published post may not carry the path it was imported from.
+
+    Checked over the committed posts rather than over one fixture,
+    because the leak this guards against only exists at scale: a
+    single record that happened to include a path would pass every
+    unit test and still put ``C:\\Users\\...`` on a public page.
+
+    The check is on the whole document and then again on every
+    path-shaped field, because a search for ``..`` alone is answered by
+    the ordinary prose in a technical post -- "and..", "# ..." -- and a
+    check that cries wolf on those would be a check nobody trusts.
+    """
+
+    import json
+
+    posts = REPO_ROOT / "data" / "posts"
+
+    if not posts.is_dir():
+        pytest.skip("data/posts is absent")
+
+    needles = (
+        "C:\\Users",
+        "C:/Users",
+        "linkedin_saved_archive",
+        "chrome_session",
+        "AppData",
+        str(REPO_ROOT),
+    )
+
+    offenders: list[str] = []
+
+    for directory in sorted(posts.iterdir()):
+        if not directory.is_dir():
+            continue
+
+        body = (directory / "post.json").read_text(encoding="utf-8")
+
+        for needle in needles:
+            if needle in body:
+                offenders.append(f"{directory.name}: {needle!r}")
+
+        payload = json.loads(body)
+
+        def walk(node, where: str = "$") -> None:
+            if isinstance(node, dict):
+                for key, value in node.items():
+                    walk(value, f"{where}.{key}")
+
+            elif isinstance(node, list):
+                for index, value in enumerate(node):
+                    walk(value, f"{where}[{index}]")
+
+            elif isinstance(node, str) and any(
+                token in where.lower()
+                for token in ("media", "path", "url", "dir", "file")
+            ):
+                # A field that is meant to hold a location, so a
+                # traversal or an absolute path in one is a real
+                # finding rather than a coincidence of prose.
+                if (
+                    "..\\" in node
+                    or "../" in node
+                    or node.startswith("/")
+                    or node.startswith("\\\\")
+                ):
+                    offenders.append(f"{directory.name}: {where}={node[:60]!r}")
+
+        walk(payload)
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_no_committed_media_sits_outside_its_post() -> None:
+    """
+    Media is named relative to its own post, and only relative.
+
+    The importer hard-links an archive's assets into a drop zone and
+    the collector copies them under the post; a path that survived
+    either step in absolute or traversing form would be the one place
+    a reader's filesystem could be named.
+    """
+
+    posts = REPO_ROOT / "data" / "posts"
+
+    if not posts.is_dir():
+        pytest.skip("data/posts is absent")
+
+    offenders: list[str] = []
+
+    for directory in sorted(posts.iterdir()):
+        if not directory.is_dir():
+            continue
+
+        media = directory / "media"
+
+        if not media.is_dir():
+            continue
+
+        for item in media.rglob("*"):
+            if not item.is_file():
+                continue
+
+            relative = item.relative_to(directory)
+
+            if relative.is_absolute() or ".." in relative.parts:
+                offenders.append(f"{directory.name}: {relative}")
+
+    assert offenders == [], offenders
+
+
 #: The functions this phase added to modules it shares with other work.
 SAVED_ITEM_FUNCTIONS = (
     "saved_items_bundle_root",

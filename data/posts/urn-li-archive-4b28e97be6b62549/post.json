@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-4b28e97be6b62549",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.828779+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:15:21Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🎯 Interview Experience at Infovision\n\nOne of my friends recently attended an interview for the Azure Data Engineer position at Infovision. Here are the highlights of the process:\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4b28e97be6b62549",
+    "saved_date": "2026-10-01T23:15:21Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

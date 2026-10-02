@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-7ee9bf6e8736a147",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327674189065113600",
+    "captured_at": "2026-10-02T00:15:48.634277+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:23:39Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "📊 𝗗𝗲𝗹𝘁𝗮 𝗟𝗮𝗸𝗲 𝘃𝘀 𝗣𝗮𝗿𝗾𝘂𝗲𝘁 𝘃𝘀 𝗖𝗦𝗩 – 𝗙𝗼𝗿𝗺𝗮𝘁 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 & 𝗪𝗵𝗲𝗻 𝘁𝗼 𝗨𝘀𝗲 𝗪𝗵𝗮𝘁\n\nChoosing the right data format is crucial for performance, reliability, and downstream analytics. Here’s a quick cheat sheet based on our real-world experience working with all three in Azure Databricks.\n\n𝗖𝗦𝗩 – 𝗧𝗵𝗲 𝗟𝗲𝗴𝗮𝗰𝘆 𝗦𝘁𝗮𝗻𝗱𝗮𝗿𝗱\n\n✅ Easy to read and write\n✅ Supported everywhere\n❌ No schema enforcement\n❌ No compression\n❌ Poor performance on large datasets\n\n𝗨𝘀𝗲 𝘄𝗵𝗲𝗻 - You need quick compatibility, human readability, or initial ingestion from external systems.\n\n𝗣𝗮𝗿𝗾𝘂𝗲𝘁 – 𝗧𝗵𝗲 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 𝗣𝗼𝘄𝗲𝗿𝗵𝗼𝘂𝘀𝗲\n\n✅ Columnar storage = faster queries\n✅ Compressed & efficient\n✅ Schema support\n❌ No built-in versioning\n❌ Difficult updates (append-only)\n\n𝗨𝘀𝗲 𝘄𝗵𝗲𝗻 - You’re building a performant, read-heavy pipeline but don’t need ACID transactions.\n\n𝗗𝗲𝗹𝘁𝗮 𝗟𝗮𝗸𝗲 – 𝗧𝗵𝗲 𝗚𝗮𝗺𝗲 𝗖𝗵𝗮𝗻𝗴𝗲𝗿\n\n✅ Built on Parquet + ACID transactions\n✅ Schema evolution & enforcement\n✅ Time travel (versioning)\n✅ Supports updates, merges, deletes\n✅ Optimized for streaming & batch\n\n𝗨𝘀𝗲 𝘄𝗵𝗲𝗻 - You want reliability, data quality, auditability, and scalable pipelines. Ideal for lakehouse architectures.\n\n👉 Like to show your support.\n💬 Comment with your thoughts or questions.\n🔁 Repost to share with your network.\n👥 Follow Praveen Patel to get such more like this.\n\n#Databricks #DeltaLake #Parquet #CSV #DataEngineering #BigData #Azure #Lakehouse #ModernDataStack #ETL #DataOps\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327674189065113600_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7ee9bf6e8736a147",
+    "saved_date": "2026-10-01T23:23:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327674189065113600",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327674189065113600_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-4737325338a5facf",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340947122621489152",
+    "captured_at": "2026-10-02T00:15:47.255543+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:18:26Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "I faced 3 tough rounds at Databricks for Data Engineer. \nHere’s what surprised me most...\n\nEach round pushed me to think deeper about data, not just code.\n\nHere’s how it went👇\n\n📍 Round 1: Big Data, SQL, and Coding\n - Questions about my project experience and the tools I used.\n - Write an SQL query to find customers with multiple same-day purchases.\n - How to join huge datasets in a distributed system.\n - What happens when you use CROSS JOIN on large data.\n - Handling a 100GB CSV in Python (without memory issues!).\n - Spark: repartitioning vs. coalescing—when to use which.\n\n📍 Round 2: Advanced Big Data + Real-Time Processing\n - Keeping data pipelines consistent and fault-tolerant.\n - How to fix and speed up a slow ETL pipeline.\n - Cloud experience: AWS or GCP, which services and why.\n - Streaming platforms: Apache Kafka stories.\n - Schema evolution in HBase or Cassandra.\n - Spark Streaming: windowed aggregations, fault-tolerance.\n\n📍 Round 3: System Design & Data Architecture\n - Design a system to track global ride locations in real time and make it scale and stay fast.\n - Build a data lake for analytics teams: what to consider for high availability.\n - How to create a smart recommendation system for riders.\n\nEven though I didn’t clear the last round, but I learned that interviewers don’t just ask questions that are technical, but they want to see how you solve big problems too.\n\nSo, if you want to prepare for Data Engineering at tech giants, and avoid the Rejection phase, prepare better with industry experts at Bosscoder Academy. \n\nCheck them here: https://bit.ly/4l35kQ2\n\nThey’ve helped 800+ professionals switch into top data roles with:\n💡 SQL, Python, Big Data, System Design\n💡 1:1 mentorship from experts at MAANG\n💡 Resume + LinkedIn + mock interview prep\n\nLet’s keep learning and building! Which round would challenge you the most?\n\n#Data #Databricks #Sql #Dataengineering #interviewexperience #sponsoredpost",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340947122621489152_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4737325338a5facf",
+    "saved_date": "2026-10-01T23:18:26Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340947122621489152",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340947122621489152_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

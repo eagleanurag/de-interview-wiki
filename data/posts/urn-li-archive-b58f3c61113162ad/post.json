@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-b58f3c61113162ad",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.264351+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:20:03Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Crack Your Next GCP Data Engineer Interview – Focus on Dataproc! 🔥\nAfter exploring various interviews and real-world use cases, I’ve curated a goldmine of Dataproc-focused interview questions that are repeatedly asked across top companies 👇\n\n🧠 If you're preparing for a Data Engineering role on Google Cloud, especially involving Spark-based processing, Dataproc is a must-know!\n\n💡 Top Dataproc Interview Questions:\n\n🔹 What is Google Cloud Dataproc and how does it differ from on-prem Hadoop?\n🔹 How do you create a Dataproc cluster using the gcloud CLI and Terraform?\n🔹 What are the different cluster modes in Dataproc (Single Node, Standard, HA)?\n🔹 How does Dataproc integrate with Cloud Storage, BigQuery, and Pub/Sub?\n🔹 What are initialization actions in Dataproc? Can you give real examples?\n🔹 How do you automate cluster deletion post job completion?\n🔹 How does autoscaling work in Dataproc and when to use it?\n🔹 What are best practices to secure a Dataproc cluster (IAM, VPC, encryption)?\n🔹 How do you run Jupyter notebooks directly on Dataproc clusters?\n🔹 Key cost optimization strategies with Dataproc\n🔹 Dataproc vs Dataflow – When to choose what?\n🔹 How to troubleshoot a failed Dataproc job using logs/Stackdriver?\n🔹 Cluster lifecycle – ephemeral vs long-running clusters\n🔹 How do you manage dependencies in PySpark/Scala jobs on Dataproc?\n🔹 Serverless Spark in Dataproc – What’s new and why it matters\n🔹 What are some limitations or gotchas of using Dataproc?\n🔹 Difference between preemptible vs non-preemptible workers\n🔹 Monitoring strategies – performance metrics, logs, and alerts\n\n✨ Whether you're prepping for interviews or working on real-time data pipelines, these questions can sharpen your Dataproc skills.\n\n🔁 Save & share if this helps\n👀 Follow me for more such hands-on, interview-ready GCP Data Engineering insights\n#GoogleCloud #Dataproc #DataEngineering #SparkOnGCP #GCPInterviewPrep #BigData #PySpark #CloudComputing #Dataflow #DataPipeline #CloudDataEngineer #GCP #TerraformOnGCP #LinkedInLearning #TechCareers\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b58f3c61113162ad",
+    "saved_date": "2026-10-01T23:20:03Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

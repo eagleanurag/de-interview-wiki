@@ -38,6 +38,12 @@ from src.ingestion.collect import (
     write_state,
 )
 from src.aggregation.consolidation import detect_technologies
+
+# Imported as modules rather than through the package's re-exports, so
+# ``archive_prepare`` is the module and not the function it also exposes.
+import src.ingestion.linkedin_archive.archive as archive_module
+import src.ingestion.linkedin_archive.prepare as archive_prepare
+import src.ingestion.linkedin_archive.report as archive_report
 from src.ingestion.post_document import PostDocument
 from src.ingestion.post_loader import load_post
 from src.ingestion.saved_items import diagnostics as diag
@@ -81,6 +87,12 @@ from src.ingestion.validation import (
 DEFAULT_POSTS_DIRECTORY = Path("data") / "posts"
 
 DEFAULT_SAVED_ITEMS_DIRECTORY = Path("data") / "incoming" / "saved-items"
+
+#: Where a local LinkedIn archive is written out for import. A separate
+#: directory from the saved-items drop zone, so the two are never
+#: confused for one another and so a re-run of either does not disturb
+#: the other's state.
+DEFAULT_ARCHIVE_DIRECTORY = Path("data") / "incoming" / "linkedin-archive"
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -435,7 +447,298 @@ def build_parser() -> argparse.ArgumentParser:
         help="Print the report as JSON.",
     )
 
+    # ---------------------------------------------------------------
+    # A local LinkedIn archive
+    # ---------------------------------------------------------------
+
+    archive = subcommands.add_parser(
+        "linkedin-archive",
+        help=(
+            "Read a local LinkedIn saved-post archive and write it out as "
+            "a saved-items drop zone. Reads files you already have. Fetches "
+            "nothing, opens no browser, and uses no credential."
+        ),
+    )
+
+    archive.add_argument(
+        "--input",
+        default=None,
+        metavar="DIR",
+        help=(
+            "The archive directory, the one holding posts_archive.json "
+            "and media/. Required; there is no default, because a path "
+            "this project guesses at is a path this project should not "
+            "be reading."
+        ),
+    )
+
+    archive.add_argument(
+        "--out",
+        default=None,
+        metavar="DIR",
+        help=(
+            "Where to write the drop zone. Defaults to "
+            "data/incoming/linkedin-archive."
+        ),
+    )
+
+    archive.add_argument(
+        "--report",
+        default=None,
+        metavar="FILE",
+        help="Also write the import report to this file as JSON.",
+    )
+
+    archive.add_argument(
+        "--include-duplicates",
+        action="store_true",
+        help=(
+            "Write a capture folder for repeated content as well as for "
+            "the record that keeps its place. Off by default: two "
+            "captures of one post would become two posts."
+        ),
+    )
+
+    archive.add_argument(
+        "--import",
+        action="store_true",
+        dest="do_import",
+        help=(
+            "Import the prepared drop zone into data/posts/ as well, "
+            "using the same saved-items importer as a hand-built list. "
+            "Without this the drop zone is written and nothing else "
+            "happens."
+        ),
+    )
+
+    archive.add_argument(
+        "--posts-root",
+        default=str(DEFAULT_POSTS_DIRECTORY),
+    )
+
+    archive.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the report as JSON.",
+    )
+
+    archive.add_argument(
+        "--debug",
+        action="store_true",
+        help="Show the full traceback when something fails.",
+    )
+
     return parser
+
+
+def run_linkedin_archive(
+    args: argparse.Namespace,
+    root: str | Path = ".",
+) -> int:
+    """
+    Read a local LinkedIn archive and prepare it for import.
+
+    Two stages, and the first is the only one that touches the archive.
+    Reading produces a report of what is in it; preparing writes that
+    content out as a saved-items drop zone, which is the form the
+    existing importer already reads. Nothing is fetched, no browser is
+    opened, no credential is read, and the archive is never written to.
+
+    The archive is treated as read-only input throughout. Its own
+    browser-session directory is named and refused rather than merely
+    left alone, because a session is a credential in a different shape
+    and a reader should not have to know that to avoid it.
+    """
+
+    if not args.input:
+        print("This command needs the path to your archive.")
+        print()
+        print("  python -m src.ingestion.collect_cli linkedin-archive \\")
+        print('      --input "C:\\path\\to\\linkedin_saved_archive"')
+        print()
+        print("That is the directory holding posts_archive.json and")
+        print("media/. Nothing is downloaded and nothing is opened in a")
+        print("browser; the command reads the files already on this")
+        print("machine and writes them out for the saved-items importer.")
+        return 1
+
+    archive_root = Path(args.input).expanduser()
+
+    destination = (
+        Path(args.out).expanduser()
+        if args.out
+        else Path(DEFAULT_ARCHIVE_DIRECTORY)
+    )
+
+    try:
+        archive = archive_module.read_archive(archive_root)
+
+    except archive_module.ArchiveError as exc:
+        if args.debug:
+            raise
+
+        print(f"Cannot read the archive: {exc}")
+        return 1
+
+    except Exception as exc:  # noqa: BLE001
+        if args.debug:
+            raise
+
+        print(
+            diag.diagnostic_from_exception(str(archive_root), exc).render()
+        )
+        return 1
+
+    if not archive.records and not archive.failures:
+        print(f"The archive at {archive_root} holds no post records.")
+        return 1
+
+    _report_archive_shape(archive)
+
+    prepared = archive_prepare.prepare(
+        archive,
+        destination,
+        include_duplicates=args.include_duplicates,
+    )
+
+    report = archive_report.build_report(archive, prepared=prepared)
+
+    if args.report:
+        written = archive_report.write_report(report, args.report)
+
+        if not args.json:
+            print(f"Report written to {written}")
+
+    if args.json:
+        print(json.dumps(report.as_dict(), indent=2, sort_keys=True))
+
+    else:
+        print()
+        print(report.render())
+
+    imported = 0
+
+    if args.do_import:
+        imported = _import_prepared(
+            destination, Path(args.posts_root), root
+        )
+
+    if args.json:
+        return 0 if report.failed == 0 else 1
+
+    if report.failed:
+        print()
+        print(
+            f"{report.failed} record(s) could not be read or written. "
+            "The rest are in the drop zone; re-run to retry them."
+        )
+
+    if not args.do_import:
+        print()
+        print("Nothing was imported yet. To import the prepared posts:")
+        print(
+            "  python -m src.ingestion.collect_cli saved-items "
+            f"--bundle-root {destination}"
+        )
+        print()
+        print("To do both in one step next time, add --import.")
+
+    elif imported:
+        print()
+        print(
+            f"Imported {imported} post(s) into {args.posts_root}. "
+            "Next: python -m src.pipeline"
+        )
+
+    return 0 if report.failed == 0 else 1
+
+
+def _report_archive_shape(archive) -> None:
+    """
+    Say what was found, before anything is written.
+
+    Printed first because a wrong path should cost nothing. By the time
+    a report is rendered a drop zone may exist, and a reader who finds
+    out afterwards that they pointed at the wrong folder has already had
+    to clean up.
+    """
+
+    media = archive.media
+
+    print(f"Read {archive.total_seen} record(s) from {archive.path}")
+    print(
+        f"  valid {len(archive.records)}   "
+        f"unreadable {len(archive.failures)}   "
+        f"repeated content {len(archive.duplicates)}"
+    )
+    print(
+        f"  media {len(media)} file(s), {media.total_bytes:,} bytes, "
+        f"{len(media.unreadable)} unreadable"
+    )
+
+    if media.rejected:
+        print(
+            f"  {len(media.rejected)} file(s) resolved outside the media "
+            "folder and were refused"
+        )
+
+    for directory in archive_module.FORBIDDEN_DIRECTORIES:
+        if (archive.path / directory).is_dir():
+            print(
+                f"  {directory}/ is present and was not opened. It holds a "
+                "browser session, and nothing here needs one."
+            )
+
+
+def _import_prepared(
+    drop_zone: Path,
+    posts_root: Path,
+    root: str | Path,
+) -> int:
+    """
+    Import a prepared drop zone through the existing saved-items path.
+
+    Deliberately the same importer a hand-built list uses, rather than a
+    second route into the posts directory. A second route would be a
+    second thing whose behaviour differs, and the whole reason for
+    writing the archive out as a drop zone was to avoid that.
+    """
+    manifest = drop_zone / archive_prepare.MANIFEST
+
+    if not manifest.is_file():
+        print(f"No manifest was written to {drop_zone}")
+        return 0
+
+    state = (
+        drop_zone / "saved-items-manifest.json"
+    )
+
+    try:
+        source = SavedItemsSource(drop_zone, manifest_file=state)
+
+    except ManifestUnreadable as exc:
+        print(f"Cannot read the drop zone's manifest: {exc}")
+        return 0
+
+    source.read_manifests([manifest])
+
+    collector = Collector(
+        source,
+        root=posts_root,
+        limits=CollectionLimits(),
+        checkpoint=checkpoint_module.read(root),
+        progress=(lambda message: print(f"  {message}")),
+        repository_root=root,
+    )
+
+    collection = collector.run(resume=False)
+
+    reconcile(source.manifest, posts_root=posts_root)
+
+    # A count, not the identifiers. The caller prints this and the
+    # summary is meant to be one line; returning the list made a
+    # four-hundred-item import print four hundred ids.
+    return len(collection.imported)
 
 
 def print_doctor(root: str | Path = ".") -> int:
@@ -1603,6 +1906,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "saved-items-validate":
         return run_saved_items_validate(args, root)
+
+    if args.command == "linkedin-archive":
+        return run_linkedin_archive(args, root)
 
     if args.command == "run":
         credential_module.load_local_environment(root / ".env")

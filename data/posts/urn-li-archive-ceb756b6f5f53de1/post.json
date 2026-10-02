@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-ceb756b6f5f53de1",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.322674+00:00",
+    "author": "Kalyani V",
+    "published_at": "2026-10-01T23:26:53Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "*** Interview Question ***\nGot this interesting question in a recent interview — analyzing the Spark operations in this snippet Action & transformation:\n\n```\n df = spark.read.csv(\"data.csv\")\n filteredDF = df.filter($\"age\" > 25)\ngroupedDF = filteredDF.groupBy(\"country\").count() \ngroupedDF.show() \n\n```\n𝗔𝗰𝘁𝗶𝗼𝗻 \nread() \ncount()\nshow() \ncollect()\n\n𝗧𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻𝘀\n filter()\n groupBy().count() (groupby count is transformation)\n\n\n\n#ApacheSpark #InterviewTips #DataEngineering #BigData #PySpark #Scala #SparkTransformations #SparkActions #TechInterviews #LearningByDoing",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ceb756b6f5f53de1",
+    "saved_date": "2026-10-01T23:26:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

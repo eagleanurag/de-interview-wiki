@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-37608ff427d0bb5b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343309507923464192",
+    "captured_at": "2026-10-02T00:15:46.458844+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:12:59Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "CloudOps@HCL-Technologies ¦¦ AMU-2018 ¦¦ Azure IaaS Hybrid ⛈️ Infrastructure Engineering ¦¦ Azure Hyper Converged Infrastructure Solutions ¦¦ Virtualization ¦¦ Cloud Security ¦¦ IAM ¦¦ DevOps\n1yr •\n🛠️📄 Terraform\n30+ ready-to-use scripts covering real-world scenarios across:\n✅ AWS (EC2, S3, VPC, Auto-scaling, Lambda, RDS, IAM, Route 53)\n✅ Azure (Resource Groups, VNet, Storage Accounts)\n✅ Google Cloud (Compute Instances)\n✅ Kubernetes (Namespace provisioning)\nThis Word document is ideal for beginners learning Infrastructure as Code or professionals brushing up on Terraform skills.\n💡 Whether you work on AWS, Azure, GCP, or Kubernetes, this guide helps automate your infrastructure reliably.\nMy HashNode: https://lnkd.in/gRGu6mTG\n#Terraform #DevOps #IaC #AWS #Azure #HashiCorp #InfrastructureAsCode\n…see more\nTerraform",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343309507923464192_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:37608ff427d0bb5b",
+    "saved_date": "2026-10-01T23:12:59Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343309507923464192",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343309507923464192_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-869d7c7efd80809e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327315874955018240",
+    "captured_at": "2026-10-02T00:15:48.916629+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:24:56Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "➡️ INSERT vs MERGE ⬅️\n\n(Comparing SQL Server INSERT and MERGE performance for inserting data)\n\nLet's consider two queries that insert 2M rows from a csv file into a table. \n\nOne inserts data using INSERT:\n\nINSERT INTO dbo.perf_tst_ins\nWITH (TABLOCK) (id, val, num)\nSELECT id, val, num\nFROM OPENROWSET(BULK 'x:\\projects\\perf_tst\\perf_tst_src.csv', FORMATFILE = 'x:\\projects\\perf_tst\\perf_tst_src_f.xml', FIRSTROW = 2, FORMAT = 'CSV') AS scr_f\n\nAnother - with MERGE:\n \nMERGE dbo.perf_tst_mrg WITH (TABLOCK) AS tgt\nUSING (\n SELECT id, val, num\n FROM OPENROWSET(BULK 'x:\\projects\\perf_tst\\perf_tst_src.csv', FORMATFILE = 'x:\\projects\\perf_tst\\perf_tst_src_f.xml', FIRSTROW = 2, FORMAT = 'CSV'\n ) AS scr_f\n ) AS src(id, val, num)\n ON 1 = 0\nWHEN NOT MATCHED\n THEN\n INSERT (id, val, num)\n VALUES (src.id, src.val, src.num)\n \n\nThe first query took 2 seconds to execute and caused this execution plan:\n\n|--Table Insert(OBJECT:([tst_db].[dbo].[perf_tst_ins])\n |--Remote Scan(OBJECT:(STREAM))\n\n\nThe second query took 10 seconds to execute and caused this execution plan:\n \n |--Table Merge(OBJECT:([tst_db].[dbo].[perf_tst_ins] AS [tgt]), ACTION:([Action1005]))\n |--Filter(WHERE:([Action1005] IS NOT NULL))\n |--Compute Scalar(DEFINE:([Action1005]=ForceOrder((4))))\n |--Compute Scalar(DEFINE:([Bmk1001]=NULL))\n |--Remote Scan(OBJECT:(STREAM)) \n \n\nAs we can see, 2 seconds vs. 10 seconds and 2 operators vs. 5 reveal the obvious winner: INSERT 🏆\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327315874955018240_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:869d7c7efd80809e",
+    "saved_date": "2026-10-01T23:24:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327315874955018240",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327315874955018240_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

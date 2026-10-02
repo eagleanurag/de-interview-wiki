@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-c090ebe5b9997042",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7296015305749745664",
+    "captured_at": "2026-10-02T00:15:51.122784+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:35:20Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nDon't scratch your head to learn Python.\nLearn These Concepts to be proficient in Python.\n𝐁𝐚𝐬𝐢𝐜𝐬 𝐨𝐟 𝐏𝐲𝐭𝐡𝐨𝐧:\n-Syntax & Style\n-Data Types\n-Variables & Operators\n-Control Flow: if/else, Loops, try/except\n-Functions & Modules\n𝐎𝐛𝐣𝐞𝐜𝐭-𝐎𝐫𝐢𝐞𝐧𝐭𝐞𝐝 𝐏𝐲𝐭𝐡𝐨𝐧:\n-Classes & Objects\n-Inheritance\n-Polymorphism\n-Encapsulation\n𝐊𝐞𝐲 𝐋𝐢𝐛𝐫𝐚𝐫𝐢𝐞𝐬:\n-Pandas: Data Manipulation\n𝐏𝐚𝐧𝐝𝐚𝐬 𝐢𝐧 𝐃𝐞𝐩𝐭𝐡:\n-DataFrames: Creation & Access\n-Filtering & Selection\n-Data Cleaning: Missing Values, Duplicates\n-Merging & Grouping\n𝐃𝐚𝐭𝐚 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬:\n-Lists\n-Tuples\n-Dictionaries\n-Sets\n𝐅𝐢𝐥𝐞 𝐇𝐚𝐧𝐝𝐥𝐢𝐧𝐠:\n-Text Files\n-CSV Files\n-JSON Files\nIf you've read so far, do LIKE the post 👍\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\n…see more\nPython 500 interview questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7296015305749745664_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c090ebe5b9997042",
+    "saved_date": "2026-10-01T23:35:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7296015305749745664",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7296015305749745664_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

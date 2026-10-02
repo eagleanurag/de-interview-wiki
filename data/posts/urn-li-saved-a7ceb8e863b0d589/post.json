@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-a7ceb8e863b0d589",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326463455274668032",
+    "captured_at": "2026-10-02T00:15:50.403335+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:24:41Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚨 PySpark Red Flags in Interviews\n🚫 Don’t say these in interviews 👇\n\n❌ “I use PySpark like Pandas.”\n ✅ PySpark is lazy, distributed, and works in a cluster context.\n\n❌ “I use collect() to get data to my machine.”\n ✅ Dangerous! Use show(), take(), or better, write output to storage.\n\n❌ “I always use groupBy().”\n ✅ Try reduceByKey() or agg() smartly to optimize shuffles.\n\n🔥 Say this instead:\n “I always check the query plan with explain() and tune based on partition skew or stage bottlenecks.”\n\n📌 Note to self: Avoid red flags = Extra brownie points!\n\n#InterviewMistakes #PySparkRealityCheck #DataEngineerInterviews",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326463455274668032_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a7ceb8e863b0d589",
+    "saved_date": "2026-10-01T23:24:41Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326463455274668032",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326463455274668032_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-f4053fdf0960f12b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.120500+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:06:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Tata Consultancy Services Interview Experience\n𝗖𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘁𝗶𝗼𝗻: 18 LPA\n𝗣𝗼𝘀𝗶𝘁𝗶𝗼𝗻: Data Engineer\n𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲: 3+ Years\n\n1️⃣ Write a SQL query to identify customers who have not performed any transactions in the last 90 days?\n2️⃣ Explain Slowly Changing Dimensions (SCD Type 1, Type 2, and Type 3) and their use cases.\n3️⃣ How would you design a data platform to support regulatory and compliance reporting in a banking environment?\n4️⃣ A critical regulatory report contains inconsistent customer balances. How would you investigate and resolve the issue?\n\n5️⃣ How would you implement Change Data Capture (CDC) in a large-scale data pipeline?\n6️⃣ Explain the differences between Data Lake, Data Warehouse, and Data Mart.\n7️⃣ A source system sends duplicate transactions due to a technical glitch. How would you prevent duplicate records from impacting downstream systems?\n8️⃣ How would you design an audit framework to track data lineage and transformations?\n\n9️⃣ Explain ACID properties and why they are important in financial data processing.\n🔟 A monthly data load that normally takes 2 hours suddenly takes 8 hours. How would you analyze the bottleneck?\n1️⃣1️⃣ How would you secure sensitive customer data in a data lake environment?\n1️⃣2️⃣ Write a SQL query to calculate a running account balance for each customer transaction.\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗞𝗶𝘁 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀.\n \n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗶𝘁 𝗵𝗲𝗿𝗲 - https://lnkd.in/gAe9zE7t\n \nIf this helped, a 👍 𝗟𝗶𝗸𝗲 or 🔁 𝗥𝗲𝘀𝗵𝗮𝗿𝗲 would really help more 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀 switch smarter.",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f4053fdf0960f12b",
+    "saved_date": "2026-10-01T23:06:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-bc20a0347338300e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.081175+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:19:00Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐂𝐨𝐦𝐩𝐚𝐧𝐲 𝐖𝐢𝐬𝐞 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\nIf you're gearing up for SQL interviews, I highly recommend checking out Ankit Bansal SQL playlist on YouTube! 🎯\nI've compiled a set of \n#SQL \n#questions asked in different companies and paired them with relevant video explanations from his channel. 📌 These videos provide in-depth insights and solutions, making your preparation more effective.\n\n\n1. Amazon SQL Interview Question for Data Analyst Position \nhttps://lnkd.in/g2RzsKdq\n\n2. Airbnb SQL Interview Question | Convert Comma Separated Values into Rows | Data Analytics\nhttps://lnkd.in/gpMbU-dF\n\n3. L&T SQL Interview Problem | Print Highest and Lowest Salary Employees in Each Department\nhttps://lnkd.in/ggY82FJW\n\n4. Adobe Interesting SQL Interview Question | Solving Using 2 Approaches | Data Analytics\nhttps://lnkd.in/g_-_9ymd\n\n5. Spotify SQL Interview Problem | Top 5 Artists | Aggregation and Window Functions in SQL\nhttps://lnkd.in/gtfaugd3\n\n6. PWC SQL Interview Question \nhttps://lnkd.in/g9SkkX9x\n\n7. Ameriprise LLC Company SQL Interview Problem | Data Analytics\nhttps://lnkd.in/gS_Yqq6c\n\n8. Tiger Analytics SQL Interview Question \nhttps://lnkd.in/ghjE_CXp\n\n9. Practice FAANG SQL Interview Questions For Free | Ace The SQL Interview | Data Analytics\nhttps://lnkd.in/g4AFgen3\n\n10. Honeywell SQL Interview Question | Print Movie Stars (⭐ ⭐ ⭐ ⭐⭐) For best movie in each Genre\nhttps://lnkd.in/gSDgB9Me\n\n11. Angel SQL Interview Question\nhttps://lnkd.in/geaU3we7\n\n\n12. Accenture SQL Interview Question \nhttps://lnkd.in/gR6F_8zf\n\n13. American Express SQL Interview Question and Solution | Page Recommendation\nhttps://lnkd.in/g_sMN26m\n\n14. Netflix Data Cleaning and Analysis Project | End to End Data Engineering Project (SQL + Python)\nhttps://lnkd.in/gS8mT7Fn\n\n15. Fractal Analytics SQL Interview Question (Game of Thrones Database) | SQL for Data Engineer\nhttps://lnkd.in/gGcsBms5\n\n\n16. Swiggy Data Analyst SQL Interview Question\nhttps://lnkd.in/gSyhmmhd\n\n17. Myntra Data Analyst Question\nhttps://lnkd.in/gekpAit8\n\n18. Walmart Labs SQL Interview Question for Senior Data Analyst Position | Data Analytics\nhttps://lnkd.in/gRBPb-ms\n\n19. PWC SQL Interview Question for a Data Analyst Position\nhttps://lnkd.in/gyD5Pjny\n\n20. PayPal Data Engineer SQL Interview Question (and a secret time saving trick)\nhttps://lnkd.in/gAJ_Ug79\n\n21. Adobe Interesting SQL Interview Question | Solving Using 2 Approaches | Data Analytics\nhttps://lnkd.in/gEEAfi8j\n\n\n22. PayPal SQL Interview Problem (Level Hard) | Advanced SQL Problem\nhttps://lnkd.in/gGZaYt6N\n\nAnkit Bansal\n\n\n#database #sqlserver #sql #dataanalyst #interviewquestion #interview \n#question #sqlinterview #SQL",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bc20a0347338300e",
+    "saved_date": "2026-10-01T23:19:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

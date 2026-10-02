@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-4b09b479f28b3df7",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347878257846894596",
+    "captured_at": "2026-10-02T00:15:47.288223+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:12:06Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🔹 HR | Talent Acquisition | Training & Placement | Campus Recruitment | Career Services | Interview Preparation & Career Counseling\n1yr •\n🔹 Technical Interview Experience – Data Engineer at Deloitte (Databricks + Spark Focus)\n-------------------------------------------------------\n⚠️ Think writing PySpark code is enough to crack Deloitte? Think again.\n⛔Most candidates fail when asked about real production issues, cost optimization, and advanced Databricks features.\n🚀 One of our students recently faced these real Databricks interview questions at Deloitte in Round 1 👇\n💡 Fresh & Advanced Databricks + Spark Interview Questions – Deloitte Edition\n1️⃣ How do you design a fault-tolerant data pipeline using Databricks for ingesting data from multiple unreliable sources?\n2️⃣ What is a broadcast join in Spark? When does it backfire and how do you handle it?\n3️⃣ How would you handle schema mismatch in JSON files ingested via Autoloader in Databricks?\n4️⃣ How do you orchestrate a hybrid pipeline that includes both Databricks notebooks and Azure Data Factory triggers?\n5️⃣ What’s the impact of using Delta Lake MERGE INTO on large datasets, and how do you optimize it?\n6️⃣ How do you manage parallelism and partition tuning in Spark jobs to avoid shuffle overloads?\n7️⃣ How would you implement near real-time data validation in a Structured Streaming pipeline?\n8️⃣ How do you handle dependency conflicts between Python libraries when using custom wheels in Databricks clusters?\n9️⃣ What are the pros and cons of using Databricks SQL vs. Spark SQL in large reporting workflows?\n🔟 How do you implement role-based access control (RBAC) with Unity Catalog for multi-tenant data lake governance?\n1️⃣1️⃣ What are the best ways to enforce GDPR data retention rules inside a Delta Lake table with time travel enabled?\n1️⃣2️⃣ How do you use the Spark UI to identify and fix skew in a job that runs fine in dev but crashes in prod?\n1️⃣3️⃣ What’s your approach to optimize long-running batch jobs that load 100M+ records per run in Databricks?\n1️⃣4️⃣ How do you implement versioned data pipelines in Databricks notebooks using Git integration?\n1️⃣5️⃣ Describe a production issue you faced with a Spark streaming job and how you resolved it.\n🎯 These aren’t theory. These are real questions from Deloitte’s tech panel — focused on how you solve enterprise-scale data problems.\n🔁 Round 2 coming soon: Topics like Delta Live Tables, streaming recovery, Spark tuning, and Databricks job orchestration.\n📞 Contact: +91 98604 38743 | 📌Pay after Placement\n📩 DM us for mock interviews, real-time Databricks projects, and 1:1 mentoring for MNC interviews.\n#Databricks #ApacheSpark #Deloitte #DataEngineering #StructuredStreaming #DeltaLake #DatabricksInterview #UnityCatalog #SparkPerformance #AzureDataEngineer #CI_CD #MNCJobs #CloudCareers #InterviewPrep\n…see more\n🚫 Databricks interviews aren’t multiple choice",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347878257846894596_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4b09b479f28b3df7",
+    "saved_date": "2026-10-01T23:12:06Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347878257846894596",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347878257846894596_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-15bcd6a5429a8df2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339347237044404225",
+    "captured_at": "2026-10-02T00:15:44.970028+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:20:04Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Databricks vs. Snowflake: The Performance Edge They Hide\n\nSpeed grabs headlines, but 2025 performance is about effort, architecture, and cost. Let’s explore what drives value for data teams. \n\nEffort: Manual vs. Automated\n\nDatabricks demands hands-on work—partitioning data, vacuuming Delta Lake, and optimizing Spark—especially tricky with <1TB datasets where Z-ordering can falter. Snowflake’s micro-partitioned, multi-cluster design auto-tunes queries, pruning data blocks to ease the load on teams. \n\nOptimization: Smarts Over Power\n\nSnowflake’s query engine, with cost-based optimization and vectorization, outpaces Databricks’ Photon. A test showed 64 Snowflake cores beating 224 Databricks cores by 20% on a skewed join. Photon boosts speed, but lags in BI planning, needing more compute.\n\nCost & Scalability: Value Meets Budget\n\nTweak a CSV setting in Snowflake, and ingestion drops from 67 to 12 seconds, outpacing Databricks’ single-threaded approach. Snowflake’s serverless model charges per use, while Databricks’ DBU pricing climbs with large clusters. Snowflake’s 512-node warehouses auto-suspend; Databricks needs oversized configs for SLAs, hiking costs.\n \nFit: Workload Matters\n\nSnowflake excels in SQL analytics, compliance (e.g., finance encryption), and data sharing. Its VARIANT type handles JSON/Avro. Databricks shines in streaming, ML with MLflow, and unstructured data, but tuning can overcomplicate warehousing. \n\nKey Questions \n\n• Can your team handle Databricks’ tuning, or does Snowflake save time? \n• Does your budget fit Databricks’ sprawl or Snowflake’s clarity? \n• SQL or Spark—which fits your need?\n\nThe 2025 Take\n\nPerformance is smart scaling and ROI, not just speed. Snowflake offers a low-maintenance, analyst-friendly solution. Databricks powers AI and streaming but shifts work to users. \n\nYour Input\nWhich platform drives your data wins? Share your story below! \n\n#Snowflake #Databricks #ModernDataStack #CloudData #DataEngineering #FinOps #Analytics #AI #Lakehouse #DataPlatform \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339347237044404225_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:15bcd6a5429a8df2",
+    "saved_date": "2026-10-01T23:20:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339347237044404225",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339347237044404225_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

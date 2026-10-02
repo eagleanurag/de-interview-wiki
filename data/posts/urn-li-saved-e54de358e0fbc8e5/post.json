@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e54de358e0fbc8e5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7287317112577052672",
+    "captured_at": "2026-10-02T00:15:52.848383+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:36:56Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\nLet's Understand SQL in Simple words:\nSQL (Structured Query Language) is a language used to communicate with databases. It's like a set of instructions you give to a database to retrieve, manipulate, or manage data.\nThink of SQL as a way to ask questions or give commands to a database, such as:\n👉 Show me all the names of customers.\n👉 Retrieve the total sales for last month.\n👉 Update the address of a specific customer.\n👉 Delete records of products that are out of stock.\nSQL provides a standardized way to interact with databases, making it easier for programmers, analysts, and other users to work with data effectively.\nBut why Learning SQL is important for us ❓\n👉 Data Management: SQL is the standard language for managing and manipulating data in relational databases.\n👉 Career Opportunities: SQL skills are highly sought after in the job market. Many organizations use databases to store and analyze data, and they need professionals who can work with these databases effectively.\n👉 Data Analysis and Reporting: SQL is essential for extracting insights from data stored in databases. With SQL, you can write queries to filter, aggregate, and analyze data, enabling you to generate reports, identify trends, and make data-driven decisions.\n👉 Integration with Applications: Many applications and systems rely on databases to store and retrieve data. Understanding SQL allows you to integrate your applications with databases seamlessly, enabling data exchange and synchronization between different systems.\n👉 Data Quality and Integrity: SQL provides mechanisms for enforcing data integrity and ensuring data quality within databases. By learning SQL, you can create and manage database constraints, such as unique keys, foreign keys, and check constraints, which help maintain data accuracy and consistency.\n🏚 𝗥𝗶𝗰𝗵 𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝘆 𝗼𝗳 𝗦𝗤𝗟 𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲\nWhether you're a data analyst, data engineer, data scientist, or business analyst, SQL is essential for everyone. In nearly every data-related interview, SQL questions are a constant, highlighting its critical role across all data-focused roles.\nYou may want to explore learning SQL from experts like Ankit Bansal\n(NamasteSQL https://lnkd.in/gRnWf2tQ ).\nCheckout this YouTube channel, https://lnkd.in/gFb293YM ,which offers a wealth of SQL problem-solving tutorials explained in simple, easy-to-understand terms.\nIt’s a valuable resource for mastering SQL concepts with practical solutions\n📕 Also Sharing one SQL Document that well explains all major topics with examples, I am sure this will help you to learn SQL faster. Credits: Fang Ying Sham\nJoin my data community : https://lnkd.in/gy4R55Tj\n❇ Follow 👨‍💻 Abhisek Sahu for more .\nPlease Like, repost ✅, if you find it useful.\n#sql #dataengineering #dataanalyst #dataanalytics #remote #dataengineer #bigdata #analytics #jobs #businessanalyst #interviewquestions #interview #remotejobs\n…see more\nStructured Query language (SQL) Notes.pdf",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7287317112577052672_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e54de358e0fbc8e5",
+    "saved_date": "2026-10-01T23:36:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7287317112577052672",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7287317112577052672_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

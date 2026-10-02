@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-37c727aea532db0b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.499679+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:07:13Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Spark optimization: 90 minutes → 28 minutes 🚀\n\nRecently, I worked on optimizing a Spark job that was taking around 90 minutes.\n\nAQE initially brought it down to ~55–60 minutes, but the real bottleneck was discovered through the Spark UI.\n\nA window function using:Window.partitionBy(\"period\")\n\nwas causing a large shuffle to effectively collapse into a single partition, resulting in heavy data skew, spilling, and one executor doing most of the work.\n\nInstead of using the window to find the latest load timestamp, I changed the approach to:\ngroupBy(period) + max(load_time) + broadcast join\n\nAfter validating that the new logic produced the same results:\n90 min → 55–60 min → 28 min\n\nThe biggest takeaway:\nDon’t just look at how many partitions Spark creates. Look at how the data is actually distributed across those partitions.\nSometimes the best Spark optimization isn’t adding more resources — it’s changing the way the data is processed.\n#ApacheSpark #DataEngineering #BigData #SparkOptimization #PerformanceEngineering #AQE",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:37c727aea532db0b",
+    "saved_date": "2026-10-01T23:07:13Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

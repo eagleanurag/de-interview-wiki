@@ -8,6 +8,7 @@ edit that breaks aggregation fails here instead of in a cloud run.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -21,6 +22,11 @@ WORKFLOW_PATH = (
     / ".github"
     / "workflows"
     / "run-python-worker.yml"
+)
+
+#: The posts the workflow discovers, at the committed count.
+REAL_POSTS_ROOT = (
+    Path(__file__).resolve().parents[1] / "data" / "posts"
 )
 
 
@@ -99,23 +105,146 @@ def test_worker_stays_parallel_and_fails_independently(workflow):
 def test_worker_keeps_unique_per_post_artifacts(workflow):
     worker = workflow["jobs"]["worker"]
 
-    upload = find_step(worker, "Upload worker result")
+    upload = find_step(worker, "Upload worker results")
     assert upload["uses"] == "actions/upload-artifact@v4"
 
+    # One artifact per job, and the name carries the batch index, so no
+    # two jobs can collide. upload-artifact@v4 refuses to write to an
+    # artifact that already exists, which would cost a run its results.
     assert (
         upload["with"]["name"]
-        == "cloud-worker-result-${{ matrix.post_id }}"
+        == "cloud-worker-result-${{ matrix.batch.index }}"
     )
     assert upload["with"]["if-no-files-found"] == "error"
 
+    # Results are uploaded even when some posts in the batch failed,
+    # because what succeeded is what aggregation needs in order to
+    # report the shortfall rather than nothing at all.
+    assert upload["if"] == "always()"
+
     assert upload_paths(upload) == [
-        "data/jobs/"
-        "cloud_worker_${{ matrix.post_id }}_"
-        "${{ github.run_id }}.json",
-        "data/results/"
-        "cloud_worker_${{ matrix.post_id }}_"
-        "${{ github.run_id }}.json",
+        "data/jobs/cloud_worker_*.json",
+        "data/results/cloud_worker_*.json",
     ]
+
+
+def test_the_worker_matrix_stays_inside_github_limit(workflow):
+    """
+    A matrix may expand to at most 256 jobs per run.
+
+    This is the limit that made a one-job-per-post workflow unusable:
+    the repository held seven posts, then a local archive took it to
+    nearly five hundred, and a matrix of one job per post would have
+    been cancelled before it started. The workflow now batches posts,
+    so the job count is a function of the batch size rather than of the
+    post count, and this test keeps it that way.
+
+    The batching logic is re-implemented here rather than read out of
+    the YAML, because the YAML is a shell script embedded in a string
+    and re-deriving it from the workflow would only prove the workflow
+    agrees with itself. The assertions are on the properties the
+    workflow depends on.
+    """
+
+    from src.ingestion.importer import discover_posts
+
+    limit = 256
+
+    # The default is written as a GitHub expression that falls back to a
+    # repository variable, so the literal default is read out of the
+    # expression rather than parsed as an int.
+    expression = workflow["jobs"]["discover"]["env"][
+        "WORKER_BATCH_SIZE"
+    ]
+
+    match = re.search(r"\|\|\s*['\"](\d+)['\"]", expression)
+
+    assert match, (
+        "the batch size must have a literal default, so a repository "
+        f"that sets no variable still has one: {expression!r}"
+    )
+
+    batch_size = int(match.group(1))
+
+    posts = [
+        summary.post_id
+        for summary in discover_posts(REAL_POSTS_ROOT)
+        if not summary.post_id.startswith("__")
+    ]
+
+    if not posts:
+        pytest.skip("data/posts is absent")
+
+    assert batch_size >= 1, default_batch_size
+
+    jobs = -(-len(posts) // batch_size)
+
+    # The committed repository must fit.
+    assert jobs <= limit, (
+        f"{len(posts)} posts at batch size {batch_size} needs {jobs} "
+        f"jobs, over GitHub's {limit}"
+    )
+
+    # And the workflow must refuse rather than start a run it knows
+    # cannot finish, which is the behaviour that turns this limit from
+    # a silent cancellation into a message with the fix in it.
+    step = find_step(
+        workflow["jobs"]["discover"],
+        "Discover post directories",
+    )["run"]
+
+    assert "256" in step
+    assert "WORKER_BATCH_SIZE" in step
+
+    # Every post is covered exactly once, in a stable order, so no post
+    # is enriched twice and none is skipped.
+    batches = [
+        posts[index : index + batch_size]
+        for index in range(0, len(posts), batch_size)
+    ]
+
+    flattened = [post for batch in batches for post in batch]
+
+    assert flattened == posts
+    assert all(batch for batch in batches)
+
+
+def test_batching_does_not_change_which_posts_are_enriched(workflow):
+    """
+    The batch a post lands in must not change what is done to it.
+
+    Checked by re-deriving the per-post job the batch step writes and
+    confirming it still names one post, one job file and one result
+    file under the run id, which is what the aggregator globs for.
+    """
+
+    step = find_step(
+        workflow["jobs"]["worker"],
+        "Create cloud worker jobs",
+    )["run"]
+
+    assert "for post_id in batch:" in step
+    assert '"post_directory": f"data/posts/{post_id}"' in step
+    assert "max_attempts" in step
+
+    runner = find_step(
+        workflow["jobs"]["worker"],
+        "Run Python workers",
+    )["run"]
+
+    assert "subprocess.run" in runner
+    assert "src.workers.cli" in runner
+
+    # A failure is recorded rather than raised, so the upload runs and
+    # the posts that succeeded are not thrown away with the batch.
+    assert "failures.append" in runner
+
+    outcome = find_step(
+        workflow["jobs"]["worker"],
+        "Report batch outcome",
+    )["run"]
+
+    assert "raise SystemExit" in outcome
 
 
 def test_aggregate_runs_only_after_all_workers_succeed(workflow):
@@ -249,8 +378,13 @@ def test_aggregate_uploads_one_canonical_knowledge_base(workflow):
 
 def test_worker_artifact_filenames_match_aggregator_glob(workflow):
     """
-    The aggregator globs cloud_worker_*.json, so worker artifact
-    file names must keep that prefix.
+    The aggregator globs cloud_worker_*.json, so whatever the worker
+    uploads must keep that prefix and carry the run id.
+
+    Batching moved the post id out of the upload path and into the file
+    names the batch step writes, so the prefix is now produced in two
+    places and both are checked here. Either one drifting would make the
+    aggregator silently see fewer posts than were enriched.
     """
 
     from src.aggregation.aggregator import (
@@ -262,16 +396,22 @@ def test_worker_artifact_filenames_match_aggregator_glob(workflow):
     worker = workflow["jobs"]["worker"]
 
     paths = upload_paths(
-        find_step(worker, "Upload worker result")
+        find_step(worker, "Upload worker results")
     )
 
     assert len(paths) == 2
 
     for path in paths:
-        assert "cloud_worker_" in path
-        assert path.endswith(".json")
-        assert "${{ matrix.post_id }}" in path
-        assert "${{ github.run_id }}" in path
+        assert path.endswith("cloud_worker_*.json")
+
+    # The batch step is what names the files, so the naming contract
+    # lives there rather than in the matrix expression.
+    create = find_step(worker, "Create cloud worker jobs")["run"]
+
+    assert 'job_id = f"cloud_worker_{post_id}_{run_id}"' in create
+
+    assert 'f"data/jobs/{job_id}.json"' in create
+    assert 'f"data/results/{job_id}.json"' in create
 
 
 def test_workflow_never_pushes_or_commits(workflow):
@@ -486,6 +626,12 @@ def test_worker_job_is_unchanged_by_the_wiki(workflow):
     """
     The wiki is additive. Worker discovery, parallelism, isolation
     and artifact naming must be exactly as before.
+
+    Discovery grew a batching step and the worker gained a loop, but
+    the properties the wiki depends on are unchanged: the same posts
+    are discovered from the same glob, the same outputs come back, the
+    same parallel bound applies, and results are still uploaded under a
+    name no other job can take.
     """
 
     discover = workflow["jobs"]["discover"]
@@ -500,11 +646,17 @@ def test_worker_job_is_unchanged_by_the_wiki(workflow):
     assert worker["strategy"]["fail-fast"] is False
     assert worker["strategy"]["max-parallel"] == 3
 
-    upload = find_step(worker, "Upload worker result")
+    # A batch takes about half an hour, so a hang has to be bounded
+    # well inside the six hours a hosted job may otherwise run.
+    assert 15 <= worker["timeout-minutes"] <= 360, worker.get(
+        "timeout-minutes"
+    )
+
+    upload = find_step(worker, "Upload worker results")
 
     assert (
         upload["with"]["name"]
-        == "cloud-worker-result-${{ matrix.post_id }}"
+        == "cloud-worker-result-${{ matrix.batch.index }}"
     )
     assert upload["with"]["if-no-files-found"] == "error"
 

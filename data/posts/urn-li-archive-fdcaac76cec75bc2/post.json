@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-fdcaac76cec75bc2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.328107+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:22:39Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Writing SQL for 1K rows is easy. Writing it for 100M+ rows? That's where the real challenge begins.\n\nWriting SQL that scales — that’s a different skill entirely.\nWhen I started working with production datasets (think 100M+ records), I quickly learned how some of my queries were quietly blowing up compute costs or dragging pipelines down.\n🔽 Here are 3 hard-learned lessons from writing SQL at scale:\n1️⃣ Avoid SELECT * in joins\n Even if it runs locally, wide joins with SELECT * can lead to expensive shuffles, unnecessary I/O, and memory issues. Always project only what you need.\n2️⃣ Use CTEs wisely\n Common Table Expressions (WITH clauses) are great for readability, but in many engines they don't cache — they re-execute. In places like Snowflake or BigQuery, that can double or triple cost.\n3️⃣ Watch for implicit casting\n Joining user_id (INT) with user_id (STRING)? You may not even notice until your join suddenly takes 10x longer — and still returns fewer rows.\nThese little things matter a lot more when you're dealing with terabytes, not tables.\n\n🔄 I’m curious — what's one subtle SQL mistake you’ve made that caused big trouble later?\n\n#DataEngineering #SQLTips #BigData #Snowflake #BigQuery #DataPerformance #ScalableSystems #ModernDataStack #LearnInPublic\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:fdcaac76cec75bc2",
+    "saved_date": "2026-10-01T23:22:39Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

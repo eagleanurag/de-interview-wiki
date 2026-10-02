@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-efa99583513031f4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.038635+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:13:38Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Virtusa keeps asking these Data Engineering questions repeatedly.\nCTC - 29 LPA\nEXP - 4+\n\n1. What are the different execution modes in Apache Spark (local, standalone, YARN, Mesos)?\n2. What’s the difference between reduceByKey and groupByKey in Spark and when to use each?\n3. Explain the architecture of Apache Spark, including the driver, cluster manager, and worker nodes.\n4. Compare Spark RDDs vs. DataFrames: use cases and performance implications.\n5. Describe internal vs. external Hive tables and their use cases.\n6. Explain partitioning in Hive - why it’s used and how it impacts performance.\n7. How do you optimize SQL queries for performance? (talk about indexing, execution plans, projection pruning etc.)\n8. Describe a data pipeline you’ve built - what tools (e.g., Airflow, PySpark) did you use and what challenges did you face?\n9. Explain CI/CD in data engineering - how you implemented it in ETL pipelines.\n10. How do you ensure data quality and validation in your pipelines?\n11. What experience do you have with AWS data services (e.g., S3, EMR, Glue)? Provide a concrete example.\n12. Describe a scenario where you used Spark Streaming with Kafka for real‑time analytics.\n13. How have you implemented data modeling in big data contexts (e.g., star schema, snowflake)?\n14. Discuss data lakehouse architecture and how it differs from traditional data lakes or warehouses.\n15. Provide an example of a performance or scalability issue you faced in a pipeline and how you resolved it.\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:efa99583513031f4",
+    "saved_date": "2026-10-01T23:13:38Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

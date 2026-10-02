@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-0dc04d5d99d32f99",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7295781326744342528",
+    "captured_at": "2026-10-02T00:15:44.748064+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:35:19Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Databricks Data Engineer | 73k+ LinkedIn | 5xDatabricks Certified | AI, Tech & Marketing | Brand Partnership | DM for Collab’s\n1yr •\nHello, Connections!\n𝗪𝗶𝗻𝗱𝗼𝘄 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀 𝗶𝗻 𝗦𝗤𝗟 🛠️\nWindow functions in SQL are powerful tools used for performing calculations across a set of rows that are related to the current row without collapsing the results into a single value (as aggregate functions would). They are commonly used for running totals, rank calculations, and moving averages.\n🔴 𝐓𝐡𝐢𝐬 𝐏𝐃𝐅 𝐂𝐨𝐯𝐞𝐫𝐬:\n◼ Aggregate Functions\n◼ Ranking Window Functions\n◼ Value Window Functions\n◼ SQL Frame Clause\n◼ Common Use Cases for SQL Window Functions\npdf credit - Tarini Prasad Das\n⏩ 𝐉𝐨𝐢𝐧 𝐦𝐲 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐭𝐨 𝐥𝐞𝐚𝐫𝐧 𝐃𝐚𝐭𝐚 𝐒𝐜𝐢𝐞𝐧𝐜𝐞 & 𝐀𝐧𝐚𝐥𝐲𝐭𝐢𝐜𝐬:\nhttps://t.me/LK_Data_world\n⏩ If you found this PDF informative, save and repost it🔁.\n⏩ follow Lovee Kumar for more such content 🛎\n#data #dataengineer #bigdataengineer #datascience #skills #sql #guide\n#interviewpreparation #linkedinconnection\nWindow functions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7295781326744342528_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0dc04d5d99d32f99",
+    "saved_date": "2026-10-01T23:35:19Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7295781326744342528",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7295781326744342528_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

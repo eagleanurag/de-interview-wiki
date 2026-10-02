@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-3ec8ba642fe31724",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349248574339117056",
+    "captured_at": "2026-10-02T00:15:46.893044+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:11:56Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : Accenture (Medium Level)\n#PySpark #SQL Interview Question — Solution\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nYou are given the table of employee details. Write an SQL to find details of employee with salary more than their manager salary but they joined the company after the manager joined.\n\nDisplay employee name, salary and joining date along with their manager's salary and joining date, sort the output in ascending order of employee name.\n\nPlease note that manager id in the employee table referring to emp id of the same table.\n\n \n\nTable: employee\n+--------------+-------------+\n| COLUMN_NAME | DATA_TYPE |\n+--------------+-------------+\n| emp_id | int |\n| emp_name | varchar(10) |\n| joining_date | date |\n| salary | int |\n| manager_id | int |\n+--------------+-------------+\n𝐬𝐜𝐡𝐞𝐦𝐚 \nCREATE TABLE employees (\n emp_id INT PRIMARY KEY,\n emp_name VARCHAR(50),\n joining_date DATE,\n salary INT,\n manager_id INT\n);\nINSERT INTO employees (emp_id, emp_name, joining_date, salary, manager_id) VALUES\n(1, 'Ankit', '2021-01-01', 10000, 4),\n(2, 'Mohit', '2022-05-01', 15000, 5),\n(3, 'Vikas', '2023-06-01', 10000, 4),\n(4, 'Rohit', '2022-02-01', 5000, 2),\n(5, 'Mudit', '2021-03-01', 12000, 6),\n(6, 'Agam', '2024-02-01', 12000, 2),\n(7, 'Sanjay', '2024-02-21', 9000, 2),\n(8, 'Ashish', '2023-01-05', 5000, 2),\n(9, 'Mukesh', '2020-02-03', 6000, 2),\n(10,'Rakesh', '2022-08-01', 7000, 6);\n\n\n\n\nThanks to Ankit Bansal and NamasteSQL for the question",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349248574339117056_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3ec8ba642fe31724",
+    "saved_date": "2026-10-01T23:11:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349248574339117056",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349248574339117056_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

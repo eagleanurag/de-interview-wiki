@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-dbf97b40ddb2c06f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458365066741006336",
+    "captured_at": "2026-10-02T00:15:52.439915+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:08:09Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n5mo •\n𝟑𝟎𝟎 𝐑𝐞𝐚𝐥-𝐓𝐢𝐦𝐞 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 — 𝐓𝐡𝐞 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧 𝐄𝐯𝐞𝐫𝐲 𝐉𝐨𝐛 𝐒𝐞𝐞𝐤𝐞𝐫 𝐍𝐞𝐞𝐝𝐬.\nIf you're preparing for placements or interviews, here’s a reality check 👇\nLearning 𝘁𝗵𝗲𝗼𝗿𝘆 is not enough.\nInterviews today focus on 𝗽𝗿𝗮𝗰𝘁𝗶𝗰𝗮𝗹, 𝘀𝗰𝗲𝗻𝗮𝗿𝗶𝗼-𝗯𝗮𝘀𝗲𝗱 𝗦𝗤𝗟 — the kind used in real dashboards, ETL pipelines, and production data systems.\nAnd the resource I found hits exactly that.\n💥 300 Real-Time SQL Interview Practical Questions — collected from multiple companies across levels\n𝗪𝗵𝘆 𝘁𝗵𝗶𝘀 𝗺𝗮𝘁𝘁𝗲𝗿𝘀:\n• Perfect for candidates preparing in a short time\n• Covers real business scenarios — not textbook queries\n• Builds confidence for both freshers & experienced professionals\n• If your interview is tomorrow, this PDF can literally be a lifesaver\nThe smartest way to use it:\n→ Create sample tables\n→ Insert dummy data\n→ Run each query yourself\nHands-on practice > passive reading.\nThat’s how you convert “𝗜 𝗸𝗻𝗼𝘄 𝗦𝗤𝗟” → “𝗜 𝗰𝗮𝗻 𝘀𝗼𝗹𝘃𝗲 𝗮𝗻𝘆 𝗦𝗤𝗟 𝗽𝗿𝗼𝗯𝗹𝗲𝗺 𝗶𝗻 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝘀.”\nWhether you're aiming for 𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 / 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 / 𝗕𝗜 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 / 𝗕𝗮𝗰𝗸𝗲𝗻𝗱 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 — this document is a goldmine.\nIf you found this helpful:\n✔ Save this post for revision later.\n✔ Share it with someone who’s preparing — you might make their day.\n✔ Follow Aishwarya Pani for more high-value and practical content — no fluff, only growth.\n#SQL #DataAnalytics #Database #DataEngineer #InterviewPreparation #TechJobs #JobSearch #BigData #CareerGrowth #LearningSQL #DataScience\nReal SQL Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7458365066741006336_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:dbf97b40ddb2c06f",
+    "saved_date": "2026-10-01T23:08:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7458365066741006336",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7458365066741006336_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7458365066741006336_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

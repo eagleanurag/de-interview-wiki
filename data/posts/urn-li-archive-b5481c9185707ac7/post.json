@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-b5481c9185707ac7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.241735+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:20:00Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🧠 𝗗𝗕𝗔 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲: 𝗧𝗵𝗲 𝗖𝘂𝗿𝗶𝗼𝘂𝘀 𝗖𝗮𝘀𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗖𝗿𝗮𝘄𝗹𝗶𝗻𝗴 𝗦𝗤𝗟 𝗦𝗲𝗿𝘃𝗲𝗿 🧠\n\n𝘐𝘮𝘢𝘨𝘪𝘯𝘦 𝘵𝘩𝘪𝘴:\n\nYou’re the lead DBA for a financial services company. It’s Monday morning. The business-critical MSSQL Server (2019 Enterprise) that powers real-time transaction processing starts slowing down dramatically—but only between 10:30 AM and 1:00 PM. After that, it mysteriously returns to normal.\n\n𝗧𝗵𝗲 𝘀𝗲𝗿𝘃𝗲𝗿 𝗶𝘀 𝗮 𝗯𝗲𝗮𝘀𝘁:\n✅ 32 vCPUs\n✅ 256 GB RAM\n✅ Ultra-fast SSDs\n✅ No recent deployments\n✅ No blocking, no deadlocks\n✅ Indexes and stats are fresh\n✅ TempDB is optimized\n✅ Query Store shows no obvious regressions\n\n𝗬𝗼𝘂 𝗱𝗶𝗴 𝗱𝗲𝗲𝗽𝗲𝗿:\nCPU usage spikes to 95%, but no single query stands out\nMemory usage is stable, no signs of pressure\nI/O latency is low, disk queues are clean\nNo scheduled jobs or backups during the slowdown window\nNo network bottlenecks reported by the infra team\nNo changes in execution plans for key procedures\n\n𝗬𝗼𝘂 𝗲𝘃𝗲𝗻 𝘁𝗿𝗶𝗲𝗱:\nCapturing live query stats\nComparing wait stats before/during/after\nRunning a profiler trace (carefully!)\nIsolating app traffic by module\nStill, the root cause remains elusive.\n\n🧩 𝗛𝗲𝗿𝗲’𝘀 𝘁𝗵𝗲 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 𝗳𝗼𝗿 𝘆𝗼𝘂, 𝗳𝗲𝗹𝗹𝗼𝘄 𝗗𝗕𝗔𝘀:\nWhat would be your next move?\nWhat non-obvious culprits would you investigate?\nHave you faced a similar ghost-in-the-machine scenario?\n\n🔍 𝗦𝗽𝗲𝗰𝗶𝗮𝗹 𝗡𝗼𝘁𝗲:\nThis is a purely imaginary scenario. I don’t have the answer or a solution. The goal is to spark discussion, test our collective knowledge, and think outside the box. Let’s challenge ourselves and learn from each other!\n\nDrop your thoughts, theories, and war stories below 👇\n\n#SQLServer #DBAChallenge #PerformanceTuning #DatabaseMystery #TechCommunity #SQLInsights",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b5481c9185707ac7",
+    "saved_date": "2026-10-01T23:20:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

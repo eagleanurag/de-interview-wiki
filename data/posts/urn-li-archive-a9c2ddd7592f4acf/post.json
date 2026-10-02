@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-a9c2ddd7592f4acf",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.100902+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:01Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Coforge – Data Engineering Role:\n=======================\n\n🎁 Step 1: Recruiter Discussion\n After a brief LinkedIn connect + recruiter call, I received a schedule for the technical rounds. The process moved quickly and was structured.\n\n ✅ Round 1 – Technical:\n This round focused on core skills, hands-on logic, and end-to-end pipeline building with tools like PySpark, SQL, and cloud platforms.\n\n Key Topics Covered:\n1. PySpark transformations & performance\n2. SQL optimization and advanced querying\n3. Data warehousing & file formats\n4. Azure Data Factory (ADF) and Data Lake integration\n\n🧠 Most Asked Questions:\n1. How do you handle skewed data in PySpark?\n2. Explain coalesce() vs repartition() in PySpark.\n3. Write an SQL to get 2nd highest salary per department.\n4. How would you optimize a SQL query with multiple joins & subqueries?\n5. How does ADF handle failure & retries in pipelines?\n ⏰ Round 2 – Scenario-Based + Design (Tech + Functional Round):\n This round was about real-time problem-solving, system design, and working with data at scale. It covered data pipelines, governance, monitoring, and business logic implementation.\n\n🎄 Scenario-Based Questions:\n1.You have millions of files in a Data Lake. How would you process them efficiently in batches using ADF or Databricks?\n2. A downstream team is reporting inconsistent data. How would you debug and ensure pipeline data quality?\n3. How would you design a pipeline that ingests data from APIs, transforms it, and stores it in Delta Lake?\n4. Your data pipeline fails in production but works in dev – how do you approach root cause analysis?\n5. How do you manage and orchestrate dependencies between multiple pipeline stages?\n\n🛠️ Tools/Technologies Emphasized:\n 🔹 PySpark\n 🔹 SQL (Window functions, CTEs, Aggregations)\n 🔹 Azure Data Factory\n 🔹 Data Lake / Delta Lake\n 🔹 CI/CD for Data Pipelines\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a9c2ddd7592f4acf",
+    "saved_date": "2026-10-01T23:11:01Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-e81c529b986b9b15",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346349465332609025",
+    "captured_at": "2026-10-02T00:15:52.980887+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:12:54Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : Deloitte (Medium Level)\n\n\n#PySpark #SQL Interview Question — Solution\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nYou're working for a large financial institution that provides various types of loans to customers. Your task is to analyze loan repayment data to assess credit risk and improve risk management strategies.\n\nWrite an SQL to create 2 flags for each loan as per below rules. Display loan id, loan amount , due date and the 2 flags.\n \n\n1- fully_paid_flag: 1 if the loan was fully repaid irrespective of payment date else it should be 0.\n2- on_time_flag : 1 if the loan was fully repaid on or before due date else 0.\n \nTable: loans\n+-------------+-----------+\n| COLUMN_NAME | DATA_TYPE |\n+-------------+-----------+\n| loan_id | int |\n| customer_id | int |\n| loan_amount | int |\n| due_date | date |\n+-------------+-----------+\nTable: payments\n+--------------+-----------+\n| COLUMN_NAME | DATA_TYPE |\n+--------------+-----------+\n| amount_paid | int |\n| loan_id | int |\n| payment_date | date |\n| payment_id | int |\n+--------------+-----------+\n\n𝐬𝐜𝐡𝐞𝐦𝐚 \nCREATE TABLE payments (\n payment_id INT PRIMARY KEY,\n loan_id INT,\n payment_date DATE,\n amount_paid INT\n);\nINSERT INTO payments (payment_id, loan_id, payment_date, amount_paid) VALUES\n(1, 1, '2023-01-10', 2000),\n(2, 2, '2023-02-10', 1500),\n(3, 2, '2023-02-20', 8000),\n(4, 3, '2023-04-20', 5000),\n(5, 4, '2023-03-15', 2000),\n(6, 4, '2023-04-02', 4000),\n(7, 5, '2023-04-02', 4000),\n(8, 5, '2023-05-02', 3000);\n\nCREATE TABLE loans (\n loan_id INT,\n customer_id INT,\n loan_amount INT,\n due_date DATE\n);\nINSERT INTO loans (loan_id, customer_id, loan_amount, due_date) VALUES\n(1, 1, 5000, '2023-01-15'),\n(2, 2, 8000, '2023-02-20'),\n(3, 3, 10000, '2023-03-10'),\n(4, 4, 6000, '2023-04-05'),\n(5, 5, 7000, '2023-05-01');\n\nThanks to Ankit Bansal and NamasteSQL for the question\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346349465332609025_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e81c529b986b9b15",
+    "saved_date": "2026-10-01T23:12:54Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346349465332609025",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346349465332609025_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

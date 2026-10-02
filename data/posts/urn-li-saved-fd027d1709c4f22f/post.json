@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-fd027d1709c4f22f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477244849528942592",
+    "captured_at": "2026-10-02T00:15:53.610463+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:07:30Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Data Engineer Interview Guide 2026: Stop Preparing the Wrong Way!\n\nMost candidates don't fail because they lack skills.\nThey fail because they prepare the wrong things.\n\n❌ Memorizing tool names\n❌ Collecting certificates\n❌ Solving random \"Top 50 Interview Questions\"\n\nCompanies aren't looking for people who know every tool.\nThey're looking for engineers who can solve real business problems.\n\nHere's what actually matters:\n\n1️⃣ Master Data Fundamentals\nTools change. Fundamentals don't.\n\n✔ Data Modeling\n✔ Partitioning & Indexing\n✔ Normalization vs Denormalization\n✔ Data Quality\n\n---\n\n2️⃣ Make SQL Your Superpower\nIf SQL isn't your strongest skill, start there.\n\nFocus on:\n✅ Complex Joins\n✅ Window Functions\n✅ CTEs\n✅ Query Optimization\n✅ Performance Tuning\n\n---\n\n3️⃣ Think Like a Data Engineer\nDon't just write scripts.\n\nLearn to design systems.\n\n✔ Batch vs Streaming\n✔ ETL vs ELT\n✔ Data Lakes vs Data Warehouses\n✔ Scalability & Reliability\n\n---\n\n4️⃣ Build Real Projects\n\nA single well-explained project is worth more than 10 certificates.\n\nShow that you can:\n• Design pipelines\n• Handle failures\n• Optimize performance\n• Solve real business problems\n\n---\n\n5️⃣ Learn to Explain Your Decisions\n\nInterviewers don't just ask:\n\n\"How did you build it?\"\n\nThey ask:\n\nWhy did you choose this approach?\n\nBe ready to explain:\n• Design choices\n• Trade-offs\n• Performance improvements\n• Cost optimization\n\nThat's what differentiates good engineers from great ones.\n\n💡 Pro Tip:\nDon't prepare answers.\nPrepare to explain your thinking.\n\nWhat's the toughest Data Engineering interview question you've faced?\n\nShare it in the comments—let's help each other grow. 👇\nfollow Rajeswari Gelasam for more\n#DataEngineering #Azure #AzureDataFactory #Databricks #PySpark #SQL #DataEngineer #MicrosoftAzure #ETL #BigData #CareerGrowth #InterviewPreparation #TechCareers #Analytics",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7477244849528942592_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fd027d1709c4f22f",
+    "saved_date": "2026-10-01T23:07:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7477244849528942592",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7477244849528942592_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

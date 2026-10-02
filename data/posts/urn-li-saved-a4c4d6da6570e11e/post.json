@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-a4c4d6da6570e11e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7311444447941005315",
+    "captured_at": "2026-10-02T00:15:50.229696+00:00",
+    "author": "Kalyani V",
+    "published_at": "2026-10-01T23:26:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Extracting First Non-Empty City Name from Multiple Columns in PySpark\n\n🔍 Problem Statement:\n Given a dataset containing city names distributed across three columns (city1, city2, city3), each row may contain empty strings or null (None) values. The objective is to extract the first non-empty and non-null city name from these columns and create a new column called newdata to store the result.\n💡 Input Data:\ndata= [(\"Goa\",\"\",\"AP\"),(\"\",\"AP\",None),(None,\"\",\"bglr\")]\ncolumn =[\"city1\",\"city2\",\"city3\"]\n\n🔧 Solution:\n✅ Step 1: Create a DataFrame\n``` df1 = spark.createDataFrame(data,column) ```\n\n✅ Step 2: Import necessary functions\n```from pyspark.sql.functions import coalesce, when, trim```\n\n✅ Step 3: Creating the new column by selecting the first non-empty and non-null city\n\n``` from pyspark.sql.functions import *\ndisplay(df1.withColumn(\"newdata\", coalesce(\n when(df1.city1 == \"\", None).otherwise(df1.city1),\n when (df1.city2 == \"\", None).otherwise(df1.city2),\n when(df1.city3 == \"\", None).otherwise(df1.city3)\n \n))) ```\n\n#pyspark #python #databricks #dataEgineer #AzureDatabricks #spark #bigData #dataCleaning#",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7311444447941005315_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a4c4d6da6570e11e",
+    "saved_date": "2026-10-01T23:26:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7311444447941005315",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7311444447941005315_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

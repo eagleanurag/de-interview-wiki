@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-91786362de7a2d52",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.835986+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:11:31Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Expedia Group Interview Experience.\nCompensation Range: 35+ LPA\nRole: Data Engineer\nApplication Method: Referral\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱 – 𝗛𝗶𝗿𝗶𝗻𝗴 𝗠𝗮𝗻𝗮𝗴𝗲𝗿 (𝗘𝗹𝗶𝗺𝗶𝗻𝗮𝘁𝗶𝗼𝗻 𝗥𝗼𝘂𝗻𝗱)\n\n- Deep dive into project architecture\n- Heavy focus on streaming systems – recurring theme at Expedia\n- Advanced discussion on:\n Kafka: Backpressure, design challenges\n- Database internals: Indexing, partitioning, connection pooling\n- Strong emphasis on fundamentals and system-level thinking\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 + 𝗦𝗽𝗮𝗿𝗸 𝗜𝗻𝘁𝗲𝗿𝗻𝗮𝗹𝘀\n\n- Extensive discussion on: Microservices: APIs, JWT, SAML authentication\n- Spark Internals: Execution plan, memory, transformations/actions\n- At least 25–30 technical questions asked\n- Focus aligned with resume content (e.g., microservices, Spark)\n\n𝟯𝗿𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 + 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴\n\n- Started with programming (tricky array-based problem)\n- Follow-up: Design a streaming system end-to-end\n- Topics:\n Kafka, Spark Streaming\n Expectations to know Flink (optional)\n Real-time data design and processing focus\n\n𝟰𝘁𝗵 𝗥𝗼𝘂𝗻𝗱 – 𝗣𝗿𝗼𝗱𝘂𝗰𝘁 & 𝗦𝘁𝗮𝗸𝗲𝗵𝗼𝗹𝗱𝗲𝗿 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁\n\n- End-to-end data pipeline implementation\n- SDLC process: From requirement to deployment\n- Behavioral Questions (STAR format):\n Team conflict resolution\n Role models, ownership, communication\n\nInterview referance - https://lnkd.in/gyYztWrH\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:91786362de7a2d52",
+    "saved_date": "2026-10-01T23:11:31Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

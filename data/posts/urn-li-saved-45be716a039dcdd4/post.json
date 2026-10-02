@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-45be716a039dcdd4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327237430086959105",
+    "captured_at": "2026-10-02T00:15:47.172652+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:24:46Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Production-grade project structure for data engineering projects today! 📁\n\n📁 𝗰𝗼𝗻𝗳𝗶𝗴/: Contains configuration files for your project, such as database connection details, API keys, or other project-specific settings. Keeps configurations separate from the code for easy updates.\n\n📁 𝗱𝗮𝘁𝗮/: Stores raw and processed data files. Has two subfolders: 📁 raw/ for unprocessed data and 📁 processed/ for transformed data. Ensures access to original data files and tracks changes made during processing.\n\n📁 𝗱𝗼𝗰𝘀/: Contains project documentation, such as README files, user guides, and technical documentation. Maintains thorough documentation for project understandability and maintainability.\n\n📁 𝗲𝘁𝗹/: Holds Extract, Transform, and Load (ETL) scripts. Contains three subfolders: 📁 𝗲𝘅𝘁𝗿𝗮𝗰𝘁/, 📁 𝘁𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺/, and 📁 𝗹𝗼𝗮𝗱/, each with respective scripts for data extraction, transformation, and loading.\n\n📁 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲𝘀/: Contains data pipeline orchestration scripts. These scripts define the order in which different ETL processes or other data processing steps should be executed.\n\n📁 𝘀𝗿𝗰/: Stores the source code for the project, including data processing and transformation scripts, utility functions, and data validation scripts. Organized into subfolders: 📁 𝗱𝗮𝘁𝗮/, 📁 𝘂𝘁𝗶𝗹𝘀/, and 📁 𝘃𝗮𝗹𝗶𝗱𝗮𝘁𝗶𝗼𝗻/.\n\n📁 𝘁𝗲𝘀𝘁𝘀/: Contains unit and integration tests for the project. Writing tests ensures the code works as expected and helps catch potential issues before they become major problems.\n\n📄 .𝗴𝗶𝘁𝗶𝗴𝗻𝗼𝗿𝗲: Specifies files and folders ignored by Git version control. Prevents accidental commits of certain files, like data files or configuration files containing sensitive information.\n\n📄 𝗲𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁.𝘆𝗺𝗹: Defines the Conda environment for the project, listing required packages and their versions. Manages dependencies for easy setup and consistent package versions across team members.\n\n📄 𝗥𝗘𝗔𝗗𝗠𝗘.𝗺𝗱: Provides an overview of the project, including its purpose, instructions for setup, and usage information. A well-written README file helps team members and users understand and utilize the project effectively.\n\nRemember, this is a starting point; tailor it to your project's specific needs.\n\nFollow me here for more content: Akhil Rachuri \n\nPC: Brij kishore Pandey\n\nBetter reach: Sumit Mittal Darshil Parmar Abhishek Jha Abhisek Sahu Shubham Wadekar Asheesh T. Vaishnavi MURALIDHAR Nimra Ayaz Karthik K. Prashant Kumar Pandey \n\n#data \n#dataengineering\nActivate to view larger image,\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327237430086959105_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:45be716a039dcdd4",
+    "saved_date": "2026-10-01T23:24:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327237430086959105",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327237430086959105_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

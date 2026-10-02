@@ -16,9 +16,12 @@ import pytest
 
 from src.aggregation.consolidation import (
     ConsolidationError,
+    _slug,
     classify_content,
     consolidate,
     detect_technologies,
+    normalise_label,
+    slug_for,
     verify,
 )
 from src.models import (
@@ -650,3 +653,139 @@ def test_no_question_is_published_without_a_source():
     for question in index.questions:
         assert question.post_ids
         assert question.post_id
+
+
+def _post(
+    post_id: str,
+    *,
+    concepts: list[str] | None = None,
+    topics: list[str] | None = None,
+    text: str = "Delta Lake gives a data lake ACID guarantees.",
+):
+    """A collected post, for the consolidation tests to group."""
+
+    return KnowledgePost(
+        id=post_id,
+        source=SourceInfo(
+            platform="linkedin",
+            url=f"https://www.linkedin.com/feed/update/{post_id}",
+            captured_at="2026-10-02T04:30:00+00:00",
+        ),
+        original_text=text,
+        media=[],
+        ai_analysis=AIAnalysis(
+            summary="Delta Lake notes.",
+            topics=topics or ["Delta Lake"],
+            subtopics=[],
+            concepts=concepts or ["ACID"],
+            image_descriptions=[],
+        ),
+        interview_questions=[],
+        classification=Classification(
+            domain="Data Engineering",
+            primary_topic="Delta Lake",
+            secondary_topics=[],
+            interview_relevant=True,
+        ),
+    )
+
+
+class TestLabelIdentity:
+    """
+    One slug function, and one grouping key, for the whole project.
+
+    Both were duplicated: the aggregator derived a slug with no length
+    bound while the site truncated at sixty characters, and the
+    aggregator grouped concepts case-insensitively while the site
+    grouped them on the exact text. Neither mattered against seven
+    posts, because nothing was long enough to truncate and no two posts
+    spelled a concept differently. Against five hundred it produced a
+    knowledge base whose slugs did not address the pages the site
+    generated, and concepts split across pages that each listed only the
+    posts that happened to spell them that way.
+    """
+
+    def test_a_long_label_is_bounded(self):
+        from src.aggregation.consolidation import MAX_SLUG_LENGTH
+
+        label = (
+            "Azure Data Factory data flows, incremental loading, "
+            "triggers, and scheduling for a medallion pipeline"
+        )
+
+        slug = slug_for(label, fallback="unknown")
+
+        assert len(slug) <= MAX_SLUG_LENGTH
+        assert not slug.endswith("-")
+
+    def test_the_bound_is_the_same_one_the_site_uses(self):
+        from src.aggregation.consolidation import MAX_SLUG_LENGTH
+        from src.wiki.naming import MAX_SLUG_LENGTH as site_max
+
+        assert MAX_SLUG_LENGTH == site_max
+
+    def test_the_knowledge_base_and_the_site_agree_on_a_long_slug(self):
+        from src.wiki.naming import slugify
+
+        label = (
+            "Azure Data Factory data flows, incremental loading, "
+            "triggers, and scheduling for a medallion pipeline"
+        )
+
+        # The aggregator's slug is what lands in the knowledge base, and
+        # the site's is what becomes a file name. A consumer following
+        # the stored slug has to arrive at the page.
+        assert _slug(label) == slugify(label)
+
+    def test_case_and_punctuation_do_not_make_two_concepts(self):
+        assert normalise_label("Delta Lake") == normalise_label(
+            "delta-lake"
+        )
+        assert normalise_label("ACID Compliance") == normalise_label(
+            "acid compliance"
+        )
+
+    def test_accents_fold_rather_than_vanish(self):
+        # Two spellings of one label must land on one slug, or a topic
+        # appears twice under different names.
+        assert slug_for("Café", fallback="x") == slug_for(
+            "Cafe", fallback="x"
+        )
+
+    def test_a_label_with_no_usable_characters_uses_the_fallback(self):
+        from src.wiki.naming import slugify
+
+        assert slug_for("...", fallback="unknown") == "unknown"
+        assert slugify("...", fallback="untitled") == "untitled"
+
+    def test_two_spellings_of_one_concept_consolidate_to_one_node(self):
+        first = _post(
+            "urn:li:activity:1",
+            concepts=["Delta Lake", "time travel"],
+        )
+        second = _post(
+            "urn:li:activity:2",
+            concepts=["delta lake", "Time Travel"],
+        )
+
+        index = consolidate([first, second])
+
+        names = {node.name.casefold() for node in index.concepts}
+
+        assert len(index.concepts) == 2, [
+            node.name for node in index.concepts
+        ]
+        assert "delta lake" in names
+        assert "time travel" in names
+
+        lake = next(
+            node
+            for node in index.concepts
+            if node.name.casefold() == "delta lake"
+        )
+
+        # Both posts, because both meant the same concept.
+        assert set(lake.post_ids) == {
+            "urn:li:activity:1",
+            "urn:li:activity:2",
+        }

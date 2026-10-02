@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-57b964c7e60837ca",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.098716+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:11:06Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Let's talk about some recently added options in autoloader in databricks\n\n1) Enabling File events instead of legacy notification queue method: \n\nPreviously, you had to create a separate queue for each autoloader stream. Now you just have to provide a permission to external location to create a single queue and databricks will handle it for you based on the file arrival trigger.\n\n2) Clean source files\nYou can delete or archive the files based on the retention period provided. \n\n3) Connecting directly to SFTP location:\nJust define SFTP connection and connect to SFTP similar to how you'd connect to S3, Azure lake.\n\n4) Two new data formats: XML and excel\n\n5) Schema Evolution: addNewcolumnswithTypeWidening\n\nIf your column data type is changes from into to long; it wouldn't go into rescue column, it'd automatically handle the type widening.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:57b964c7e60837ca",
+    "saved_date": "2026-10-01T23:11:06Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

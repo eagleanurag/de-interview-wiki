@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-89cabcd26be48da2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.796101+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:13:41Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 How would you process a 1 TB file in Spark?\nIf this came up in an interview, and here's how we should approached it 👇\n\n✅ Step 1: Ask smart questions first\nBefore jumping to configs:\n\nIs the file compressed (Parquet/ORC) or raw (CSV)?\n\nIs it a one-time batch job or scheduled?\n\nWhat’s the available cluster size and resource policy?\n\nAsking these shows you're not just throwing numbers — you're thinking like a system designer.\n\n✅ Step 2: Partition the file properly\nUsing a rule of 256 MB per partition:\n\n📦 1 TB = 1,048,576 MB\n🔪 → 1,048,576 / 256 = ~4096 partitions\nThat’s our base for parallelism.\n\n✅ Step 3: Choose executor configuration wisely\n\nI went with:\n\n--num-executors 50\n--executor-cores 4\n--executor-memory 8G\n\nThat gives me:\n\n🔄 50 × 4 = 200 tasks in parallel\n\n🔁 4096 / 200 = ~21 task waves\n\n🚀 Balanced memory, reduced GC pressure\n\n✅ Step 4: Final thoughts\n\nThis config works well when:\n\nYou're processing uncompressed data at scale\n\nYou want fast performance without overcommitting memory\n\nYou're aiming for a production-ready, GC-friendly setup\n\n💬 What’s your go-to strategy for tuning Spark jobs at scale?\n\n#BigData #Spark #DataEngineering #ApacheSpark #InterviewTips #LinkedInLearning #TechCareer #SparkTuning #CloudComputing #Databricks #Pyspark #Scala\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:89cabcd26be48da2",
+    "saved_date": "2026-10-01T23:13:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

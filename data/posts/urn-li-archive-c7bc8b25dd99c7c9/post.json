@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-c7bc8b25dd99c7c9",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.258617+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:52Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Trust me, DSA is not HARD.\n\nIf you follow these 6 steps\n\n𝟭. 𝗙𝗼𝗰𝘂𝘀 𝗼𝗻 𝗗𝗲𝗽𝘁𝗵 𝗼𝘃𝗲𝗿 𝗕𝗿𝗲𝗮𝗱𝘁𝗵: \n - Don't solve 500 coding problems aimlessly. Master around 100 core problems deeply instead.\n - 40 Problems on Array, Strings, LinkedList, Stack & Queue, Binary search, Trees, Graph, Sorting and Searching: https://lnkd.in/djnaPkeD\n - 40 Problems on Dynamic Programming (DP), Backtracking, Hashing, Heap, Tries, and Greedy Algorithms: https://lnkd.in/dF3h-Khk\n\n𝟮. 𝗖𝗿𝗲𝗮𝘁𝗲 𝗮 𝗹𝗶𝘀𝘁 𝗼𝗳 𝗸𝗲𝘆 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀: \n - Use resources like \"Strivers A2Z DSA Sheet\" by Raj Vikramaditya to curate around 100 core problems.\n - https://lnkd.in/dQMGy9zF (Strivers)\n\n𝟯. 𝗠𝗮𝘀𝘁𝗲𝗿 𝗲𝗮𝗰𝗵 𝗱𝗮𝘁𝗮 𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲: \n - Understand and implement them by hand. Know how they work internally to ace interview questions.\n - Fundamentals, Intermediate, Advance DSA topics: https://lnkd.in/d4ws9xfr\n\n𝟰. 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝘄𝗶𝘁𝗵 𝗦𝗽𝗮𝗰𝗲𝗱 𝗥𝗲𝗽𝗲𝘁𝗶𝘁𝗶𝗼𝗻: \n - Revisit problems after 3 days, a week, and 15 days. Break down solutions instead of rote memorization.\n - 3:7:15 Rule for DSA: https://lnkd.in/dW6a8wcg\n\n𝟱. 𝗜𝗱𝗲𝗻𝘁𝗶𝗳𝘆 𝗿𝗲𝘂𝘀𝗮𝗯𝗹𝗲 𝘁𝗲𝗰𝗵𝗻𝗶𝗾𝘂𝗲𝘀 𝗮𝗻𝗱 𝗰𝗼𝗱𝗲 𝗯𝗹𝗼𝗰𝗸𝘀: \n - Isolate common patterns like Binary Search or Depth First Search for focused practice.\n - 20 DSA patterns: https://lnkd.in/d9GCezMm\n - 14 problem-solving patterns: https://lnkd.in/daysVFSz\n - DSA questions patterns: https://lnkd.in/d3rRHTfE\n\n𝟲. 𝗘𝘅𝗽𝗮𝗻𝗱 𝗶𝗻𝘁𝗼 𝗕𝗿𝗲𝗮𝗱𝘁𝗵: \n - Once you've mastered core problems and techniques, tackle a wider range of questions. Keep it realistic and relevant to interview scenarios.\n - 16 Important algorithms problems: https://lnkd.in/dfjm8ked\n - Tips to solve any DSA question by understanding patterns: https://lnkd.in/d9GVyfBY\n\nAdditional tips \nPractice on paper: Practice whiteboard interviews to improve your planning and coding skills without relying on an IDE. It’s a practical way to get ready for real interviews.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲: \n - https://lnkd.in/dte69Z5N\n\n𝗙𝗼𝗿 𝗺𝗼𝗿𝗲 𝗵𝗲𝗹𝗽 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝗝𝗢𝗕𝗦 - 𝗝𝗼𝗶𝗻 𝗺𝘆 𝗣𝗲𝗿𝘀𝗼𝗻𝗮𝗹 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀\n - https://lnkd.in/d4Ht9Ggj\n - https://lnkd.in/dxqEen4X\n\nStay curious, keep learning, and keep sharing!\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c7bc8b25dd99c7c9",
+    "saved_date": "2026-10-01T23:30:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

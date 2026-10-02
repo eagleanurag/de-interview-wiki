@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-4e14b179638cc62a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.866631+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:54Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "PayPal Interview Experience\nCompensation Range: 29LPA + 2.9L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗥𝗼𝘂𝗻𝗱 𝟭: 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 – 𝗗𝗦𝗔 + 𝗦𝗤𝗟 (𝟰𝟱 𝗺𝗶𝗻𝘀)\nData Structures & Algorithms:\n• Rainwater Trapping – optimized for space and time\n• Priority Queue-based problem for task scheduling\n• Array traversal using prefix sums and sliding window patterns\n\nSQL:\n• Extensive use of window functions – ROW_NUMBER, RANK, LAG, LEAD\n• Aggregations, partitions, and advanced joins\n• Query optimization and performance tuning techniques\n\n𝗥𝗼𝘂𝗻𝗱 𝟮: 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗗𝗲𝘀𝗶𝗴𝗻 + 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 (𝟰𝟱–𝟲𝟬 𝗺𝗶𝗻𝘀)\nProject-Based Discussion:\n• Shared architecture of prior data pipelines\n• Justified choices of tools like Airflow, Glue, Kafka, Snowflake\n• Discussed strategies for data validation, monitoring, and scalability\n\nSystem Design Scenario:\n• Data migration from Hadoop, Oracle DB, and S3 → unified S3 data lake\n• Focused on scalability, error handling, schema management, and fault tolerance\n\nSpark Coding Task:\n• DataFrame joins and transformations in PySpark\n• Handled edge cases like null values, schema mismatches, and skewed data\n• Output written in partitioned Parquet format\n\n𝗥𝗼𝘂𝗻𝗱 𝟯: 𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 + 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼-𝗕𝗮𝘀𝗲𝗱 (𝟲𝟬 𝗺𝗶𝗻𝘀)\n• In-depth discussion on project ownership and collaboration with cross-functional teams\n• Real-time problem scenarios like pipeline delays, replication lags, and Spark job failures\n• Behavioral focus: adaptability, leadership under pressure, and communication\n\n𝗥𝗼𝘂𝗻𝗱 𝟰: 𝗛𝗥 𝗗𝗶𝘀𝗰𝘂𝘀𝘀𝗶𝗼𝗻\n• Offer structure, benefits, and company policies\n• Discussion on organizational values and career progression opportunities\n• Cultural alignment and long-term vision\n\nKey Takeaways:\n• The interview process was balanced across technical, design, and behavioral areas\n• Strong emphasis on SQL, PySpark, and scalable data pipeline design\n• Communication, clarity in thought, and structured problem-solving played a key role\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4e14b179638cc62a",
+    "saved_date": "2026-10-01T23:20:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

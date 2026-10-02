@@ -19,6 +19,7 @@ something actually changed.
 from __future__ import annotations
 
 import re
+import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Iterable
@@ -127,26 +128,80 @@ NON_TECHNICAL_MARKERS: tuple[tuple[str, str], ...] = (
 )
 
 
+#: The longest slug a label may produce.
+#:
+#: Applied here rather than only where a page is written, because the
+#: knowledge base is the authoritative artifact: a consumer that follows
+#: a concept's ``slug`` to build a link must arrive at the page the site
+#: actually generated. Two functions that truncate differently are one
+#: function too many, and the disagreement only shows up once a corpus
+#: has labels long enough to hit the bound -- which is why it survived
+#: every test written against seven posts.
+MAX_SLUG_LENGTH = 60
+
+
+def slug_for(
+    value: str,
+    *,
+    fallback: str,
+    max_length: int = MAX_SLUG_LENGTH,
+) -> str:
+    """
+    One slug function, used wherever a label becomes an identifier.
+
+    Lowercase and hyphenated so the result works as a directory name, a
+    URL segment and a job id at once, and so two labels differing only
+    in case or punctuation consolidate into one node instead of two.
+
+    Accented characters are decomposed and then dropped rather than
+    deleted outright, so ``café`` and ``cafe`` land on the same slug and
+    two spellings of one label do not become two topics.
+
+    Bounded in length so a label that is a whole sentence does not
+    become a file name no filesystem will accept.
+    """
+
+    normalized = unicodedata.normalize("NFKD", str(value))
+
+    ascii_only = normalized.encode(
+        "ascii", "ignore"
+    ).decode("ascii")
+
+    slug = re.sub(r"[^a-z0-9]+", "-", ascii_only.lower()).strip("-")
+
+    if len(slug) > max_length:
+        slug = slug[:max_length].rstrip("-")
+
+    return slug or fallback
+
+
 def _slug(value: str) -> str:
     """
     A stable, filesystem- and URL-safe key for a label.
 
-    Lowercase and hyphenated so it works as a directory name, a URL
-    segment and a job id at once, and so two labels differing only in
-    case consolidate into one node instead of two.
+    Named here because the knowledge base is built before anything is
+    rendered, so this is where a label's identity is decided. The site
+    asks this module for the same slug rather than deriving its own.
     """
 
-    cleaned = re.sub(r"[^a-z0-9]+", "-", value.strip().lower())
-
-    return cleaned.strip("-") or "unknown"
+    return slug_for(value, fallback="unknown")
 
 
-def _normalise(value: str) -> str:
+__all__ = ["MAX_SLUG_LENGTH", "normalise_label", "slug_for"]
+
+
+def normalise_label(value: str) -> str:
     """
     A comparison key that ignores case and punctuation.
 
     "Delta Lake", "delta lake" and "Delta-Lake" are one concept, and
     merging them is the whole point of consolidation.
+
+    Public because a label's identity is decided here, and anything that
+    renders those labels has to group them the same way. Grouping on the
+    raw text instead produced one knowledge-base concept spread across
+    several pages, each showing only the posts that happened to spell it
+    that way.
     """
 
     return re.sub(r"[^a-z0-9]+", " ", value.strip().lower()).strip()
@@ -512,7 +567,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
         post_technologies = detect_technologies(post.original_text)
 
         for label in topics_of_post:
-            key = _normalise(label)
+            key = normalise_label(label)
 
             node = topics.get(key)
 
@@ -524,7 +579,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
             # separately, so a reader reconciling the knowledge base
             # against the site sees where every page came from.
             for subtopic in post.ai_analysis.subtopics:
-                sub_key = _normalise(subtopic)
+                sub_key = normalise_label(subtopic)
 
                 sub_node = subtopics.get(sub_key)
 
@@ -558,7 +613,7 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
                     node.technologies.append(technology)
 
         for concept in post.ai_analysis.concepts:
-            key = _normalise(concept)
+            key = normalise_label(concept)
 
             node = concepts.get(key)
 
@@ -658,7 +713,7 @@ def post_topics(post: KnowledgePost) -> list[str]:
     unique: list[str] = []
 
     for label in ordered:
-        key = _normalise(label)
+        key = normalise_label(label)
 
         if not key or key in seen:
             continue

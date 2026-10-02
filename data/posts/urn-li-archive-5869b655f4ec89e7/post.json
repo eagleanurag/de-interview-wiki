@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-5869b655f4ec89e7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.110575+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:21:41Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Cracking the DS/ML Interview? Master These Python Questions First\n\n🔹 This is Part 1 of my Python Interview Series for Data Science and Machine Learning roles.\n\nWhile preparing for Data Science and ML interviews, I’ve seen many candidates jump straight to algorithms or modeling — and miss the basics that matter.\n\nBut in reality, strong Python coding skills are non-negotiable.\nFrom my own interview experience and what I’ve seen being asked, these questions test your ability to think in Python, handle real-world problems, and write efficient code.\n\nHere are 20 Core Python coding questions I’ve faced or observed in Data Science interviews:\n\n 1. Flatten a nested list using list comprehension.\n 2. Use map, filter, and lambda to extract and transform a numeric list.\n 3. Write a function to return the top K most frequent elements from a list.\n 4. Implement a sliding window algorithm to calculate the moving average.\n 5. Count word frequency in a paragraph using collections.Counter.\n 6. Group a list of dictionaries by a specific key.\n 7. Sort a list of tuples based on the second element using sorted and lambda.\n 8. Write a generator function to yield Fibonacci numbers up to N.\n 9. Remove duplicates from a list while preserving order.\n 10. Merge two dictionaries with overlapping keys and sum their values.\n 11. Identify anagrams from a list of words.\n 12. Write a function to check if a string is a valid palindrome (ignoring case and punctuation).\n 13. Use enumerate() and zip() in a practical example involving parallel iteration.\n 14. Create a decorator that measures the execution time of a function.\n 15. Implement custom exception handling in a function that processes numeric input.\n 16. Write a function to reverse the keys and values in a dictionary.\n 17. Use recursion to flatten a deeply nested dictionary.\n 18. Implement a function that finds the longest common prefix among a list of strings.\n 19. Create a dictionary comprehension that maps characters to their ASCII values.\n 20. Use defaultdict to group values from a list of (key, value) pairs.\n\nThese aren’t theoretical—they’re practical, frequently asked, and worth mastering.\n\n\n#DataScience #Python #MachineLearning #InterviewPreparation #WomenInTech #PythonCoding #MLInterviews #DataScientist #TechInterviews #PythonForDS #AdvancedPython #ProductBasedCompanies\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5869b655f4ec89e7",
+    "saved_date": "2026-10-01T23:21:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

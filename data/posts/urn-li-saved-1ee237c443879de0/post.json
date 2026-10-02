@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-1ee237c443879de0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343486257341112321",
+    "captured_at": "2026-10-02T00:15:45.434558+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:16:04Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\n💰12–15 LPA Package! | 𝐀𝐦𝐞𝐫𝐢𝐜𝐚𝐧 𝐄𝐱𝐩𝐫𝐞𝐬𝐬 - 𝐑𝐞𝐚𝐥 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n𝐑𝐨𝐥𝐞: Data Analyst (0–3 Years)\n𝐈𝐟 𝐲𝐨𝐮'𝐫𝐞 𝐩𝐫𝐞𝐩𝐚𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰, 𝐭𝐡𝐢𝐬 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐬𝐢𝐠𝐧 𝐭𝐨 𝐠𝐨 𝐛𝐞𝐲𝐨𝐧𝐝 𝐭𝐞𝐱𝐭𝐛𝐨𝐨𝐤 𝐒𝐐𝐋 𝐚𝐧𝐝 𝐟𝐨𝐜𝐮𝐬 𝐨𝐧 𝐫𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐬𝐨𝐥𝐯𝐢𝐧𝐠.\n📌 These are actual SQL questions asked by American Express — designed to test your logic, clarity, and business understanding:\n🔹 Find duplicate rows using GROUP BY and HAVING\n🔹 Difference between 𝐈𝐍𝐍𝐄𝐑 𝐉𝐎𝐈𝐍 𝐚𝐧𝐝 𝐎𝐔𝐓𝐄𝐑 𝐉𝐎𝐈𝐍 — real examples matter\n🔹 Fetch the 𝐬𝐞𝐜𝐨𝐧𝐝-𝐡𝐢𝐠𝐡𝐞𝐬𝐭 𝐬𝐚𝐥𝐚𝐫𝐲 — subquery vs ROW_NUMBER()\n🔹 Employees earning more than their managers — self-join logic\n🔹 Power of 𝐖𝐢𝐧𝐝𝐨𝐰 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 like RANK() and ROW_NUMBER()\n🔹 Cumulative Sum with SUM() OVER (PARTITION BY...)\n🔹 UNION vs UNION ALL — when performance matters\n🔹 SQL-based Fraud Detection with CTEs\n🔹 Pivoting rows to columns — transpose with SQL\n🔹 Year-over-Year Growth — real interview logic\n💡 𝐓𝐢𝐩: Focus on writing clean, optimized SQL. American Express interviews aren't about memorizing syntax — they want to see how you solve problems.\nCurious about the answers? Want me to break these down one by one?\nDrop a comment 👇\n…see more\nReal SQL Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343486257341112321_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1ee237c443879de0",
+    "saved_date": "2026-10-01T23:16:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343486257341112321",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343486257341112321_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

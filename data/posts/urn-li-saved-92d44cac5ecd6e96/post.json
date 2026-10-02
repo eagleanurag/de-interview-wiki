@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-92d44cac5ecd6e96",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338040534755618817",
+    "captured_at": "2026-10-02T00:15:49.549832+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:21:34Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 SQL interview questions for Deloitte\n\nQuestion:\nYou're given a table containing loan information.\nYour task is to analyze loan repayment data to assess credit risk. Write an SQL to create 2 flags for each loan.\n1️⃣ fully_paid_flag: 1 if the loan was fully repaid irrespective of payment date else it should be 0.\n2️⃣ on_time_flag: 1 if the loan was fully repaid on or before due date else 0.\n\n\n📊 Table: loan\n\n✅ Columns: \n1️⃣ loan_id :: INT\n2️⃣ customer_id :: INT\n3️⃣ loan_amount :: INT\n4️⃣ due_date :: DATE\n\n📊 Table: payment\n\n✅ Columns: \n1️⃣ loan_id :: INT\n2️⃣ payment_id :: INT\n3️⃣ payment_amount :: INT\n4️⃣ payment_date :: DATE\n\n\n👇 Can you crack this?\nDrop your query in the comments — \n\nSolutions: https://lnkd.in/gkfw2_nk\n\n#SQL \n#DataAnalytics \n#InterviewPrep \n#amazon\n#SQLInterview \n#DataAnalyst\n#businessanalyst",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338040534755618817_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:92d44cac5ecd6e96",
+    "saved_date": "2026-10-01T23:21:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338040534755618817",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338040534755618817_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

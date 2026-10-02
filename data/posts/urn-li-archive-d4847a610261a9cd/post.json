@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-d4847a610261a9cd",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.479987+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:07:11Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "This question cost me a 27 LPA offer at KPMG \nThe same question got me a 33 LPA offer at Deloitte.\n\nIn one interview, I was asked:\n- How would you remove duplicate records from a huge PySpark DataFrame efficiently?\n\nI froze. I didn’t know the answer. And yes, I got rejected. But instead of moving on, I went deeper into the questions and learned.\n\nTwo weeks later, I faced the same question in another interview. This time, I smiled and explained:\n\n- Use dropDuplicates() if you want to remove duplicates based on all or specific columns.\n- For very large datasets, repartition the DataFrame by key columns before deduplication to avoid expensive shuffles.\n- Use window functions with row_number() if you need to keep the latest record per group.\n- Cache intermediate results if reused, and tune spark.sql.shuffle.partitions for performance.\n\n𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗻𝗲𝗿𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲 - https://lnkd.in/gJWSVKNM\n𝗠𝗮𝗿𝗰𝗵 𝗗𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗲𝗻𝗱𝗶𝗻𝗴 𝘁𝗼𝗱𝗮𝘆 - AZURE30 / AWS30 / GCP30 only for next 5 people\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d4847a610261a9cd",
+    "saved_date": "2026-10-01T23:07:11Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

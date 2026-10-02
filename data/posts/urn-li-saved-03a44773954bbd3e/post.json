@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-03a44773954bbd3e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339542923673260032",
+    "captured_at": "2026-10-02T00:15:44.521199+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🎯 Just completed an Extreme SQL Challenge: Order Fulfillment (75 pts)!\n 🧠 Simulated real-world inventory logic using window functions, running totals, and smart case handling — deciding if each order was ✅ Full, ⚠️ Partial, or ❌ Unfulfilled.\nIt felt like building a real warehouse system in SQL! 🏭📦\nGrateful to Ankit Bansal sir 🙏 for such a powerful platform filled with hands-on, real-world problems. It's an amazing way to sharpen SQL skills! 💪💻\n📊",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339542923673260032_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:03a44773954bbd3e",
+    "saved_date": "2026-10-01T23:20:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339542923673260032",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339542923673260032_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

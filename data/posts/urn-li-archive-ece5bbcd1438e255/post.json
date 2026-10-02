@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-ece5bbcd1438e255",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.948551+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:27:46Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Hello Everyone,\n\nInterviewer’s favourite question for the Data Engineer Role:\n\nQ: What is SCD Type 2? How do you implement SCD Type 2 in Databricks?\n\nSCD Type 2 (Slowly Changing Dimension - Type 2) is used when you need to preserve historical changes in a dimension table.\nInstead of updating a record, you insert a new version of it and mark the old one as inactive.\n\n1. Read Source and Target Tables\n\nsource_df = spark.read.table(\"source_data\")\ntarget_df = spark.read.table(\"dim_customer\")\n\n2. Identify Changed Records\n\nJoin source and target on customer_id, and filter where relevant fields have changed and is_current = true.\n\n3. Expire Old Records (Mark as Inactive)\n\nUse Delta Lake’s MERGE to set is_current = false and update end_date.\n\nMERGE INTO dim_customer AS tgt\nUSING changed_records AS src\nON tgt.customer_id = src.customer_id AND tgt.is_current = true\nWHEN MATCHED THEN \nUPDATE SET tgt.is_current = false, tgt.end_date = current_date()\n\n4. Insert New Versions of Updated Records\n\nAdd new rows with is_current = true, start_date = today, and end_date = null.\n\n5. Insert Completely New Records\n\nDetect records that don’t exist in the target (left_anti join), and insert them with the same structure.\n\nResult?\n • You preserve full history\n • The latest record is always marked as is_current = true\n • Queries can filter on date ranges or just the active row\n\nHave you implemented SCD Type 2 in your projects? How did you approach it?\n\n#Databricks #DeltaLake #AzureDataEngineer #SCDType2 #DataEngineering #SlowlyChangingDimensions #InterviewTips #ETL\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ece5bbcd1438e255",
+    "saved_date": "2026-10-01T23:27:46Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

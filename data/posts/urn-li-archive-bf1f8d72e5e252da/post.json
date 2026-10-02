@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-bf1f8d72e5e252da",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.150747+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:15:16Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "80% of Candidates Get Rejected in the First 10 Minutes. \n\nHere's Why :\n\nYou walk into a data engineering interview \n\nYou know Spark , Python, SQL\nYou’ve used Airflow. \nYou can explain Kafka.\n\nBut then the interviewer hits you with the big one \n\n⁉️ “Tell me about a pipeline you built in production and share some scenarios where things went wrong.”\n\nAnd suddenly, your resume isn’t enough.\n\n🔶 Real talk: \n\nMost of candidates get filtered out , not because they don’t know tools, \nbut because can’t explain how they used them in the real world.\n\nHere are 15 real-time, real-world questions to help you go from \n\n❌ I studied this on YouTube \nto \n✅ I’ve solved this in production\n\n1. How do you design and manage a data pipeline for both batch and streaming data? \n→ Talk about Airflow + Spark + Kafka combo, scheduling, latency trade-offs, and idempotency.\n\n2. What’s your approach to partitioning & bucketing in big data systems like Hive or Delta Lake? \n→ Real-world examples of reducing shuffle, optimizing performance.\n\n3. Explain backfilling and how you handled it in a production pipeline. \n→ Airflow backfill jobs, historical data loads, and ensuring data correctness.\n\n4. How do you monitor data quality and pipeline failures? \n→ Use cases of tools like Great Expectations, Deequ, or custom validation layers.\n\n5. Describe how you optimized a slow-performing Spark job. \n→ Partition pruning, caching, broadcast joins - show you know the internals.\n\n6. CDC (Change Data Capture): How did you implement it and what were the challenges? \n→ Debezium, Kafka Connect, or log-based ingestion stories.\n\n7. How do you handle PII and GDPR compliance in your data pipelines? \n→ Masking, encryption, access control, audit logs.\n\n8. What’s your data lake governance strategy? \n→ Data cataloging with tools like AWS Glue, Unity Catalog, or Amundsen.\n\n9. How do you ensure schema evolution without breaking downstream consumers? \n→ Avro/Parquet with schema registry, versioning best practices.\n\n10. What’s your preferred tech stack for real-time analytics? \n→ Kafka + Flink/Spark Structured Streaming + Druid/ClickHouse.\n\n11. How do you ensure idempotency in your pipelines? \n→ Talk about deduplication strategies, watermarking, and replay handling.\n\n12. What’s your strategy for building slowly changing dimensions (SCD) in your ETL jobs? \n→ SCD Type 1 vs 2, delta tables, merge statements.\n\n13. How do you containerize and deploy your data pipelines? \n→ Docker + Kubernetes + CI/CD (e.g GitHub Actions, Jenkins).\n\n14. What’s the best way to design a data model for analytics/reporting? \n→ Talk about dimensional modeling, star/snowflake schema, and denormalization.\n\n15. How do you handle late arriving data in streaming systems? \n→ Watermarks, windowed aggregations, state management.\n\n🤝 Join my Data Community : https://lnkd.in/gy4R55Tj\n\n🤝 Follow 👨‍💻Abhisek Sahu for more .\n\nPlease Like, save ✅, if you find them useful.\n\n#dataengineering #engineering #engineers #career #hiring",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bf1f8d72e5e252da",
+    "saved_date": "2026-10-01T23:15:16Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

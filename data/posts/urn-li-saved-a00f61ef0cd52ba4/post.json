@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-a00f61ef0cd52ba4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7468953134913077248",
+    "captured_at": "2026-10-02T00:15:50.122229+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:07:32Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Engineering Stack\n\nThis is what a complete data engineering stack actually looks like.\n\nMost people learn tools in isolation…\nbut real-world engineering is about how everything connects.\n\nThis visual breaks down the full data journey - from raw data to business decisions 👇\n\n→ Data Sources: Databases, APIs, SaaS tools feeding raw data\n→ Ingestion: Airbyte, Fivetran, Kafka bringing data into the system\n→ Storage: S3, BigQuery, Snowflake acting as your data foundation\n→ Processing: Spark, dbt, Airflow transforming raw data into usable formats\n→ Querying: SQL tools to explore and extract insights\n→ Analysis: Python, R, Excel turning data into understanding\n→ Visualization: Tableau, Power BI, Looker telling the story\n→ Governance: Data quality, cataloging, and trust layers\n→ Machine Learning: Predictive models and advanced analytics\n→ Real-Time: Streaming systems for instant insights\n→ Orchestration: Managing workflows and pipelines\n→ Monitoring: Ensuring everything runs reliably\n\nThe key shift?\n\nDon’t focus on mastering one tool.\nFocus on understanding the flow.\n\nBecause tools will change.\nBut the architecture behind them stays the same.\n\nSave this - it’s your blueprint for becoming a complete data professional.\n\n♻️ Repost if this helps \n👉 Follow Abhisek Sahu for more !!\n\n#dataengineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7468953134913077248_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a00f61ef0cd52ba4",
+    "saved_date": "2026-10-01T23:07:32Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7468953134913077248",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7468953134913077248_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7468953134913077248_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

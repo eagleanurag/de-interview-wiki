@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-23659beff5075f52",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340257429995077633",
+    "captured_at": "2026-10-02T00:15:45.536686+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:16:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Python, SQL, PySpark, Azure Data Factory (ADF), Databricks, Delta Lake | Scalable Data Pipelines, ETL/ELT, Data Analytics Solutions\n1yr •\n✨ Small Tweaks, Massive Impact: Mastering SQL Data Types! 📊\nToo often, we overlook how much inefficient data types cost us:\n💾 Extra storage\n🐢 Slower queries\n💸 Increased cloud spend\nBut it doesn’t have to be that way! 🙅‍♂️\nWith the right schema design, you can unlock:\n🚀 Faster performance\n⚡ Lower I/O\n📉 Significant cost reduction\n👇 Inside this free PDF, I break down:\n✅ Why BIGINT is not always better\n✅ How using BOOLEAN can speed up your queries\n✅ The danger of VARCHAR(500) overkill\n✅ Real-world examples with measurable savings in engines like BigQuery, Redshift, Synapse, Databricks\n📌 Bonus: Based on real interview questions from Amazon & Snowflake — this is the stuff top-tier companies actually test for! 💼\n📄 Free PDF → Save it, share it, and supercharge your next database design!\n💬 I’d love to hear:\nHave you ever optimized a table and seen major performance gains? Drop your experience in the comments!\n👇 Grab your PDF below!\n#DataEngineering 💻\n#SQLPerformance 💡\n#CloudOptimization ☁️\n#BigQuery #Redshift #AzureSynapse #Databricks\n#DatabaseDesign 🧩\n#TechInterviewTips 🔍\n#PerformanceMatters ⚙️\n#ArzanishYusufNadeem 🚀\n#DataEngineeringCommunity 🌍\n#LinkedInTech 📘\n…see more\n2",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340257429995077633_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:23659beff5075f52",
+    "saved_date": "2026-10-01T23:16:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340257429995077633",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340257429995077633_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7340257429995077633_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

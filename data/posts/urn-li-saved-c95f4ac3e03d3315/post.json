@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-c95f4ac3e03d3315",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337673670124781568",
+    "captured_at": "2026-10-02T00:15:51.637148+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:15:16Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🚀 Data Engineer Interview Prep – SQL Is Still King 👑\n\nWhether you're just starting your data engineering journey or aiming for a senior-level role, one thing is non-negotiable:\n\n💥 SQL Skills. Period.\nMastering SQL isn’t just about passing interviews — it's about building the foundation to handle real-world data challenges.\n\nHere are some timeless SQL tips to help you level up:\n✅ MASTER WINDOW FUNCTIONS (ROW_NUMBER, RANK, LEAD, LAG)\n ✅ PRACTICE AGGREGATIONS + GROUP BY TRICKS\n ✅ GET COMFORTABLE WITH CTEs & SUBQUERIES\n ✅ SOLVE PROBLEMS INVOLVING JOINS, SCDs & DEDUPLICATION\n ✅ THINK LIKE AN ENGINEER – WRITE QUERIES THAT SCALE\n\n💡 Pro Tip: Practice on platforms like LeetCode, StrataScratch, or Mode Analytics – they’re goldmines for SQL challenges.\n\n🔍 SQL Scenario Example:\n “How would you get the highest sale per product per month?”\n If you thought of ROW_NUMBER() OVER(PARTITION BY ...) — you’re on the right track!\n\nLet’s connect if you’re prepping for data engineering roles — I’d love to exchange insights!\n#DataEngineering #SQL #InterviewPrep #BigData #ETL #DataEngineer #Databricks #Analytics #StrataScratch #CareerGrowth #TechTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337673670124781568_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c95f4ac3e03d3315",
+    "saved_date": "2026-10-01T23:15:16Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337673670124781568",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337673670124781568_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

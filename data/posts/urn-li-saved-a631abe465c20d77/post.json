@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-a631abe465c20d77",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349769179731738624",
+    "captured_at": "2026-10-02T00:15:50.298512+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:11:02Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "🧠 Solved this SQL problem on a quiet Saturday afternoon.\n\nIn my first try, I used:\nDATE_FORMAT(delivery_time, '%Y-%m-%d 00:00:00')\n\nMy query got the desired output, but I was still keen to see if there was a better way to approach it.\n\n📽️ Thats when I learnt from the solution video that just using DATE(delivery_time) automatically resets the time to 00:00:00 — no formatting needed. Cleaner and simpler.\n\nThanks to NamasteSQL and Ankit Bansal for helping me improve not just the answer, but the approach.\n\nExploring opportunities, one small improvement at a time.\n\n#SQL #NamasteSQL #LearningByDoing #ExploringOpportunities #SaturdayWellSpent\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349769179731738624_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a631abe465c20d77",
+    "saved_date": "2026-10-01T23:11:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349769179731738624",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349769179731738624_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

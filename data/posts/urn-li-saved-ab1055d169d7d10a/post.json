@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-ab1055d169d7d10a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328696707439874048",
+    "captured_at": "2026-10-02T00:15:50.525796+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:23:33Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "#pyspark\n#Question\nwrite a pyspark to find for each month and country, the number of transactions\nand their total amount , the number of approved transactions and their total amount.\n\nfrom datetime import time\nfrom pyspark.sql import *\nfrom pyspark.sql.functions import *\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.types import *\nfrom pyspark.sql.window import *\n\n\n# Create a SparkSession\nspark = SparkSession.builder.appName(\"Month and country calculation\").getOrCreate()\n\n# Create data\ndata = [\n (1, 'US', 'approved', 1000, '2023-12-18'),\n (2, 'US', 'declined', 2000, '2023-12-19'),\n (3, 'US', 'approved', 2000, '2024-01-01'),\n (4, 'India', 'approved', 2000, '2023-01-07')\n]\n\n# Define the schema\nschema = StructType([\n StructField(\"id\", IntegerType(), True),\n StructField(\"country\", StringType(), True),\n StructField(\"status\", StringType(), True),\n StructField(\"amount\", IntegerType(), True),\n StructField(\"date\", StringType(), True)\n])",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328696707439874048_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ab1055d169d7d10a",
+    "saved_date": "2026-10-01T23:23:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328696707439874048",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328696707439874048_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-bd7af8f44fcefea2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.091346+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:15:17Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Data Partitioning in Big Data Systems – Why It’s More Than Just Performance\n\n📦 Most engineers think partitioning is just about speed.\n\nBut in reality, partitioning impacts:\n • Cost (e.g., unnecessary file scans in Spark = $$$)\n • Pipeline reliability\n • Your future troubleshooting life 😅\n\nLet’s break it down.\n\n⸻\n\n🔹 What is Partitioning?\nPartitioning splits large datasets into manageable “folders” or “chunks” based on a column (e.g., date, region).\nInstead of scanning an entire 10 TB dataset, you scan only the relevant partitions.\n\n⸻\n\n🔹 Good Partitioning Choices\n✅ High-read-frequency columns (like event_date, region)\n✅ Columns with moderate cardinality (not too few, not too many)\n✅ Leverage predicate pushdown — filters on partitioned columns avoid full scans\n\n⸻\n\n🔹 Bad Partitioning Choices\n❌ Over-partitioning: Too many small files hurt performance\n❌ Low-cardinality columns (e.g., gender: M/F) lead to poor parallelism\n❌ Relying only on default behavior\n\n⸻\n\n🔧 In PySpark/Databricks:\nUse partitionBy() when writing tables\nUse repartition() or coalesce() for reshaping data at runtime\n\n⸻\n\n💡 Pro Tip: Partitioning is invisible to most consumers — but makes your pipelines dramatically faster and cheaper behind the scenes.\n\n#DataEngineering #Partitioning #BigData #PySpark #Databricks #Azure #PerformanceTuning",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bd7af8f44fcefea2",
+    "saved_date": "2026-10-01T23:15:17Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

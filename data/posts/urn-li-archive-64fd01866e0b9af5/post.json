@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-64fd01866e0b9af5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.264958+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:22:33Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "⚡️ Tired of slow queries on your Delta Lake tables in Databricks?\n\nHere’s a simple optimization that can make a big difference: Delta Cache 💥\n\n🔍 Real-time example:\nWe had a BI dashboard running on a Delta table with ~500M records. Analysts were frustrated—queries filtering by region, month, and category took 20–30 seconds to return results.\n\nWe enabled Delta Cache in Databricks. Result?\n⏱️ Query times dropped to under 5 seconds — consistently.\n📉 Load on the cluster dropped, and user experience skyrocketed.\n\n💡 What is Delta Cache?\nIt’s an intelligent, disk-based cache that Databricks uses to store hot data on worker nodes. Unlike Spark caching (which stores in RAM), it’s persistent across jobs, making it ideal for repeated queries on large, slowly changing datasets.\n\n🧪 Enabling it is effortless:\n\nsql\n\n-- Cache a frequently queried Delta table\nCACHE SELECT * FROM sales_data WHERE region = 'US';\n\nOr automatically cache with:\n\nsql\n\nspark.conf.set(\"spark.databricks.io.cache.enabled\", \"true\")\n✅ Works great for:\n\nBI dashboards (Power BI, Tableau, etc.)\n\nRepeated ad-hoc analysis\n\nStar schema querying in Databricks SQL\n\n🚫 Not recommended for:\n\nHighly dynamic or streaming tables\n\nWorkloads with low data reuse\n\nIf you're not using Delta Cache yet, you're leaving performance on the table.\n\n#DeltaLake #Databricks #DeltaCache #DataEngineering #BigData #PerformanceTuning #Azure #Lakehouse #BIOptimization #SparkSQL\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:64fd01866e0b9af5",
+    "saved_date": "2026-10-01T23:22:33Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

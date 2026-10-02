@@ -1,0 +1,44 @@
+{
+  "id": "urn-li-archive-8578cadb52f5e296",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.753880+00:00",
+    "author": "Status is reachable",
+    "published_at": "2026-10-01T23:21:40Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "What’s the smartest way to speed up your queries in Databricks?\n\nIn this video, we break down all the indexing options you need to know — from classic Partitioning to Z-Ordering, and the latest powerhouse: Liquid Clustering.\n\n🔍 We’ll explore:\n\nHow Partitioning works — and when it breaks.\n\nWhat Z-Order sorting does right — and where it falls short.\n\nWhy Liquid Clustering is redefining indexing with smarter, real-time data layout.\n\nYou'll learn about:\n\n\nLimitations of each technique\nDeletion vector, row tracking & how row level concurrency is achieved using Liquid Clustering powered by row tracking and deletion vectors \n\nAnd finally — why Liquid Clustering might be your best bet for scale.\n\nWhether you're a data engineer, architect, or just Databricks-curious — this is the ultimate guide to choosing the right indexing strategy.\nLink in first comment \n#pysparktutorial #databrickstutorial #dataengineering #python #pyspark\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:8578cadb52f5e296",
+    "saved_date": "2026-10-01T23:21:40Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

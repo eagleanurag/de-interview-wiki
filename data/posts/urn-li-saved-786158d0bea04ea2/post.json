@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-786158d0bea04ea2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315553891473838081",
+    "captured_at": "2026-10-02T00:15:48.487434+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:30:45Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "Not hearing back after requesting a referral?\n\nHere’s a template that gets me a reply 9/10 times 🔥\n\nHi {{Name}},\n\nI hope you're doing well! I came across a [Job Title] opening at [Company Name] and would love to apply. Sharing my details for a referral:\n🟢 Job ID/Job Link\n🟢 Name\n🟢 Years of Experience\n🟢 Key Skills (5-6 max)\n🟢 Resume link or attachment\n🟢 Email & Phone Number\n🟢 Portfolio/Coding profile (if relevant)\n\nWould really appreciate your help! Let me know if you need any more details.\n\nThanks,\n{{Your Name}}\n\n→ For a referral to work, your profile should match at least 70-80% of the JD. So, focus on building your skills first. You can also take help from senior SDEs on hiring panels to ensure you stand out, even without relying on referrals.\nJust connect with them for FREE here: https://lnkd.in/gavb5GmW\n\nThey will help you with your resume, upskilling, interview preparation, job applications and YES, even referrals. 🚀\nTry it out!\n\n#referraltemplates #referraltips #collab #preplacedcollab #jobsearch #upskilling",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315553891473838081_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:786158d0bea04ea2",
+    "saved_date": "2026-10-01T23:30:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315553891473838081",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315553891473838081_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

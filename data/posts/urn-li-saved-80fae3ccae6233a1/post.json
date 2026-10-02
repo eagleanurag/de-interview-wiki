@@ -1,0 +1,51 @@
+{
+  "id": "urn-li-saved-80fae3ccae6233a1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338998740155805698",
+    "captured_at": "2026-10-02T00:15:48.702550+00:00",
+    "author": "Unknown",
+    "published_at": "2026-10-01T23:20:05Z",
+    "capture_method": "user_provided"
+  },
+  "original_text": "💼 My AWS DevOps Interview Experience at Infosys – Bangalore\n\nHello LinkedIn Fam! 👋\n I’m excited to share a recent milestone in my career journey – my interview experience at Infosys (Bangalore) for an AWS DevOps Engineer role. It was a great opportunity to showcase my skills and reflect on what I’ve learned so far. 🙌\n\n🔍 Interview Questions I Faced:\n✅ 1. What are EC2, Lambda, and ECS?\n → Explained each compute service, their use cases, and when to use which. 💡\n✅ 2. How do you create AWS infrastructure?\n → Shared how I use Terraform and CloudFormation to build scalable setups. 🏗️\n✅ 3. How do you monitor your application?\n → Talked about CloudWatch, Prometheus, Grafana, and alerting setups. 📊🔔\n✅ 4. How do you apply changes in AWS Cloud?\n → Through CI/CD pipelines with tools like GitHub Actions, Jenkins, and Terraform. 🔄\n✅ 5. Team structure, handling critical issues, client interaction?\n → Described real-life on-call situations, collaboration with 5+ team members, and direct client handling. 🤝🧠\n✅ 6. How do you manage storage?\n → Explained S3, EBS, EFS and when to use which depending on application needs. 💾\n✅ 7. How do you manage permissions on EC2?\n → Discussed IAM roles, security groups, and least privilege principles. 🔐\n✅ 8. What is a Target Group in AWS?\n → Explained how Target Groups work with Load Balancers for traffic routing. 🎯⚙️\n\nResult - Selected !!🎉\n\nLet’s grow together and help each other rise. 🚀\nDrop your recent interview experiences or questions below — I’d love to hear them!\n#AWS #DevOps #Infosys #InterviewExperience #Terraform #Docker #CloudWatch #CloudEngineer #CI_CD #Kubernetes #CareerGrowth #DevOpsLife #TechInterviews #LinkedInTech #JobSearch #CloudComputing\n\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338998740155805698_slide_0.jpg"
+    }
+  ],
+  "ai_analysis": {
+    "summary": null,
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "enrichment": {
+    "source_digest": "",
+    "enricher_version": "",
+    "enriched_at": ""
+  },
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:80fae3ccae6233a1",
+    "saved_date": "2026-10-01T23:20:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338998740155805698",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338998740155805698_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}
