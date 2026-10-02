@@ -1,0 +1,77 @@
+{
+  "id": "urn-li-archive-7a9f0ccf43e89666",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.544035Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:43Z"
+  },
+  "original_text": "🔍 SQL LEFT JOIN – A Small Mistake, A Big Learning!\nRecently in an interview, I was asked a basic SQL question on LEFT JOIN. I gave an answer that seemed right... but wasn’t! Here's what I learned 👇\n\n1. Table 1 Table 2\n A B\n 1 1\n 1\n 3\n\nMy answer- \n \n A B\n 1 1\n 1 1\n 1 Null\n\nExpected Output-\n\nA B\n1 1\n1 1\n\n➡️ LEFT JOIN returns all rows from the left table only once per matching record(s) from the right — not extra rows when there's no unmatched record on the left!\n\n\n2. Table 1 Table 2\n A B\n 1 1\n 2 1\n\nMy answer -\n A B\n 1 1\n 1 1\n 2 Null\n 2 Null\n\nExpected Output-\n A B\n 1 1\n 1 1\n 2 Null\n\n➡️ Record from left table tries to match with all the elements in the right table,then finally if there is no match then it returns a single null.\n\n💡Takeaway: This interview taught me a lesson to go and clear my fundamentals.\n\n\nNilay Mukhopadhyay Arun R. Neelesh Agrawal Vishal Kaushal Thodupunuri Bharath Raghavan P Singaram Harish Kumar Ankit Bansal\nHimanshu Singh Gaurav Agrawal Shashank Singh 🇮🇳\n\nIs the post useful? Repost to help others benefit as well.\n\nDo follow Harshit Srivastav for more such posts. ☑\n\n#HarshitSrivastav #SQL #ProblemSolving #DataAnalytics #PowerBI\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied content is a short SQL interview anecdote with compressed table formatting and an ending \"see more\" marker. It compares the author's incorrect outputs with expected outputs for LEFT JOIN and states that unmatched rows from the left table should appear once with NULL rather than as duplicate NULL rows. The post concludes that the interview experience was a lesson to strengthen SQL fundamentals.",
+    "topics": [
+      "SQL",
+      "LEFT JOIN",
+      "SQL result cardinality",
+      "NULL handling",
+      "SQL fundamentals"
+    ],
+    "subtopics": [
+      "Preserving left-table rows",
+      "Handling unmatched records",
+      "Duplicate result rows",
+      "Matching-record multiplicity"
+    ],
+    "concepts": [
+      "LEFT JOIN",
+      "Unmatched left-row handling",
+      "Join result multiplicity"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, what should happen to a left-table row when no matching row exists in the right table?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer says that the left-table row remains in the result and that its missing right-side value is shown as NULL."
+    },
+    {
+      "question": "In the post's second example, what is the expected result for the left row with A=2?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer gives the single row A=2, B=NULL and explains that the unmatched left row is not duplicated."
+    },
+    {
+      "question": "How does the post describe the relationship between matching right-table records and the number of output rows?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains that a left row can be paired with each matching right-table record, while a left row with no match is represented once with NULL rather than repeated NULL rows."
+    }
+  ],
+  "classification": {
+    "domain": "SQL data engineering",
+    "primary_topic": "LEFT JOIN",
+    "secondary_topics": [
+      "NULL handling",
+      "Join result cardinality",
+      "SQL fundamentals"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7a9f0ccf43e89666",
+    "saved_date": "2026-10-01T23:21:43Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

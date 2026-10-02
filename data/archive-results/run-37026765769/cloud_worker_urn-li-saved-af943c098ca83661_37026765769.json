@@ -1,0 +1,132 @@
+{
+  "id": "urn-li-saved-af943c098ca83661",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339106266201411587",
+    "captured_at": "2026-10-02T00:15:50.673758Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:20Z"
+  },
+  "original_text": "Sr. Product Engineer @ The Timken Company | Co-Founder @Growthora | Marketer | 150M+ Impressions | 62K+ Community | AI • Career • Workplace | Brand Partnerships & Campaigns | DM to Collaborate\n1yr •\n🛠️ Data Engineering isn’t just ETL. It’s Engineering at Scale.\nEvery byte flowing through your pipeline has a cost — in compute, in time, and in business value.\nHere’s what makes a solid Data Engineer in 2025:\n✅ Understand data modeling: Star, Snowflake, and Lakehouse\n✅ Know when to use batch vs stream processing\n✅ Write efficient SQL, not just working SQL\n✅ Master orchestration tools like Airflow/Dagster\n✅ Optimize pipelines for cost, latency, and reliability\n✅ Treat your pipelines like software — with CI/CD, tests, and logging\n✅ Think in systems: What happens if Kafka goes down? Or a DAG fails?\n📌 Tools change. Principles stay.\nIf you're learning Data Engineering — don’t just learn “how” — learn why.\nDo follow Naresh Reddy Kotha for more!\n#DataEngineering #BigData #ETL #SQL #ApacheSpark #Airflow #Snowflake #DataPipelines #CloudData #TechCareers #SystemDesign #StreamingData #DataOps\n…see more\nETL pipelines!",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339106266201411587_slide_0.jpg",
+      "description": "JPEG image, 390x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A concise social-media post argues that data engineering is the engineering of data pipelines at scale, not merely ETL. It highlights data modeling with Star, Snowflake, and Lakehouse; choosing between batch and stream processing; writing efficient SQL; orchestrating pipelines with Airflow or Dagster; and optimizing for cost, latency, and reliability. It also recommends software-engineering practices such as CI/CD, testing, and logging, along with systems thinking about failures such as Kafka outages and failed DAGs. The post provides no implementation examples, detailed comparisons, or failure-recovery procedures.",
+    "topics": [
+      "Data engineering",
+      "Data pipeline engineering",
+      "Data modeling",
+      "Batch and stream processing",
+      "SQL optimization",
+      "Data pipeline orchestration",
+      "Pipeline performance and reliability",
+      "Software engineering for data pipelines",
+      "Failure-mode analysis"
+    ],
+    "subtopics": [
+      "Star schema",
+      "Snowflake schema",
+      "Lakehouse",
+      "Batch processing",
+      "Stream processing",
+      "Efficient SQL",
+      "Airflow",
+      "Dagster",
+      "Cost optimization",
+      "Latency optimization",
+      "Reliability",
+      "CI/CD",
+      "Pipeline testing",
+      "Pipeline logging",
+      "Kafka outage scenarios",
+      "DAG failure scenarios"
+    ],
+    "concepts": [
+      "Data engineering beyond ETL",
+      "Pipeline economics",
+      "Data modeling approaches",
+      "Batch and stream processing",
+      "Efficient SQL",
+      "Data pipeline orchestration",
+      "Pipeline optimization objectives",
+      "Pipelines as software",
+      "Failure-oriented systems thinking",
+      "Principles over tools"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What does it mean to treat data engineering as engineering at scale rather than just ETL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post distinguishes data engineering from ETL alone by emphasizing the operation of complete data pipelines at scale.\nEvery byte in a pipeline should be evaluated in terms of compute cost, time cost, and business value."
+    },
+    {
+      "question": "Which data-modeling approaches does the post identify as important for data engineers?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies Star, Snowflake, and Lakehouse as important data-modeling approaches.\nThe post does not provide definitions, structural differences, or selection guidance for these approaches."
+    },
+    {
+      "question": "What considerations should guide the choice between batch and stream processing?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The data engineer should be able to determine when batch processing is appropriate and when stream processing is appropriate.\nThe choice should be considered alongside the post's broader concerns of compute cost, time or latency, business value, and reliability."
+    },
+    {
+      "question": "Which objectives should be balanced when optimizing a data pipeline?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The post explicitly identifies cost, latency, and reliability as pipeline-optimization objectives.\nA source-grounded answer connects cost and latency to compute and time while retaining reliability as a separate design objective."
+    },
+    {
+      "question": "How should a data pipeline be treated as software, and what practices should it adopt?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The pipeline should adopt CI/CD rather than being managed only as a sequence of data-processing tasks.\nThe pipeline should include tests and logging as part of its software-engineering practices."
+    },
+    {
+      "question": "What should a data engineer consider if Kafka goes down or an orchestrated DAG fails?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The data engineer should apply systems thinking by explicitly examining what happens when Kafka is unavailable or a DAG fails.\nThe failure should be considered within the broader goals of pipeline reliability.\nThe post does not provide detection, failover, or recovery procedures, so a source-grounded answer should not assert specific recovery mechanisms."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data pipeline engineering",
+    "secondary_topics": [
+      "Data modeling",
+      "Batch and stream processing",
+      "SQL optimization",
+      "Data pipeline orchestration",
+      "Pipeline cost and latency optimization",
+      "Pipeline reliability",
+      "Software engineering practices for data pipelines",
+      "Systems thinking"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:af943c098ca83661",
+    "saved_date": "2026-10-01T23:15:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339106266201411587",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339106266201411587_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-saved-33f339b053838e0f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349610973206368256",
+    "captured_at": "2026-10-02T00:15:46.375150Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:03Z"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : Airbnb (Medium Level)\n\n\n#PySpark #SQL Interview Question — Solution\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nSuppose you are a data analyst working for Spotify (a music streaming service company) . Your company is interested in analyzing user engagement with playlists and wants to identify the most popular tracks among all the playlists.\n\nWrite an SQL query to find the top 2 most popular tracks based on number of playlists they are part of. \n\nYour query should return the top 2 track ID along with total number of playlist they are part of , sorted by the same and track id in descending order , Please consider only those playlists which were played by at least 2 distinct users.\n\n \n\nTable: playlists\n+---------------+--------------+\n| COLUMN_NAME | DATA_TYPE |\n+---------------+--------------+\n| playlist_id | int |\n| playlist_name | varchar(15) |\n+---------------+--------------+\nTable: playlist_tracks\n+-------------+-----------+\n| COLUMN_NAME | DATA_TYPE |\n+-------------+-----------+\n| playlist_id | int |\n| track_id | int |\n+-------------+-----------+\nTable: playlist_plays\n+-------------+------------+\n| COLUMN_NAME | DATA_TYPE |\n+-------------+------------+\n| playlist_id | int |\n| user_id | varchar(2) |\n+-------------+------------+\n\n𝐬𝐜𝐡𝐞𝐦𝐚 \nCREATE TABLE playlist_tracks (\n playlist_id INT,\n track_id INT\n);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (1, 101);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (1, 102);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (1, 103);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (1, 104);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (2, 104);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (2, 102);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (3, 104);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (3, 107);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (4, 101);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (4, 104);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (4, 110);\nINSERT INTO playlist_tracks (playlist_id, track_id) VALUES (5, 104);\nCREATE TABLE playlists (\n playlist_id INT PRIMARY KEY,\n playlist_name VARCHAR(100)\n);\nINSERT INTO playlists (playlist_id, playlist_name) VALUES (1, 'Chill Vibes');\nINSERT INTO playlists (playlist_id, playlist_name) VALUES (2, 'Morning Jams');\nINSERT INTO playlists (playlist_id, playlist_name) VALUES (3, 'Workout Beats');\nINSERT INTO playlists (playlist_id, playlist_name) VALUES (4, 'Party Mix');\nINSERT INTO playlists (playlist_id, playlist_name) VALUES (5, 'Study Playlist');\n\n\nThanks to Ankit Bansal and NamasteSQL for the question\n\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349610973206368256_slide_0.jpg",
+      "description": "JPEG image, 480x403 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a medium-level SQL interview exercise about identifying the two most popular tracks by the number of playlists containing them, while considering only playlists played by at least two distinct users. It defines the playlists, playlist_tracks, and playlist_plays tables and supplies sample rows for playlists and playlist_tracks, but it provides neither playlist_plays data nor an SQL solution, so the expected output cannot be determined from the supplied content.",
+    "topics": [
+      "SQL",
+      "Playlist engagement analysis",
+      "Relational joins",
+      "Aggregation and filtering",
+      "Top-N queries"
+    ],
+    "subtopics": [
+      "Measuring track popularity across playlists",
+      "Filtering playlists by at least two distinct users",
+      "Joining playlist and track relationships",
+      "Ordering results by popularity and track ID",
+      "Relationships among playlists, playlist_tracks, and playlist_plays"
+    ],
+    "concepts": [
+      "Playlist eligibility",
+      "COUNT(DISTINCT user_id)",
+      "GROUP BY and HAVING",
+      "Playlist-track relationship",
+      "Track popularity",
+      "Top-two ordering",
+      "Incomplete sample data"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write an SQL query that returns the top two track IDs by the number of playlists containing them, considering only playlists played by at least two distinct users.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query groups playlist_plays by playlist_id and uses COUNT(DISTINCT user_id) with a threshold of at least two to identify qualifying playlists.\nThe query relates qualifying playlist IDs to track IDs through playlist_tracks.\nThe query groups results by track_id and counts the distinct qualifying playlist IDs associated with each track.\nThe query orders by the playlist count descending and then track_id descending and returns only two rows."
+    },
+    {
+      "question": "How should the two-distinct-user playlist requirement be implemented so that multiple records associated with the same user do not make a playlist qualify?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query should count distinct user_id values within each playlist_id group.\nThe distinct-user count should be compared with a threshold of two so that one user appearing in multiple rows is counted only once."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Playlist engagement analysis",
+      "Relational joins",
+      "Distinct-user aggregation",
+      "Top-N queries"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:33f339b053838e0f",
+    "saved_date": "2026-10-01T23:11:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349610973206368256",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349610973206368256_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

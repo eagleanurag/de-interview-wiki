@@ -1,0 +1,128 @@
+{
+  "id": "urn-li-archive-a2db79dbd1e3caae",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.038152Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:36Z"
+  },
+  "original_text": "Planning for Data Engineering Interview.\n\nFocus on SQL & Python first. Here are some important questions which you should know.\n\n𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐒𝐐𝐋 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\n1- Find out nth Order/Salary from the tables.\n2- Find the no of output records in each join from given Table 1 & Table 2\n3- YOY,MOM Growth related questions.\n4- Find out Employee ,Manager Hierarchy (Self join related question) or\nEmployees who are earning more than managers.\n5- RANK,DENSERANK related questions\n6- Some row level scanning medium to complex questions using CTE or recursive CTE, like (Missing no /Missing Item from the list etc.)\n7- No of matches played by every team or Source to Destination flight combination using CROSS JOIN.\n8-Use window functions to perform advanced analytical tasks, such as calculating moving averages or detecting outliers.\n9- Implement logic to handle hierarchical data, such as finding all descendants of a given node in a tree structure.\n10-Identify and remove duplicate records from a table.\n\n\n𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐏𝐲𝐭𝐡𝐨𝐧 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\n1- Reversing a String using an Extended Slicing techniques.\n2- Count Vowels from Given words .\n3- Find the highest occurrences of each word from string and sort them in order.\n4- Remove Duplicates from List.\n5-Sort a List without using Sort keyword.\n6-Find the pair of numbers in this list whose sum is n no.\n7-Find the max and min no in the list without using inbuilt functions.\n8-Calculate the Intersection of Two Lists without using Built-in Functions\n9-Write Python code to make API requests to a public API (e.g., weather API) and process the JSON response.\n10-Implement a function to fetch data from a database table, perform data manipulation, and update the database.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a data engineering interview planning checklist that recommends prioritizing SQL and Python. It lists SQL topics such as nth-order queries, join output counts, YOY and MOM growth, employee-manager hierarchies, ranking functions, CTEs, CROSS JOIN, window functions, tree traversal, and duplicate removal. It also lists Python exercises involving strings, lists, public API and JSON processing, and database updates. The post names questions and tasks but does not provide solutions, schemas, implementation details, or figures.",
+    "topics": [
+      "Data engineering interview preparation",
+      "SQL",
+      "Python"
+    ],
+    "subtopics": [
+      "Nth order and salary queries",
+      "Join output record counts",
+      "YOY and MOM growth",
+      "Employee-manager hierarchies",
+      "Self joins",
+      "RANK and DENSERANK",
+      "CTE and recursive CTE row scanning",
+      "Missing number and item detection",
+      "CROSS JOIN combinations",
+      "Window functions",
+      "Moving averages and outlier detection",
+      "Tree hierarchy traversal",
+      "Duplicate record handling",
+      "Python string processing",
+      "Python list processing",
+      "Public API and JSON processing",
+      "Database data retrieval and updates"
+    ],
+    "concepts": [
+      "Nth order or salary retrieval",
+      "Join output counting",
+      "YOY and MOM growth",
+      "Employee-manager hierarchy",
+      "RANK and DENSERANK",
+      "CTE and recursive CTE row scanning",
+      "CROSS JOIN combinations",
+      "Analytical window functions",
+      "Tree hierarchy traversal",
+      "Duplicate record handling",
+      "Python string processing",
+      "Python list processing",
+      "Public API and JSON processing",
+      "Database retrieval and update workflow"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you find the nth order or salary from a table using SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer retrieves the requested nth order or salary from the supplied table."
+    },
+    {
+      "question": "How would you query an employee-manager hierarchy or identify employees who earn more than their managers?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer uses a self-join to relate employees to their managers.\nIt addresses both hierarchy questions and comparisons between employee and manager salaries."
+    },
+    {
+      "question": "How would you use a CTE or recursive CTE to scan rows and find missing numbers or missing items?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer uses a CTE or recursive CTE for the row-level scan.\nThe solution identifies missing numbers or items from the supplied list."
+    },
+    {
+      "question": "How would you use SQL window functions to calculate moving averages or detect outliers?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer applies window functions to the requested analytical task.\nThe answer addresses either moving-average calculation or outlier detection."
+    },
+    {
+      "question": "How would you reverse a string using Python's extended slicing technique?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer reverses the input string using extended slicing."
+    },
+    {
+      "question": "How would you find a pair of numbers in a Python list whose sum equals a target number?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong solution returns a pair from the list whose sum equals the target number."
+    },
+    {
+      "question": "How would you write Python code to request data from a public weather API and process the JSON response?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer makes a request to the public API and processes the returned JSON.\nThe solution treats the weather API as the example public API mentioned in the post."
+    },
+    {
+      "question": "How would you write a Python function that fetches data from a database table, manipulates it, and updates the database?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer fetches rows from the database table, performs the requested data manipulation, and updates the database."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL",
+      "Python"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a2db79dbd1e3caae",
+    "saved_date": "2026-10-01T23:21:36Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

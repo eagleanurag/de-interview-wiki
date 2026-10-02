@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-9b74dd0de3979b72",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7300525893645430785",
+    "captured_at": "2026-10-02T00:15:49.864412Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:22Z"
+  },
+  "original_text": "115K+ @LinkedIn || Ex- KoiReader || Tech - Marketing - Branding || Educating with insights 🧠 || OPEN for collaboration|\n1yr •\nMost People Take Months to Find a Remote Job.\nSo I compiled the best remote job websites for you.\nStruggling to find the perfect remote job?\nWe've got you covered with our ultimate guide to the best remote job platforms.\nWhether you're a freelancer, a digital nomad, or simply looking for more flexibility, these sites have it all!\n1. SolidGigs\nIt helps streamline your job hunting. A monthly membership fee grants you access to a huge resource library with courses, interviews, templates, scripts, and other tools, all with the focus of helping you land more freelance jobs.\nhttps://solidgigs.com\n2. JustRemote\nTheir platform is built specifically for people to discover the best remote job opportunities from around the world, without a focus on a particular location or region\nhttps://justremote.co\n3. Dynamite Jobs\nOver 100+ quality remote jobs are added each week to the platform—and searching for the one you want is customisable with the site’s variety of filters and functionality.\nhttps://dynamitejobs.com/\n4. Remotive\nyou can search through all categories, including marketing. It’s easy to see when a job has posted, where it is located, and what speciality it falls under.\nhttps://remotive.com/\n5. Wellfound\nGreat features of this remote jobs website include discretion and salary transparency.\nhttps://wellfound.com/\nFinding remote jobs can be overwhelming, but these platforms make it so easy!\nEquip yourself with the best tools to land your dream remote job!\nBonus Alert\n7000+ free courses free access: https://lnkd.in/dNGmgmgi\nGoogle Data Analytics\n◾https://lnkd.in/dR4tZP9m\nGoogle Project Management\n◽https://lnkd.in/gG6_DiQb\nGoogle UX Design Professional Certificate\n◾ https://lnkd.in/g-We6X4h\nGoogle Cybersecurity Professional Certificate\n◽https://lnkd.in/gyVPQCXW\nGoogle Advanced Data Analytics\n◾https://lnkd.in/d3T23FaN\nGoogle Digital Marketing & E-commerce Professional Certificate\n◽https://lnkd.in/g3QqT6gR\nGoogle IT Support Professional Certificate\n◾https://lnkd.in/gvgedTdv\nGoogle IT automation with python\n◽https://lnkd.in/g5nHSCGF\nGoogle Business Intelligence\n◾https://lnkd.in/dvCdWbUn\nGoogle Technical Support Fundamentals\n◽https://lnkd.in/gFseDTCs\nGoogle Crash Course on Python\n◾https://lnkd.in/gncKJCn8\nIBM AI For Everyone\n◽https://lnkd.in/ghKeW8Mp\nIntroduction to Artificial Intelligence (AI)\n◾https://lnkd.in/gBb5g3PZ\nIBM Data Analyst\n◽https://lnkd.in/gBH9d7Pr\nIBM Data Science\n◾https://lnkd.in/gpyb8phx\nDeep Learning Specialization\n◾https://lnkd.in/gZ4emSgb\nMachine Learning Specialization\n◽https://lnkd.in/gyhxnEAr\nProbability and Statistics Professional Certificate\n◾https://lnkd.in/gPJRT32R\nLearn Python Basics for Data Analysis\n◾https://lnkd.in/ghUiV35G\nExcel to MySQL: Analytic Techniques for Business\n◽https://lnkd.in/gt38zUHC\n➡️FREE [ 5050ai.co / wa.oia.bio/jobs]\nHabits make the future ...",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7300525893645430785_slide_0.jpg",
+      "description": "JPEG image, 433x482 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional LinkedIn post lists five remote job platforms: SolidGigs, JustRemote, Dynamite Jobs, Remotive, and Wellfound. It briefly describes features such as job-search resources, global opportunities, weekly job listings, filters, salary transparency, and visible posting details. The post also provides links to various Google, IBM, and other courses or certificates, including Python, data analytics, artificial intelligence, machine learning, and Excel to MySQL, but it does not teach or explain any technical subject.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Career Development",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9b74dd0de3979b72",
+    "saved_date": "2026-10-01T23:34:22Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7300525893645430785",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7300525893645430785_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-archive-ece5bbcd1438e255",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.948551Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:46Z"
+  },
+  "original_text": "Hello Everyone,\n\nInterviewer’s favourite question for the Data Engineer Role:\n\nQ: What is SCD Type 2? How do you implement SCD Type 2 in Databricks?\n\nSCD Type 2 (Slowly Changing Dimension - Type 2) is used when you need to preserve historical changes in a dimension table.\nInstead of updating a record, you insert a new version of it and mark the old one as inactive.\n\n1. Read Source and Target Tables\n\nsource_df = spark.read.table(\"source_data\")\ntarget_df = spark.read.table(\"dim_customer\")\n\n2. Identify Changed Records\n\nJoin source and target on customer_id, and filter where relevant fields have changed and is_current = true.\n\n3. Expire Old Records (Mark as Inactive)\n\nUse Delta Lake’s MERGE to set is_current = false and update end_date.\n\nMERGE INTO dim_customer AS tgt\nUSING changed_records AS src\nON tgt.customer_id = src.customer_id AND tgt.is_current = true\nWHEN MATCHED THEN \nUPDATE SET tgt.is_current = false, tgt.end_date = current_date()\n\n4. Insert New Versions of Updated Records\n\nAdd new rows with is_current = true, start_date = today, and end_date = null.\n\n5. Insert Completely New Records\n\nDetect records that don’t exist in the target (left_anti join), and insert them with the same structure.\n\nResult?\n • You preserve full history\n • The latest record is always marked as is_current = true\n • Queries can filter on date ranges or just the active row\n\nHave you implemented SCD Type 2 in your projects? How did you approach it?\n\n#Databricks #DeltaLake #AzureDataEngineer #SCDType2 #DataEngineering #SlowlyChangingDimensions #InterviewTips #ETL\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains that SCD Type 2 preserves dimension history by inserting a new record version and marking the previous version as inactive instead of overwriting it. It outlines a Databricks implementation using Spark reads, source-to-target joins, Delta Lake MERGE operations, is_current and date fields, and left-anti joins for new records. The supplied content is incomplete because it does not show how changed_records is built or provide the full insert statements for new and updated records.",
+    "topics": [
+      "Slowly Changing Dimension Type 2",
+      "Databricks",
+      "Delta Lake",
+      "Historical dimension records"
+    ],
+    "subtopics": [
+      "Preserving dimension history",
+      "Detecting changed source records",
+      "Expiring current dimension records",
+      "Inserting new dimension versions",
+      "Inserting previously unseen records",
+      "Querying current and historical records"
+    ],
+    "concepts": [
+      "SCD Type 2",
+      "Current-record indicator",
+      "Effective-date tracking",
+      "Source-target change detection",
+      "Delta Lake MERGE",
+      "New-record detection",
+      "Historical and active-record queries"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is SCD Type 2, and how does it preserve dimension history?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SCD Type 2 retains historical versions of dimension records rather than overwriting them.\nA changed record receives a new version, and the previous version is marked as inactive.\nThe is_current field identifies the latest version."
+    },
+    {
+      "question": "How would you implement SCD Type 2 in Databricks using Delta Lake?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Read the source and target tables and identify changed records by joining them on customer_id.\nUse Delta Lake MERGE to expire matched active records by setting is_current to false and assigning an end_date.\nInsert updated records as new versions with is_current set to true, a start date, and a null end date."
+    },
+    {
+      "question": "How can an SCD Type 2 process distinguish updated customers from customers that must be inserted for the first time?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Compare source and active target records on customer_id and identify differences in relevant fields.\nSend changed records through the expiration and new-version insertion steps.\nUse a left-anti join to find source records that do not exist in the target and insert them with the same dimension structure."
+    },
+    {
+      "question": "How can downstream queries retrieve both the current version and the history maintained by SCD Type 2?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Filter on is_current to retrieve the active version.\nFilter on start_date and end_date to retrieve versions for particular date ranges."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Slowly Changing Dimension Type 2",
+    "secondary_topics": [
+      "Databricks implementation",
+      "Delta Lake MERGE",
+      "ETL change detection"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ece5bbcd1438e255",
+    "saved_date": "2026-10-01T23:27:46Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

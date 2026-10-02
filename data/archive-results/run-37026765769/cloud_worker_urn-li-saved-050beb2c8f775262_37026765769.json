@@ -1,0 +1,114 @@
+{
+  "id": "urn-li-saved-050beb2c8f775262",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315044989753815041",
+    "captured_at": "2026-10-02T00:15:44.545910Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:46Z"
+  },
+  "original_text": "Built a complete end-to-end real-time data and machine learning pipeline using open-source tools.\nThis project collects air quality data from the WAQI API at 5-minute intervals, streams it via Kafka, processes it using Spark Structured Streaming, performs real-time feature engineering and predictions (t+5, t+10, t+15,.. t+30), and stores results in PostgreSQL.\n\nCore components:\n- ETL: Kafka + Spark structured streaming to Postgres \n- Data ingestion: Python script fetching data from WAQI API.\n- Data pipeline: Kafka for streaming, Spark for real-time processing and ML prediction.\n- Model serving: Flask API with endpoints for prediction, retraining, and testing.\n- Experiment tracking: MLflow for model versioning and experimentation.\n- Orchestration: Apache Airflow for automated retraining workflows.\n- Data warehouse: PostgreSQL for raw data, features, and predictions.\n- Containerization: Docker Compose setup with Confluent Kafka stack and Airflow components.\n\nTo start the system: configure Java and Spark (v3.5.5), set up environment variables, spin up services with Docker, and run ingestion, streaming, and model-serving scripts.\n\nPotential improvements:\n- Integrate Prometheus + Grafana for observability and system metrics.\n- Migrate to Kubernetes for scalable deployment.\n- Build analytical dashboards using Tableau or Power BI for insights.\n\nProject and code available here: https://lnkd.in/dRSaDkCK\nOpen to feedback and suggestions. \n\n#mlops #datascience #apache #confluent",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315044989753815041_slide_0.jpg",
+      "description": "JPEG image, 480x301 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes an end-to-end real-time air-quality data and machine learning pipeline. A Python ingestion script collects WAQI API data every five minutes, Kafka streams the data, and Spark Structured Streaming performs real-time processing, feature engineering, and predictions labeled t+5, t+10, t+15, …, t+30. PostgreSQL stores raw data, features, and predictions. Flask provides prediction, retraining, and testing endpoints; MLflow provides experiment tracking and model versioning; Airflow orchestrates retraining workflows; and Docker Compose runs services including the Confluent Kafka stack and Airflow components. The post also identifies Prometheus, Grafana, Kubernetes, Tableau, and Power BI only as potential improvements. It is a high-level project overview with no extracted media text or implementation details about the model, features, or prediction methodology.",
+    "topics": [
+      "Real-time data pipelines",
+      "Air-quality data ingestion",
+      "Stream processing",
+      "Real-time feature engineering",
+      "Machine learning serving",
+      "MLOps",
+      "Retraining orchestration",
+      "Data warehousing",
+      "Containerized deployment"
+    ],
+    "subtopics": [
+      "WAQI API ingestion at five-minute intervals",
+      "Kafka-based data streaming",
+      "Spark Structured Streaming",
+      "Multi-horizon predictions",
+      "PostgreSQL storage",
+      "Flask model-serving API",
+      "MLflow experiment and model tracking",
+      "Apache Airflow retraining workflows",
+      "Docker Compose service setup"
+    ],
+    "concepts": [
+      "End-to-end real-time pipeline",
+      "WAQI API ingestion",
+      "Kafka streaming",
+      "Spark Structured Streaming",
+      "Multi-horizon predictions",
+      "PostgreSQL data warehouse",
+      "Flask model-serving API",
+      "MLflow experiment and model tracking",
+      "Airflow retraining orchestration",
+      "Containerized service setup",
+      "Proposed operational improvements"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the described system move air-quality observations from the WAQI API to stored predictions?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A Python ingestion component fetches WAQI air-quality data at five-minute intervals.\nKafka transports the collected observations to Spark Structured Streaming.\nSpark performs real-time processing, feature engineering, and prediction generation.\nPostgreSQL stores the raw observations, engineered features, and prediction outputs."
+    },
+    {
+      "question": "What distinct roles do Flask, MLflow, and Airflow perform in the project?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Flask exposes API endpoints for prediction, retraining, and testing.\nMLflow supports experiment tracking and model versioning.\nApache Airflow orchestrates automated retraining workflows."
+    },
+    {
+      "question": "What startup sequence does the post prescribe for running the pipeline?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Java must be configured, and the post specifies Spark version 3.5.5.\nRequired environment variables must be set before startup.\nDocker is used to start the services, including the Confluent Kafka and Airflow components.\nThe ingestion, streaming, and model-serving scripts are run after the services start."
+    },
+    {
+      "question": "Which observability, deployment, and analytics capabilities are implemented versus only proposed?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Prometheus and Grafana are listed only as potential observability additions.\nKubernetes is listed only as a potential scalable deployment platform.\nTableau and Power BI are listed only as potential analytical dashboard tools.\nThe post does not state that any of these proposed improvements are already implemented."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Real-time data and machine learning pipelines",
+    "secondary_topics": [
+      "Data ingestion",
+      "Stream processing",
+      "Real-time feature engineering",
+      "Model serving",
+      "MLOps",
+      "Workflow orchestration",
+      "Data warehousing",
+      "Containerization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:050beb2c8f775262",
+    "saved_date": "2026-10-01T23:30:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315044989753815041",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315044989753815041_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

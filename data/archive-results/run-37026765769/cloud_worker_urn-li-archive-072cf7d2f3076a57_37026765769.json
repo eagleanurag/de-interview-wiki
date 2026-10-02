@@ -1,0 +1,134 @@
+{
+  "id": "urn-li-archive-072cf7d2f3076a57",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.854868Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:35Z"
+  },
+  "original_text": "𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲 - 𝗖𝗲𝗹𝗲𝗯𝗮𝗹 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆🚀\n📌 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲: 𝟯 𝗬𝗲𝗮𝗿𝘀\n🎯 𝗥𝗼𝗹𝗲: 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿\n \n🕒 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻: 60 𝗺𝗶𝗻𝘂𝘁𝗲𝘀\n👤 𝗣𝗮𝗻𝗲𝗹: 𝟭 𝗦𝗲𝗻𝗶𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿\n \n🔷𝗦𝗽𝗮𝗿𝗸, 𝗗𝗮𝘁𝗮 𝗜𝗻𝘁𝗲𝗴𝗿𝗮𝘁𝗶𝗼𝗻 & 𝗔𝗗𝗙\n✅What is Medallion Architecture in Data Lakes?\n✅In ADF, how do you ensure that the structure of a source table is copied as-is to the target?\n✅How would you read dynamic nested JSON files in Spark?\n✅How to solve the Small File Problem in Databricks?\n✅PySpark Optimization techniques you've implemented in projects?\n \n🔷𝗦𝗤𝗟\n✅CTE vs View vs Temp Table – what are the differences?\n✅What are Window functions in SQL/PySpark? List types and use-cases.\n✅What is a Cross Join? What are different types of SQL joins?\n✅Rank vs Dense Rank vs Row Number – differences and scenarios?\n✅Lead vs Lag functions and practical examples?\n✅What is Equi Join vs Non-Equi Join? \n \n🔹𝗣𝘆𝘀𝗽𝗮𝗿𝗸 𝗖𝗼𝗱𝗶𝗻𝗴 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲\n✅You’re given a file with delimiter \"|\". Perform the following in PySpark:\nRead the file\n - Drop duplicates based on id and name\n- Replace nulls with \"unknown\"\n- Write to Silver layer in Delta format, overwrite previous data\n- Client says the written data is incorrect — how would you roll back to a previous Delta version?\n \n🔷𝗦𝗤𝗟 𝗖𝗼𝗱𝗶𝗻𝗴 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲\nQ1 - Input\norderID qty amount\n1 5 100\n2 6 200\n3 7 300\n4 8 400\n \nOutput\norderID qty amount total\n1 5 100 500\n2 6 200 1200\n3 7 300 2100\n4 8 400 3200\nTotal 26 1000 26000\n \nQ2 - Input\nTbl A Tbl B\nID ID\n1 1\n2 2\n3 3\n \noutput \nA.ID B.ID\n1 2\n1 3\n2 1\n2 3\n3 1\n3 2\n \nQ3 - Given a column ID perform rank on partitioning it and write the output\nID\n1 \n1 \n2 \n2 \n3 \n3 \n \nThis interview was a good learning experience. I encountered new questions and had the opportunity to tackle multiple scenario-based problems.\n\nFeel free to drop in the comments what you were asked in your last data engineering interview - let’s help the community grow together!\n\n#DataEngineering #Azure #Databricks #PySpark #ADF #InterviewPrep #Infosys #BigData #ETL #TechCareers\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post reports a 60-minute Azure Data Engineer interview for candidates with three years of required experience, with one Senior Data Engineer on the panel. It lists questions about Medallion Architecture, ADF schema preservation, dynamic nested JSON in Spark, the Databricks Small File Problem, PySpark optimization, and SQL/PySpark constructs. It also describes a pipe-delimited PySpark-to-Delta coding challenge and provides inputs and outputs for three SQL exercises. The post is an interview recap rather than a technical explanation, so it does not provide answers, implementations, definitions, or an expected result for the final ranking exercise.",
+    "topics": [
+      "Azure Data Engineering interview experience",
+      "Medallion Architecture",
+      "Azure Data Factory",
+      "Spark and PySpark",
+      "Databricks",
+      "Delta format and versioning",
+      "SQL and PySpark",
+      "SQL joins"
+    ],
+    "subtopics": [
+      "Bronze and Silver layers in Data Lakes",
+      "Source-to-target schema preservation",
+      "Dynamic nested JSON ingestion",
+      "Databricks Small File Problem",
+      "PySpark optimization",
+      "CTEs, views, and temporary tables",
+      "Window and ranking functions",
+      "Lead and Lag functions",
+      "Cross Join and Equi Join versus Non-Equi Join",
+      "Pipe-delimited file processing",
+      "Duplicate removal and null replacement",
+      "Delta overwrite and version rollback",
+      "Running totals",
+      "ID-pair generation"
+    ],
+    "concepts": [
+      "Medallion Architecture in Data Lakes",
+      "ADF source-to-target schema preservation",
+      "Dynamic nested JSON ingestion in Spark",
+      "Databricks Small File Problem",
+      "PySpark project optimization",
+      "CTE versus View versus Temp Table",
+      "Window, ranking, and navigation functions",
+      "SQL join categories",
+      "PySpark-to-Delta Silver-layer workflow",
+      "Running-total calculation",
+      "Cross-product with equal-ID exclusion",
+      "Partitioned ranking of duplicate IDs"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is Medallion Architecture in Data Lakes?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines Medallion Architecture in the context of Data Lakes.\nIt explains the Bronze and Silver layer references made in the post."
+    },
+    {
+      "question": "In ADF, how do you ensure that the structure of a source table is copied as-is to the target?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how ADF preserves the source table structure while copying data to the target."
+    },
+    {
+      "question": "How would you read dynamic nested JSON files in Spark?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer presents a Spark-based method for reading dynamic nested JSON files."
+    },
+    {
+      "question": "How would you solve the Small File Problem in Databricks?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how to identify the Small File Problem in Databricks.\nIt describes a way to address the problem in a Databricks workload."
+    },
+    {
+      "question": "What are window functions in SQL and PySpark, and how do Rank, Dense Rank, Row Number, Lead, and Lag differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies window-function types and explains their use cases.\nIt compares Rank, Dense Rank, and Row Number and describes how Lead and Lag can be applied."
+    },
+    {
+      "question": "What is a Cross Join, what other SQL join types exist, and how do Equi Join and Non-Equi Join differ?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer distinguishes Cross Join from the other SQL join types covered by the post.\nIt explains the difference between Equi Join and Non-Equi Join."
+    },
+    {
+      "question": "Implement the pipe-delimited PySpark coding challenge and explain how to recover if the Silver Delta output is incorrect.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution reads the pipe-delimited input file in PySpark.\nIt drops duplicates based on id and name and replaces null values with unknown.\nIt writes the transformed data to the Silver layer in Delta format using overwrite behavior.\nIt also explains how to restore a previous Delta version after incorrect data is written."
+    },
+    {
+      "question": "Given Q1's orderID, qty, and amount rows, how would you produce the shown output with row-level and grand totals?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong solution computes each row's total as qty multiplied by amount.\nIt preserves orderID and produces the shown aggregate totals of 26 for qty, 1000 for amount, and 26000 for total."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineering interview preparation",
+    "secondary_topics": [
+      "Medallion Architecture and Data Lakes",
+      "Azure Data Factory schema propagation",
+      "Spark dynamic JSON ingestion",
+      "Databricks small-file optimization",
+      "PySpark optimization",
+      "SQL and PySQL analytical functions",
+      "SQL joins",
+      "Delta format, overwrite, and versioning"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:072cf7d2f3076a57",
+    "saved_date": "2026-10-01T23:22:35Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

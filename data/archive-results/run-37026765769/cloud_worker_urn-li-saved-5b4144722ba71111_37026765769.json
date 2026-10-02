@@ -1,0 +1,102 @@
+{
+  "id": "urn-li-saved-5b4144722ba71111",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7429013274874023936",
+    "captured_at": "2026-10-02T00:15:47.896328Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:49Z"
+  },
+  "original_text": "🔍 #Partitioning vs #Bucketing vs #Clustering – Explained Clearly\nUnderstanding the difference between Partitioning, Bucketing, and Clustering is very important for optimizing performance in Big Data systems like Spark, Hive, and BigQuery.\n✅ Partitioning\nData is divided based on column values (e.g., date, region).\nReduces data scan\nSaves cost\nImproves query performance\n👉 Best for filtering large datasets\n✅ Bucketing\nData is split into a fixed number of files using a hash function.\nFaster joins\nLess shuffle\nEfficient large-table joins\n👉 Useful in Spark & Hive environments\n✅ Clustering\nData is sorted within partitions based on selected columns.\nFaster filtering\nReduced block scanning\nOptimized storage\n👉 Powerful in BigQuery for query optimization\n💡 Key Takeaway:\nUse Partitioning for filtering.\nUse Bucketing for better joins.\nUse Clustering for faster scans inside partitions.\n\n#BigData #DataEngineering #Spark #Hive #BigQuery #Partitioning #Bucketing #Clustering #GCP\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7429013274874023936_slide_0.jpg",
+      "description": "JPEG image, 480x325 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a brief, high-level comparison of partitioning, bucketing, and clustering in Big Data systems such as Spark, Hive, and BigQuery. It says partitioning divides data by column values and helps with filtering, data scanning, cost, and query performance; bucketing uses a hash function to split data into a fixed number of files and supports faster large-table joins with less shuffle; and clustering sorts data within partitions by selected columns to improve filtering, block scanning, and storage optimization. Its key takeaway is to use partitioning for filtering, bucketing for joins, and clustering for faster scans inside partitions. The supplied excerpt ends with an ellipsis, so additional content is not available here.",
+    "topics": [
+      "Partitioning",
+      "Bucketing",
+      "Clustering",
+      "Big Data performance optimization"
+    ],
+    "subtopics": [
+      "Column-value-based data division",
+      "Hash-based file distribution",
+      "Within-partition sorting",
+      "Filtering large datasets",
+      "Large-table joins",
+      "Reduced data scanning",
+      "Block scanning",
+      "Storage optimization"
+    ],
+    "concepts": [
+      "Partitioning",
+      "Bucketing",
+      "Clustering",
+      "Partitioning for filtering",
+      "Bucketing for joins",
+      "Clustering for faster scans"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, what is partitioning, and when is it recommended?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Partitioning divides data according to column values, such as date or region.\nThe post recommends partitioning for filtering large datasets because it reduces data scanning, can save cost, and improves query performance."
+    },
+    {
+      "question": "How does bucketing work, and what type of workload is it intended to support?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Bucketing splits data into a fixed number of files using a hash function.\nIt is useful for large-table joins because the post associates it with faster joins and less shuffle, particularly in Spark and Hive environments."
+    },
+    {
+      "question": "What is clustering, and why can it improve query performance in BigQuery?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Clustering sorts data within partitions based on selected columns.\nThe post links clustering to faster filtering, reduced block scanning, and optimized storage."
+    },
+    {
+      "question": "If a workload both filters a large dataset and performs large-table joins, which techniques does the post recommend for each goal?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Partitioning is recommended for filtering because it reduces the data scan.\nBucketing is recommended for joins because it is associated with faster joins and less shuffle."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Partitioning vs Bucketing vs Clustering",
+    "secondary_topics": [
+      "Big Data systems",
+      "Query optimization",
+      "Filtering",
+      "Large-table joins",
+      "Spark",
+      "Hive",
+      "BigQuery"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5b4144722ba71111",
+    "saved_date": "2026-10-01T23:08:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7429013274874023936",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7429013274874023936_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

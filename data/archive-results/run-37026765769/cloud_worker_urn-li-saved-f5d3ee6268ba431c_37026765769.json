@@ -1,0 +1,129 @@
+{
+  "id": "urn-li-saved-f5d3ee6268ba431c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326584275074449408",
+    "captured_at": "2026-10-02T00:15:53.349318Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:54Z"
+  },
+  "original_text": "!! Interview Experience PayPal: Data Engineer Role – 4 Rounds !!\n\n📌 Round 1: Technical – DSA + SQL (45 mins)\nData Structures & Algorithms:\n• Rainwater Trapping – optimized for space and time\n• Priority Queue-based problem for task scheduling\n• Array traversal using prefix sums and sliding window patterns\n\nSQL:\n• Extensive use of window functions – ROW_NUMBER, RANK, LAG, LEAD\n• Aggregations, partitions, and advanced joins\n• Query optimization and performance tuning techniques\n\n📌 Round 2: Technical Design + PySpark (45–60 mins)\nProject-Based Discussion:\n• Shared architecture of prior data pipelines\n• Justified choices of tools like Airflow, Glue, Kafka, Snowflake\n• Discussed strategies for data validation, monitoring, and scalability\n\nSystem Design Scenario:\n• Data migration from Hadoop, Oracle DB, and S3 → unified S3 data lake\n• Focused on scalability, error handling, schema management, and fault tolerance\n\nSpark Coding Task:\n• DataFrame joins and transformations in PySpark\n• Handled edge cases like null values, schema mismatches, and skewed data\n• Output written in partitioned Parquet format\n\n📌 Round 3: Managerial + Scenario-Based (60 mins)\n• In-depth discussion on project ownership and collaboration with cross-functional teams\n• Real-time problem scenarios like pipeline delays, replication lags, and Spark job failures\n• Behavioral focus: adaptability, leadership under pressure, and communication\n\n📌 Round 4: HR Discussion\n• Offer structure, benefits, and company policies\n• Discussion on organizational values and career progression opportunities\n• Cultural alignment and long-term vision\n\nKey Takeaways:\n• The interview process was balanced across technical, design, and behavioral areas\n• Strong emphasis on SQL, PySpark, and scalable data pipeline design\n• Communication, clarity in thought, and structured problem-solving played a key role\n\nIf you're preparing for Data Engineering roles, focus on core fundamentals, hands-on tool experience, and articulating the why behind your decisions.\n\n#dataengineering #interviewexperience #sql #pyspark #etl #bigdata #systemdesign #careergrowth #techinterview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326584275074449408_slide_0.jpg",
+      "description": "JPEG image, 299x168 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This post summarizes a four-round PayPal data engineer interview covering DSA and SQL, technical design and PySpark, managerial and scenario-based topics, and HR. The technical material included SQL window functions, DataFrame joins and transformations, pipeline tool selection, data migration to a unified S3 data lake, partitioned Parquet output, validation, monitoring, scalability, and fault tolerance. The post lists topics rather than providing complete problem statements, implementation solutions, or hiring outcomes, and emphasizes SQL, PySpark, scalable pipeline design, communication, and structured problem-solving.",
+    "topics": [
+      "Data engineering interview process",
+      "SQL",
+      "PySpark",
+      "Data pipeline design",
+      "System design",
+      "Data migration",
+      "Data engineering troubleshooting",
+      "Managerial and behavioral interviews"
+    ],
+    "subtopics": [
+      "Data structures and algorithms",
+      "SQL window functions",
+      "Query optimization and performance tuning",
+      "Pipeline tool selection",
+      "Data validation and monitoring",
+      "Scalability and fault tolerance",
+      "S3 data lake migration",
+      "DataFrame joins and transformations",
+      "Partitioned Parquet output",
+      "Cross-functional collaboration"
+    ],
+    "concepts": [
+      "Four-Round Data Engineering Interview Process",
+      "SQL Window Functions and Query Performance",
+      "Data Structures and Array Patterns",
+      "Pipeline Architecture Decisions",
+      "Data Pipeline Reliability Strategies",
+      "Unified S3 Data Lake Migration",
+      "PySpark DataFrame Processing",
+      "Partitioned Parquet Output",
+      "Data Pipeline Troubleshooting Scenarios",
+      "Project Ownership and Behavioral Competencies"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL functions and techniques were emphasized in the first technical round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer names ROW_NUMBER, RANK, LAG, and LEAD as the emphasized window functions.\nA strong answer also covers aggregations, partitions, advanced joins, query optimization, and performance tuning."
+    },
+    {
+      "question": "Which data structures, algorithms, and array-traversal patterns were tested in the DSA round?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer identifies rainwater trapping with space and time optimization.\nA strong answer also identifies priority queues for task scheduling and array traversal using prefix sums and sliding-window patterns."
+    },
+    {
+      "question": "What does the described PySpark coding task require in terms of DataFrame operations, edge cases, and output?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer covers DataFrame joins and transformations.\nA strong answer accounts for null values, schema mismatches, and skewed data.\nA strong answer specifies that the output is written in partitioned Parquet format."
+    },
+    {
+      "question": "Which tools were candidates expected to justify when discussing previous data-pipeline architectures?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "A strong answer names Airflow, Glue, Kafka, and Snowflake as the tool choices discussed."
+    },
+    {
+      "question": "What design concerns should be addressed when migrating Hadoop, Oracle DB, and S3 data into a unified S3 data lake?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses scalability.\nA strong answer also covers error handling, schema management, and fault tolerance."
+    },
+    {
+      "question": "Which operational problem scenarios were included in the managerial round?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "A strong answer identifies pipeline delays, replication lags, and Spark job failures."
+    },
+    {
+      "question": "What project and behavioral qualities did the managerial round assess?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer covers project ownership and collaboration with cross-functional teams.\nA strong answer also addresses adaptability, leadership under pressure, and communication."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Experience",
+    "secondary_topics": [
+      "SQL",
+      "PySpark",
+      "Data Pipeline Architecture",
+      "System Design",
+      "Data Engineering Troubleshooting",
+      "Managerial and Behavioral Skills"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f5d3ee6268ba431c",
+    "saved_date": "2026-10-01T23:26:54Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326584275074449408",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326584275074449408_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

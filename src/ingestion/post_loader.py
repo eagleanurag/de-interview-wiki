@@ -311,9 +311,13 @@ def _discover_media(
     return media_items
 
 
-def source_digest(post: KnowledgePost) -> str:
+def source_digest(
+    post: KnowledgePost,
+    base: str | Path | None = None,
+) -> str:
     """
-    A digest of everything enrichment actually reads.
+    A digest of everything enrichment actually reads, and of the media
+    bytes behind it.
 
     The text, plus the text extracted from each media file and the
     description the media stage produced. Two posts with the same
@@ -322,6 +326,21 @@ def source_digest(post: KnowledgePost) -> str:
 
     Media file names are included because two files with the same
     extracted text and different names are not the same evidence.
+
+    The bytes are included too, and that is the part worth arguing
+    about. For an image the description is its dimensions, so a
+    screenshot replaced by a different screenshot of the same size would
+    otherwise leave the digest unchanged and a re-run would silently do
+    nothing -- and "I replaced the picture and it made no difference" is
+    a far worse failure than a wasted model call. For a document the
+    extracted text catches it anyway, so hashing makes the rule uniform
+    rather than special-cased per format.
+
+    ``base`` is the post's directory, because a media path is stored
+    relative to its own post and that is what makes it portable. Without
+    it the bytes cannot be found and only the metadata is covered, which
+    is enough for a caller comparing two in-memory posts and not enough
+    for one deciding whether to spend a model call.
     """
 
     digest = hashlib.sha256()
@@ -330,9 +349,7 @@ def source_digest(post: KnowledgePost) -> str:
         "utf-8", "replace"
     ))
 
-    for media in sorted(
-        post.media, key=lambda item: item.path
-    ):
+    for media in sorted(post.media, key=lambda item: item.path):
         digest.update(b"\x00")
         digest.update(media.path.encode("utf-8", "replace"))
         digest.update((media.extracted_text or "").encode(
@@ -341,8 +358,53 @@ def source_digest(post: KnowledgePost) -> str:
         digest.update((media.description or "").encode(
             "utf-8", "replace"
         ))
+        digest.update(
+            _media_bytes_digest(media.path, base).encode(
+                "ascii", "replace"
+            )
+        )
 
     return digest.hexdigest()
+
+
+def _media_bytes_digest(
+    relative: str,
+    base: str | Path | None,
+) -> str:
+    """
+    A digest of one media file's contents, or a marker saying why not.
+
+    Read in blocks so a large document is never held whole. A file that
+    cannot be read contributes a marker derived from the reason rather
+    than nothing, so "the file is locked" and "there is no file" stay
+    distinguishable, and neither of them makes a post look unchanged
+    after its media was removed.
+    """
+
+    if base is None:
+        return "unlocated"
+
+    candidate = Path(base) / relative
+
+    hasher = hashlib.sha256()
+
+    try:
+        with candidate.open("rb") as handle:
+            while True:
+                block = handle.read(1 << 20)
+
+                if not block:
+                    break
+
+                hasher.update(block)
+
+    except FileNotFoundError:
+        return "absent"
+
+    except OSError as exc:
+        return f"unreadable:{type(exc).__name__}"
+
+    return hasher.hexdigest()
 
 
 def _parse_datetime(value: str | None) -> datetime:

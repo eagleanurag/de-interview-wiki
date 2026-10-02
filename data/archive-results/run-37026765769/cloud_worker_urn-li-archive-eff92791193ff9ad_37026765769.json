@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-archive-eff92791193ff9ad",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.053550Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:02Z"
+  },
+  "original_text": "Where to practice SQL problems for interviews?\n\nYou’ve probably heard of one or two platforms. But there’s more out there...a lot more.\n\nHere’s a solid list shared by someone in the SQL community:\n\n➡️ LeetCode\nStandard for coding interviews.\nGood mix of beginner to advanced SQL problems.\nSome are company-specific.\n\n➡️ HackerRank\nBeginner-friendly interface.\nCategorized questions.\nAlso includes a 30-day SQL challenge.\n\n➡️ StrataScratch\nReal-world interview questions.\nCompanies like Uber, Yelp, Amazon.\nAlso explains solutions in detail.\n\n➡️ Mode Analytics SQL Tutorial\nGreat for learning SQL + analytics workflows.\nNot just solving problems, but understanding data context.\n\n➡️ DataLemur\nFocused on SQL for data science interviews.\nStraight to the point.\nQuestions with explanations.\n\n➡️ 8-Week SQL Challenge (by Data with Danny)\nPerfect for case-study style practice.\nStructured learning + GitHub repo included.\n\n➡️ SQLBolt\nLearn-by-doing style.\nStep-by-step walkthroughs for SQL basics.\n\n➡️ Kaggle Datasets + Notebooks\nNo fixed questions — but plenty of data.\nGreat for exploratory SQL with BigQuery.\n\n➡️ W3Schools SQL\nNot the most exciting,\nbut good for quick syntax refresh.\n\n➡️ DB-Fiddle / SQL Fiddle / SQLite Online\nPlaygrounds to test queries.\nUseful when trying things out quickly.\n\nIf you're prepping for SQL interviews,\nthis is your go-to list.\n\nSave it.\nShare it.\nPractice daily.\n\n#SQL #InterviewPrep",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents SQL practice resources for interview preparation, including problem platforms, structured challenges, tutorials, datasets, syntax references, and online query playgrounds. It characterizes each resource by its format and intended use, from beginner-friendly categorized questions to company-style interview questions, case-study practice, exploratory analysis with BigQuery, and quick query testing.",
+    "topics": [
+      "SQL interview preparation",
+      "SQL practice platforms",
+      "SQL learning exercises",
+      "Online SQL playgrounds"
+    ],
+    "subtopics": [
+      "SQL coding interview problems",
+      "Categorized SQL challenges",
+      "Company-style SQL interview questions",
+      "SQL and analytics workflow learning",
+      "Case-study-style SQL practice",
+      "Exploratory SQL with datasets",
+      "SQL syntax review",
+      "Query-testing environments"
+    ],
+    "concepts": [
+      "SQL interview problem platforms",
+      "SQL and analytics context",
+      "Focused SQL interview practice",
+      "Structured case-study practice",
+      "Learn-by-doing SQL education",
+      "Exploratory SQL practice",
+      "SQL syntax refresh",
+      "Online SQL query playgrounds"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do LeetCode, HackerRank, and StrataScratch differ in their approach to SQL interview preparation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "LeetCode provides beginner-to-advanced SQL problems and some company-specific questions.\nHackerRank offers a beginner-friendly interface, categorized questions, and a 30-day SQL challenge.\nStrataScratch focuses on real-world company interview questions and includes detailed solution explanations."
+    },
+    {
+      "question": "Which listed resources are most appropriate for practicing SQL with real data rather than following a fixed question set?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Kaggle datasets and notebooks provide data for exploratory SQL practice.\nThe post specifically identifies BigQuery as the tool used for exploratory SQL with those datasets.\nThe resource has no fixed questions, so practice is driven by exploring the available data."
+    },
+    {
+      "question": "A candidate wants structured, case-study-style SQL practice and a GitHub repository. Which resource fits this need?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The 8-Week SQL Challenge by Data with Danny is designed for case-study-style practice.\nIt provides structured learning over eight weeks.\nIt includes a GitHub repository."
+    },
+    {
+      "question": "Which resources in the post can be used to test SQL queries quickly?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "DB-Fiddle, SQL Fiddle, and SQLite Online are online query playgrounds.\nThese resources are intended for trying out queries quickly."
+    },
+    {
+      "question": "How do SQLBolt, W3Schools SQL, and the Mode Analytics SQL Tutorial differ in their intended learning goals?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "SQLBolt teaches SQL basics through step-by-step, learn-by-doing walkthroughs.\nW3Schools SQL is intended as a quick syntax refresh.\nThe Mode Analytics SQL Tutorial covers SQL together with analytics workflows and data context."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "SQL practice platforms",
+      "SQL fundamentals",
+      "Analytics workflow learning",
+      "Exploratory SQL",
+      "Online SQL query testing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:eff92791193ff9ad",
+    "saved_date": "2026-10-01T23:17:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

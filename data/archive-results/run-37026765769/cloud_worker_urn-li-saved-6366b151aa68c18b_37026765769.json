@@ -1,0 +1,149 @@
+{
+  "id": "urn-li-saved-6366b151aa68c18b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7320835110730174465",
+    "captured_at": "2026-10-02T00:15:48.075324Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:55Z"
+  },
+  "original_text": "Top 20 AI Concepts You Should Know\n\n1 - Machine Learning: Core algorithms, statistics, and model training techniques.\n2 - Deep Learning: Hierarchical neural networks learning complex representations automatically.\n3 - Neural Networks: Layered architectures efficiently model nonlinear relationships accurately.\n4 - NLP: Techniques to process and understand natural language text.\n5 - Computer Vision: Algorithms interpreting and analyzing visual data effectively\n6 - Reinforcement Learning: Distributed traffic across multiple servers for reliability.\n7 - Generative Models: Creating new data samples using learned data.\n8 - LLM: Generates human-like text using massive pre-trained data.\n9 - Transformers: Self-attention-based architecture powering modern AI models.\n10 - Feature Engineering: Designing informative features to improve model performance significantly.\n11 - Supervised Learning: Learns useful representations without labeled data.\n12 - Bayesian Learning: Incorporate uncertainty using probabilistic model approaches.\n13 - Prompt Engineering: Crafting effective inputs to guide generative model outputs.\n14 - AI Agents: Autonomous systems that perceive, decide, and act.\n15 - Fine-Tuning Models: Customizes pre-trained models for domain-specific tasks.\n16 - Multimodal Models: Processes and generates across multiple data types like images, videos, and text.\n17 - Embeddings: Transforms input into machine-readable vector formats.\n18 - Vector Search: Finds similar items using dense vector embeddings.\n19 - Model Evaluation: Assessing predictive performance using validation techniques.\n20 - AI Infrastructure: Deploying scalable systems to support AI operations.\n\nOver to you: Which other AI concept will you add to the list?\n\n--\nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n \n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7320835110730174465_slide_0.jpg",
+      "description": "JPEG image, 480x580 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a high-level list of 20 artificial intelligence concepts, including machine learning, neural networks, transformers, generative models, embeddings, vector search, model evaluation, and AI infrastructure. Most entries receive only a one-sentence description, and no detailed algorithms, implementation steps, evaluation metrics, or architectures are provided. Two descriptions are potentially misleading: reinforcement learning is associated with distributed traffic across multiple servers, while supervised learning is described as learning without labeled data. The post also contains promotional text and no extracted media explanation.",
+    "topics": [
+      "Artificial intelligence fundamentals",
+      "Machine learning",
+      "Deep learning",
+      "Generative models",
+      "AI model development and evaluation",
+      "AI systems and retrieval"
+    ],
+    "subtopics": [
+      "Machine Learning",
+      "Deep Learning",
+      "Neural Networks",
+      "NLP",
+      "Computer Vision",
+      "Reinforcement Learning",
+      "Generative Models",
+      "LLM",
+      "Transformers",
+      "Feature Engineering",
+      "Supervised Learning",
+      "Bayesian Learning",
+      "Prompt Engineering",
+      "AI Agents",
+      "Fine-Tuning Models",
+      "Multimodal Models",
+      "Embeddings",
+      "Vector Search",
+      "Model Evaluation",
+      "AI Infrastructure"
+    ],
+    "concepts": [
+      "Machine Learning",
+      "Deep Learning",
+      "Neural Networks",
+      "NLP",
+      "Computer Vision",
+      "Reinforcement Learning",
+      "Generative Models",
+      "LLM",
+      "Transformers",
+      "Feature Engineering",
+      "Supervised Learning",
+      "Bayesian Learning",
+      "Prompt Engineering",
+      "AI Agents",
+      "Fine-Tuning Models",
+      "Multimodal Models",
+      "Embeddings",
+      "Vector Search",
+      "Model Evaluation",
+      "AI Infrastructure"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do machine learning, deep learning, and neural networks relate to the ideas presented in the post?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Machine learning is presented as covering core algorithms, statistics, and model-training techniques.\nDeep learning is described as using hierarchical neural networks to learn complex representations automatically.\nNeural networks are described as layered architectures that model nonlinear relationships accurately."
+    },
+    {
+      "question": "What roles do transformers, LLMs, and generative models play in modern AI according to the post?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Transformers use self-attention and are described as powering modern AI models.\nLLMs generate human-like text using massive pre-trained data.\nGenerative models create new data samples using learned data."
+    },
+    {
+      "question": "How can feature engineering, fine-tuning, and prompt engineering be distinguished based on the post?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Feature engineering designs informative features to improve model performance.\nFine-tuning customizes a pre-trained model for a domain-specific task.\nPrompt engineering crafts effective inputs to guide a generative model's output."
+    },
+    {
+      "question": "How do embeddings and vector search work together?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Embeddings transform input into machine-readable vector formats.\nVector search uses dense vector embeddings to find similar items."
+    },
+    {
+      "question": "What capabilities are attributed to AI agents and multimodal models?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "AI agents are autonomous systems that perceive, decide, and act.\nMultimodal models process and generate across data types such as images, videos, and text."
+    },
+    {
+      "question": "A team wants a system that finds items similar to a supplied input. Which listed concepts should it use, and what infrastructure concern remains?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The input can be transformed into a machine-readable vector by using embeddings.\nDense vector embeddings can then be used by vector search to find similar items.\nAI infrastructure must support scalable deployment, although the post does not prescribe a specific infrastructure design."
+    },
+    {
+      "question": "How should predictive model performance be evaluated according to the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Model evaluation assesses predictive performance by using validation techniques.\nThe post does not name particular validation methods or evaluation metrics, so an answer should not claim that it specifies any."
+    }
+  ],
+  "classification": {
+    "domain": "Artificial Intelligence",
+    "primary_topic": "Core AI concepts",
+    "secondary_topics": [
+      "Machine learning fundamentals",
+      "Deep learning architectures",
+      "Generative AI",
+      "Natural language processing",
+      "Computer vision",
+      "AI model development and evaluation",
+      "Embeddings and vector search",
+      "AI agents and infrastructure"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6366b151aa68c18b",
+    "saved_date": "2026-10-01T23:26:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7320835110730174465",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7320835110730174465_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

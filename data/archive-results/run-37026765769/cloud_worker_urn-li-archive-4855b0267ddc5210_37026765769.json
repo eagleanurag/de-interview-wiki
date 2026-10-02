@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-archive-4855b0267ddc5210",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.726523Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:53Z"
+  },
+  "original_text": "If you’re just getting into Data Engineering, always remember:\nSQL → Data Modeling → ETL → Orchestration\n\nNot the other way around.\n\nSQL → To actually understand your data\nData Modeling → To make sense of chaos\nETL → To move, clean, and transform at scale\nOrchestration → To keep the whole thing running (even at 2 am)\n\nChase the flashy tools later.\nFirst, get these basics down, because every “data fire” starts with a skipped step here.\n\nShare this if you agree. \n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The visible post recommends a foundational progression for aspiring data engineers: SQL, Data Modeling, ETL, then Orchestration. It presents SQL as the way to understand data, Data Modeling as a way to make sense of disorderly information, ETL as the process of moving, cleaning, and transforming data at scale, and Orchestration as keeping the complete process running, including overnight. The post advises beginners to establish these basics before pursuing flashy tools. The visible content ends with a request to share the post and does not provide further technical material.",
+    "topics": [
+      "Data Engineering Fundamentals",
+      "SQL",
+      "Data Modeling",
+      "ETL",
+      "Orchestration"
+    ],
+    "subtopics": [
+      "Foundational learning sequence",
+      "Understanding data with SQL",
+      "Organizing data through modeling",
+      "Moving and transforming data with ETL",
+      "Keeping data processes running with orchestration"
+    ],
+    "concepts": [
+      "SQL",
+      "Data Modeling",
+      "ETL",
+      "Orchestration",
+      "Foundational Skill Progression"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What learning sequence does the post recommend for someone beginning in Data Engineering?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The recommended sequence is SQL, Data Modeling, ETL, and then Orchestration.\nThe post recommends mastering these basics before focusing on flashy tools."
+    },
+    {
+      "question": "According to the post, what is the purpose of learning SQL and Data Modeling?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SQL helps a data engineer actually understand the data.\nData Modeling helps make sense of chaotic data."
+    },
+    {
+      "question": "What activities does the post associate with ETL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "ETL is associated with moving data.\nETL is associated with cleaning data.\nETL is associated with transforming data at scale."
+    },
+    {
+      "question": "Why does the post place Orchestration after ETL?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "Orchestration comes after the data-processing foundation because it keeps the whole process running.\nThe post gives overnight operation as an example of why orchestration matters."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Fundamentals",
+    "secondary_topics": [
+      "SQL",
+      "Data Modeling",
+      "ETL",
+      "Orchestration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4855b0267ddc5210",
+    "saved_date": "2026-10-01T23:12:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

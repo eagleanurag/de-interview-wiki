@@ -1,0 +1,78 @@
+{
+  "id": "urn-li-saved-b0d924537ed21a07",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346070545882337280",
+    "captured_at": "2026-10-02T00:15:50.717501Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:40Z"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : IBM \n\n#PySpark Interview Question — Solution\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nYou are working as a Data Engineer for a company. The sales team has provided you with a dataset containing sales information. However, the data has some missing values that need to be addressed before processing. You are required to perform the following tasks:\n1. Load the following sample dataset into a PySpark DataFrame:\n\n2. Perform the following operations:\na. Replace all NULL values in the Quantity column with 0.\nb. Replace all NULL values in the Price column with the average price of the existing data.\nc. Drop rows where the Product column is NULL.\nd. Fill missing Sales_Date with a default value of '2025-01-01'.\ne. Drop rows where all columns are NULL.\n\n\n𝐬𝐜𝐡𝐞𝐦𝐚 \ndata = [ (1, \"Laptop\", 10, 50000, \"North\", \"2025-01-01\"), (2, \"Mobile\", None, 15000, \"South\", None), (3, \"Tablet\", 20, None, \"West\", \"2025-01-03\"), (4, \"Desktop\", 15, 30000, None, \"2025-01-04\"), (5, None, None, None, \"East\", \"2025-01-05\") ] columns = [\"Sales_ID\", \"Product\", \"Quantity\", \"Price\", \"Region\", \"Sales_Date\"]\n\n\nKarthik K. Seekho Bigdata Institute\nStart Your Data Engineering Career Today!\nLearn Big Data, Spark, AWS, and more.\nExplore the Full Syllabus & Course Details: seekhobigdata.com\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346070545882337280_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a PySpark Data Engineering interview scenario for cleaning a sales dataset. It supplies five records and the column names Sales_ID, Product, Quantity, Price, Region, and Sales_Date. The required operations are to load the data into a DataFrame, replace null Quantity values with 0, replace null Price values with the average existing price, remove rows with a null Product, fill missing Sales_Date values with '2025-01-01', and remove rows where every column is null. Although the heading refers to a solution, no implementation code is provided.",
+    "topics": [
+      "PySpark",
+      "DataFrame data cleaning",
+      "Missing-value handling"
+    ],
+    "subtopics": [
+      "Loading tuple data into a PySpark DataFrame",
+      "Defining DataFrame columns",
+      "Replacing null numeric values",
+      "Calculating an average replacement value",
+      "Filtering rows by null values",
+      "Applying a default date",
+      "Dropping all-null rows"
+    ],
+    "concepts": [
+      "Explicit DataFrame schema",
+      "Quantity imputation",
+      "Price imputation",
+      "Conditional row filtering",
+      "Default date substitution",
+      "All-null row removal"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you load the supplied records into a PySpark DataFrame and apply all five requested null-handling operations?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The DataFrame must use the supplied records and the listed column order and names.\nNull Quantity values must be replaced with 0.\nNull Price values must be replaced with the average of the existing prices.\nRows with a null Product must be removed.\nMissing Sales_Date values must be replaced with '2025-01-01'.\nRows in which every column is null must be removed."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame missing-value handling",
+    "secondary_topics": [
+      "Sales data cleaning",
+      "DataFrame loading",
+      "Null-row filtering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b0d924537ed21a07",
+    "saved_date": "2026-10-01T23:13:40Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346070545882337280",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346070545882337280_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

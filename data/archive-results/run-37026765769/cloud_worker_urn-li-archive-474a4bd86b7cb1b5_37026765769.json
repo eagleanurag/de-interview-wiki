@@ -1,0 +1,121 @@
+{
+  "id": "urn-li-archive-474a4bd86b7cb1b5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.680445Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:42Z"
+  },
+  "original_text": "Day 15 - Real-Time ETL Scenario-Based Questions\n\n🔹 1. Your source has 10 million records. How will you optimize the ETL job?\nAnswer Ideas:\nUse partitioning (Hash or Range) to parallelize processing\nMinimize transformations in memory (avoid Lookups if data is large)\nPush logic to the source DB using SQL override\nUse bulk loading or batch commits\n\n🔹 2. How do you handle a scenario where some records are rejected during transformation?\nAnswer Ideas:\nRedirect bad records to a reject file/table\nCapture error message, source key, and timestamp for debugging\nUse error handling stages (e.g., Reject links in DataStage, Error log in Informatica)\n\n🔹 3. You need to pass different file paths for DEV, QA, and PROD. How would you do this?\nAnswer:\nUse parameter files or environment variables\nDataStage: ParamSet or DSParam file\nInformatica: Parameter file with $$SourceFilePath\n\n🔹 4. How do you implement incremental load (CDC)?\nAnswer:\nUse Last Updated Timestamp or Surrogate Key\nStore last load timestamp in a control table\nFilter source using WHERE last_update > :last_loaded_time\nFor Informatica, consider CDC mappings or Change Data Capture tools\n\n🔹 5. How would you load the most recent record per customer from a transaction table?\nApproach:\nSort by Customer ID and Date in descending order\nUse row_number() or stage logic to pick only first record\nIn Informatica: Use Sorter + Expression to flag first row\nIn DataStage: Use Remove Duplicates or Transformer with stage variables\n\nFor more such content keep following me\n#Keeppreparing #interviewsquestions #mostlyaskedquestions #frequent #data #ETL",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This Day 15 post presents five scenario-based ETL questions with brief answer ideas. It covers optimizing an ETL job for 10 million records, handling rejected records, parameterizing file paths across DEV, QA, and PROD, implementing incremental loads with CDC, and selecting the most recent transaction per customer. The suggested approaches include partitioning, bulk loading, reject files and tables, parameter files, control tables, sorting, row_number(), and tool-specific patterns for DataStage and Informatica. The post provides conceptual guidance rather than complete implementations or configurations.",
+    "topics": [
+      "Real-Time ETL",
+      "Rejected-record handling",
+      "Environment-specific file path parameterization",
+      "Incremental loading and CDC",
+      "Latest-record selection",
+      "DataStage and Informatica ETL patterns"
+    ],
+    "subtopics": [
+      "Hash and range partitioning",
+      "Memory minimization and lookup avoidance",
+      "Source database SQL overrides",
+      "Bulk loading and batch commits",
+      "Reject files and reject tables",
+      "Error logging and debugging metadata",
+      "DataStage Reject links",
+      "Informatica error logs",
+      "Parameter files and environment variables",
+      "DataStage ParamSet and DSParam files",
+      "Informatica SourceFilePath parameters",
+      "Last Updated Timestamp and Surrogate Key",
+      "Control tables for last-load timestamps",
+      "CDC mappings and Change Data Capture tools",
+      "Customer transaction sorting",
+      "row_number() and stage-based deduplication"
+    ],
+    "concepts": [
+      "Hash and range partitioning",
+      "Memory-conscious transformations",
+      "Source-side SQL override",
+      "Bulk loading and batch commits",
+      "Reject file or reject table",
+      "Rejected-record diagnostics",
+      "Tool-specific error-handling stages",
+      "Environment-specific parameterization",
+      "DataStage parameter files",
+      "Informatica parameter file",
+      "Timestamp-based or key-based incremental load",
+      "Control table for incremental loading",
+      "Change Data Capture in Informatica",
+      "Latest customer transaction selection",
+      "row_number() and stage logic",
+      "Informatica first-row flagging",
+      "DataStage duplicate removal"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you optimize an ETL job whose source contains 10 million records?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Hash or range partitioning can be used to parallelize processing.\nTransformations in memory should be minimized, and lookups should be avoided when the data is large.\nLogic can be pushed to the source database by using a SQL override.\nBulk loading or batch commits can be used."
+    },
+    {
+      "question": "How should an ETL process handle records that are rejected during transformation?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Rejected records should be redirected to a reject file or table.\nThe error message, source key, and timestamp should be captured for debugging.\nDataStage Reject links and an Informatica error log can serve as error-handling stages."
+    },
+    {
+      "question": "How can one ETL job use different file paths in DEV, QA, and PROD?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Parameter files or environment variables can supply the environment-specific file paths.\nDataStage can use a ParamSet or a DSParam file.\nInformatica can use a parameter file with the $$SourceFilePath variable."
+    },
+    {
+      "question": "How would you implement an incremental load using CDC?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A Last Updated Timestamp or Surrogate Key can be used to identify changed records.\nThe last load timestamp should be stored in a control table.\nThe source can be filtered with WHERE last_update > :last_loaded_time.\nInformatica implementations can consider CDC mappings or Change Data Capture tools."
+    },
+    {
+      "question": "How would you load the most recent transaction record for each customer?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The data should be sorted by Customer ID and Date in descending order.\nrow_number() or stage logic can then select the first record for each customer.\nInformatica can use a Sorter and Expression to flag the first row.\nDataStage can use Remove Duplicates or a Transformer with stage variables."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Real-Time ETL",
+    "secondary_topics": [
+      "ETL performance optimization",
+      "Data quality and rejected-record handling",
+      "Environment-specific parameterization",
+      "Incremental loading",
+      "Change Data Capture",
+      "Deduplication and latest-record selection",
+      "DataStage",
+      "Informatica"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:474a4bd86b7cb1b5",
+    "saved_date": "2026-10-01T23:24:42Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

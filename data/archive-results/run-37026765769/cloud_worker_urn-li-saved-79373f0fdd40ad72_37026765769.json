@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-saved-79373f0fdd40ad72",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338442479387480066",
+    "captured_at": "2026-10-02T00:15:48.533855Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:52Z"
+  },
+  "original_text": "𝗜𝗠𝗣𝗟𝗘𝗠𝗘𝗡𝗧𝗜𝗡𝗚 𝗣𝗬𝗦𝗣𝗔𝗥𝗞 𝗪𝗜𝗡𝗗𝗢𝗪 𝗙𝗨𝗡𝗖𝗧𝗜𝗢𝗡𝗦: 𝗥𝗢𝗪_𝗡𝗨𝗠𝗕𝗘𝗥 𝗩𝗦 𝗥𝗔𝗡𝗞 𝗩𝗦 𝗗𝗘𝗡𝗦𝗘_𝗥𝗔𝗡𝗞\n\nEver struggled with ranking queries that return unexpected results? You're not alone! Let me provide hands-on demo, where we harness PySpark’s window functions (`𝙧𝙤𝙬_𝙣𝙪𝙢𝙗𝙚𝙧`, `𝙧𝙖𝙣𝙠`, `𝙙𝙚𝙣𝙨𝙚_𝙧𝙖𝙣𝙠`) to turn raw data into clear action items.\n\n𝗪𝗵𝗮𝘁’𝘀 𝗛𝗮𝗽𝗽𝗲𝗻𝗶𝗻𝗴 𝗨𝗻𝗱𝗲𝗿 𝘁𝗵𝗲 𝗛𝗼𝗼𝗱?\nWe start with a diverse dataset featuring ties in performance scores and salaries across departments. By defining window specs partitioned by department or company-wide and ordered by performance or salary, we generate three ranking views side-by-side—revealing how each function treats ties and gaps differently.\n\n𝟱 𝗥𝗲𝗮𝗹-𝗪𝗼𝗿𝗹𝗱 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼𝘀:\n\n𝟭. 𝗧𝗼𝗽 𝟮 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗲𝗿𝘀 𝗶𝗻 𝗘𝗮𝗰𝗵 𝗗𝗲𝗽𝗮𝗿𝘁𝗺𝗲𝗻𝘁\n • Use `row_number` to guarantee exactly two entries per partition—even when scores tie.\n𝟮. 𝗘𝗺𝗽𝗹𝗼𝘆𝗲𝗲𝘀 𝗧𝗶𝗲𝗱 𝗳𝗼𝗿 𝗧𝗼𝗽 𝟯 𝗦𝗮𝗹𝗮𝗿𝗶𝗲𝘀\n • Use `rank` to include everyone who shares a top-3 position, skipping ranks appropriately.\n𝟯. 𝗗𝗶𝘀𝘁𝗶𝗻𝗰𝘁 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 𝗧𝗶𝗲𝗿𝘀 𝗖𝗼𝗺𝗽𝗮𝗻𝘆-𝗪𝗶𝗱𝗲\n • Use `dense_rank` to create continuous tiers without gaps, ideal for high-level dashboards.\n𝟰. 𝗨𝗻𝗱𝗲𝗿𝘃𝗮𝗹𝘂𝗲𝗱 𝗛𝗶𝗴𝗵 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗲𝗿𝘀\n • Combine `dense_rank` on performance and salary to flag top scorers who aren’t compensated at the top tier.\n𝟱. 𝗢𝘃𝗲𝗿𝗽𝗮𝗶𝗱 𝗨𝗻𝗱𝗲𝗿𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗲𝗿𝘀\n • Flip the logic to find those with top salaries but who fall short in performance.\n\n𝗪𝗵𝗲𝗻 𝘁𝗼 𝗨𝘀𝗲 𝗪𝗵𝗶𝗰𝗵 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻?\n\n𝟭. 𝗿𝗼𝘄_𝗻𝘂𝗺𝗯𝗲𝗿: Precise headcounts (e.g., leaderboards).\n𝟮. 𝗿𝗮𝗻𝗸: Inclusive leaderboards where ties matter (e.g., awards).\n𝟯. 𝗱𝗲𝗻𝘀𝗲_𝗿𝗮𝗻𝗸: Tier-based grouping (e.g., bonus pools).\n\n𝗢𝗿𝗶𝗴𝗶𝗻𝗮𝗹 𝗗𝗮𝘁𝗮𝘀𝗲𝘁:\ndata = [\n (\"Alice Johnson\", \"Engineering\", 95, 120000), # Top performer, top salary\n (\"Bob Smith\", \"Engineering\", 88, 110000), # Good performer, good salary\n (\"Charlie Brown\", \"Engineering\", 88, 110000), # SAME as Bob - performance AND salary tie\n (\"Diana Prince\", \"Engineering\", 92, 105000), # TOP performer but LOWER salary than others\n\n (\"Eva Martinez\", \"Sales\", 92, 130000), # Top performer, TOP salary\n (\"Frank Wilson\", \"Sales\", 78, 95000), # Low performer, low salary\n (\"Grace Lee\", \"Sales\", 92, 95000), # TOP performance but LOWER salary than Eva\n (\"Henry Davis\", \"Sales\", 75, 85000), # Lower performer, lower salary\n\n (\"Ivy Chen\", \"Marketing\", 89, 108000), # Top performer, top salary\n (\"Jack Turner\", \"Marketing\", 89, 95000), # TOP performance but LOWER salary than Ivy\n (\"Kelly Moore\", \"Marketing\", 82, 110000), # Lower performance but HIGH salary\n (\"Liam Taylor\", \"Marketing\", 82, 90000) # SAME performance as Kelly, lower salary\n]\n\n#PySpark #DataEngineering #BigData #Analytics #WindowFunctions #Python #ApacheSpark #DataAnalysis #RankingFunction #DataProcessing #TechTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338442479387480066_slide_0.jpg",
+      "description": "JPEG image, 480x650 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post outlines a PySpark demonstration of row_number, rank, and dense_rank for ranking employees by performance score or salary in windows partitioned by department or applied company-wide. It states that row_number keeps an exact number of rows despite ties, rank includes all employees sharing a position and leaves gaps, and dense_rank creates continuous tie-aware tiers. It also describes combining performance and salary tiers to flag high performers outside the top salary tier and high-salary employees outside the top performance tier. The supplied content includes an employee dataset with ties but does not include the complete PySpark implementation or result tables.",
+    "topics": [
+      "PySpark window functions",
+      "Ranking functions",
+      "Employee performance and salary analysis",
+      "Tie handling",
+      "Partitioned rankings"
+    ],
+    "subtopics": [
+      "row_number for exact row limits",
+      "rank for tie-inclusive positional rankings",
+      "dense_rank for continuous tiers",
+      "Department-level and company-wide window specifications",
+      "Undersalaried high performers",
+      "Over-salaried underperformers"
+    ],
+    "concepts": [
+      "Window specification",
+      "row_number",
+      "rank",
+      "dense_rank",
+      "Undersalaried high performers",
+      "Over-salaried underperformers",
+      "Ranking ties"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which PySpark ranking function and window design can produce exactly two rows per department when performance scores tie?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Use row_number because it guarantees an exact number of entries per partition despite tied scores.\nPartition the window by department.\nOrder the window by performance score before assigning row numbers.\nKeep the first two row_number positions for each department."
+    },
+    {
+      "question": "How do rank and dense_rank differ when employees have tied values?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "rank gives tied employees the same position and can leave gaps in subsequent positions.\nrank includes everyone tied within a selected leaderboard position, such as the top three.\ndense_rank gives tied employees the same tier without leaving gaps between tiers."
+    },
+    {
+      "question": "How does the post propose using dense_rank to identify compensation-review action items?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Calculate performance and salary tiers so they can be compared.\nFlag employees in the top performance tier who are outside the top salary tier.\nReverse the logic to flag employees in the top salary tier who fall short in performance.\nUse the supplied cases, such as top-performing employees with lower salaries and lower-performing employees with high salaries, as examples."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark window-function rankings",
+    "secondary_topics": [
+      "Tie handling",
+      "Department-level and company-wide partitioning",
+      "Performance and compensation analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:79373f0fdd40ad72",
+    "saved_date": "2026-10-01T23:20:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338442479387480066",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338442479387480066_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

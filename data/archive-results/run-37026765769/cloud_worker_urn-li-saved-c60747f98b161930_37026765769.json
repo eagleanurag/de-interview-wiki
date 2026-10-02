@@ -1,0 +1,93 @@
+{
+  "id": "urn-li-saved-c60747f98b161930",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348217855135383552",
+    "captured_at": "2026-10-02T00:15:51.462525Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:06Z"
+  },
+  "original_text": "Data Engineer | Hadoop | Hive | PySpark | Spark | SQL | Power BI | Python | Linux | ETL Pipelines | Data Modeling | Analytics |\n1yr •\n🚀 Just published my new SQL case study project on GitHub!\n💳 Title: Credit Card Transactions Analysis using SQL\n📂 Repo: https://lnkd.in/d57X-E5s\n🔍 What I did:\n• Cleaned and imported a real-world credit card dataset from Kaggle into SQL Server\n• Normalized column names and optimized data types\n• Solved 10 business questions using SQL, including:\n• Top cities by spending\n• Gender-based spend analysis\n• Expense-type trends\n• Month-over-month growth\n• Weekend vs weekday behavior\n🛠️ Tools: SQL Server, T-SQL, Window Functions, CTEs, Aggregations\n📈 Sample insight:\n“Platinum + Travel saw the highest MoM growth in Jan 2014 🚀”\nCheck out the full project on GitHub:\n👉 https://lnkd.in/dyN4bTAv\n🙏 Special thanks to Ankit Bansal for sharing the case study and being a constant source of learning and guidance throughout this project!\n💬 I'd love to hear your feedback or suggestions!\nDhaval Patel Hemanand Vadivel Shashank Singh 🇮🇳 NamasteSQL\n#SQL #DataAnalytics #PortfolioProject #SQLServer #CreditCardAnalysis #GitHub #DataScience\n…see more\nGitHub - neha-p-sharma/SQL-Credit-Card-Analysis\ngithub.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348217855135383552_slide_0.jpg",
+      "description": "JPEG image, 800x400 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a GitHub case study that imports a Kaggle credit card transaction dataset, described as real-world, into SQL Server. The project cleans the data by normalizing column names and optimizing data types, then uses SQL to answer ten business questions about spending, customer attributes, expense types, monthly growth, and weekday-versus-weekend behavior. The post names T-SQL, window functions, CTEs, and aggregations as tools used and reports that the Platinum and Travel category had the highest month-over-month growth in January 2014.",
+    "topics": [
+      "SQL Data Analytics",
+      "Data Preparation",
+      "Credit Card Transaction Analysis"
+    ],
+    "subtopics": [
+      "SQL Server",
+      "T-SQL",
+      "Window Functions",
+      "Common Table Expressions",
+      "Aggregations",
+      "Data Type Optimization",
+      "Spend Segmentation",
+      "Month-over-Month Growth",
+      "Weekday and Weekend Analysis"
+    ],
+    "concepts": [
+      "Dataset Import and Cleaning",
+      "SQL Server and T-SQL",
+      "Window Functions",
+      "Common Table Expressions",
+      "Aggregations",
+      "Business Question Analysis",
+      "Month-over-Month Growth"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What preparation steps were performed before analyzing the credit card transaction data in SQL Server?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The project imported a Kaggle credit card transaction dataset into SQL Server.\nThe data was cleaned by normalizing column names and optimizing data types."
+    },
+    {
+      "question": "Which business questions were addressed by the credit card transaction analysis?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The analysis covered top cities by spending, gender-based spending, expense-type trends, month-over-month growth, and weekend-versus-weekday behavior.\nThe post states that ten business questions were answered but provides only five examples."
+    },
+    {
+      "question": "Which SQL capabilities were used in the project?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The project used SQL Server, T-SQL, window functions, CTEs, and aggregations.\nA strong answer should acknowledge that the post does not include the queries or explain the specific role of each technique."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL Credit Card Transaction Analysis",
+    "secondary_topics": [
+      "Data Preparation",
+      "SQL Querying",
+      "Business Analytics"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c60747f98b161930",
+    "saved_date": "2026-10-01T23:12:06Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348217855135383552",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348217855135383552_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

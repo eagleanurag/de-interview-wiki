@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-saved-574931ed2ca94d38",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7325908563225108481",
+    "captured_at": "2026-10-02T00:15:47.642299Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:39Z"
+  },
+  "original_text": "The 4 Types of SQL Joins\n\nEdit: The right join output should be 4. Updated diagram in the comment\n\nSQL joins combine rows from two or more tables based on a related column. Here are the different types of joins you can use:\n\n1 - Inner Join\nReturns only the matching rows between both tables. It keeps common data only.\n\n2 - Left Join\nReturns all rows from the left table and matching rows from the right table. If a row in the left table doesn’t have a match in the right table, the right table’s columns will contain NULL values in that row.\n\n3 - Right Join\nReturns all rows from the right table and matching rows from the left table. If no matching record exists in the left table for a record in the right table, the columns from the left table in the result will contain NULL values. \n\n4 - FULL OUTER JOIN\nReturns all rows from both tables, filling in NULL for missing matches. \n\nOver to you: Which SQL Join have you used the most?\n\n-- \nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n\n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7325908563225108481_slide_0.jpg",
+      "description": "GIF image, 480x563 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that SQL joins combine rows from two or more tables based on a related column. It describes four join types: INNER JOIN returns only matching rows, LEFT JOIN preserves all rows from the left table and fills unmatched right-table columns with NULL, RIGHT JOIN preserves all rows from the right table and fills unmatched left-table columns with NULL, and FULL OUTER JOIN returns rows from both tables with NULL values for missing matches.",
+    "topics": [
+      "SQL joins",
+      "Combining rows from tables",
+      "Handling unmatched rows"
+    ],
+    "subtopics": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "NULL values in join results"
+    ],
+    "concepts": [
+      "SQL join",
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "NULL handling for missing matches"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the purpose of a SQL join, and which four join types are described in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A SQL join combines rows from two or more tables based on a related column.\nThe four types are INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN."
+    },
+    {
+      "question": "How does an INNER JOIN differ from a LEFT JOIN when a left-table row has no matching right-table row?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "An INNER JOIN returns only rows that match in both tables, so an unmatched left-table row is not returned.\nA LEFT JOIN returns every left-table row and places NULL values in the right-table columns when no match exists."
+    },
+    {
+      "question": "What does a RIGHT JOIN return when a right-table row has no matching left-table row?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A RIGHT JOIN returns all rows from the right table, including rows without a match in the left table.\nThe left-table columns contain NULL values for the unmatched right-table row."
+    },
+    {
+      "question": "How does a FULL OUTER JOIN handle matching and non-matching rows from both tables?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A FULL OUTER JOIN returns rows from both tables rather than limiting the result to matching rows.\nColumns without a corresponding match are filled with NULL values."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL joins",
+    "secondary_topics": [
+      "NULL handling for unmatched rows"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:574931ed2ca94d38",
+    "saved_date": "2026-10-01T23:27:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7325908563225108481",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7325908563225108481_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7325908563225108481_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

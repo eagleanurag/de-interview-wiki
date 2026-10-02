@@ -1,0 +1,214 @@
+{
+  "id": "urn-li-saved-8228cc07f1794ab9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347739699681083393",
+    "captured_at": "2026-10-02T00:15:48.727153Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:47Z"
+  },
+  "original_text": "• 1st\nData Engineer | Bigdata Engineer | Bigdata Developer | Hadoop | HDFS | SQL | Shell Scripting | Scala | Python | Scala Spark | PySpark | Spark SQL | AWS S3 | AWS Redshift | AWS EMR | AWS Glue | AWS Lambda\n1yr •\nScenario based Data Engineering Interview questions recently asked by Big 4 Companies - #KPMG #Deloitte #EY #PwC 👩🏻‍💻\n1. How would you design a pipeline in Azure Data Factory to ingest data from a REST API, handle authentication, rate-limiting and manage potential errors or timeouts?\n2. If you need to merge and deduplicate data from multiple sources in an Azure SQL Database, how would you structure an Azure Data Factory pipeline to ensure accuracy?\n3. Describe the setup for a pipeline in Azure Data Factory that processes large numbers of files from Azure Blob Storage into Azure Synapse Analytics with optimal parallelism.\n4. How would you configure a pipeline in Azure Data Factory to handle incremental loads from an on-premises SQL Server to Azure SQL Database?\n5. Describe the process of transforming and aggregating IoT data stored in Azure Data Lake Storage for analysis in Azure Synapse Analytics.\n6. How would you handle real-time streaming data processing from Azure Event Hubs to Azure Databricks, considering potential data loss and scalability?\n7. If you needed to set up data partitioning in Azure Synapse Analytics to enhance performance, what considerations would you take into account?\n8. How would you structure a system to automate backup and restore operations for data stored in the Azure SQL Database?\n9. How would you optimize a slow-performing query in the Azure SQL Database? Describe key steps for analysis and improvement.\n10. What approach would you use to build a monitoring solution for data pipelines in Azure Data Factory, using Azure Monitor and custom alerts?\n11. Explain how you’d implement row-level security and column encryption in the Azure SQL Database to protect sensitive data.\n12. How would you design a workflow in Azure Logic Apps to trigger data processing in Azure Data Factory upon receiving new files in Azure Blob Storage?\n13. Describe the steps to set up a CI/CD pipeline in Azure DevOps for deploying Azure Data Factory pipelines across multiple environments.\n14. How would you use PolyBase in Azure Synapse Analytics to import data from an external data source?\n15. Explain the process of configuring Delta Lake in Azure Databricks for handling slowly changing dimensions in a data warehouse setup.\n✅ These questions focus on designing, managing and optimizing data pipelines and storage within Azure Data Engineering services like Data Factory, SQL Database, Synapse Analytics\n#dataengineering #DElveWithVani\nUnderstanding ETL pipelines and Architectures",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347739699681083393_slide_0.jpg",
+      "description": "JPEG image, 324x486 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The supplied post is a question-list rather than a completed technical explanation. It presents 15 scenario-based Data Engineering interview questions, described as recently asked by KPMG, Deloitte, EY, and PwC, focused on designing, managing, and optimizing Azure data pipelines and storage. The body names Azure Data Factory, Azure SQL Database, Azure Blob Storage, Azure Synapse Analytics, Azure Data Lake Storage, Azure Event Hubs, Azure Databricks, Azure Logic Apps, Azure Monitor, Azure DevOps, PolyBase, and Delta Lake, and asks about authentication, rate-limiting, incremental loads, merging and deduplication, accuracy, parallelism, IoT transformation, real-time streaming, data loss, scalability, partitioning, backup and restore, query optimization, monitoring, security, workflow automation, CI/CD, external imports, and slowly changing dimensions. An opening skill line also lists Hadoop, HDFS, SQL, Shell Scripting, Scala, Python, Scala Spark, PySpark, Spark SQL, AWS S3, AWS Redshift, AWS EMR, AWS Glue, and AWS Lambda, but the question list does not elaborate on them. No answers or implementation details are supplied, the closing text only names ETL pipelines and architectures, and the extracted media text is empty.",
+    "topics": [
+      "Azure Data Engineering",
+      "Data pipeline design, management, and optimization",
+      "ETL pipelines and architectures",
+      "Azure Data Factory",
+      "Azure SQL Database",
+      "Azure Synapse Analytics",
+      "Azure Blob Storage",
+      "Azure Data Lake Storage",
+      "Azure Event Hubs",
+      "Azure Databricks",
+      "Delta Lake",
+      "Azure Logic Apps",
+      "Azure Monitor",
+      "Azure DevOps",
+      "PolyBase",
+      "Real-time streaming",
+      "Data accuracy and deduplication",
+      "Data security",
+      "CI/CD"
+    ],
+    "subtopics": [
+      "REST API ingestion and authentication",
+      "Rate-limiting, errors, and timeouts",
+      "Merge and deduplication in Azure SQL Database",
+      "Large numbers of files and optimal parallelism",
+      "Incremental loads from on-premises SQL Server",
+      "IoT transformation and aggregation",
+      "Real-time streaming from Azure Event Hubs to Azure Databricks",
+      "Potential data loss and scalability",
+      "Partitioning in Azure Synapse Analytics",
+      "Automated backup and restore",
+      "Slow-query analysis and optimization",
+      "Pipeline monitoring with Azure Monitor and custom alerts",
+      "Row-level security and column encryption",
+      "Azure Logic Apps triggers for new Azure Blob Storage files",
+      "CI/CD across multiple environments",
+      "PolyBase external data import",
+      "Delta Lake and slowly changing dimensions"
+    ],
+    "concepts": [
+      "Azure Data Factory pipeline design",
+      "REST API ingestion concerns",
+      "Azure SQL Database merge and deduplication",
+      "Azure Blob Storage to Azure Synapse Analytics processing",
+      "Incremental loading",
+      "IoT transformation and aggregation",
+      "Azure Event Hubs to Azure Databricks streaming",
+      "Azure Synapse Analytics partitioning",
+      "Azure SQL Database backup and restore",
+      "Azure Data Factory monitoring",
+      "Azure SQL Database data protection",
+      "Azure Logic Apps file-trigger workflow",
+      "Azure DevOps CI/CD for Azure Data Factory",
+      "PolyBase external data import",
+      "Delta Lake slowly changing dimensions",
+      "ETL pipelines and architectures"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you design a pipeline in Azure Data Factory to ingest data from a REST API, handle authentication, rate-limiting, and manage potential errors or timeouts?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe the Azure Data Factory pipeline used to ingest data from a REST API.\nIt should address authentication and rate-limiting.\nIt should address potential errors and timeouts."
+    },
+    {
+      "question": "If you need to merge and deduplicate data from multiple sources in an Azure SQL Database, how would you structure an Azure Data Factory pipeline to ensure accuracy?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how an Azure Data Factory pipeline merges data from multiple sources.\nIt should explain how duplicate data is removed in Azure SQL Database.\nIt should describe how accuracy is ensured."
+    },
+    {
+      "question": "Describe the setup for a pipeline in Azure Data Factory that processes large numbers of files from Azure Blob Storage into Azure Synapse Analytics with optimal parallelism.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe an Azure Data Factory pipeline for a large number of Azure Blob Storage files.\nThe destination should be Azure Synapse Analytics.\nThe design should address optimal parallelism."
+    },
+    {
+      "question": "How would you configure a pipeline in Azure Data Factory to handle incremental loads from an on-premises SQL Server to Azure SQL Database?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should identify Azure Data Factory as the pipeline service.\nIt should describe an incremental load from an on-premises SQL Server.\nThe destination should be Azure SQL Database."
+    },
+    {
+      "question": "Describe the process of transforming and aggregating IoT data stored in Azure Data Lake Storage for analysis in Azure Synapse Analytics.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe transforming and aggregating IoT data.\nThe source should be Azure Data Lake Storage.\nThe result should be prepared for analysis in Azure Synapse Analytics."
+    },
+    {
+      "question": "How would you handle real-time streaming data processing from Azure Event Hubs to Azure Databricks, considering potential data loss and scalability?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer should address real-time streaming from Azure Event Hubs to Azure Databricks.\nIt should consider potential data loss.\nIt should consider scalability."
+    },
+    {
+      "question": "If you needed to set up data partitioning in Azure Synapse Analytics to enhance performance, what considerations would you take into account?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should identify considerations for partitioning data in Azure Synapse Analytics.\nIt should explain how partitioning supports performance enhancement."
+    },
+    {
+      "question": "How would you structure a system to automate backup and restore operations for data stored in the Azure SQL Database?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe a system for automating backup operations.\nIt should describe restore operations for data stored in Azure SQL Database."
+    },
+    {
+      "question": "How would you optimize a slow-performing query in the Azure SQL Database? Describe key steps for analysis and improvement.",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe steps for analyzing a slow-performing query in Azure SQL Database.\nIt should explain steps for improving the query."
+    },
+    {
+      "question": "What approach would you use to build a monitoring solution for data pipelines in Azure Data Factory, using Azure Monitor and custom alerts?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe monitoring for Azure Data Factory data pipelines.\nThe solution should use Azure Monitor and custom alerts."
+    },
+    {
+      "question": "Explain how you would implement row-level security and column encryption in the Azure SQL Database to protect sensitive data.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain row-level security in Azure SQL Database.\nIt should explain column encryption for protecting sensitive data."
+    },
+    {
+      "question": "How would you design a workflow in Azure Logic Apps to trigger data processing in Azure Data Factory upon receiving new files in Azure Blob Storage?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe an Azure Logic Apps workflow.\nThe workflow should trigger Azure Data Factory processing when new files arrive in Azure Blob Storage."
+    },
+    {
+      "question": "Describe the steps to set up a CI/CD pipeline in Azure DevOps for deploying Azure Data Factory pipelines across multiple environments.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe setting up CI/CD in Azure DevOps.\nIt should cover deploying Azure Data Factory pipelines across multiple environments."
+    },
+    {
+      "question": "How would you use PolyBase in Azure Synapse Analytics to import data from an external data source?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how PolyBase imports data from an external source.\nThe import should target Azure Synapse Analytics."
+    },
+    {
+      "question": "Explain the process of configuring Delta Lake in Azure Databricks for handling slowly changing dimensions in a data warehouse setup.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain how to configure Delta Lake in Azure Databricks.\nIt should address handling slowly changing dimensions in a data warehouse setup."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineering data pipelines and storage",
+    "secondary_topics": [
+      "REST API ingestion",
+      "Azure Data Factory",
+      "Azure SQL Database",
+      "Azure Blob Storage",
+      "Azure Synapse Analytics",
+      "Azure Data Lake Storage",
+      "Azure Event Hubs",
+      "Azure Databricks",
+      "Incremental loads",
+      "Data accuracy and deduplication",
+      "Partitioning and query performance",
+      "Backup and restore",
+      "Pipeline monitoring",
+      "Data security",
+      "Azure Logic Apps",
+      "CI/CD",
+      "PolyBase",
+      "Delta Lake",
+      "Slowly changing dimensions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8228cc07f1794ab9",
+    "saved_date": "2026-10-01T23:12:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347739699681083393",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347739699681083393_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

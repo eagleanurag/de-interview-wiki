@@ -1,0 +1,84 @@
+{
+  "id": "urn-li-saved-e0d59ccebb448bd3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348931483375431681",
+    "captured_at": "2026-10-02T00:15:52.679588Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:00Z"
+  },
+  "original_text": "🔍Deloitte SQL Interview Question- Calculate the net change in the number of products.\n🚨This question was asked in a data engineering interview at Deloitte.\n\nThis is Problem 2 of the StrataScratch Interview Series.\n\n✅ Input table:\nYou are given a table called Car_launch_events with three columns.\n(Year,Company_Name,Product_Name)\nWith 2 years of data from 2019 and 2020\n\n🎯 Your task is to calculate the net change in the number of products launched by companies in 2020 compared to 2019.\n👇But there is a catch, you can't do this with multiple subqueries or by using CTEs.\n\n 🧠Brainstorm, and please drop your solution below in the comments.\n📸 I have attached the input table and expected output snapshot to the post.\n\n------\n\n#Deloitte #SQL #SQLChallenge #BigQuery #DataEngineer #InterviewPrep #DataAnalytics #SQLInterview #Big4Interviews",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348931483375431681_slide_0.jpg",
+      "description": "JPEG image, 480x645 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A Deloitte data engineering SQL interview prompt provides a table named Car_launch_events with Year, Company_Name, and Product_Name columns for 2019 and 2020. The task is to calculate the net change in products launched by companies in 2020 compared with 2019, without using multiple subqueries or CTEs. The post does not include the actual input rows, expected-output snapshot, or a solution, so the exact result format and product-counting semantics cannot be determined from the supplied text.",
+    "topics": [
+      "SQL",
+      "BigQuery",
+      "Data engineering interview preparation",
+      "Product launch comparison",
+      "SQL query constraints"
+    ],
+    "subtopics": [
+      "Car_launch_events table schema",
+      "Counting product launches by company and year",
+      "Comparing 2020 with 2019",
+      "Avoiding multiple subqueries",
+      "Avoiding CTEs"
+    ],
+    "concepts": [
+      "Car_launch_events",
+      "Net change in product launches",
+      "Company and year grouping",
+      "Query structure restriction",
+      "Unspecified counting semantics"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write a SQL query over Car_launch_events to calculate the change in product launches by company from 2019 to 2020 while respecting the restriction against multiple subqueries and CTEs?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query must use the Year, Company_Name, and Product_Name columns from Car_launch_events and limit the comparison to 2019 and 2020.\nThe query must count product launches for each company and year and compare the 2020 count with the corresponding 2019 count.\nThe query must avoid both multiple subqueries and CTEs.\nThe answer should state its assumption about whether product names are counted by row or as distinct values because the prompt does not resolve that detail."
+    },
+    {
+      "question": "What details should be clarified or verified before treating a proposed net-change query as correct for this prompt?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Verify that the calculation is based on the 2019 and 2020 values in Car_launch_events and is reported at the intended company-level grain.\nClarify whether duplicate Product_Name values represent separate launches or should be counted only once.\nConfirm that the proposed query uses neither multiple subqueries nor CTEs.\nCompare the proposed result with the expected-output snapshot when available, because the snapshot and sample rows are not present in the supplied text."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Product launch metrics",
+      "Year-over-year comparison",
+      "Query constraints",
+      "Interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e0d59ccebb448bd3",
+    "saved_date": "2026-10-01T23:12:00Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348931483375431681",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348931483375431681_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

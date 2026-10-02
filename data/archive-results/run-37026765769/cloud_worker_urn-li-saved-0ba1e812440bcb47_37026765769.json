@@ -1,0 +1,67 @@
+{
+  "id": "urn-li-saved-0ba1e812440bcb47",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347842396077838336",
+    "captured_at": "2026-10-02T00:15:44.672752Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:04Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Expertise in Azure Data Factory | Azure Databricks | Big Data | PySpark | SQL | Microsoft Fabric | ETL | Data Lake | Linux | SCCM | VMware | MDE | Windows Admin |\n1yr •\n🔍 Cracking PySpark Interviews Just Got Easier! 🚀\nI’ve been deep-diving into PySpark optimization techniques lately—and this curated set of 20 must-know Q&A from Nitya CloudTech is pure gold for anyone preparing for data engineering interviews. From broadcast joins to Catalyst Optimizer insights and Spark SQL tuning strategies, it's a powerful knowledge booster for performance-savvy engineers.\n💡 Whether you're brushing up for your next big opportunity or fine-tuning your Spark workload on Databricks, these bite-sized answers pack a serious punch.\nLet’s keep sharpening our tools! 💻🔥\n#DataEngineering #PySpark #BigData #SparkSQL #Databricks #AzureDataFactory #Snowflake #DataEngineer #InterviewPreparation #TechTips #SQL #MicrosoftFabric #UnityCatalog #PerformanceOptimization #LinkedInLearning #CareerGrowth #DataPipeline #BroadcastJoin #DeltaLake #SparkOptimization\n…see more\nData Engineer 20 important Pyspark interview Q & A",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347842396077838336_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post announces a curated set of 20 PySpark interview questions and answers attributed to Nitya CloudTech. It identifies broadcast joins, Catalyst Optimizer insights, Spark SQL tuning strategies, and performance optimization for Spark workloads on Databricks as focus areas. The actual questions, answers, and extracted media text are not included, so the post provides no detailed optimization guidance.",
+    "topics": [
+      "PySpark",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Broadcast joins",
+      "Catalyst Optimizer",
+      "Spark SQL tuning",
+      "Databricks workload optimization"
+    ],
+    "concepts": [
+      "PySpark",
+      "Broadcast joins",
+      "Catalyst Optimizer",
+      "Spark SQL tuning",
+      "Databricks"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark performance optimization",
+    "secondary_topics": [
+      "Broadcast joins",
+      "Catalyst Optimizer",
+      "Spark SQL tuning",
+      "Databricks workload optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0ba1e812440bcb47",
+    "saved_date": "2026-10-01T23:11:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347842396077838336",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347842396077838336_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

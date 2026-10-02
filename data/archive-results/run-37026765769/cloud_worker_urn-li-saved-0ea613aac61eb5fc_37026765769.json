@@ -1,0 +1,173 @@
+{
+  "id": "urn-li-saved-0ea613aac61eb5fc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343220101560549376",
+    "captured_at": "2026-10-02T00:15:44.784666Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:02Z"
+  },
+  "original_text": "Wipro – Technical Interview | Azure Data Engineer \n\nI recently appeared for the L1 & L2 interview round for Azure Data Engineer role at Wipro.\n\n⏱️ Interview Duration: 30 + 30 mins\n\n1. Can you give a brief introduction about yourself and your experience in data engineering?\n2. Can you walk me through your most recent project—what was the goal, tools used, and your responsibilities?\n3. What is Unity Catalog in Databricks? How have you used it for data governance or access control?\n4. What kind of performance optimizations have you implemented in your data pipelines or Spark jobs? What was the result?\n5. Explain the different persistence/storage levels in Spark (e.g., MEMORY_ONLY, DISK_ONLY). When would you use each?\n6. ADF Scenario: How would you design a pipeline to copy a specific folder or file from a GitHub repository and store it in ADLS Gen2?\n7. Follow-up Scenario: How would you modify the above pipeline to only process the last 30 days modified .csv files from a given folder in ADLS Gen2?\n8. SQL: Write a query using a CTE and RANK() window function to rank employees and then join the result with a department table.\n9. PySpark: Given a DataFrame with email addresses or URLs, write code using when, split, and concat to extract and format domain names.\n10. Join Logic: Given two tables (A and B), how would you use INNER, LEFT, and RIGHT JOINs to compare row counts and identify mismatches?\n11. ADF Usage: List all Azure Data Factory activities you have worked with so far and explain where you've used them (e.g., Copy, Lookup, Data Flow, etc.).\n\n\nL2 Technical Interview:\n\n1. Explain the architecture of Apache Spark. What are the key components and how do they interact?\n2. What is the Catalyst Optimizer in Spark? How does it help improve query performance?\n3. What are the differences between Data Lake and Delta Lake? Why was Delta Lake introduced?\n4. Explain the internal working of the Spark SQL engine, from query parsing to execution.\n5. Describe different join strategies in Spark (e.g., Broadcast, Shuffle Hash, Sort-Merge). What happens under the hood during each?\n6. ADF Scenario: Describe real-world pipeline use cases. Why and when would you use various activities and connectors in Azure Data Factory?\n7. What is Adaptive Query Execution (AQE) in Spark? How does it improve runtime performance?\n8. How would you implement Slowly Changing Dimension Type 2 (SCD Type 2) logic in a data pipeline?\n9. What are the key differences between Azure Blob Storage and Azure Data Lake Storage Gen2?\n10. Why is Spark lazily evaluated? What are the benefits of lazy evaluation in practice?\n11. Compare Kryo serialization vs Java serialization in Spark. When should you use Kryo?\n\n\n#DataEngineering #ADF #Azure #PySpark #SQL #BigData #InterviewExperience",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343220101560549376_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post records an L1 and L2 Azure Data Engineer interview at Wipro, structured as two 30-minute rounds, and lists the questions asked. L1 covers data engineering experience, Unity Catalog, Spark optimization and persistence, ADF ingestion, SQL, PySpark, joins, and ADF activities. L2 covers Spark architecture and internals, Catalyst Optimizer, Delta Lake, join strategies, AQE, SCD Type 2, Azure storage differences, lazy evaluation, and serialization. The post provides no candidate answers, implementation details, performance results, or interview outcome.",
+    "topics": [
+      "Azure Data Engineering",
+      "Azure Data Factory",
+      "Apache Spark",
+      "Databricks Unity Catalog",
+      "SQL",
+      "PySpark",
+      "Delta Lake",
+      "Azure Blob Storage",
+      "Azure Data Lake Storage Gen2",
+      "Slowly Changing Dimension Type 2"
+    ],
+    "subtopics": [
+      "Unity Catalog governance and access control",
+      "Spark pipeline and job optimization",
+      "Spark persistence levels",
+      "ADF ingestion from GitHub to ADLS Gen2",
+      "Filtering recently modified CSV files",
+      "CTE and RANK() with a department join",
+      "PySpark string splitting and domain extraction",
+      "INNER, LEFT, and RIGHT join comparison",
+      "ADF activities and connectors",
+      "Spark architecture and SQL execution",
+      "Catalyst Optimizer and Adaptive Query Execution",
+      "Spark join strategies",
+      "Data Lake versus Delta Lake",
+      "Azure Blob Storage versus ADLS Gen2",
+      "Lazy evaluation and Spark serialization"
+    ],
+    "concepts": [
+      "Unity Catalog",
+      "Spark pipeline and job optimization",
+      "Spark persistence levels",
+      "ADF GitHub-to-ADLS Gen2 ingestion",
+      "ADF activities and connectors",
+      "CTE and RANK()",
+      "PySpark domain extraction",
+      "Join-based row comparison",
+      "Apache Spark architecture and query execution",
+      "Data Lake versus Delta Lake",
+      "Slowly Changing Dimension Type 2",
+      "Azure Blob Storage versus ADLS Gen2",
+      "Lazy evaluation",
+      "Kryo and Java serialization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is Unity Catalog in Databricks, and how does it support data governance and access control?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines Unity Catalog in the Databricks context.\nA strong answer explains its role in data governance and access control and provides a relevant use case."
+    },
+    {
+      "question": "Explain Spark persistence levels such as MEMORY_ONLY and DISK_ONLY, including when each should be used.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the named persistence levels and explains the circumstances in which each is appropriate."
+    },
+    {
+      "question": "How would you design an Azure Data Factory pipeline to copy a selected file or folder from a GitHub repository into ADLS Gen2 and process only CSV files modified within the last 30 days?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer describes the ADF activities and connectors used to copy the selected GitHub content into ADLS Gen2.\nA strong answer explains how the pipeline identifies only CSV files modified within the specified 30-day window."
+    },
+    {
+      "question": "Write a SQL query that uses a CTE and RANK() to rank employees and then joins the ranked result with a department table.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer uses a CTE to calculate employee ranks with RANK().\nA strong answer joins the ranked employees to the department table and returns the required combined data."
+    },
+    {
+      "question": "Write PySpark code that uses when, split, and concat to extract and format domain names from a DataFrame containing email addresses or URLs.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer uses the named DataFrame operations to separate the relevant input value.\nA strong answer extracts and formats the domain portion from both email addresses and URLs."
+    },
+    {
+      "question": "How can INNER, LEFT, and RIGHT joins be used to compare row counts and identify mismatches between tables A and B?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer shows how each named join type contributes to the comparison.\nA strong answer explains how the query distinguishes matching rows from records found on only one side."
+    },
+    {
+      "question": "Explain Apache Spark architecture, Spark SQL execution from query parsing to execution, and the roles of Catalyst Optimizer and Adaptive Query Execution.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer identifies the key Spark components and explains how they interact.\nA strong answer traces Spark SQL from parsing through execution.\nA strong answer explains how Catalyst Optimizer and Adaptive Query Execution improve query and runtime performance."
+    },
+    {
+      "question": "Compare Broadcast, Shuffle Hash, and Sort-Merge join strategies in Spark, including what happens under the hood for each.",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer distinguishes all three named Spark join strategies.\nA strong answer explains the execution behavior and tradeoffs of each strategy."
+    },
+    {
+      "question": "What are the differences between Data Lake and Delta Lake, why was Delta Lake introduced, and how do Azure Blob Storage and ADLS Gen2 differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer contrasts Data Lake with Delta Lake and explains the motivation for Delta Lake.\nA strong answer contrasts Azure Blob Storage with Azure Data Lake Storage Gen2."
+    },
+    {
+      "question": "How would you implement Slowly Changing Dimension Type 2 logic in a data pipeline?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer describes an end-to-end pipeline implementation for applying SCD Type 2 logic.\nA strong answer explains how incoming changes are processed and historical records are maintained."
+    },
+    {
+      "question": "Why is Spark lazily evaluated, and what benefits does lazy evaluation provide in practice?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the reason for Spark's lazy execution model.\nA strong answer describes the practical performance benefits of delaying work until execution."
+    },
+    {
+      "question": "Compare Kryo serialization with Java serialization in Spark, and explain when Kryo should be used.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the two serialization approaches and their relevant differences.\nA strong answer explains the circumstances in which Kryo is preferred."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineering",
+    "secondary_topics": [
+      "Azure Data Factory",
+      "Apache Spark",
+      "Databricks Unity Catalog",
+      "SQL",
+      "PySpark",
+      "Delta Lake",
+      "Azure Blob Storage",
+      "Azure Data Lake Storage Gen2",
+      "Slowly Changing Dimension Type 2"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0ea613aac61eb5fc",
+    "saved_date": "2026-10-01T23:16:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343220101560549376",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343220101560549376_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

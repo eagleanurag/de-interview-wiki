@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-saved-dc5f24ccaf0fadce",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7295290520719765504",
+    "captured_at": "2026-10-02T00:15:52.463391Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:09Z"
+  },
+  "original_text": "#radhekrishna\nHow to Prepare for the Amazon SDE-1 Interview\n\nI am receiving a lot of messages on different platforms regarding Amazon interview preparation for SDE-1. So thought to make a post on it.\nFor SDE-1, they mainly focus on DSA and Leadership Principles, but some candidates have also been asked about OS and system design.\nYesterday only, someone told me that the second round was a system design round, even for an SDE 1 role.\n\n\n1) For DSA:\nTry to solve questions from the following two sheets. First, focus on Dynamic Programming (DP), Graphs, and Trees, and then move on to other topics.\ni) Striver SDE Sheet\nLink: https://lnkd.in/gmUr2Frg \nii) NeetCode 150\nLinkedIn: https://lnkd.in/gT8yrFbS \nTry to understand the logic and patterns behind each question. Don’t just submit solutions and move to next question.\n\n2) For Leadership Principles:\nGo through my previous post. I’ve received messages from others who were asked the same questions that I’ve listed. (See image below, she got offer from Amazon few days back).\nLink: https://lnkd.in/gQetA_yh \n\n3) Prepare for basic Operating System questions.\n4) Prepare the basic concepts of Low-Level Design (LLD) and High-Level Design (HLD).\n\nAlso, go through recent interview experiences on LeetCode for the role you are interviewing for or have an online assessment (OA). This will be really helpful because it will give you a good idea of what topics you need to prepare.\n\nYou can go through my Amazon interview experience to get some idea.\nLink: https://lnkd.in/gq-nwfk3 \n\nAmazon is hiring a lot. I know 4-5 people in my direct contact who recently received offers from Amazon, and some are still in the interview phase.\n\nKeep coding, keep applying, and keep believing in Krishna!\n\n#softwareengineering #experience #linkedin #amazon #interview\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7295290520719765504_slide_0.jpg",
+      "description": "JPEG image, 480x402 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides high-level preparation guidance for Amazon SDE-1 interviews rather than detailed technical instruction. It says candidates mainly focus on Data Structures and Algorithms (DSA) and Leadership Principles, although some candidates may also be asked basic Operating System or system design questions. It recommends prioritizing Dynamic Programming, graphs, and trees; practicing with the Striver SDE Sheet and NeetCode 150 while understanding logic and patterns; reviewing basic OS, Low-Level Design, and High-Level Design concepts; and examining recent LeetCode experiences for the relevant role or online assessment. The supplied content does not include actual solutions, Leadership Principles, or detailed design and OS material.",
+    "topics": [
+      "Amazon SDE-1 interview preparation",
+      "Data Structures and Algorithms",
+      "Leadership Principles",
+      "Operating Systems",
+      "System Design",
+      "Low-Level Design",
+      "High-Level Design",
+      "LeetCode interview experiences"
+    ],
+    "subtopics": [
+      "Dynamic Programming",
+      "Graphs",
+      "Trees",
+      "Striver SDE Sheet",
+      "NeetCode 150",
+      "Basic Operating System questions",
+      "Basic Low-Level Design concepts",
+      "Basic High-Level Design concepts",
+      "Role-specific online assessment preparation"
+    ],
+    "concepts": [
+      "Data Structures and Algorithms (DSA)",
+      "Dynamic Programming",
+      "Graphs",
+      "Trees",
+      "Leadership Principles",
+      "Operating System fundamentals",
+      "System Design",
+      "Low-Level Design (LLD)",
+      "High-Level Design (HLD)",
+      "Pattern-based DSA practice"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, what should an Amazon SDE-1 candidate prioritize when preparing for the interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The main preparation areas are Data Structures and Algorithms and Leadership Principles.\nThe candidate should prioritize Dynamic Programming, graphs, and trees before moving to other DSA topics.\nThe candidate should also prepare for basic Operating System, system design, Low-Level Design, and High-Level Design questions because some candidates may be asked about them."
+    },
+    {
+      "question": "How does the post recommend using the Striver SDE Sheet and NeetCode 150 for DSA preparation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The candidate should solve questions from both named practice resources.\nThe candidate should understand the logic and patterns behind each question instead of only submitting a solution and moving to the next one."
+    },
+    {
+      "question": "If an SDE-1 candidate is concerned that a system design round may be part of the process, what preparation does the post recommend?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The candidate should prepare the basic concepts of Low-Level Design and High-Level Design.\nThe post indicates that system design may be included even for an SDE-1 role."
+    },
+    {
+      "question": "How can recent LeetCode interview experiences help a candidate prepare for a specific role or online assessment?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The candidate should review recent interview experiences on LeetCode for the role being interviewed for or for the online assessment.\nThe candidate can use those experiences to identify the topics that need preparation."
+    }
+  ],
+  "classification": {
+    "domain": "Software Engineering",
+    "primary_topic": "Amazon SDE-1 interview preparation",
+    "secondary_topics": [
+      "Data Structures and Algorithms",
+      "Leadership Principles",
+      "Operating Systems",
+      "System Design",
+      "Low-Level Design",
+      "High-Level Design"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:dc5f24ccaf0fadce",
+    "saved_date": "2026-10-01T23:33:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7295290520719765504",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7295290520719765504_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

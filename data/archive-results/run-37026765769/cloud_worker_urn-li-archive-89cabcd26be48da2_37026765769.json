@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-89cabcd26be48da2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.796101Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:41Z"
+  },
+  "original_text": "🚀 How would you process a 1 TB file in Spark?\nIf this came up in an interview, and here's how we should approached it 👇\n\n✅ Step 1: Ask smart questions first\nBefore jumping to configs:\n\nIs the file compressed (Parquet/ORC) or raw (CSV)?\n\nIs it a one-time batch job or scheduled?\n\nWhat’s the available cluster size and resource policy?\n\nAsking these shows you're not just throwing numbers — you're thinking like a system designer.\n\n✅ Step 2: Partition the file properly\nUsing a rule of 256 MB per partition:\n\n📦 1 TB = 1,048,576 MB\n🔪 → 1,048,576 / 256 = ~4096 partitions\nThat’s our base for parallelism.\n\n✅ Step 3: Choose executor configuration wisely\n\nI went with:\n\n--num-executors 50\n--executor-cores 4\n--executor-memory 8G\n\nThat gives me:\n\n🔄 50 × 4 = 200 tasks in parallel\n\n🔁 4096 / 200 = ~21 task waves\n\n🚀 Balanced memory, reduced GC pressure\n\n✅ Step 4: Final thoughts\n\nThis config works well when:\n\nYou're processing uncompressed data at scale\n\nYou want fast performance without overcommitting memory\n\nYou're aiming for a production-ready, GC-friendly setup\n\n💬 What’s your go-to strategy for tuning Spark jobs at scale?\n\n#BigData #Spark #DataEngineering #ApacheSpark #InterviewTips #LinkedInLearning #TechCareer #SparkTuning #CloudComputing #Databricks #Pyspark #Scala\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents an interview strategy for processing a 1 TB file in Apache Spark. It recommends first clarifying the file format, whether the job is one-time or scheduled, and the available cluster resources. It then proposes a 256 MB-per-partition rule, yielding approximately 4,096 partitions, and an executor configuration of 50 executors with 4 cores and 8 GB of memory each. According to the post, this provides 200 parallel tasks and approximately 21 task waves while balancing memory and reducing garbage-collection pressure. The post characterizes this setup as appropriate for uncompressed data at scale, fast performance without overcommitting memory, and production-ready, garbage-collection-friendly processing. The supplied content ends with a \"see more\" marker and contains no extracted media text, so any omitted material cannot be assessed.",
+    "topics": [
+      "Apache Spark",
+      "Large-scale data processing"
+    ],
+    "subtopics": [
+      "Processing a 1 TB file",
+      "File-format considerations",
+      "Partition sizing",
+      "Executor configuration",
+      "Parallel task estimation",
+      "Garbage-collection pressure"
+    ],
+    "concepts": [
+      "Requirements clarification before tuning",
+      "File-format considerations",
+      "Partition-sizing heuristic",
+      "Executor resource configuration",
+      "Parallel tasks and task waves",
+      "Memory and garbage-collection trade-offs"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What information should you clarify before configuring Spark to process a 1 TB file?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should determine whether the source file is compressed Parquet or ORC or raw CSV.\nThe answer should establish whether the workload is a one-time batch job or a scheduled job.\nThe answer should identify the available cluster size and resource policy before choosing settings."
+    },
+    {
+      "question": "Using the post's 256 MB-per-partition rule, how many partitions would it recommend for a 1 TB file?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should use the post's stated conversion of 1 TB to 1,048,576 MB.\nThe answer should divide 1,048,576 MB by 256 MB to obtain approximately 4,096 partitions."
+    },
+    {
+      "question": "How does the proposed executor configuration support parallel processing, and how many task waves does the post estimate?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should specify 50 executors with 4 cores and 8 GB of memory each.\nThe answer should calculate 50 multiplied by 4 as 200 parallel tasks.\nThe answer should divide approximately 4,096 partitions by 200 and report approximately 21 task waves."
+    },
+    {
+      "question": "Under what conditions does the post say its proposed Spark configuration is suitable?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should identify uncompressed data processing at scale as a suitable condition.\nThe answer should mention the goal of fast performance without overcommitting memory.\nThe answer should describe the setup as intended to be production-ready and friendly to garbage collection."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark performance tuning",
+    "secondary_topics": [
+      "Large-scale file processing",
+      "Data partitioning",
+      "Executor resource allocation",
+      "Batch job planning"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:89cabcd26be48da2",
+    "saved_date": "2026-10-01T23:13:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

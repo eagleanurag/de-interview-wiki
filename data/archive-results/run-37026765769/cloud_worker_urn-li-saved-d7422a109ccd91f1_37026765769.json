@@ -1,0 +1,123 @@
+{
+  "id": "urn-li-saved-d7422a109ccd91f1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345350873159520256",
+    "captured_at": "2026-10-02T00:15:52.191373Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:45Z"
+  },
+  "original_text": "If you haven't got real-time Data Engineering experience\nHere's how you can make your own project for FREE !\n\nHere’s a step-by-step guide to take you from raw data to a Power BI dashboard-all with FREE cloud tools. No more excuses. \n\nIf you want to stand out, build and share real work.\n\nHere’s how you do it 👇\n\n1️⃣ Source Data (Python + Public Datasets)\n\nObjective: Ingest real-world data into your pipeline.\n\n- Use Python (`requests` or `pandas`) to fetch open datasets (CSV/JSON)\n- Good sources: datahub.io, Google Dataset Search, Kaggle\n- Save data locally or push to Azure Data Lake Gen2 / DBFS\n\n(example)\npython\nimport pandas as pd\nurl = \"https://lnkd.in/gc7rWW-K\"\ndf = pd.read_csv(url)\ndf.to_csv(\"global_temp.csv\", index=False)\n\n2️⃣ Transform in Databricks (PySpark)\n\nObjective: Clean and process data at scale using Spark.\n\n- Upload your CSV to Databricks (Community Edition is FREE)\n- Open a notebook, clean and join data with PySpark\n- Save as Delta table or write to external storage\n\n(example)\npython\ndf = spark.read.csv(\"/FileStore/global_temp.csv\", header=True, inferSchema=True)\ndf_cleaned = df.filter(\"Mean > 0\").withColumnRenamed(\"Mean\", \"MeanTemperature\")\ndf_cleaned.write.format(\"delta\").save(\"/mnt/processed/global_temp\")\n\n\n3️⃣ Load to Online Data Warehouse\n\nObjective: Store clean data for analytics/reporting.\n\n- Set up Azure SQL Database (free tier)\n- Use Databricks JDBC or pyodbc to load clean data\n\n(example)\npython\ndf_cleaned.write \\\n.format(\"jdbc\") \\\n.option(\"url\", \"jdbc:sqlserver://.database.windows.net:1433;database=\") \\\n.option(\"dbtable\", \"dbo.GlobalTemperature\") \\\n.option(\"user\", \"\") \\\n.option(\"password\", \"\") \\\n.mode(\"overwrite\") \\\n.save()\n\n4️⃣ Build Dashboards in Power BI\n\nObjective: Visualize data and derive insights.\n\n- Open Power BI Desktop\n- Connect to Azure SQL\n- Create line charts, KPIs, slicers\n- Publish to Power BI Service (optional)\n\n\nProject Structure:\n- /data → raw datasets (CSV/JSON)\n- /sql → transformation logic\n- /notebooks → Databricks notebooks\n- /tests → validation scripts\n- README.md → overview + setup\n\n\nKey Skills You Practice:\n• Python scripting\n• PySpark transformations\n• Databricks workflows\n• Azure SQL integration\n• Power BI reporting\n• Cloud-native workflow\n\n\nYou can use other tools like ADF for ingestion, key-vault for better security and airflow for scheduling your pipeline.\n\n\n💡 Add this project to your portfolio or use it in interviews. All tools are free or have generous tiers. No paid subscriptions.\n\n\nNeed help setting this up or want feedback on your repo? \nConnect 1:1 here ➡️ https://lnkd.in/gH4DeYb4\n\n\n♻️ Found this useful? Repost it to help others!\n➕ Follow for more daily Data Engineering guides.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345350873159520256_slide_0.jpg",
+      "description": "JPEG image, 480x260 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a portfolio-oriented project that moves public CSV or JSON data from Python ingestion through Databricks and PySpark transformation, Delta table or external-storage output, Azure SQL Database loading, and Power BI reporting. It also proposes a repository layout containing raw data, SQL logic, notebooks, validation scripts, and documentation. Python can save raw data locally or push it to Azure Data Lake Gen2 or DBFS, while the Azure SQL examples contain incomplete connection and credential values, so the snippets are illustrative rather than fully runnable as shown. Although the post frames the project as a way to gain real-time data engineering experience, it does not describe streaming or real-time processing.",
+    "topics": [
+      "End-to-end cloud data engineering projects",
+      "Python data ingestion",
+      "Databricks and PySpark",
+      "Delta tables",
+      "Azure SQL Database integration",
+      "Power BI dashboards",
+      "Data engineering portfolio development",
+      "Optional ingestion, security, and scheduling tools"
+    ],
+    "subtopics": [
+      "Fetching public CSV and JSON datasets with requests or pandas",
+      "Saving raw data locally, in Azure Data Lake Gen2, or in DBFS",
+      "Cleaning and joining data with PySpark",
+      "Writing Delta tables or external storage",
+      "Loading data into Azure SQL with JDBC or pyodbc",
+      "Creating Power BI Desktop and Power BI Service reports",
+      "Organizing notebooks, SQL, tests, and raw data in a repository",
+      "Using ADF for ingestion, Key Vault for security, and Airflow for scheduling"
+    ],
+    "concepts": [
+      "Public dataset ingestion",
+      "Raw data storage",
+      "Databricks Community Edition",
+      "PySpark transformation",
+      "Delta table output",
+      "Azure SQL Database",
+      "JDBC and pyodbc loading",
+      "Power BI reporting",
+      "Portfolio repository structure",
+      "ADF for ingestion",
+      "Key Vault for security",
+      "Airflow for scheduling"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Describe the end-to-end data flow proposed by the project.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Python ingests public CSV or JSON data into local storage, Azure Data Lake Gen2, or DBFS.\nDatabricks and PySpark clean and join the data before it is written as a Delta table or to external storage.\nAzure SQL Database stores the clean data, and Power BI connects to it for reporting."
+    },
+    {
+      "question": "How would you use pandas to read a public CSV dataset and save a local copy?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The example uses pandas.read_csv with the dataset URL.\nThe DataFrame is written to global_temp.csv with to_csv and index=False."
+    },
+    {
+      "question": "How would you read, clean, and save a CSV as a Delta table with PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Spark reads /FileStore/global_temp.csv with a header and inferred schema.\nThe Mean column is filtered for positive values and renamed to MeanTemperature.\nThe cleaned DataFrame is written with format set to delta and a processed output path."
+    },
+    {
+      "question": "How can a cleaned Spark DataFrame be loaded into Azure SQL Database?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The JDBC writer specifies the SQL Server URL, database, destination table, username, and password.\nThe example uses overwrite mode for the destination table.\nThe post also identifies pyodbc and Key Vault as loading and security options without providing a complete implementation."
+    },
+    {
+      "question": "How would you turn the Azure SQL output into a Power BI report?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Power BI Desktop connects to the Azure SQL Database.\nThe report can include line charts, KPIs, and slicers.\nPublishing the report to Power BI Service is optional."
+    },
+    {
+      "question": "What repository structure can be used to make this data engineering project portfolio-ready?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Raw datasets are kept in the data directory.\nSQL logic and Databricks notebooks are stored separately.\nThe tests directory is reserved for validation scripts, and README.md documents the overview and setup."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "End-to-end cloud data pipeline projects",
+    "secondary_topics": [
+      "Data ingestion",
+      "PySpark data transformation",
+      "Delta table storage",
+      "Cloud data warehousing",
+      "Power BI reporting",
+      "Data engineering portfolio development"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d7422a109ccd91f1",
+    "saved_date": "2026-10-01T23:14:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345350873159520256",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345350873159520256_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

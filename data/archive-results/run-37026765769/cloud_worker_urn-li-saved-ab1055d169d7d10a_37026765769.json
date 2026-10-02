@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-saved-ab1055d169d7d10a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328696707439874048",
+    "captured_at": "2026-10-02T00:15:50.525796Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:33Z"
+  },
+  "original_text": "#pyspark\n#Question\nwrite a pyspark to find for each month and country, the number of transactions\nand their total amount , the number of approved transactions and their total amount.\n\nfrom datetime import time\nfrom pyspark.sql import *\nfrom pyspark.sql.functions import *\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.types import *\nfrom pyspark.sql.window import *\n\n\n# Create a SparkSession\nspark = SparkSession.builder.appName(\"Month and country calculation\").getOrCreate()\n\n# Create data\ndata = [\n (1, 'US', 'approved', 1000, '2023-12-18'),\n (2, 'US', 'declined', 2000, '2023-12-19'),\n (3, 'US', 'approved', 2000, '2024-01-01'),\n (4, 'India', 'approved', 2000, '2023-01-07')\n]\n\n# Define the schema\nschema = StructType([\n StructField(\"id\", IntegerType(), True),\n StructField(\"country\", StringType(), True),\n StructField(\"status\", StringType(), True),\n StructField(\"amount\", IntegerType(), True),\n StructField(\"date\", StringType(), True)\n])",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328696707439874048_slide_0.jpg",
+      "description": "JPEG image, 480x247 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post contains an incomplete PySpark coding task asking for transaction count and total amount by month and country, plus count and total amount for approved transactions. It creates a SparkSession, defines four sample records, and specifies a schema with id, country, status, amount, and date fields. It does not show creation of a DataFrame, aggregation logic, or the resulting output.",
+    "topics": [
+      "PySpark",
+      "transaction aggregation by month and country",
+      "approved transaction metrics"
+    ],
+    "subtopics": [
+      "SparkSession creation",
+      "explicit schema definition",
+      "month-and-country grouping",
+      "transaction counts and amounts"
+    ],
+    "concepts": [
+      "SparkSession initialization",
+      "Explicit transaction schema",
+      "Month-country transaction aggregation",
+      "Approved transaction aggregation",
+      "Incomplete PySpark implementation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What metrics must be produced for each month-and-country group in the provided transaction task?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The total number of transactions and their total amount must be calculated for each month and country.\nThe number of approved transactions and their total amount must also be calculated for each month and country."
+    },
+    {
+      "question": "How is the transaction schema defined in the provided PySpark code?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The id and amount columns use IntegerType, while the country, status, and date columns use StringType.\nAll five schema fields are defined as nullable."
+    },
+    {
+      "question": "What has the provided PySpark code completed, and what is still missing from the requested solution?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The code creates a SparkSession, supplies sample transaction data, and defines an explicit schema.\nThe code does not show the DataFrame transformations or aggregation logic required to calculate the requested month-and-country metrics."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark transaction aggregation",
+    "secondary_topics": [
+      "SparkSession setup",
+      "schema definition",
+      "transaction metrics"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ab1055d169d7d10a",
+    "saved_date": "2026-10-01T23:23:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328696707439874048",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328696707439874048_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

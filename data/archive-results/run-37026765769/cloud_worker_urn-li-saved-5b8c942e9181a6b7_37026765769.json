@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-5b8c942e9181a6b7",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7335873650186665986",
+    "captured_at": "2026-10-02T00:15:47.913738Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:05Z"
+  },
+  "original_text": "🎬 Day 4 of 30 – SQL Interview Questions Series!\n\nToday’s question:\n How many rows will be returned by this SQL query?\n\nSELECT * FROM orders_tbl WHERE customer_id != 101;\n\n👉 A simple-looking SQL interview question — but most candidates answer it wrong!\n\nIn this video, I explain:\n ✅ The behavior of != with NULL\n ✅ Why some rows are missing\n\n🎥 YouTube video link in the comment.\n\nIf you find this video helpful, consider subscribing to my YouTube channel “Crack DE with Mradul” for more SQL and data engineering content.\n\nI’d love your support as I continue this 30-day SQL Interview Question series!\n\n#CrackDEwithMradul #SQL #InterviewPreparation #30DaysOfSQL #DataEngineering #SQLTips #TechInterviews #NullInSQL #SQLMistakes #TrickySQL\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7335873650186665986_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents the SQL query SELECT * FROM orders_tbl WHERE customer_id != 101 and asks how many rows it returns. No table data or row counts are provided, so the exact result count cannot be determined. The highlighted technical issue is NULL handling: the comparison NULL != 101 evaluates to UNKNOWN rather than TRUE, so rows with a NULL customer_id are omitted by the WHERE clause.",
+    "topics": [
+      "SQL row-count prediction",
+      "SQL NULL handling",
+      "query filtering"
+    ],
+    "subtopics": [
+      "!= operator behavior",
+      "NULL values in WHERE predicates",
+      "rows excluded by SQL filters"
+    ],
+    "concepts": [
+      "WHERE clause",
+      "!= operator",
+      "SQL NULL comparison",
+      "Result row count"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How many rows will SELECT * FROM orders_tbl WHERE customer_id != 101 return?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The exact row count cannot be determined without knowing the values stored in orders_tbl.\nThe query returns rows whose customer_id is non-NULL and not equal to 101."
+    },
+    {
+      "question": "Why are rows with a NULL customer_id excluded by this query?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The comparison NULL != 101 evaluates to UNKNOWN rather than TRUE.\nThe WHERE clause returns only rows for which the predicate is TRUE, so rows with a NULL customer_id are omitted."
+    },
+    {
+      "question": "Which customer_id values satisfy the predicate customer_id != 101?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Non-NULL values other than 101 satisfy the predicate.\nThe value 101 does not satisfy the predicate, and a NULL value produces UNKNOWN and is also excluded."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "NULL handling",
+      "query result analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5b8c942e9181a6b7",
+    "saved_date": "2026-10-01T23:19:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7335873650186665986",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7335873650186665986_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

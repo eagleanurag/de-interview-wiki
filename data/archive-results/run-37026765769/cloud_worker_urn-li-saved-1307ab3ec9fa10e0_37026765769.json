@@ -1,0 +1,107 @@
+{
+  "id": "urn-li-saved-1307ab3ec9fa10e0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7312742766722064385",
+    "captured_at": "2026-10-02T00:15:44.883902Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:58Z"
+  },
+  "original_text": "Data Analyst | Skilled in SQL, Power BI, Python, and Advanced Excel\n1yr •\nSQL Case Study: Analyzing Noon Food’s Performance\nOverview of the SQL Case Study\nThis case study analyzes Noon Food’s launch in Dubai, focusing on key performance metrics to assess customer acquisition, engagement, and retention. By writing complex SQL queries, we extracted valuable insights from the order data to help the business make data-driven decisions.\nBusiness Impact of the Analysis\n1) Identifying Top-Performing Outlets – Helps Noon Food recognize which cuisine types are driving the most sales, enabling better partnerships and marketing strategies.\n2) Tracking Customer Acquisition Trends – Understanding daily new customer sign-ups allows the business to measure marketing effectiveness and optimize campaigns.\n3) Customer Retention Insights – Finding users who placed only one order in Jan 2025 and didn’t return helps in crafting re-engagement strategies like targeted discounts or personalized offers.\n4) Inactive Customer Analysis – Identifying customers who were acquired through a promo but have been inactive for the last 7 days helps in refining promotional strategies to improve long-term retention.\n5) Promo-Dependent Customers – Detecting users who only order when a promo is available helps the business adjust its promotional spending and encourage organic purchases.\n6) Organic vs. Promo-Based Acquisition – Knowing what percentage of customers placed their first order without a promo code helps in assessing the impact of discounts on customer acquisition and profitability.\nThis case study strengthened my SQL skills in window functions, joins, subqueries, and conditional aggregation, helping me extract actionable business insights.\nA big thank to you Ankit Bansal Sir for the valuable content and guidance! 🙏\n…see more\nSQL_Case_Study",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7312742766722064385_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post begins with a Data Analyst profile labeled \"1yr\" that lists SQL, Power BI, Python, and Advanced Excel as skills. The visible content focuses on an SQL case study of Noon Food's launch in Dubai, where complex SQL queries were used to analyze order data for customer acquisition, engagement, retention, outlet and cuisine sales performance, and promotional behavior. The post is truncated and does not provide query text, results, or detailed implementation beyond naming window functions, joins, subqueries, and conditional aggregation.",
+    "topics": [
+      "SQL",
+      "Power BI",
+      "Python",
+      "Advanced Excel",
+      "Customer analytics",
+      "Order performance analysis",
+      "Promotional effectiveness"
+    ],
+    "subtopics": [
+      "Customer acquisition trends",
+      "Customer retention",
+      "Inactive customer analysis",
+      "Promo-dependent customers",
+      "Organic versus promo-based acquisition",
+      "Top-performing outlets and cuisine types",
+      "Window functions",
+      "Joins",
+      "Subqueries",
+      "Conditional aggregation"
+    ],
+    "concepts": [
+      "SQL-based order analysis",
+      "Customer acquisition trends",
+      "One-order non-returning users",
+      "Promo-acquired inactive customers",
+      "Promo-dependent customers",
+      "Organic versus promo-based acquisition",
+      "Outlet and cuisine performance",
+      "SQL techniques",
+      "Data analyst skill set"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can the Noon Food analysis distinguish promo-based acquisition from organic acquisition?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The analysis can compare customers whose acquisition involved a promo with customers whose first order was placed without a promo code.\nIt can calculate the percentage of customers whose first order had no promo code.\nThat percentage is used to assess the impact of discounts on customer acquisition and profitability."
+    },
+    {
+      "question": "What customer-retention and re-engagement groups does the case study identify?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "One group consists of users who placed only one order in Jan 2025 and did not return.\nAnother group consists of promo-acquired customers who have been inactive for the last seven days.\nThe stated responses include targeted discounts or personalized offers for re-engagement and refinement of promotional strategies to improve long-term retention."
+    },
+    {
+      "question": "Which SQL techniques are explicitly associated with the case study, and what business areas does the analysis examine?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post names window functions, joins, subqueries, and conditional aggregation as SQL skills strengthened by the case study.\nThe analysis covers customer acquisition, engagement, retention, outlet and cuisine sales performance, and promo-related customer behavior."
+    },
+    {
+      "question": "Which performance questions should the Noon Food SQL case study answer?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "It should identify top-performing outlets or cuisine types that drive the most sales.\nIt should track daily new customer sign-ups to measure marketing effectiveness and support campaign optimization.\nIt should examine retention, promo-dependent ordering, and the share of customers making a first order without a promo code.\nThe insights are intended to support partnerships, marketing, promotional spending, re-engagement, and profitability decisions."
+    }
+  ],
+  "classification": {
+    "domain": "Data analytics",
+    "primary_topic": "SQL-based customer and order analysis",
+    "secondary_topics": [
+      "Customer acquisition and retention",
+      "Promotional effectiveness",
+      "Sales performance analysis",
+      "SQL query techniques"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1307ab3ec9fa10e0",
+    "saved_date": "2026-10-01T23:30:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7312742766722064385",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7312742766722064385_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

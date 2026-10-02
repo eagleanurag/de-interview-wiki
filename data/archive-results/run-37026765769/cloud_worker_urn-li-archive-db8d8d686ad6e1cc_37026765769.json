@@ -1,0 +1,220 @@
+{
+  "id": "urn-li-archive-db8d8d686ad6e1cc",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.671421Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:57Z"
+  },
+  "original_text": "Top 20 Most Asked SQL Interview Questions\n\n Basic Level:\n\n1. What is SQL?\n2. What are the different types of SQL commands? (DML, DDL, DCL, TCL, DQL)\n3. What is the difference between WHERE and HAVING clause?\n4. What is a Primary Key and Foreign Key?\n5. What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN?\n6. What is normalization? What are the different normal forms?\n7. What is the use of GROUP BY clause?\n8. What is the difference between DELETE, TRUNCATE, and DROP?\n9. What are constraints in SQL?\n10. What is a subquery? What types of subqueries are there?\n\nIntermediate Level:\n\n11. How do you find the second highest salary from an Employee table?\n12. What is the difference between UNION and UNION ALL?\n13. What is a Self Join? Give an example.\n14. What are Indexes in SQL? How do they improve performance?\n15. What is a View in SQL? How is it different from a table?\n16. What is the BETWEEN, IN, LIKE operator in SQL?\n17. What is a CTE (Common Table Expression)?\n18. What is the difference between correlated and non-correlated subquery?\n19. What is a NULL value in SQL? How is it different from 0 and blank?\n20. What is ACID property in SQL transactions?\n\nFollow Roshan Bakhade",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is titled \"Top 20 Most Asked SQL Interview Questions\" and presents 20 question prompts divided equally into basic and intermediate levels. It lists topics involving SQL fundamentals, command categories, clauses, operators, keys, constraints, joins, normalization, subqueries, set operations, indexes, views, CTEs, NULL values, and ACID transactions. It includes a question about finding the second-highest salary from an Employee table and requests an example of a self join. The post provides no answers, definitions, queries, examples, or technical explanations, and the extracted media text is empty.",
+    "topics": [
+      "SQL",
+      "SQL command categories",
+      "Filtering, grouping, and operators",
+      "Keys and constraints",
+      "Joins",
+      "Normalization",
+      "Set operations",
+      "Indexes and views",
+      "Subqueries and CTEs",
+      "NULL values",
+      "SQL transactions and ACID"
+    ],
+    "subtopics": [
+      "SQL definition",
+      "DML, DDL, DCL, TCL, and DQL",
+      "WHERE and HAVING clauses",
+      "GROUP BY clause",
+      "BETWEEN, IN, and LIKE operators",
+      "Primary keys and foreign keys",
+      "INNER, LEFT, RIGHT, and FULL JOIN",
+      "Self joins",
+      "Normalization and normal forms",
+      "DELETE, TRUNCATE, and DROP",
+      "SQL constraints",
+      "Subqueries and subquery types",
+      "Correlated and non-correlated subqueries",
+      "Common Table Expressions",
+      "Finding the second-highest salary from an Employee table",
+      "UNION and UNION ALL",
+      "Indexes and performance",
+      "Views and tables",
+      "SQL NULL compared with 0 and blank",
+      "ACID in SQL transactions"
+    ],
+    "concepts": [
+      "SQL",
+      "SQL command categories",
+      "WHERE and HAVING clauses",
+      "Primary keys and foreign keys",
+      "INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN",
+      "Normalization and normal forms",
+      "GROUP BY clause",
+      "DELETE, TRUNCATE, and DROP",
+      "SQL constraints",
+      "Subqueries",
+      "Finding the second-highest salary",
+      "UNION and UNION ALL",
+      "Self join",
+      "SQL indexes",
+      "SQL views",
+      "BETWEEN, IN, and LIKE operators",
+      "Common Table Expression",
+      "Correlated and non-correlated subqueries",
+      "SQL NULL",
+      "ACID in SQL transactions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer provides a clear definition of SQL."
+    },
+    {
+      "question": "What are the different types of SQL commands?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer distinguishes DML, DDL, DCL, TCL, and DQL."
+    },
+    {
+      "question": "What is the difference between the WHERE and HAVING clauses?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer states the difference between WHERE and HAVING."
+    },
+    {
+      "question": "What are a primary key and a foreign key?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines both a primary key and a foreign key."
+    },
+    {
+      "question": "What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer distinguishes all four join types."
+    },
+    {
+      "question": "What is normalization, and what are the different normal forms?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines normalization and explains the different normal forms referenced by the question."
+    },
+    {
+      "question": "What is the use of the GROUP BY clause?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains the purpose of GROUP BY."
+    },
+    {
+      "question": "What is the difference between DELETE, TRUNCATE, and DROP?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer distinguishes DELETE, TRUNCATE, and DROP."
+    },
+    {
+      "question": "What are constraints in SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines SQL constraints."
+    },
+    {
+      "question": "What is a subquery, and what types of subqueries exist?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines a subquery and identifies the relevant types of subqueries."
+    },
+    {
+      "question": "How do you find the second-highest salary from an Employee table?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides an SQL method for finding the second-highest salary from the Employee table."
+    },
+    {
+      "question": "What is the difference between UNION and UNION ALL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes UNION from UNION ALL."
+    },
+    {
+      "question": "What is a self join, and can you provide an example?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer defines a self join and supplies an example."
+    },
+    {
+      "question": "What are indexes in SQL, and how do they improve performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines indexes and explains how they improve performance."
+    },
+    {
+      "question": "What is a view in SQL, and how is it different from a table?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines a view and compares it with a table."
+    },
+    {
+      "question": "What do the BETWEEN, IN, and LIKE operators do in SQL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains each of the three named operators."
+    },
+    {
+      "question": "What is a Common Table Expression?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines a Common Table Expression."
+    },
+    {
+      "question": "What is the difference between a correlated subquery and a non-correlated subquery?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes correlated subqueries from non-correlated subqueries."
+    },
+    {
+      "question": "What is a NULL value in SQL, and how is it different from 0 and blank?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines NULL and contrasts it with 0 and blank values."
+    },
+    {
+      "question": "What is ACID in SQL transactions?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains ACID in the context of SQL transactions."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL fundamentals",
+    "secondary_topics": [
+      "Database design",
+      "SQL joins",
+      "Subqueries and CTEs",
+      "SQL performance",
+      "Transactions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:db8d8d686ad6e1cc",
+    "saved_date": "2026-10-01T23:19:57Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

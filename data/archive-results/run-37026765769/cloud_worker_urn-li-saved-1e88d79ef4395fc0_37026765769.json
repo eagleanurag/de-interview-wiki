@@ -1,0 +1,128 @@
+{
+  "id": "urn-li-saved-1e88d79ef4395fc0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338071173940813825",
+    "captured_at": "2026-10-02T00:15:45.400780Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:34Z"
+  },
+  "original_text": "Deloitte – Technical Interview (Round 1) | Azure Data Engineer\nInterview Duration: 40 mins\n\nI recently appeared for the first round of the technical interview at Deloitte for Azure Data Engineer role. The round focused on hands-on problem-solving, cloud architecture, SQL logic, and PySpark-based data processing.\nI’m sharing my experience to help others preparing for similar opportunities.\n\nHere’s a quick summary of the questions I was asked:\n\n1. Project Architecture & Challenges\n • Explained the end-to-end architecture of my project\n • Discussed challenges faced and how I handled them\n2. SQL Joins – Output Rows\n • Explained expected number of rows for INNER, LEFT, RIGHT, and FULL OUTER joins\n3. Removing Duplicates in SQL\n • Shared different approaches to remove duplicate records (using ROW_NUMBER, CTEs, DISTINCT, etc.)\n4. SQL Query – 7th Highest Salary\n • Write a query to fetch the 7th highest salary from a table\n5. PySpark – Gender Percentage Calculation\n • Write a PySpark program to calculate male and female percentage from employee data\n6. ADF + ADLS + SQL Server – SCD Type 2 Implementation\n • Explained how to implement SCD Type 2 using Azure Data Factory with ADLS as source and SQL Server as target\n • Discussed how to handle failures during pipeline execution\n7. Spark Caching – Real Use Case\n • Shared a real project use case where Spark caching improved performance\n8. Optimization Techniques\n • Discussed project-level (not theoretical) optimizations applied for better performance\n9. Problem Solving in Projects\n • Talked about a real issue encountered during the project and how I resolved it\n10. Data Security & Governance\n • Explained how I ensured data security and governance in my pipeline and architecture\nKey Takeaway:\nThe round emphasized practical experience and real-world problem-solving. Highly recommend being confident with:\n • SQL logic and edge cases\n • PySpark transformations\n • Azure Data Factory pipeline design\n • Data security & project-level optimizations\n\nAll the best to everyone preparing for interviews!\n\n#Deloitte #InterviewExperience #DataEngineering #Azure #ADF #SQL #PySpark #BigData #TechCareers #LinkedInTech #DataPipeline",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338071173940813825_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This post summarizes a 40-minute first-round Deloitte technical interview for an Azure Data Engineer role. The reported topics were project architecture, SQL joins and duplicate removal, a seventh-highest-salary query, a PySpark employee gender percentage calculation, an Azure Data Factory SCD Type 2 pipeline using ADLS and SQL Server, pipeline failure handling, Spark caching, project-level optimization, troubleshooting, and data security and governance. The post lists the interview subjects but does not provide actual queries, code, architecture designs, optimization techniques, security controls, or performance figures.",
+    "topics": [
+      "Azure Data Engineering",
+      "Cloud Architecture",
+      "SQL",
+      "PySpark",
+      "Data Pipelines",
+      "SCD Type 2",
+      "Data Security and Governance"
+    ],
+    "subtopics": [
+      "End-to-End Project Architecture",
+      "SQL Join Output Rows",
+      "SQL Duplicate Removal",
+      "ROW_NUMBER",
+      "CTEs",
+      "DISTINCT",
+      "Seventh-Highest-Salary Query",
+      "Employee Gender Percentage Calculation",
+      "ADF with ADLS and SQL Server",
+      "Pipeline Failure Handling",
+      "Spark Caching",
+      "Project-Level Optimization",
+      "Project Troubleshooting",
+      "Data Security and Governance"
+    ],
+    "concepts": [
+      "End-to-End Project Architecture",
+      "SQL Join Output Rows",
+      "SQL Duplicate Removal",
+      "Seventh-Highest-Salary Query",
+      "PySpark Employee Gender Percentages",
+      "SCD Type 2 Pipeline",
+      "Pipeline Failure Handling",
+      "Spark Caching",
+      "Project-Level Optimization",
+      "Project Troubleshooting",
+      "Data Security and Governance"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should expected output rows be explained for INNER, LEFT, RIGHT, and FULL OUTER joins?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer compares the expected output rows for each of the four join types named in the post."
+    },
+    {
+      "question": "Which SQL approaches were discussed for removing duplicate records?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies ROW_NUMBER, CTEs, and DISTINCT as the duplicate-removal approaches named in the post."
+    },
+    {
+      "question": "Write a SQL query that fetches the seventh-highest salary from a table.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides SQL that returns the salary in the seventh-highest position from the specified table."
+    },
+    {
+      "question": "Write a PySpark program to calculate male and female percentages from employee data.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains a PySpark transformation that produces both male and female percentages from employee records."
+    },
+    {
+      "question": "Explain an Azure Data Factory implementation of SCD Type 2 with ADLS as the source and SQL Server as the target.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer identifies Azure Data Factory as the implementation technology, ADLS as the source, and SQL Server as the target.\nA strong answer also addresses how failures during pipeline execution would be handled."
+    },
+    {
+      "question": "Describe a real project use case in which Spark caching improved performance.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies the project workload, explains the role of Spark caching, and describes the observed performance improvement."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineering",
+    "secondary_topics": [
+      "SQL",
+      "PySpark",
+      "Cloud Architecture",
+      "SCD Type 2",
+      "Data Pipeline Reliability",
+      "Performance Optimization",
+      "Data Security and Governance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1e88d79ef4395fc0",
+    "saved_date": "2026-10-01T23:21:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338071173940813825",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338071173940813825_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

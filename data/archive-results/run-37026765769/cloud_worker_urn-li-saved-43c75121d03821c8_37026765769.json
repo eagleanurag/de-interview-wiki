@@ -1,0 +1,60 @@
+{
+  "id": "urn-li-saved-43c75121d03821c8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7290217478780076032",
+    "captured_at": "2026-10-02T00:15:47.128771Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:50Z"
+  },
+  "original_text": "If you are working with SQL, Then this is the time to switch to PySpark or Pandas for Data analytics. \n\nPerform basic exercises what you do in SQL daily life with PySpark and Pandas Syntax. \n\nI am attaching this perfect Cheat sheet for your reference.\nSave it for future. \n\nLearn Pandas for free\n1- Codebasics by Dhaval Patel https://lnkd.in/gdKkfeNk \n\n2- Learn Pandas in Hindi by @Code with Harry https://lnkd.in/gDwBmMrb\n\n3- Pandas Tutorial by Corey Schafer \nhttps://lnkd.in/gcgefbFx\n\nTagging for better reach: Munna Das Shwetank Singh Krish Naik Vishal Kaushal Suraz G. POOJA JAIN Abhisek Sahu Asheesh .. \n\n#pandas #sql #polars #pyspark #dataanaytics #dataanalysis #datacleansing #transfromation #datascience",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7290217478780076032_slide_0.jpg",
+      "description": "JPEG image, 480x433 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post recommends practicing common SQL exercises with PySpark and Pandas syntax as a way to develop data analytics skills outside SQL. It also provides three free Pandas learning resources from Codebasics by Dhaval Patel, Code with Harry in Hindi, and Corey Schafer. It refers to an attached cheat sheet, but no cheat-sheet content is present, and it does not provide actual syntax, exercises, or implementation details.",
+    "topics": [
+      "SQL",
+      "PySpark",
+      "Pandas",
+      "Data analytics"
+    ],
+    "subtopics": [
+      "Practicing SQL tasks with PySpark and Pandas syntax",
+      "Free Pandas learning resources"
+    ],
+    "concepts": [
+      "SQL-to-Python data tool practice"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Practicing SQL tasks with PySpark and Pandas",
+    "secondary_topics": [
+      "Pandas learning resources"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:43c75121d03821c8",
+    "saved_date": "2026-10-01T23:36:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7290217478780076032",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7290217478780076032_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

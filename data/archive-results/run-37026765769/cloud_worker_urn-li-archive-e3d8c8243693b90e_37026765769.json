@@ -1,0 +1,180 @@
+{
+  "id": "urn-li-archive-e3d8c8243693b90e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.823606Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:46Z"
+  },
+  "original_text": "I Almost Cracked 𝟱𝟬 𝗟𝗣𝗔 at Apple. Here’s What Cost Me the Offer...\n\nI recently went through 3 rounds for a Data Engineering role, and here’s exactly how it went👇\n\n𝗥𝗼𝘂𝗻𝗱 𝟭:SQL + Data Logic (Hackerrank + Live Discussion)\nThey wanted to know if I could think in sets, not rows.\n“Find the top 2 devices by revenue per region (rolling 90-day window)”\n“Deduplicate transactions keeping latest by timestamp”\n“How would you debug a LEFT JOIN returning more rows than expected?”\n“GROUP BY vs PARTITION BY — when would you use each?”\n“Optimize this query for large data volumes — what indexes would you add?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟮: Spark + Data Architecture (System Deep Dive)\nHere’s where things got real.\n“How would you optimize a Spark job running slow on EMR?”\n“What causes shuffle in Spark, and how do you prevent it?”\n“Difference between coalesce() and repartition() — in terms of physical plans?”\n“Design a streaming pipeline to monitor AirPods battery usage in real time”\n“How would you test the integrity of a Spark job after deployment?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟯: System Design + Culture Fit\nApple is BIG on simplicity that scales.\n“Design a global data lake with GDPR compliance”\n“How would you track real-time app crashes and alert instantly?”\n“What would your pipeline look like for new iOS telemetry events?”\n“How do you balance latency vs reliability?”\n“If one region goes down, how would you re-route your ingestion?”\n\nThen they asked me behavioral:\n 16. “Tell us about a time you debugged a broken pipeline at 2AM”\n 17. “How do you handle pushback from product teams on data latency?”\n 18. “Describe a time you scaled a solution beyond its original scope”\n 19. “How do you mentor junior DEs who write unscalable code?”\n 20. “Why Apple?”\n\n🎯 What I Learned:\n1. Being good at tools isn’t enough, you need to speak architecture fluently.\n2. Practice explaining your trade-offs like you’re making a $1M decision.\n\nI have listed all questions and answers here..\nDownload Data Engineering Interview Kits: https://lnkd.in/g_V8gDg3?\nJoin 𝗗𝗮𝘁𝗮𝗚𝗲𝗲𝗸𝘀 Community here: https://lnkd.in/g88ic2Ja\n\n#DataEngineering #Apple #TechInterviews #SQL #Spark #BigData #SystemDesign #CareerGrowth #LearningInPublic #InterviewPrep #LinkedInDiaries",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post recounts an author's three-round Data Engineering interview process for an Apple role. Round 1 assessed SQL and data logic through HackerRank and a live discussion, Round 2 covered Spark on EMR and data architecture, and Round 3 covered system design, culture fit, and behavioral questions. The scenarios included rolling regional revenue analysis, transaction deduplication, JOIN debugging, query indexing, Spark performance and shuffle, real-time monitoring, a GDPR-compliant global data lake, telemetry pipelines, latency-reliability trade-offs, and regional ingestion rerouting. The author's main lessons are to explain architecture fluently and articulate trade-offs confidently. The supplied content is a question recap rather than a technical tutorial because it does not include the referenced answers or worked solutions.",
+    "topics": [
+      "Data engineering interview preparation",
+      "SQL and data logic",
+      "Spark and EMR performance",
+      "Data architecture and system design",
+      "Real-time streaming, monitoring, and alerting",
+      "Scalability, reliability, and regional rerouting",
+      "GDPR-compliant global data lakes",
+      "Behavioral and culture-fit interviews"
+    ],
+    "subtopics": [
+      "Set-based revenue analysis with rolling windows",
+      "Timestamp-based transaction deduplication",
+      "LEFT JOIN row-count debugging",
+      "GROUP BY versus PARTITION BY",
+      "Query optimization and index selection",
+      "Slow Spark job optimization on EMR",
+      "Spark shuffle causes and prevention",
+      "coalesce() versus repartition() and physical plans",
+      "Spark job integrity testing",
+      "Real-time streaming pipeline design",
+      "Global data lake design with GDPR",
+      "Real-time application-crash alerting",
+      "iOS telemetry pipelines",
+      "Latency versus reliability trade-offs",
+      "Regional ingestion rerouting",
+      "Behavioral debugging, product collaboration, scalability, and mentoring"
+    ],
+    "concepts": [
+      "Set-oriented SQL reasoning",
+      "Regional top-N revenue in a rolling window",
+      "Timestamp-based transaction deduplication",
+      "LEFT JOIN row-count debugging",
+      "GROUP BY and PARTITION BY",
+      "Index selection for large-volume queries",
+      "Spark optimization on EMR",
+      "Spark shuffle causes and prevention",
+      "coalesce() versus repartition()",
+      "Spark job integrity testing",
+      "Real-time AirPods battery monitoring",
+      "GDPR-compliant global data lake",
+      "Real-time application-crash alerting",
+      "iOS telemetry pipelines",
+      "Latency-reliability trade-off",
+      "Regional ingestion rerouting",
+      "Architecture and trade-off communication"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you find the top two devices by revenue for each region in a rolling 90-day window?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer represents the regional grouping and rolling 90-day scope.\nIt ranks devices by revenue and retains two devices for each region."
+    },
+    {
+      "question": "How would you deduplicate transactions while retaining the record with the latest timestamp?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how duplicate transactions are identified and how the latest timestamp determines which record is retained."
+    },
+    {
+      "question": "How would you debug a LEFT JOIN that returns more rows than expected?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the source of the unexpected row-count increase and how to verify it."
+    },
+    {
+      "question": "When should GROUP BY be used instead of PARTITION BY?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer states when each construct is appropriate and distinguishes their use cases."
+    },
+    {
+      "question": "How would you optimize a query for large data volumes, including what indexes you would add?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer ties its proposed indexes to the large-volume query workload and explains their expected performance effects."
+    },
+    {
+      "question": "How would you optimize a Spark job that is running slowly on EMR?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer identifies a Spark-on-EMR performance issue, proposes an optimization, and explains why it should help the slow job."
+    },
+    {
+      "question": "What causes shuffle in Spark, and how can it be prevented?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer explains what triggers Spark shuffle and how the proposed changes prevent it."
+    },
+    {
+      "question": "How do coalesce() and repartition() differ in Spark physical plans?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer compares the operations through their Spark physical-plan behavior and states when each is appropriate."
+    },
+    {
+      "question": "How would you design a streaming pipeline to monitor AirPods battery usage in real time?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer describes a streaming pipeline for AirPods battery usage that makes the resulting monitoring information available in real time."
+    },
+    {
+      "question": "How would you test the integrity of a Spark job after deployment?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer specifies post-deployment checks for Spark job integrity and explains how incorrect output would be recognized."
+    },
+    {
+      "question": "How would you design a global data lake that complies with GDPR?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses global scale, GDPR compliance, and explicit design trade-offs."
+    },
+    {
+      "question": "How would you track application crashes in real time and trigger an immediate alert?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how crashes are tracked as they occur and how an immediate alert is triggered."
+    },
+    {
+      "question": "How would you balance latency and reliability in a data pipeline?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer makes the latency-reliability trade-off explicit and explains the consequences of its design choice."
+    },
+    {
+      "question": "If one region goes down, how would you reroute ingestion?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how an alternative ingestion path is selected and used when one region is unavailable."
+    },
+    {
+      "question": "Tell me about a time you debugged a broken pipeline at 2 a.m.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer gives a specific example of debugging a broken pipeline during the stated overnight incident and explains the actions taken."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "SQL and data logic",
+      "Spark performance and data architecture",
+      "Real-time system design",
+      "Scalability and reliability",
+      "Behavioral and culture-fit interviews"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e3d8c8243693b90e",
+    "saved_date": "2026-10-01T23:09:46Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

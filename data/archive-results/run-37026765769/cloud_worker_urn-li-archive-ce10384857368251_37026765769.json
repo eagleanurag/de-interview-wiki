@@ -1,0 +1,135 @@
+{
+  "id": "urn-li-archive-ce10384857368251",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.270553Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:56Z"
+  },
+  "original_text": "🚀 Crack PySpark + Databricks Interviews with Confidence!\n\nHere are some of the most commonly asked scenario-based questions that every Data Engineer should be ready for 👇\n\n🔹 How do you handle schema evolution in Delta Lake tables?\n🔹 How to implement Slowly Changing Dimension (SCD Type 2) using PySpark in Databricks?\n🔹 How do you optimize a Spark job running slow in Databricks?\n🔹 How do you implement merge (upsert) operations in Delta Lake?\n🔹 How to perform time travel in Delta tables?\n🔹 How do you handle data quality validations in a PySpark pipeline?\n🔹 How to handle duplicate records before writing to a Delta table?\n🔹 How do you manage partitioning and clustering in Delta Lake for performance?\n🔹 How do you schedule and monitor jobs in Databricks Workflows?\n🔹 How to integrate Azure Data Factory (or Airflow) with Databricks notebooks?\n\n\n#Databricks #PySpark #DeltaLake #BigData #ApacheSpark #DataEngineering #ETL #InterviewQuestions #LinkedInTech\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This promotional post lists ten scenario-based interview questions for data engineers working with PySpark, Databricks, and Delta Lake. It covers schema evolution, SCD Type 2, slow Spark jobs, merge and upsert operations, time travel, data quality, duplicate records, partitioning and clustering, Databricks Workflows, and Azure Data Factory or Airflow integration. It does not provide answers, code, implementation steps, or technical examples.",
+    "topics": [
+      "PySpark interview preparation",
+      "Databricks interview preparation",
+      "Delta Lake",
+      "Apache Spark performance",
+      "Data engineering scenario questions"
+    ],
+    "subtopics": [
+      "Delta Lake schema evolution",
+      "Slowly Changing Dimension Type 2 with PySpark in Databricks",
+      "Spark job performance optimization",
+      "Delta Lake merge and upsert operations",
+      "Delta Lake time travel",
+      "PySpark data quality validation",
+      "Duplicate record handling",
+      "Delta Lake partitioning and clustering",
+      "Databricks Workflows scheduling and monitoring",
+      "Azure Data Factory or Airflow integration with Databricks notebooks"
+    ],
+    "concepts": [
+      "Schema evolution in Delta Lake",
+      "Slowly Changing Dimension Type 2",
+      "Delta Lake merge and upsert operations",
+      "Delta Lake time travel",
+      "PySpark data quality validation",
+      "Duplicate record handling",
+      "Partitioning and clustering",
+      "Databricks Workflows",
+      "Azure Data Factory or Airflow integration"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you handle schema evolution in Delta Lake tables?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how schema evolution is handled in Delta Lake tables, but the source provides no schema-change method or procedure."
+    },
+    {
+      "question": "How do you implement Slowly Changing Dimension (SCD Type 2) using PySpark in Databricks?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should present an SCD Type 2 implementation using PySpark in Databricks, but the source supplies no code or implementation steps."
+    },
+    {
+      "question": "How do you optimize a Spark job running slow in Databricks?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to optimize a slow Spark job in Databricks, but the source gives no diagnostic or optimization techniques."
+    },
+    {
+      "question": "How do you implement merge (upsert) operations in Delta Lake?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how merge or upsert operations are implemented in Delta Lake, but the source provides no syntax or procedure."
+    },
+    {
+      "question": "How do you perform time travel in Delta tables?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how time travel is performed in Delta tables, but the source does not provide a command or procedure."
+    },
+    {
+      "question": "How do you handle data quality validations in a PySpark pipeline?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how data quality validations are handled in a PySpark pipeline, but the source describes no validations or implementation details."
+    },
+    {
+      "question": "How do you handle duplicate records before writing to a Delta table?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how duplicate records are handled before writing to a Delta table, but the source provides no handling method."
+    },
+    {
+      "question": "How do you manage partitioning and clustering in Delta Lake for performance?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how partitioning and clustering are managed in Delta Lake for performance, but the source gives no configuration or design guidance."
+    },
+    {
+      "question": "How do you schedule and monitor jobs in Databricks Workflows?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain job scheduling and monitoring in Databricks Workflows, but the source supplies no scheduling or monitoring mechanism."
+    },
+    {
+      "question": "How do you integrate Azure Data Factory (or Airflow) with Databricks notebooks?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how Azure Data Factory or Airflow is integrated with Databricks notebooks, but the source provides no integration pattern or configuration."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark and Databricks scenario-based interview preparation",
+    "secondary_topics": [
+      "Delta Lake operations",
+      "Slowly Changing Dimension Type 2",
+      "Apache Spark performance optimization",
+      "Data quality and duplicate handling",
+      "Partitioning and clustering",
+      "Databricks Workflows",
+      "Azure Data Factory or Airflow integration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ce10384857368251",
+    "saved_date": "2026-10-01T23:09:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-saved-00bd7b1ba593332c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463624574018965504",
+    "captured_at": "2026-10-02T00:15:44.385808Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:33Z"
+  },
+  "original_text": "🚀 Implementing SCD Type 2 in PySpark on Databricks\n\nOne of the most important concepts in Data Engineering is preserving historical data while handling updates efficiently.\n\nIn this implementation, I used PySpark + Databricks Delta Lake to build an SCD Type 2 pipeline that:\n\n✅ Detects changed records\n✅ Expires old records\n✅ Inserts new active records\n✅ Maintains historical tracking\n✅ Supports audit & reporting requirements\n\n📌 Finance Example Used:\nCustomer account balance updates with effective start/end dates and current flags.\n\n💡 Why SCD Type 2 Matters?\nInstead of overwriting existing data, SCD2 preserves history by maintaining multiple versions of records over time.\n\n\n#PySpark #Databricks #SCD2 #DataEngineering #BigData #DeltaLake #Azure #ApacheSpark #ETL #DataWarehouse #CloudComputing #DataEngineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7463624574018965504_slide_0.jpg",
+      "description": "JPEG image, 480x721 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a PySpark and Databricks Delta Lake pipeline for implementing SCD Type 2 on customer account balance data. It says the pipeline detects changed records, expires old versions, inserts new active versions, and preserves history using effective start and end dates and current flags. The post also states that this history supports audit and reporting requirements, but it does not provide implementation code, schemas, change-detection logic, or configuration details.",
+    "topics": [
+      "Slowly Changing Dimension Type 2",
+      "Historical data retention",
+      "PySpark",
+      "Databricks Delta Lake"
+    ],
+    "subtopics": [
+      "Detecting changed records",
+      "Expiring old record versions",
+      "Inserting new active record versions",
+      "Effective start and end dates",
+      "Current flags",
+      "Customer account balance updates",
+      "Audit and reporting support"
+    ],
+    "concepts": [
+      "SCD Type 2",
+      "Changed-record detection",
+      "Old-record expiration",
+      "Active-record insertion",
+      "Effective dating",
+      "Current flags",
+      "Historical tracking",
+      "Audit and reporting support",
+      "PySpark",
+      "Databricks Delta Lake"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What problem does SCD Type 2 solve, and how does it differ from overwriting existing records?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SCD Type 2 preserves multiple versions of a record over time.\nExisting historical data is retained rather than overwritten when a customer account balance changes."
+    },
+    {
+      "question": "What sequence of operations does the described pipeline perform after detecting a customer account balance change?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The pipeline detects the changed customer account record.\nIt expires the old record version and inserts a new active version.\nIt preserves the previous version for historical tracking."
+    },
+    {
+      "question": "Which fields and implementation technologies are identified for the SCD Type 2 pipeline?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The implementation uses PySpark and Databricks Delta Lake.\nThe finance data includes effective start dates, effective end dates, and current flags."
+    },
+    {
+      "question": "How does the described SCD Type 2 approach support audit and reporting requirements for customer accounts?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The pipeline retains historical account balance versions rather than overwriting them.\nEffective dates, expiration of old versions, and current flags support distinguishing historical and active data.\nThe retained history is explicitly associated with audit and reporting needs."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Slowly Changing Dimension Type 2",
+    "secondary_topics": [
+      "Historical data retention",
+      "PySpark",
+      "Databricks Delta Lake",
+      "Effective dating",
+      "ETL and data warehousing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:00bd7b1ba593332c",
+    "saved_date": "2026-10-01T23:07:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7463624574018965504",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7463624574018965504_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

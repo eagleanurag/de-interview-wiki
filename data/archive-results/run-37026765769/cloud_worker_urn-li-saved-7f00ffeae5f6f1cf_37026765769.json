@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-saved-7f00ffeae5f6f1cf",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348523794187079680",
+    "captured_at": "2026-10-02T00:15:48.649913Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:05Z"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : Accenture (Medium Level)\n#PySpark #SQL Interview Question — Solution\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nAnkur Warikoo, an influential figure in Indian social media, shares a guideline in one of his videos called the 20-6-20 rule for determining whether one can afford to buy a phone or not. The rule for affordability entails three conditions:\n\n \n\n1. Having enough savings to cover a 20 percent down payment.\n2. Utilizing a maximum 6-month EMI plan (no-cost) for the remaining cost.\n3. Monthly EMI should not exceed 20 percent of one's monthly salary.\nGiven the salary and savings of various users, along with data on phone costs, the task is to write an SQL to generate a list of phones (comma-separated) that each user can afford based on these criteria, display the output in ascending order of the user name.\n\n \n\nTable: users\n+----------------+-------------+\n| COLUMN_NAME | DATA_TYPE |\n+----------------+-------------+\n| user_name | varchar(10) |\n| monthly_salary | int |\n| savings | int |\n+----------------+-------------+\nTable: phones\n+-------------+-------------+\n| COLUMN_NAME | DATA_TYPE |\n+-------------+-------------+\n| cost | int |\n| phone_name | varchar(15) |\n+-------------+-------------+\n𝐬𝐜𝐡𝐞𝐦𝐚 \nCREATE TABLE users (\n user_name VARCHAR(50),\n monthly_salary INT,\n savings INT\n);\n\nCREATE TABLE phones (\n phone_name VARCHAR(50),\n cost INT\n);\nINSERT INTO users (user_name, monthly_salary, savings) VALUES\n('Rahul', 40000, 15000),\n('Vivek', 70000, 10000);\n\nINSERT INTO phones (phone_name, cost) VALUES\n('iphone-12', 60000),\n('oneplus-12', 50000),\n('iphone-14', 70000);\n\n\n\nThanks to Ankit Bansal and NamasteSQL for the question\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348523794187079680_slide_0.jpg",
+      "description": "JPEG image, 480x339 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a SQL interview exercise based on the 20-6-20 phone affordability rule. Given users with monthly salaries and savings and a catalog of phones with names and costs, the task is to identify affordable phones for each user and return comma-separated phone lists in ascending user-name order. It includes table definitions and sample users and phones, but it does not include the promised SQL solution or expected output.",
+    "topics": [
+      "SQL",
+      "Business-rule filtering",
+      "Per-user result aggregation"
+    ],
+    "subtopics": [
+      "20-6-20 affordability rule",
+      "Savings-based down payment",
+      "Salary-based monthly EMI limit",
+      "Comma-separated phone lists",
+      "Ascending user-name ordering"
+    ],
+    "concepts": [
+      "20-6-20 affordability rule",
+      "Savings-based down-payment condition",
+      "Salary-based EMI condition",
+      "users table",
+      "phones table",
+      "Per-user phone-list output"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you translate the three parts of the 20-6-20 rule into SQL conditions for each user and phone?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The down-payment condition compares the user's savings with at least 20% of the phone's cost.\nThe EMI condition uses the cost remaining after the down payment with an installment period of no more than six months.\nThe monthly EMI condition requires the payment not to exceed 20% of the user's monthly salary.\nAll three conditions must be satisfied before a phone is included for a user."
+    },
+    {
+      "question": "How should the query produce the required per-user phone lists and final ordering?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query evaluates the phone candidates for each user before producing the final result.\nOnly phones that satisfy every affordability condition are included.\nThe qualifying phone names are aggregated into one comma-separated value per user.\nThe result rows are ordered by user_name in ascending order."
+    },
+    {
+      "question": "Using the supplied sample data, which phones qualify for Rahul and Vivek under the 20-6-20 rule?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Rahul's 20% salary limit is 8,000 per month, so oneplus-12 and iphone-12 qualify, while iphone-14 does not because its six-month EMI would be about 9,333.\nVivek qualifies for oneplus-12 because its 10,000 down payment is covered by his savings and its six-month EMI is about 6,667.\nVivek does not qualify for iphone-12 or iphone-14 because their required down payments exceed his 10,000 savings."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL affordability query",
+    "secondary_topics": [
+      "Conditional filtering",
+      "Result aggregation",
+      "Sorting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7f00ffeae5f6f1cf",
+    "saved_date": "2026-10-01T23:12:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348523794187079680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348523794187079680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

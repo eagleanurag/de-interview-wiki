@@ -1,0 +1,126 @@
+{
+  "id": "urn-li-archive-9f6cf449089d136c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.002286Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:24Z"
+  },
+  "original_text": "This Pyspark coding question that was asked during #Deloitte_USI #R1 round with 3-5 year of experience candidate try to solve it by own:\n\n1. Could you please introduce yourself and walk me through the key projects you've worked on, particularly highlighting your role, the technologies used, and the impact they had?\n\n2. SQL question:\n2.1 Write an SQL query to retrieve the total sales amount for each product category, but only for sales where the amount is greater than 100, and only include those categories where the total sales exceed 1000.\nThe result should include the category name and total sales amount, sorted in descending order of total sales.\n\n2.2. Write an SQL query to delete only the duplicate records from the Employee table and retain the record with the smallest id among the duplicates.\n\n3. Azure Section:\n3.1 Suppose you are running a data pipeline in Azure Data Factory. You are required to design the pipeline in such a way that, on both successful completion and failure, a notification is sent to a Microsoft Teams channel.\nTask:\nHow would you configure the Azure Data Factory pipeline to achieve this functionality?\nWhat components or steps would you use to send the notifications to Microsoft Teams based on the pipeline's outcome?\n\n3.2 What types of trigger options are available in Azure Data Factory (ADF)?\nPlease explain the different types of triggers that can be used to schedule or initiate pipelines in ADF?\n\n3.3 You are given a requirement where multiple Excel files are present at the source location, and each Excel file contains multiple sheets.\nUsing Azure Data Factory (ADF), you need to design a pipeline that will copy data from each Excel sheet into its corresponding target table.\nTask:\nExplain how you would implement this pipeline in ADF to handle multiple Excel files and multiple sheets dynamically, mapping each sheet to a specific table\n\n3.4 Suppose you are required to copy hundreds of files from a source location to a target destination using Azure Data Factory.\nTask:\nWhat would be your approach to designing this pipeline?\nWould you create 100 separate pipelines—one for each file—or is there a more efficient way to handle this scenario?\nPlease explain your strategy for achieving this in a scalable and maintainable way.\n\n4. Spark Section:\n4.1 What would be the PySpark code to read a nested JSON file stored in Azure Blob Storage?\nAssume the JSON file has a complex/nested structure and is stored in your blob storage container.\nTask:\nProvide a sample PySpark code snippet that reads the nested JSON file and flattens the structure if needed\n\n4.2 Can you write a simple PySpark code example where you use both aggregate functions and window functions?\n\n5. What is you record count of data you process?\n\n6. What are the autoloader and copy into? When you would use each?\n\nI am sharing all the interview question and experiences that was asked during the interview, follow me Sudipta Bhandari 🇮🇳 for more update",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post compiles questions reported as asked during a Deloitte USI R1 interview for a candidate with 3–5 years of experience. It includes self-introduction and data-volume questions, SQL tasks for category sales aggregation and duplicate deletion, Azure Data Factory tasks for Microsoft Teams notifications, triggers, dynamic Excel ingestion, and bulk file copying, and PySpark tasks for nested JSON processing and aggregate and window functions. It also asks about autoloader and Copy Into. The post provides questions but no answers, code, trigger list, definitions, or implementation details.",
+    "topics": [
+      "Data engineering interview questions",
+      "SQL",
+      "Azure Data Factory",
+      "PySpark"
+    ],
+    "subtopics": [
+      "Project introduction and impact",
+      "Data volume and record count",
+      "Category sales aggregation",
+      "Duplicate employee record deletion",
+      "Microsoft Teams notifications for pipeline outcomes",
+      "ADF pipeline triggers",
+      "Dynamic Excel file and sheet ingestion",
+      "Scalable bulk file copying",
+      "Nested JSON processing from Azure Blob Storage",
+      "PySpark aggregate and window functions",
+      "autoloader and Copy Into"
+    ],
+    "concepts": [
+      "Conditional sales aggregation by product category",
+      "Duplicate removal by minimum identifier",
+      "Outcome-based Microsoft Teams notifications",
+      "ADF pipeline trigger options",
+      "Dynamic Excel sheet-to-table mapping",
+      "Scalable bulk file copying",
+      "Nested JSON ingestion and flattening",
+      "Aggregate and window functions in PySpark",
+      "autoloader and Copy Into"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write an SQL query to calculate total sales for each product category using only sales greater than 100, retain categories whose total sales exceed 1000, and return the category name and total sales in descending order.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query limits the sales included in each category total to amounts greater than 100.\nThe query returns the category name and its total sales amount.\nThe query excludes categories whose totals do not exceed 1000.\nThe results are sorted by total sales in descending order."
+    },
+    {
+      "question": "How would you write SQL that deletes duplicate records from an Employee table while retaining the record with the smallest id among the duplicates?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution targets duplicate Employee records without deleting valid unique records.\nIt retains the smallest id within each duplicate set.\nIt deletes the other records identified as duplicates."
+    },
+    {
+      "question": "How would you configure an Azure Data Factory pipeline to send a Microsoft Teams channel notification after both successful completion and failure?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The design handles both the successful-completion and failure outcomes.\nEach outcome results in a notification being sent to the Microsoft Teams channel.\nThe answer identifies the ADF components or configuration steps used for the outcome-specific notifications."
+    },
+    {
+      "question": "What trigger options are available in Azure Data Factory, and how do they schedule or initiate pipelines?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer names and explains the trigger options available in ADF.\nIt distinguishes how the available triggers schedule pipelines or initiate their execution."
+    },
+    {
+      "question": "How can an Azure Data Factory pipeline dynamically copy every sheet from multiple Excel files into its corresponding target table?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The design handles multiple source Excel files and multiple sheets within each file.\nThe execution is dynamic rather than being described as one manually repeated operation for every sheet.\nEach source sheet is mapped to its corresponding target table."
+    },
+    {
+      "question": "What scalable and maintainable strategy should an Azure Data Factory pipeline use to copy hundreds of files without creating a separate pipeline for every file?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer compares a separate pipeline for each file with a more efficient strategy.\nThe strategy accounts for processing hundreds of files.\nThe explanation addresses both scalability and maintainability."
+    },
+    {
+      "question": "Write a PySpark code example that reads a nested JSON file from Azure Blob Storage and flattens the nested structure if needed.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The code reads the nested JSON file from Azure Blob Storage.\nThe example handles a complex or nested JSON structure.\nThe code demonstrates how to flatten the structure when flattening is required."
+    },
+    {
+      "question": "Write a simple PySpark example that uses both aggregate functions and window functions.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The example includes an aggregate-function computation.\nThe example includes a window-function computation.\nBoth kinds of computation are demonstrated in the same PySpark code."
+    },
+    {
+      "question": "What are autoloader and Copy Into, and when should each be used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines autoloader.\nThe answer defines Copy Into.\nThe answer compares the circumstances in which the two should be used."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview questions",
+    "secondary_topics": [
+      "SQL",
+      "Azure Data Factory",
+      "PySpark",
+      "Data pipeline design"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:9f6cf449089d136c",
+    "saved_date": "2026-10-01T23:10:24Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

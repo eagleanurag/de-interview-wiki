@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-saved-11219bf6b5b4eacc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338452436342198272",
+    "captured_at": "2026-10-02T00:15:44.821810Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:59Z"
+  },
+  "original_text": "🎇 𝗥𝗲𝗰𝗲𝗻𝘁𝗹𝘆 𝗮𝘀𝗸𝗲𝗱 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻 𝗶𝗻 𝗟𝗧𝗜𝗠𝗶𝗻𝗱𝘁𝗿𝗲𝗲\n\nI recently came across an interesting PySpark problem that was asked in an interview at LTIMindtree . \n\n🎯 Problem Statement\nThe task was to report the number of Grand Slam tournaments won by each player, considering only the players who actually won at least one tournament.\n\n🧠 Solution Steps:\n-- Unpivot the champ Data Frame to convert tournament columns into rows.\n-- Group by winner ID and count the total wins.\n-- Join with the players Data Frame to get player names.\n-- Filter out players with zero wins using an inner join.\n\ndata = [\n (1,'Nadal'),\n (2,'Federer'),\n (3,'Novak')\n]\n\nplayers_schema = StructType([\n StructField('id',IntegerType()),\n StructField('name',StringType())\n ]\n)\n\nplayers = spark.createDataFrame(data, schema=players_schema)\n\nchamp_data = [\n (2017,2,1,1,2),\n (2018,3,1,3,2),\n (2019,3,1,1,3)\n]\nchamp_schema = StructType([\nStructField('year',IntegerType()),\nStructField('Wimbledon',IntegerType()),\nStructField('Fr_open',IntegerType()),\nStructField('US_open',IntegerType()),\nStructField('Au_open',IntegerType())\n])\n\nchamp = spark.createDataFrame(data=champ_data,schema=champ_schema)\n\n# union the champ dataframe\nchamp_df = champ.select('year',col('Wimbledon').alias('winner'))\\\n .unionAll(champ.select('year',col('Fr_open').alias('winner')))\\\n .unionAll(champ.select('year',col('US_open').alias('winner')))\\\n .unionAll(champ.select('year',col('Au_open').alias('winner')))\n\n# grouping the dataframe\nchamp_group = champ_df.groupBy('winner').agg(count(lit(1)).alias('grand_slam_count')).orderBy('winner')\n\n# Join the both dataframes\n\njoin_df = players.join(champ_group,on = players['id'] == champ_group['winner'], how = 'inner' )\njoin_df.select(\"winner\",\"name\",\"grand_slam_count\").show()\n\n👉 This question tests your understanding of data transformation in PySpark, especially unpivoting, grouping, and joining datasets effectively.\n\n#DataEngineering #PySpark #ApacheSpark #BigData #DataScience #Python #DataFrame #ETL #Programming #TechTips #LearnOnLinkedIn #InterviewPrep #CodeSnippet #DataWarehousing\n#Dataengineer #pyspark #ProgrammingTips #TechInterviews #CodeEfficiency \n#InterviewQuestions #PythonProgramming #MemoryManagement #TupleVsList #JobSearch #CareerGrowth #SQL #PySparkCodingQuestions #TechBackbone #ModernDataStack #LinkedInCarousel #UnsungHeroes #HealthcareData #Spark #SchemaDrift #DataEngineering #DeltaLake #TechTips #DistributedComputing #DSA #PythonProgramming #DeloitteInterview #CodingChallenge #Programming",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338452436342198272_slide_0.jpg",
+      "description": "JPEG image, 480x382 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a PySpark interview task to count Grand Slam tournament wins by player. It defines players and champ DataFrames with StructType schemas, converts the four tournament winner columns into rows with select and unionAll, groups the results by winner to count wins, and inner-joins the counts with player names so only players appearing as winners are retained. The final projection returns winner, name, and grand_slam_count.",
+    "topics": [
+      "PySpark DataFrame transformations",
+      "Grand Slam win aggregation",
+      "Dataset joins"
+    ],
+    "subtopics": [
+      "Defining StructType schemas",
+      "Unpivoting tournament columns with select and unionAll",
+      "Counting wins with groupBy and count",
+      "Enriching winner IDs with player names",
+      "Excluding zero-win players with an inner join"
+    ],
+    "concepts": [
+      "Explicit DataFrame schemas",
+      "Tournament-column unpivoting",
+      "Win-count aggregation",
+      "Winner-only inner join",
+      "Result for the supplied data"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the solution transform the wide champ DataFrame into a DataFrame containing individual tournament winners?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "It selects year and each of the four tournament winner columns, aliases each winner column to winner, and combines the selections with unionAll.\nThe resulting champ_df represents each tournament winner as a row with a year and winner."
+    },
+    {
+      "question": "How does the solution calculate the number of wins for each player?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "It groups the transformed winner DataFrame by winner.\nIt uses count(lit(1)) to create the grand_slam_count field for each winner."
+    },
+    {
+      "question": "What rows and win counts does the supplied data produce, and why would the inner join exclude a player with zero wins?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The output contains Nadal with 4 wins, Federer with 3 wins, and Novak with 3 wins.\nA zero-win player would not match a winner ID in champ_group and would therefore be omitted by the inner join.\nThe final projection selects winner, name, and grand_slam_count."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame transformations",
+    "secondary_topics": [
+      "Grand Slam winner aggregation",
+      "Unpivoting with unionAll",
+      "Inner joins"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:11219bf6b5b4eacc",
+    "saved_date": "2026-10-01T23:18:59Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338452436342198272",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338452436342198272_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

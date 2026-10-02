@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-archive-fc1dfb962f856f5c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.315008Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:19Z"
+  },
+  "original_text": "If you want to master system design (in 1 month or less), learn these case studies:\n\n\n1 How Meta Achieves 99.99999999% Cache Consistency\n↳ https://lnkd.in/e88kUZAm\n\n2 How to Scale an App to 10 Million Users on AWS\n↳ https://lnkd.in/eU736g9Q\n\n3 How Amazon S3 Achieves 99.999999999% Durability\n↳ https://lnkd.in/eutGiK35\n\n4 Real-Time Gaming Leaderboard Architecture\n↳ https://lnkd.in/edfTDq5R\n\n5 How Uber Finds Nearby Drivers at 1 Million Requests per Second\n↳ https://lnkd.in/eeqH9Hjh\n\n6 Bsky Architecture\n↳ https://lnkd.in/eEhB8V_k\n\n7 Slack Architecture\n↳ https://lnkd.in/eATMDjrK\n\n8 How Uber Computes ETA at Half a Million Requests per Second\n↳ https://lnkd.in/eVKV2ePC\n\n9 Distributed Counter Architecture\n↳ https://lnkd.in/eGwaA62J\n\n10 How YouTube Was Able to Support 2.49 Billion Users With MySQL\n↳ https://lnkd.in/efmJw4Dx\n\n11 Pastebin Architecture\n↳ https://lnkd.in/eZpfaVjc\n\n12 How Stripe Prevents Double Payment Using Idempotent API\n↳ https://lnkd.in/erMkqwq4\n\n13 How Tinder Scaled to 1.6 Billion Swipes per Day\n↳ https://lnkd.in/en65fv-W\n\n14 How Facebook Was Able to Support a Billion Users Via Software Load Balancer\n↳ https://lnkd.in/egxWtYHT\n\n15 How Apple AirTags Work\n↳ https://lnkd.in/ec75eiCH\n\n♻️ Repost to get a wider reach\n\nFollow Shubham Sharma for more such articles.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a reading list recommending 15 external system-design case studies for people who want to learn system design within one month or less. The titles cover cache consistency, large-scale application design, Amazon S3 durability, real-time gaming leaderboards, high-throughput driver and ETA services, Bsky, Slack, Pastebin, distributed counters, MySQL scaling, payment idempotency, load balancing, and Apple AirTags. Because only titles and links are supplied and none of the linked case studies are included, the post provides no architecture methods, implementation details, or explanations of the listed claims.",
+    "topics": [
+      "System Design",
+      "Scalability",
+      "Cache Consistency",
+      "Storage Durability",
+      "Real-Time Systems",
+      "Distributed Systems",
+      "Idempotent APIs",
+      "Load Balancing"
+    ],
+    "subtopics": [
+      "Meta cache consistency",
+      "Scaling an application to ten million users on AWS",
+      "Amazon S3 durability",
+      "Real-time gaming leaderboard architecture",
+      "Uber nearby-driver discovery at one million requests per second",
+      "Bsky architecture",
+      "Slack architecture",
+      "Uber ETA computation at half a million requests per second",
+      "Distributed counter architecture",
+      "YouTube scale with MySQL",
+      "Pastebin architecture",
+      "Stripe double-payment prevention with an idempotent API",
+      "Tinder scale at 1.6 billion swipes per day",
+      "Facebook support for a billion users with a software load balancer",
+      "Apple AirTag operation"
+    ],
+    "concepts": [
+      "Cache Consistency",
+      "Application Scalability",
+      "Data Durability",
+      "Real-Time Gaming Leaderboard",
+      "Nearby-Driver Discovery",
+      "ETA Computation",
+      "Distributed Counter",
+      "Idempotent API",
+      "MySQL Scalability",
+      "Software Load Balancer"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "System Design and Distributed Systems",
+    "primary_topic": "System Design",
+    "secondary_topics": [
+      "Scalability",
+      "Cache Consistency",
+      "Storage Durability",
+      "Real-Time Systems",
+      "Distributed Counters",
+      "Idempotent APIs",
+      "Load Balancing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:fc1dfb962f856f5c",
+    "saved_date": "2026-10-01T23:15:19Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

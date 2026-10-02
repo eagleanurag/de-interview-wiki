@@ -1,0 +1,98 @@
+{
+  "id": "urn-li-saved-c5203e5a53ccb04b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7336206983072489472",
+    "captured_at": "2026-10-02T00:15:51.382915Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:27Z"
+  },
+  "original_text": "🚀 Ultimate SQL Date Functions Cheatsheet — With Examples! 📅🧠\n\nWhether you’re a Data Analyst, Engineer, or Scientist, mastering date manipulation in SQL is a must-have skill.\n\nHere’s a visual cheatsheet + examples of the most-used SQL date functions👇\n\n\n---\n\n📌 1. CURRENT_DATE\n\nSELECT CURRENT_DATE;\n-- Result: 2024-04-24\n\n📌 2. CURRENT_TIME\n\nSELECT CURRENT_TIME;\n-- Result: 14:30:20\n\n📌 3. DATE_TRUNC\n\nSELECT DATE_TRUNC('hour', '2024-04-24 14:30:20');\n-- Result: 2024-04-24 14:00:00\n\n📌 4. EXTRACT\n\nSELECT EXTRACT(month FROM '2024-04-24');\n-- Result: 4\n\n📌 5. DATE_ADD\n\nSELECT DATE_ADD('2024-04-24', INTERVAL 5 DAY);\n-- Result: 2024-04-29\n\n📌 6. DATE_SUB\n\nSELECT DATE_SUB('2024-04-24', INTERVAL 5 DAY);\n-- Result: 2024-04-19\n\n📌 7. DATEDIFF\n\nSELECT DATEDIFF('2024-04-24', '2024-04-19');\n-- Result: 5\n\n📌 8. DATE_FORMAT\n\nSELECT DATE_FORMAT('2024-04-24', '%d/%m/%Y');\n-- Result: 24/04/2024\n\n\n---\n\n🎯 Pro Tip: These functions work slightly differently in MySQL, PostgreSQL, and SQL Server — tweak syntax as needed!\n\n\n🔁 Like & share to support your network of data lovers!\n\n#SQL #DataEngineering #CheatSheet #SQLFunctions #DateHandling #DataAnalytics #LearningSQL #100DaysOfCode #DataScience #LinkedInLearning #DataTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7336206983072489472_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a SQL date-function cheat sheet with examples for retrieving the current date and time, truncating timestamps, extracting date components, adding or subtracting days, calculating date differences, and formatting dates. It also warns that these functions can behave differently in MySQL, PostgreSQL, and SQL Server, so syntax may need adjustment.",
+    "topics": [
+      "SQL",
+      "SQL date functions",
+      "Date handling"
+    ],
+    "subtopics": [
+      "Current date and time retrieval",
+      "Timestamp truncation",
+      "Date component extraction",
+      "Date arithmetic",
+      "Date difference calculation",
+      "Date formatting",
+      "Cross-dialect SQL syntax"
+    ],
+    "concepts": [
+      "CURRENT_DATE",
+      "CURRENT_TIME",
+      "DATE_TRUNC",
+      "EXTRACT",
+      "DATE_ADD and DATE_SUB",
+      "DATEDIFF",
+      "DATE_FORMAT",
+      "Cross-dialect SQL differences"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do CURRENT_DATE and CURRENT_TIME differ based on the examples?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "CURRENT_DATE returns a date, shown as 2024-04-24.\nCURRENT_TIME returns a time, shown as 14:30:20."
+    },
+    {
+      "question": "How would you truncate a timestamp to the beginning of an hour and extract its month using the functions shown in the post?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "DATE_TRUNC with the unit 'hour' changes 2024-04-24 14:30:20 to 2024-04-24 14:00:00.\nEXTRACT with the field 'month' returns 4 for the date 2024-04-24."
+    },
+    {
+      "question": "How would you move a date forward or backward by five days and calculate the difference between the two dates?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "DATE_ADD with a five-day interval changes 2024-04-24 to 2024-04-29.\nDATE_SUB with a five-day interval changes 2024-04-24 to 2024-04-19.\nDATEDIFF between 2024-04-24 and 2024-04-19 returns 5."
+    },
+    {
+      "question": "How would you format 2024-04-24 as a day, month, and year, and what portability concern should be considered?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "DATE_FORMAT with the pattern %d/%m/%Y produces 24/04/2024.\nDate-function behavior and syntax may differ among MySQL, PostgreSQL, and SQL Server, so the implementation may require adjustment."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Date Handling",
+    "secondary_topics": [
+      "SQL Functions",
+      "Data Analytics",
+      "Cross-Database SQL Portability"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c5203e5a53ccb04b",
+    "saved_date": "2026-10-01T23:18:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7336206983072489472",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7336206983072489472_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

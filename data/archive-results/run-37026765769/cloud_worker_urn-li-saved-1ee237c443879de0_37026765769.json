@@ -1,0 +1,147 @@
+{
+  "id": "urn-li-saved-1ee237c443879de0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343486257341112321",
+    "captured_at": "2026-10-02T00:15:45.434558Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:04Z"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\n💰12–15 LPA Package! | 𝐀𝐦𝐞𝐫𝐢𝐜𝐚𝐧 𝐄𝐱𝐩𝐫𝐞𝐬𝐬 - 𝐑𝐞𝐚𝐥 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n𝐑𝐨𝐥𝐞: Data Analyst (0–3 Years)\n𝐈𝐟 𝐲𝐨𝐮'𝐫𝐞 𝐩𝐫𝐞𝐩𝐚𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰, 𝐭𝐡𝐢𝐬 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐬𝐢𝐠𝐧 𝐭𝐨 𝐠𝐨 𝐛𝐞𝐲𝐨𝐧𝐝 𝐭𝐞𝐱𝐭𝐛𝐨𝐨𝐤 𝐒𝐐𝐋 𝐚𝐧𝐝 𝐟𝐨𝐜𝐮𝐬 𝐨𝐧 𝐫𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐬𝐨𝐥𝐯𝐢𝐧𝐠.\n📌 These are actual SQL questions asked by American Express — designed to test your logic, clarity, and business understanding:\n🔹 Find duplicate rows using GROUP BY and HAVING\n🔹 Difference between 𝐈𝐍𝐍𝐄𝐑 𝐉𝐎𝐈𝐍 𝐚𝐧𝐝 𝐎𝐔𝐓𝐄𝐑 𝐉𝐎𝐈𝐍 — real examples matter\n🔹 Fetch the 𝐬𝐞𝐜𝐨𝐧𝐝-𝐡𝐢𝐠𝐡𝐞𝐬𝐭 𝐬𝐚𝐥𝐚𝐫𝐲 — subquery vs ROW_NUMBER()\n🔹 Employees earning more than their managers — self-join logic\n🔹 Power of 𝐖𝐢𝐧𝐝𝐨𝐰 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 like RANK() and ROW_NUMBER()\n🔹 Cumulative Sum with SUM() OVER (PARTITION BY...)\n🔹 UNION vs UNION ALL — when performance matters\n🔹 SQL-based Fraud Detection with CTEs\n🔹 Pivoting rows to columns — transpose with SQL\n🔹 Year-over-Year Growth — real interview logic\n💡 𝐓𝐢𝐩: Focus on writing clean, optimized SQL. American Express interviews aren't about memorizing syntax — they want to see how you solve problems.\nCurious about the answers? Want me to break these down one by one?\nDrop a comment 👇\n…see more\nReal SQL Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343486257341112321_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post lists SQL topics said to have been asked in American Express interviews for a Data Analyst role. It mentions duplicate detection, INNER JOIN versus OUTER JOIN, finding the second-highest salary, employee-manager salary comparisons with self-joins, RANK() and ROW_NUMBER(), cumulative sums, UNION versus UNION ALL, CTE-based fraud detection, pivoting rows into columns, and year-over-year growth. It provides no worked queries or answers and advises candidates to focus on clean, optimized SQL, logic, clarity, and business understanding.",
+    "topics": [
+      "SQL",
+      "Data Analyst Interview Preparation",
+      "SQL Query Patterns",
+      "SQL Performance"
+    ],
+    "subtopics": [
+      "Duplicate-Row Detection",
+      "INNER JOIN and OUTER JOIN",
+      "Second-Highest Salary Queries",
+      "Employee-Manager Self-Joins",
+      "RANK() and ROW_NUMBER()",
+      "Cumulative Sum",
+      "UNION and UNION ALL",
+      "CTE-Based Fraud Detection",
+      "Row-to-Column Pivoting",
+      "Year-over-Year Growth"
+    ],
+    "concepts": [
+      "Duplicate-row detection with GROUP BY and HAVING",
+      "INNER JOIN versus OUTER JOIN",
+      "Second-highest salary with a subquery or ROW_NUMBER()",
+      "Employee-manager comparison with a self-join",
+      "RANK() and ROW_NUMBER()",
+      "Cumulative sum with SUM() OVER",
+      "UNION versus UNION ALL",
+      "Fraud detection with CTEs",
+      "Pivoting rows into columns",
+      "Year-over-year growth",
+      "Clean and optimized SQL"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you find duplicate rows using GROUP BY and HAVING?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides clean, optimized SQL that uses GROUP BY and HAVING for duplicate detection."
+    },
+    {
+      "question": "What is the difference between INNER JOIN and OUTER JOIN, and how would you demonstrate it with an example?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the two join types and supports the explanation with a relational example."
+    },
+    {
+      "question": "How can you find the second-highest salary using either a subquery or ROW_NUMBER()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates the query with both approaches discussed in the post."
+    },
+    {
+      "question": "How would you use a self-join to find employees who earn more than their managers?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer uses self-join logic to associate employee and manager records and compare their salaries."
+    },
+    {
+      "question": "How do you use RANK() and ROW_NUMBER() in an SQL query?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates both window functions in a concrete SQL solution."
+    },
+    {
+      "question": "How do you calculate a cumulative sum with SUM() OVER and PARTITION BY?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer uses SUM() as a window function with PARTITION BY to produce cumulative values."
+    },
+    {
+      "question": "When should UNION be used instead of UNION ALL, and what performance trade-offs should you consider?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer compares the two set operations and connects the choice to result requirements and performance."
+    },
+    {
+      "question": "How could CTEs be used to implement SQL-based fraud detection?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer organizes the stated fraud-detection logic with CTEs and returns the qualifying records."
+    },
+    {
+      "question": "How can you pivot rows into columns in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer transposes row-oriented values into a column-oriented result using SQL."
+    },
+    {
+      "question": "How would you calculate year-over-year growth in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer compares values with their prior-year counterparts and calculates the resulting growth."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics and SQL",
+    "primary_topic": "SQL Interview Preparation",
+    "secondary_topics": [
+      "Data Analyst Roles",
+      "SQL Joins",
+      "SQL Window Functions",
+      "SQL Set Operations",
+      "Common Table Expressions",
+      "Fraud Detection",
+      "Data Pivoting",
+      "Business Calculations",
+      "SQL Performance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1ee237c443879de0",
+    "saved_date": "2026-10-01T23:16:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343486257341112321",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343486257341112321_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

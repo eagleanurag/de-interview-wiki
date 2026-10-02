@@ -1,0 +1,135 @@
+{
+  "id": "urn-li-archive-bbe6d74e6a7278d4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.070606Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:54Z"
+  },
+  "original_text": "Atlassian 𝗼𝗳𝗳𝗲𝗿𝘀 ₹𝟯𝟬–𝟰𝟬 𝗟𝗣𝗔 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜 𝗮𝗻𝗱 ₹𝟱𝟬–𝟲𝟬 𝗟𝗣𝗔 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮\n𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗜 𝗿𝗼𝗹𝗲𝘀.\n\nHere’s the complete Atlassian Data Engineer interview experience that candidates recently faced 👇\n\n𝗥𝗼𝘂𝗻𝗱 𝟭 – 𝗢𝗻𝗹𝗶𝗻𝗲 𝗖𝗼𝗱𝗶𝗻𝗴 𝗔𝘀𝘀𝗲𝘀𝘀𝗺𝗲𝗻𝘁\n1️⃣ Merge overlapping intervals and analyze time/space complexity.\n2️⃣ Design an algorithm to deduplicate millions of records efficiently.\n3️⃣ Write a SQL query using window functions to find the 2nd highest salary or calculate running totals.\n4️⃣ Implement a function to find the longest substring without repeating characters using the sliding window technique.\n\n𝗥𝗼𝘂𝗻𝗱 𝟮 – 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 \n1️⃣ Solve real-time array and string manipulation problems using optimized logic.\n2️⃣ Explain the difference between ROW_NUMBER(), RANK(), and DENSE_RANK() in SQL.\n3️⃣ Write a query to calculate running totals per user using window functions.\n4️⃣ Discuss time complexity and performance optimization for your solution.\n\n𝗥𝗼𝘂𝗻𝗱 𝟯 – 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 \n1️⃣ Design a scalable, fault-tolerant data pipeline for real-time analytics.\n2️⃣ Handle late-arriving data, deduplication, and schema evolution.\n3️⃣ Compare batch vs streaming architectures and their trade-offs.\n4️⃣ Ensure data quality, monitoring, and exactly-once semantics in streaming.\n5️⃣ Design an ETL system capable of processing 1M+ daily events efficiently.\n\n𝗥𝗼𝘂𝗻𝗱 𝟰 – 𝗩𝗮𝗹𝘂𝗲𝘀 & 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n1️⃣ Tell me about a time you failed on a project — what did you learn?\n2️⃣ Describe when you took ownership of a data pipeline beyond your responsibility.\n3️⃣ How do you balance speed vs accuracy during tight deadlines?\n4️⃣ How do you collaborate with cross-functional teams to ensure smooth project delivery?\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗮 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀.\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲 👉 https://lnkd.in/eQRtDTRq\n\nIf you’ve read this far, do LIKE 👍 and RESHARE 🔁 this post to help others preparing for Data Engineer Interviews!",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post outlines a claimed Atlassian Data Engineer interview consisting of an online coding assessment, a technical interview, a system design round, and a values and management interview. The technical material covers algorithms, SQL window functions, scalable and fault-tolerant data pipelines, real-time analytics, batch and streaming trade-offs, data quality, monitoring, exactly-once semantics, and ETL throughput. The behavioral round covers failure, ownership, speed versus accuracy, and cross-functional collaboration. The post lists prompts but does not provide worked answers, implementations, SQL queries, or system-design details.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Algorithms and complexity analysis",
+      "SQL window functions",
+      "Data pipeline system design",
+      "Real-time and streaming data engineering",
+      "ETL scalability",
+      "Data quality and reliability",
+      "Behavioral and project-management interviews"
+    ],
+    "subtopics": [
+      "Merging overlapping intervals",
+      "Deduplicating millions of records",
+      "Ranking functions and running totals",
+      "Sliding-window algorithms",
+      "Array and string manipulation",
+      "Scalable and fault-tolerant pipelines",
+      "Late-arriving data and schema evolution",
+      "Batch versus streaming architectures",
+      "Data quality, monitoring, and exactly-once semantics",
+      "Processing more than 1M events per day",
+      "Ownership, deadlines, and cross-functional collaboration"
+    ],
+    "concepts": [
+      "Time and space complexity",
+      "Overlapping interval merging",
+      "Large-scale record deduplication",
+      "SQL ranking functions",
+      "Running totals",
+      "Sliding-window technique",
+      "Scalable and fault-tolerant data pipelines",
+      "Batch and streaming architectures",
+      "Late-arriving data and schema evolution",
+      "Data quality, monitoring, and exactly-once semantics",
+      "Scalable ETL throughput",
+      "Data engineering behavioral competencies"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you merge overlapping intervals, and what are the time and space complexity of your approach?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer provides an algorithm for merging overlapping intervals.\nThe answer explicitly analyzes the algorithm's time and space complexity."
+    },
+    {
+      "question": "How would you design an algorithm to deduplicate millions of records efficiently?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer explains how duplicate records would be identified and removed.\nThe answer addresses efficiency at a scale of millions of records."
+    },
+    {
+      "question": "What are the differences among ROW_NUMBER(), RANK(), and DENSE_RANK() in SQL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains the behavior of all three ranking functions.\nThe answer clearly describes how their results differ."
+    },
+    {
+      "question": "Write a SQL query that uses a window function to calculate running totals per user.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses a window function to calculate cumulative totals.\nThe query returns a running total for each user."
+    },
+    {
+      "question": "Implement a function that finds the longest substring without repeating characters using the sliding-window technique.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The implementation finds the longest substring whose characters do not repeat.\nThe implementation uses the sliding-window technique."
+    },
+    {
+      "question": "How would you design a scalable, fault-tolerant pipeline for real-time analytics while handling late-arriving data, deduplication, schema evolution, data quality, monitoring, and exactly-once semantics?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer addresses scalability and fault tolerance for real-time analytics.\nThe answer explains how late-arriving data, duplicate records, and schema evolution would be handled.\nThe answer addresses data quality, monitoring, and exactly-once semantics."
+    },
+    {
+      "question": "What are the trade-offs between batch and streaming architectures?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer compares batch and streaming architectures.\nThe answer identifies and explains the trade-offs between them."
+    },
+    {
+      "question": "How would you design an ETL system capable of processing more than 1M events per day efficiently?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer describes an ETL design with capacity for more than 1M daily events.\nThe answer explains how the system would process that volume efficiently."
+    },
+    {
+      "question": "Describe a situation in which you took ownership of a data pipeline beyond your responsibility.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate describes the project situation and the data pipeline involved.\nThe candidate explains the ownership they assumed beyond their normal responsibilities."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Algorithms and Complexity",
+      "SQL Window Functions",
+      "Data Pipeline and Streaming Architecture",
+      "ETL Scalability",
+      "Data Quality and Reliability",
+      "Behavioral Interviews"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bbe6d74e6a7278d4",
+    "saved_date": "2026-10-01T23:06:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

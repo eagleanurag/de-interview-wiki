@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-saved-22d4afdc1d5f355f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7476230697922260992",
+    "captured_at": "2026-10-02T00:15:45.506013Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:30Z"
+  },
+  "original_text": "𝗖𝗵𝗮𝗻𝗴𝗲 𝗗𝗮𝘁𝗮 𝗖𝗮𝗽𝘁𝘂𝗿𝗲 (𝗖𝗗𝗖) – 𝗠𝗼𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗧𝗼𝗽𝗶𝗰 𝗶𝗻 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝘀\nIf you're still doing full table loads… you're already behind.\n\n𝗪𝗵𝗮𝘁 𝗶𝘀 𝗖𝗗𝗖?\nTracks only new, updated, deleted records\nMoves only changes (not full data)\nEnables near real-time pipelines\n\n𝗪𝗵𝘆 𝗶𝘁 𝗺𝗮𝘁𝘁𝗲𝗿𝘀:\n🚫 Batch → slow, heavy, outdated data\n✅ CDC → fast, efficient, always fresh data\n\n𝗪𝗵𝗲𝗿𝗲 𝗶𝘁 𝗳𝗶𝘁𝘀:\nSource DB → CDC → Kafka/Stream → Warehouse → BI/AI\nBackbone of real-time analytics & modern data platforms\n\n𝗖𝗼𝗺𝗺𝗼𝗻 𝗖𝗗𝗖 𝗺𝗲𝘁𝗵𝗼𝗱𝘀:\nLog-based → Most efficient, production-grade\nTimestamp-based → Simple but can miss deletes\nTrigger-based → Flexible but adds DB overhead\n\n𝗣𝘂𝘀𝗵 𝘃𝘀 𝗣𝘂𝗹𝗹:\nPush → events sent instantly\nPull → periodic checks (slower)\n\n𝗪𝗵𝗮𝘁 𝗖𝗗𝗖 𝗲𝗻𝗮𝗯𝗹𝗲𝘀:\nReal-time dashboards\nFraud detection\nInventory tracking\nAI models with fresh data\n\n𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗧𝗶𝗽:\nIf you can explain CDC architecture + trade-offs, you’re already ahead of 80% candidates.\n\n💙 Like 👍 & Save 🔖 for later.\n\n🔄 Share this post if it adds value to your interview prep.\n\nComment below 👇 Which file format do you work with the most?\n\n𝗙𝗼𝗿 𝟭:𝟭 𝗴𝘂𝗶𝗱𝗮𝗻𝗰𝗲\nhttps://lnkd.in/gxjZT5P3\n\n🚀 𝗟𝗲𝘃𝗲𝗹 𝘂𝗽 𝘆𝗼𝘂𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗽𝗿𝗲𝗽:\n🔹 𝗦𝗤𝗟 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗠𝗮𝘀𝘁𝗲𝗿𝘆 – 𝟮𝟬𝟬+ 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dYJb42RH\n\n🔹 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 – 𝟵𝟲 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwCEinvH\n\n🔹 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗣𝘆𝘁𝗵𝗼𝗻 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 – 𝟭𝟬𝟬 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwKVeFf7\n\n👉 Follow Anuj Shrivastav for more Data Engineering interview content.\n\n#DataEngineering #CDC #BigData #Kafka #PySpark #Databricks #DataEngineer #InterviewPrep",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7476230697922260992_slide_0.jpg",
+      "description": "JPEG image, 480x600 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents Change Data Capture (CDC) as an alternative to full table batch loads. CDC tracks new, updated, and deleted records and moves only those changes to support faster, near-real-time ingestion. It describes a Source DB -> CDC -> Kafka/Stream -> Warehouse -> BI/AI architecture, compares log-based, timestamp-based, and trigger-based CDC, contrasts push and pull delivery, and identifies real-time dashboards, fraud detection, inventory tracking, and AI models with fresh data as use cases.",
+    "topics": [
+      "Change Data Capture (CDC)",
+      "Data ingestion",
+      "Near real-time data pipelines",
+      "Kafka"
+    ],
+    "subtopics": [
+      "Full table loads versus CDC",
+      "CDC architecture",
+      "Log-based CDC",
+      "Timestamp-based CDC",
+      "Trigger-based CDC",
+      "Push versus pull delivery",
+      "Real-time analytics use cases"
+    ],
+    "concepts": [
+      "Change Data Capture",
+      "Full table loads versus CDC",
+      "CDC architecture",
+      "Log-based CDC",
+      "Timestamp-based CDC",
+      "Trigger-based CDC",
+      "Push and pull delivery",
+      "CDC use cases"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is Change Data Capture, and how does it differ from full-table batch loading?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Change Data Capture tracks new, updated, and deleted records.\nCDC moves changes rather than complete tables and is presented as supporting faster, more efficient, near-real-time pipelines."
+    },
+    {
+      "question": "Describe the CDC architecture from a source database to BI and AI consumers.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The flow begins with a source database and captures changes through CDC.\nThe captured changes pass through Kafka or a stream before being loaded into a warehouse.\nThe warehouse then provides data to BI and AI consumers."
+    },
+    {
+      "question": "Compare log-based, timestamp-based, and trigger-based CDC methods.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Log-based CDC is characterized as the most efficient and production-grade option.\nTimestamp-based CDC is simple but can miss delete operations.\nTrigger-based CDC provides flexibility but adds database overhead."
+    },
+    {
+      "question": "A pipeline needs change events to be sent as soon as they occur rather than discovered through periodic checks. Which delivery style does the post identify?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Push delivery fits this requirement because events are sent instantly.\nPull delivery relies on periodic checks and is described as slower."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Change Data Capture (CDC)",
+    "secondary_topics": [
+      "Near real-time data pipelines",
+      "Batch data loading",
+      "Kafka",
+      "Data freshness for BI and AI"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:22d4afdc1d5f355f",
+    "saved_date": "2026-10-01T23:07:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7476230697922260992",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7476230697922260992_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

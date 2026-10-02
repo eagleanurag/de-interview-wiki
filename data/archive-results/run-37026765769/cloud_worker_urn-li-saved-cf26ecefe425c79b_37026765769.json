@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-cf26ecefe425c79b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7330193015812083712",
+    "captured_at": "2026-10-02T00:15:51.823080Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:37Z"
+  },
+  "original_text": "Data engineering will be 𝟭𝟬𝘅 𝗲𝗮𝘀𝗶𝗲𝗿 if you do these Projects!\n\n1. Awesome Open-Source Data Engineering Projects: https://lnkd.in/gCQU9j4T\n\n2. 7 End to End Data Engineering Projects: https://lnkd.in/gtsWVdXn\n\n3. 5 End-To-End Data Engineering Projects : https://lnkd.in/gWWnEbPQ\n\n4. End to End Azure Data Engineering Real Time Project: https://lnkd.in/g-V7VZJQ\n\n𝐍𝐞𝐞𝐝 1:1 𝐠𝐮𝐢𝐝𝐚𝐧𝐜𝐞? Let's connect -> https://lnkd.in/gA_B7vxW\n\n\n#dataengineering #dataengineer #spark #python #linkedin #project #data\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7330193015812083712_slide_0.jpg",
+      "description": "JPEG image, 480x558 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional resource list linking to open-source data engineering projects, multiple collections of end-to-end data engineering projects, and a real-time Azure data engineering project. It also includes a call for one-to-one guidance. No project details, technical methods, architectures, or implementation guidance are provided, and the referenced link destinations are not included in the source.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:cf26ecefe425c79b",
+    "saved_date": "2026-10-01T23:22:37Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7330193015812083712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7330193015812083712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

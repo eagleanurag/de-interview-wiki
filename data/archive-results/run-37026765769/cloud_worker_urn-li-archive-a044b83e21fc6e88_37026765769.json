@@ -1,0 +1,58 @@
+{
+  "id": "urn-li-archive-a044b83e21fc6e88",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.016037Z",
+    "author": "Renuka Srivastava",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:41Z"
+  },
+  "original_text": "Hi everyone, I recently came across an interesting data engineering coding question in an interview. I thought it would be valuable to share it here and see the different ways it can be solved using SQL or PySpark.\nFeel free to share your approach in the comments! I'll be posting my solution shortly.\n\ndataA=[(21,),(54,),(34,),(45,),(47,),(90,),(100,)]\ndataB=[('A',),('B',),('C',),('K',),('E',),('F',),('G',)]\n\nresult expected:\nresult_df=[(21,'A'),(54,'B'),(34,'C'),(45,'K'),(47,'E'),(90,'F'),(100,'G')]",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents an interview coding problem involving two seven-row datasets. The expected result pairs each numeric value in dataA with the character at the same ordinal position in dataB, producing seven two-column records. The author invites SQL or PySpark solutions but does not provide one yet.",
+    "topics": [
+      "Row-wise data alignment",
+      "SQL",
+      "PySpark"
+    ],
+    "subtopics": [
+      "Pairing records by ordinal position"
+    ],
+    "concepts": [
+      "Ordinal record alignment",
+      "Two-column result construction"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you transform dataA and dataB into the expected result by pairing values from the two datasets?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Pair each numeric value with the character at the same ordinal position in the other dataset.\nPreserve the displayed order and return seven records containing the paired numeric and character values."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Row-wise positional joining",
+    "secondary_topics": [
+      "SQL",
+      "PySpark"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a044b83e21fc6e88",
+    "saved_date": "2026-10-01T23:27:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

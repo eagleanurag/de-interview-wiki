@@ -1,0 +1,74 @@
+{
+  "id": "urn-li-archive-f69d525bb73ce491",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.211379Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:54Z"
+  },
+  "original_text": "Experian Interview Experience for the role Data Engineer(3 yrs+ experiene)\n\n1. What is difference of mapreduce and spark\n2. Why spark without using inmemory computation is 10x faster than mapreduce\n3. Spark is written in scala , how the code written in pyspark is getting executed\n4. What is the task\n5. Difference of dataset and dataframe\n6. Given below identify the dataset and dataframe:\n Dataset<Row> \n Dataset<Employee>\n Dataset<dept>\n7. Given the below identify the transformations and actions\n filter, reducebykey, reduce, read, write, collect \n8. Where glue catalog is stored.\n9. If there is any data from s3 glacier , how to retrieve\n10. While using athena if any one of the data is moved to glacier , will the data is visible here\n😶‍🌫️😶‍🌫️\nfollow for more interview questions\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is an incomplete, question-only list attributed to an Experian Data Engineer interview for candidates with 3 or more years of experience. It asks about MapReduce and Spark, Spark performance and execution, PySpark and Scala, Spark tasks, Datasets and DataFrames, transformations and actions, Glue catalog storage, and retrieving or accessing S3 Glacier data through Athena. It provides no answers, includes a malformed performance claim, and ends with a truncated \"see more\" prompt.",
+    "topics": [
+      "Data engineering interview questions",
+      "MapReduce and Spark",
+      "PySpark execution",
+      "Dataset and DataFrame",
+      "data storage and query services"
+    ],
+    "subtopics": [
+      "MapReduce versus Spark",
+      "Spark performance and in-memory computation",
+      "Spark tasks",
+      "generic Dataset and DataFrame types",
+      "transformations versus actions",
+      "Glue catalog storage",
+      "retrieving data from S3 Glacier",
+      "Athena visibility of S3 Glacier data"
+    ],
+    "concepts": [
+      "MapReduce",
+      "Spark",
+      "In-memory computation",
+      "Scala",
+      "PySpark",
+      "Spark task",
+      "Dataset",
+      "DataFrame",
+      "Transformations and actions",
+      "Glue catalog",
+      "S3 Glacier",
+      "Athena"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Spark and PySpark interview questions",
+    "secondary_topics": [
+      "MapReduce versus Spark",
+      "Dataset versus DataFrame",
+      "Spark transformations and actions",
+      "Glue catalog storage",
+      "S3 Glacier data retrieval",
+      "Athena access to S3 Glacier data"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f69d525bb73ce491",
+    "saved_date": "2026-10-01T23:09:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

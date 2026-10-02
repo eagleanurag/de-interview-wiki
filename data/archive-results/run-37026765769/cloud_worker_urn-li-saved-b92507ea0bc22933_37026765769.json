@@ -1,0 +1,77 @@
+{
+  "id": "urn-li-saved-b92507ea0bc22933",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327558140156149760",
+    "captured_at": "2026-10-02T00:15:50.990084Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:43Z"
+  },
+  "original_text": "Avoid this common mistake in your next analytics interview! [Detailed Solution Video in Comment]\n\n👉🏻Avoid using Limit for problems like - Find the highest Salary of Employee, Find the top 5 products by sales etc.\n\nWhy ❓\n\n✅ As it doesn't handle cases where there will be \"ties\" ! Thus a chance of having more than 5 records in top 5 products is possible !\n\n👉🏻 Use Rank / Dense Rank accordingly and present a complete solution !\n\nfollow Gaurav Agrawal for more !\n\n#analytics #businessanalytics #dataanalytics #sql #interviewprep\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327558140156149760_slide_0.jpg",
+      "description": "JPEG image, 480x447 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post warns interview candidates not to rely on LIMIT for queries such as finding the highest employee salary or the top five products by sales because fixed row limits do not properly account for ties. It recommends using RANK or DENSE_RANK as appropriate so tied results can be handled. The promised detailed solution is not included, and the post does not explain when to choose RANK over DENSE_RANK.",
+    "topics": [
+      "SQL",
+      "Analytics interview preparation",
+      "Top-N queries"
+    ],
+    "subtopics": [
+      "LIMIT limitations",
+      "Handling ties",
+      "RANK",
+      "DENSE_RANK"
+    ],
+    "concepts": [
+      "LIMIT in top-N queries",
+      "Ties in ranked results",
+      "RANK and DENSE_RANK"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why can LIMIT be unsuitable for finding the top five products by sales when multiple products have the same sales value?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Multiple products can share the same sales value.\nA fixed LIMIT can omit tied records that belong in the complete result.\nA complete tied top-five result can contain more than five records."
+    },
+    {
+      "question": "What approach does the post recommend instead of using LIMIT for highest-salary and top-product queries?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Use RANK or DENSE_RANK according to the desired handling of ties.\nAccount for tied values rather than treating the requested row count as an absolute cutoff."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL top-N query design",
+    "secondary_topics": [
+      "Tie handling",
+      "SQL ranking functions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b92507ea0bc22933",
+    "saved_date": "2026-10-01T23:24:43Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327558140156149760",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327558140156149760_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

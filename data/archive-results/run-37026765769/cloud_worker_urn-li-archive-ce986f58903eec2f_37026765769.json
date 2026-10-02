@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-ce986f58903eec2f",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.304093Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:10Z"
+  },
+  "original_text": "🔐 🚀 #2nd technical round #EPAM\n⚖️ Posting the #second half of the interview\n#Interview completed in perfect 85 mins\n1️⃣ Delta lake and properties\n2️⃣ Datawarehouse vs Datalake\n3️⃣ Join strategies in spark.\n4️⃣ Caching and persist\n5️⃣ Parquet file vs csv file.\n6️⃣ Predicate pushdown possible in csv file or not ?\n7️⃣ Predicate pushdown and projection pruning\n8️⃣ Deployment questions using azure devops and git\n9️⃣ Unit testing using pytest.\n🔟 Azure key vault and unity catalog purpose\n1️⃣ 1️⃣ Python coding:\ndictionary {a:10,b:25,c:28}\nreturn the key with maximum value\noutput:\"c\"\nSolved using two approaches :\n🥇 Using normal dictionary logic \n🥈 Using dictionary comprehensions\n\n1️⃣ 2️⃣ How do you work on slow performing spark job ?\n1️⃣ 3️⃣ How many unity catalogs you have implemented ?\n\n➕ These are the questions asked in the 2nd technical round.\nInterview seemed easier than 1st round.\n\n🗝️ 😀 Do follow Apurva Gawande for more content \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a social media recap of questions reportedly asked in an 85-minute second technical round. It lists topics covering Delta Lake, data warehouses and data lakes, Spark joins and performance, caching, Parquet and CSV, predicate pushdown and projection pruning, Azure DevOps, Git, pytest, Azure Key Vault, Unity Catalog, and a Python coding exercise. The post gives the coding input, expected output, and two reported solution categories, but it does not provide substantive answers to the other technical questions.",
+    "topics": [
+      "Delta Lake",
+      "Spark execution and performance",
+      "Deployment and unit testing",
+      "Azure Key Vault and Unity Catalog",
+      "Python dictionary processing"
+    ],
+    "subtopics": [
+      "Delta Lake properties",
+      "Spark join strategies",
+      "Spark caching and persist",
+      "Parquet versus CSV",
+      "Predicate pushdown in CSV files",
+      "Predicate pushdown and projection pruning",
+      "Deployment with Azure DevOps and Git",
+      "Unit testing with pytest",
+      "Purpose of Azure Key Vault and Unity Catalog",
+      "Number of Unity Catalogs implemented",
+      "Maximum-value key lookup in a Python dictionary",
+      "Slow-performing Spark jobs"
+    ],
+    "concepts": [
+      "Delta Lake properties",
+      "Spark join strategies",
+      "Spark caching and persist",
+      "Parquet versus CSV",
+      "Predicate pushdown and projection pruning",
+      "Azure DevOps and Git deployment",
+      "Unit testing with pytest",
+      "Azure Key Vault and Unity Catalog",
+      "Maximum-value dictionary key",
+      "Slow Spark job performance"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given the dictionary {'a': 10, 'b': 25, 'c': 28}, return the key with the maximum value.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The correct key is 'c', whose value of 28 is the largest.\nThe post reports solving the exercise with normal dictionary logic and with a dictionary comprehension."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Lake",
+    "secondary_topics": [
+      "Data warehouse and data lake comparison",
+      "Spark joins, caching, persistence, and performance",
+      "Parquet and CSV",
+      "Predicate pushdown and projection pruning",
+      "Azure DevOps and Git",
+      "pytest",
+      "Azure Key Vault",
+      "Unity Catalog",
+      "Python coding"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ce986f58903eec2f",
+    "saved_date": "2026-10-01T23:19:10Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

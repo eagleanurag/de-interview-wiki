@@ -1,0 +1,54 @@
+{
+  "id": "urn-li-saved-6465d2841e27d464",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346044123352616960",
+    "captured_at": "2026-10-02T00:15:48.116687Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:36Z"
+  },
+  "original_text": "I often forget important PySpark functions!\n\nSo, here’s a chessboard featuring the most common ones.\n\nI made a simple chessboard-style visual to help you remember the most common PySpark functions - right when you need them.\n\nYou can use this chessboard as a quick cheat sheet. Pull it up when you are coding in Databricks or any PySpark notebook.\n\nWhich PySpark function do you use most? Or is there a “hidden gem” you think should be on the chessboard?\n\n\nConnect 1:1 for your Data Engineering career guidance -> https://lnkd.in/gH4DeYb4\nATS Optimised Resume Template ->\nhttps://lnkd.in/g-iw7FaQ\n\n\n♻️ Found this useful? Repost it!\n➕ Follow Abhinav Singh for daily DATA insights.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346044123352616960_slide_0.jpg",
+      "description": "JPEG image, 480x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post promotes a chessboard-style visual intended to help users remember common PySpark functions in Databricks or other PySpark notebooks. However, the supplied content does not identify any functions, explain their uses, or contain extracted media text, so it provides no substantive technical knowledge.",
+    "topics": [
+      "PySpark"
+    ],
+    "subtopics": [
+      "Common PySpark functions"
+    ],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Databricks"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6465d2841e27d464",
+    "saved_date": "2026-10-01T23:13:36Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346044123352616960",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346044123352616960_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

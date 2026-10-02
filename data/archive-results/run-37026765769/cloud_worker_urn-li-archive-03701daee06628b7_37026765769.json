@@ -1,0 +1,104 @@
+{
+  "id": "urn-li-archive-03701daee06628b7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.786476Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:30Z"
+  },
+  "original_text": "I am a Senior Analyst at Accenture with more than 5+ years of experience.\nHere are 5 pieces of advice I’d give to aspiring data analysts in 2025 who want to break into and grow in this field:\n\n◄ Master Excel before anything else\n-Excel isn’t outdated, it's foundational.\n\n-Pivot tables, VLOOKUP/XLOOKUP, conditional formatting, \n\n-Power Query, these are non-negotiables.\n\n-Many companies still rely heavily on Excel; knowing it well gives you a strong edge, especially in interviews.\n\n\n◄ Master SQL before chasing dashboards\n-Nail the fundamentals—joins, window functions, CTEs, and subqueries.\n\n-Learn to write clean, optimized queries that scale.\n\n-Understand the why behind each query, don’t just copy from Stack Overflow/Chatgpt.\n\n◄ Think like a business stakeholder, not a data operator\n-Every chart or metric you build should answer a business question.\n\n-Translate insights into actions—don’t just say “Sales dropped,” explain why and what to do next.\n \n-Learn basic business lingo: CAC, CLTV, MRR—this sets you apart instantly.\n\n◄ Communicate with clarity and impact\n-A simple, clear insight always beats a flashy dashboard.\n\n-Summarize in bullet points, highlight “so what?” in every report.\n\n-Practice storytelling, take your audience from problem → data → insight → action.\n\n◄ Your career = projects + proof + presence\n-Document your projects. Share your thought process online.\n\n-Build a strong LinkedIn presence, engage with the data community.\n\n-Opportunities come to those who show their work, not just those who do the work.\n–\nP.S. I’m Mukesh, a Senior Analyst at Accenture.\nFollow me for more insights on data analysis.\n\nRepost if you learned something new today!",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A Senior Analyst at Accenture presents five pieces of 2025 career advice for aspiring data analysts. The post recommends mastering Excel and SQL fundamentals, analyzing data from a business perspective, communicating clear and actionable insights, and building career visibility through documented projects, shared thought processes, LinkedIn engagement, and participation in the data community. It names specific Excel capabilities, SQL constructs, and business metrics but does not define the business metrics or provide query examples.",
+    "topics": [
+      "Data analyst career development",
+      "Excel proficiency",
+      "SQL proficiency",
+      "Business-oriented analysis",
+      "Data communication",
+      "Professional presence"
+    ],
+    "subtopics": [
+      "Pivot tables",
+      "VLOOKUP and XLOOKUP",
+      "Conditional formatting",
+      "Power Query",
+      "Joins",
+      "Window functions",
+      "CTEs and subqueries",
+      "Query optimization and scalability",
+      "CAC, CLTV, and MRR",
+      "Problem-data-insight-action storytelling",
+      "Project documentation",
+      "LinkedIn and data community engagement"
+    ],
+    "concepts": [
+      "Excel as a foundational data analysis skill",
+      "SQL fundamentals",
+      "Clean and scalable queries",
+      "Business-question-driven analysis",
+      "Business metrics vocabulary",
+      "Clear data storytelling",
+      "Projects, proof, and presence"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which Excel capabilities should an aspiring data analyst master, and why are they important?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies pivot tables, VLOOKUP or XLOOKUP, conditional formatting, and Power Query as essential capabilities.\nIt describes Excel as a foundational skill that remains heavily used by many companies.\nIt states that strong Excel knowledge can provide an advantage, especially during interviews."
+    },
+    {
+      "question": "Which SQL fundamentals should be mastered before focusing on dashboards, and what makes a query strong?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The core SQL capabilities mentioned are joins, window functions, CTEs, and subqueries.\nQueries should be clean, optimized, and designed to scale.\nAn analyst should understand why each query works rather than copying a solution without understanding it."
+    },
+    {
+      "question": "How should an analyst handle a finding that sales dropped so that the analysis is useful to a business stakeholder?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The chart or metric should be connected to a specific business question.\nThe analyst should explain why sales dropped rather than reporting the decline by itself.\nThe analysis should recommend what action should follow the finding."
+    },
+    {
+      "question": "How should an analyst communicate insights clearly and with impact?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A simple, clear insight is preferable to a flashy dashboard.\nThe report should use bullet points and explicitly address the 'so what?' of the analysis.\nThe presentation should follow a problem-data-insight-action narrative."
+    },
+    {
+      "question": "How can an aspiring data analyst use projects and professional presence to support career growth?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The analyst should document projects and share the thought process behind the work.\nBuilding a LinkedIn presence and engaging with the data community can make the analyst's work visible.\nCareer opportunities are more likely when people can see the work, rather than knowing only that the analyst performed it."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analysis",
+    "primary_topic": "Data Analyst Skill and Career Development",
+    "secondary_topics": [
+      "Excel",
+      "SQL",
+      "Business Acumen",
+      "Data Communication",
+      "Professional Presence"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:03701daee06628b7",
+    "saved_date": "2026-10-01T23:22:30Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

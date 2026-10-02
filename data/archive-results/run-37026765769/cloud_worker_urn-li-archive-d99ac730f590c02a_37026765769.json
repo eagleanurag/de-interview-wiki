@@ -1,0 +1,126 @@
+{
+  "id": "urn-li-archive-d99ac730f590c02a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.532838Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:00Z"
+  },
+  "original_text": "Data Engineering interviews are usually 𝟯–𝟰 𝗿𝗼𝘂𝗻𝗱𝘀....\nthat can get you paid ₹12 LPA or ₹45 LPA...\n\n𝗥𝗼𝘂𝗻𝗱 𝟭: SQL + Problem Solving\nThis is where 50% of people get rejected.\n→ “Find 2nd latest transaction per user”\n→ “Rank records inside partitions”\n→ “Explain why NULLs break NOT IN”\n\n𝗥𝗼𝘂𝗻𝗱 𝟮: Data Pipeline Design\nThey don’t care if you know Airflow or Spark.\n→ “Build a pipeline for 100M+ daily events”\n→ “What if one batch fails mid-way?”\n→ “How do you deal with schema drift or late-arriving data?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟯: System Design or Architecture\n→ “Design a data lake that scales and survives failures”\n→ “How do you track global ride data in real time?”\n→ “What are the tradeoffs of batch vs stream in this use case?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟰: Stakeholder & Behaviorals\n→ “Explain a failed pipeline to a non-technical manager”\n→ “Tell me a time your data was wrong — what did you do?”\n→ “Can analysts trust what you build?”\n\n\nFollow Me Venkat Sai Kalyanam for more such content 😌 \nComment “CFBR” for better reach",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This promotional post outlines four data engineering interview rounds: SQL and problem solving, data pipeline design, system design or architecture, and stakeholder and behavioral interviews. It says knowledge of Airflow or Spark is not the focus of pipeline design and lists prompts about transaction ranking, NULLs in NOT IN, very large daily event pipelines, partial batch failures, schema drift, late data, scalable and failure-resilient data lakes, real-time ride data, and batch-versus-stream trade-offs. It provides no answers or technical methods. It also states that the rounds can lead to ₹12 LPA or ₹45 LPA and that 50% of people are rejected in Round 1, but gives no evidence for those claims.",
+    "topics": [
+      "Data engineering interviews",
+      "SQL problem solving",
+      "Data pipeline design",
+      "System design and architecture",
+      "Stakeholder and behavioral interviews",
+      "Batch and stream processing"
+    ],
+    "subtopics": [
+      "Finding the second-latest transaction per user",
+      "Ranking records inside partitions",
+      "NULL behavior in NOT IN",
+      "Designing pipelines for 100M+ daily events",
+      "Handling a mid-batch failure",
+      "Dealing with schema drift",
+      "Handling late-arriving data",
+      "Scaling and failure resilience for data lakes",
+      "Tracking global ride data in real time",
+      "Choosing between batch and stream processing",
+      "Communicating pipeline failures to non-technical managers",
+      "Responding to incorrect data",
+      "Analyst trust in data"
+    ],
+    "concepts": [
+      "Second-latest transaction per user",
+      "Ranking records inside partitions",
+      "NULL behavior in NOT IN",
+      "Large-scale daily event pipelines",
+      "Mid-batch pipeline failure",
+      "Schema drift and late-arriving data",
+      "Scalable and failure-resilient data lakes",
+      "Real-time global ride data",
+      "Batch-versus-stream trade-offs",
+      "Data correctness and analyst trust"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you use SQL to find the second-latest transaction for each user?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer should rank transactions for each user so the second-latest record can be selected."
+    },
+    {
+      "question": "Why can NULL values break a query that uses NOT IN?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should explain the specific result behavior of NULL values in a NOT IN expression."
+    },
+    {
+      "question": "How would you design a pipeline for more than 100 million events per day, and what would you do if a batch failed midway?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer should address the stated daily event volume and scalability.\nThe answer should explain how the design handles a partially failed batch."
+    },
+    {
+      "question": "How should a data pipeline deal with schema drift and late-arriving data?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer should explain how the pipeline handles schema drift.\nThe answer should explain how the pipeline handles data that arrives late."
+    },
+    {
+      "question": "What architecture would you use for a data lake that must scale and survive failures?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer should explain how the data lake scales.\nThe answer should explain how the architecture survives failures."
+    },
+    {
+      "question": "For a real-time global ride-data use case, how do batch and stream approaches compare?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer should compare batch and stream approaches against the need for real-time tracking.\nThe answer should identify the trade-offs between the two approaches."
+    },
+    {
+      "question": "How would you explain a failed pipeline to a non-technical manager?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The answer should communicate the pipeline failure in terms that a non-technical manager can understand."
+    },
+    {
+      "question": "Tell me about a time your data was wrong. What did you do?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer should describe an incident involving incorrect data.\nThe answer should explain the action taken in response."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "SQL and Problem Solving",
+      "Data Pipeline Design",
+      "System Design and Architecture",
+      "Stakeholder Communication",
+      "Behavioral Troubleshooting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d99ac730f590c02a",
+    "saved_date": "2026-10-01T23:11:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

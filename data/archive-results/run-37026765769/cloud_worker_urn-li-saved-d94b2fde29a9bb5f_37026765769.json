@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-d94b2fde29a9bb5f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315590769430474753",
+    "captured_at": "2026-10-02T00:15:52.310729Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:01Z"
+  },
+  "original_text": "Your SQL just got superpowers !\n\nDatabricks just dropped a set of AI Functions that let you run powerful language and forecasting tasks directly in SQL — and it's a total game-changer.\nCheck out this quick demo I ran (screenshot below 👇)\n\nUsing just one line of SQL, I analyzed sentiment from customer reviews in real time.\nImagine doing this across millions of rows… IN SECONDS.\n\nAnother Example it can prioritize task- I took an example of platform support tickets queue, \nYou can now auto-prioritize messages using SQL with Databricks AI functions. For example:\n\nSELECT ai_classify(\"My password is leaked and I can't access the system.\", ARRAY(\"urgent\", \"not urgent\"));\n\n-- Returns: urgent\n\nSuper useful for flagging critical tickets without writing complex logic or building ML models.\n\nThere are many more functions you can try out — sentiment analysis, summarization, translation, grammar correction, and more.\n\nExplore here 👉 https://lnkd.in/dtyjgGCy",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315590769430474753_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post introduces Databricks AI Functions for performing language and forecasting tasks directly in SQL. It demonstrates the ai_classify function by classifying a support ticket about a leaked password as urgent when given the labels \"urgent\" and \"not urgent.\" It also claims that Databricks SQL can analyze customer-review sentiment in real time across millions of rows in seconds and mentions summarization, translation, grammar correction, and forecasting as additional capabilities.",
+    "topics": [
+      "Databricks AI Functions",
+      "SQL",
+      "Text classification",
+      "Sentiment analysis"
+    ],
+    "subtopics": [
+      "Customer-review sentiment analysis",
+      "Support-ticket prioritization",
+      "Text summarization",
+      "Translation",
+      "Grammar correction",
+      "Forecasting"
+    ],
+    "concepts": [
+      "Databricks AI Functions",
+      "ai_classify",
+      "Support-ticket prioritization",
+      "Sentiment analysis",
+      "Additional language and forecasting capabilities"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What does the post's ai_classify example do, and what result does it return?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The function classifies supplied text against the labels \"urgent\" and \"not urgent.\"\nFor the leaked-password support ticket, the shown result is \"urgent.\""
+    },
+    {
+      "question": "How can ai_classify be used to prioritize a platform support ticket?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The ticket text can be passed to ai_classify with priority labels such as \"urgent\" and \"not urgent.\"\nA critical incident can then be flagged without complex custom logic or a separately built machine-learning model."
+    },
+    {
+      "question": "Which types of language and forecasting tasks does the post say can be performed directly in Databricks SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The listed language tasks include sentiment analysis, summarization, translation, and grammar correction.\nForecasting is also listed, although the post does not demonstrate its syntax or implementation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks AI Functions in SQL",
+    "secondary_topics": [
+      "Text classification",
+      "Sentiment analysis",
+      "Support-ticket prioritization",
+      "Forecasting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d94b2fde29a9bb5f",
+    "saved_date": "2026-10-01T23:30:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315590769430474753",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315590769430474753_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

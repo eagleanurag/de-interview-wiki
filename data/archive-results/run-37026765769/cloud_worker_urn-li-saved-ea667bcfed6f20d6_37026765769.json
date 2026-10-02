@@ -1,0 +1,115 @@
+{
+  "id": "urn-li-saved-ea667bcfed6f20d6",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7354355972099747843",
+    "captured_at": "2026-10-02T00:15:53.047594Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:50Z"
+  },
+  "original_text": "• 1st\nTop Data Engineering voice 2023,2024🎖️| Writes to 33K+ | Snr Data Engineer at Kimberly Clark | Python|Spark|PySpark|Genie|Azure data factory|ADLS Gen2|Databricks|Deltalake| Agentic AI | LLM | RAG | Axilon AI |\n1yr •\n𝐘𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐧𝐞𝐞𝐝 𝟔 𝐦𝐨𝐧𝐭𝐡𝐬 𝐭𝐨 𝐠𝐞𝐭 𝐬𝐭𝐚𝐫𝐭𝐞𝐝 𝐰𝐢𝐭𝐡 𝐏𝐲𝐒𝐩𝐚𝐫𝐤.\nWhat you really need? A clear roadmap and 𝟑𝟎 𝐟𝐨𝐜𝐮𝐬𝐞𝐝 𝐝𝐚𝐲𝐬.\nWhether you're scaling pipelines, handling structured + streaming data, or prepping for interviews, this plan has your back 👇\n𝐇𝐞𝐫𝐞’𝐬 𝐰𝐡𝐚𝐭 𝐲𝐨𝐮 𝐜𝐨𝐯𝐞𝐫:\n✅ Week 1 → Spark ecosystem, RDDs, Transformations\n✅ Week 2 → DataFrames, Joins, Spark SQL\n✅ Week 3 → Performance tuning, Partitioning, Window Functions\n✅ Week 4 → PySpark MLlib, Streaming, Model Deployment\n🔁 Practice daily and Focus on fundamentals..\nWork on real Spark jobs, not just “ 𝐡𝐞𝐥𝐥𝐨 𝐰𝐨𝐫𝐥𝐝 ”\n💡 𝐒𝐨 𝐰𝐡𝐲 𝐩𝐢𝐜𝐤 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 𝐚𝐬 𝐚 𝐝𝐚𝐭𝐚 𝐞𝐧𝐠𝐢𝐧𝐞𝐞𝐫?\nBecause it gives you the power of Apache Spark + the simplicity of Python.\n- Read terabytes with .parquet(), .json()\n- Transform data at scale with groupBy, withColumn, window functions\n- Serve models, run streaming, handle real-world workloads\nFollow Girish V for more insights\nBetter reach: Shubham Wadekar Rajat Gajbhiye Abhisek Sahu Vaishnavi MURALIDHAR Sumit Mittal Deepak Goyal Karthik Kondpak Shashank Mishra 🇮🇳 Ankita Gulati Asheesh T. Ankur Bhattacharya Ankur Ranjan Sachin Chandrashekhar 🇮🇳 Lovee Kumar Allauddin Khan Pathan Sai Krishna Chivukula Priyam Jain Nimra Ayaz Anurag Sharma Abhishek Jha Gayatri G\n#SQL #SQLInterview #SQLPreparation #Database #DataEngineer #DataAnalytics #DataScience #BusinessIntelligence #InterviewTips #TechCareers #CareerGrowth\n…see more\npys",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7354355972099747843_slide_0.jpg",
+      "description": "JPEG image, 390x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional post presents a 30-day PySpark study plan organized into four weekly stages: the Spark ecosystem, RDDs and transformations; DataFrames, joins and Spark SQL; performance tuning, partitioning and window functions; and PySpark MLlib, streaming and model deployment. It recommends daily practice on real Spark jobs and describes PySpark as combining Apache Spark with Python for reading and transforming large-scale data, serving models and handling streaming workloads. The post provides a learning outline rather than detailed implementation guidance.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Spark DataFrames",
+      "Spark SQL",
+      "PySpark performance tuning",
+      "PySpark streaming",
+      "PySpark MLlib"
+    ],
+    "subtopics": [
+      "RDDs",
+      "Data transformations",
+      "Joins",
+      "Partitioning",
+      "Window functions",
+      "Parquet",
+      "JSON",
+      "Model deployment",
+      "Real-world Spark jobs"
+    ],
+    "concepts": [
+      "PySpark",
+      "RDDs",
+      "Spark transformations",
+      "Spark DataFrames",
+      "Joins",
+      "Spark SQL",
+      "Performance tuning",
+      "Partitioning",
+      "Window functions",
+      "PySpark MLlib",
+      "Streaming",
+      "Model deployment",
+      "Parquet",
+      "JSON",
+      "Real Spark jobs"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the proposed four-week PySpark roadmap progress from foundational concepts to advanced workloads?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Week 1 covers the Spark ecosystem, RDDs and transformations.\nWeek 2 covers DataFrames, joins and Spark SQL.\nWeek 3 covers performance tuning, partitioning and window functions.\nWeek 4 covers PySpark MLlib, streaming and model deployment."
+    },
+    {
+      "question": "Which data formats and operations does the post identify for processing data at scale with PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post names Parquet and JSON as formats for reading data.\nIt identifies groupBy, withColumn and window functions as large-scale transformation operations."
+    },
+    {
+      "question": "What performance and advanced workload topics are included in the later stages of the PySpark roadmap?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The performance-focused stage includes tuning, partitioning and window functions.\nThe advanced stage includes PySpark MLlib, streaming and model deployment.\nThe post associates these areas with model serving, streaming and real-world workloads."
+    },
+    {
+      "question": "Why does the post recommend PySpark for data engineering, and what kinds of work does it claim PySpark can support?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post describes PySpark as combining Apache Spark capabilities with Python.\nIt associates PySpark with scalable pipeline work, structured and streaming data, model serving and real-world Spark jobs."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "Spark DataFrames",
+      "Spark SQL",
+      "Spark performance tuning",
+      "Streaming data",
+      "PySpark MLlib",
+      "Model deployment"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ea667bcfed6f20d6",
+    "saved_date": "2026-10-01T23:09:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7354355972099747843",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7354355972099747843_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

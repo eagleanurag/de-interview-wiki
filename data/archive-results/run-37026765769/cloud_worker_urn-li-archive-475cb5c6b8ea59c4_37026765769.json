@@ -1,0 +1,67 @@
+{
+  "id": "urn-li-archive-475cb5c6b8ea59c4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.688248Z",
+    "author": "Status is online",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:15Z"
+  },
+  "original_text": "Software that I will never seriously use again because I get to pick as an entrepreneur:\n\n- Microsoft Teams or Slack - after the Salesforce acquisition they've become a shell of the company they had potential to become. Just like what happened to Tableau and Heroku. Pick Discord like someone under the age of 55\n- Heroku / DigitalOcean - use Vercel like a normal person \n- Zoom - Discord stage and Riverside.fm dunk on Zoom in every possible way\n- Microsoft Outlooks - why would you ever pick this when there's Gmail or ProtonMail or 5 other things that are better than Outlook? \n- Anything built by Atlassian, no Bitbucket (GitHub is better), no Confluence (Notion is better), no JIRA (Linear is better)\n- No Google Slides or god-forbid Powerpoint (Canva is better)\n- No Microsoft word (Notion is better)\n\nMy guiding light when picking tech is: \"does this technology make me feel like a lifeless piece of corporate trash?\" If the answer is yes, then don't pick it and find an option with more soul in it!",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is an informal, opinion-based list of technologies the author avoids and alternatives they prefer. It covers communication, hosting, email, developer collaboration, project management, presentations, and word-processing products, but it does not provide data engineering techniques, implementation details, architecture, or objective technical comparisons.",
+    "topics": [
+      "Technology preferences",
+      "Communication and collaboration software",
+      "Cloud deployment platforms",
+      "Developer and project-management tools",
+      "Productivity software"
+    ],
+    "subtopics": [
+      "Discord compared with Microsoft Teams and Slack",
+      "Vercel compared with Heroku and DigitalOcean",
+      "Discord Stage and Riverside.fm compared with Zoom",
+      "Gmail and ProtonMail compared with Microsoft Outlook",
+      "GitHub, Notion, and Linear compared with Atlassian products",
+      "Canva compared with Google Slides and PowerPoint",
+      "Notion compared with Microsoft Word"
+    ],
+    "concepts": [
+      "Subjective technology selection",
+      "Communication platform preferences",
+      "Cloud platform preferences",
+      "Video communication preferences",
+      "Email client preferences",
+      "Developer and project-management tool preferences",
+      "Presentation software preferences",
+      "Word-processing software preferences"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "General software and technology preferences",
+    "primary_topic": "Technology preferences",
+    "secondary_topics": [
+      "Communication and collaboration software",
+      "Hosting and deployment platforms",
+      "Productivity software",
+      "Developer and project-management tools"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:475cb5c6b8ea59c4",
+    "saved_date": "2026-10-01T23:35:15Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

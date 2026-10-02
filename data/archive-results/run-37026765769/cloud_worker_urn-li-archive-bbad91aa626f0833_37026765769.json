@@ -1,0 +1,104 @@
+{
+  "id": "urn-li-archive-bbad91aa626f0833",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.047471Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:41Z"
+  },
+  "original_text": "If I were to start learning #python again for analytics, this is how I would prioritize topics for learning:\n\nWeek 1: Learning python basics + Control flow Statement\n⏩ Syntax, data types, variables, and basic operations\n⏩If-Else condition, For and While loop ,Functions\n\nWeek 2: Data structures and data manipulations\n⏩Lists and dictionaries\n⏩Working with Text Data\n\nWeek 3 &4: Data Analysis Libraries\n⏩Reading from and writing to files (CSV, XLSX)\n⏩Introduction to Numpy, Pandas & Matplotlib\n\nData Manipulations using pandas:\n⏩Working with data frames and series\n⏩Basic operations Filtering, Merging, Sorting, Aggregating data\n\nData Visualization using Matplotlib/Seaborn:\n⏩Creating Histograms, Scatterplot, Charts (Line, Bar, Pie)\n\nNow start building mini projects. [ Start with basic EDA and keep adding complexities with time]\n\nI will deprioritize learning and implementing ML algo's at the start and focus more on basics initially.\n\nGaurav Agrawal\n\n#analytics #python #datafam\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post proposes a four-week learning roadmap for Python analytics. It begins with syntax, data types, variables, basic operations, control flow, and functions, followed by lists, dictionaries, and text data. The third and fourth weeks cover CSV and XLSX file handling, introductory use of NumPy, pandas, and Matplotlib, pandas operations on DataFrames and Series, and visualization with Matplotlib and Seaborn. After learning the fundamentals, the recommendation is to build exploratory data analysis mini projects, increasing complexity over time while initially deprioritizing machine-learning algorithms.",
+    "topics": [
+      "Python for analytics",
+      "Python fundamentals",
+      "Data structures",
+      "Data analysis with pandas",
+      "Data visualization",
+      "Exploratory data analysis",
+      "Project-based learning"
+    ],
+    "subtopics": [
+      "Syntax, data types, variables, and basic operations",
+      "If-else statements, loops, and functions",
+      "Lists and dictionaries",
+      "Working with text data",
+      "Reading and writing CSV and XLSX files",
+      "NumPy fundamentals",
+      "DataFrames and Series",
+      "Filtering, merging, sorting, and aggregation",
+      "Histograms, scatter plots, line charts, bar charts, and pie charts",
+      "Matplotlib and Seaborn",
+      "Exploratory data analysis mini projects",
+      "Prioritizing fundamentals over machine-learning algorithms"
+    ],
+    "concepts": [
+      "Python fundamentals",
+      "Control flow",
+      "Functions",
+      "Lists and dictionaries",
+      "Text data handling",
+      "CSV and XLSX file I/O",
+      "NumPy",
+      "DataFrames and Series",
+      "Basic pandas data manipulation",
+      "Matplotlib and Seaborn",
+      "Exploratory data analysis mini projects",
+      "Machine-learning algorithm prioritization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which Python fundamentals should an analytics beginner learn before moving to data-analysis libraries?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The fundamentals include syntax, data types, variables, and basic operations.\nControl-flow skills include if-else conditions, for loops, and while loops.\nFunctions are also part of the recommended foundation."
+    },
+    {
+      "question": "How can pandas be used to perform basic data manipulations after reading CSV or XLSX data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Python can read the CSV or XLSX file into a structure used for analysis.\nThe analysis can work with pandas DataFrames and Series.\nBasic pandas operations can filter, merge, sort, and aggregate the data.\nThe result can be written back to a file when file output is required."
+    },
+    {
+      "question": "Which visualizations can an analytics beginner create with Matplotlib and Seaborn, and which basic analysis operations can support them?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post explicitly names histograms, scatter plots, line charts, bar charts, and pie charts.\nThe data preparation can include filtering, merging, sorting, and aggregating data with pandas.\nThe visualizations can be used as part of exploratory data analysis mini projects."
+    },
+    {
+      "question": "How should a beginner progress from Python fundamentals to analytics projects while deciding when to introduce machine learning?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The learner should first cover Python basics, control flow, functions, and core data structures.\nThe learner should then study text data, file handling, NumPy, pandas, and visualization libraries.\nAfter the fundamentals, the learner should build basic exploratory data analysis mini projects and increase complexity over time.\nMachine-learning algorithms should be deprioritized until the analytics fundamentals are established."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Python for analytics",
+    "secondary_topics": [
+      "Python data structures",
+      "File-based data handling",
+      "Data manipulation with pandas",
+      "Data visualization",
+      "Exploratory data analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bbad91aa626f0833",
+    "saved_date": "2026-10-01T23:13:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

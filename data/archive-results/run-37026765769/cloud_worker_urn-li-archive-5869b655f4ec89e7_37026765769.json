@@ -1,0 +1,135 @@
+{
+  "id": "urn-li-archive-5869b655f4ec89e7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.110575Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:41Z"
+  },
+  "original_text": "Cracking the DS/ML Interview? Master These Python Questions First\n\n🔹 This is Part 1 of my Python Interview Series for Data Science and Machine Learning roles.\n\nWhile preparing for Data Science and ML interviews, I’ve seen many candidates jump straight to algorithms or modeling — and miss the basics that matter.\n\nBut in reality, strong Python coding skills are non-negotiable.\nFrom my own interview experience and what I’ve seen being asked, these questions test your ability to think in Python, handle real-world problems, and write efficient code.\n\nHere are 20 Core Python coding questions I’ve faced or observed in Data Science interviews:\n\n 1. Flatten a nested list using list comprehension.\n 2. Use map, filter, and lambda to extract and transform a numeric list.\n 3. Write a function to return the top K most frequent elements from a list.\n 4. Implement a sliding window algorithm to calculate the moving average.\n 5. Count word frequency in a paragraph using collections.Counter.\n 6. Group a list of dictionaries by a specific key.\n 7. Sort a list of tuples based on the second element using sorted and lambda.\n 8. Write a generator function to yield Fibonacci numbers up to N.\n 9. Remove duplicates from a list while preserving order.\n 10. Merge two dictionaries with overlapping keys and sum their values.\n 11. Identify anagrams from a list of words.\n 12. Write a function to check if a string is a valid palindrome (ignoring case and punctuation).\n 13. Use enumerate() and zip() in a practical example involving parallel iteration.\n 14. Create a decorator that measures the execution time of a function.\n 15. Implement custom exception handling in a function that processes numeric input.\n 16. Write a function to reverse the keys and values in a dictionary.\n 17. Use recursion to flatten a deeply nested dictionary.\n 18. Implement a function that finds the longest common prefix among a list of strings.\n 19. Create a dictionary comprehension that maps characters to their ASCII values.\n 20. Use defaultdict to group values from a list of (key, value) pairs.\n\nThese aren’t theoretical—they’re practical, frequently asked, and worth mastering.\n\n\n#DataScience #Python #MachineLearning #InterviewPreparation #WomenInTech #PythonCoding #MLInterviews #DataScientist #TechInterviews #PythonForDS #AdvancedPython #ProductBasedCompanies\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This Part 1 post presents 20 practical Python coding exercises for Data Science and Machine Learning interviews. The exercises cover lists, functional transformations, frequency analysis, grouping, moving averages, generators, iteration, dictionaries, strings, decorators, exception handling, and recursion. It provides task statements but no worked solutions or implementation details.",
+    "topics": [
+      "Python coding for Data Science and Machine Learning interviews",
+      "Python data structures",
+      "Python algorithms",
+      "Python interview preparation"
+    ],
+    "subtopics": [
+      "List transformations and ordering",
+      "Functional transformations with map, filter, and lambda",
+      "Frequency counting and grouping",
+      "Sliding-window computation",
+      "Generators and parallel iteration",
+      "Dictionary manipulation and comprehensions",
+      "String-processing algorithms",
+      "Decorators and exception handling",
+      "Recursion"
+    ],
+    "concepts": [
+      "List comprehensions",
+      "map(), filter(), and lambda",
+      "Top K frequency selection",
+      "Sliding window",
+      "collections.Counter",
+      "Grouping collections",
+      "sorted() with lambda",
+      "Generator functions",
+      "enumerate() and zip()",
+      "Dictionary comprehensions and ASCII",
+      "defaultdict",
+      "Execution-time decorators",
+      "Custom exception handling",
+      "Recursive dictionary flattening",
+      "String-processing algorithms"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Implement list operations that flatten a nested list, remove duplicates while preserving order, and sort tuples by their second element.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer uses a list comprehension to flatten a nested list.\nThe answer removes duplicate list values while preserving their original order.\nThe answer uses sorted with lambda to order tuples by their second element."
+    },
+    {
+      "question": "Use map, filter, and lambda to extract and transform values from a numeric list.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The solution uses map, filter, and lambda for the requested numeric-list processing."
+    },
+    {
+      "question": "Write a function that returns the top K most frequent elements from a list.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The function determines which list elements occur most frequently and returns the requested top K elements."
+    },
+    {
+      "question": "Implement a sliding-window algorithm that calculates a moving average.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The implementation uses a sliding window to produce moving-average values."
+    },
+    {
+      "question": "Implement word-frequency counting and data grouping with collections.Counter, dictionary grouping, and defaultdict.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer uses collections.Counter to count words in a paragraph.\nThe answer groups a list of dictionaries by a selected key.\nThe answer uses defaultdict to group values from a list of key-value pairs."
+    },
+    {
+      "question": "Write a Fibonacci generator and demonstrate enumerate and zip through a practical parallel-iteration example.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The Fibonacci implementation is a generator that yields Fibonacci numbers up to N.\nThe iteration example uses both enumerate and zip for parallel iteration."
+    },
+    {
+      "question": "Implement dictionary merging, key-value reversal, and character-to-ASCII mapping.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The merge operation sums the values associated with overlapping keys.\nThe reversal operation swaps dictionary keys and values.\nThe mapping operation uses a dictionary comprehension to associate each character with its ASCII value."
+    },
+    {
+      "question": "Implement functions for finding anagrams, checking normalized palindromes, and finding the longest common prefix.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The anagram function identifies anagrams within a list of words.\nThe palindrome function ignores case and punctuation when checking a string.\nThe prefix function returns the longest prefix shared by the supplied strings."
+    },
+    {
+      "question": "Create an execution-time decorator and a numeric-input function with custom exception handling.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The decorator wraps a function and measures its execution time.\nThe numeric-processing function includes custom exception-handling behavior."
+    },
+    {
+      "question": "Use recursion to flatten a deeply nested dictionary.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution uses recursive calls to traverse and flatten the nested dictionary."
+    }
+  ],
+  "classification": {
+    "domain": "Data Science and Machine Learning interview preparation",
+    "primary_topic": "Core Python coding",
+    "secondary_topics": [
+      "Python data structures",
+      "Python algorithms",
+      "Data Science and Machine Learning role preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5869b655f4ec89e7",
+    "saved_date": "2026-10-01T23:21:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

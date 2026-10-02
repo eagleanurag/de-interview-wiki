@@ -1,0 +1,197 @@
+{
+  "id": "urn-li-archive-85cfd56563267b07",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.766387Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:29Z"
+  },
+  "original_text": "EXL Data Analyst Interview Experience:\nCTC: ₹12–15 LPA\n\nSQL Questions\n • Retrieve the top 3 revenue-generating products within each category.\n • Identify products with revenue higher than the average across all products.\n • Use LAG() and CASE to find customers showing month-over-month spending growth.\n • Mark each user’s first and last transaction in a dataset.\n • Find employees under the same manager who also earn identical salaries.\n\n\nPython Questions\n • Reverse a list manually (without .reverse() or slicing).\n • Convert a mixed string like “abc123xyz” to uppercase without using .upper().\n • Extract keys from a dictionary where values are even.\n • Check if two strings are anagrams using a custom function.\n • Create a frequency map for each character in a string.\n\n\nExcel Questions\n • Practical differences between COUNT, COUNTA, and COUNTBLANK.\n • Use INDEX + MATCH to look up a value to the left of your reference column.\n • Apply IFERROR in nested formulas for error handling.\n • Highlight duplicate values while skipping the first occurrence.\n • Calculate total sales using SUMIFS with multiple criteria (e.g., Region = “West”, Month = “Jan”).\n\n\nPower BI Questions\n • Difference between a calculated column and a measure.\n • Handling many-to-many relationships in your data model.\n • Write a DAX measure for running total (cumulative sales) per customer.\n • Use slicers to apply dynamic filters across visuals.\n • Design a KPI visual comparing current vs. previous month sales.\n\nFollow Digvijay Rajput For More.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "An EXL Data Analyst interview-experience post reports a CTC of ₹12–15 LPA and lists 20 questions across SQL, Python, Excel, and Power BI. The prompts cover analytical SQL, custom Python programming, Excel lookup and aggregation, and Power BI modeling, DAX, filtering, and visualization. The post provides question topics but no interview narrative, answers, or solutions.",
+    "topics": [
+      "Data analyst interview preparation",
+      "SQL",
+      "Python",
+      "Excel",
+      "Power BI"
+    ],
+    "subtopics": [
+      "SQL aggregation, comparison, window functions, and transaction analysis",
+      "Python collections and string processing",
+      "Excel lookup, error handling, duplicate detection, and conditional aggregation",
+      "Power BI data modeling, DAX measures, filtering, and visualization"
+    ],
+    "concepts": [
+      "Top products by revenue within categories",
+      "Above-average product revenue",
+      "Month-over-month spending growth",
+      "First and last transaction marking",
+      "Employees sharing a manager and salary",
+      "Manual list reversal",
+      "Manual uppercase conversion",
+      "Dictionary filtering by even values",
+      "Custom anagram check",
+      "Character frequency map",
+      "COUNT, COUNTA, and COUNTBLANK",
+      "INDEX and MATCH left lookup",
+      "Nested IFERROR handling",
+      "Duplicate highlighting excluding the first occurrence",
+      "Multi-criteria SUMIFS",
+      "Calculated columns and measures",
+      "Many-to-many relationship handling",
+      "Running total per customer",
+      "Dynamic visual filtering with slicers",
+      "Current versus previous month KPI"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you retrieve the top three revenue-generating products within each category?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query groups or partitions products by category, ranks them by revenue, and returns the top three products in each category."
+    },
+    {
+      "question": "How would you identify products whose revenue is higher than the average revenue across all products?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query calculates average revenue across all products and filters the products whose revenue exceeds that average."
+    },
+    {
+      "question": "How would you use LAG() and CASE to identify customers with month-over-month spending growth?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses LAG() to access a customer's prior spending value and CASE to mark month-over-month growth."
+    },
+    {
+      "question": "How would you mark each user's first and last transaction in a dataset?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query orders each user's transactions and applies positional logic to identify the first and last records."
+    },
+    {
+      "question": "How would you find employees who have the same manager and an identical salary?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query compares employees on both manager and salary so that only employees sharing both attributes are returned."
+    },
+    {
+      "question": "How would you reverse a list manually without using reverse() or slicing?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The function reverses the list through manual traversal without calling reverse() or using slicing."
+    },
+    {
+      "question": "How would you convert a mixed string such as abc123xyz to uppercase without using upper()?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The function manually transforms the string's characters to uppercase without calling upper()."
+    },
+    {
+      "question": "How would you extract dictionary keys whose values are even?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The function iterates through dictionary items and returns the keys associated with even values."
+    },
+    {
+      "question": "How would you implement an anagram check with a custom Python function?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The function manually checks whether both strings contain the same characters with the same frequencies."
+    },
+    {
+      "question": "How would you create a frequency map for every character in a string?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The function records each character and increments the number of times that character occurs."
+    },
+    {
+      "question": "What are the practical differences between COUNT, COUNTA, and COUNTBLANK in Excel?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer distinguishes which values or cells each Excel function counts, including how blanks are treated."
+    },
+    {
+      "question": "How can INDEX and MATCH be used to retrieve a value located to the left of the reference column?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution uses MATCH to locate the reference value and INDEX to retrieve the desired value from the left."
+    },
+    {
+      "question": "How would you use IFERROR in nested Excel formulas for error handling?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The formula handles errors in nested calculations by applying IFERROR to the relevant expression."
+    },
+    {
+      "question": "How would you highlight duplicate Excel values while skipping the first occurrence?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The rule highlights a value only when the same value has appeared earlier, leaving the first occurrence unchanged."
+    },
+    {
+      "question": "How would you calculate total sales with SUMIFS using Region equal to West and Month equal to Jan?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The formula sums sales only when both the West region criterion and the Jan month criterion are satisfied."
+    },
+    {
+      "question": "What is the difference between a calculated column and a measure in Power BI?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains when each is calculated and how calculated columns and measures differ in the Power BI data model."
+    },
+    {
+      "question": "How should many-to-many relationships be handled in a Power BI data model?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to model and use a many-to-many relationship in Power BI."
+    },
+    {
+      "question": "How would you write a DAX measure for a running total of sales per customer?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The measure cumulatively sums sales within each customer's context."
+    },
+    {
+      "question": "How do slicers apply dynamic filters across Power BI visuals?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains how a slicer selection dynamically filters multiple connected visuals."
+    },
+    {
+      "question": "How would you design a Power BI KPI visual comparing current-month sales with previous-month sales?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The design presents current-month sales and previous-month sales together as KPI values for comparison."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Data Analyst Interview Preparation",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "Excel",
+      "Power BI"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:85cfd56563267b07",
+    "saved_date": "2026-10-01T23:18:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

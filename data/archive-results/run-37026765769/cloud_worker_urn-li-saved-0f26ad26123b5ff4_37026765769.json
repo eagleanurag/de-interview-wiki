@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-0f26ad26123b5ff4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7289860868484300800",
+    "captured_at": "2026-10-02T00:15:44.803602Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:51Z"
+  },
+  "original_text": "• 1st\nLead Data Engineer | Databricks & Azure Data Platform | Team of 7 | $100M Revenue Impact | 7-Eleven | Ex-Maersk | 45K+ Community\n1yr •\nPreparation for Python Interview? Don’t Worry!\nAre you gearing up for a Python interview but feeling overwhelmed? Don’t stress! I’ve got you covered.\nCheck out this Python Interview Preparation Document that breaks down everything you need to know to ace your interview. From basic concepts to advanced topics.\n♻ Feel free to re-share this post if you find it helpful.\nFollow Abhay Singh 😀\n𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝒇𝒐𝒓 1 𝒕𝒐 1 𝒈𝒖𝒊𝒅𝒂𝒏𝒄𝒆 : https://lnkd.in/g7Dewhyq\nPython",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7289860868484300800_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional post from a Lead Data Engineer shares an external Python interview preparation document and invites readers to connect. It contains no actual Python technical instruction, and the extracted media text is empty.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Career and professional networking",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0f26ad26123b5ff4",
+    "saved_date": "2026-10-01T23:36:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7289860868484300800",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7289860868484300800_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

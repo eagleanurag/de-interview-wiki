@@ -1,0 +1,146 @@
+{
+  "id": "urn-li-archive-a9c2ddd7592f4acf",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.100902Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:01Z"
+  },
+  "original_text": "Coforge – Data Engineering Role:\n=======================\n\n🎁 Step 1: Recruiter Discussion\n After a brief LinkedIn connect + recruiter call, I received a schedule for the technical rounds. The process moved quickly and was structured.\n\n ✅ Round 1 – Technical:\n This round focused on core skills, hands-on logic, and end-to-end pipeline building with tools like PySpark, SQL, and cloud platforms.\n\n Key Topics Covered:\n1. PySpark transformations & performance\n2. SQL optimization and advanced querying\n3. Data warehousing & file formats\n4. Azure Data Factory (ADF) and Data Lake integration\n\n🧠 Most Asked Questions:\n1. How do you handle skewed data in PySpark?\n2. Explain coalesce() vs repartition() in PySpark.\n3. Write an SQL to get 2nd highest salary per department.\n4. How would you optimize a SQL query with multiple joins & subqueries?\n5. How does ADF handle failure & retries in pipelines?\n ⏰ Round 2 – Scenario-Based + Design (Tech + Functional Round):\n This round was about real-time problem-solving, system design, and working with data at scale. It covered data pipelines, governance, monitoring, and business logic implementation.\n\n🎄 Scenario-Based Questions:\n1.You have millions of files in a Data Lake. How would you process them efficiently in batches using ADF or Databricks?\n2. A downstream team is reporting inconsistent data. How would you debug and ensure pipeline data quality?\n3. How would you design a pipeline that ingests data from APIs, transforms it, and stores it in Delta Lake?\n4. Your data pipeline fails in production but works in dev – how do you approach root cause analysis?\n5. How do you manage and orchestrate dependencies between multiple pipeline stages?\n\n🛠️ Tools/Technologies Emphasized:\n 🔹 PySpark\n 🔹 SQL (Window functions, CTEs, Aggregations)\n 🔹 Azure Data Factory\n 🔹 Data Lake / Delta Lake\n 🔹 CI/CD for Data Pipelines\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This excerpt describes a quick, structured Coforge Data Engineering hiring process that begins with a recruiter discussion and includes two visible interview rounds. Round 1 covers core skills, hands-on logic, and end-to-end pipeline building with PySpark, SQL, cloud platforms, data warehousing, file formats, and Azure Data Factory integration with Data Lake. Round 2 covers scenario-based design at scale, governance, monitoring, business logic, data quality, production troubleshooting, and pipeline orchestration, naming ADF, Databricks, Data Lake, Delta Lake, APIs, and CI/CD for data pipelines. The post lists interview questions but supplies no answers or implementation details. The trailing \"see more\" indicates that the post may be incomplete, and no extracted media text was provided.",
+    "topics": [
+      "Data engineering interview preparation",
+      "PySpark transformations and performance",
+      "Advanced SQL querying and optimization",
+      "Data warehousing and file formats",
+      "Azure Data Factory and Data Lake integration",
+      "Batch processing with ADF or Databricks",
+      "API ingestion and Delta Lake pipeline design",
+      "Data quality, governance, and monitoring",
+      "Production pipeline troubleshooting",
+      "CI/CD for data pipelines"
+    ],
+    "subtopics": [
+      "Handling skewed data in PySpark",
+      "coalesce() versus repartition()",
+      "SQL window functions",
+      "Common table expressions",
+      "SQL aggregations",
+      "Finding the second-highest salary per department",
+      "Optimizing queries with joins and subqueries",
+      "ADF failure and retry handling",
+      "Processing millions of Data Lake files",
+      "Debugging inconsistent downstream data",
+      "Ensuring pipeline data quality",
+      "API ingestion and transformation",
+      "Storing pipeline output in Delta Lake",
+      "Production-versus-development root cause analysis",
+      "Managing pipeline stage dependencies",
+      "CI/CD for data pipelines"
+    ],
+    "concepts": [
+      "PySpark transformations and performance",
+      "Advanced SQL querying and optimization",
+      "Data warehousing and file formats",
+      "ADF and Data Lake integration",
+      "Large-scale Data Lake batch processing",
+      "Pipeline data quality troubleshooting",
+      "API-to-Delta Lake pipeline design",
+      "Production-versus-development failure analysis",
+      "CI/CD for data pipelines"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you handle skewed data in PySpark?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer explains how uneven data distribution affects PySpark processing.\nThe answer describes a way to reduce or manage the skew."
+    },
+    {
+      "question": "Explain the difference between coalesce() and repartition() in PySpark.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes the behavior and use cases of the two PySpark operations.\nThe answer explains when each operation should be selected."
+    },
+    {
+      "question": "Write an SQL query that returns the second-highest salary in each department.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query returns the second-highest salary separately for every department.\nThe query correctly evaluates salary rank within each department."
+    },
+    {
+      "question": "How would you optimize an SQL query containing multiple joins and subqueries?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer identifies aspects of the joins and subqueries that can be optimized.\nThe answer explains the expected improvement from the revised query."
+    },
+    {
+      "question": "How does Azure Data Factory handle failures and retries in pipelines?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer describes ADF's failure-handling flow.\nThe answer explains the purpose and behavior of pipeline retries."
+    },
+    {
+      "question": "You have millions of files in a Data Lake. How would you process them efficiently in batches using ADF or Databricks?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer selects ADF or Databricks for the batch-processing design.\nThe answer explains how the design accommodates the large number of Data Lake files."
+    },
+    {
+      "question": "A downstream team reports inconsistent data. How would you debug the issue and ensure pipeline data quality?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer provides a method for locating the source of the inconsistent downstream data.\nThe answer describes checks or controls that ensure pipeline data quality."
+    },
+    {
+      "question": "How would you design a pipeline that ingests data from APIs, transforms it, and stores the result in Delta Lake?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer covers API ingestion, transformation, and storage in Delta Lake.\nThe answer explains how those stages form a connected end-to-end pipeline."
+    },
+    {
+      "question": "A data pipeline fails in production but works in development. How would you approach root cause analysis?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer compares the failing production context with the successful development context.\nThe answer describes a root cause investigation and explains how the identified cause would be verified."
+    },
+    {
+      "question": "How would you manage and orchestrate dependencies between multiple pipeline stages?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer describes an orchestration method for coordinating dependent pipeline stages.\nThe answer explains how dependency information guides execution across the pipeline."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "PySpark performance and transformations",
+      "Advanced SQL and query optimization",
+      "Azure Data Factory, Data Lake, and Delta Lake",
+      "Batch and end-to-end pipeline design",
+      "Data quality, governance, and monitoring",
+      "Production troubleshooting and pipeline orchestration",
+      "CI/CD for data pipelines"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a9c2ddd7592f4acf",
+    "saved_date": "2026-10-01T23:11:01Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

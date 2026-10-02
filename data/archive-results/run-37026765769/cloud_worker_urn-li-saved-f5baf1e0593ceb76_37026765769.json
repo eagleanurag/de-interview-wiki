@@ -1,0 +1,71 @@
+{
+  "id": "urn-li-saved-f5baf1e0593ceb76",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7355607628678356993",
+    "captured_at": "2026-10-02T00:15:53.330660Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:49Z"
+  },
+  "original_text": "• 1st\nI talk about databricks and snowflake. All views are mine.\n1yr •\nThis is a great MCP guidebook I found online talking about real use cases.\nWhat is MCP, How to build the MCP clients locally.\nExamples with Ollama, Cursor, CrewAI, MindsDB AssemblyAI building Voice agents, Unified Data Servers , Agentic RAG, Deep Research Agents etc\nMCP and Agents",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7355607628678356993_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a brief, high-level pointer to an MCP guidebook rather than a complete technical explanation. It says the guidebook covers real use cases, introduces MCP, discusses building MCP clients locally, and provides examples involving Ollama, Cursor, CrewAI, MindsDB, AssemblyAI, voice agents, unified data servers, agentic RAG, and deep research agents. The post also mentions Databricks and Snowflake but provides no technical details about them, and the extracted media text is empty.",
+    "topics": [
+      "MCP",
+      "MCP clients",
+      "AI agents",
+      "Databricks",
+      "Snowflake"
+    ],
+    "subtopics": [
+      "Building MCP clients locally",
+      "Voice agents",
+      "Unified Data Servers",
+      "Agentic RAG",
+      "Deep Research Agents"
+    ],
+    "concepts": [
+      "MCP",
+      "MCP clients",
+      "Agent applications",
+      "Ollama, Cursor, CrewAI, MindsDB, and AssemblyAI",
+      "Databricks and Snowflake"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data and AI Engineering",
+    "primary_topic": "MCP",
+    "secondary_topics": [
+      "MCP clients",
+      "AI agents",
+      "Databricks",
+      "Snowflake"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f5baf1e0593ceb76",
+    "saved_date": "2026-10-01T23:09:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7355607628678356993",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7355607628678356993_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

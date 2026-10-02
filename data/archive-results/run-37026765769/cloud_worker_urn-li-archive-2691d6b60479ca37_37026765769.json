@@ -1,0 +1,39 @@
+{
+  "id": "urn-li-archive-2691d6b60479ca37",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.317196Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:56Z"
+  },
+  "original_text": "We're hiring two new positions at ByteByeGo: Full-Stack Engineer and Sales/Partnership\n\nRole Type: Part-time (20+ weekly) or Full-time\nCompensation: Competitive\n\nFull-Stack Engineer (Remote)\nWe are hiring a Full Stack Engineer to build an easy-to-use educational platform and drive product-led growth. You'll work closely with the founder, wearing a product manager's hat when needed to prioritize user experience and feature impact. You'll operate in a fast-paced startup environment where experimentation, creativity, and using AI tools for rapid prototyping are encouraged.\n\nWe’re less concerned with years of experience. We care more about what you've built than about your resume. Share your projects, GitHub, portfolio, or any artifacts that showcase your ability to solve interesting problems and create impactful solutions. When you're ready, send your resume and a brief note about why you're excited to join ByteByteGo to jobs@bytebytego.com\n\nSales/Partnership (US based remote role)\nWe’re looking for a sales and partnerships specialist who will help grow our newsletter sponsorship business. This role will focus on securing new advertisers, nurturing existing relationships, and optimizing revenue opportunities across our newsletter and other media formats.\n\nWe’re less concerned with years of experience. What matters most is that you’re self-motivated, organized, and excited to learn and take on new challenges.\n\nHow to Apply: send your resume and a short note on why you’re excited about this role to jobs@bytebytego.com",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a hiring announcement for two ByteByeGo positions: a remote Full-Stack Engineer and a US-based remote Sales/Partnership role. Both are offered part-time at 20+ weekly hours or full-time, with competitive compensation. The engineering role involves building an educational platform, prioritizing user experience and feature impact, working in a fast-paced startup environment, and using AI tools for rapid prototyping. The sales role involves securing newsletter sponsorships, acquiring advertisers, maintaining relationships, and optimizing revenue opportunities. Applicants are asked to send a resume and a short note explaining their interest.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "employment",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:2691d6b60479ca37",
+    "saved_date": "2026-10-01T23:26:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

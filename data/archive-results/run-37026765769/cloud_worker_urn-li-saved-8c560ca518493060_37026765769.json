@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-saved-8c560ca518493060",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7357567222967357443",
+    "captured_at": "2026-10-02T00:15:49.222207Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:46Z"
+  },
+  "original_text": "⚡ How I made my PySpark job 3× faster (and saved my sanity) by reordering just two lines\n\nA few weeks back, one of my PySpark jobs suddenly started crawling like it had hit Monday mode 🐢 — what usually ran in 10 minutes was now taking 30+. Time to investigate.\n\nAfter diving into the Spark UI and some profiling, I spotted the issue:\nA wide transformation (groupBy) was happening before a simple filter.\n\n📉 That meant Spark was shuffling way more data than necessary — a silent performance killer.\n\n🕵️‍♂️ What’s interesting?\nThis job ran just fine earlier, even with the same ordering.\nWhy?\nThe data volume recently increased significantly, and grouping large unfiltered data was no longer cheap.\nLesson: what works today might not scale tomorrow.\n\n🎯 Fix? Flip the order.\n\nBefore:\ngroupBy → filter\n\ndf.groupBy(\"sys_id\").agg(...).filter(\"status = 'active'\")\n\nAfter:\nfilter → groupBy\n\ndf.filter(\"status = 'active'\").groupBy(\"sys_id\").agg(...)\n\n✅ Result:\n • ~65% faster execution\n • Fewer shuffle partitions\n • Happier cluster 😌\n\n🔍 Takeaway:\nApply narrow transformations like filter() as early as possible to minimize the data passed to expensive operations like groupBy or join.\n\n💬 Have you seen similar bottlenecks in your Spark jobs? Share your favorite performance hacks!\n\n#PySpark #ApacheSpark #BigData #DataEngineering #PerformanceTuning",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7357567222967357443_slide_0.jpg",
+      "description": "JPEG image, 480x569 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a PySpark performance regression in which a job that previously ran in 10 minutes increased to more than 30 minutes after its data volume grew. Spark UI analysis and profiling identified a wide groupBy transformation occurring before a simple filter, causing unnecessary data to be shuffled. Reordering the operations to filter active records before grouping produced a reported improvement of approximately 65% and fewer shuffle partitions. The main lesson is to apply narrow transformations early so expensive operations receive less data, while recognizing that an ordering that performs adequately at one scale may become inefficient as data grows.",
+    "topics": [
+      "Apache Spark execution efficiency"
+    ],
+    "subtopics": [
+      "Transformation ordering",
+      "Filtering before aggregation",
+      "Shuffle reduction",
+      "Performance regression diagnosis",
+      "Scalability and data-volume growth"
+    ],
+    "concepts": [
+      "Transformation ordering",
+      "Narrow transformations",
+      "Wide transformations and shuffling",
+      "Performance regression from data growth",
+      "Spark UI and profiling",
+      "Filtering before groupBy"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why can filtering before a groupBy operation improve PySpark performance?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Filtering is a narrow transformation that can remove unneeded records before an expensive wide operation.\nApplying the filter first reduces the amount of data that must be processed and shuffled by the groupBy."
+    },
+    {
+      "question": "A PySpark job that normally took 10 minutes suddenly takes more than 30 minutes after its data volume grows. How would you investigate and address the regression?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Use Spark UI and profiling to inspect the job's transformations and identify expensive wide operations.\nCheck whether a groupBy is occurring before a filter that could remove unnecessary data.\nReorder the transformations so the filter runs before the groupBy, with the goal of reducing processing and shuffling."
+    },
+    {
+      "question": "Why did a transformation ordering that performed well earlier become a performance problem later?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The job's data volume increased significantly.\nGrouping the larger unfiltered dataset made the existing ordering more expensive.\nA query that works at one scale may need further optimization as its data grows."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark performance tuning",
+    "secondary_topics": [
+      "Apache Spark transformation ordering",
+      "Shuffle optimization",
+      "Performance regression diagnosis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8c560ca518493060",
+    "saved_date": "2026-10-01T23:09:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7357567222967357443",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7357567222967357443_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "urn-li-archive-ebb14b98d65b364c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.916740Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:19Z"
+  },
+  "original_text": "PYSPARK/Databricks/SQL interview questions for Azure Data Engineer\n\n1) There is a status table with id, name and parentid \n\nWrite a query to find all child of parentid='abc', It can be direct child or child of child. Write SQL query?\n\n2) \n\nTable \n1\n2\n3\nA\nC\n\nWrite a query to separate number and letter? \n\n3) You have a table which don't have any id, how you get odd number Records creating id? \n4) What is the output of SELECT 1 in SQL?\n\n5) Vehicle\n\nBike Model Spare Part Per Unit Spare Part Cost Quantity\nPulsar Rear View Mirror 100 2\nDiscover Rear View Mirror 50 2\nPulsar Headlight 1 500\nDiscover Headlight 1 200\n\n\nQuery for most expensive model both in SQL and PYSPARK? \nFor SQL vehicle table PYSPARK DF is data frame.\n\n6) TABLE \n\nemp\n\nEMPID Sales Month\n100 1000 Jan\n110 200 Jan\n100 3500 Feb\n110 350 Feb\n120 400 Feb\n \n\nWrite a query to get the sales person who did the max sales For each month in oracle SQL and PYSPARK?\n\n7) Fifth highest salary employee of each department from employee table?\n\n8) Find the repeated numbers among this [12327738282888] using pyspark?\n9) You have the data frames \n\ndf1\nName, Gender \n\nDf2\nName , Gender, SAL \n\nHow you merge it? \n\n10) How will you apply indexing on a table in data bricks?\n11) Explain optimization techniques in spark?\n12) What are the shuffle operations available in PYSPARK?\n13) Explain the fault tolerance in PYSPARK?\n14) What are broad cast variables and broadcast joins?\n15) Explain the lazy evaluation in PYSPARK?\n16) What are the different transformations are available in PYSPARK?\n17) How to perform aggregations in PYSPARK?\n18) Diff between partitioning and bucketing?\n19) What are the different cluster options in data bricks?\n20) Diff between Map reduce and Spark?\n21) How to read Data from CSV file to create data frame?\n22) Diff between repartition and coalesce?\n23) How do you handle your PYSPARK code deployment?\n24) How to call one notebook in another notebook?\n25) How to estimate the amount of resources for your spark job?\n26) What is unity catalog?\n27) You have a CSV file, how would you save it in a delta format? \n28) You have a table in your data bricks, how would you optimised it?\n29) Diff between caching and persistence?\n30) How does autoloader works? \n31) Explain the window functions in SQL?\n32) Write a syntax for creating temporary table in SQL?\n33) What are the materialised views?\n34) Explain the different types of indexes?\n35) Diff between clusters?\n36) What are the joins available in PYSPARK?\n37) How to know explain plan of a particular query?\n38) What is order of SQL execution, where does group by and having come?\n39) Diff between where and having clause?\n40) Diff between temporary view and global view?\n41) Diff between CTE and subquery?\n42) Write a PYSPARK command to read data from a file and store it in the data frame?\n\n#azure #dataengineer #sql #pyspark #azuredatafactory #databricks",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The content is an answer-free catalog of 42 interview prompts for an Azure Data Engineer, centered on SQL, Oracle SQL, PySpark, Spark, and Databricks. It includes exercises involving parent-child hierarchies, separating numeric and alphabetic values, vehicle cost analysis, monthly sales maxima, departmental salary ranking, repeated-number detection, and DataFrame merging. It also asks about Spark optimization, shuffles, fault tolerance, lazy evaluation, broadcasting, partitioning, caching, Delta format, Unity Catalog, Auto Loader, clusters, deployment, and SQL objects and clauses. No solutions, definitions, or expected outputs are supplied. Some prompts are ambiguous, including what \"most expensive model\" means and the phrase \"odd number Records.\" Azure Data Factory appears only as a hashtag.",
+    "topics": [
+      "SQL",
+      "Oracle SQL",
+      "PySpark",
+      "Spark",
+      "Databricks",
+      "Delta format",
+      "Azure Data Engineering"
+    ],
+    "subtopics": [
+      "Parent-child hierarchy queries",
+      "Separating numeric and alphabetic values and generating identifiers",
+      "Sales aggregation and salary ranking",
+      "Repeated-number detection and DataFrame merging",
+      "PySpark transformations, aggregations, and file ingestion",
+      "Spark optimization, shuffles, fault tolerance, and lazy evaluation",
+      "Broadcasting, partitioning, bucketing, caching, and persistence",
+      "Databricks indexing, clusters, deployment, Unity Catalog, Auto Loader, and table optimization",
+      "SQL window functions, views, tables, indexes, joins, clauses, and execution order"
+    ],
+    "concepts": [
+      "Hierarchical parent-child queries",
+      "Separating values by type and generating identifiers",
+      "Evaluating SELECT 1",
+      "Most-expensive vehicle model analysis",
+      "Monthly sales maxima",
+      "Departmental salary ranking",
+      "Repeated-number detection",
+      "DataFrame merging",
+      "PySpark transformations, aggregations, and ingestion",
+      "Spark optimization and shuffle operations",
+      "Fault tolerance and lazy evaluation",
+      "Broadcast variables and broadcast joins",
+      "Partitioning, bucketing, repartitioning, and coalescing",
+      "Caching and persistence",
+      "Databricks platform operations",
+      "Saving CSV data in Delta format",
+      "SQL clause order and filtering",
+      "SQL views, tables, indexes, and query constructs",
+      "MapReduce and Spark comparison"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write a SQL query to return every direct and indirect child of parentid='abc' from a status table with id, name, and parentid columns?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer returns both immediate children and descendants at deeper levels.\nIt uses the supplied id, name, and parentid structure and the parent value abc."
+    },
+    {
+      "question": "How would you separate the numeric values 1, 2, and 3 from the alphabetic values A and C in SQL?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The result must distinguish the three numeric values from the two alphabetic values.\nThe query should operate on the single-column values shown in the exercise."
+    },
+    {
+      "question": "Using the supplied vehicle and spare-part data, how would you find the most expensive model in both SQL and PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explicitly defines how it measures model expense because the source does not specify whether to use unit cost, quantity, or a combined calculation.\nIt provides SQL and PySpark DataFrame solutions using the supplied model, cost, and quantity fields."
+    },
+    {
+      "question": "How would you find the salesperson with the maximum sales for each month using Oracle SQL and PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer evaluates January and February independently.\nIt returns the salesperson associated with the highest sales value for each month in both Oracle SQL and PySpark."
+    },
+    {
+      "question": "How would you find the employee with the fifth-highest salary in each department?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer ranks employees by salary within each department.\nIt then selects the employee at the fifth-highest salary rank for every department."
+    },
+    {
+      "question": "How would you use PySpark to find the repeated numbers in [12327738282888]?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong solution identifies each distinct number that occurs more than once in the supplied sequence.\nIt returns repeated values without unnecessarily treating every sequence position as a distinct value."
+    },
+    {
+      "question": "How would you merge df1, containing Name and Gender, with df2, containing Name, Gender, and SAL, in PySpark?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer must account for Name and Gender appearing in both DataFrames and SAL appearing only in df2.\nBecause the source does not specify how rows should match, a strong answer makes its row-matching assumption explicit."
+    },
+    {
+      "question": "What optimization techniques and shuffle operations are available in Spark and PySpark, and how do fault tolerance and lazy evaluation affect execution?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer identifies concrete optimization techniques and distinguishes them from shuffle operations.\nIt explains fault tolerance and lazy evaluation separately and relates both to PySpark execution."
+    },
+    {
+      "question": "What are broadcast variables and broadcast joins in PySpark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines both broadcast variables and broadcast joins.\nIt explains the relationship between the two concepts rather than treating them as the same thing."
+    },
+    {
+      "question": "What is the difference between partitioning and bucketing in PySpark, and how do repartition and coalesce compare?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer distinguishes partitioning from bucketing.\nIt separately distinguishes repartition from coalesce and explains when each approach would be considered."
+    },
+    {
+      "question": "How would you load a CSV into a PySpark DataFrame, save it in Delta format, and optimize a Databricks table?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer treats CSV ingestion, Delta output, and Databricks table optimization as three separate operations.\nIt uses PySpark, Delta format, and Databricks without assuming unsupported external technologies."
+    },
+    {
+      "question": "In SQL execution order, where do WHERE, GROUP BY, and HAVING occur, and how do the two filtering clauses differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer places WHERE, GROUP BY, and HAVING in their SQL execution order.\nIt explains WHERE and HAVING as distinct filtering stages."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL, PySpark, Spark, and Databricks interview preparation",
+    "secondary_topics": [
+      "SQL query design and execution order",
+      "PySpark DataFrame operations",
+      "Spark performance and fault tolerance",
+      "Databricks platform operations",
+      "Delta format"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ebb14b98d65b364c",
+    "saved_date": "2026-10-01T23:34:19Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-917860148a4e8bb8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346392254275571712",
+    "captured_at": "2026-10-02T00:15:49.478151Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:38Z"
+  },
+  "original_text": "• 1st\nDataEngineer | Bigdata Engineer | Bigdata Analyst | Bigdata Developer | Works at Capgemini| Hdfs| Hive|Mysql |Shellscripting|Python|Pyspark|SparkSQl\n1yr •\nCheck the below Pyspark Cheat sheet.\n#Pyspark #Cheatsheet\nPyspark",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346392254275571712_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a brief professional profile listing roles and technologies such as PySpark, HDFS, Hive, MySQL, shell scripting, Python, and Spark SQL. It refers to a PySpark cheat sheet but provides no technical instructions, explanations, examples, or extracted media text, so the promised knowledge content is incomplete.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Big Data",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:917860148a4e8bb8",
+    "saved_date": "2026-10-01T23:13:38Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346392254275571712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346392254275571712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

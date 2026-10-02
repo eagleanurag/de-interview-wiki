@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-saved-ae1b87e1b32bc67e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341675487993249793",
+    "captured_at": "2026-10-02T00:15:50.609143Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:09Z"
+  },
+  "original_text": "After giving 50+ interviews, I have taken note of these top Data Engineering questions:\n\n\n📌 Save this post for your next interview prep!\n\n1. Explain design approach difference in database and data warehouse\n2. What are different ways to optimize SQL queries\n3. Compare transactional vs analytical processing systems (OLTP vs OLAP)\n4. How to handle slow database queries\n5. Why is Columnar Storage Faster for Analytics\n6. How to architect an ETL pipeline for large, complex datasets with multiple sources and frequent updates\n7. What are ways to handle incremental data processing\n8. What is the purpose of normalization and what are its types\n9. What are different types of indexing \n10. How to improve query performance\n\n📘 Interviewers love to go deep on these areas — make sure you understand both the concepts and real-world applications.\n\n#DataEngineering #InterviewPrep #SQL #ETL #DataEngineer #TechInterviews #CareerGrowth #LinkedInLearning\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341675487993249793_slide_0.jpg",
+      "description": "JPEG image, 480x640 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A Data Engineering interview-preparation post lists ten questions covering database and data warehouse design, SQL and database query performance, OLTP versus OLAP, columnar storage, ETL architecture, incremental processing, normalization, and indexing. It provides no answers, technical explanations, examples, or implementation details, and the supplied text appears incomplete because it ends with an ellipsis.",
+    "topics": [
+      "Data Engineering interview preparation",
+      "Database and data warehouse design",
+      "SQL and database query performance",
+      "Transactional versus analytical processing",
+      "Columnar storage",
+      "ETL pipeline architecture",
+      "Incremental data processing",
+      "Normalization",
+      "Indexing"
+    ],
+    "subtopics": [
+      "Differences between database and data warehouse design approaches",
+      "SQL query optimization",
+      "Handling slow database queries",
+      "Improving query performance",
+      "Comparing OLTP and OLAP systems",
+      "Architecting ETL pipelines for large, complex, multi-source datasets with frequent updates",
+      "Handling incremental data processing",
+      "Purpose and types of normalization",
+      "Types of indexing"
+    ],
+    "concepts": [
+      "Database and data warehouse design",
+      "OLTP and OLAP",
+      "Slow database query handling",
+      "Columnar storage for analytics",
+      "Large-scale ETL pipeline architecture",
+      "Incremental data processing",
+      "Normalization",
+      "Indexing",
+      "Query performance improvement"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering interview preparation",
+    "secondary_topics": [
+      "Database and data warehouse design",
+      "SQL query optimization",
+      "OLTP and OLAP",
+      "Columnar storage",
+      "ETL pipeline architecture",
+      "Incremental data processing",
+      "Normalization",
+      "Indexing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ae1b87e1b32bc67e",
+    "saved_date": "2026-10-01T23:17:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341675487993249793",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341675487993249793_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

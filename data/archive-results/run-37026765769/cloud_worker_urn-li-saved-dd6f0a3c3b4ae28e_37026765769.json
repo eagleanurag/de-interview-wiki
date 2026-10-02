@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-saved-dd6f0a3c3b4ae28e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339901286844096513",
+    "captured_at": "2026-10-02T00:15:52.551902Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:12Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Expertise in Azure Data Factory | Azure Databricks | Big Data | PySpark | SQL | Microsoft Fabric | ETL | Data Lake | Linux | SCCM | VMware | MDE | Windows Admin |\n1yr •\n📊 Star vs Snowflake Schema | Dimensional Modeling Simplified!\nIf you're preparing for Data Engineer, BI Developer, or Data Analyst interviews — you must be ready to answer these two questions👇\n❓ What is Dimensional Modeling & How Is It Different from Data Modeling?\n🧱 Dimensional Modeling is focused on designing data warehouses for fast, efficient querying using facts and dimensions.\n🧠 Data Modeling is a broader concept used in OLTP systems to normalize and structure data efficiently for transactions.\n📌 Key Focus:\nData Modeling → Entity relationships & normalization\nDimensional Modeling → Analytics, reporting, star/snowflake schemas\n❓ Star Schema vs Snowflake Schema\n🌟 Star Schema:\nDenormalized structure\nFaster read performance\nEasier for BI tools\nLess complex joins\n❄️ Snowflake Schema:\nNormalized dimensions\nMore tables, more joins\nBetter data integrity\nSpace efficient\n💡 Tip: Use Star Schema for performance-driven dashboards, and Snowflake Schema when storage optimization or data integrity is crucial.\n📩 Want a PDF with visual examples? Comment “📘 DM Me Schema PDF”\n🔁 Repost to help others prepping for interviews\n📌 Save this if you're revising warehouse fundamentals\n🔖 For More Content Sachin Patil Follow\n#StarSchema #SnowflakeSchema #DimensionalModeling #DataModeling\n#DataEngineering #BIArchitecture #DataWarehouse #ETLDesign\n#SQLInterview #DataAnalyst #PowerBI #OLAP #ModernDataStack\n#DataWarehouseDesign #CareerInTech #TechInterviewPrep #LinkedInLearning\n#HarishKumar #BigData #AnalyticsEngineer\n…see more\nKPMG data eng interview question",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339901286844096513_slide_0.jpg",
+      "description": "PNG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains dimensional modeling for data warehouses, contrasting it with broader data modeling in OLTP systems. It compares star and snowflake schemas in terms of denormalization, join complexity, read performance, storage efficiency, data integrity, and BI usability. It recommends star schemas for performance-driven dashboards and snowflake schemas when storage optimization or data integrity is more important. The post mentions a KPMG data engineering interview question but does not provide its content.",
+    "topics": [
+      "Dimensional Modeling",
+      "Data Modeling",
+      "Star Schema",
+      "Snowflake Schema",
+      "OLTP Systems",
+      "BI Reporting"
+    ],
+    "subtopics": [
+      "Facts and Dimensions",
+      "Entity Relationships",
+      "Normalization",
+      "Denormalization",
+      "Read Performance",
+      "Join Complexity",
+      "Storage Efficiency",
+      "Data Integrity",
+      "Schema Selection"
+    ],
+    "concepts": [
+      "Dimensional Modeling",
+      "Data Modeling",
+      "Star Schema",
+      "Snowflake Schema",
+      "Facts and Dimensions",
+      "Normalization",
+      "Denormalization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does dimensional modeling differ from data modeling?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Dimensional modeling is warehouse-oriented and focuses on fast analytics and reporting using facts and dimensions.\nData modeling is broader and is associated with OLTP transaction systems, entity relationships, and normalization."
+    },
+    {
+      "question": "What are the main similarities and differences between star and snowflake schemas?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A star schema uses a denormalized structure, while a snowflake schema uses normalized dimensions.\nA star schema offers faster reads, simpler joins, and easier BI use, while a snowflake schema uses more tables and joins.\nA snowflake schema emphasizes storage efficiency and data integrity, whereas the post does not make those the primary strengths of a star schema."
+    },
+    {
+      "question": "How do normalization and denormalization affect the schema choices described in the post?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Normalization is associated with transaction-oriented data modeling and with the dimensions of a snowflake schema.\nDenormalization characterizes a star schema and is associated with fewer joins and faster read performance.\nNormalized dimensions require more tables and joins but support greater storage efficiency and data integrity according to the post."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Dimensional Modeling",
+    "secondary_topics": [
+      "Data Modeling",
+      "Data Warehouse Design",
+      "Star Schema",
+      "Snowflake Schema",
+      "OLTP Systems",
+      "BI Reporting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:dd6f0a3c3b4ae28e",
+    "saved_date": "2026-10-01T23:19:12Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339901286844096513",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339901286844096513_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7339901286844096513_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

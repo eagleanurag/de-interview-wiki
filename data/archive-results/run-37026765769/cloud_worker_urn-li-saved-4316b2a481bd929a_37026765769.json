@@ -1,0 +1,127 @@
+{
+  "id": "urn-li-saved-4316b2a481bd929a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7464513217633882112",
+    "captured_at": "2026-10-02T00:15:47.053909Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:33Z"
+  },
+  "original_text": "• 2nd\n113K+ Fam | 1300+ SQL Problems Solved ➜ (𝑭𝑹𝑬𝑬) Teaching Interview SQL shortcuts | Ranked #1 in SQL & Data Engineer Hackathons | Data Engineer | Data & AI Creator\n4mo •\nI spent 12 months learning PySpark ETL the hard way - so you don’t have to.\nThese are the 33 Spark commands I wish I knew on Day 1.\n(🔖Save this. You’ll thank yourself later.)\n𝐓𝐡𝐞 𝐩𝐫𝐨𝐛𝐥𝐞𝐦:\nYou know SQL and Pandas.\nBut production data = terabytes.\nSQL can't scale.\nPandas runs out of memory.\nPySpark? Built for this.\n𝐓𝐨𝐩 𝟓 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 𝐩𝐚𝐭𝐭𝐞𝐫𝐧𝐬 𝐭𝐡𝐚𝐭 𝐦𝐚𝐭𝐭𝐞𝐫:\n1️⃣ 𝐖𝐢𝐧𝐝𝐨𝐰 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬\nRunning totals without self-joins.\nOne line. Distributed automatically.\n2️⃣ 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐉𝐨𝐢𝐧𝐬\nSmall table + large table?\nbroadcast(df) = 10x faster joins.\n3️⃣ 𝐏𝐚𝐫𝐭𝐢𝐭𝐢𝐨𝐧𝐢𝐧𝐠 𝐃𝐚𝐭𝐚\n.partitionBy('date') for storage.\nQuery only what you need.\n4️⃣ 𝐂𝐚𝐜𝐡𝐢𝐧𝐠\ndf.cache() reused DataFrames.\nNo re-computation. Massive speedup.\n5️⃣ 𝐔𝐃𝐅𝐬 (𝐔𝐬𝐞𝐫-𝐃𝐞𝐟𝐢𝐧𝐞𝐝 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬)\nCustom logic? Write once. Apply everywhere.\n𝐓𝐡𝐞 𝐛𝐫𝐮𝐭𝐚𝐥 𝐭𝐫𝐮𝐭𝐡:\nPandas: Single machine. Gigabytes max.\nPySpark: Distributed. Petabytes scale.\nJunior move: .apply() on Pandas\nSenior move: .transform() on PySpark\n𝐖𝐡𝐚𝐭'𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐜𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭:\n📌 Data Extraction (CSV, JSON, Parquet, JDBC)\n📌 Transformations (groupBy, join, window functions)\n📌 Missing values & data cleaning\n📌 Performance tuning (cache, broadcast, repartition)\n📌 Advanced SQL in PySpark\n📌 Stream processing (Kafka integration)\n📌 ML pipelines with MLlib\n📌 Cloud integration (S3, Azure, GCP)\n📌 Security & compliance patterns\n33 patterns total.\nFrom beginner to production-ready.\n𝐖𝐡𝐲 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 > 𝐏𝐚𝐧𝐝𝐚𝐬:\n✅ Handles terabytes (Pandas crashes at GB)\n✅ Distributed automatically (no code changes)\n✅ Lazy evaluation (optimizes before running)\n✅ SQL + Python (best of both worlds)\nMost Data Engineers hit this wall:\nPandas works locally.\nFails in production.\nPySpark solves this.\nWhich PySpark pattern do you struggle with most?\n♻️ Repost this cheat sheet to your network as well 🤝\n🔔 Hit the Bell, here, [ Anandnarayanan S ] to not miss more cheat sheets.\n33 PySpark commands you must MASTER!.pdf",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7464513217633882112_slide_0.jpg",
+      "description": "JPEG image, 347x490 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional cheat-sheet post about using PySpark for large-scale, distributed ETL. It contrasts Pandas, described as single-machine and limited to smaller data, with PySpark, described as distributed, lazily evaluated, and suitable for terabyte- and petabyte-scale processing. The post details five patterns: window functions, broadcast joins, partitioning by date, DataFrame caching, and user-defined functions. It also lists broader subjects such as data extraction, transformations, cleaning, performance tuning, advanced SQL, Kafka stream processing, MLlib pipelines, S3/Azure/GCP integration, and security and compliance. Although it claims to cover 33 patterns and includes a PDF filename, only five patterns are described in the supplied content, and no PDF body text is provided.",
+    "topics": [
+      "PySpark",
+      "distributed ETL",
+      "Spark performance optimization",
+      "data extraction and transformation",
+      "stream processing",
+      "machine learning pipelines",
+      "cloud integration",
+      "data security and compliance"
+    ],
+    "subtopics": [
+      "Window functions for running totals",
+      "Broadcast joins",
+      "Partitioning DataFrames by date",
+      "DataFrame caching",
+      "User-defined functions",
+      "Lazy evaluation",
+      "Advanced SQL in PySpark",
+      "Kafka stream processing integration",
+      "MLlib pipelines",
+      "S3, Azure, and GCP integration",
+      "Security and compliance patterns"
+    ],
+    "concepts": [
+      "PySpark distributed processing",
+      "Lazy evaluation",
+      "Window functions",
+      "Broadcast joins",
+      "DataFrame caching",
+      "User-defined functions",
+      "Pandas apply versus PySpark transform",
+      "Data extraction formats and connectors",
+      "PySpark transformations and cleaning",
+      "Advanced SQL in PySpark",
+      "Kafka integration",
+      "MLlib pipelines",
+      "Cloud integration",
+      "Security and compliance patterns"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What processing limitations does the post associate with Pandas, and what characteristics does it attribute to PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post characterizes Pandas as a single-machine tool suited to gigabytes rather than production-scale terabytes.\nIt characterizes PySpark as distributed, lazily evaluated, and capable of SQL and Python-based processing at much larger scale.\nThe answer should present these as the post's stated comparisons rather than universal absolute limits."
+    },
+    {
+      "question": "How can a PySpark window function support a running-total calculation, and what benefit does the post claim over a self-join?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post says a window function can calculate running totals without performing a self-join.\nIt describes the pattern as a one-line, automatically distributed solution."
+    },
+    {
+      "question": "A small table must be joined with a much larger table. Which PySpark pattern does the post recommend, and why?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The post recommends using broadcast(df) for the small side of the join.\nIt claims that broadcast joins can be 10 times faster, while making clear that the supplied post provides no supporting benchmark or conditions."
+    },
+    {
+      "question": "What does .partitionBy('date') accomplish in the approach described by the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The pattern partitions stored data by date.\nThe post says this organization lets queries access only the data they need."
+    },
+    {
+      "question": "When does the post recommend using df.cache(), and what performance problem is caching intended to avoid?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The post recommends caching a DataFrame that will be reused.\nIt says caching avoids recomputation and describes the result as a massive speedup."
+    },
+    {
+      "question": "When does the post suggest using a PySpark UDF?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A UDF is suggested when the workflow requires custom logic.\nThe post describes the benefit as writing that logic once and applying it throughout the workflow."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "distributed ETL",
+      "Spark performance optimization",
+      "data extraction and transformation",
+      "stream processing",
+      "cloud data integration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4316b2a481bd929a",
+    "saved_date": "2026-10-01T23:07:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7464513217633882112",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7464513217633882112_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

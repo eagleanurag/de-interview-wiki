@@ -1,0 +1,94 @@
+{
+  "id": "urn-li-saved-02d1745fe9579e3a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345415283479613441",
+    "captured_at": "2026-10-02T00:15:44.447912Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:17Z"
+  },
+  "original_text": "• 1st\nData Engineer | AWS | PySpark | Kafka | Airflow | Redshift | SQL | Building Scalable ETL & Real-Time Data Pipelines\n1yr •\n🚀 Cracking Big Data Engineering Interviews – My Personal Notes! 📚\nOver the past two years, I’ve compiled and refined detailed notes on Big Data concepts, architecture, and best practices while working on real-world healthcare data engineering projects.\nFrom Spark internals, Hadoop ecosystem, Hive optimization, to advanced SQL queries – I’ve covered 130+ high-impact topics that are frequently asked in interviews, including:\n✅ Spark vs MapReduce\n✅ DAG vs Lineage\n✅ Spark Execution – Drivers, Executors, Stages\n✅ Partitioning vs Bucketing\n✅ Spark SQL vs HQL vs SQL\n✅ File formats: Parquet, ORC, Avro\n✅ Data Ingestion, Profiling & Validation\n✅ Hadoop YARN Architecture\n✅ Hive Optimizations & Map-Side Joins\n✅ Sqoop Incremental Import, CDC, Split-by\n✅ PySpark Code Examples & Common Interview Queries\nBig Data & Spark Interview Notes",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345415283479613441_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional overview of personal Big Data engineering interview notes framed by experience with healthcare data engineering projects. The post claims coverage of more than 130 interview topics involving Spark, PySpark, Hadoop, Hive, Sqoop, SQL, data ingestion, and file formats. The supplied excerpt is only a high-level topic list: it contains no conceptual explanations, code examples, interview questions, or answers, and the extracted media text is blank.",
+    "topics": [
+      "Big Data engineering interview preparation",
+      "Scalable ETL and real-time data pipelines",
+      "Spark and PySpark",
+      "Hadoop ecosystem and YARN architecture",
+      "Hive optimization and HQL",
+      "Sqoop incremental ingestion and change data capture",
+      "SQL and advanced SQL queries",
+      "Data ingestion, profiling, and validation",
+      "Parquet, ORC, and Avro file formats",
+      "AWS, Kafka, Airflow, and Redshift",
+      "Healthcare data engineering projects"
+    ],
+    "subtopics": [
+      "Spark versus MapReduce",
+      "DAG versus lineage",
+      "Spark drivers, executors, and stages",
+      "Partitioning versus bucketing",
+      "Spark SQL versus HQL versus SQL",
+      "Hive optimizations",
+      "Map-side joins",
+      "Sqoop incremental import",
+      "Sqoop split-by",
+      "Change data capture",
+      "PySpark code examples and common interview queries"
+    ],
+    "concepts": [
+      "Scalable ETL and real-time data pipelines",
+      "Spark versus MapReduce",
+      "DAG versus lineage",
+      "Spark execution architecture",
+      "Partitioning versus bucketing",
+      "Spark SQL, HQL, and SQL",
+      "Data ingestion, profiling, and validation",
+      "Hadoop YARN architecture",
+      "Hive map-side joins",
+      "Sqoop incremental import and change data capture",
+      "Parquet, ORC, and Avro",
+      "Technology stack"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Big Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Spark and PySpark",
+      "Hadoop and YARN",
+      "Hive optimization",
+      "Sqoop and change data capture",
+      "ETL and real-time data pipelines",
+      "SQL query languages",
+      "Data ingestion and validation",
+      "Data file formats"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:02d1745fe9579e3a",
+    "saved_date": "2026-10-01T23:14:17Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345415283479613441",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345415283479613441_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

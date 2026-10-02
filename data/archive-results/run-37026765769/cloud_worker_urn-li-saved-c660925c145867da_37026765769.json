@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-saved-c660925c145867da",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7299764429649285121",
+    "captured_at": "2026-10-02T00:15:51.493266Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:24Z"
+  },
+  "original_text": "🚀 𝗥𝗲𝗮𝗹-𝗧𝗶𝗺𝗲 𝗙𝗿𝗮𝘂𝗱 𝗗𝗲𝘁𝗲𝗰𝘁𝗶𝗼𝗻 𝘄𝗶𝘁𝗵 𝗞𝗮𝗳𝗸𝗮, 𝗦𝗽𝗮𝗿𝗸, 𝗙𝗮𝘀𝘁𝗔𝗣𝗜 & 𝗙𝗹𝗮𝘀𝗸\nFraud detection is critical in financial transactions, and real-time processing is key to preventing losses. To tackle this, I built a Real-Time Fraud Detection System using Kafka, Spark, FastAPI, PostgreSQL, and Flask to analyze fraudulent transactions as they happen.\n\n📌 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 & 𝗧𝗲𝗰𝗵 𝗦𝘁𝗮𝗰𝗸\n🔹 Kafka – Streams real-time transactions\n🔹 Spark (Databricks) – Processes & detects fraud patterns\n🔹 FastAPI + PostgreSQL (AWS RDS) – Backend API & database\n🔹 Flask + Chart.js – Fraud analytics dashboard\n\n📌 𝗛𝗼𝘄 𝗜𝘁 𝗪𝗼𝗿𝗸𝘀?\n1️⃣ Kafka ingests live transactions\n2️⃣ Spark Streaming applies fraud detection logic\n3️⃣ FastAPI Backend stores fraud alerts in PostgreSQL (AWS RDS)\n4️⃣ Flask UI visualizes fraud patterns using charts & tables\n\n📌 𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀\n✅ Real-time fraud detection with event-driven architecture\n✅ Top-N fraud locations visualization (Bar Chart)\n✅ Paginated fraud transaction table\n✅ Scalable cloud-based infrastructure\n\n📌 𝗖𝗼𝗱𝗲\n💻 GitHub Repo: https://lnkd.in/gNjrg3we\n\n📌 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲𝘀 & 𝗡𝗲𝘅𝘁 𝗦𝘁𝗲𝗽𝘀\n🔹 Optimizing Spark for low-latency processing\n🔹 Managing Kafka consumer offsets for fault tolerance\n🔹 Deploying with AWS Lambda & API Gateway\n\n💡 How do you approach real-time fraud detection? Let’s discuss! 🚀\n\n#DataEngineering #FraudDetection #Kafka #Spark #AWS #FastAPI #StreamingData #MachineLearning #CyberSecurity #SoftwareEngineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7299764429649285121_slide_0.jpg",
+      "description": "JPEG image, 480x249 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a real-time fraud detection system that uses an event-driven pipeline: Kafka ingests live transactions, Spark Streaming on Databricks processes them and applies unspecified fraud-detection logic, FastAPI stores fraud alerts in PostgreSQL on AWS RDS, and a Flask application with Chart.js presents charts and tables. The dashboard includes Top-N fraud-location visualization and a paginated fraud-transaction table. The author identifies Spark low-latency optimization, Kafka consumer-offset management for fault tolerance, and deployment with AWS Lambda and API Gateway as future work. The post does not provide the detection algorithm, performance figures, deployment configuration, or implementation details supporting the scalability claim.",
+    "topics": [
+      "Real-Time Fraud Detection",
+      "Streaming Data",
+      "Event-Driven Architecture",
+      "Fraud Analytics",
+      "Cloud-Based Data Infrastructure"
+    ],
+    "subtopics": [
+      "End-to-End Transaction Pipeline",
+      "Real-Time Transaction Ingestion",
+      "Fraud Pattern Detection",
+      "Fraud Alert Storage",
+      "Fraud Analytics Dashboard",
+      "Low-Latency Processing",
+      "Kafka Consumer Offsets",
+      "AWS Lambda and API Gateway Deployment"
+    ],
+    "concepts": [
+      "Real-Time Fraud Detection",
+      "Event-Driven Architecture",
+      "Kafka",
+      "Spark Streaming on Databricks",
+      "FastAPI",
+      "PostgreSQL on AWS RDS",
+      "Flask and Chart.js",
+      "Top-N Fraud-Location Visualization",
+      "Paginated Fraud-Transaction Table",
+      "Low-Latency Stream Processing",
+      "Kafka Consumer-Offset Management",
+      "AWS Lambda and API Gateway Deployment"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Walk through the implemented data flow from a live financial transaction to its fraud analytics dashboard.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Kafka ingests each live transaction into the stream.\nSpark Streaming on Databricks processes the transaction and applies fraud-detection logic.\nFastAPI stores the resulting fraud alert in PostgreSQL on AWS RDS.\nFlask retrieves or presents the fraud information and visualizes it with Chart.js."
+    },
+    {
+      "question": "Which dashboard capabilities does the system provide for analyzing detected fraud?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The Flask and Chart.js interface visualizes fraud patterns.\nA bar chart displays Top-N fraud locations.\nA paginated table displays fraud transactions."
+    },
+    {
+      "question": "What future work does the post identify for improving the system's performance, fault tolerance, and deployment?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Spark should be optimized for low-latency processing.\nKafka consumer offsets should be managed to support fault tolerance.\nAWS Lambda and API Gateway are proposed for a future deployment."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Real-Time Fraud Detection",
+    "secondary_topics": [
+      "Streaming Data Processing",
+      "Event-Driven Architecture",
+      "Fraud Analytics Dashboards",
+      "Cloud-Based Data Systems"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c660925c145867da",
+    "saved_date": "2026-10-01T23:34:24Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7299764429649285121",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7299764429649285121_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

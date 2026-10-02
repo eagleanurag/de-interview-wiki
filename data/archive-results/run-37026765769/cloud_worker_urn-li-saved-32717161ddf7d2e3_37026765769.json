@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-32717161ddf7d2e3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7342036204650909697",
+    "captured_at": "2026-10-02T00:15:46.320772Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:55Z"
+  },
+  "original_text": "• 1st\nBrand partnership • Lead Data Engineer | Databricks & Azure Data Platform | Team of 7 | $100M Revenue Impact | 7-Eleven | Ex-Maersk | 45K+ Community\n1yr •\n𝐒𝐐𝐋 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭: The Ultimate Guide That Saved My Time and Effort\nSQL used to feel like a headache to me\nI would spend hours stuck on queries, not knowing what slowed them down or where I went wrong. But after learning the right way to write and use SQL, I saw everything change.\nNow, what took me hours gets done in minutes. (Big relief!)\nHere’s my SQL cheatsheet that saved my time and effort:\n𝗕𝗔𝗦𝗜𝗖 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 → 𝐓𝐡𝐞 𝐦𝐮𝐬𝐭-𝐤𝐧𝐨𝐰𝐬:\n- SELECT → Get data from tables\nExample: SELECT name FROM employees\n- WHERE → Filter your results\nExample: SELECT * FROM employees WHERE department = 'Sales'\n- INSERT → Add new data\nExample: INSERT INTO employees (name, age) VALUES ('John', 30)\n- UPDATE → Change existing data\nExample: UPDATE employees SET age = 31 WHERE name = 'John'\n- DELETE → Remove unwanted data\nExample: DELETE FROM employees WHERE name = 'John'\n𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 → 𝐅𝐨𝐫 𝐦𝐨𝐫𝐞 𝐩𝐨𝐰𝐞𝐫:\n- JOIN → Combine tables for deeper insights\nExample: SELECT orders.id, customers.name FROM orders INNER JOIN customers ON orders.customer_id = customers.id\n- GROUP BY → Group data and count\nExample: SELECT department, COUNT(*) FROM employees GROUP BY department\n- ORDER BY → Sort results easily\nExample: SELECT name, salary FROM employees ORDER BY salary DESC\n- HAVING → Filter after grouping\nExample: SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 5\n- CTEs & Window Functions → Break down complex queries and do calculations across rows (game changer for big data!)\n𝐊𝐞𝐲 𝐓𝐚𝐤𝐞𝐚𝐰𝐚𝐲:\nLearning the SQL order of execution made a huge difference for me. Once I saw how SQL runs commands step by step, my queries got faster and cleaner.\nIf you are looking for a platform to help you prepare for Data Engineering roles in top tech companies, then I’d suggest checking Bosscoder Academy.\n👉🏻 Check them here: https://bit.ly/3HNuLGY\nThey have helped over 800+ tech professionals to switch to their dream companies, and you too can switch your career with their help through:\n💡A structured curriculum covering ETL, Big Data, Cloud, and Advanced Data Ops.\n💡Mentorship from experts at Google, Samsung, and more.\n💡Hands-on projects to build a portfolio in Big Data and data processing.\n💡Resume building, mock interviews & 100% job switch assistance.\n#dataengineering #brandpartnership #interviewprep #Sql #data\n…see more\nSql cheat sheet",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7342036204650909697_slide_0.jpg",
+      "description": "JPEG image, 390x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional social post centered on an introductory SQL cheat sheet. It presents SELECT, WHERE, INSERT, UPDATE, and DELETE as basic commands, then covers JOIN, GROUP BY, ORDER BY, HAVING, CTEs, and window functions with short examples. The post says understanding SQL's step-by-step command execution helped make queries faster and cleaner, but it does not provide the actual execution order. It also promotes Bosscoder Academy's Data Engineering curriculum, mentorship, projects, and job-search assistance.",
+    "topics": [
+      "SQL",
+      "Basic SQL Commands",
+      "Advanced SQL Commands",
+      "SQL Query Execution"
+    ],
+    "subtopics": [
+      "SELECT",
+      "WHERE",
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "JOIN",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING",
+      "CTEs",
+      "Window Functions"
+    ],
+    "concepts": [
+      "SELECT",
+      "WHERE",
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "JOIN",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING",
+      "CTEs and Window Functions",
+      "SQL Command Execution Order"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What operations do SELECT, WHERE, INSERT, UPDATE, and DELETE perform in SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SELECT retrieves data from tables, WHERE filters results, INSERT adds new data, UPDATE changes existing data, and DELETE removes unwanted data.\nA strong answer can illustrate the operations with the employee-table examples presented in the post."
+    },
+    {
+      "question": "How would you count employees in each department and return only departments with more than five employees?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query selects the department and uses COUNT(*) to count employees.\nThe query uses GROUP BY department and HAVING COUNT(*) > 5 to filter the grouped results."
+    },
+    {
+      "question": "How do CTEs and window functions support complex SQL queries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The post identifies CTEs as a way to break down complex queries.\nThe post identifies window functions as supporting calculations across rows."
+    },
+    {
+      "question": "How can JOIN and ORDER BY be used together to retrieve meaningful, sorted results?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "JOIN can match records from orders and customers using their customer ID.\nORDER BY can sort the selected results, such as placing salaries in descending order."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Basic SQL Commands",
+      "Advanced SQL Commands",
+      "SQL Query Execution"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:32717161ddf7d2e3",
+    "saved_date": "2026-10-01T23:12:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7342036204650909697",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7342036204650909697_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

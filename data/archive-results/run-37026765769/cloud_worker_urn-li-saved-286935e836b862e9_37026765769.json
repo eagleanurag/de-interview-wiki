@@ -1,0 +1,97 @@
+{
+  "id": "urn-li-saved-286935e836b862e9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7318987855861596160",
+    "captured_at": "2026-10-02T00:15:45.874435Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:34Z"
+  },
+  "original_text": "🔍 Database vs. Data Warehouse vs. Data Lake – What's the Difference?\n\nWhen it comes to data storage, knowing the right tool for the job is everything. Here's a quick breakdown to help you navigate the landscape:\n\n💾 Database\n → Stores real-time, transactional data (think customer orders, app activity)\n → Best suited for day-to-day operations (OLTP)\n → Examples: PostgreSQL, MySQL, Oracle\n\n📊 Data Warehouse\n → Stores structured, cleaned data ready for reporting and analytics\n → Ideal for business intelligence and historical trends (OLAP)\n → Examples: Snowflake, Amazon Redshift, Google BigQuery\n\n🌊 Data Lake\n → Stores raw data—structured and unstructured\n → Great for AI/ML workloads and exploratory analysis\n → Examples: AWS S3, Azure Data Lake, Hadoop HDFS\n\n\n\n#DataEngineering #DataAnalytics #Database #ETL\n#MachineLearning #BigData #DataWarehouse #DataLake",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7318987855861596160_slide_0.jpg",
+      "description": "JPEG image, 480x600 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post distinguishes three data storage categories. Databases handle real-time transactional data and day-to-day OLTP operations, data warehouses hold structured, cleaned data for reporting, business intelligence, historical trends, and OLAP analytics, and data lakes hold raw structured and unstructured data for AI/ML workloads and exploratory analysis.",
+    "topics": [
+      "Data storage",
+      "Databases",
+      "Data warehouses",
+      "Data lakes"
+    ],
+    "subtopics": [
+      "OLTP",
+      "OLAP",
+      "Business intelligence",
+      "Structured and unstructured data",
+      "AI/ML workloads",
+      "Exploratory analysis"
+    ],
+    "concepts": [
+      "Database",
+      "Data Warehouse",
+      "Data Lake",
+      "OLTP",
+      "OLAP"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A company needs to process real-time customer orders and application activity as part of its day-to-day operations. Which storage category is most appropriate, and why?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A database is most appropriate because it stores real-time transactional data and supports day-to-day OLTP operations.\nRelevant examples include PostgreSQL, MySQL, and Oracle."
+    },
+    {
+      "question": "A data team needs structured, cleaned data to support business intelligence, reporting, and historical trend analysis. Which storage category should it use?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A data warehouse is designed for structured, cleaned data used in reporting and analytics.\nData warehouses support business intelligence, historical trend analysis, and OLAP workloads."
+    },
+    {
+      "question": "A machine learning team wants to retain raw structured and unstructured data for exploratory analysis. Which storage category fits this requirement?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A data lake stores raw data in both structured and unstructured forms.\nA data lake is suited to AI/ML workloads and exploratory analysis."
+    },
+    {
+      "question": "How do databases, data warehouses, and data lakes differ in their primary data characteristics and intended workloads?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Databases emphasize real-time transactional data, day-to-day operations, and OLTP.\nData warehouses emphasize structured, cleaned data, reporting, business intelligence, historical trends, and OLAP.\nData lakes emphasize raw structured and unstructured data, AI/ML workloads, and exploratory analysis."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Database, Data Warehouse, and Data Lake distinctions",
+    "secondary_topics": [
+      "OLTP",
+      "OLAP",
+      "Business intelligence",
+      "AI/ML data storage",
+      "Structured and unstructured data"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:286935e836b862e9",
+    "saved_date": "2026-10-01T23:23:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7318987855861596160",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7318987855861596160_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

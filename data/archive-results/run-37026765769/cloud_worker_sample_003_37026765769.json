@@ -1,0 +1,54 @@
+{
+  "id": "sample_003",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample_003",
+    "captured_at": "2026-09-29T18:30:00+05:30",
+    "author": "Sample Author",
+    "published_at": null
+  },
+  "original_text": "Interview question: You have a PySpark job processing a large dataset and it is taking too long. How would you identify the bottleneck and optimize the Spark workload? Consider shuffles, partitioning, caching, joins, skew, and Spark UI metrics.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The source consists only of an interview prompt about diagnosing and optimizing a slow PySpark job processing a large dataset. It names shuffles, partitioning, caching, joins, skew, and Spark UI metrics as considerations but provides no technical explanation, methodology, example, or answer. The extracted media text is empty, so the post is incomplete.",
+    "topics": [
+      "PySpark",
+      "Spark workload performance"
+    ],
+    "subtopics": [
+      "Bottleneck identification",
+      "Shuffles",
+      "Partitioning",
+      "Caching",
+      "Joins",
+      "Skew",
+      "Spark UI metrics"
+    ],
+    "concepts": [
+      "PySpark",
+      "Workload bottleneck identification",
+      "Shuffles",
+      "Partitioning",
+      "Caching",
+      "Joins",
+      "Skew",
+      "Spark UI metrics"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "PySpark workload performance optimization",
+    "secondary_topics": [
+      "Spark bottleneck diagnosis",
+      "Shuffles",
+      "Partitioning",
+      "Caching",
+      "Joins",
+      "Skew",
+      "Spark UI metrics"
+    ],
+    "interview_relevant": true
+  }
+}

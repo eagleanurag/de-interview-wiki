@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-saved-ab9b8b638bf163f6",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7325208130810748930",
+    "captured_at": "2026-10-02T00:15:50.553496Z",
+    "author": "Status is online",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:43Z"
+  },
+  "original_text": "• 1st\nCo-Founder @ CAUCHY || Lead Agentic Platform Engineer || Databricks MVP 🧱\n1yr •\nAhhh this is lovely: a whole bunch of migration guides. Personally I can relate the most with the migration FROM Microsoft SQL INTO Databricks. Need help?\nIt has been a monumental effort in the past to do a migration of a big data model that was being used actively by BI reporting.\nBoth keeping the lights on, and validating that the actual processes returned the exact same values.\nI’m quite happy to see when we did this migration we followed (not all) most of the steps in this guide.\nThe cost savings were in the multiples and the calculations were sped up inmensely: 8fold performance for 1/4 the cost.\nThis was for a pretty huge dimensional data model for commercial reporting to hundreds of stakeholders in PowerBI. These days the pairing of Databricks and PowerBI is even more powerful than it was a few years ago.\nThanks Torey (Markowitz) Bublitz and Ina Felsheim for the heads-up regarding the guides! These will come in handy.\nMore links in the comments\n…see more\nMicrosoft SQL Server to Databricks Migration Guide",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7325208130810748930_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post highlights an anecdotal migration of a large dimensional data model from Microsoft SQL Server to Databricks while it remained in use for commercial reporting in Power BI. The author emphasizes maintaining reporting operations and validating that migrated processes returned exactly the same values. For this migration, the author reports eightfold faster calculations at one quarter of the cost, but provides no detailed migration steps, validation method, or evidence sufficient to generalize the result.",
+    "topics": [
+      "Microsoft SQL Server to Databricks migration",
+      "Power BI reporting",
+      "Data migration validation",
+      "Migration performance and cost"
+    ],
+    "subtopics": [
+      "Large dimensional data model migration",
+      "Continuity of actively used BI processes",
+      "Validation of identical calculation outputs",
+      "Databricks and Power BI integration"
+    ],
+    "concepts": [
+      "Microsoft SQL Server to Databricks migration",
+      "Reporting continuity during migration",
+      "Output equivalence validation",
+      "Dimensional data model",
+      "Databricks and Power BI integration",
+      "Performance and cost improvement"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What were the main challenges in migrating a large, actively used dimensional reporting model from Microsoft SQL Server to Databricks?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The model supported commercial reporting for hundreds of Power BI stakeholders.\nExisting BI services needed to remain operational during the migration.\nThe migrated calculations needed to produce exactly the same values as the previous processes."
+    },
+    {
+      "question": "Why is output validation important when migrating reporting calculations to Databricks?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The source model was actively used for BI reporting, so incorrect calculation results could affect existing reporting.\nValidation must establish that the migrated processes return exactly the same values.\nThe post does not specify a particular validation technique."
+    },
+    {
+      "question": "How should the reported performance and cost improvement from the migration be interpreted?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The author reports eightfold faster calculations at one quarter of the cost for a large commercial reporting model.\nThe result is a personal account rather than a broadly documented benchmark.\nThe post does not provide measurement methodology or enough detail to generalize the result."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "Microsoft SQL Server to Databricks migration",
+    "secondary_topics": [
+      "Power BI reporting",
+      "Data migration validation",
+      "Performance and cost optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ab9b8b638bf163f6",
+    "saved_date": "2026-10-01T23:27:43Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7325208130810748930",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7325208130810748930_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

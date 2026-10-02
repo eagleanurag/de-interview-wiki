@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-b228ac8144b7c4be",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349219212017483777",
+    "captured_at": "2026-10-02T00:15:50.799715Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:56Z"
+  },
+  "original_text": "This is cool. Materialized views in databricks only getting triggered when input or upstream tables change.\n\nI always had an issue with running materialized views in the workflows. We don't use materilaized views in dlt pipeline, but as a standalone gold tables.\n\nIn workflows, we had to pay the double compute of warehouse and then underneath dlt piepline which refreshes the materialized view.\n\nOther option was to run it on schedule , but we had a depedency on the upstream tables. Now we can trigger the views refresh based on when upstream changes happen.\n\nUse TRIGGER ON UPDATE on your MV's.\n\nNow, what if data is streaming continuously in your streaming table and your views are built on top of it. \n\nDon't you worry, we can define a trigger on how often views can refresh based on upstream changes .\n\nSo, TRIGGER ON UPDATE combining it with AT AMOST every 3 hours.\n\nIt'd run only once every 3 hours whenever upstream data changes.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349219212017483777_slide_0.jpg",
+      "description": "JPEG image, 480x178 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes Databricks materialized views as standalone gold tables rather than components of a DLT pipeline and recommends TRIGGER ON UPDATE so refreshes occur when input or upstream tables change. It contrasts this with scheduled refreshes and a workflow pattern that incurred both warehouse compute and DLT pipeline refresh compute. For a materialized view over a continuously changing streaming table, the author recommends combining update triggering with a maximum refresh interval of three hours, described as running once every three hours when upstream data changes.",
+    "topics": [
+      "Databricks materialized views",
+      "Change-triggered view refreshes",
+      "DLT workflows",
+      "Streaming tables",
+      "Workflow compute cost"
+    ],
+    "subtopics": [
+      "TRIGGER ON UPDATE",
+      "Upstream table dependencies",
+      "Standalone gold tables",
+      "Three-hour refresh frequency control",
+      "Double compute in materialized-view workflows"
+    ],
+    "concepts": [
+      "Materialized views as standalone gold tables",
+      "TRIGGER ON UPDATE",
+      "Upstream-dependent scheduling",
+      "Double compute in workflows",
+      "Three-hour refresh limit for streaming data"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What problem does TRIGGER ON UPDATE address for a materialized view whose upstream tables can change?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "It triggers the materialized view refresh when an input or upstream table changes.\nIt provides an alternative to relying on a schedule when refresh timing depends on upstream data."
+    },
+    {
+      "question": "Why did the author's previous workflow design result in double compute when refreshing a materialized view?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The workflow incurred warehouse compute and then compute for a DLT pipeline underneath it that refreshed the materialized view.\nThe author used materialized views as standalone gold tables rather than relying on the DLT pipeline arrangement."
+    },
+    {
+      "question": "How should a materialized view over a continuously changing streaming table be refreshed if updates may occur continuously but refreshes should be limited to once every three hours?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Use TRIGGER ON UPDATE for the materialized view.\nCombine the update trigger with a maximum refresh interval of three hours, causing a refresh once every three hours when upstream data changes."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks materialized view refresh strategies",
+    "secondary_topics": [
+      "Change-triggered orchestration",
+      "Streaming table processing",
+      "Workflow compute cost",
+      "Upstream data dependencies"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b228ac8144b7c4be",
+    "saved_date": "2026-10-01T23:11:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349219212017483777",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349219212017483777_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

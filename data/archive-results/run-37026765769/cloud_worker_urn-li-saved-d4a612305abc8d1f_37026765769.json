@@ -1,0 +1,118 @@
+{
+  "id": "urn-li-saved-d4a612305abc8d1f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7462691074113880064",
+    "captured_at": "2026-10-02T00:15:52.171738Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:01Z"
+  },
+  "original_text": "• 1st\nLead Data Engineer @ PepsiCo | Databricks | PySpark | SQL | Azure | ADF | ADLS Gen2 | Unity Catalog | CI/CD | ETL/ELT | Performance Tuning | GenAI (LangChain | LangGraph | RAG) | Performance Tuning | DM for Collab\n4mo •\n𝗕𝗶𝗿𝗹𝗮𝘀𝗼𝗳𝘁 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 𝗳𝗼𝗿 𝟬–𝟱 𝗬𝗲𝗮𝗿 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲\nMost Data Engineer interviews are no longer focused only on SQL or PySpark syntax.\nHere are some important interview scenarios asked in Birlasoft 👇\n✅ One source arrives late in a multi-source pipeline\n✅ PySpark job failing due to data skew\n✅ ADF pipeline failed in the last step\n✅ SQL query running for 20 minutes\n✅ Designing CDC pipeline for 10M+ daily records\n✅ Data quality issues in incoming files\n✅ Migrating on-prem database to Azure Synapse\nThe interesting part?\nThese questions test:\n• Problem-solving\n• Production debugging\n• Optimization thinking\n• Scalable architecture design\n• Recovery strategies\nNot just tool knowledge.\nIf you are preparing for Data Engineering interviews in 2026, focus more on:\n• Scenario-based questions\n• Failure handling\n• Pipeline optimization\n• Metadata-driven architecture\n• Real-time debugging approaches\nThat’s what companies expect from experienced candidates now.\n💙 Like 👍 & Save 🔖 for later.\n🔄 Share this post if it adds value to your interview prep.\nComment below 👇 Which scenario question looks toughest to you?\n𝗙𝗼𝗿 𝟭:𝟭 𝗴𝘂𝗶𝗱𝗮𝗻𝗰𝗲\nhttps://lnkd.in/gxjZT5P3\n🚀 𝗟𝗲𝘃𝗲𝗹 𝘂𝗽 𝘆𝗼𝘂𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗽𝗿𝗲𝗽:\n🔹 𝗦𝗤𝗟 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗠𝗮𝘀𝘁𝗲𝗿𝘆 – 𝟮𝟬𝟬+ 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dYJb42RH\n🔹 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 – 𝟵𝟲 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwCEinvH\n🔹 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗣𝘆𝘁𝗵𝗼𝗻 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 – 𝟭𝟬𝟬 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwKVeFf7\n👉 Follow Anuj Shrivastav for more Data Engineering interview content.\n#DataEngineering #PySpark #SQL #Databricks #Azure #ADF #CDC #BigData #InterviewPrep #DataEngineer\n𝗕𝗶𝗿𝗹𝗮𝘀𝗼𝗳𝘁 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7462691074113880064_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post claims that Birlasoft Data Engineer interviews emphasize production scenarios rather than only SQL or PySpark syntax. It lists seven scenarios: a late source in a multi-source pipeline, a PySpark job failing because of data skew, an ADF pipeline failing in its final step, a SQL query running for 20 minutes, designing a CDC pipeline for 10M+ daily records, data-quality problems in incoming files, and migrating an on-prem database to Azure Synapse. It says these scenarios assess problem-solving, production debugging, optimization thinking, scalable architecture design, and recovery strategies. For 2026 interview preparation, it recommends focusing on scenario-based questions, failure handling, pipeline optimization, metadata-driven architecture, and real-time debugging. The post does not provide detailed diagnoses, implementations, or technical solutions for the listed scenarios.",
+    "topics": [
+      "Data Engineering Interview Preparation",
+      "Multi-Source Data Pipelines",
+      "PySpark Troubleshooting",
+      "ADF Pipeline Troubleshooting",
+      "SQL Performance",
+      "CDC Pipeline Design",
+      "Data Quality",
+      "Azure Synapse Migration"
+    ],
+    "subtopics": [
+      "Late-arriving source data",
+      "PySpark data skew",
+      "Final-step ADF pipeline failure",
+      "Long-running SQL queries",
+      "CDC for 10M+ daily records",
+      "Incoming-file data quality",
+      "On-prem database migration",
+      "Failure handling and recovery",
+      "Metadata-driven architecture",
+      "Real-time debugging"
+    ],
+    "concepts": [
+      "Scenario-Based Data Engineering Interviews",
+      "Late-Arriving Source Data",
+      "PySpark Data-Skew Failure",
+      "ADF Final-Step Failure",
+      "Long-Running SQL Query",
+      "Scalable CDC Pipeline Design",
+      "Incoming-File Data Quality",
+      "On-Prem Database Migration",
+      "Production Engineering Competencies",
+      "2026 Interview Preparation Priorities"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What shift in Data Engineering interview scope does the post claim, and which five capabilities do its Birlasoft scenarios assess?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should explain that the scenarios go beyond SQL and PySpark syntax and focus on production situations.\nThe answer should identify problem-solving, production debugging, optimization thinking, scalable architecture design, and recovery strategies."
+    },
+    {
+      "question": "For each listed Birlasoft scenario, what is its primary engineering concern?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A late source is the multi-source pipeline failure-handling scenario.\nPySpark data skew, a failed final ADF step, and a 20-minute SQL query are troubleshooting or performance scenarios.\nThe CDC requirement for 10M+ daily records is the scalable-architecture scenario.\nIncoming-file issues represent data quality, while moving an on-prem database to Azure Synapse represents migration."
+    },
+    {
+      "question": "A PySpark job is failing because of data skew. What can a candidate be expected to demonstrate based on this post?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The candidate should demonstrate problem-solving and production debugging rather than focus only on PySpark syntax.\nThe response should show optimization thinking and address failure handling or recovery.\nThe post provides no specific data-skew diagnosis or fix, so a particular remediation cannot be inferred from it."
+    },
+    {
+      "question": "Which capabilities are assessed when an interviewer asks for a CDC pipeline design handling 10M+ records per day?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The candidate should demonstrate scalable architecture design and optimization thinking.\nThe response should connect the design to pipeline optimization and problem-solving.\nThe post does not prescribe a specific CDC architecture or implementation."
+    },
+    {
+      "question": "What areas does the post recommend experienced candidates study when preparing for Data Engineering interviews in 2026?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should include scenario-based questions and failure handling.\nThe answer should include pipeline optimization, metadata-driven architecture, and real-time debugging approaches."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Multi-Source Pipeline Failure Handling",
+      "PySpark Troubleshooting",
+      "ADF Troubleshooting",
+      "SQL Performance Optimization",
+      "CDC Architecture",
+      "Data Quality",
+      "Azure Synapse Migration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d4a612305abc8d1f",
+    "saved_date": "2026-10-01T23:08:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7462691074113880064",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7462691074113880064_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

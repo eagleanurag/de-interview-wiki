@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-archive-85745d0aa3fe4a42",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.715344Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:29Z"
+  },
+  "original_text": "𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲 \n\nYear of Experience - 6.5 YOE \nCTC Offered - ₹45 LPA\n\n𝗥𝗼𝘂𝗻𝗱 𝟭 - 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 (𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 𝗥𝗼𝘂𝗻𝗱 – 𝗛𝗮𝗰𝗸𝗲𝗿𝗥𝗮𝗻𝗸)\n\nQ1. Write a SQL query to find Nth highest salary using CTE and DENSE_RANK\nQ2. Optimize a Spark job that merges multiple small Parquet files\nQ3. How would you handle schema evolution in Delta Lake?\n\n𝗥𝗼𝘂𝗻𝗱 𝟮 - 𝗗𝗲𝗲𝗽 𝗗𝗶𝘃𝗲 𝗶𝗻 𝗦𝗽𝗮𝗿𝗸 + 𝗗𝗲𝗹𝘁𝗮 𝗟𝗮𝗸𝗲\n\nQ1. Difference between repartition, coalesce, and how to use them efficiently?\nQ2. You have a Delta table partitioned by date. How do you compact small files daily?\nQ3. Write PySpark code to implement Slowly Changing Dimension Type 2 (SCD2)\n\n𝗥𝗼𝘂𝗻𝗱 𝟯 - 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗗𝗲𝘀𝗶𝗴𝗻\n\nQ1. You are ingesting 500 GB/day from on-prem to ADLS Gen2. How will you orchestrate this using ADF and Databricks?\nQ2. How to handle backpressure and retry in Azure Data Factory?\n\n𝗥𝗼𝘂𝗻𝗱 𝟰 - 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻\n𝗗𝗲𝘀𝗶𝗴𝗻 𝗮 𝗗𝗮𝘁𝗮 𝗟𝗮𝗸𝗲𝗵𝗼𝘂𝘀𝗲 𝗳𝗼𝗿 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝘁𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻𝘀\n\nQ1. How would you manage audit logging for data pipeline activities?\nQ2. What metadata strategy would you apply using Unity Catalog?\n\n𝗥𝗼𝘂𝗻𝗱 𝟱 - 𝗛𝗶𝗿𝗶𝗻𝗴 𝗠𝗮𝗻𝗮𝗴𝗲𝗿 + 𝗖𝘂𝗹𝘁𝘂𝗿𝗲 𝗙𝗶𝘁\n\nQ1. Have you mentored junior engineers? How do you do code reviews? Scenario You are asked to justify infra cost on Azure Databricks to management — how would you explain?\n\nFollow Arabinda Pani for more posts\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a Databricks Data Engineer interview-experience listing for a 6.5-YOE role with ₹45 LPA offered. It lists questions about SQL with CTE and DENSE_RANK, Spark optimization for small Parquet files, Delta Lake schema evolution and compaction, repartition versus coalesce, PySpark SCD2, ADF and Databricks orchestration for ingesting 500 GB/day from on-premises to ADLS Gen2, ADF backpressure and retries, pipeline audit logging, Unity Catalog metadata, mentoring, code reviews, and Azure Databricks infrastructure-cost justification. The supplied content is only a question list: it contains no answers, SQL, PySpark code, workflow design, optimization guidance, or Azure Databricks cost figures, and it ends without further detail after the final scenario.",
+    "topics": [
+      "SQL with CTE and DENSE_RANK",
+      "Spark optimization for small Parquet files",
+      "Delta Lake schema evolution and compaction",
+      "Spark repartition and coalesce",
+      "SCD2 with PySpark",
+      "ADLS Gen2 ingestion",
+      "Backpressure and retries in Azure Data Factory",
+      "Data pipeline audit logging",
+      "Unity Catalog metadata strategy",
+      "Engineering mentoring and code reviews",
+      "Azure Databricks infrastructure-cost justification"
+    ],
+    "subtopics": [
+      "Finding the Nth highest salary",
+      "Merging multiple small Parquet files",
+      "Differences between repartition and coalesce",
+      "Handling Delta Lake schema evolution",
+      "Daily compaction of a date-partitioned Delta table",
+      "Implementing Slowly Changing Dimension Type 2",
+      "Moving 500 GB/day from on-premises to ADLS Gen2",
+      "Orchestrating ingestion with ADF and Databricks",
+      "Handling pipeline backpressure",
+      "Handling pipeline retries",
+      "Logging data pipeline activities",
+      "Managing metadata with Unity Catalog",
+      "Justifying Azure Databricks infrastructure costs"
+    ],
+    "concepts": [
+      "Nth highest salary with CTE and DENSE_RANK",
+      "Small Parquet file merging in Spark",
+      "Repartition versus coalesce",
+      "Delta Lake schema evolution",
+      "Daily compaction of a date-partitioned Delta table",
+      "SCD2 with PySpark",
+      "Backpressure and retry handling in Azure Data Factory",
+      "Data pipeline audit logging",
+      "Unity Catalog metadata strategy",
+      "Engineering mentoring and code reviews",
+      "Azure Databricks infrastructure-cost justification"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks Data Engineering Interview Topics",
+    "secondary_topics": [
+      "SQL",
+      "Spark and Parquet",
+      "Delta Lake",
+      "PySpark and SCD2",
+      "Azure Data Factory",
+      "ADLS Gen2",
+      "Unity Catalog",
+      "Data pipeline audit logging and metadata",
+      "Engineering leadership",
+      "Infrastructure-cost justification"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:85745d0aa3fe4a42",
+    "saved_date": "2026-10-01T23:10:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

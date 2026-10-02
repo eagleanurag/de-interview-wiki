@@ -1,0 +1,39 @@
+{
+  "id": "urn-li-archive-b749b43fe7bd3772",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.013295Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:04Z"
+  },
+  "original_text": "𝗧𝗵𝗲𝘀𝗲 𝗔𝗗𝗙 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 𝗔𝗿𝗲 𝗥𝗲𝗽𝗲𝗮𝘁𝗲𝗱 𝗠𝘂𝗹𝘁𝗶 𝗧𝗶𝗺𝗲𝘀 𝗕𝘆 𝗖𝗮𝗽𝗴𝗲𝗺𝗶𝗻𝗶 \n\nRole - Azure Data Engineer \nCTC - 12 to 15 LPA\n\n1).What are the steps to create a pipeline in adf ? \n\n2).Difference between Auto-resolve integration and SHIR ? \n\n3).How you connect from ADF and ADB to ADLS. What are the authentications available (SAS, Access Keys,etc) \n\n4).Difference between Service Principal and SAS tokens ? \n\n5).A pipeline should run as soon as the file lands in Azure blob, how do \nyou do that \n\n6).What are the steps to create a pipeline in ADF ?\n\n7).How to Call API in Azure Data Factory ?\n\n8).Describe the process ofsetting up CI/CD for Azure Data Factory ?\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is an Azure Data Engineer job announcement with a stated compensation range of 12 to 15 LPA. It lists interview questions about Azure Data Factory pipelines, Auto-resolve integration and SHIR, connections from ADF and ADB to ADLS, authentication options, file-arrival triggers, API calls, and CI/CD. It does not provide answers, procedures, definitions, or other technical explanations, and the pipeline-creation question appears twice.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b749b43fe7bd3772",
+    "saved_date": "2026-10-01T23:16:04Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

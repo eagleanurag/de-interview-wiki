@@ -1,0 +1,63 @@
+{
+  "id": "urn-li-saved-c4f5b44494fd081c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346749628664463363",
+    "captured_at": "2026-10-02T00:15:51.234692Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:30Z"
+  },
+  "original_text": "Believe me, there is only one way to learn #SQL.\n\nThat is by practicing it everyday.\n\nNo matter which bootcamp you join or which roadmap you follow, if you don't practice regularly you won't master SQL.\n\nHere are few websites where you can practice SQL regularly.\n\n[1.] Leetcode\n[2.] DataLemur\n[3.] Stratascratch\n[4.] Ankit Bansal's YT\n\nIf you are able to solve medium-hard level problems on these websites, you are good to crack any interview.\n\nFollow Mohit Motwani for more.\nDM me for more FREE resources. \n\n#sql #dataengineering #dataanalyst #linkedin #growth #interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346749628664463363_slide_0.jpg",
+      "description": "JPEG image, 480x279 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post argues that mastering SQL requires regular daily practice and lists Leetcode, DataLemur, Stratascratch, and Ankit Bansal's YouTube channel as resources. It claims that being able to solve medium-hard SQL problems indicates readiness for interviews, but it provides no SQL concepts, techniques, examples, or technical exercises.",
+    "topics": [
+      "SQL",
+      "SQL practice",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "Daily learning habits",
+      "SQL practice resources",
+      "SQL problem difficulty"
+    ],
+    "concepts": [
+      "Regular SQL practice",
+      "SQL practice resources",
+      "Medium-hard SQL problems"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Skill development",
+      "Interview preparation"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c4f5b44494fd081c",
+    "saved_date": "2026-10-01T23:11:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346749628664463363",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346749628664463363_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

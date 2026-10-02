@@ -1,0 +1,89 @@
+{
+  "id": "urn-li-saved-da45163766a44252",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7329752411470778368",
+    "captured_at": "2026-10-02T00:15:52.331203Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:31Z"
+  },
+  "original_text": "🔍 PySpark Interview Question Asked in Accenture 🔍\n📌 Scenario: Identify accounts that should be banned based on logins from different IP addresses at the same time.\n✅ This is a common real-world data integrity challenge tackled during big data interviews!\n\n📊 Tools Used:\n✔️ PySpark\n✔️ Window Functions\n✔️ DataFrame filtering\n✔️ Column operations\n\n🧠 Key Insight: An account logging in from multiple IPs simultaneously is suspicious and may indicate account compromise. The logic cleverly uses window functions and time overlaps to detect such cases.\n\n📤 Check the image for full PySpark code, sample data, intermediate steps, and the final output.\n\n📣 Interview Tip: Always break down the problem and leverage window functions when dealing with time-based patterns or ordering.\n\n🔁 Feel free to share or comment if you’ve encountered similar questions in your interviews!\n\n#PySpark #BigData #DataEngineering #InterviewQuestions #Accenture #ApacheSpark #WindowFunctions #DataFrame #TechCareers #CodingChallenge #Python #SparkSQL #LinkedInLearning",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7329752411470778368_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a PySpark interview scenario involving accounts that log in from different IP addresses at the same time. It describes this pattern as suspicious and as a possible sign of account compromise, and it identifies window functions, time-overlap detection, DataFrame filtering, and column operations as relevant techniques. The referenced image containing the code, sample data, intermediate steps, and output is not included, so the implementation details and results cannot be analyzed.",
+    "topics": [
+      "PySpark",
+      "window functions",
+      "DataFrame filtering",
+      "column operations",
+      "account compromise detection"
+    ],
+    "subtopics": [
+      "simultaneous multi-IP login detection",
+      "time-overlap detection",
+      "time-based pattern analysis",
+      "ordering-based analysis"
+    ],
+    "concepts": [
+      "Simultaneous multi-IP login pattern",
+      "Potential account compromise",
+      "Time-overlap detection",
+      "PySpark window functions",
+      "DataFrame filtering",
+      "Column operations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you use PySpark to identify an account that logs in from different IP addresses at the same time?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The login-analysis problem should be broken into manageable processing steps.\nThe solution should use window functions to analyze time overlaps and other time-based patterns.\nThe implementation should use DataFrame filtering and column operations as part of the PySpark solution."
+    },
+    {
+      "question": "Why is an account logging in from multiple IP addresses at the same time considered suspicious?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The relevant signal is one account associated with different IP addresses during the same time period.\nThis behavior may indicate account compromise and is presented as a data-integrity concern."
+    },
+    {
+      "question": "What role do window functions play in detecting the login pattern described in the post?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Window functions support analysis of time-based patterns and ordering.\nThey can be used to identify time overlaps between login events associated with different IP addresses."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark window functions for detecting simultaneous multi-IP logins",
+    "secondary_topics": [
+      "account compromise detection",
+      "time-overlap analysis",
+      "DataFrame processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:da45163766a44252",
+    "saved_date": "2026-10-01T23:23:31Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7329752411470778368",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7329752411470778368_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

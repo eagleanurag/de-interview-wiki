@@ -1,0 +1,82 @@
+{
+  "id": "urn-li-saved-43bdf4fc8709b242",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7333699081808101377",
+    "captured_at": "2026-10-02T00:15:47.095284Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:29Z"
+  },
+  "original_text": "Microsoft Azure Data Engineering 𝐄𝐧𝐝 𝐭𝐨 𝐄𝐧𝐝 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 :\n\nIf you are looking for Azure end to end projects ,you can consider watching below YouTube videos and Articles :\n\n▶ 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 :\n\n1. Olympic Data Analytics | Azure End-To-End Data Engineering Project (Darshil Parmar)\n🔗 https://lnkd.in/gb_gwT3R\n\n2. An End to End Azure Data Engineering Real Time Project Demo | Get Hired as an Azure Data Engineer ( Mr. K Talks Tech )\n🔗 https://lnkd.in/gQ7RT5kJ\n\n3. Azure Data Engineer Project | Azure Data Engineer End to End Project | Azure data Engineer Job (Aditya Chandak)\n🔗 https://lnkd.in/gsPWybWw\n\n 4. Fabric Build Your End-to-End Project in Just 3 Hours: Master Azure Data Engineering | Bing Data Analytics ( Mr. K Talks Tech )\n🔗 https://lnkd.in/gXPQZqCu \n\n5. Football Data Analytics | Azure End To End Data Engineering Project ( 𝐂𝐨𝐝𝐞𝐖𝐢𝐭𝐡𝐘𝐮 (Yusuf Ganiyu)\n🔗 https://lnkd.in/gNHrhDV5\n\n6. Master Azure Databricks CI/CD in 2 Hours with Azure DevOps | Full End-to-End CI/CD Project in Azure\n🔗 https://lnkd.in/g-ZEY9vi\n\n🚀 𝐑𝐎𝐀𝐃𝐌𝐀𝐏 :\n\nMicrosoft Azure Data Engineering Complete Roadmap 2024 (Top 10 Services To Focus) Darshil Parmar\n🔗 https://lnkd.in/g-KANHRM \n\n📗 𝐀𝐫𝐭𝐢𝐜𝐥𝐞𝐬 :\n\n1. A Step-by-Step Guide to Building End-to-End Data Engineering Projects with Azure ( Akshay T.)\n\nIt has 3 parts, go and check out\n🔗 https://lnkd.in/ga6giSME\n\n2. Building an end-to-end data pipeline using Azure Databricks (Jose Alonso Medina Donayre)\n\nIt has 6 parts, go through all parts \n🔗 https://lnkd.in/gjy2MMq3\n\n3. Azure End-To-End Data Engineering Project: Harnessing the GitHub Student Pack for Students and Beginners ( Kaouthar EL BAKOURI)\n🔗 https://lnkd.in/gcXrkhNX\n\n4. An end to end Azure Data Engineering project using sales data\n(KAVIPRAKASH SELVARAJ)\n🔗 https://lnkd.in/gETde7Xp\n\nPC : Abhisek Sahu \n\n🤝 Follow 👨‍💻 Akhil Rachuri for a regular curated feed of #dataengineering insights and valuable content!\n\n\nBetter reach: Shubham Wadekar Vaishnavi MURALIDHAR Sumit Mittal Deepak Goyal Karthik K. Sai Krishna Chivukula Shashank Mishra 🇮🇳 Ankita Gulati Asheesh T. Ankur Bhattacharya Ankur Ranjan Sachin Chandrashekhar 🇮🇳 Lovee Kumar Allauddin Khan Pathan Priyam Jain Nimra Ayaz Anurag Sharma Abhishek Jha Gayatri G \n\n\n#DataEngineeringInterview #ApacheSpark #InterviewPrep #DataEngineering #TechInterviewTips #data #dataen #dataengineerjobs #interviewquestions #interviewprep",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7333699081808101377_slide_0.jpg",
+      "description": "JPEG image, 480x165 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a curated resource list for people seeking Azure end-to-end data engineering projects. It recommends six YouTube videos, one Azure Data Engineering roadmap, and four articles, with titles referencing data analytics, real-time projects, Azure Databricks, Fabric, Azure DevOps CI/CD, and data pipelines. The supplied content contains links and titles but does not provide technical explanations, implementation steps, architecture, or interview answers.",
+    "topics": [
+      "Azure Data Engineering",
+      "End-to-end data engineering projects",
+      "Data analytics projects",
+      "Real-time data engineering projects",
+      "Azure Databricks",
+      "CI/CD",
+      "Azure DevOps",
+      "Data pipelines",
+      "Fabric"
+    ],
+    "subtopics": [
+      "Olympic data analytics project",
+      "Football data analytics project",
+      "Sales data project",
+      "Azure Databricks CI/CD project",
+      "Azure Databricks data pipeline",
+      "Azure Data Engineering roadmap",
+      "Multi-part project articles"
+    ],
+    "concepts": [
+      "Azure Data Engineering",
+      "End-to-end data engineering project",
+      "Azure Databricks",
+      "CI/CD with Azure DevOps",
+      "Azure data pipeline",
+      "Fabric",
+      "Azure Data Engineering roadmap"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineering",
+    "secondary_topics": [
+      "End-to-end data engineering projects",
+      "Data analytics",
+      "Azure Databricks",
+      "CI/CD",
+      "Azure DevOps",
+      "Data pipelines",
+      "Fabric"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:43bdf4fc8709b242",
+    "saved_date": "2026-10-01T23:22:29Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7333699081808101377",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7333699081808101377_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

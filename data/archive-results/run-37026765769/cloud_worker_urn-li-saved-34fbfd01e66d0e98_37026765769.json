@@ -1,0 +1,68 @@
+{
+  "id": "urn-li-saved-34fbfd01e66d0e98",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341756690179993602",
+    "captured_at": "2026-10-02T00:15:46.403798Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:07Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Expertise in Azure Data Factory | Azure Databricks | Big Data | PySpark | SQL | Microsoft Fabric | ETL | Data Lake | Linux | SCCM | VMware | MDE | Windows Admin |\n1yr •\n💥 SQL Server or Databricks? Choose wrong, and you could lose time, money, and momentum.\nData is exploding. Choosing the right engine isn’t just technical—it’s strategic. So I created a visual guide that breaks down the key differences between SQL Server and Databricks (Apache Spark)—so you can make the right call for your next project or interview. 🧠⚙️\n📊 What’s inside: • OLTP vs. Big Data use cases\n• Vertical vs. horizontal scaling\n• Cost models: license vs. usage-based\n• Real-world decision grid\n• When to use both together (yes, that’s a thing!)\n✅ Ideal for:\n• Data Engineers & Architects\n• Azure & Spark Practitioners\n• Interview Prep Warriors\n• Anyone migrating to modern data stacks\n📥 Swipe the carousel or download the full PDF.\nLet’s stop guessing and start architecting smarter.\n💬 Which engine do you use more—and why?\n#Databricks #ApacheSpark #SQLServer #DataEngineering #BigData #AzureDataEngineer #SparkClusters #DeltaLake #ETL #DataPipeline #CloudDataPlatform #InterviewPreparation #SachinShares #LinkedInCarousel\n🔹 SQL Server vs Databricks comparison\n🔹Databricks for big data\n🔹SQL Server for OLTP\n🔹Spark vs traditional RDBMS\n🔹Data engineering tools 2025\n🔹Choosing the right data platform\n🔹Databricks interview prep\n🔹Azure data architecture\n🔹Cost optimization in cloud data\n🔹Delta Lake vs SQL tables\n👆 👉 For more content, follow Sachin Patil ..... 👍\n…see more\nSQL SERVER OR DATABRICKS",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341756690179993602_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post announces a visual comparison of SQL Server and Databricks, with Databricks identified as an Apache Spark platform. It says the guide covers OLTP and big data use cases, vertical and horizontal scaling, license and usage-based cost models, a platform-selection decision grid, and circumstances for using SQL Server and Databricks together. It does not provide the actual comparison details or recommendations, and the extracted media text is empty.",
+    "topics": [
+      "SQL Server versus Databricks platform selection",
+      "OLTP and big data workloads",
+      "Data platform scaling and cost considerations",
+      "SQL Server and Databricks combined use"
+    ],
+    "subtopics": [
+      "Vertical versus horizontal scaling",
+      "License versus usage-based cost models",
+      "Workload-based platform selection",
+      "Using SQL Server and Databricks together"
+    ],
+    "concepts": [
+      "SQL Server and Databricks comparison",
+      "OLTP and big data use cases",
+      "Vertical and horizontal scaling",
+      "License and usage-based cost models",
+      "Combined SQL Server and Databricks use"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Server versus Databricks platform selection",
+    "secondary_topics": [
+      "OLTP and big data workloads",
+      "Scaling and cost-model considerations",
+      "Combined SQL Server and Databricks architectures"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:34fbfd01e66d0e98",
+    "saved_date": "2026-10-01T23:17:07Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341756690179993602",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341756690179993602_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

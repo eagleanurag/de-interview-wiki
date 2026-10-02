@@ -1,0 +1,69 @@
+{
+  "id": "urn-li-archive-be0fc8305f29fbe9",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.106093Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:03Z"
+  },
+  "original_text": "No matter if you have 1, 2, or 5 years of experience.\n\nTruth is:\n\nIf you are giving an interview at any good product-based company or MNCs, 3-5 rounds are just:\n\n- DSA, Development (2 to 3 rounds), and \n- System Design (1 to 2 rounds)\n\nNo matter what others say, that's my experience: we have to excel in these three areas (DSA, Development, and System Design, including LLD and HLD) to clear any interview; there are no shortcuts.\n\nThe playlist below will help you in your preparation:\n\n1. Low-Level Design from Basics to Advanced\n - https://lnkd.in/dJkgzKxf\n - https://lnkd.in/dE_SQTKC\n\n2. High-Level Design from Basics to Advanced\n - https://lnkd.in/d8eDwYVA\n - https://lnkd.in/d69kwkZn\n\n3. JAVA from Basics to Advanced\n - https://lnkd.in/dUNA6vsU\n - https://lnkd.in/dFaBKNQh\n\n4. Spring Boot from Basics to Advanced\n - https://lnkd.in/gz2A5ih2\n - https://lnkd.in/dJutkira\n\n5. Best playlists for Software Developer\n - https://lnkd.in/dTChTZiK\n - https://lnkd.in/dyxVCxfQ\n\n➤ 𝗛𝗲𝗿𝗲 𝗮𝗿𝗲 𝘀𝗼𝗺𝗲 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝘁𝗼 𝗳𝗼𝗹𝗹𝗼𝘄:\n 1. Shrayansh Jain: https://lnkd.in/dUABhnbT\n 2. Gaurav Sen: https://lnkd.in/dAPhQyBp\n 3. Hussein Nasser: https://lnkd.in/dubTqr22\n 4. Arpit Bhayani: https://lnkd.in/du8RyS7R\n 5. Rajat Gajbhiye: https://lnkd.in/dzVKvzGP\n 6. Akshay Saini: https://lnkd.in/dugUzqMe \n\n𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗚𝘂𝗶𝗱𝗲.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲: \n - https://lnkd.in/dte69Z5N\n\nStay Hungry, Stay FoolisH!\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is general software-development interview preparation advice rather than a detailed technical post. The author states that product-based companies and MNCs commonly conduct three to five rounds covering Data Structures and Algorithms, development, and system design, with system design including Low-Level Design and High-Level Design. The post links to playlists covering these areas, Java, Spring Boot, and software development, but it does not explain any technical concepts, methods, or solutions.",
+    "topics": [
+      "Software development interview preparation",
+      "Data Structures and Algorithms",
+      "System Design",
+      "Low-Level Design",
+      "High-Level Design",
+      "Java",
+      "Spring Boot"
+    ],
+    "subtopics": [
+      "Interview round structure",
+      "Software development preparation",
+      "LLD and HLD preparation",
+      "Java playlists",
+      "Spring Boot playlists"
+    ],
+    "concepts": [
+      "Data Structures and Algorithms (DSA)",
+      "Development",
+      "System Design",
+      "Low-Level Design (LLD)",
+      "High-Level Design (HLD)",
+      "Java",
+      "Spring Boot"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Software Engineering",
+    "primary_topic": "Software Development Interview Preparation",
+    "secondary_topics": [
+      "Data Structures and Algorithms",
+      "Software Development",
+      "System Design",
+      "Low-Level Design",
+      "High-Level Design",
+      "Java",
+      "Spring Boot"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:be0fc8305f29fbe9",
+    "saved_date": "2026-10-01T23:09:03Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

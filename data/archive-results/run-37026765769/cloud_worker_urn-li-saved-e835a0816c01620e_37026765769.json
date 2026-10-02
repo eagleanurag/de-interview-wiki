@@ -1,0 +1,94 @@
+{
+  "id": "urn-li-saved-e835a0816c01620e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463427170267213824",
+    "captured_at": "2026-10-02T00:15:52.999295Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:35Z"
+  },
+  "original_text": "🚨 TCS Data Engineer Interviews Are No Longer About “Define ETL.” 🚨\nThey are testing whether you can design REAL enterprise-scale data pipelines. ⚡\nThis Round-1 TCS Data Engineer interview set is packed with the exact scenario-based questions candidates are facing in 2026.\nAnd honestly…\n These are the kinds of questions that separate:\n❌ Tutorial-based preparation\n from\n ✅ Real engineering thinking\nSome major topics covered in this round 👇\n🔥 Multi-source Data Ingestion\n 🔥 Incremental Load Design\n 🔥 SCD Type 1 & Type 2\n 🔥 Real-Time Streaming Pipelines\n 🔥 Data Quality Frameworks\n 🔥 Spark Optimization\n 🔥 Schema Drift Handling\n 🔥 Orchestration Failure Recovery\n 🔥 Data Lake vs Data Warehouse\n 🔥 End-to-End Business Case Scenarios\nWhat’s interesting is HOW interviewers evaluate answers.\nIf you're preparing for:\n • TCS Digital\n • Infosys\n • Wipro\n • Accenture\n • Cognizant\n • Capgemini\n • Deloitte\n • Product-based Data Engineering roles\n━━━━━━━━━━━━━━━\n📘 100 Real Data Engineer Interview Questions & Answers (4–8 YOE)\n👉 https://lnkd.in/gFuBy7EV\n━━━━━━━━━━━━━━━\n💼 600 Real Data Engineer Interview Questions & Answers (Top Tech Companies – EY, Infosys, TCS, Dell, Wipro & More)\n👉 https://lnkd.in/gvX-we8v\n━━━━━━━━━━━━━━━\n🔥 Data Engineer Mega Interview Pack 2026 (1300+ Real Scenario-Based Q&As – Azure, ADF, Databricks, PySpark, SQL, Data Warehouse)\n👉 https://lnkd.in/gEushWwU\n━━━━━━━━━━━━━━━\n🎓 Top 100 Real Data Engineer Interview Questions (1–4 YOE)\n👉 https://lnkd.in/gau5s8h7\n━━━━━━━━━━━━━━━\nThen focus heavily on:\n 🔥 End-to-end architecture\n 🔥 Real-time scenarios\n 🔥 Spark optimization\n 🔥 Cloud-native pipelines\n 🔥 Reliability engineering\nThat’s where modern Data Engineering interviews are headed in 2026. ⚡\nWhat’s the hardest scenario-based Data Engineering question you’ve faced recently? 👇\n#DataEngineering #TCS #PySpark #ADF #AzureDataFactory #BigData #DeltaLake #Databricks #ApacheSpark #ETL #DataEngineer #CloudComputing #SQL #Streaming #Kafka #DataLake #InterviewQuestions #CareerGrowth #Analytics #TechJobs",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7463427170267213824_slide_0.jpg",
+      "description": "JPEG image, 480x678 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post claims that 2026 TCS Data Engineer interviews emphasize scenario-based design of enterprise-scale data pipelines rather than simply defining ETL. It lists multi-source ingestion, incremental loads, SCD Type 1 and Type 2, streaming, data quality, Spark optimization, schema drift, failure recovery, data lake versus data warehouse decisions, and business scenarios. It also recommends focusing on end-to-end architecture, real-time and cloud-native pipelines, and reliability engineering while advertising several external interview-question resources. The post does not provide technical definitions, implementations, architectures, examples, or answers to the listed topics.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Scenario-based data engineering interviews",
+      "Enterprise-scale data pipeline design",
+      "Multi-source data ingestion",
+      "Incremental load design",
+      "SCD Type 1 and Type 2",
+      "Real-time streaming pipelines",
+      "Data quality frameworks",
+      "Spark optimization",
+      "Schema drift handling",
+      "Orchestration failure recovery",
+      "Data lake versus data warehouse",
+      "End-to-end architecture",
+      "Cloud-native data pipelines",
+      "Reliability engineering"
+    ],
+    "subtopics": [
+      "End-to-end business case scenarios",
+      "Real-time engineering scenarios",
+      "Cloud-native pipeline design",
+      "Pipeline reliability",
+      "Interview preparation for different experience levels"
+    ],
+    "concepts": [
+      "Multi-source data ingestion",
+      "Incremental load design",
+      "SCD Type 1 and Type 2",
+      "Real-time streaming pipelines",
+      "Data quality frameworks",
+      "Spark optimization",
+      "Schema drift handling",
+      "Orchestration failure recovery",
+      "Data lake versus data warehouse",
+      "End-to-end architecture",
+      "ETL",
+      "Cloud-native pipelines",
+      "Reliability engineering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Enterprise-scale pipeline design",
+      "Scenario-based interview questions",
+      "Data integration",
+      "Streaming systems",
+      "Data quality",
+      "Spark optimization",
+      "Data architecture",
+      "Cloud-native pipelines",
+      "Reliability engineering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e835a0816c01620e",
+    "saved_date": "2026-10-01T23:07:35Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7463427170267213824",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7463427170267213824_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

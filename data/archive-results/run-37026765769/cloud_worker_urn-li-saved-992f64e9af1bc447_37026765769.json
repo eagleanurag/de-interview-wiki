@@ -1,0 +1,140 @@
+{
+  "id": "urn-li-saved-992f64e9af1bc447",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7292844415373496320",
+    "captured_at": "2026-10-02T00:15:49.753210Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:49Z"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\n𝗠𝗮𝘀𝘁𝗲𝗿 𝗬𝗼𝘂𝗿 𝗦𝗤𝗟 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄: 𝗧𝗵𝗲 𝗨𝗹𝘁𝗶𝗺𝗮𝘁𝗲 𝗔𝗹𝗹-𝗶𝗻-𝗢𝗻𝗲 𝗣𝗿𝗲𝗽 𝗚𝘂𝗶𝗱𝗲!\n✅ 𝗟𝗲𝘁𝘀 𝗦𝗶𝗺𝗽𝗹𝗶𝗳𝘆 𝗦𝗤𝗟 .\n- SQL + SELECT = Querying Data\n- SQL + JOIN = Data Integration\n- SQL + WHERE = Data Filtering\n- SQL + GROUP BY = Data Aggregation\n- SQL + ORDER BY = Data Sorting\n- SQL + UNION = Combining Queries\n- SQL + INSERT = Data Insertion\n- SQL + UPDATE = Data Modification\n- SQL + DELETE = Data Removal\n- SQL + CREATE TABLE = Database Design\n- SQL + ALTER TABLE = Schema Modification\n- SQL + DROP TABLE = Table Removal\n- SQL + INDEX = Query Optimization\n- SQL + VIEW = Virtual Tables\n- SQL + Subqueries = Nested Queries\n- SQL + Stored Procedures = Task Automation\n- SQL + Triggers = Automated Responses\n- SQL + CTE = Recursive Queries\n- SQL + Window Functions = Advanced Analytics\n- SQL + Transactions = Data Integrity\n- SQL + ACID Compliance = Reliable Operations\n- SQL + Data Warehousing = Large Data Management\n- SQL + ETL = Data Transformation\n- SQL + Partitioning = Big Data Management\n- SQL + Replication = High Availability\n- SQL + Sharding = Database Scaling\n- SQL + JSON = Semi-Structured Data\n- SQL + XML = Structured Data\n- SQL + Data Security = Data Protection\n- SQL + Performance Tuning = Query Efficiency\n- SQL + Data Governance = Data Quality\n✅ 𝐖𝐞𝐛𝐬𝐢𝐭𝐞𝐬 𝐭𝐡𝐚𝐭 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐡𝐚𝐧𝐝𝐬-𝐨𝐧 𝐩𝐫𝐚𝐜𝐭𝐢𝐜𝐞 𝐟𝐨𝐫 𝐒𝐐𝐋 𝐪𝐮𝐞𝐫𝐢𝐞𝐬\n1. NamasteSQL :\n2. LeetCode\n3. GeeksforGeeks :\n4. HackerRank\n5. DataLemur 🐵 (Ace the SQL & Data Interview) :\n6. Dataford\n7. Interview Query\n✅ 𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗽𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝗠𝗼𝗿𝗲 𝗦𝗤𝗟 𝗿𝗲𝗮𝗹 𝘁𝗶𝗺𝗲 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 ?\n👉 Go through these Playlists :\n1. SQL Tips and Tricks\nhttps://lnkd.in/gK_qsy2M\n2. SQL Medium Complex Interview Problems\nhttps://lnkd.in/gj3pFXcP\n3. LeetCode SQL Hard Problems\nhttps://lnkd.in/gHJdu5Cw\n4. Complex SQL Questions for Interview Questions !!\nhttps://lnkd.in/g_4uyzHT\nTagging SQL expert Ankit Bansal, whose videos make it easy to understand SQL concepts and solve problems !! https://lnkd.in/gfZjQ9xi\nPlease Like, repost ✅, if you find them useful !!\ncredit Abhisek Sahu\n𝑹𝒆𝒑𝒐𝒔𝒕 𝒊𝒇 𝒚𝒐𝒖 𝒇𝒊𝒏𝒅 𝒊𝒕 𝒖𝒔𝒆𝒇𝒖𝒍✅\nIf you've read so far, do LIKE the post 👍\n𝐏.𝐒:\nLearn AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://lnkd.in/e6c5M-Gg\nTop 50 SQL Queries for interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7292844415373496320_slide_0.jpg",
+      "description": "JPEG image, 400x500 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional SQL interview-preparation post that briefly maps SQL clauses, statements, and database concepts to uses such as querying, filtering, aggregation, optimization, integrity, warehousing, and scaling. It also lists SQL practice websites and interview-problem playlists, but it does not provide SQL examples, detailed explanations, or complete interview questions.",
+    "topics": [
+      "SQL",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "Querying, filtering, aggregation, and sorting",
+      "Data integration and query composition",
+      "Data manipulation and table management",
+      "Indexes, views, procedures, and triggers",
+      "Subqueries, CTEs, and window functions",
+      "Transactions and ACID compliance",
+      "Data warehousing and ETL",
+      "Partitioning, replication, and sharding",
+      "Data security, performance tuning, and governance"
+    ],
+    "concepts": [
+      "SELECT",
+      "JOIN",
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "UNION",
+      "INSERT, UPDATE, and DELETE",
+      "CREATE TABLE, ALTER TABLE, and DROP TABLE",
+      "INDEX",
+      "VIEW",
+      "Subqueries and CTEs",
+      "Stored Procedures and Triggers",
+      "Window Functions",
+      "Transactions and ACID Compliance",
+      "Data Warehousing and ETL",
+      "Partitioning",
+      "Replication",
+      "Sharding",
+      "JSON",
+      "XML",
+      "Data Security",
+      "Performance Tuning",
+      "Data Governance"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What operations do SELECT, WHERE, GROUP BY, and ORDER BY perform in the SQL model presented by the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer maps SELECT to querying, WHERE to filtering, GROUP BY to aggregation, and ORDER BY to sorting."
+    },
+    {
+      "question": "How are JOIN, UNION, and subqueries distinguished in SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post associates JOIN with data integration, UNION with combining queries, and subqueries with nested queries."
+    },
+    {
+      "question": "Which SQL statements are used to insert, modify, and remove data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "INSERT is described as data insertion, UPDATE as data modification, and DELETE as data removal."
+    },
+    {
+      "question": "How do CREATE TABLE, ALTER TABLE, and DROP TABLE differ?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "CREATE TABLE is associated with database design, ALTER TABLE with schema modification, and DROP TABLE with table removal."
+    },
+    {
+      "question": "What purposes does the post assign to indexes and views?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "INDEX is associated with query optimization, while VIEW is described as providing virtual tables."
+    },
+    {
+      "question": "Which SQL constructs are associated with task automation, automated responses, recursive queries, and advanced analytics?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Stored procedures are associated with task automation, triggers with automated responses, CTEs with recursive queries, and window functions with advanced analytics."
+    },
+    {
+      "question": "How are transactions and ACID compliance connected to reliable data operations?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Transactions are associated with data integrity, while ACID compliance is associated with reliable operations."
+    },
+    {
+      "question": "Which database techniques are listed for big-data management, high availability, and database scaling?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Partitioning is associated with big-data management, replication with high availability, and sharding with database scaling."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "SQL interview preparation",
+      "query optimization",
+      "data warehousing and ETL",
+      "database reliability",
+      "database scalability and availability"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:992f64e9af1bc447",
+    "saved_date": "2026-10-01T23:36:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7292844415373496320",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7292844415373496320_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

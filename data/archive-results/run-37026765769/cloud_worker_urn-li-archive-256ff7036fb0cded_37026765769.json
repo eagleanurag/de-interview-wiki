@@ -1,0 +1,61 @@
+{
+  "id": "urn-li-archive-256ff7036fb0cded",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.270514Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:41Z"
+  },
+  "original_text": "🚨 𝗦𝗤𝗟 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗗𝗮𝘆 – 𝗗𝗮𝘆 𝟲/𝟮𝟱\n\n🧩 𝗣𝗿𝗼𝗯𝗹𝗲𝗺 𝗦𝘁𝗮𝘁𝗲𝗺𝗲𝗻𝘁:\n\nYou’re given a table `Orders` that logs customer purchases.\nx -- x ----------------x -----------x ---------- x\n| id | customer_ name | product | quantity |\nx -- x ----------------x ---------- x -----------x\n| 1 | Alice | Pen | 2 |\n| 2 | Bob | Notebook | NULL |\n| 3 | Charlie | Pen | 3 |\n| 4 | Dana | Pencil | NULL |\n| 5 | Eva | Eraser | 1 |\nx -- x ----------------x ------------x --------- x\n\n🎯 𝗧𝗮𝘀𝗸:\nWrite a SQL query to return 𝗼𝗻𝗹𝘆 𝘁𝗵𝗼𝘀𝗲 𝗼𝗿𝗱𝗲𝗿𝘀 𝘄𝗵𝗲𝗿𝗲 𝘁𝗵𝗲 𝗾𝘂𝗮𝗻𝘁𝗶𝘁𝘆 𝗶𝘀 𝗻𝗼𝘁 𝗡𝗨𝗟𝗟.\n\n💡 𝗛𝗶𝗻𝘁: You can’t use `= NULL` in SQL – remember how to check for NULLs properly.\n\n🧠 Think before you scroll…\n✅ 𝗔𝗻𝘀𝘄𝗲𝗿 𝗶𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗰𝗼𝗺𝗺𝗲𝗻𝘁𝘀!\n📌 Follow for more daily SQL questions to level up your data interview game.\n\n#SQL #SQLChallenge #NullValues #DataJobs #TechInterview #25DaysOfSQL #Day6\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a Day 6 SQL challenge using an Orders table with customer, product, and quantity columns. The task is to write a query that returns only orders whose quantity is not NULL, which excludes order IDs 2 and 4 and leaves IDs 1, 3, and 5. The post warns that `= NULL` cannot be used but does not provide the solution query.",
+    "topics": [
+      "SQL",
+      "NULL values",
+      "Query filtering"
+    ],
+    "subtopics": [
+      "Filtering rows with non-NULL quantities",
+      "Checking for NULL values",
+      "Selecting records from a relational table"
+    ],
+    "concepts": [
+      "Non-NULL row filtering",
+      "SQL NULL comparison",
+      "Orders table"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given the Orders table shown in the post, write a SQL query that returns only the orders whose quantity is not NULL.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query uses the proper SQL NULL-checking condition rather than `= NULL`.\nThe result excludes order IDs 2 and 4.\nThe result returns order IDs 1, 3, and 5 with quantities 2, 3, and 1."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL NULL filtering",
+    "secondary_topics": [
+      "SQL query syntax",
+      "Relational table filtering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:256ff7036fb0cded",
+    "saved_date": "2026-10-01T23:21:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

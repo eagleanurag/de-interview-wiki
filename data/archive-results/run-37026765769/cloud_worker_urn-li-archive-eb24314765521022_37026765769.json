@@ -1,0 +1,174 @@
+{
+  "id": "urn-li-archive-eb24314765521022",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.903416Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:51Z"
+  },
+  "original_text": "Collected\n\nAzure Data Engineer interview questions:\n\nProject Questions:\n\n1) Tell me about your project. Explain it end to end.\n2) On what measure you have mentioned about the storage cost decreased and cost optimization has been done?\n\nADF and ADLS\n\n1) There are 10 million CSV files in ADLS Gen2. How will you read them and process using Azure Data Factory? Explain in detail what and all would be used.\n2) What is Integration Runtime?\n3) What is variable and parameter in ADF?\n4) Explain different activities and brief about what each activity does.\n5) The pipeline is scheduled and it got failed. I need to automate it by sending the mail when it gets failed. How would you implement it?\n6) How do you handle the exceptions in ADF?\n7) If the ADF pipeline is running very slow, how would you approach and fix it?\n8) What is the difference between Blob storage and ADLS Gen2? Why ADLS Gen2 is required?\n\nAzure Databricks\n\n9) How do you connect ADLS Gen 2 with databricks? In where we mention the role assignments?\n10) If you are using Service Principal to connect with ADLS from Azure Databricks explain the steps and how would you code it?\n11) Why using service principal? How would you create it?\n12) What is Databricks runtime? Why we need it?\n13) What are Workflows?\n14) Explain about the Medallion Architecture in brief.\n15) Explain about Delta file format briefly.\n16) Consider you are working in Facebook. User is writing data for each record. Since each record is been written, a new json transaction log will get created for each write. But we can use Datalake only right. Why do we require delta file format? It can decrease the performance every now and then right?\n17) Consider a job is running very slow in Azure Databricks. How would you approach the issue and make it faster?\n18) What are the optimization techniques you have worked on? Explain them in brief.\n19) How would you optimize the job with respect to memory management in azure databricks?\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A truncated collection of Azure Data Engineer interview questions covering project experience, storage-cost measurement, Azure Data Factory with ADLS Gen2, pipeline reliability and performance, Blob storage versus ADLS Gen2, Azure Databricks connectivity using Service Principals and role assignments, Databricks runtime and Workflows, Medallion Architecture, Delta file format, JSON transaction logs, and Databricks job and memory performance. The post contains questions only; it provides no answers, definitions, implementation details, metrics, or optimization techniques, and the list ends with an ellipsis.",
+    "topics": [
+      "Azure Data Factory (ADF)",
+      "ADLS Gen2",
+      "Azure Databricks",
+      "Data engineering interview preparation",
+      "Data pipeline reliability and performance",
+      "Data storage cost optimization",
+      "Data architecture and file formats"
+    ],
+    "subtopics": [
+      "Project experience and storage cost measurement",
+      "ADF processing of CSV files in ADLS Gen2",
+      "Integration Runtime",
+      "ADF variables and parameters",
+      "ADF activities",
+      "ADF failure notifications and exception handling",
+      "ADF performance troubleshooting",
+      "Blob storage and ADLS Gen2",
+      "Databricks connectivity and role assignments",
+      "Service Principals",
+      "Databricks runtime",
+      "Databricks Workflows",
+      "Medallion Architecture",
+      "Delta file format",
+      "JSON transaction logs and Data Lake",
+      "Databricks job performance and memory management"
+    ],
+    "concepts": [
+      "End-to-end project explanation",
+      "Storage cost measurement",
+      "Processing 10 million CSV files with ADF and ADLS Gen2",
+      "Integration Runtime",
+      "ADF variables, parameters, and activities",
+      "ADF failure notification and exception handling",
+      "ADF performance troubleshooting",
+      "Blob storage versus ADLS Gen2",
+      "Azure Databricks connectivity to ADLS Gen2",
+      "Service Principal for Databricks-to-ADLS connectivity",
+      "Databricks runtime",
+      "Databricks Workflows",
+      "Medallion Architecture",
+      "Delta file format",
+      "Databricks job and memory optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Tell me about your project and explain it end to end.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer should describe the candidate's actual project from beginning to end.\nThe answer should explain the candidate's responsibilities and how the project moved data through its stages."
+    },
+    {
+      "question": "What measure would you use to show that storage costs decreased after cost optimization?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should identify the measure used to demonstrate the storage-cost decrease.\nThe answer should explain the associated cost-optimization work."
+    },
+    {
+      "question": "How would you use Azure Data Factory to read and process 10 million CSV files stored in ADLS Gen2?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer should present an Azure Data Factory approach for reading and processing the files.\nThe answer should explain what components would be used and how the processing would be organized."
+    },
+    {
+      "question": "What is Integration Runtime in Azure Data Factory?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should provide a clear definition of Integration Runtime in ADF."
+    },
+    {
+      "question": "What are variables and parameters in Azure Data Factory?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should define ADF variables and parameters and explain their roles."
+    },
+    {
+      "question": "Which ADF activities are available, and what does each activity do?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should describe the ADF activities it covers and the purpose of each one."
+    },
+    {
+      "question": "How would you configure a scheduled ADF pipeline to send an automated email when it fails, and how would you handle exceptions?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should explain how a pipeline failure triggers an email notification.\nThe answer should describe an exception-handling approach for ADF."
+    },
+    {
+      "question": "How would you investigate and fix an ADF pipeline that is running very slowly?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer should describe how the slow pipeline would be diagnosed.\nThe answer should explain the fixes to apply after identifying the cause."
+    },
+    {
+      "question": "What is the difference between Blob storage and ADLS Gen2, and why is ADLS Gen2 required?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should compare Blob storage with ADLS Gen2.\nThe answer should explain the reasons for choosing ADLS Gen2."
+    },
+    {
+      "question": "How would you create a Service Principal and use it from Azure Databricks to connect to ADLS Gen2, including the code and the location of role assignments?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer should list the steps for creating the Service Principal and connecting from Azure Databricks to ADLS Gen2.\nThe answer should include the requested code and identify where the role assignments belong."
+    },
+    {
+      "question": "What are Databricks runtime and Databricks Workflows, and why is the runtime needed?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should define Databricks runtime and explain why it is needed.\nThe answer should define Databricks Workflows."
+    },
+    {
+      "question": "What is Medallion Architecture?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer should explain the purpose and structure of Medallion Architecture."
+    },
+    {
+      "question": "When each record write creates a JSON transaction log, why is Delta file format considered, and can it reduce performance?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer should explain the relationship between per-record writes, JSON transaction logs, Data Lake, and Delta file format.\nThe answer should address the stated concern about performance degradation."
+    },
+    {
+      "question": "How would you diagnose and improve a slow Azure Databricks job, including its memory management?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer should describe an approach to diagnosing the slow job.\nThe answer should explain memory-management optimizations for Azure Databricks."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Azure Data Factory",
+      "ADLS Gen2",
+      "Azure Databricks",
+      "Data Pipeline Reliability",
+      "Data Pipeline Performance",
+      "Data Storage Cost Optimization",
+      "Medallion Architecture",
+      "Delta File Format"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:eb24314765521022",
+    "saved_date": "2026-10-01T23:27:51Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

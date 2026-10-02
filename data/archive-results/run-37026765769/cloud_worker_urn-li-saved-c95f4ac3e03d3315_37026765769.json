@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-c95f4ac3e03d3315",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337673670124781568",
+    "captured_at": "2026-10-02T00:15:51.637148Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:16Z"
+  },
+  "original_text": "🚀 Data Engineer Interview Prep – SQL Is Still King 👑\n\nWhether you're just starting your data engineering journey or aiming for a senior-level role, one thing is non-negotiable:\n\n💥 SQL Skills. Period.\nMastering SQL isn’t just about passing interviews — it's about building the foundation to handle real-world data challenges.\n\nHere are some timeless SQL tips to help you level up:\n✅ MASTER WINDOW FUNCTIONS (ROW_NUMBER, RANK, LEAD, LAG)\n ✅ PRACTICE AGGREGATIONS + GROUP BY TRICKS\n ✅ GET COMFORTABLE WITH CTEs & SUBQUERIES\n ✅ SOLVE PROBLEMS INVOLVING JOINS, SCDs & DEDUPLICATION\n ✅ THINK LIKE AN ENGINEER – WRITE QUERIES THAT SCALE\n\n💡 Pro Tip: Practice on platforms like LeetCode, StrataScratch, or Mode Analytics – they’re goldmines for SQL challenges.\n\n🔍 SQL Scenario Example:\n “How would you get the highest sale per product per month?”\n If you thought of ROW_NUMBER() OVER(PARTITION BY ...) — you’re on the right track!\n\nLet’s connect if you’re prepping for data engineering roles — I’d love to exchange insights!\n#DataEngineering #SQL #InterviewPrep #BigData #ETL #DataEngineer #Databricks #Analytics #StrataScratch #CareerGrowth #TechTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337673670124781568_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This concise data engineering interview-preparation post presents SQL as a foundational skill for solving real-world data challenges. It recommends practicing window functions, aggregations, GROUP BY, CTEs, subqueries, joins, SCDs, deduplication, and scalable query design. It provides one scenario—finding the highest sale per product per month—and suggests ROW_NUMBER() with PARTITION BY as the starting approach, but it does not provide a complete query or detailed explanations of these techniques.",
+    "topics": [
+      "SQL",
+      "Data engineering interview preparation",
+      "SQL query design"
+    ],
+    "subtopics": [
+      "Window functions",
+      "ROW_NUMBER, RANK, LEAD, and LAG",
+      "Aggregations and GROUP BY",
+      "CTEs and subqueries",
+      "Joins",
+      "SCDs",
+      "Deduplication",
+      "Scalable queries",
+      "SQL practice platforms"
+    ],
+    "concepts": [
+      "SQL as a data engineering foundation",
+      "Window functions",
+      "ROW_NUMBER with PARTITION BY",
+      "Aggregations and GROUP BY",
+      "CTEs and subqueries",
+      "Joins, SCDs, and deduplication",
+      "Scalable query design",
+      "SQL practice platforms"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL areas should a data engineering candidate practice to prepare for interviews?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post highlights window functions, including ROW_NUMBER, RANK, LEAD, and LAG.\nIt recommends practicing aggregations, GROUP BY, CTEs, subqueries, joins, SCDs, and deduplication.\nCandidates should also practice writing queries that scale."
+    },
+    {
+      "question": "How would you use SQL to find the highest sale for each product in each month?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies ROW_NUMBER() as the window-function approach suggested by the post.\nIt partitions the data by product and month.\nIt orders sales from highest to lowest and retains the first row within each product-month partition."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Interview preparation",
+      "Window functions",
+      "Query design",
+      "Data modeling challenges",
+      "Scalable queries"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c95f4ac3e03d3315",
+    "saved_date": "2026-10-01T23:15:16Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337673670124781568",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337673670124781568_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

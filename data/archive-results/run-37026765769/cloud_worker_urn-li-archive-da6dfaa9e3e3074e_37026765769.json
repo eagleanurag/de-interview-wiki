@@ -1,0 +1,74 @@
+{
+  "id": "urn-li-archive-da6dfaa9e3e3074e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.564359Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:53Z"
+  },
+  "original_text": "PySpark Interview Question :\n\nQuestion:\nYou are given a DataFrame named students_df containing details of students from different Indian cities. The DataFrame may contain duplicate student records based on their name and city.\nYour task is to:\nRemove duplicates based on name and city columns.\nShow the final DataFrame without duplicates.\n\nSample Input Data :\ndata = [\n (\"Rahul Sharma\", 22, \"Delhi\"),\n (\"Priya Verma\", 21, \"Mumbai\"),\n (\"Rahul Sharma\", 22, \"Delhi\"),\n (\"Anjali Mehta\", 23, \"Pune\"),\n (\"Priya Verma\", 21, \"Mumbai\"),\n (\"Karan Singh\", 24, \"Delhi\")\n]\n\n# Step 3: Define schema and create DataFrame\ncolumns = [\"name\", \"age\", \"city\"]\n\nExpected Output:\n+-------------+---+--------+\n| name|age| city|\n+-------------+---+--------+\n| Karan Singh | 24| Delhi|\n| Priya Verma | 21| Mumbai|\n| Anjali Mehta| 23| Pune|\n|Rahul Sharma | 22| Delhi|\n+-------------+---+--------+\n\n\nWrite your answer in the comment box :\n\n\nKarthik K. Seekho Bigdata Institute\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A PySpark interview exercise asks the candidate to create or use a DataFrame named students_df, remove duplicate student records based on the name and city columns, and display the deduplicated DataFrame. The post provides six sample records with the columns name, age, and city, along with an expected result containing four unique records. It does not provide an implementation or specify an ordering requirement for the displayed rows.",
+    "topics": [
+      "PySpark",
+      "DataFrame deduplication"
+    ],
+    "subtopics": [
+      "Removing duplicate records",
+      "Deduplication by multiple columns",
+      "Defining DataFrame columns",
+      "Displaying a DataFrame"
+    ],
+    "concepts": [
+      "PySpark DataFrame",
+      "Deduplication by name and city",
+      "Duplicate record removal",
+      "DataFrame schema columns"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you remove duplicate records from students_df using both the name and city columns as the duplicate criteria?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer identifies name and city as the columns that determine whether records are duplicates.\nThe answer retains the age column in the resulting DataFrame even though age is not used for deduplication.\nThe answer displays the DataFrame after duplicate removal."
+    },
+    {
+      "question": "What does it mean for student records to be duplicates based on name and city?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Records are considered duplicates when they have the same combination of name and city.\nThe age column does not participate in determining whether a record is a duplicate."
+    },
+    {
+      "question": "How many unique records should remain from the provided sample input, and which records are removed?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Four unique records should remain from the six input records.\nOne repeated Rahul Sharma record from Delhi is removed.\nOne repeated Priya Verma record from Mumbai is removed."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame deduplication",
+    "secondary_topics": [
+      "Data cleaning",
+      "Duplicate removal"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:da6dfaa9e3e3074e",
+    "saved_date": "2026-10-01T23:25:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

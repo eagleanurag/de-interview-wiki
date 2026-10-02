@@ -1,0 +1,211 @@
+{
+  "id": "urn-li-archive-be6870d42b84cf6a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.140434Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:42Z"
+  },
+  "original_text": "I thought I knew SQL... until my interviewer asked me these!\"\nSQL interviews can be tricky! Here are some thought-provoking questions that tested my knowledge:\n1️⃣ How do you calculate the median salary in a department using SQL?\n 2️⃣ What’s the difference between correlated and non-correlated subqueries?\n 3️⃣ How can you update data in one table based on values from another?\n 4️⃣ What are window functions and how are they different from GROUP BY?\n 5️⃣ How do you find gaps in a sequence (like missing invoice numbers)?\n 6️⃣ How would you delete every nth row from a table?\n 7️⃣ How can you transpose columns into rows (unpivot) in SQL?\n 8️⃣ What’s the purpose of the COALESCE function, and how is it different from ISNULL or NVL?\n 9️⃣ How do you calculate the difference in days, months, or years between two dates?\n 🔟 How do you write a SQL query to show cumulative percentage of sales per region?\n 1️⃣1️⃣ How do you rank items within partitions based on a custom sorting logic?\n 1️⃣2️⃣ What’s the difference between EXISTS and IN?\n 1️⃣3️⃣ How can you detect and prevent deadlocks in SQL queries?\n 1️⃣4️⃣ How would you handle slowly changing dimensions in SQL?\n 1️⃣5️⃣ How do you detect circular references in a hierarchical table structure?\n 1️⃣6️⃣ What’s the difference between a clustered and non-clustered index?\n 1️⃣7️⃣ How do you audit changes (INSERT/UPDATE/DELETE) in a table using SQL?\n 1️⃣8️⃣ What is a recursive CTE, and where would you use it?\n 1️⃣9️⃣ How do you filter the top 3 products by revenue within each category?\n 2️⃣0️⃣ What strategies can you use to reduce the execution time of complex joins?\nSQL is powerful, but the right questions make you think beyond the basics. Which of these do you find the trickiest? Let’s discuss!\n#SQL #DataEngineering #InterviewQuestions #CareerGrowth\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is a list of 20 SQL interview questions rather than a tutorial or answer key. It covers analytical calculations, subqueries, updates and deletes, result reshaping, null and date handling, windowed calculations, concurrency, dimensional and hierarchical data, indexing, auditing, recursive queries, and join performance. It supplies no SQL syntax, worked answers, schemas, performance measurements, or additional media content; the excerpt ends with a '…see more' marker.",
+    "topics": [
+      "SQL",
+      "SQL interview preparation",
+      "Analytical SQL",
+      "Subqueries and predicates",
+      "Data manipulation and auditing",
+      "Database concurrency and indexing",
+      "Dimensional and hierarchical data"
+    ],
+    "subtopics": [
+      "Calculating median salary by department",
+      "Correlated versus non-correlated subqueries",
+      "Updating one table from values in another",
+      "Window functions versus GROUP BY",
+      "Finding gaps in a sequence",
+      "Deleting every nth row",
+      "Transposing columns into rows with UNPIVOT",
+      "COALESCE versus ISNULL and NVL",
+      "Calculating date differences in days, months, and years",
+      "Cumulative percentage of sales by region",
+      "Ranking items within partitions using custom sorting",
+      "EXISTS versus IN",
+      "Detecting and preventing deadlocks",
+      "Handling slowly changing dimensions",
+      "Detecting circular references in hierarchical tables",
+      "Clustered versus non-clustered indexes",
+      "Auditing INSERT, UPDATE, and DELETE changes",
+      "Recursive CTEs",
+      "Top-three products by revenue within each category",
+      "Reducing complex-join execution time"
+    ],
+    "concepts": [
+      "Median salary by department",
+      "Subqueries and query predicates",
+      "Cross-table updates",
+      "Window functions and partitioned analysis",
+      "Sequence and row-position operations",
+      "UNPIVOT",
+      "COALESCE, ISNULL, and NVL",
+      "Date interval calculation",
+      "Deadlock detection and prevention",
+      "Slowly changing dimensions",
+      "Hierarchies and recursive CTEs",
+      "Clustered and non-clustered indexes",
+      "DML change auditing",
+      "Complex-join optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you calculate the median salary in each department using SQL?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer specifies the SQL method for producing one median salary for each department."
+    },
+    {
+      "question": "What is the difference between correlated and non-correlated subqueries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the two subquery types and explains how their behavior differs."
+    },
+    {
+      "question": "How can you update data in one table based on values from another?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer shows how values from the source table determine changes to rows in the target table."
+    },
+    {
+      "question": "What are window functions, and how do they differ from GROUP BY?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines window functions and provides a direct comparison with GROUP BY."
+    },
+    {
+      "question": "How do you find gaps in a sequence such as missing invoice numbers?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how SQL identifies missing values between sequence values."
+    },
+    {
+      "question": "How would you delete every nth row from a table?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how rows at the required nth positions are selected and deleted."
+    },
+    {
+      "question": "How do you transpose columns into rows with UNPIVOT?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates the requested column-to-row transformation."
+    },
+    {
+      "question": "What is the purpose of COALESCE, and how does it differ from ISNULL and NVL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer states the purpose of COALESCE and compares it with both ISNULL and NVL."
+    },
+    {
+      "question": "How do you calculate the difference in days, months, or years between two dates?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer covers differences in days, months, and years between two dates."
+    },
+    {
+      "question": "How do you write a SQL query that shows cumulative sales percentage per region?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer shows how to produce cumulative sales percentages for each region."
+    },
+    {
+      "question": "How do you rank items within partitions using custom sorting logic?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer ranks items within each partition according to the requested custom ordering."
+    },
+    {
+      "question": "What is the difference between EXISTS and IN?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the behavior and use of EXISTS from IN."
+    },
+    {
+      "question": "How can deadlocks in SQL queries be detected and prevented?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses both the detection and prevention of SQL deadlocks."
+    },
+    {
+      "question": "How would you handle slowly changing dimensions in SQL?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains an SQL approach to handling changes to dimension data."
+    },
+    {
+      "question": "How can circular references be detected in a hierarchical table structure?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to detect a cycle within a hierarchical table structure."
+    },
+    {
+      "question": "What is the difference between a clustered and a non-clustered index?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer contrasts clustered and non-clustered indexes."
+    },
+    {
+      "question": "How can INSERT, UPDATE, and DELETE changes to a table be audited using SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer shows how INSERT, UPDATE, and DELETE activity can be captured for auditing."
+    },
+    {
+      "question": "What is a recursive CTE, and where would you use one?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines a recursive CTE and identifies an appropriate situation for using recursion."
+    },
+    {
+      "question": "How do you filter the top three products by revenue within each category?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer returns exactly the top three products by revenue within every category."
+    },
+    {
+      "question": "What strategies can reduce the execution time of complex joins?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer presents query strategies aimed at reducing the execution time of complex joins."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "SQL interview preparation",
+      "Analytical SQL",
+      "Subqueries and predicates",
+      "Data manipulation, transformation, and auditing",
+      "Database concurrency, indexing, and performance",
+      "Slowly changing dimensions and hierarchical data"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:be6870d42b84cf6a",
+    "saved_date": "2026-10-01T23:21:42Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

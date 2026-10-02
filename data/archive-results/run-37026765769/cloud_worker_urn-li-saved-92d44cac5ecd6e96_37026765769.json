@@ -1,0 +1,89 @@
+{
+  "id": "urn-li-saved-92d44cac5ecd6e96",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338040534755618817",
+    "captured_at": "2026-10-02T00:15:49.549832Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:34Z"
+  },
+  "original_text": "🚀 SQL interview questions for Deloitte\n\nQuestion:\nYou're given a table containing loan information.\nYour task is to analyze loan repayment data to assess credit risk. Write an SQL to create 2 flags for each loan.\n1️⃣ fully_paid_flag: 1 if the loan was fully repaid irrespective of payment date else it should be 0.\n2️⃣ on_time_flag: 1 if the loan was fully repaid on or before due date else 0.\n\n\n📊 Table: loan\n\n✅ Columns: \n1️⃣ loan_id :: INT\n2️⃣ customer_id :: INT\n3️⃣ loan_amount :: INT\n4️⃣ due_date :: DATE\n\n📊 Table: payment\n\n✅ Columns: \n1️⃣ loan_id :: INT\n2️⃣ payment_id :: INT\n3️⃣ payment_amount :: INT\n4️⃣ payment_date :: DATE\n\n\n👇 Can you crack this?\nDrop your query in the comments — \n\nSolutions: https://lnkd.in/gkfw2_nk\n\n#SQL \n#DataAnalytics \n#InterviewPrep \n#amazon\n#SQLInterview \n#DataAnalyst\n#businessanalyst",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338040534755618817_slide_0.jpg",
+      "description": "JPEG image, 480x465 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents an SQL interview exercise involving loan and payment tables. Candidates must write a query that assigns each loan a fully_paid_flag based on whether its payments fully repay the loan and an on_time_flag based on whether full repayment occurs on or before the due date. The post provides the table columns but does not include a solution query or expected result rows.",
+    "topics": [
+      "SQL",
+      "Loan repayment analysis",
+      "Credit risk assessment",
+      "Data analytics"
+    ],
+    "subtopics": [
+      "Aggregating payments by loan",
+      "Creating binary repayment flags",
+      "Comparing payment dates with due dates",
+      "Relating loan and payment records"
+    ],
+    "concepts": [
+      "Loan table",
+      "Payment table",
+      "Shared loan identifier",
+      "fully_paid_flag",
+      "on_time_flag",
+      "Repayment timing"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write an SQL query that returns each loan with fully_paid_flag and on_time_flag based on the loan and payment data.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query relates payment records to loans using loan_id.\nThe query aggregates payment amounts for each loan so that total repayments can be compared with loan_amount.\nConditional logic sets fully_paid_flag to 1 when the loan is fully repaid and to 0 otherwise, regardless of payment date.\nConditional logic sets on_time_flag to 1 only when full repayment occurs on or before due_date."
+    },
+    {
+      "question": "How can a loan have fully_paid_flag equal to 1 but on_time_flag equal to 0?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A loan can be fully repaid after its due date, so it meets the full-repayment condition but not the on-time condition."
+    },
+    {
+      "question": "How should a query determine whether a loan was fully repaid on time when multiple payment records may exist?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query aggregates payments by loan_id instead of treating each payment row as a separate loan.\nThe query verifies whether the relevant payments fully cover loan_amount on or before due_date.\nThe result uses one pair of flags for each loan."
+    }
+  ],
+  "classification": {
+    "domain": "SQL and Data Analytics",
+    "primary_topic": "Loan repayment flag calculation",
+    "secondary_topics": [
+      "Payment aggregation",
+      "Credit risk assessment",
+      "Date comparison",
+      "Conditional SQL logic"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:92d44cac5ecd6e96",
+    "saved_date": "2026-10-01T23:21:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338040534755618817",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338040534755618817_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

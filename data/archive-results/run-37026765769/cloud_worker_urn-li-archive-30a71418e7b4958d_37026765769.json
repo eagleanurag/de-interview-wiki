@@ -1,0 +1,63 @@
+{
+  "id": "urn-li-archive-30a71418e7b4958d",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.401238Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:54Z"
+  },
+  "original_text": "🚀 PySpark Interview Question\nHere’s another practical PySpark coding question for Data Engineering interviews.\n\n📌 Given the following DataFrame:\n\ncustomer_id | transaction_date | amount\n 1 | 2026-01-01 | 500\n 1 | 2026-01-05 | 700 \n 1 | 2026-01-10 | 300 \n 2 | 2026-01-02 | 1000 \n 2 | 2026-01-08 | 500\n\n\n\n❓ Question:\n\nWrite PySpark code to calculate the total transaction amount for each customer.\nExpected output:\n\ncustomer_id | total_amount \n1 | 1500 \n2 | 1500\n\n💡 Hint: groupBy() + sum()\n\nFind the solution in the comments.\n\nShare your approach in the comments 👇\n\n#PySpark #ApacheSpark #DataEngineering #Python #BigData #DataEngineer #CodingInterview #InterviewPreparation\nShare your approach in the comments 👇\n#PySpark #ApacheSpark #DataEngineering #Python #BigData #DataEngineer #CodingInterview #InterviewPreparation",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a practical PySpark DataFrame coding exercise that asks for the total transaction amount for each customer. It provides five transaction rows, directs the reader to use groupBy() and sum(), and expects customer IDs 1 and 2 to each have a total amount of 1500. The post does not include the solution code.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "DataFrame aggregation",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Grouping transactions by customer_id",
+      "Summing transaction amounts",
+      "Calculating per-customer totals"
+    ],
+    "concepts": [
+      "Per-customer transaction aggregation",
+      "groupBy()",
+      "sum()"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write PySpark code to calculate the total transaction amount for each customer in the provided DataFrame.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The code groups the transaction records by customer_id.\nThe code sums the amount values within each customer group and labels the result as total_amount.\nThe aggregation produces a total amount of 1500 for both customer 1 and customer 2."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame aggregation",
+    "secondary_topics": [
+      "Apache Spark",
+      "Grouped aggregations",
+      "Coding interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:30a71418e7b4958d",
+    "saved_date": "2026-10-01T23:06:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

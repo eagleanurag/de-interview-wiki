@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-3dc7ec7573d2e285",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509918585671241729",
+    "captured_at": "2026-10-02T00:15:46.776023Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:56Z"
+  },
+  "original_text": "Senior Data Engineer @LTIMindtree | 125K+ Connections @Linkedin\n4d •\n📘 300 SQL Interview Questions – FREE PDF\n🎯 The collection covers questions across companies like:\n→ PwC\n→ Deloitte\n→ EY\n→ KPMG\n→ Tredence\n→ Persistent Systems\n→ Accenture\nAnd it's not just basic SQL.\nYou'll find questions around:\n🔹 Joins & Subqueries\n🔹 Aggregations & HAVING\n🔹 RANK / ROW_NUMBER / LAG\n🔹 Running & Moving Averages\n🔹 Gaps & Islands\n🔹 Recursive CTEs\n🔹 Hierarchies\n🔹 Date & Sales Analytics\n🔹 Real-world business scenarios\n💡 A few examples from the collection:\nFind the longest consecutive login streak for each user.\nFind the top 5 highest-paid employees per department.\nFind customers who purchased in every category.\nFind gaps in a sequence of numbers.\nThese are the kinds of problems where knowing SQL syntax isn't enough.\nYou have to actually think about the data.\nTopmate Link : https://lnkd.in/dRCNtEb5\n🎥 Watch more Power BI content on my YouTube Channel: https://lnkd.in/dH9Dn-3N\nSQL",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7509918585671241729_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional LinkedIn post advertises a free PDF titled 300 SQL Interview Questions and says it spans questions associated with several named companies. The supplied text lists SQL subjects including joins, subqueries, aggregations, HAVING, RANK, ROW_NUMBER, LAG, averages, gaps and islands, recursive CTEs, hierarchies, and date and sales analytics. It provides four example tasks but no SQL code, answers, full question collection, or detailed explanations. A final line promotes additional PowerBI videos without providing substantive Power BI material.",
+    "topics": [
+      "SQL",
+      "SQL interview preparation",
+      "SQL problem solving",
+      "Business analytics scenarios"
+    ],
+    "subtopics": [
+      "Joins and subqueries",
+      "Aggregations and HAVING",
+      "RANK, ROW_NUMBER, and LAG",
+      "Running and moving averages",
+      "Gaps and islands",
+      "Recursive CTEs",
+      "Hierarchies",
+      "Date and sales analytics",
+      "Real-world business scenarios"
+    ],
+    "concepts": [
+      "Joins and subqueries",
+      "Aggregations and HAVING",
+      "RANK, ROW_NUMBER, and LAG",
+      "Running and moving averages",
+      "Gaps and islands",
+      "Recursive CTEs",
+      "Hierarchies",
+      "Date and sales analytics",
+      "Consecutive login streak analysis",
+      "Grouped top-N employee ranking",
+      "All-category purchase analysis",
+      "Real-world SQL scenarios"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Using SQL, how would you find the longest consecutive login streak for each user?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer states what counts as consecutive and explains how to identify and compare login runs for each user."
+    },
+    {
+      "question": "How would you use SQL to find the top five highest-paid employees in each department?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer ranks employees by compensation within each department and explains how the first five employees are selected."
+    },
+    {
+      "question": "How would you write SQL to find customers who purchased in every category?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer defines the complete category set, checks each customer's purchases against it, and retains only customers represented in every category."
+    },
+    {
+      "question": "How would you use SQL to find gaps in a sequence of numbers?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how to identify expected sequence values that are absent and return those missing positions."
+    }
+  ],
+  "classification": {
+    "domain": "SQL and data analytics",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "Analytical SQL",
+      "SQL window and recursive techniques",
+      "Business analytics"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3dc7ec7573d2e285",
+    "saved_date": "2026-10-01T23:06:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7509918585671241729",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7509918585671241729_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

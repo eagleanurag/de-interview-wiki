@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-archive-0f135365e2d477e3",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.960012Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:51Z"
+  },
+  "original_text": "I have been reading about multi statement and multi table transactions. Currently delta only supports ACID at single table level and single transaction only. \n\nIn order to handle multi table and multi transactions; There is going to be a shift from file system managed delta log(s3 or adls) to Catalog Managed logs in the future versions of delta lake. \n\nI think this is similar to how iceberg already operate ( not an expert in iceberg). In iceberg;catalog is already a final source of truth. \n \nAs we all know Delta Lake stored all table metadata in the _delta_log directory:\n\n1) Every commit is a JSON log entry.\n2) When new parquet files are added; and \nonce it logs the entry in transaction log; it consider it as a commit.\n\nHere all powers reside within file system. What catalog can do is sync the metadata from transaction logs.\n\nIn the future versions of delta lake; we’ll see catalog getting more powers. Instead of the file system being the source of truth; catalog will have powers to accept or reject the transaction.\n\nThis is very helpful if multiple people are working on same table and they want to read their own versions of the data until you commit the transaction. \n\nOr if same person is working on multiple tables and wants to commit all the tables. Either the commits on the tables pass or all fail. In the current system, where delta logs are stored in S3, once the json entry for one table is logged, even if the other table fail, you can’t do anything about it and can’t rollback.\n\nHowever, now catalog will decide whether the commit that was done in delta log; is it a valid commit or not. If it’s not valid ; it’ll just ignore that json file and vaccum will just delete that json log. \n\nIf you are more interested to know about details; you can read more about how classic databases deal with repeatable reads, read your own writes etc.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a conceptual and partly speculative explanation of transaction handling in Delta Lake. It describes a current filesystem-managed model in which metadata is stored in _delta_log, commits are JSON entries associated with added Parquet files, and S3 or ADLS is the source of truth. It argues that future catalog-managed logs could allow a catalog to validate multi-statement or multi-table transactions, provide all-or-nothing commits, isolate readers until commit, and use vacuum to remove rejected JSON logs. The comparison with Iceberg is explicitly tentative, and the excerpt ends before providing version-specific implementation details.",
+    "topics": [
+      "Delta Lake transactions",
+      "Catalog-managed transaction logs",
+      "Multi-table transaction atomicity"
+    ],
+    "subtopics": [
+      "_delta_log JSON commits",
+      "Parquet files",
+      "Filesystem-managed logs",
+      "Catalog metadata synchronization",
+      "Transaction validation",
+      "Concurrent read isolation",
+      "Vacuum cleanup",
+      "Repeatable reads and read-your-writes"
+    ],
+    "concepts": [
+      "Delta transaction log",
+      "Filesystem-managed transaction logs",
+      "Filesystem commit",
+      "Single-table ACID scope",
+      "Catalog-managed transaction logs",
+      "Catalog metadata synchronization",
+      "Multi-table atomic commit",
+      "Read-your-own-version isolation",
+      "Vacuum cleanup of rejected logs",
+      "Iceberg catalog analogy"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, how are commits represented when Delta Lake uses filesystem-managed transaction logs?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post says table metadata is stored in the _delta_log directory.\nEach commit is represented by a JSON log entry.\nA commit occurs after new Parquet files are added and the corresponding log entry is recorded.\nThe filesystem is treated as the source of truth in the model described."
+    },
+    {
+      "question": "How would catalog-managed Delta logs change the authority over transaction commits?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The current catalog role described in the post is to synchronize metadata from filesystem transaction logs.\nIn the proposed future model, the catalog would become authoritative for deciding whether commits are valid.\nThe catalog would be able to accept or reject transaction-log commits rather than merely mirroring filesystem metadata.\nThe post presents this as a future direction and does not provide version-specific implementation details."
+    },
+    {
+      "question": "What problem would catalog-coordinated transactions address when one operation commits changes to multiple tables?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post says the desired behavior is for commits across all affected tables either to pass or fail together.\nIn the filesystem-managed model described, a failure after one table's JSON entry has been logged can leave a partial commit that cannot be rolled back.\nCatalog-managed validation is proposed as a way to prevent a rejected multi-table operation from being accepted."
+    },
+    {
+      "question": "What concurrency benefit does the post associate with catalog-managed transactions on a shared table?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Multiple people could work with their own versions of the table data until they commit.\nThe post relates this behavior to classic database concepts such as repeatable reads and read-your-writes.\nThe catalog's proposed ability to validate commits would distinguish accepted changes from transactions that have not committed."
+    },
+    {
+      "question": "According to the proposed model, what happens when the catalog considers a Delta JSON log entry invalid?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The catalog would reject the commit and ignore the corresponding JSON log file.\nThe post says vacuum would later delete the rejected JSON log.\nThis cleanup behavior is presented as part of a speculative catalog-managed model rather than a detailed current implementation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Lake transaction architecture",
+    "secondary_topics": [
+      "Catalog-managed metadata",
+      "Multi-table transaction atomicity",
+      "Concurrency and isolation",
+      "Storage-system logs"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:0f135365e2d477e3",
+    "saved_date": "2026-10-01T23:09:51Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

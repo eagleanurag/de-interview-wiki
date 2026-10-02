@@ -1,0 +1,236 @@
+{
+  "id": "urn-li-saved-39ce86531f5d5140",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7350426333870444544",
+    "captured_at": "2026-10-02T00:15:46.583373Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:52Z"
+  },
+  "original_text": "𝗗𝗲𝗹𝗼𝗶𝘁𝘁𝗲 asked these SQL questions in a Data Engineering interview \n\n\n\n\n\n\n\nCTC → 𝟯𝟬–𝟰𝟬 𝗟𝗣𝗔 (Difficulty level = Advanced)\n1.⁠ ⁠Calculate daily user retention for a 30-day cohort window.\n2.⁠ ⁠Retrieve the latest 3 events per user using window functions.\n3.⁠ ⁠Detect out-of-order events in time-series logs using timestamps.\n4.⁠ ⁠Backfill missing dates in a partitioned dataset using calendar table.\n5.⁠ ⁠Compute rolling 7-day distinct active users per platform.\n6.⁠ ⁠Identify users with no activity in the last 30 days (churn analysis).\n7.⁠ ⁠Perform multi-level aggregation (category → subcategory → product).\n8.⁠ ⁠Compare current vs previous month revenue per region.\n9.⁠ ⁠Join fact and dimension tables with SCD Type 2 handling.\n10.⁠ ⁠Detect schema drift between raw and curated layers via metadata.\n11.⁠ ⁠Calculate 95th percentile of transaction amounts by user.\n12.⁠ ⁠Fetch top 3 categories contributing to 80% of total revenue.\n13.⁠ ⁠Identify seasonal patterns in monthly product sales.\n14.⁠ ⁠Use broadcast join hints to optimize small dimension lookups.\n15.⁠ ⁠Flag revenue anomalies using z-score or standard deviation.\n16.⁠ ⁠Remove duplicates using ROW_NUMBER on ingestion timestamp.\n17.⁠ ⁠Calculate session time from login-logout events.\n18.⁠ ⁠Compare revenue growth across last 3 quarters per product line.\n19.⁠ ⁠Identify users who upgraded to premium but never used the features.\n20.⁠ ⁠Track update frequency on records in an SCD Type 2 table.\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7350426333870444544_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post says Delvitta asked 20 SQL questions in a data engineering interview under an Advanced difficulty label and displays CTC as 30-40 LPA. The visible list covers retention and churn, window functions and event ordering, time-series and partitioned data, aggregation, revenue analysis, SCD Type 2, schema drift, percentiles, seasonality, join optimization, anomaly detection, deduplication, session time, product adoption, and update tracking. The supplied text contains prompts and named techniques but no complete SQL solutions or query code, and it ends with \"see more\", so the visible list is incomplete.",
+    "topics": [
+      "SQL",
+      "Data engineering interviews",
+      "User retention and churn",
+      "Window functions and event ordering",
+      "Time-series and partitioned data",
+      "Calendar-based date backfilling",
+      "Active-user metrics",
+      "Hierarchical aggregation",
+      "Revenue and sales analytics",
+      "SCD Type 2",
+      "Schema drift and metadata",
+      "Percentiles and anomaly detection",
+      "Session time and product adoption"
+    ],
+    "subtopics": [
+      "Daily retention for a 30-day cohort",
+      "Latest three events per user",
+      "Out-of-order timestamped events",
+      "Missing dates in partitioned datasets",
+      "Rolling seven-day distinct active users by platform",
+      "Thirty-day inactivity and churn",
+      "Category-subcategory-product aggregation",
+      "Current versus previous month revenue by region",
+      "Fact-dimension joins with SCD Type 2",
+      "Raw-to-curated schema drift",
+      "95th percentile transaction amounts by user",
+      "Top three categories and 80% revenue contribution",
+      "Monthly product-sales seasonality",
+      "Broadcast joins for small dimensions",
+      "Revenue anomaly detection",
+      "Ingestion-timestamp deduplication",
+      "Login-logout session time",
+      "Three-quarter product-line revenue growth",
+      "Premium upgrades without feature usage",
+      "SCD Type 2 update frequency"
+    ],
+    "concepts": [
+      "Daily user retention",
+      "Latest events per user",
+      "Out-of-order event detection",
+      "Missing-date backfill",
+      "Rolling distinct active users",
+      "Thirty-day inactivity churn",
+      "Multi-level product aggregation",
+      "Current versus previous month revenue",
+      "Fact-dimension joins with SCD Type 2",
+      "Schema drift detection",
+      "User transaction percentiles",
+      "Top-category revenue contribution",
+      "Monthly sales seasonality",
+      "Broadcast join optimization",
+      "Revenue anomaly detection",
+      "ROW_NUMBER deduplication",
+      "Login-logout session time",
+      "Quarterly revenue growth",
+      "Premium upgrades without feature usage",
+      "SCD Type 2 update frequency"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you calculate daily user retention for a 30-day cohort window in SQL?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It covers daily user retention for a 30-day cohort window."
+    },
+    {
+      "question": "How would you retrieve the latest three events for each user using window functions?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It uses window functions to retrieve the latest three events for each user."
+    },
+    {
+      "question": "How would you detect out-of-order events in time-series logs using timestamps?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "It uses timestamps in time-series logs to identify out-of-order events."
+    },
+    {
+      "question": "How would you backfill missing dates in a partitioned dataset using a calendar table?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It uses a calendar table to backfill missing dates in a partitioned dataset."
+    },
+    {
+      "question": "How would you compute rolling seven-day distinct active users for each platform?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It computes distinct active users over a rolling seven-day window for each platform."
+    },
+    {
+      "question": "How would you identify users with no activity in the last 30 days for churn analysis?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It applies a 30-day no-activity condition to identify users for churn analysis."
+    },
+    {
+      "question": "How would you perform multi-level aggregation from category to subcategory to product?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It performs the category, subcategory, and product levels of aggregation."
+    },
+    {
+      "question": "How would you compare current-month and previous-month revenue for each region?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It compares current-month revenue with previous-month revenue by region."
+    },
+    {
+      "question": "How would you join fact and dimension tables with SCD Type 2 handling?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "It joins fact and dimension tables while applying SCD Type 2 handling."
+    },
+    {
+      "question": "How would you detect schema drift between raw and curated layers using metadata?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "It uses metadata from raw and curated layers to detect schema drift."
+    },
+    {
+      "question": "How would you calculate the 95th percentile of transaction amounts for each user?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It returns the 95th percentile of transaction amounts for each user."
+    },
+    {
+      "question": "How would you find the top three categories contributing 80% of total revenue?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It identifies the top three categories contributing to 80% of total revenue."
+    },
+    {
+      "question": "How would you identify seasonal patterns in monthly product sales?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It analyzes monthly product sales for seasonal patterns."
+    },
+    {
+      "question": "How would you use broadcast join hints to optimize small dimension lookups?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "It uses broadcast join hints to optimize lookups on small dimension tables."
+    },
+    {
+      "question": "How would you flag revenue anomalies using a z-score or standard deviation?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "It uses a z-score or standard deviation to flag revenue anomalies."
+    },
+    {
+      "question": "How would you remove duplicates using ROW_NUMBER on the ingestion timestamp?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It uses ROW_NUMBER with ingestion timestamp information to remove duplicates."
+    },
+    {
+      "question": "How would you calculate session time from login and logout events?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It derives session time from login and logout events."
+    },
+    {
+      "question": "How would you compare revenue growth across the last three quarters for each product line?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It compares revenue growth over the last three quarters by product line."
+    },
+    {
+      "question": "How would you identify users who upgraded to premium but never used the features?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "It identifies users who upgraded to premium but never used the features."
+    },
+    {
+      "question": "How would you track update frequency on records in an SCD Type 2 table?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "It tracks how frequently records are updated in an SCD Type 2 table."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Advanced SQL interview questions",
+    "secondary_topics": [
+      "User retention and churn",
+      "Window functions and event ordering",
+      "Time-series and calendar-based processing",
+      "Hierarchical aggregation",
+      "Revenue comparisons and growth",
+      "SCD Type 2 joins and update tracking",
+      "Schema drift detection",
+      "Percentiles and anomaly detection",
+      "Join optimization and deduplication",
+      "Session-time and product-usage analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:39ce86531f5d5140",
+    "saved_date": "2026-10-01T23:09:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7350426333870444544",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7350426333870444544_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

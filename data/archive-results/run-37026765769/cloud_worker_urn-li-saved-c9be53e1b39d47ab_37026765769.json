@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-c9be53e1b39d47ab",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343495692914475008",
+    "captured_at": "2026-10-02T00:15:51.671100Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:02Z"
+  },
+  "original_text": "• 1st\nSenior Data Engineer at Epsilon\n1yr •\n⤵️𝟏𝟎 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 – 𝐖𝐢𝐭𝐡 𝐑𝐞𝐚𝐥-𝐖𝐨𝐫𝐥𝐝 𝐒𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐬!\n.\n.\n.\n.\n.\n.\n.\n📌 𝐈'𝐯𝐞 𝐜𝐨𝐦𝐩𝐢𝐥𝐞𝐝 𝐚 𝐬𝐞𝐭 𝐨𝐟 𝐩𝐫𝐚𝐜𝐭𝐢𝐜𝐚𝐥, 𝐬𝐜𝐞𝐧𝐚𝐫𝐢𝐨-𝐛𝐚𝐬𝐞𝐝 𝐒𝐐𝐋 𝐪𝐮𝐞𝐫𝐢𝐞𝐬 𝐭𝐡𝐚𝐭 𝐚𝐫𝐞 𝐨𝐟𝐭𝐞𝐧 𝐚𝐬𝐤𝐞𝐝 𝐢𝐧 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐬, 𝐢𝐧𝐜𝐥𝐮𝐝𝐢𝐧𝐠 𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐬.\n🔄 From ranking salaries to calculating moving averages – it's all here.\n👇𝐏𝐞𝐫𝐟𝐞𝐜𝐭 𝐟𝐨𝐫:\n1️⃣ Data Engineering interview.\n2️⃣ Brushing up on advanced SQL concepts.\n3️⃣ Daily problem-solving practice.\n🔗 Grab your copy and level up your SQL game!\n✅ Feel free to repost if you think people in your network might find this insightful.\n✅ If you loved reading this, follow Harshavardhana I for more such content on Data.\n#DataEngineering #SQLInterview #AdvancedSQL #LinkedInLearning\n#TechCareers #JobSearch #CrackTheInterview\nAdvanced SQL",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343495692914475008_slide_0.jpg",
+      "description": "PNG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post for a compilation of scenario-based advanced SQL interview questions and solutions. It mentions examples involving salary ranking and moving averages, but it does not provide any actual questions, SQL techniques, solutions, or other technical explanations.",
+    "topics": [
+      "Advanced SQL interview preparation"
+    ],
+    "subtopics": [
+      "Scenario-based SQL questions",
+      "Salary ranking",
+      "Moving averages"
+    ],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "Advanced SQL interview preparation",
+    "secondary_topics": [
+      "Advanced SQL",
+      "Interview preparation"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c9be53e1b39d47ab",
+    "saved_date": "2026-10-01T23:16:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343495692914475008",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343495692914475008_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7343495692914475008_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

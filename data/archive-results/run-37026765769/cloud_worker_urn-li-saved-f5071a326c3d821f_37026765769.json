@@ -1,0 +1,148 @@
+{
+  "id": "urn-li-saved-f5071a326c3d821f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7300738730540089344",
+    "captured_at": "2026-10-02T00:15:53.314244Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:21Z"
+  },
+  "original_text": "𝐌𝐨𝐫𝐠𝐚𝐧 𝐒𝐭𝐚𝐧𝐥𝐞𝐲 𝐏𝐲𝐬𝐩𝐚𝐫𝐤 𝐃𝐚𝐭𝐚𝐞𝐧𝐠𝐢𝐧𝐞𝐞𝐫 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 (𝟑-𝟓 𝐲𝐞𝐚𝐫𝐬)\n.\n.\n.\n1.What is PySpark? How is it different from Apache Spark?\n\n2.What are RDDs in PySpark? How do they differ from DataFrames and Datasets?\n\n3.What is a DataFrame in PySpark? Explain its advantages over RDDs.\n\n4.What are broadcast variables in PySpark? When would you use them?\n\n5.What is partitioning in PySpark? Why is it important for performance?\n\n6.Explain PySpark’s cache() and persist() methods. When should you use them?\n\n7.How would you handle skewed data in PySpark?\n\n8.How do you use UDFs (User Defined Functions) in PySpark? What are the pros and cons?\n\n9.What is the role of SparkSession in PySpark?\n\n10.Explain how you would deploy a PySpark job on a cluster.\n\n#Pyspark #Dataengineer #Interview #Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7300738730540089344_slide_0.jpg",
+      "description": "JPEG image, 480x639 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a 3–5-year Data Engineer interview question list focused on PySpark. It covers PySpark and Apache Spark, RDDs, DataFrames, Datasets, broadcast variables, partitioning, caching and persistence, skewed data, UDFs, SparkSession, and cluster deployment. The content provides only questions and does not include answers, examples, implementation steps, or explanations of the requested concepts.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Data Engineering interview preparation"
+    ],
+    "subtopics": [
+      "PySpark versus Apache Spark",
+      "RDDs, DataFrames, and Datasets",
+      "DataFrame advantages over RDDs",
+      "Broadcast variables",
+      "Partitioning and performance",
+      "Caching and persistence",
+      "Skewed data handling",
+      "User Defined Functions",
+      "SparkSession",
+      "Cluster deployment"
+    ],
+    "concepts": [
+      "PySpark",
+      "RDDs",
+      "DataFrame",
+      "Dataset",
+      "Broadcast variables",
+      "Partitioning",
+      "cache() and persist()",
+      "Skewed data",
+      "User Defined Functions",
+      "SparkSession",
+      "Cluster deployment"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is PySpark, and how is it different from Apache Spark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines PySpark and explains how it differs from Apache Spark."
+    },
+    {
+      "question": "What are RDDs in PySpark, and how do they differ from DataFrames and Datasets?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines RDDs and explains their distinctions from DataFrames and Datasets."
+    },
+    {
+      "question": "What is a DataFrame in PySpark, and what advantages does it have over RDDs?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines a PySpark DataFrame and identifies its advantages over RDDs."
+    },
+    {
+      "question": "What are broadcast variables in PySpark, and when would they be used?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer defines broadcast variables and describes situations in which they would be useful."
+    },
+    {
+      "question": "What is partitioning in PySpark, and why is it important for performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains partitioning and its role in PySpark performance."
+    },
+    {
+      "question": "How do PySpark's cache() and persist() methods differ, and when should they be used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains cache() and persist() and identifies appropriate circumstances for using them."
+    },
+    {
+      "question": "How would you handle skewed data in a PySpark workload?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer describes techniques for detecting and handling skewed data in PySpark."
+    },
+    {
+      "question": "How are User Defined Functions used in PySpark, and what are their pros and cons?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains UDF usage in PySpark and evaluates both benefits and drawbacks."
+    },
+    {
+      "question": "What is the role of SparkSession in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains the responsibilities and purpose of SparkSession in PySpark."
+    },
+    {
+      "question": "How would you deploy a PySpark job on a cluster?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer describes the process and architectural considerations for deploying a PySpark job on a cluster."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "RDDs",
+      "DataFrames",
+      "Datasets",
+      "broadcast variables",
+      "partitioning",
+      "caching and persistence",
+      "skewed data handling",
+      "User Defined Functions",
+      "SparkSession",
+      "cluster deployment"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f5071a326c3d821f",
+    "saved_date": "2026-10-01T23:34:21Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7300738730540089344",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7300738730540089344_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

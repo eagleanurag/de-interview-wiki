@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-saved-152368321a896a0f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340362521930846208",
+    "captured_at": "2026-10-02T00:15:44.954594Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:27Z"
+  },
+  "original_text": "🚨 Query a CSV from Azure Data Lake using pure SQL. No pipelines. No Spark. No ETL.\n\nIf you're still downloading CSVs locally to analyze them… stop right there.\nBecause Azure Synapse lets you query them directly from ADLS just like a table.\n\nHere’s how to retrieve insights in seconds using OPENROWSET:\nSELECT TOP 100 *\nFROM OPENROWSET(\n BULK 'https://<yourlake>.dfs.core.windows.net/<container>/sample_csv.csv',\n FORMAT = 'CSV',\n HEADER_ROW = TRUE,\n PARSER_VERSION = '2.0'\n) AS result\n\n- No pipelines\n- No data movement\n- Just SQL and serverless compute\n\n💡 Bonus: You can export the results to Power BI, use them in a view, or even join them with data from SQL Pools.\nThis method is a lifesaver when you're working with exploratory datasets, quick validations, or running POCs.\n\nWelcome to the world of serverless, file-native SQL.\nHave you tried this yet?\n#AzureSynapse #OPENROWSET #DataEngineering #AzureDataLake #CSVAnalysis #ServerlessSQL #WomenInTech #CloudAnalytics",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340362521930846208_slide_0.jpg",
+      "description": "JPEG image, 480x205 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains how to query a CSV file directly from Azure Data Lake Storage with Azure Synapse SQL using OPENROWSET, without pipelines, Spark, ETL, local downloads, or data movement. The example retrieves up to 100 rows with TOP 100 and configures OPENROWSET for CSV input, a header row, and parser version 2.0. It presents this as a serverless, file-native approach for exploratory analysis, quick validations, and proofs of concept. It also states that query results can be exported to Power BI, used in a view, or joined with data from SQL Pools.",
+    "topics": [
+      "Azure Synapse serverless SQL",
+      "Azure Data Lake Storage",
+      "Direct CSV querying",
+      "File-native data analytics"
+    ],
+    "subtopics": [
+      "OPENROWSET BULK queries",
+      "CSV query options",
+      "Serverless compute",
+      "Exploratory dataset analysis",
+      "Quick data validation",
+      "Proofs of concept"
+    ],
+    "concepts": [
+      "OPENROWSET",
+      "BULK URL",
+      "CSV format configuration",
+      "HEADER_ROW",
+      "PARSER_VERSION",
+      "TOP 100",
+      "Serverless file-native SQL",
+      "Result reuse and integration"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can Azure Synapse query a CSV file directly from Azure Data Lake Storage using SQL?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Use OPENROWSET with a BULK HTTPS path to the CSV file.\nSpecify FORMAT = 'CSV' and HEADER_ROW = TRUE.\nInclude PARSER_VERSION = '2.0' as shown in the example."
+    },
+    {
+      "question": "What parts of the post's OPENROWSET query select data and control how the CSV is parsed?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SELECT TOP 100 * limits the returned result to 100 rows.\nThe BULK clause identifies the CSV URL, while FORMAT identifies it as CSV.\nHEADER_ROW declares the header row, PARSER_VERSION selects version 2.0, and AS result names the derived query source."
+    },
+    {
+      "question": "Why would the post's direct OPENROWSET approach be useful for an exploratory dataset, quick validation, or proof of concept?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "It queries the CSV with SQL rather than downloading and processing it locally.\nIt uses serverless compute without requiring pipelines, Spark, ETL, or data movement.\nIt supports rapid exploration and validation directly against the file."
+    },
+    {
+      "question": "What can be done with the results of a direct CSV query according to the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The results can be exported to Power BI.\nThe results can be used in a view.\nThe results can be joined with data from SQL Pools."
+    }
+  ],
+  "classification": {
+    "domain": "Cloud Data Engineering",
+    "primary_topic": "Querying CSV files with Azure Synapse OPENROWSET",
+    "secondary_topics": [
+      "Azure Data Lake Storage",
+      "Serverless SQL",
+      "File-native analytics",
+      "Power BI"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:152368321a896a0f",
+    "saved_date": "2026-10-01T23:18:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340362521930846208",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340362521930846208_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

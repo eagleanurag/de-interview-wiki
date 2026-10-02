@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-d7974c65e35693ac",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341691307733438465",
+    "captured_at": "2026-10-02T00:15:52.211730Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:11Z"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\n📘 𝗛𝗼𝘄 𝗠𝘂𝗰𝗵 𝗣𝘆𝘁𝗵𝗼𝗻 𝗗𝗼 𝗬𝗼𝘂 𝗥𝗘𝗔𝗟𝗟𝗬 𝗡𝗲𝗲𝗱 𝗮𝘀 𝗮 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿?\nIf you’re coming from a SQL background and wondering how much Python to learn?\nIt clearly shows what’s essential, what’s optional, and how you can replace SQL with Python using Pandas — step by step.\nBookmark this guide, share it with fellow data engineers\n🔗 𝗝𝗼𝗶𝗻 𝗼𝘂𝗿 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝘁𝗼 𝘀𝘁𝗮𝘆 𝘂𝗽𝗱𝗮𝘁𝗲𝗱 𝗼𝗻 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴:\nhttps://lnkd.in/dUuscrch 📲\n…see more\nHOW MUCH PYTHON TO LEARN",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341691307733438465_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post from a senior data engineer opening to work in Germany and the UAE. It lists Azure Databricks, Microsoft Fabric, Azure Data Factory, PySpark, Spark, Azure Synapse, SQL, and data platform work, then advertises a guide about how much Python data engineers should learn. The post claims the guide distinguishes essential from optional Python knowledge and demonstrates replacing SQL with Python using Pandas, but it does not include those instructions or any technical explanation itself. The extracted media text is empty, so the substantive content is incomplete.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d7974c65e35693ac",
+    "saved_date": "2026-10-01T23:17:11Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341691307733438465",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341691307733438465_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "urn-li-archive-7adaeb352383edea",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.596405Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:39Z"
+  },
+  "original_text": "🚀 Data Engineering Interview Questions (Python | PySpark | Spark | SQL)\n\nHere’s a list of questions during Data Engineering interviews:\n\n1. Write a Python program to sort a list of integers in descending order without using the sort() function.\n2. Write Spark code to read a file from a specified location.\n3. Define JDBC and explain how it's used in connecting Spark to databases.\n4. You’re given two CSV files with no common columns — how would you join them?\n5. In PySpark, create two DataFrames with no matching columns and perform a cross join.\n6. A table contains bank statements — write an SQL query to calculate a rolling sum of transactions.\n7. Explain the concept of lazy evaluation in PySpark.\n8. What’s the difference between RDD and DataFrame in Apache Spark?\n9. Write a PySpark query to filter employees where:\nAge > 25\nSalary < 5 lakh\nName starts with 'A'\n\n#DataEngineering #PySpark #Spark #SQL #Python #BigData #InterviewQuestions #DataEngineer\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied post excerpt lists nine Data Engineering interview questions spanning Python, Spark, PySpark, SQL, and JDBC. It covers descending sorting without sort(), Spark file reads, JDBC's role in database connectivity, joins for CSV files without shared columns, PySpark cross joins, SQL rolling sums, lazy evaluation, RDD versus DataFrame, and multi-condition employee filtering. The excerpt ends with \"…see more\" and contains no extracted media text, so any additional material is not available.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Python programming",
+      "Apache Spark",
+      "PySpark",
+      "SQL",
+      "JDBC database connectivity"
+    ],
+    "subtopics": [
+      "Sorting integers without sort()",
+      "Reading files with Spark",
+      "Connecting Spark to databases with JDBC",
+      "Joining CSV files without common columns",
+      "Performing PySpark cross joins",
+      "Calculating rolling sums in SQL",
+      "Lazy evaluation in PySpark",
+      "RDD versus DataFrame",
+      "Filtering employees with multiple conditions"
+    ],
+    "concepts": [
+      "Descending list sorting without sort()",
+      "Spark file reading",
+      "JDBC connectivity",
+      "Joining CSV files without common columns",
+      "PySpark cross join",
+      "Rolling sum",
+      "Lazy evaluation",
+      "RDD versus DataFrame",
+      "Multi-condition employee filtering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a Python program to sort a list of integers in descending order without using the sort() function.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The program sorts a list of integers from highest to lowest.\nThe program does not call the sort() function."
+    },
+    {
+      "question": "Write Spark code to read a file from a specified location.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The code identifies the specified file location.\nThe Spark code reads the file from that location."
+    },
+    {
+      "question": "What is JDBC, and how is it used to connect Spark to databases?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer defines JDBC.\nThe answer explains its role in connecting Spark to databases."
+    },
+    {
+      "question": "How would you join two CSV files when they have no common columns?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer addresses the absence of shared columns in the two CSV files.\nThe answer identifies an applicable way to join the datasets."
+    },
+    {
+      "question": "How would you create two PySpark DataFrames with no matching columns and perform a cross join?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer creates two PySpark DataFrames with no matching columns.\nThe answer performs a cross join between the DataFrames."
+    },
+    {
+      "question": "Write an SQL query to calculate a rolling sum of transactions from a table containing bank statements.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query operates on the bank statement table.\nThe query calculates a rolling sum of the transaction values."
+    },
+    {
+      "question": "Explain lazy evaluation in PySpark.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines lazy evaluation in the context of PySpark."
+    },
+    {
+      "question": "What is the difference between an RDD and a DataFrame in Apache Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer describes RDDs in Apache Spark.\nThe answer describes DataFrames in Apache Spark.\nThe answer identifies the differences between the two."
+    },
+    {
+      "question": "Write a PySpark query that filters employees where Age is greater than 25, Salary is below 5 lakh, and Name starts with \"A\".",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query filters for Age greater than 25.\nThe query filters for Salary below 5 lakh.\nThe query filters for names beginning with \"A\"."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Python",
+      "PySpark",
+      "Apache Spark",
+      "SQL",
+      "JDBC"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7adaeb352383edea",
+    "saved_date": "2026-10-01T23:21:39Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

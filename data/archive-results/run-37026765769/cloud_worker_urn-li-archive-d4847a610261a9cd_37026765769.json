@@ -1,0 +1,78 @@
+{
+  "id": "urn-li-archive-d4847a610261a9cd",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.479987Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:11Z"
+  },
+  "original_text": "This question cost me a 27 LPA offer at KPMG \nThe same question got me a 33 LPA offer at Deloitte.\n\nIn one interview, I was asked:\n- How would you remove duplicate records from a huge PySpark DataFrame efficiently?\n\nI froze. I didn’t know the answer. And yes, I got rejected. But instead of moving on, I went deeper into the questions and learned.\n\nTwo weeks later, I faced the same question in another interview. This time, I smiled and explained:\n\n- Use dropDuplicates() if you want to remove duplicates based on all or specific columns.\n- For very large datasets, repartition the DataFrame by key columns before deduplication to avoid expensive shuffles.\n- Use window functions with row_number() if you need to keep the latest record per group.\n- Cache intermediate results if reused, and tune spark.sql.shuffle.partitions for performance.\n\n𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗻𝗲𝗿𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲 - https://lnkd.in/gJWSVKNM\n𝗠𝗮𝗿𝗰𝗵 𝗗𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗲𝗻𝗱𝗶𝗻𝗴 𝘁𝗼𝗱𝗮𝘆 - AZURE30 / AWS30 / GCP30 only for next 5 people\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post recounts failing and later passing a PySpark interview question about efficiently removing duplicates from a large DataFrame. It recommends using dropDuplicates() for all or specific columns, repartitioning by key columns before deduplication for very large datasets, using row_number() to retain the latest record in each group, caching reused intermediate results, and tuning spark.sql.shuffle.partitions. It closes with promotional content asking readers to like, reshare, and follow a guide.",
+    "topics": [
+      "PySpark",
+      "DataFrame deduplication"
+    ],
+    "subtopics": [
+      "Dropping duplicate rows",
+      "Partitioning by deduplication keys",
+      "Keeping the latest row per group",
+      "Caching reused intermediate results",
+      "Tuning shuffle partitions"
+    ],
+    "concepts": [
+      "dropDuplicates()",
+      "Key-column repartitioning",
+      "row_number() window function",
+      "Intermediate-result caching",
+      "spark.sql.shuffle.partitions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you remove duplicate records from a very large PySpark DataFrame efficiently?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Use dropDuplicates() when duplicates should be removed according to all columns or selected columns.\nFor very large datasets, the post recommends repartitioning by the key columns before performing deduplication to avoid expensive shuffles."
+    },
+    {
+      "question": "How can you retain only the latest record for each group in a PySpark DataFrame?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Use a window function with row_number() to identify the latest record within each group."
+    },
+    {
+      "question": "Which additional measures does the post recommend for improving PySpark deduplication performance?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Cache intermediate results if they will be reused.\nTune spark.sql.shuffle.partitions for performance."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame deduplication",
+    "secondary_topics": [
+      "Partitioning",
+      "Window functions",
+      "Caching",
+      "Shuffle partition tuning"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d4847a610261a9cd",
+    "saved_date": "2026-10-01T23:07:11Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

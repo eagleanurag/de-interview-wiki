@@ -1,0 +1,82 @@
+{
+  "id": "urn-li-archive-37c727aea532db0b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.499679Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:13Z"
+  },
+  "original_text": "Spark optimization: 90 minutes → 28 minutes 🚀\n\nRecently, I worked on optimizing a Spark job that was taking around 90 minutes.\n\nAQE initially brought it down to ~55–60 minutes, but the real bottleneck was discovered through the Spark UI.\n\nA window function using:Window.partitionBy(\"period\")\n\nwas causing a large shuffle to effectively collapse into a single partition, resulting in heavy data skew, spilling, and one executor doing most of the work.\n\nInstead of using the window to find the latest load timestamp, I changed the approach to:\ngroupBy(period) + max(load_time) + broadcast join\n\nAfter validating that the new logic produced the same results:\n90 min → 55–60 min → 28 min\n\nThe biggest takeaway:\nDon’t just look at how many partitions Spark creates. Look at how the data is actually distributed across those partitions.\nSometimes the best Spark optimization isn’t adding more resources — it’s changing the way the data is processed.\n#ApacheSpark #DataEngineering #BigData #SparkOptimization #PerformanceEngineering #AQE",
+  "media": [],
+  "ai_analysis": {
+    "summary": "An Apache Spark job that initially took around 90 minutes was reduced to approximately 55–60 minutes with AQE. Spark UI analysis then showed that a window function using Window.partitionBy(\"period\") was creating a large shuffle that effectively collapsed into one partition, causing data skew, spilling, and heavy work on one executor. Replacing the window logic with groupBy(period), max(load_time), and a broadcast join reduced the runtime to 28 minutes after the new logic was validated to produce the same results. The main lesson is to examine actual data distribution rather than only partition counts and to consider changing processing logic before adding resources.",
+    "topics": [
+      "Data skew",
+      "AQE"
+    ],
+    "subtopics": [
+      "Spark UI bottleneck diagnosis",
+      "Window function shuffle behavior",
+      "Partition data distribution",
+      "Aggregation with groupBy and max",
+      "Broadcast join optimization",
+      "Performance result validation"
+    ],
+    "concepts": [
+      "AQE",
+      "Spark UI",
+      "Window.partitionBy(\"period\")",
+      "Data skew",
+      "groupBy(period) and max(load_time)",
+      "Broadcast join",
+      "Partition distribution",
+      "Correctness validation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A Spark job takes around 90 minutes and improves to 55–60 minutes after enabling AQE. How would you investigate the remaining bottleneck using the approach described in the post?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Use Spark UI to inspect how data is distributed across partitions rather than looking only at the partition count.\nIdentify a window using Window.partitionBy(\"period\") as the source of a large shuffle that effectively collapsed into one partition.\nConnect the concentrated partition to data skew, spilling, and one executor doing most of the work."
+    },
+    {
+      "question": "How would you optimize a window-based Spark operation that finds the latest load timestamp for each period when the current implementation creates severe skew?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Replace the window-based approach with groupBy(period) and max(load_time), together with a broadcast join.\nValidate that the replacement produces the same results as the original logic.\nRecognize that changing the processing approach reduced the reported runtime to 28 minutes."
+    },
+    {
+      "question": "What should a Spark engineer evaluate when adding partitions does not resolve a performance problem?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Evaluate the actual data distribution across partitions rather than relying only on the number of partitions.\nCheck whether skew, spilling, or excessive work concentration is present.\nConsider changing the processing logic before assuming that additional resources are required."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark performance optimization",
+    "secondary_topics": [
+      "Spark UI diagnostics",
+      "data skew and spilling",
+      "window function optimization",
+      "aggregation and broadcast joins"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:37c727aea532db0b",
+    "saved_date": "2026-10-01T23:07:13Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

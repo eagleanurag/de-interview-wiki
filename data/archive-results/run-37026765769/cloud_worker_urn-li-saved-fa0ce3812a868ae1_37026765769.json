@@ -1,0 +1,66 @@
+{
+  "id": "urn-li-saved-fa0ce3812a868ae1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7303617905911373825",
+    "captured_at": "2026-10-02T00:15:53.483434Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:07Z"
+  },
+  "original_text": "Resources Compilation - Videos Edition...\n\nHere I'll compile all the free video resources you'll need to cover for your interview preparation for companies like Google, Microsoft and Amazon. Starting and going through these resources end to end would make you interview ready for almost all the major companies that are currently hiring...\n\n➡️ DSA : \n\n1. Raj Vikramaditya A-Z sheet : https://lnkd.in/gzb2Vc2g\n2. Vivek Gupta DP Workshop : https://lnkd.in/giqQ5PA6\n3. TLE Eliminators youtube channel : https://lnkd.in/gNUszq6i\n4. Ask Senior Youtube channel : https://lnkd.in/gt6yCwPA\n\n➡️ Core CS : \n\n1. OS : https://lnkd.in/g6xTWcNh\n2. DBMS : https://lnkd.in/g8UfAaNf\n3. CN : https://lnkd.in/gaCwUvmg\n4. OOPs : https://lnkd.in/gzkT-Cfv (needs further readings from other resources and blogs)\n\n➡️ Development :\n\n1. Namaste Javascript course : https://lnkd.in/gF-vqCxn\n2. Harkirat Singh youtube channel : https://lnkd.in/g-B-iwSZ (goldmine)\n3. Mosh Hamedani Youtube channel : https://lnkd.in/gjbY7TAF\n\n➡️ System Design : \n\n1. Arpit Bhayani Youtube channel : https://lnkd.in/gQRCqaBG (truly one of my favourites)\n2. Shrayansh Jain Youtube channel for LLD : https://lnkd.in/gAf7e-Hh\n3. Keerti Purswani youtube channel for HLD & LLD : https://lnkd.in/gMrmdBen\n4. Gaurav Sen Youtube channel : https://lnkd.in/g-G4tN68 (the OG resource for System Design)\n\nThese are comprehensive resources, great for folks who love following videos for tutorials. Following these wholeheartedly would allow one to be prepared for any product based companies very soon. I'll drop another post for folks, preferring written content.\n\nStay tuned for more such content!! ✌🏻🚀\n\nPersonal DSA Sheet : https://lnkd.in/gnH8d4Dh",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7303617905911373825_slide_0.jpg",
+      "description": "JPEG image, 480x640 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post compiles linked free video resources for interview preparation at companies such as Google, Microsoft, and Amazon. It groups resources under DSA, Core CS, Development, and System Design, names individual courses and YouTube channels, and claims that completing them end to end can prepare learners for many product-based companies. It does not explain technical concepts or provide interview questions.",
+    "topics": [
+      "Software engineering interview preparation",
+      "Free video resources"
+    ],
+    "subtopics": [
+      "DSA",
+      "OS",
+      "DBMS",
+      "CN",
+      "OOPs",
+      "Javascript",
+      "System Design",
+      "LLD",
+      "HLD"
+    ],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Software engineering interview preparation",
+    "primary_topic": "Free video resource compilation",
+    "secondary_topics": [
+      "DSA",
+      "Core CS",
+      "Development",
+      "System Design"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fa0ce3812a868ae1",
+    "saved_date": "2026-10-01T23:33:07Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7303617905911373825",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7303617905911373825_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

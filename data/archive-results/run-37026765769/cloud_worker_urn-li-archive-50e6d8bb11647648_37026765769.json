@@ -1,0 +1,96 @@
+{
+  "id": "urn-li-archive-50e6d8bb11647648",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.040609Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:07Z"
+  },
+  "original_text": "Booking.com Interview Experience.\nCompensation Range: 28LPA + 2.8L variable\nPosition: Data Engineer\nApplication Method: Online through portal\n\n𝗢𝗻𝗹𝗶𝗻𝗲 𝗔𝘀𝘀𝗲𝘀𝘀𝗺𝗲𝗻𝘁 (𝗥𝗼𝘂𝗻𝗱 𝟭)\n- SQL query involving tricky joins\n- Coding question on data aggregation related to hotels\n\n𝗛𝗥 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 (𝗥𝗼𝘂𝗻𝗱 𝟮)\n- Self-introduction and motivation to join\n- Discussion on salary expectations and role\n- Overview of company and work culture\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 (𝗥𝗼𝘂𝗻𝗱 𝟯)\n- Live coding with engineers\n- Medium-level LeetCode-style question (hotel data, aggregation + window functions)\n- Emphasis on explaining the thought process\n- Code ran but solution wasn’t perfect - still got positive feedback to candidate\n\n𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗥𝗼𝘂𝗻𝗱 (𝗥𝗼𝘂𝗻𝗱 𝟰)\n- Design a system to store hotel data with support for both real-time and batch querying\n- Tech stack discussion: optimal databases, deployment strategy, and user interaction\n- Clarified requirements, explained trade-offs, and discussed scaling strategies\n\n𝗛𝗶𝗿𝗶𝗻𝗴 𝗠𝗮𝗻𝗮𝗴𝗲𝗿 𝗥𝗼𝘂𝗻𝗱 (𝗥𝗼𝘂𝗻𝗱 𝟱)\n- Scheduled after 2 months of initial confirmation\n- Behavioral questions: conflict resolution, disagreement handling, team collaboration\n- Final outcome: Rejected for that role, offered a lower-level position with reduced compensation, which candidate declined\n\nIf you are preparing for Data Engineering interviews then you should check these Interview Experiences for 100+ Companies\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\n#dataengineering \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This candidate-reported Booking.com Data Engineer experience describes a five-round interview process. Round 1 tested tricky SQL joins and hotel-data aggregation. Round 3 used live coding for a medium-level hotel-data problem involving aggregation and window functions, with emphasis on explaining the candidate's thought process. Round 4 required a system-design discussion for storing hotel data with support for real-time and batch queries, including requirements clarification, database considerations, deployment strategy, user interaction, trade-offs, and scaling. Round 5 covered conflict resolution, disagreement handling, and team collaboration. The candidate received positive live-coding feedback despite an imperfect solution, but was later rejected for the role and declined a lower-level offer with reduced compensation. The listed compensation was 28 LPA plus 2.8 L variable. The post does not provide actual SQL solutions, a selected database, or a concrete system architecture.",
+    "topics": [
+      "Data Engineering Interview Process",
+      "SQL Joins",
+      "Data Aggregation",
+      "Window Functions",
+      "Hotel Data System Design",
+      "Real-Time and Batch Querying",
+      "Behavioral Interviewing"
+    ],
+    "subtopics": [
+      "Tricky joins in SQL",
+      "Hotel-data aggregation",
+      "Live coding",
+      "Explaining coding thought process",
+      "Database considerations",
+      "Deployment strategy",
+      "User interaction",
+      "Requirements clarification",
+      "Trade-off analysis",
+      "Scaling strategies",
+      "Motivation, salary, and role discussions",
+      "Conflict resolution and team collaboration"
+    ],
+    "concepts": [
+      "Tricky SQL Joins",
+      "Hotel-Data Aggregation",
+      "Window Functions",
+      "Real-Time and Batch Query Support",
+      "Requirements Clarification",
+      "Database and Deployment Considerations",
+      "Trade-Off and Scaling Analysis",
+      "Thought-Process Explanation",
+      "Behavioral Interview Themes"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which technical concepts were tested in the first and third rounds?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The first round tested a SQL query involving tricky joins.\nThe third round used hotel data with aggregation and window functions in a medium-level live-coding problem.\nThe candidate was expected to explain the thought process."
+    },
+    {
+      "question": "What should a candidate demonstrate when solving the hotel-data aggregation and window-function problem?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response should perform the required aggregation over hotel data.\nThe solution should incorporate window functions because they were explicitly part of the reported live-coding problem.\nThe candidate should explain the thought process while coding."
+    },
+    {
+      "question": "How would you approach designing a hotel-data storage system that supports both real-time and batch queries?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The candidate should first clarify the system's requirements.\nThe discussion should cover suitable databases, deployment strategy, and user interaction.\nThe candidate should explain trade-offs and scaling strategies."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "SQL Querying",
+      "Data Aggregation",
+      "Window Functions",
+      "System Design",
+      "Real-Time and Batch Querying",
+      "Behavioral Interviews"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:50e6d8bb11647648",
+    "saved_date": "2026-10-01T23:19:07Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

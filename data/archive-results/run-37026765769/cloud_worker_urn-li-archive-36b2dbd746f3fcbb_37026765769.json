@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-archive-36b2dbd746f3fcbb",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.474536Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:47Z"
+  },
+  "original_text": "𝐒𝐨𝐦𝐞𝐭𝐢𝐦𝐞𝐬 𝐢𝐭'𝐬 𝐧𝐨𝐭 𝐭𝐡𝐞 𝐡𝐚𝐫𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦𝐬 𝐭𝐡𝐚𝐭 𝐭𝐫𝐢𝐩 𝐮𝐬 𝐮𝐩 — 𝐢𝐭'𝐬 𝐭𝐡𝐞 𝐞𝐚𝐬𝐲 𝐨𝐧𝐞𝐬 𝐰𝐞 𝐨𝐯𝐞𝐫𝐥𝐨𝐨𝐤.\n\nIn the rush to prepare for medium to hard-level concepts — complex joins, optimizations, system design — we often forget to revise the basics. But in interviews, missing out on simple questions can cost you the opportunity.\n\nI had seen a similar experience in an 𝐀𝐦𝐚𝐳𝐨𝐧 interview, where the questions were easy on the surface.\n\nHere are a few question examples:\n\n1. Join Counts with Nulls & Duplicates: Given two tables with null and repeated values and calculate row count for all types of joins:\n\n* INNER JOIN\n* LEFT JOIN\n* RIGHT JOIN\n* FULL OUTER JOIN\n* CROSS JOIN\n\n2. UNION vs UNION ALL: Given two tables with duplicate values, explain and write queries to demonstrate UNION and UNION ALL\n\n3. Custom Join Output\nGiven:\nTable 1:x, x, x, x, y, y\nTable 2: x, x, y\n\nExpected Output:\nx x \nx x \nx null \nx null \ny y \ny y\n\nDesign SQL logic to achieve this.\n\n4. What happens when you submit a Spark job: Explain the internal execution flow from DAG creation to task scheduling and execution.\n\n5. Data Modeling + Metrics Calculation: Problem statement required:\n\n* Designing a data model for delivery riders and routes\n* Writing SQL to compute metrics like: Minimum time taken on a given path, Average delivery time per route, etc \n\n𝐊𝐞𝐲 𝐭𝐚𝐤𝐞𝐚𝐰𝐚𝐲: Even “easy” questions demand clarity, speed, and precision. Don't skip revisiting the basics during interview prep — they often matter the most.\n\nLooking to understand the complete set of topics required for thorough preparation - https://lnkd.in/dqW_8dMP\n\nFollow Shubham Y. for more updates and insights!\n\n#DataEngineering #AmazonInterview #SQL #Spark #SystemDesign #InterviewPreparation #BigData #DataModeling #amazon",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post argues that data engineering interview preparation should include foundational SQL concepts, not only complex joins, optimizations, and system design. Using examples attributed to an Amazon interview, it presents exercises involving join cardinalities with nulls and duplicates, UNION versus UNION ALL, custom join output, Spark job execution flow, and data modeling for delivery riders and routes. It provides problem statements and one expected join result but does not provide SQL solutions, join-count answers, a Spark execution explanation, or a proposed data model.",
+    "topics": [
+      "SQL joins with nulls and duplicates",
+      "UNION versus UNION ALL",
+      "Custom join output",
+      "Spark job execution flow",
+      "Data modeling for delivery operations",
+      "SQL metric calculation",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "INNER JOIN cardinality",
+      "LEFT JOIN cardinality",
+      "RIGHT JOIN cardinality",
+      "FULL OUTER JOIN cardinality",
+      "CROSS JOIN cardinality",
+      "Duplicate values in UNION and UNION ALL",
+      "Repeated and unmatched values in custom joins",
+      "DAG creation",
+      "Task scheduling and execution",
+      "Delivery riders and routes",
+      "Minimum delivery time by path",
+      "Average delivery time by route"
+    ],
+    "concepts": [
+      "Join Counts with Nulls and Duplicates",
+      "UNION versus UNION ALL",
+      "Custom Join Output",
+      "Spark Job Execution Flow",
+      "Delivery Operations Data Model",
+      "Delivery Metrics Calculation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given two tables containing null and repeated values, how does each join type affect the result cardinality?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer analyzes INNER, LEFT, RIGHT, FULL OUTER, and CROSS JOIN separately.\nA strong answer accounts explicitly for matching rows, unmatched rows, null values, and repeated values when determining result size."
+    },
+    {
+      "question": "How do UNION and UNION ALL differ when combining two tables that contain duplicates, and how can each be demonstrated in SQL?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer explains how each operation handles duplicate rows.\nA strong answer provides example queries that demonstrate the difference."
+    },
+    {
+      "question": "Write SQL that transforms Table 1 values x, x, x, x, y, y and Table 2 values x, x, y into the expected output of x-x, x-x, x-null, x-null, y-y, and y-y.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer reproduces all six expected output rows.\nA strong answer explains how repeated Table 1 values and unmatched Table 2 values are handled by the proposed join logic."
+    },
+    {
+      "question": "What happens internally after a Spark job is submitted, from DAG creation through task scheduling and execution?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains the execution stages beginning with DAG creation.\nA strong answer describes how tasks are scheduled and executed after the DAG is created."
+    },
+    {
+      "question": "Design a data model for delivery riders and routes and write SQL to calculate the minimum time on a given path and the average delivery time per route.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer defines a data model that represents delivery riders and routes.\nA strong answer writes SQL for minimum time taken on a specified path.\nA strong answer writes SQL for average delivery time grouped by route."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Spark job execution",
+      "Data modeling",
+      "Delivery metric calculation",
+      "Data engineering interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:36b2dbd746f3fcbb",
+    "saved_date": "2026-10-01T23:14:47Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "urn-li-saved-23659beff5075f52",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340257429995077633",
+    "captured_at": "2026-10-02T00:15:45.536686Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:05Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Python, SQL, PySpark, Azure Data Factory (ADF), Databricks, Delta Lake | Scalable Data Pipelines, ETL/ELT, Data Analytics Solutions\n1yr •\n✨ Small Tweaks, Massive Impact: Mastering SQL Data Types! 📊\nToo often, we overlook how much inefficient data types cost us:\n💾 Extra storage\n🐢 Slower queries\n💸 Increased cloud spend\nBut it doesn’t have to be that way! 🙅‍♂️\nWith the right schema design, you can unlock:\n🚀 Faster performance\n⚡ Lower I/O\n📉 Significant cost reduction\n👇 Inside this free PDF, I break down:\n✅ Why BIGINT is not always better\n✅ How using BOOLEAN can speed up your queries\n✅ The danger of VARCHAR(500) overkill\n✅ Real-world examples with measurable savings in engines like BigQuery, Redshift, Synapse, Databricks\n📌 Bonus: Based on real interview questions from Amazon & Snowflake — this is the stuff top-tier companies actually test for! 💼\n📄 Free PDF → Save it, share it, and supercharge your next database design!\n💬 I’d love to hear:\nHave you ever optimized a table and seen major performance gains? Drop your experience in the comments!\n👇 Grab your PDF below!\n#DataEngineering 💻\n#SQLPerformance 💡\n#CloudOptimization ☁️\n#BigQuery #Redshift #AzureSynapse #Databricks\n#DatabaseDesign 🧩\n#TechInterviewTips 🔍\n#PerformanceMatters ⚙️\n#ArzanishYusufNadeem 🚀\n#DataEngineeringCommunity 🌍\n#LinkedInTech 📘\n…see more\n2",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340257429995077633_slide_0.jpg",
+      "description": "PNG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional post argues that inefficient SQL data types and schema design can consume extra storage, slow queries, increase I/O, and raise cloud spending, while appropriate data types can improve performance and reduce costs. It highlights BIGINT, BOOLEAN, and VARCHAR(500), and says a linked free PDF contains engine-specific examples for BigQuery, Redshift, Synapse, and Databricks. However, the provided content contains no PDF details, measured values, examples, or technical explanations of the stated recommendations.",
+    "topics": [
+      "SQL data type selection",
+      "Database schema design",
+      "Storage and I/O efficiency",
+      "Cloud cost optimization"
+    ],
+    "subtopics": [
+      "BIGINT",
+      "BOOLEAN",
+      "VARCHAR(500)",
+      "Query performance",
+      "Storage efficiency",
+      "BigQuery, Redshift, Synapse, and Databricks examples"
+    ],
+    "concepts": [
+      "Right-sized SQL data types",
+      "BIGINT",
+      "BOOLEAN",
+      "VARCHAR(500)",
+      "Engine-specific optimization examples"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What inefficiencies does the post associate with poorly chosen SQL data types?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Poor data-type choices can consume extra storage and increase I/O.\nThey can slow queries and increase cloud spending.\nA right-sized schema is presented as a way to improve performance and reduce costs."
+    },
+    {
+      "question": "A team is reviewing its use of BIGINT, BOOLEAN, and VARCHAR(500). What cautions from the post should the team consider?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The team should not assume that BIGINT is automatically the best choice.\nThe team should consider that BOOLEAN can improve query speed.\nThe team should treat VARCHAR(500) as potentially excessive rather than a default declaration.\nThe answer should acknowledge that the source does not provide enough detail to prescribe exact schemas or explain the underlying mechanisms."
+    },
+    {
+      "question": "Which outcomes should be compared before and after optimizing a database schema?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The comparison should include storage consumption and query speed.\nIt should include I/O levels and cloud spending.\nA strong answer should note that the post claims measurable savings but supplies no actual figures or evaluation procedure."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL schema and performance optimization",
+    "secondary_topics": [
+      "Database design",
+      "Data type selection",
+      "Query performance",
+      "Cloud cost optimization",
+      "BigQuery",
+      "Redshift",
+      "Synapse",
+      "Databricks"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:23659beff5075f52",
+    "saved_date": "2026-10-01T23:16:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340257429995077633",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340257429995077633_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7340257429995077633_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

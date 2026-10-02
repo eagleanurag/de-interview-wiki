@@ -1,0 +1,97 @@
+{
+  "id": "urn-li-saved-869d7c7efd80809e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327315874955018240",
+    "captured_at": "2026-10-02T00:15:48.916629Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:56Z"
+  },
+  "original_text": "➡️ INSERT vs MERGE ⬅️\n\n(Comparing SQL Server INSERT and MERGE performance for inserting data)\n\nLet's consider two queries that insert 2M rows from a csv file into a table. \n\nOne inserts data using INSERT:\n\nINSERT INTO dbo.perf_tst_ins\nWITH (TABLOCK) (id, val, num)\nSELECT id, val, num\nFROM OPENROWSET(BULK 'x:\\projects\\perf_tst\\perf_tst_src.csv', FORMATFILE = 'x:\\projects\\perf_tst\\perf_tst_src_f.xml', FIRSTROW = 2, FORMAT = 'CSV') AS scr_f\n\nAnother - with MERGE:\n \nMERGE dbo.perf_tst_mrg WITH (TABLOCK) AS tgt\nUSING (\n SELECT id, val, num\n FROM OPENROWSET(BULK 'x:\\projects\\perf_tst\\perf_tst_src.csv', FORMATFILE = 'x:\\projects\\perf_tst\\perf_tst_src_f.xml', FIRSTROW = 2, FORMAT = 'CSV'\n ) AS scr_f\n ) AS src(id, val, num)\n ON 1 = 0\nWHEN NOT MATCHED\n THEN\n INSERT (id, val, num)\n VALUES (src.id, src.val, src.num)\n \n\nThe first query took 2 seconds to execute and caused this execution plan:\n\n|--Table Insert(OBJECT:([tst_db].[dbo].[perf_tst_ins])\n |--Remote Scan(OBJECT:(STREAM))\n\n\nThe second query took 10 seconds to execute and caused this execution plan:\n \n |--Table Merge(OBJECT:([tst_db].[dbo].[perf_tst_ins] AS [tgt]), ACTION:([Action1005]))\n |--Filter(WHERE:([Action1005] IS NOT NULL))\n |--Compute Scalar(DEFINE:([Action1005]=ForceOrder((4))))\n |--Compute Scalar(DEFINE:([Bmk1001]=NULL))\n |--Remote Scan(OBJECT:(STREAM)) \n \n\nAs we can see, 2 seconds vs. 10 seconds and 2 operators vs. 5 reveal the obvious winner: INSERT 🏆\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327315874955018240_slide_0.jpg",
+      "description": "JPEG image, 480x640 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post compares two SQL Server approaches for loading 2 million rows from a CSV file into a table. Both approaches use OPENROWSET(BULK), a format file, FIRSTROW = 2, CSV format, and the TABLOCK table hint. The INSERT query completed in 2 seconds with a two-operator execution plan, while a MERGE query configured with ON 1 = 0 and a WHEN NOT MATCHED INSERT action completed in 10 seconds with a five-operator execution plan. The post identifies INSERT as the winner in this specific test. The supplied content ends with an ellipsis, so no further explanation is available.",
+    "topics": [
+      "SQL Server",
+      "CSV bulk loading",
+      "INSERT versus MERGE",
+      "query performance",
+      "execution plan analysis"
+    ],
+    "subtopics": [
+      "OPENROWSET(BULK)",
+      "FORMATFILE",
+      "insert-only MERGE",
+      "TABLOCK table hint",
+      "execution plan operator comparison"
+    ],
+    "concepts": [
+      "INSERT-based bulk load",
+      "Insert-only MERGE",
+      "OPENROWSET(BULK)",
+      "Bulk format configuration",
+      "TABLOCK table hint",
+      "Execution plan comparison",
+      "Observed benchmark result"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "For the 2-million-row load shown, which statement performed better, and what evidence supports that conclusion?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The INSERT statement completed in 2 seconds, compared with 10 seconds for MERGE.\nThe INSERT execution plan had two operators, compared with five for MERGE.\nThe result establishes the winner for this specific test but does not provide evidence that INSERT is always faster than MERGE."
+    },
+    {
+      "question": "How does the shown MERGE statement behave as an insert-only operation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The ON 1 = 0 predicate is always false, so no source row matches an existing target row.\nThe WHEN NOT MATCHED clause inserts id, val, and num from the source for every source row."
+    },
+    {
+      "question": "How is the CSV file configured as the source in both queries?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The file is accessed through OPENROWSET(BULK).\nA format file is supplied through the FORMATFILE argument.\nFIRSTROW = 2 skips the first row, and FORMAT = 'CSV' selects CSV format."
+    },
+    {
+      "question": "What table hint is applied to the target in both loading approaches?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Both statements apply the TABLOCK table hint to the target table."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Server bulk data loading and performance",
+    "secondary_topics": [
+      "INSERT versus MERGE",
+      "CSV ingestion with OPENROWSET(BULK)",
+      "execution plan comparison"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:869d7c7efd80809e",
+    "saved_date": "2026-10-01T23:24:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327315874955018240",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327315874955018240_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "id": "urn-li-saved-e7e99065d0cdb674",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339202820434268163",
+    "captured_at": "2026-10-02T00:15:52.947920Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:33Z"
+  },
+  "original_text": "Recently, one of my colleagues went through her Data Science interview at PayPal. \n\nSo, sharing the complete experience here: \n\nShe got the interview opportunity through a referral on LinkedIn, and so the interview started.\n\n📍𝗥𝗼𝘂𝗻𝗱 𝟭: 𝗗𝗮𝘁𝗮 𝗦𝗰𝗶𝗲𝗻𝗰𝗲 𝗣𝗿𝗼𝗷𝗲𝗰𝘁𝘀 & 𝗠𝗟\nIn this round she was asked about one of her previous projects from scratch to finish, along with a a lot of cross-questioning around the project.\n\nSome questions asked were:\n→ How did you leverage machine learning algorithms?\n→ What steps did you take to deal with dirty or missing data?\n→ What techniques did you use when feature engineering?\n\n📍𝗥𝗼𝘂𝗻𝗱 𝟮: 𝗦𝗤𝗟, 𝗣𝘆𝘁𝗵𝗼𝗻 𝗖𝗼𝗱𝗶𝗻𝗴, 𝗮𝗻𝗱 𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗖𝗮𝘀𝗲 𝗦𝘁𝘂𝗱𝘆\nThe next round focused on SQL, Python coding, and a business case study. For example, she demonstrated how to aggregate and manipulate tables in SQL, build a machine-learning model in Python, and use APIs.\n\nA scenario-based question asked how she would approach analytics in a particular domain, her thought process in solving a specific problem, etc.\n\n📍𝗥𝗼𝘂𝗻𝗱 𝟯: 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝘂𝗿𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\nThis was the final round with a senior Director, where she was asked a lot of technical data & business analytical questions.\n\nQuestions were like:\n→ How well do you know natural language processing or recommendation systems?\n→ Explain how you would analyze data on user behavior to look for trends or anomalies.\n\nOverall the interview went really well for her & soon she received the job offer too. 🎉\n\n#paypal #interviewexperience #datascience",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339202820434268163_slide_0.jpg",
+      "description": "JPEG image, 480x323 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This post describes a three-round Data Science interview at PayPal obtained through a LinkedIn referral. The first round covered an end-to-end walkthrough of a previous project, including machine-learning algorithm use, dirty or missing data, and feature engineering. The second round covered SQL table aggregation and manipulation, building a machine-learning model in Python, API use, and a business case study. The final round with a senior Director covered business and technical analytics, natural language processing, recommendation systems, and analysis of user behavior for trends and anomalies. The post reports that the candidate received a job offer, but it does not provide the candidate's actual answers, algorithm names, SQL or Python code, API details, or analytical methods.",
+    "topics": [
+      "Data Science Interview Process",
+      "Machine Learning",
+      "Feature Engineering",
+      "SQL",
+      "Python",
+      "APIs",
+      "Business Analytics",
+      "Natural Language Processing",
+      "Recommendation Systems",
+      "User Behavior Analytics"
+    ],
+    "subtopics": [
+      "End-to-End Project Walkthroughs",
+      "Machine-Learning Algorithm Use",
+      "Dirty and Missing Data",
+      "Feature-Engineering Techniques",
+      "SQL Table Aggregation and Manipulation",
+      "Python Machine-Learning Modeling",
+      "API Use",
+      "Business Case Studies",
+      "Domain-Specific Analytics",
+      "Trend and Anomaly Analysis"
+    ],
+    "concepts": [
+      "Data Science Project Walkthrough",
+      "Machine-Learning Algorithm Use",
+      "Dirty and Missing Data Handling",
+      "Feature Engineering",
+      "SQL Table Aggregation and Manipulation",
+      "Python Machine-Learning Modeling",
+      "API Use",
+      "Business and Domain Analytics",
+      "Natural Language Processing",
+      "Recommendation Systems",
+      "User Behavior Analytics"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Walk through a previous data science project from start to finish and explain how you leveraged machine-learning algorithms.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer presents a coherent account of the project from its beginning through completion.\nThe answer identifies the machine-learning algorithms used and explains how they were leveraged.\nThe answer provides enough project detail to support follow-up questions."
+    },
+    {
+      "question": "What steps did you take to deal with dirty or missing data in a data science project?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer describes concrete steps taken to address dirty data.\nThe answer explains what was done about missing data.\nThe answer distinguishes the actions taken for each data-quality problem."
+    },
+    {
+      "question": "What feature-engineering techniques did you use in your project?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer identifies the feature-engineering techniques used in the project.\nThe answer explains how those techniques were applied.\nThe answer connects the feature engineering to the rest of the project."
+    },
+    {
+      "question": "How do you aggregate and manipulate tables in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer demonstrates SQL queries that aggregate table data.\nThe answer demonstrates manipulation of tables and explains the resulting data."
+    },
+    {
+      "question": "How do you build a machine-learning model in Python?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer provides Python code that builds a machine-learning model.\nThe answer explains the purpose of the model and demonstrates the result."
+    },
+    {
+      "question": "How have you used an API in a data science task?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer provides a concrete example of using an API.\nThe answer explains how the API supported the data science task."
+    },
+    {
+      "question": "How would you approach analytics in a particular business domain?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains an end-to-end approach to analytics in the specified domain.\nThe answer makes the problem-solving thought process explicit."
+    },
+    {
+      "question": "How would you analyze user behavior to identify trends or anomalies?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains how user-behavior data would be examined for trends.\nThe answer explains how anomalies would be identified in that data."
+    }
+  ],
+  "classification": {
+    "domain": "Data Science",
+    "primary_topic": "Data Science Interview Process",
+    "secondary_topics": [
+      "Machine Learning",
+      "Data Quality",
+      "Feature Engineering",
+      "SQL",
+      "Python",
+      "APIs",
+      "Business Analytics",
+      "Natural Language Processing",
+      "Recommendation Systems",
+      "User Behavior Analytics"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e7e99065d0cdb674",
+    "saved_date": "2026-10-01T23:11:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339202820434268163",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339202820434268163_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

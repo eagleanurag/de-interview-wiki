@@ -1,0 +1,146 @@
+{
+  "id": "urn-li-archive-91786362de7a2d52",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.835986Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:31Z"
+  },
+  "original_text": "Expedia Group Interview Experience.\nCompensation Range: 35+ LPA\nRole: Data Engineer\nApplication Method: Referral\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱 – 𝗛𝗶𝗿𝗶𝗻𝗴 𝗠𝗮𝗻𝗮𝗴𝗲𝗿 (𝗘𝗹𝗶𝗺𝗶𝗻𝗮𝘁𝗶𝗼𝗻 𝗥𝗼𝘂𝗻𝗱)\n\n- Deep dive into project architecture\n- Heavy focus on streaming systems – recurring theme at Expedia\n- Advanced discussion on:\n Kafka: Backpressure, design challenges\n- Database internals: Indexing, partitioning, connection pooling\n- Strong emphasis on fundamentals and system-level thinking\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 + 𝗦𝗽𝗮𝗿𝗸 𝗜𝗻𝘁𝗲𝗿𝗻𝗮𝗹𝘀\n\n- Extensive discussion on: Microservices: APIs, JWT, SAML authentication\n- Spark Internals: Execution plan, memory, transformations/actions\n- At least 25–30 technical questions asked\n- Focus aligned with resume content (e.g., microservices, Spark)\n\n𝟯𝗿𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 + 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴\n\n- Started with programming (tricky array-based problem)\n- Follow-up: Design a streaming system end-to-end\n- Topics:\n Kafka, Spark Streaming\n Expectations to know Flink (optional)\n Real-time data design and processing focus\n\n𝟰𝘁𝗵 𝗥𝗼𝘂𝗻𝗱 – 𝗣𝗿𝗼𝗱𝘂𝗰𝘁 & 𝗦𝘁𝗮𝗸𝗲𝗵𝗼𝗹𝗱𝗲𝗿 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁\n\n- End-to-end data pipeline implementation\n- SDLC process: From requirement to deployment\n- Behavioral Questions (STAR format):\n Team conflict resolution\n Role models, ownership, communication\n\nInterview referance - https://lnkd.in/gyYztWrH\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The source is a concise, high-level interview-experience outline for an Expedia Group Data Engineer role, with referral as the application method and a listed compensation range of 35+ LPA. It describes four rounds: a hiring-manager round focused on project architecture, recurring streaming-system themes, Kafka backpressure and design challenges, database internals, fundamentals, and system-level thinking; a data-engineering and Spark round covering microservices, APIs, JWT and SAML authentication, Spark execution plans, memory, transformations/actions, and resume-aligned questioning; a system-design and programming round with a tricky array-based problem, an end-to-end streaming-system design, Kafka and Spark Streaming listed as topics, optional Flink knowledge, and a real-time data focus; and a final HR/staffing round covering end-to-end data-pipeline implementation, the SDLC from requirement to deployment, and STAR-format behavioral questions. The post states that the second round included at least 25–30 technical questions but does not provide detailed technical answers, implementation steps, or the array problem itself.",
+    "topics": [
+      "Data Engineering Interview Preparation",
+      "Project Architecture",
+      "Streaming Systems",
+      "Kafka",
+      "Spark",
+      "Spark Streaming",
+      "Flink",
+      "Database Internals",
+      "Microservices",
+      "System Design",
+      "Data Pipeline Implementation",
+      "SDLC",
+      "Behavioral Interviewing",
+      "Programming"
+    ],
+    "subtopics": [
+      "Backpressure",
+      "Kafka design challenges",
+      "Indexing",
+      "Partitioning",
+      "Connection pooling",
+      "APIs",
+      "JWT authentication",
+      "SAML authentication",
+      "Execution plan",
+      "Memory",
+      "Transformations and actions",
+      "End-to-end streaming-system design",
+      "Real-time data design and processing",
+      "Array-based programming",
+      "Requirement to deployment",
+      "End-to-end data pipeline implementation",
+      "STAR format",
+      "Team conflict resolution",
+      "Role models",
+      "Ownership",
+      "Communication",
+      "Resume-aligned questioning"
+    ],
+    "concepts": [
+      "Project architecture",
+      "Streaming systems",
+      "Kafka backpressure and design challenges",
+      "Database internals",
+      "Microservices, APIs, and authentication",
+      "Spark internals",
+      "Spark Streaming",
+      "Flink",
+      "Real-time data design and processing",
+      "Data-pipeline implementation and SDLC",
+      "STAR-format behavioral questions",
+      "Array-based programming",
+      "Fundamentals and system-level thinking",
+      "Resume-aligned interview focus"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you design a streaming system end-to-end?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explicitly addresses Kafka and Spark Streaming, which are listed as topics for the exercise.\nA strong answer discusses backpressure and design challenges.\nA strong answer addresses real-time data design and processing.\nA strong answer identifies Flink as optional knowledge."
+    },
+    {
+      "question": "Which advanced Kafka topics should a candidate be prepared to discuss in a streaming-systems interview?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies backpressure and design challenges as the Kafka topics emphasized by the post."
+    },
+    {
+      "question": "Which database internals should a data engineer be prepared to discuss with a hiring manager?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer covers indexing, partitioning, and connection pooling."
+    },
+    {
+      "question": "Which Spark internals topics should a candidate prepare for in a data engineering interview?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer covers execution plans, memory, and transformations/actions."
+    },
+    {
+      "question": "How would you approach the APIs and authentication portion of a microservices discussion?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer covers APIs, JWT, and SAML authentication in the microservices discussion."
+    },
+    {
+      "question": "How would you take an end-to-end data pipeline from requirements through deployment?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer follows the SDLC from requirement to deployment.\nA strong answer includes end-to-end data-pipeline implementation."
+    },
+    {
+      "question": "How would you prepare behavioral answers using STAR for conflict resolution, role models, ownership, and communication?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer uses the STAR format.\nA strong answer addresses team conflict resolution, role models, ownership, and communication."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Experience",
+    "secondary_topics": [
+      "Streaming Systems",
+      "Kafka",
+      "Spark",
+      "Spark Streaming",
+      "Flink",
+      "Database Internals",
+      "Microservices",
+      "Data Pipeline Implementation",
+      "SDLC",
+      "Behavioral Interviewing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:91786362de7a2d52",
+    "saved_date": "2026-10-01T23:11:31Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

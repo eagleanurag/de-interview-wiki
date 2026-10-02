@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-saved-e691571e45fd776e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7425742616220094465",
+    "captured_at": "2026-10-02T00:15:52.932546Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:01Z"
+  },
+  "original_text": "🚨 Most Data Engineer candidates lose interviews at the “Data Lake” round.\n Not because they don’t know tools…\n but because they answer it like theory, not experience.\nI compiled real Data Lake interview questions (2–4 YOE) — and here’s what interviewers ACTUALLY expect 👇\n🔹 Data Lake vs Data Warehouse\n → Schema-on-read vs schema-on-write\n → Raw data vs analytics-ready data\n → ML + BI on the same platform\n🔹 Lake zones that make sense\n → Bronze (raw, immutable)\n → Silver (cleaned, conformed)\n → Gold (business-ready)\n If you can’t explain the flow, you won’t clear the round.\n🔹 Folder structure matters\n /zone/source/entity/year/month/day/\n Interviewers love date-based partitioning — always mention it.\nInterviewers LOVE when you say:\n“We reduced 18k small files to 200 using compaction — query speed improved 5x.”\n💡 Interview secret:\n They don’t want definitions.\n📘 100 Real Data Engineer Interview Questions & Answers (4–8 YOE)\n👉 https://lnkd.in/gFuBy7EV\n💼 600 Real Data Engineer Interview Questions & Answers (Top Tech Companies – EY, Infosys, TCS, Dell, Wipro & More)\n👉 https://lnkd.in/gvX-we8v\n🔥 Data Engineer Mega Interview Pack 2026 (1300+ Real Scenario-Based Q&As – Azure, ADF, Databricks, PySpark, SQL, Data Warehouse)\n👉 https://lnkd.in/gEushWwU\n🎓 Top 100 Real Data Engineer Interview Questions (1–4 YOE)\n👉 https://lnkd.in/gau5s8h7\n🎓 Top 100 AWS Interview Questions \n👉 https://lnkd.in/g3dajpjF\n🎓 Top 100 DevOps Interview Questions \n👉 https://lnkd.in/gXWe9ktz\n🎓 Top 100 Real-Time DSA Interview Questions \n👉 https://lnkd.in/ghRXsvh6\n They want to see if you’ve owned a data lake in production.\n👇 Comment “DATALAKE” if you want more real interview Q&A\n 📌 Save this — it’s pure interview gold\n#DataEngineering #DataLake #BigData #DeltaLake\n #Databricks #SQL #InterviewPreparation #CareerGrowth\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7425742616220094465_slide_0.jpg",
+      "description": "JPEG image, 480x621 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post summarizes what the author says interviewers expect from Data Engineer candidates with 2–4 years of experience. It contrasts Data Lakes and Data Warehouses using schema-on-read versus schema-on-write and raw versus analytics-ready data. It defines Bronze, Silver, and Gold lake zones, recommends a date-based folder hierarchy, and presents a claimed example of reducing 18,000 small files to 200 with compaction and improving query speed fivefold. It also says candidates should demonstrate production ownership rather than only recite definitions. Most of the remaining content consists of links to interview-preparation products and calls to comment or save the post.",
+    "topics": [
+      "Data Lake interview preparation",
+      "Data Lakes",
+      "Data Warehouses",
+      "Data Lake zones",
+      "Partitioning",
+      "File compaction"
+    ],
+    "subtopics": [
+      "Schema-on-read versus schema-on-write",
+      "Raw data versus analytics-ready data",
+      "Bronze, Silver, and Gold zones",
+      "Zone/source/entity/year/month/day folder hierarchy",
+      "Reducing small files with compaction",
+      "Demonstrating production ownership"
+    ],
+    "concepts": [
+      "Data Lake versus Data Warehouse",
+      "Bronze, Silver, and Gold zones",
+      "Hierarchical date partitioning",
+      "Small-file compaction",
+      "Production ownership"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What distinctions should you make between a Data Lake and a Data Warehouse in a Data Engineering interview?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer contrasts schema-on-read with schema-on-write.\nThe answer distinguishes raw data from analytics-ready data.\nThe answer can mention machine learning and business intelligence on the same platform without inventing implementation details not provided by the post."
+    },
+    {
+      "question": "How do the Bronze, Silver, and Gold zones differ, and what data should flow through them?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Bronze contains raw, immutable data.\nSilver contains cleaned and conformed data.\nGold contains business-ready data."
+    },
+    {
+      "question": "What folder structure would you use to organize a Data Lake by zone, source, entity, and date?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The structure organizes data under zone, source, and entity levels.\nThe structure includes year, month, and day levels for date-based partitioning."
+    },
+    {
+      "question": "How would you describe a practical compaction result when discussing Data Lake production experience?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer identifies compaction as the technique used to reduce small files.\nThe answer uses the post's example of reducing 18,000 small files to 200.\nThe answer clearly presents the reported fivefold query-speed improvement as an example rather than a guaranteed result."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Lake interview preparation",
+    "secondary_topics": [
+      "Data Lake architecture",
+      "Data Warehouses",
+      "Data Lake zones",
+      "Partitioning",
+      "File compaction"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e691571e45fd776e",
+    "saved_date": "2026-10-01T23:09:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7425742616220094465",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7425742616220094465_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

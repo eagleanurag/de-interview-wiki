@@ -1,0 +1,98 @@
+{
+  "id": "urn-li-saved-2f365ed8ac07e4db",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7357640130028822529",
+    "captured_at": "2026-10-02T00:15:46.132114Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:45Z"
+  },
+  "original_text": "🎯 SQL Interview Prep Just Got More Interesting!\n This one question tested everything from joins to window functions — and I loved every bit of it! 🔥\n\n🧩 The Challenge:\n From movie rating data, I had to find:\n 🎬 The highest-rated movie in Feb 2020\n 🙋‍♂️ The most active reviewer (by number of ratings)\nSounds simple? It’s not — unless you master:\n ✅ Joins\n ✅ CTEs\n ✅ AVG(), COUNT()\n ✅ DENSE_RANK() and ROW_NUMBER()\n ✅ Smart filtering using dates\n\n🔍 What I Did:\n 🧠 Broke the problem down using 3 CTEs\n 📅 Filtered ratings from February 2020\n 🏆 Used ranking functions to get top movie & top user\n 💡 Combined results using UNION ALL — just two clean rows, all insights packed!\n\n📈 Why This Matters in Interviews:\n 🎯 It shows you understand business logic\n 🧠 You can apply real SQL tools like ranking and aggregation\n 🚀 You can communicate insights, not just write queries\n\n🙏 Shoutout to Ankit Bansal constantly guiding me to think deeper and write cleaner SQL. Your mentorship is gold! 💎\n\n👨‍🎓 If you're preparing for interviews — practice problems like this.\n \n#SQLInterview #DataAnalytics #LearningSQL #StudentsInTech #InterviewPreparation #SQLProjects #CTE #WindowFunctions #MentorshipMatters #AnkitBansal #SQLChallenge",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7357640130028822529_slide_0.jpg",
+      "description": "JPEG image, 480x242 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a SQL interview-prep challenge over movie rating data: find the highest-rated movie in February 2020 and the most active reviewer by number of ratings. It highlights joins, three CTEs, AVG(), COUNT(), date filtering, DENSE_RANK(), ROW_NUMBER(), and UNION ALL; the author says ranking functions selected the top movie and user, while UNION ALL produced two clean rows. The exercise is presented as a way to demonstrate business logic, aggregation, ranking, and communicating insights. The post does not include the actual SQL query or data schema.",
+    "topics": [
+      "SQL interview preparation",
+      "Movie rating analysis",
+      "Joins",
+      "Common table expressions (CTEs)",
+      "Aggregation with AVG() and COUNT()",
+      "Window functions and ranking",
+      "Date filtering",
+      "UNION ALL"
+    ],
+    "subtopics": [
+      "Highest-rated movie selection",
+      "Most active reviewer by rating count",
+      "February 2020 rating filter",
+      "Three-CTE query decomposition",
+      "Top-result ranking",
+      "Two-row result combination"
+    ],
+    "concepts": [
+      "Joins",
+      "Common table expressions (CTEs)",
+      "AVG()",
+      "COUNT()",
+      "DENSE_RANK() and ROW_NUMBER()",
+      "February 2020 date filtering",
+      "UNION ALL",
+      "Business logic and insight communication"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you structure a high-level SQL solution for the movie-rating challenge described in the post?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution must address both the highest-rated movie in February 2020 and the reviewer with the most ratings.\nThe post's approach uses three CTEs to break the problem into stages.\nThe ratings should be filtered to February 2020 before selecting the requested results.\nAVG(), COUNT(), joins, and ranking functions are the SQL techniques highlighted by the post."
+    },
+    {
+      "question": "How do DENSE_RANK(), ROW_NUMBER(), and UNION ALL contribute to presenting the two requested results?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "DENSE_RANK() and ROW_NUMBER() are identified as ranking functions for finding the top movie and top user.\nThe ranking step is used to obtain both requested results.\nUNION ALL combines the separate outputs into two clean rows."
+    },
+    {
+      "question": "Why does the post present this exercise as useful for SQL interview preparation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The exercise requires applying business logic to identify both a highest-rated movie and a most active reviewer.\nIt demonstrates practical use of joins, aggregation, ranking, and date filtering.\nIt emphasizes communicating insights rather than only writing a query."
+    }
+  ],
+  "classification": {
+    "domain": "SQL and data analytics",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "Movie rating analysis",
+      "CTEs",
+      "Aggregation",
+      "Window functions",
+      "Date filtering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2f365ed8ac07e4db",
+    "saved_date": "2026-10-01T23:09:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7357640130028822529",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7357640130028822529_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

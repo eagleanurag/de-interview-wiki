@@ -1,0 +1,78 @@
+{
+  "id": "urn-li-saved-a739518bc8d224d3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344598534345715712",
+    "captured_at": "2026-10-02T00:15:50.341747Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:21Z"
+  },
+  "original_text": "🎬 Day 16 of 30 – SQL Interview Questions Series!\n\nToday’s question:\n How do you find numbers that repeat with exactly ONE different row in between?\n\nThis is a tricky self join problem that many people get wrong in interviews!\n\nIn this video/post, I walk you through:\n ✅ How to detect repeating values using self join\n ✅ Why the middle row matters\n ✅ A clean SQL query that solves it\n \n📺 YouTube video link in the comment.\n\nIf you find this video helpful, consider subscribing to my YouTube channel “Crack DE with Mradul” for more SQL and data engineering content.\n\nI’d love your support as I continue this 30-day SQL Interview Question series!\n\n#CrackDEwithMradul #SQL #SelfJoin #SQLInterview #DataEngineering #Analytics #SQLTips\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7344598534345715712_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This Day 16 SQL interview-series post presents a challenge for finding repeating values when exactly one different row appears between their occurrences. It identifies a self join as the solution technique and says a walkthrough would cover repeating-value detection, the importance of the middle row, and a clean SQL query. The supplied content does not include the actual query, sample data, or video explanation.",
+    "topics": [
+      "SQL",
+      "SQL interview questions",
+      "self joins",
+      "repeating-value detection"
+    ],
+    "subtopics": [
+      "Finding values separated by exactly one intervening row",
+      "Handling the middle-row condition",
+      "Self-join patterns"
+    ],
+    "concepts": [
+      "Self join",
+      "Exactly one intervening row",
+      "Middle-row validation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can a self join be used to find repeating values with exactly one different row between their occurrences?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution compares repeating values across row positions separated by exactly one intervening row.\nThe comparison enforces the required separation instead of accepting adjacent or more widely separated occurrences."
+    },
+    {
+      "question": "Why does the middle row matter when testing whether values repeat with exactly one row in between?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The required pattern is satisfied only when exactly one row occurs between the repeating values.\nIgnoring the middle row could incorrectly classify occurrences that are adjacent or separated by a different number of rows."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL self joins",
+    "secondary_topics": [
+      "SQL interview preparation",
+      "Repeating-value detection",
+      "Row-position pattern matching"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a739518bc8d224d3",
+    "saved_date": "2026-10-01T23:15:21Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7344598534345715712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7344598534345715712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -402,6 +402,39 @@ def saved_items_sources() -> list[Path]:
     )
 
 
+def orchestrator_sources() -> list[Path]:
+    """
+    Every module that decides how the model is called.
+
+    The orchestrator, the retry loop, the run state and the failure
+    classifier are the code that could turn "read a local post" into
+    "send something somewhere" or "run what came back". They are checked
+    as a group for the same reason the saved-items package is: a
+    capability any of them gained is a capability the pipeline has.
+
+    Held to the same boundary as a source, not to the looser one a
+    general utility would get, because these modules run over
+    user-supplied content and decide when to call a model about it.
+    """
+
+    paths: list[Path] = []
+
+    paths.extend(sorted((REPO_ROOT / "src" / "enrichment").rglob("*.py")))
+
+    for name in (
+        "orchestrate.py",
+        "paths.py",
+        "freshness.py",
+        "stages.py",
+        "cli.py",
+    ):
+        paths.append(REPO_ROOT / "src" / "pipeline" / name)
+
+    paths.append(REPO_ROOT / "src" / "ai" / "recovery.py")
+
+    return paths
+
+
 def imported_modules(path: Path) -> set[str]:
     """
     Every module a file imports, by name.
@@ -769,6 +802,196 @@ def test_no_committed_media_sits_outside_its_post() -> None:
                 offenders.append(f"{directory.name}: {relative}")
 
     assert offenders == [], offenders
+
+
+def test_the_orchestrator_reaches_nothing_it_should_not() -> None:
+    """
+    No credential, no network, no browser, no subprocess, no eval.
+
+    The orchestrator's whole authority is deciding when to ask a local
+    model about a local post. Anything that would let it reach outside
+    the machine -- or run what came back -- would be a capability this
+    project does not have and does not want.
+    """
+
+    banned_modules = {
+        "socket",
+        "ssl",
+        "http",
+        "requests",
+        "httpx",
+        "aiohttp",
+        "urllib",
+        "ftplib",
+        "playwright",
+        "selenium",
+        "keyring",
+        "netrc",
+        "getpass",
+        "subprocess",
+        "pty",
+        "multiprocessing",
+        "ctypes",
+        "pickle",
+        "marshal",
+        "src.ingestion.credentials",
+        "src.agent",
+    }
+
+    offenders: list[str] = []
+
+    for path in orchestrator_sources():
+        for name in imported_modules(path):
+            root = name.split(".")[0]
+
+            if root in banned_modules or name.startswith("src.agent"):
+                offenders.append(f"{path.name}: {name}")
+
+        for name in bare_calls(path):
+            if name in EXECUTION_CALLS:
+                offenders.append(f"{path.name}: {name}()")
+
+        for name in qualified_calls(path):
+            if name.startswith("subprocess."):
+                offenders.append(f"{path.name}: {name}()")
+
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_the_orchestrator_reads_no_environment_variable() -> None:
+    """
+    Its inputs are a path and a model result.
+
+    Reading the environment would give it a channel nobody chose, and
+    in particular a place a credential could arrive from.
+    """
+
+    offenders: list[str] = []
+
+    for path in orchestrator_sources():
+        source = path.read_text(encoding="utf-8")
+
+        if "environ" in source or "getenv" in source:
+            offenders.append(f"{path.name}: reads the environment")
+
+        for name in imported_modules(path):
+            if name.split(".")[0] in {"getpass", "dotenv"}:
+                offenders.append(f"{path.name}: {name}")
+
+    assert offenders == [], sorted(offenders)
+
+
+def test_the_failure_classifier_only_reads_the_failure() -> None:
+    """
+    It classifies an exception; it does not act on one.
+
+    The classifier inspects an error message to decide whether to ask
+    again. It must not open anything, run anything or reach the
+    network, because a classifier that reached out would turn every
+    provider error into an action.
+
+    Checked from the import tree rather than from the text, because the
+    module quotes provider wording as data -- "too many requests" is a
+    pattern it matches, not a library it calls.
+    """
+
+    from src.ai import recovery
+
+    source = Path(recovery.__file__)
+
+    modules = imported_modules(source)
+
+    for banned in (
+        "subprocess",
+        "socket",
+        "urllib",
+        "requests",
+        "httpx",
+        "open",
+        "shutil",
+    ):
+        assert banned not in modules, banned
+
+    for name in bare_calls(source):
+        assert name != "open", name
+
+
+def test_the_run_state_writes_only_where_it_says() -> None:
+    """
+    The state file is a record of a run, not of the repository.
+
+    Its path is passed in, so nothing here decides where it goes; what
+    can be checked is that the default is under the ignored build
+    directory rather than beside the committed posts.
+    """
+
+    from src.pipeline.paths import RUN_STATE
+
+    assert RUN_STATE.parts[0] == "build"
+
+
+def test_committed_results_carry_no_local_path() -> None:
+    """
+    Every committed result becomes a published page.
+
+    A Windows path in one is published with it, so the committed set is
+    scanned rather than a fixture being trusted.
+    """
+
+    results = REPO_ROOT / "data" / "results"
+
+    if not results.is_dir():
+        pytest.skip("data/results is absent")
+
+    needles = ("C:\\Users", "C:/Users", "AppData", "Downloads")
+
+    offenders: list[str] = []
+
+    for path in sorted(results.glob("cloud_worker_*.json")):
+        body = path.read_text(encoding="utf-8")
+
+        for needle in needles:
+            if needle in body:
+                offenders.append(f"{path.name}: {needle}")
+
+    assert offenders == [], offenders[:10]
+
+
+def test_superseded_results_are_kept_outside_the_aggregation_tree() -> None:
+    """
+    Archived enrichment is kept, and kept where the build cannot see it.
+
+    The aggregator globs ``cloud_worker_*.json`` *recursively*, so an
+    archive beside the live results -- even one directory down -- would
+    be read as a second copy of every post and fail the run on a
+    duplicate id. Filing the archive under ``data/results/`` was tried
+    and was wrong for exactly that reason.
+    """
+
+    from src.aggregation.aggregator import WORKER_RESULT_GLOB
+
+    live = REPO_ROOT / "data" / "results"
+
+    archived = REPO_ROOT / "data" / "archive-results"
+
+    if not archived.is_dir():
+        pytest.skip("no archived results")
+
+    assert not archived.is_relative_to(live)
+
+    reachable = sorted(live.rglob(WORKER_RESULT_GLOB))
+
+    names = {path.name for path in reachable}
+
+    collisions = [
+        path.name
+        for path in archived.rglob(WORKER_RESULT_GLOB)
+        if path.name in names
+    ]
+
+    assert collisions == [], collisions[:10]
+
+    assert (archived / "README.md").is_file()
 
 
 #: The functions this phase added to modules it shares with other work.

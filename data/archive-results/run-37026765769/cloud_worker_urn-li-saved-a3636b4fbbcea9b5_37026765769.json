@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-a3636b4fbbcea9b5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458342412109660162",
+    "captured_at": "2026-10-02T00:15:50.183613Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:05Z"
+  },
+  "original_text": "• 1st\nLead Data Engineer @ PepsiCo | Databricks | PySpark | SQL | Azure | ADF | ADLS Gen2 | Unity Catalog | CI/CD | ETL/ELT | Performance Tuning | GenAI (LangChain | LangGraph | RAG) | Performance Tuning | DM for Collab\n5mo •\n𝗨𝗻𝗶𝘁𝘆 𝗖𝗮𝘁𝗮𝗹𝗼𝗴 𝗶𝗻 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 𝗠𝘂𝘀𝘁 𝗞𝗻𝗼𝘄 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀\nIf you are working on Databricks, understanding Unity Catalog is very important for interviews and real projects.\nIt is used for data governance, security, and access control across all workspaces.\n𝗪𝗵𝗮𝘁 𝗶𝘀 𝗨𝗻𝗶𝘁𝘆 𝗖𝗮𝘁𝗮𝗹𝗼𝗴?\nCentralized governance for data & AI assets\nControl access at catalog / schema / table level\nBuilt-in auditing & lineage\nWorks across multiple Databricks workspaces\nSupports tables, views, volumes, models, functions\n𝗨𝗻𝗶𝘁𝘆 𝗖𝗮𝘁𝗮𝗹𝗼𝗴 𝗛𝗶𝗲𝗿𝗮𝗿𝗰𝗵𝘆 (𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗙𝗮𝘃𝗼𝗿𝗶𝘁𝗲)\nMetastore\n→ Catalog\n→ Schema (Database)\n→ Table / View / Volume / Model / Function\nThis hierarchy is very commonly asked in Databricks interviews.\n𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀\n✔ Centralized access control\n✔ Data lineage tracking\n✔ Data discovery & tagging\n✔ External location support\n✔ Workspace-level access control\n✔ Secure storage credentials\n𝗥𝗲𝗮𝗹 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗨𝘀𝗲 𝗖𝗮𝘀𝗲\nSeparate UC for Dev / QA / Prod Env data\nRestrict sensitive data access\nManage S3 / ADLS Gen2 storage securely\nControl permissions using SQL GRANT\nShare data across workspaces\n💙 Like 👍 & Save 🔖 for later.\n🔄 Share this post if it adds value to your interview prep.\nComment below 👇 Who is preparing for Data Engineer interviews right now?\n𝗙𝗼𝗿 𝟭:𝟭 𝗴𝘂𝗶𝗱𝗮𝗻𝗰𝗲\nhttps://lnkd.in/gxjZT5P3\n🚀 𝗟𝗲𝘃𝗲𝗹 𝘂𝗽 𝘆𝗼𝘂𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗽𝗿𝗲𝗽:\n🔹 𝗦𝗤𝗟 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗠𝗮𝘀𝘁𝗲𝗿𝘆 – 𝟮𝟬𝟬+ 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dYJb42RH\n🔹 𝗟𝗶𝗻𝗸𝗲𝗱𝗜𝗻 + 𝗡𝗮𝘂𝗸𝗿𝗶 𝗣𝗿𝗼𝗳𝗶𝗹𝗲 𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗮𝘁𝗶𝗼𝗻 𝗕𝘂𝗻𝗱𝗹𝗲\nhttps://lnkd.in/gqYBrbtS\n🔹 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 – 𝟵𝟲 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwCEinvH\n🔹 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗣𝘆𝘁𝗵𝗼𝗻 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 – 𝟭𝟬𝟬 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwKVeFf7\n👉 Follow Anuj Shrivastav for more Data Engineering interview content.\n#DataEngineering #DataGovernance #DataArchitecture #DataLakehouse #BigData #ETL #DataOps #AnalyticsEngineering #AI #Databricks\nunity_catalog",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7458342412109660162_slide_0.jpg",
+      "description": "JPEG image, 390x488 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains Unity Catalog as a centralized governance, security, and access-control mechanism for data and AI assets across Databricks workspaces. It presents the hierarchy as Metastore, Catalog, Schema, and then objects such as tables, views, volumes, models, and functions. It also highlights hierarchical permissions, auditing, lineage, discovery and tagging, external locations, secure storage credentials, environment separation, SQL GRANT, multi-workspace data sharing, and secure management of S3 and ADLS Gen2 storage.",
+    "topics": [
+      "Databricks",
+      "Unity Catalog",
+      "Data governance",
+      "Access control",
+      "Data lineage"
+    ],
+    "subtopics": [
+      "Unity Catalog hierarchy",
+      "Catalog, schema, and table-level permissions",
+      "Auditing and lineage",
+      "Data discovery and tagging",
+      "Multi-workspace governance",
+      "Supported data and AI assets",
+      "External locations and storage credentials",
+      "Environment separation with SQL GRANT"
+    ],
+    "concepts": [
+      "Unity Catalog",
+      "Unity Catalog hierarchy",
+      "Hierarchical access control",
+      "Auditing and lineage",
+      "Multi-workspace governance",
+      "Supported Unity Catalog assets",
+      "Data discovery and tagging",
+      "External locations and secure credentials",
+      "Environment separation",
+      "SQL GRANT"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is Unity Catalog in Databricks, and which governance and security capabilities does it provide?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Unity Catalog centralizes governance for data and AI assets.\nIt controls access at the catalog, schema, and table levels.\nIt provides auditing and lineage and works across multiple Databricks workspaces."
+    },
+    {
+      "question": "How is the Unity Catalog hierarchy organized from the metastore downward?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The hierarchy begins with the metastore and then proceeds to a catalog.\nA catalog contains schemas, which are also described as databases.\nSchemas contain assets such as tables, views, volumes, models, and functions."
+    },
+    {
+      "question": "How could a team use Unity Catalog to separate development, QA, and production data while protecting sensitive information?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The team could use separate Unity Catalogs for development, QA, and production data.\nThe team could restrict sensitive data access and use SQL GRANT to control permissions.\nThe team could securely manage S3 or ADLS Gen2 storage through external locations and secure storage credentials.\nUnity Catalog could support controlled data sharing across workspaces."
+    },
+    {
+      "question": "Which types of assets can Unity Catalog govern, and which features support their discovery and oversight?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Unity Catalog supports tables, views, volumes, models, and functions.\nData discovery and tagging are supported as key features.\nBuilt-in auditing and lineage provide oversight of governed assets."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks Unity Catalog",
+    "secondary_topics": [
+      "Data governance",
+      "Access control",
+      "Data security",
+      "Data lineage",
+      "Data architecture"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a3636b4fbbcea9b5",
+    "saved_date": "2026-10-01T23:08:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7458342412109660162",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7458342412109660162_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

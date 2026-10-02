@@ -1,0 +1,108 @@
+{
+  "id": "urn-li-saved-0d475a9d9ecabf06",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341681712310956032",
+    "captured_at": "2026-10-02T00:15:44.717471Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:09Z"
+  },
+  "original_text": "𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗝𝗼𝗶𝗻𝘀: 𝗬𝗼𝘂𝗿 𝗗𝗮𝘁𝗮’𝘀 𝗣𝗲𝗿𝘀𝗼𝗻𝗮𝗹 𝗠𝗮𝘁𝗰𝗵𝗺𝗮𝗸𝗶𝗻𝗴 𝗦𝗲𝗿𝘃𝗶𝗰𝗲\n\nEver had an inner join silently delete half your records? Welcome to the club! Here's your survival guide to PySpark joins without the headaches.\n\n𝗧𝗵𝗲 𝗘𝘀𝘀𝗲𝗻𝘁𝗶𝗮𝗹 𝗝𝗼𝗶𝗻𝘀 (𝗔𝗻𝗱 𝗪𝗵𝗲𝗻 𝘁𝗼 𝗨𝘀𝗲 𝗧𝗵𝗲𝗺) \n\n𝗜𝗻𝗻𝗲𝗿 𝗝𝗼𝗶𝗻 - Only perfect matches survive. Great for \"show me employees WITH departments.\"\n𝗟𝗲𝗳𝘁 𝗝𝗼𝗶𝗻 - Keep all left records, match what you can. Perfect for \"show me ALL employees, plus their departments if they have one.\"\n𝗥𝗶𝗴𝗵𝘁 𝗝𝗼𝗶𝗻 - Keep all right records. Useful for \"show me ALL departments, plus any employees they have.\"\n𝗙𝘂𝗹𝗹 𝗢𝘂𝘁𝗲𝗿 𝗝𝗼𝗶𝗻 - Everyone gets invited to the party. Use when you need \"show me everything from both tables.\"\n𝗖𝗿𝗼𝘀𝘀 𝗝𝗼𝗶𝗻 - Every possible combination. Warning: This is how you accidentally create billion-row tables!\n𝗦𝗲𝗺𝗶 𝗝𝗼𝗶𝗻 - Left records that have matches (no duplicates). Think \"employees who belong to some department.\"\n𝗔𝗻𝘁𝗶 𝗝𝗼𝗶𝗻 - Left records with NO matches. Perfect for finding orphaned data like \"employees without departments.\"\n𝗦𝗲𝗹𝗳 𝗝𝗼𝗶𝗻 - Table meets itself. Essential for hierarchies like \"employees and their managers.\"\n𝗡𝗮𝘁𝘂𝗿𝗮𝗹 𝗝𝗼𝗶𝗻 - Automatically matches on common column names. Perfect for \"show me employees and departments where column names align.\"\n𝗘𝗾𝘂𝗶 𝗝𝗼𝗶𝗻 - Matches records where specified columns are equal. Great for \"show me employees and departments where dept_id values match.\"\n\n𝗧𝗵𝗲 𝗚𝗼𝘁𝗰𝗵𝗮𝘀 𝗧𝗵𝗮𝘁'𝗹𝗹 𝗚𝗲𝘁 𝗬𝗼𝘂 \n\n𝗡𝗨𝗟𝗟 𝗗𝗿𝗮𝗺𝗮 : NULLs don't match other NULLs. Your \"complete\" join might be missing data.\n𝗗𝘂𝗽𝗹𝗶𝗰𝗮𝘁𝗲 𝗞𝗲𝘆𝘀 : One employee in two departments? Congrats, you just doubled your dataset unexpectedly.\n𝗠𝗲𝗺𝗼𝗿𝘆 𝗘𝘅𝗽𝗹𝗼𝘀𝗶𝗼𝗻𝘀 : Cross joins and unintentional cartesian products will crash your cluster faster than you can say \"oops.\"\n\n𝗧𝗵𝗲 𝗖𝗼𝗻𝗳𝘂𝘀𝗶𝗻𝗴 𝗧𝗿𝗶𝗼: \n𝗜𝗻𝗻𝗲𝗿 𝗝𝗼𝗶𝗻: You explicitly specify the join key (The Good One)\n𝗡𝗮𝘁𝘂𝗿𝗮𝗹 𝗝𝗼𝗶𝗻: Spark automatically matches on ALL columns with identical names (dangerous!)\n𝗘𝗾𝘂𝗶 𝗝𝗼𝗶𝗻: You write the full equality condition for maximum control (Overly Complicated)\n\n𝗥𝗲𝗺𝗲𝗺𝗯𝗲𝗿: 𝗧𝗵𝗲 𝗿𝗶𝗴𝗵𝘁 𝗷𝗼𝗶𝗻 𝘀𝗮𝘃𝗲𝘀 𝘆𝗼𝘂𝗿 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲. 𝗧𝗵𝗲 𝘄𝗿𝗼𝗻𝗴 𝗷𝗼𝗶𝗻 𝗿𝘂𝗶𝗻𝘀 𝘆𝗼𝘂𝗿 𝘄𝗲𝗲𝗸𝗲𝗻𝗱.\n\n#PySpark #ApacheSpark #BigData #DataEngineering #Python #SQL #Joins #Analytics #SparkSQL\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341681712310956032_slide_0.jpg",
+      "description": "JPEG image, 480x789 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a practical overview of PySpark join types, explains which records each join preserves, and highlights join-related risks involving NULL values, duplicate keys, and Cartesian products. It also contrasts inner, natural, and equi joins according to how their join keys are specified and warns that the wrong join choice can increase processing time.",
+    "topics": [
+      "PySpark joins",
+      "Apache Spark",
+      "SparkSQL",
+      "SQL join types",
+      "join performance"
+    ],
+    "subtopics": [
+      "Inner, outer, semi, and anti joins",
+      "Cross and self joins",
+      "Natural and equi joins",
+      "NULL matching behavior",
+      "Duplicate-key expansion",
+      "Cartesian-product memory pressure",
+      "Join-key specification"
+    ],
+    "concepts": [
+      "Inner join",
+      "Left join",
+      "Right join",
+      "Full outer join",
+      "Cross join",
+      "Semi join",
+      "Anti join",
+      "Self join",
+      "Natural join",
+      "Equi join",
+      "NULL matching behavior",
+      "Duplicate-key expansion",
+      "Cartesian-product memory pressure",
+      "Join-key specification"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do inner, left, right, full outer, semi, and anti joins differ in the records they preserve?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "An inner join returns only records that match on both sides.\nLeft and right joins preserve all records from one selected side while adding matches when available.\nA full outer join preserves unmatched records from both sides.\nA semi join returns matching left records without duplication, while an anti join returns left records without matches."
+    },
+    {
+      "question": "A PySpark join produces far more rows than expected. What problems described in the post could explain this?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Duplicate values on the join-key side can cause a left-side record to be repeated for every match.\nAn unintended cross join can generate every possible record combination and create a very large result.\nThe join should be checked for duplicate keys and unintended Cartesian behavior."
+    },
+    {
+      "question": "According to the post, how do inner, natural, and equi joins differ in how the join condition is specified?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "An inner join explicitly specifies the join key in the post's recommended approach.\nA natural join automatically matches on common or identically named columns.\nAn equi join uses a written equality condition on selected columns for greater control."
+    },
+    {
+      "question": "When would the post recommend using a semi join, an anti join, or a self join?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A semi join identifies left-side records that have at least one match without returning duplicate left records.\nAn anti join identifies unmatched left-side records, such as employees without departments.\nA self join is used to work with relationships within the same table, such as employees and their managers."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark joins",
+    "secondary_topics": [
+      "SQL join types",
+      "join data quality",
+      "Cartesian products",
+      "NULL matching",
+      "duplicate-key expansion"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0d475a9d9ecabf06",
+    "saved_date": "2026-10-01T23:17:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341681712310956032",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341681712310956032_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

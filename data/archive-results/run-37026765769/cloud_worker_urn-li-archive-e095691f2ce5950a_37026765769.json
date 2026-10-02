@@ -1,0 +1,119 @@
+{
+  "id": "urn-li-archive-e095691f2ce5950a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.790443Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:49Z"
+  },
+  "original_text": "Recently asked SQL Interview Questions at Deloitte for Data Analyst Role:-\n\n1. Write a SQL query to find employees whose salary is greater than the average salary of employees in their respective location.\n\nTable Name: Employee \nColumn Names: EmpID (Employee ID), Emp_name (Employee Name), Manager_id (Manager ID), Salary (Employee Salary), Location (Employee Location)\n\n2. Write a SQL query to identify riders who have taken at least one trip every day for the last 10 days.\n\nTable Name: Trip \nColumn Names: trip_id (Trip ID), driver_id (Driver ID), rider_id (Rider ID), trip_start_timestamp (Trip Start Timestamp)\n\n3. Write a SQL query to calculate the percentage of successful payments for each driver. A payment is considered successful if its status is 'Completed'.\n\nTable Name: Rides \nColumn Names: ride_id (Ride ID), driver_id (Driver ID), fare_amount (Fare Amount), driver_rating (Driver Rating), start_time (Start Time) \n\nTable Name: Payments \nColumn Names: payment_id (Payment ID), ride_id (Ride ID), payment_status (Payment Status)\n\n4. Write a SQL query to calculate the percentage of menu items sold for each restaurant.\n\nTable Name: Items \nColumn Names: item_id (Item ID), rest_id (Restaurant ID)\n\nTable Name: Orders \nColumn Names: order_id (Order ID), item_id (Item ID), quantity (Quantity), is_offer (Is Offer), client_id (Client ID), Date_Timestamp (Date Timestamp)\n\n\n5. Write a SQL query to compare the time taken for clients who placed their first order with an offer versus those without an offer to make their next order.\n\nTable Name: Orders \nColumn Names: order_id (Order ID), user_id (User ID), is_offer (Is Offer), Date_Timestamp (Date Timestamp)\n\n\n6. Write a SQL query to find all numbers that appear at least three times consecutively in the log.\n\nTable Name: Logs \nColumn Names: Id (ID), Num (Number)\n\n7. Write a SQL query to find the length of the longest sequence of consecutive numbers in the table.\n\nTable Name: Consecutive \nColumn Names: number (Number)\nSample Table -\nNumber\n1\n2\n3\n4\n10\n11\n20\n21\n22\n23\n24\n30\n\n---\n\n8. Write a SQL query to calculate the percentage of promo trips, comparing members versus non-members.\n\nTable Name: Pass_Subscriptions \nColumn Names: user_id (User ID), pass_id (Pass ID), start_date (Start Date), end_date (End Date), status (Status)\n\nTable Name: Orders \nColumn Names: order_id (Order ID), user_id (User ID), is_offer (Is Offer), Date_Timestamp (Date Timestamp)\n\n#dataanalyst",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents eight SQL interview questions for a Deloitte data analyst role, together with the relevant table and column names. The tasks involve location-level salary comparisons, daily rider activity, payment success rates, restaurant item sales, order timing by offer status, consecutive log values, longest consecutive-number runs, and promotional order rates by subscription membership. It provides schemas but no SQL solutions, dialect, expected result formats, or definitions for details such as the 10-day window, percentage denominators, and subscription eligibility.",
+    "topics": [
+      "SQL query writing",
+      "Relational data analysis",
+      "Percentage metric calculation",
+      "Temporal aggregation",
+      "Consecutive sequence detection",
+      "Offer and membership segmentation"
+    ],
+    "subtopics": [
+      "Comparing salaries with location-level averages",
+      "Identifying riders active on every day of a 10-day period",
+      "Calculating successful payment percentages by driver",
+      "Calculating restaurant menu item sales percentages",
+      "Comparing time to a second order by first-order offer status",
+      "Finding values repeated consecutively in logs",
+      "Finding the longest sequence of consecutive numbers",
+      "Comparing promotional order percentages for members and non-members"
+    ],
+    "concepts": [
+      "Location-level salary comparison",
+      "Daily rider activity over a 10-day period",
+      "Successful payment percentage",
+      "Restaurant item sales percentage",
+      "First-order offer segmentation",
+      "Consecutive repeated log values",
+      "Longest consecutive numeric run",
+      "Promotional order comparison by membership"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query using Employee to find employees whose Salary is greater than the average Salary of employees in their respective Location.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query compares each employee's Salary with the average Salary for the employee's Location.\nThe result includes only employees whose salary is strictly greater than that location-level average."
+    },
+    {
+      "question": "Write a SQL query using Trip to identify riders who have taken at least one trip on every day during the last 10 days.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query groups trip activity by rider_id and evaluates trip_start_timestamp over the last 10 days.\nThe query checks for activity on every one of the 10 days and explains how the date window is anchored."
+    },
+    {
+      "question": "Write a SQL query using Rides and Payments to calculate the percentage of successful payments for each driver, where payment_status equal to 'Completed' means success.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query associates Payments with Rides through ride_id so that each payment can be attributed to a driver_id.\nThe query treats only payment_status equal to 'Completed' as successful and calculates the percentage for each driver."
+    },
+    {
+      "question": "Write a SQL query using Items and Orders to calculate the percentage of menu items sold for each restaurant.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query associates Orders with Items through item_id and uses rest_id to identify each restaurant.\nThe query aggregates the available quantity values and explicitly states the denominator used to calculate each restaurant's percentage."
+    },
+    {
+      "question": "Write a SQL query using Orders to compare the time taken by clients whose first order had an offer versus clients whose first order had no offer to make their next order.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query uses user_id and Date_Timestamp to order each client's orders chronologically.\nThe query classifies each client by the is_offer value of the first order, finds the next order, and compares the elapsed time between those orders."
+    },
+    {
+      "question": "Write a SQL query using Logs to find every Num value that appears at least three times consecutively.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query processes the log in Id order and groups adjacent rows containing the same Num into runs.\nThe query returns values whose contiguous run length is at least three."
+    },
+    {
+      "question": "Write a SQL query using Consecutive to find the length of the longest sequence of consecutive numbers.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query evaluates the number values in sorted order and detects where the numeric sequence breaks.\nThe query measures each run and returns the longest run and its length."
+    },
+    {
+      "question": "Write a SQL query using Pass_Subscriptions and Orders to calculate and compare the percentage of promotional orders for members versus non-members.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query identifies member user_id values from Pass_Subscriptions and associates them with Orders through user_id.\nThe query uses Orders.is_offer to identify promotional orders and calculates their percentage separately for members and non-members.\nThe query explicitly defines which subscription records qualify a user as a member because the prompt does not define eligibility using start_date, end_date, and status."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL Query Writing",
+    "secondary_topics": [
+      "Relational data querying",
+      "Percentage metrics",
+      "Temporal analysis",
+      "Sequence detection",
+      "Offer and membership segmentation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e095691f2ce5950a",
+    "saved_date": "2026-10-01T23:28:49Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

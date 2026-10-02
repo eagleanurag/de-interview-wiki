@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-saved-a5609c3764a3f34c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349285324277043201",
+    "captured_at": "2026-10-02T00:15:50.247314Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:57Z"
+  },
+  "original_text": "45 LPA Interview: I Knew Spark. But They Asked Me About CI/CD.....\n\nBecause no one told me that knowing Spark isn't enough if your job breaks in prod and you have no rollback plan.\n\n🔥Scenarios That Have faced during my interview:\n1. “Your Airflow DAG pushed bad data to prod. How do you roll back and alert downstream teams?”\n 2. “What’s your testing strategy for a PySpark job with 4 conditional joins?”\n 3. “How do you version your transformation logic and ensure it matches schema changes?”\n 4. “Can you explain a CI/CD workflow for a data pipeline touching S3 → Snowflake?”\n\n📚 FREE Resources That Helped Me:\n📌 CI/CD for Data Engineers (StartDataEngineering)\n → https://lnkd.in/gvMhA_jp\n📌 DataOps Cookbook (from the team at DataKitchen)\n → https://lnkd.in/gBfiwS8D\n📌 Great Expectations (Data Testing)\n → https://lnkd.in/gVwGHZTz\n📌 GitHub: Airflow CI/CD Example Project\n → https://lnkd.in/gBiQHvEy\n📌 CI/CD for dbt Pipelines\n → https://lnkd.in/gfvyhHpX\n\nConnect me for 1:1 personalized mentorship here: https://lnkd.in/gy3ut3m3?\nJoin DataGeeks Community here: https://lnkd.in/g88ic2Ja\n\nCI/CD is the difference between data engineering and data chaos.\n\nfollow this process to ace your CI CD rounds...\n\n#comment and #repost with your network..\n\n#DataEngineering #CI_CD #Airflow #Spark #ETL #DataOps #InterviewPrep #CareerGrowth #LearningInPublic #PipelineDesign #SystemDesign",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349285324277043201_slide_0.jpg",
+      "description": "GIF image, 480x520 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This interview-preparation post says that knowing Spark is not enough for a data-engineering role when production jobs can fail without a rollback plan. It presents four interview scenarios: rolling back bad data pushed by an Airflow DAG and alerting downstream teams, testing a PySpark job with four conditional joins, versioning transformation logic in relation to schema changes, and explaining a CI/CD workflow for a pipeline touching S3 → Snowflake. It also lists resources related to data-engineering CI/CD, DataOps, Great Expectations, Airflow CI/CD, and dbt pipelines, but it does not provide detailed answers or a concrete CI/CD process.",
+    "topics": [
+      "CI/CD",
+      "data engineering interview preparation",
+      "data pipeline reliability",
+      "data testing",
+      "DataOps"
+    ],
+    "subtopics": [
+      "production rollback and downstream alerting",
+      "PySpark testing for conditional joins",
+      "transformation logic versioning",
+      "schema change alignment",
+      "S3 → Snowflake pipeline workflow"
+    ],
+    "concepts": [
+      "CI/CD for data pipelines",
+      "Airflow production rollback and downstream alerting",
+      "PySpark conditional-join testing",
+      "Transformation logic versioning",
+      "Schema change alignment",
+      "S3 → Snowflake pipeline workflow"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you roll back bad data pushed to production by an Airflow DAG and alert downstream teams?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer addresses how to roll back the bad production data.\nThe answer includes a way to alert downstream teams."
+    },
+    {
+      "question": "What testing strategy would you use for a PySpark job with four conditional joins?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer provides a testing strategy for the PySpark job.\nThe answer specifically addresses the job's four conditional joins."
+    },
+    {
+      "question": "How would you version transformation logic and ensure it remains aligned with schema changes?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains how transformation logic is versioned.\nThe answer explains how version alignment with schema changes is maintained."
+    },
+    {
+      "question": "What CI/CD workflow would you explain for a data pipeline touching S3 → Snowflake?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer presents a CI/CD workflow for the specified S3 → Snowflake pipeline."
+    }
+  ],
+  "classification": {
+    "domain": "data engineering",
+    "primary_topic": "CI/CD for data pipelines",
+    "secondary_topics": [
+      "production rollback",
+      "downstream alerting",
+      "PySpark testing",
+      "transformation versioning",
+      "schema changes",
+      "data engineering interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a5609c3764a3f34c",
+    "saved_date": "2026-10-01T23:11:57Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349285324277043201",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349285324277043201_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7349285324277043201_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

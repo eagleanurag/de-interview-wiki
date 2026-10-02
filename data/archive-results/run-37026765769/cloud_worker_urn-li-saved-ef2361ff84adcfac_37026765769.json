@@ -1,0 +1,98 @@
+{
+  "id": "urn-li-saved-ef2361ff84adcfac",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7352180707789520896",
+    "captured_at": "2026-10-02T00:15:53.146089Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:26Z"
+  },
+  "original_text": "• 2nd\nI (𝙖𝙘𝙩𝙪𝙖𝙡𝙡𝙮) find the story hidden inside the data. | Data Analyst • AI Educator | Top 0.1% Topmate Mentor | Technical Content Creator | Open for Brand Collaborations\n1yr •\n📊 Crack Your Next SQL Interview with Confidence – Here's How!\nSQL is the heart of data analysis and a critical part of data-related interviews. I recently went through a powerful list of most-asked SQL interview questions with real-time solutions, and here are my key takeaways:\n🔹 Top Questions Covered:\n✅ Cumulative sum of sales using SUM() OVER(PARTITION BY...)\n✅ Employees earning more than their manager (self-join logic)\n✅ Finding the 3rd highest salary using DENSE_RANK()\n✅ Detecting purchases made for 3 consecutive days using self joins and DATE_ADD()\n✅ Order of SQL Execution — a MUST-know for every query writer:\nFROM → WHERE → GROUP BY → HAVING → SELECT → DISTINCT → ORDER BY → LIMIT\nEach solution was explained clearly with step-by-step execution logic — not just the syntax but the real thought process behind it. 📌\nIf you're preparing for SQL interviews, I highly recommend revising these patterns.\n👍 𝗟𝗶𝗸𝗲 for more such content.\n♻️𝗥𝗲𝗽𝗼𝘀𝘁 to grow your own network!\n👉Follow Navya sri Kurapati🧑‍💻 more insights and content on DS/ML.\n#SQL #DataAnalytics #InterviewPreparation #DataScience #LearningJourney #SQLInterviewQuestions #CareerGrowth #DataEngineer #SQLTips #LinkedInLearning\nSQL Interview Prep – Key Queries & Concepts",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7352180707789520896_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post outlines common SQL interview topics: calculating cumulative sales with SUM() OVER(PARTITION BY...), comparing employee and manager salaries with a self-join, finding the third-highest salary with DENSE_RANK(), detecting purchases across three consecutive days with self-joins and DATE_ADD(), and the SQL clause order FROM through LIMIT. It refers to step-by-step solutions but does not include complete queries, sample data, or extracted media text, so it is an overview rather than a complete technical tutorial.",
+    "topics": [
+      "SQL interview preparation",
+      "Data analysis"
+    ],
+    "subtopics": [
+      "SQL window functions",
+      "SQL self-joins",
+      "Salary ranking with DENSE_RANK()",
+      "Date calculations with DATE_ADD()",
+      "SQL clause execution order"
+    ],
+    "concepts": [
+      "SUM() OVER(PARTITION BY...)",
+      "Employee-manager self-join",
+      "DENSE_RANK()",
+      "Self-join with DATE_ADD()",
+      "SQL clause execution order"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you calculate cumulative sales using the window-function pattern identified in the post?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer uses SUM() with OVER and PARTITION BY for the cumulative-sales calculation.\nThe answer acknowledges that the post provides only the pattern SUM() OVER(PARTITION BY...) and does not show a complete query."
+    },
+    {
+      "question": "How would you use a self-join to find employees who earn more than their managers?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The self-join places each employee row in relation to the corresponding manager row.\nThe query compares the two salaries and retains employees whose salary is greater than their manager's salary."
+    },
+    {
+      "question": "How would you find the third-highest salary using the ranking function named in the post?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution uses DENSE_RANK() to rank salaries.\nThe query selects the rank corresponding to the third-highest salary."
+    },
+    {
+      "question": "How would you detect purchases made on three consecutive days using the techniques presented in the post?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution uses self-join logic to relate purchase records.\nThe query uses DATE_ADD() with that logic to evaluate purchases across three consecutive days."
+    },
+    {
+      "question": "What SQL clause order does the post identify as important for query execution?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The stated order is FROM, WHERE, GROUP BY, HAVING, SELECT, DISTINCT, ORDER BY, and LIMIT."
+    }
+  ],
+  "classification": {
+    "domain": "Data analytics",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "SQL query patterns",
+      "Data analysis",
+      "SQL clause execution order"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ef2361ff84adcfac",
+    "saved_date": "2026-10-01T23:10:26Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7352180707789520896",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7352180707789520896_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-saved-9cea1ac1c00c90b5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7428910228877934592",
+    "captured_at": "2026-10-02T00:15:49.980228Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:50Z"
+  },
+  "original_text": "You have a 50GB file to process in Databricks. How do you configure your compute?\n\nFor a 50GB file, Spark will create roughly 400 partitions (51,200MB / 128MB). To process all at once, you may opt to take 400 cores, which will be an overkill for sure.\n\nI would suggest a cluster with 40 to 100 cores which is around 10 to 25 worker nodes; assuming 4 cores each. This allows the data to be processed in 4 to 10 'waves.' Regarding memory, I'd recommend at least 4GB of RAM per core which is around 16GB per node to handle the 128MB partition plus the overhead for deserialization, shuffles, and the Spark engine itself.\n\n#Dataengineering #Spark #Databricks",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7428910228877934592_slide_0.jpg",
+      "description": "JPEG image, 480x249 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a heuristic for configuring Databricks compute to process a 50GB file with Spark. Assuming approximately 128MB partitions, it estimates about 400 partitions and recommends 40 to 100 cores rather than using all 400 cores. With four cores per worker, this corresponds to 10 to 25 worker nodes and four to 10 processing waves. It also recommends at least 4GB of RAM per core, or about 16GB per node, to accommodate partition data, deserialization, shuffle, and Spark engine overhead.",
+    "topics": [
+      "Databricks compute configuration",
+      "Spark partition-based processing",
+      "Cluster core sizing",
+      "Cluster memory sizing"
+    ],
+    "subtopics": [
+      "Partition estimation",
+      "Processing waves",
+      "Worker-node sizing",
+      "Memory overhead"
+    ],
+    "concepts": [
+      "Partition size estimation",
+      "Core sizing",
+      "Processing waves",
+      "Worker-node sizing",
+      "Memory per core",
+      "Node memory"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you estimate the number of Spark partitions for a 50GB file when using an assumed partition size of 128MB?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post converts 50GB to 51,200MB.\nDividing 51,200MB by 128MB produces roughly 400 partitions."
+    },
+    {
+      "question": "How many cores and worker nodes does the post recommend for processing the estimated 400 partitions, and why?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The recommended range is 40 to 100 cores rather than taking all 400 cores.\nWith four cores per worker, the range corresponds to approximately 10 to 25 worker nodes.\nThe recommended cluster would process the partitions in approximately 10 to 4 waves."
+    },
+    {
+      "question": "How much memory does the post recommend for the Databricks workers, and what overheads does the recommendation account for?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The recommendation is at least 4GB of RAM per core.\nWith four cores per node, this translates to approximately 16GB of RAM per node.\nThe memory recommendation accounts for partition data, deserialization, shuffles, and Spark engine overhead."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Spark compute sizing",
+    "secondary_topics": [
+      "Databricks cluster configuration",
+      "Partition planning",
+      "Memory sizing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9cea1ac1c00c90b5",
+    "saved_date": "2026-10-01T23:08:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7428910228877934592",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7428910228877934592_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

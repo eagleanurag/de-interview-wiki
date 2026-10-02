@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-7928cacd648a958e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341653522993528832",
+    "captured_at": "2026-10-02T00:15:48.511165Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:17Z"
+  },
+  "original_text": "🧠 PySpark Window Functions — The Secret Weapon Most Data Engineers Overlook\n\nIf you’re still relying solely on groupBy() in your PySpark pipelines, it’s time to level up.\n\nWhile groupBy() is great for collapsing data and summarizing across groups, it destroys the row-level context. That’s where Window Functions come in — they give you the power to perform complex analytics without collapsing the data.\n\n⸻\n\n⚙️ What Can You Do With Window Functions?\n\nWith just a few lines of code, you can:\n✅ Get the latest record per user\n✅ Rank items within each category\n✅ Compare a row to its previous or next one\n✅ Compute running totals, moving averages, and more\n\nAll while preserving every row in your dataset.\n\n🎯 Why This Matters\n\nAs Data Engineers, we often work with time-based event logs, user histories, or ranking scenarios.\n\nWindow functions let us solve these problems cleanly, keeping the dataset intact, scalable, and readable.\n\n⸻\n\nIf you’re not using them yet, start today.\nYour future self (and your pipelines) will thank you.\n\n#DataEngineering #PySpark #WindowFunctions #BigData #ETL #SparkSQL #CareerTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341653522993528832_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that PySpark Window Functions complement groupBy() by enabling analytical calculations without collapsing row-level data. It presents use cases including finding the latest record per user, ranking items within categories, comparing rows with previous or next rows, and calculating running totals and moving averages while preserving every row.",
+    "topics": [
+      "PySpark Window Functions",
+      "Row-level analytics",
+      "ETL processing"
+    ],
+    "subtopics": [
+      "Latest record per user",
+      "Ranking within categories",
+      "Previous and next row comparisons",
+      "Running totals",
+      "Moving averages",
+      "Comparison with groupBy aggregation"
+    ],
+    "concepts": [
+      "Window Functions",
+      "groupBy()",
+      "Row-Level Context",
+      "Latest Record per User",
+      "Category Ranking",
+      "Previous and Next Row Comparison",
+      "Running Totals and Moving Averages"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do PySpark Window Functions differ from groupBy() when processing row-level data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer explains that groupBy() collapses data and summarizes it across groups, removing row-level context.\nThe answer explains that Window Functions perform analytical calculations while preserving every row."
+    },
+    {
+      "question": "What analytical tasks can PySpark Window Functions perform without collapsing the dataset?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer includes finding the latest record per user and ranking items within categories.\nThe answer includes comparing a row with its previous or next row.\nThe answer includes computing running totals and moving averages."
+    },
+    {
+      "question": "A PySpark pipeline processes time-based event logs and must retain row-level context. Why would Window Functions be appropriate?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer connects the use case to time-based event logs and user histories.\nThe answer explains that Window Functions can calculate analytical values while keeping the dataset intact rather than reducing it to group summaries."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark Window Functions",
+    "secondary_topics": [
+      "Row-level analytics",
+      "ETL processing",
+      "Data aggregation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7928cacd648a958e",
+    "saved_date": "2026-10-01T23:15:17Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341653522993528832",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341653522993528832_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

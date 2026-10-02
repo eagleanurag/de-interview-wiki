@@ -1,0 +1,149 @@
+{
+  "id": "urn-li-saved-0c3ca21ef326c85a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315004917868359681",
+    "captured_at": "2026-10-02T00:15:44.702203Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:50Z"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\nData Engineering Most Frequently asked Real time Interview Questions.\nHey Fellow Data Engineer, You might have noticed these questions in your data engineering interview rounds every time, these are some of the real time questions in order to check whether you have really worked on any data engineering project or not .\nEnsure you prepare well before going for any interview.\n1. What cluster Manager you have used in your project ?\n2. What is your cluster Size ?\n3. How does your data comes to your storage location ?\n4. What are the other sources you have used in your project ?\n5. what is the sink for your project /\n6. What is the frequency of the data in your source ?\n7. What is the volume of your data ?\n8. Please explain your project in detail ?\n9. Lets say out of 100 task, 99 tasks completed however the last task is taking long hours to finish/complete, how to handle this issue ?1\n10. What all challenges you have faced and how did you overcome from it ?\n11. what optimization technique you have used in your project and what is the reason for it ?\n12. Have you done spark optimization tuning ? If yes, how you have done that ?\n13. Can you please walk me through the spark-submit command ?\n14. Lets say you are getting your data volume is 100 GB , In your spark you are doing 5 Actions and 3 transformations on the data, explain what goes behind the scene with respect to Stages ,tasks?\n15. how do you take your code to the higher environment ?\n16. How do you schedule your job in production ?\n17. How do you reprocess the data if it failed ?\n18. Tell me one scenario you have gone wrong with your decision making and what you have learnt from that mistake ?\n19. Lets say you have noticed duplicate records loaded in the table for the particular partition, how you resolved such issues ?\n20. What is the frequency of your jobs ?\n21. How do you notify your business/Stakeholders in case of any job failure?\nHope you find these questions useful for your preparation .\n📙 Also attaching an amazing document which explains 'How to Debug Slow Apache Spark Jobs? '\nDocument credits : LinkedIn (Respective owner)\n🔈 Join my Data Community : https://lnkd.in/gy4R55Tj\n♻️ Repost to help others grow\n🔔 Follow Abhisek Sahu for more\nHow to Debug Slow Spark Jobs",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315004917868359681_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post compiles 21 practical data engineering interview questions covering project details, cluster configuration, data sources and sinks, data frequency and volume, Apache Spark execution and optimization, spark-submit, deployment, scheduling, failure recovery, duplicate records, stakeholder notification, and lessons from project decisions. It provides no answers or detailed technical explanations. It mentions an attached document titled How to Debug Spark Jobs, but no substantive media text was included.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Apache Spark",
+      "Data pipeline architecture",
+      "Production job operations",
+      "Stakeholder communication",
+      "Behavioral interview preparation"
+    ],
+    "subtopics": [
+      "Cluster manager and cluster sizing",
+      "Data sources, sinks, storage, frequency, and volume",
+      "Project architecture and implementation experience",
+      "Long-running task diagnosis",
+      "Spark actions, transformations, stages, and tasks",
+      "Spark optimization and tuning",
+      "spark-submit",
+      "Code promotion and production scheduling",
+      "Failed-data reprocessing",
+      "Partition-level duplicate records",
+      "Job-failure notification",
+      "Project challenges and decision-making"
+    ],
+    "concepts": [
+      "Cluster management and sizing",
+      "Data source-to-sink flow",
+      "Data frequency and volume",
+      "Project challenges and decision-making",
+      "Long-running task diagnosis",
+      "Spark stages and tasks",
+      "Spark optimization and tuning",
+      "spark-submit job submission",
+      "Code promotion and production scheduling",
+      "Failed-data reprocessing",
+      "Partition-level duplicate resolution",
+      "Job-failure notification"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Can you walk through a data engineering project you worked on, including its cluster manager, cluster size, source-to-sink flow, data frequency, volume, challenges, and optimizations?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer describes how data moved from its sources to its sink and states the relevant data frequency and volume.\nThe answer identifies the cluster manager and cluster size used in the project.\nThe answer explains the challenges encountered, how they were overcome, and why the selected optimizations were used."
+    },
+    {
+      "question": "Suppose 99 of 100 tasks have completed, but the final task has been running for hours. How would you diagnose and handle the issue?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer explains how it would diagnose why the final task is taking hours and what action should be taken."
+    },
+    {
+      "question": "What Apache Spark optimization and tuning techniques have you used in a project, and what reasons justify those choices?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer names the optimization or tuning techniques used in the project.\nThe answer gives a reason for each selected technique."
+    },
+    {
+      "question": "Can you walk me through a spark-submit command you have used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer presents a spark-submit command used for a Spark job and explains its components in that job context."
+    },
+    {
+      "question": "Given 100 GB of data in Spark with five actions and three transformations, what happens behind the scenes with respect to stages and tasks?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer traces the five actions and three transformations to the stages and tasks for the stated dataset."
+    },
+    {
+      "question": "How do you promote code to a higher environment, and how do you schedule the job in production?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer describes the code-promotion process used by the candidate.\nThe answer explains the approach used to schedule production jobs."
+    },
+    {
+      "question": "How do you reprocess data after it has failed?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer gives a concrete procedure for reprocessing failed data."
+    },
+    {
+      "question": "How do you resolve duplicate records that have been loaded into a particular table partition?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer explains the corrective action used for the affected partition and how the duplicate-record issue was resolved."
+    },
+    {
+      "question": "How do you notify business stakeholders when a production job fails?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The answer states how the candidate notified business stakeholders after a job failure."
+    },
+    {
+      "question": "Describe a project decision that went wrong and explain what you learned from it.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer identifies the incorrect decision, describes the relevant project situation, and states the lesson learned."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Apache Spark execution and optimization",
+      "Data pipeline source and sink design",
+      "Production deployment and scheduling",
+      "Failure recovery and data quality",
+      "Stakeholder communication",
+      "Project decision-making"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0c3ca21ef326c85a",
+    "saved_date": "2026-10-01T23:30:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315004917868359681",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315004917868359681_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

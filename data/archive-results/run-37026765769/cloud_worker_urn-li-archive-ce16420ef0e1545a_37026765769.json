@@ -1,0 +1,109 @@
+{
+  "id": "urn-li-archive-ce16420ef0e1545a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.293855Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:47Z"
+  },
+  "original_text": "I’ve been learning PySpark and working with Databricks recently. \n\nI started with the basics, learning how Apache Spark really works :\n- What are jobs, stages, and tasks\n- How lazy evaluation helps optimize performance\n- The difference between transformations and actions\n\nThen I jumped into PySpark hands-on:\n- Worked with DataFrames and Spark SQL\n- Explored Window Functions, UDFs (User Defined Functions)\n- Learned how to handle different file formats like Parquet, Columnar, and Delta\n- Understood the difference between managed and external tables in Spark\n- And even used display() to build simple dashboards right inside Databricks\n\nTo put all this into practice, I chose a real dataset from Netflix and built a Data anlaytics project using Databricks Community Edition.\n\nHere’s what I explored in the project:\n\nDatabrick notebook : https://lnkd.in/eRfK_75C\n\nDatabricks made it really easy to experiment and visualize everything.\n\n#PySpark #Databricks #NetflixData #DataEngineering #BusinessIntelligence #DataScience #SparkSQL",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post summarizes the author's learning of Apache Spark fundamentals and hands-on use of PySpark, including DataFrames, Spark SQL, window functions, UDFs, file formats, table types, and Databricks visualization with display(). The author also built a data analytics project using a Netflix dataset and Databricks Community Edition. The supplied text does not explain the technical concepts in depth or provide implementation details, results, or findings from the linked notebook.",
+    "topics": [
+      "Apache Spark",
+      "PySpark",
+      "Databricks",
+      "Spark SQL",
+      "DataFrames",
+      "Data formats",
+      "Spark table types",
+      "Data visualization",
+      "Netflix data analytics"
+    ],
+    "subtopics": [
+      "Jobs, stages, and tasks",
+      "Lazy evaluation",
+      "Transformations and actions",
+      "Window functions",
+      "User Defined Functions",
+      "Parquet",
+      "Columnar formats",
+      "Delta",
+      "Managed and external tables",
+      "display() dashboards",
+      "Databricks Community Edition"
+    ],
+    "concepts": [
+      "Apache Spark execution concepts",
+      "Lazy evaluation",
+      "Transformations and actions",
+      "PySpark DataFrames and Spark SQL",
+      "Window functions",
+      "User Defined Functions",
+      "Parquet, columnar formats, and Delta",
+      "Managed and external tables",
+      "display()",
+      "Netflix data analytics project"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which Apache Spark execution and evaluation concepts did the author study?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies jobs, stages, and tasks as the execution concepts studied.\nThe answer includes lazy evaluation and its stated role in performance optimization.\nThe answer distinguishes transformations from actions as a topic covered, while avoiding unsupported implementation details."
+    },
+    {
+      "question": "Which PySpark capabilities did the author work with hands-on?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies DataFrames and Spark SQL.\nThe answer includes window functions and User Defined Functions."
+    },
+    {
+      "question": "Which data formats and Spark table types did the author study?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer names Parquet, columnar formats, and Delta.\nThe answer includes both managed and external tables."
+    },
+    {
+      "question": "How did the author use Databricks for the Netflix data analytics project?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The answer states that the project used a dataset from Netflix.\nThe answer identifies Databricks Community Edition as the project environment.\nThe answer notes that Databricks supported experimentation and visualization."
+    },
+    {
+      "question": "What was display() used for in the author's Databricks workflow?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer states that display() was used to build simple dashboards inside Databricks."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark execution model",
+      "Databricks",
+      "Spark SQL and DataFrames",
+      "Data formats and table types",
+      "Data visualization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ce16420ef0e1545a",
+    "saved_date": "2026-10-01T23:28:47Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

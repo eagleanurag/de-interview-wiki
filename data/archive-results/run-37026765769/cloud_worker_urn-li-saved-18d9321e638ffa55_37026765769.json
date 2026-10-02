@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-saved-18d9321e638ffa55",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326096495571533824",
+    "captured_at": "2026-10-02T00:15:45.194028Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:40Z"
+  },
+  "original_text": "Helping you crack your 1st 12+ LPA | Sr. Data & Business Analyst 🚀 | Azure • ADF • Python • SQL • Power BI • DAX | Microsoft Certified Data Analyst\n1yr •\n💻 Barclays Data Engineer Interview Questions💻\n🚀 Cracking the Barclays Data Engineer Interview (3–4 YOE) 🔍💻\nHey LinkedIn fam! 👋\nOver the past few weeks, I’ve been gathering real interview questions asked for the Data Engineer role at Barclays for professionals with 3–4 years of experience. 📊🧠\nI’ve broken them down into four key areas with detailed explanations:\n1️⃣ SQL – Query optimization, handling NULLs, second highest salary, and HAVING vs WHERE\n2️⃣ Data Modeling – Normalization, star vs snowflake schema, and designing a banking data warehouse\n3️⃣ Big Data Tools – Spark vs Hadoop, partitioning in Spark, and why Parquet is better than CSV\n4️⃣ Python Coding – Handling large CSVs, managing missing data, and using decorators with examples\n📘 Whether you're actively interviewing or brushing up on your concepts, this will give you a realistic view of the technical depth expected at top-tier firms like Barclays.\n🔁 Feel free to like, save, or share this post with anyone preparing for a Data Engineering role.\n💬 Grab the PDF and start learning .\n#DataEngineering #Barclays #InterviewPreparation #SQL #Python #BigData #ApacheSpark #DataWarehouse #LinkedInLearning #TechCareers #JobSearch #PythonTips\nBarclays Data Engineer Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326096495571533824_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post claims to summarize real Barclays Data Engineer interview questions for candidates with 3–4 years of experience. It groups the subjects into SQL, data modeling, big-data tools, and Python coding, naming topics such as NULL handling, star versus snowflake schema, Spark partitioning, Parquet versus CSV, and decorators. However, it provides neither the individual interview questions nor the promised detailed explanations, and the extracted media text is empty.",
+    "topics": [
+      "Data Engineer Interview Preparation",
+      "SQL",
+      "Data Modeling",
+      "Big Data",
+      "Python"
+    ],
+    "subtopics": [
+      "SQL query optimization",
+      "Handling SQL NULLs",
+      "Finding the second-highest salary",
+      "HAVING versus WHERE",
+      "Normalization",
+      "Star schema versus snowflake schema",
+      "Banking data warehouse design",
+      "Apache Spark versus Hadoop",
+      "Apache Spark partitioning",
+      "Parquet versus CSV",
+      "Handling large CSV files with Python",
+      "Managing missing data with Python",
+      "Python decorators"
+    ],
+    "concepts": [
+      "SQL query optimization",
+      "Handling SQL NULLs",
+      "Second-highest salary query",
+      "HAVING versus WHERE",
+      "Normalization and schema design",
+      "Banking data warehouse design",
+      "Apache Spark versus Hadoop",
+      "Apache Spark partitioning",
+      "Parquet versus CSV",
+      "Python large-file and missing-data handling",
+      "Python decorators"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL subjects does the post identify for a Barclays Data Engineer interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies query optimization and handling NULLs.\nThe answer also identifies finding the second-highest salary and comparing HAVING with WHERE."
+    },
+    {
+      "question": "Which data-modeling topics and design scenario are listed in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies normalization and the comparison of star and snowflake schemas.\nThe answer also includes designing a banking data warehouse."
+    },
+    {
+      "question": "Which big-data tools and topics are named in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies Apache Spark, Hadoop, and partitioning in Spark.\nThe answer also identifies the claimed comparison of Parquet with CSV."
+    },
+    {
+      "question": "What Python coding tasks and language features are presented as interview preparation topics?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies handling large CSV files and managing missing data.\nThe answer also identifies decorators and notes that the post promises examples without supplying them."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineer Interview Preparation",
+    "secondary_topics": [
+      "SQL",
+      "Data Modeling",
+      "Big Data",
+      "Python"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:18d9321e638ffa55",
+    "saved_date": "2026-10-01T23:27:40Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326096495571533824",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326096495571533824_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

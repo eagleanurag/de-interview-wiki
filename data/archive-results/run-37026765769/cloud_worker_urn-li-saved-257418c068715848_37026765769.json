@@ -1,0 +1,104 @@
+{
+  "id": "urn-li-saved-257418c068715848",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340581665108279299",
+    "captured_at": "2026-10-02T00:15:45.641440Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:01Z"
+  },
+  "original_text": "Senior Data Engineer | Snowflake, Databricks, AWS, Azure, GCP, PySpark, dbt | 14+ yrs building data platforms\n1yr •\n🚀 Advanced SQL – What to Learn Beyond Basics\nIn the world of data analytics and engineering, knowing basic SQL isn’t enough. Mastering Advanced SQL helps you stand out and solve real-world data problems efficiently.\nHere’s what you should focus on:\n🔹 Window Functions – ROW_NUMBER(), RANK(), LAG(), LEAD()\n🔹 Common Table Expressions (CTEs) & Recursive Queries\n🔹 Query Optimization – Indexing, EXPLAIN, and performance tuning\n🔹 Pivoting & Unpivoting – Rotate data for better insights\n🔹 Advanced Joins – FULL OUTER JOIN, CROSS APPLY, and set operations\n🔹 Aggregate Extensions – ROLLUP, CUBE, GROUPING SETS\n🔹 Stored Procedures & Functions – Encapsulate logic for reuse\n🔹 Handling Big Data – Partitioning, sharding, and scaling strategies\n♻️ 𝙍𝙚𝙥𝙤𝙨𝙩 𝙩𝙝𝙞𝙨 𝙞𝙛 𝙮𝙤𝙪 𝙛𝙞𝙣𝙙 𝙞𝙩 𝙝𝙚𝙡𝙥𝙛𝙪𝙡.\n🔔 Follow Kavitha Lakshminarasaiah for daily insights on data driven jobs\n📌 Attaching a useful SQL Interview Questions & Answers PDF – to help you prep smart and crack your next opportunity!\n#SQL #AdvancedSQL #DataAnalytics #SQLInterview #DataEngineer #BI #SQLTips #CareerGrowth #LearnSQL #InterviewPreparation\nSQL_Interview Q&A",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340581665108279299_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a high-level learning checklist for moving beyond basic SQL to solve real-world data problems efficiently. It lists window functions, CTEs, recursive queries, query optimization, pivoting and unpivoting, advanced joins, set operations, aggregate extensions, stored procedures and functions, and big-data scaling strategies. It also promotes an attached SQL interview Q&A PDF, but the PDF contents and detailed SQL examples are not included. Snowflake, Databricks, AWS, Azure, GCP, PySpark, and dbt appear only in the opening profile line and are not discussed in the post's technical content.",
+    "topics": [
+      "Advanced SQL",
+      "Data engineering",
+      "Data analytics",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "Window functions",
+      "Common table expressions",
+      "Recursive queries",
+      "Query optimization",
+      "Indexing",
+      "EXPLAIN",
+      "Pivoting and unpivoting",
+      "Advanced joins and set operations",
+      "ROLLUP, CUBE, and GROUPING SETS",
+      "Stored procedures and functions",
+      "Partitioning, sharding, and scaling"
+    ],
+    "concepts": [
+      "Window Functions",
+      "Common Table Expressions and Recursive Queries",
+      "Query Optimization",
+      "Pivoting and Unpivoting",
+      "Advanced Joins and Set Operations",
+      "Aggregate Extensions",
+      "Stored Procedures and Functions",
+      "Big-Data Handling Strategies"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which advanced SQL features does the post identify for solving real-world data problems beyond basic SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A complete answer names ROW_NUMBER(), RANK(), LAG(), and LEAD() as relevant window functions.\nThe answer also covers CTEs, recursive queries, pivoting and unpivoting, advanced joins, set operations, and aggregate extensions.\nThe answer includes stored procedures and functions as a way to encapsulate logic for reuse."
+    },
+    {
+      "question": "Which query optimization elements should be included when studying advanced SQL performance?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The post specifically identifies indexing, EXPLAIN, and performance tuning as query optimization topics.\nThe source does not provide engine-specific optimization procedures or detailed examples."
+    },
+    {
+      "question": "Which advanced join and aggregation techniques are included in this advanced SQL learning checklist?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The join-related techniques are FULL OUTER JOIN, CROSS APPLY, and set operations.\nThe aggregate extensions are ROLLUP, CUBE, and GROUPING SETS."
+    },
+    {
+      "question": "A data platform must account for increasing data volumes. Which scaling strategies does the post identify?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The post identifies partitioning, sharding, and scaling strategies as big-data handling considerations.\nThe source does not explain how to implement these strategies in a particular platform."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Advanced SQL",
+    "secondary_topics": [
+      "Query optimization",
+      "Advanced joins and aggregation",
+      "Big-data handling",
+      "SQL interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:257418c068715848",
+    "saved_date": "2026-10-01T23:19:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340581665108279299",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340581665108279299_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

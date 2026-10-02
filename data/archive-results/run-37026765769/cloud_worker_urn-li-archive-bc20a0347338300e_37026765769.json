@@ -1,0 +1,69 @@
+{
+  "id": "urn-li-archive-bc20a0347338300e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.081175Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:00Z"
+  },
+  "original_text": "𝐂𝐨𝐦𝐩𝐚𝐧𝐲 𝐖𝐢𝐬𝐞 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n\nIf you're gearing up for SQL interviews, I highly recommend checking out Ankit Bansal SQL playlist on YouTube! 🎯\nI've compiled a set of \n#SQL \n#questions asked in different companies and paired them with relevant video explanations from his channel. 📌 These videos provide in-depth insights and solutions, making your preparation more effective.\n\n\n1. Amazon SQL Interview Question for Data Analyst Position \nhttps://lnkd.in/g2RzsKdq\n\n2. Airbnb SQL Interview Question | Convert Comma Separated Values into Rows | Data Analytics\nhttps://lnkd.in/gpMbU-dF\n\n3. L&T SQL Interview Problem | Print Highest and Lowest Salary Employees in Each Department\nhttps://lnkd.in/ggY82FJW\n\n4. Adobe Interesting SQL Interview Question | Solving Using 2 Approaches | Data Analytics\nhttps://lnkd.in/g_-_9ymd\n\n5. Spotify SQL Interview Problem | Top 5 Artists | Aggregation and Window Functions in SQL\nhttps://lnkd.in/gtfaugd3\n\n6. PWC SQL Interview Question \nhttps://lnkd.in/g9SkkX9x\n\n7. Ameriprise LLC Company SQL Interview Problem | Data Analytics\nhttps://lnkd.in/gS_Yqq6c\n\n8. Tiger Analytics SQL Interview Question \nhttps://lnkd.in/ghjE_CXp\n\n9. Practice FAANG SQL Interview Questions For Free | Ace The SQL Interview | Data Analytics\nhttps://lnkd.in/g4AFgen3\n\n10. Honeywell SQL Interview Question | Print Movie Stars (⭐ ⭐ ⭐ ⭐⭐) For best movie in each Genre\nhttps://lnkd.in/gSDgB9Me\n\n11. Angel SQL Interview Question\nhttps://lnkd.in/geaU3we7\n\n\n12. Accenture SQL Interview Question \nhttps://lnkd.in/gR6F_8zf\n\n13. American Express SQL Interview Question and Solution | Page Recommendation\nhttps://lnkd.in/g_sMN26m\n\n14. Netflix Data Cleaning and Analysis Project | End to End Data Engineering Project (SQL + Python)\nhttps://lnkd.in/gS8mT7Fn\n\n15. Fractal Analytics SQL Interview Question (Game of Thrones Database) | SQL for Data Engineer\nhttps://lnkd.in/gGcsBms5\n\n\n16. Swiggy Data Analyst SQL Interview Question\nhttps://lnkd.in/gSyhmmhd\n\n17. Myntra Data Analyst Question\nhttps://lnkd.in/gekpAit8\n\n18. Walmart Labs SQL Interview Question for Senior Data Analyst Position | Data Analytics\nhttps://lnkd.in/gRBPb-ms\n\n19. PWC SQL Interview Question for a Data Analyst Position\nhttps://lnkd.in/gyD5Pjny\n\n20. PayPal Data Engineer SQL Interview Question (and a secret time saving trick)\nhttps://lnkd.in/gAJ_Ug79\n\n21. Adobe Interesting SQL Interview Question | Solving Using 2 Approaches | Data Analytics\nhttps://lnkd.in/gEEAfi8j\n\n\n22. PayPal SQL Interview Problem (Level Hard) | Advanced SQL Problem\nhttps://lnkd.in/gGZaYt6N\n\nAnkit Bansal\n\n\n#database #sqlserver #sql #dataanalyst #interviewquestion #interview \n#question #sqlinterview #SQL",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is a resource list recommending Ankit Bansal's YouTube SQL playlist and linking company- or role-labeled SQL interview problems. The visible titles mention converting comma-separated values into rows, finding the highest and lowest salary employees in each department, aggregation and window functions, selecting movie stars for the best movie in each genre, page recommendations, an end-to-end data cleaning and analysis project using SQL and Python, a Game of Thrones database exercise, and advanced SQL problems. It does not provide the actual questions, schemas, solutions, or enough detail to answer the problems, and several entries have generic or unspecified titles.",
+    "topics": [
+      "SQL Interview Preparation",
+      "SQL Problem Solving",
+      "Data Analytics",
+      "Data Engineering Projects"
+    ],
+    "subtopics": [
+      "Converting Comma-Separated Values into Rows",
+      "Finding Highest and Lowest Salaries by Department",
+      "Aggregation and Window Functions",
+      "Top Five Artists",
+      "Movie Stars for the Best Movie in Each Genre",
+      "Page Recommendations",
+      "Data Cleaning and Analysis with SQL and Python",
+      "Game of Thrones Database Exercise",
+      "Advanced SQL Problems"
+    ],
+    "concepts": [
+      "SQL Interview Resource Collection",
+      "Comma-Separated Value Row Conversion",
+      "Highest and Lowest Salaries by Department",
+      "Aggregation and Window Functions",
+      "Movie Stars by Genre",
+      "Page Recommendation Query",
+      "Data Cleaning and Analysis with SQL and Python",
+      "Game of Thrones Database Exercise",
+      "Advanced SQL Problems"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering and Data Analytics",
+    "primary_topic": "SQL Interview Preparation",
+    "secondary_topics": [
+      "SQL Data Transformation",
+      "Analytical SQL",
+      "Data Cleaning and Analysis",
+      "SQL and Python"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bc20a0347338300e",
+    "saved_date": "2026-10-01T23:19:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "urn-li-saved-3e044a2c7545007a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7322125201947742208",
+    "captured_at": "2026-10-02T00:15:46.821095Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:56Z"
+  },
+  "original_text": "Top 6 Tools to Turn Code into Beautiful Diagrams \n\n- Diagrams \n- Go Diagrams \n- Mermaid \n- PlantUML \n- ASCII diagrams \n- Markmap \n \nOver to you: Did we miss anything? What's your favorite?\n\n--\nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n \n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7322125201947742208_slide_0.jpg",
+      "description": "GIF image, 480x624 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a brief list titled \"Top 6 Tools to Turn Code into Beautiful Diagrams.\" It names Diagrams, Go Diagrams, Mermaid, PlantUML, ASCII diagrams, and Markmap, then asks readers for their favorites. It provides no tool descriptions, comparisons, examples, or usage instructions, and includes #systemdesign, #coding, and #interviewtips hashtags.",
+    "topics": [
+      "code-to-diagram tools",
+      "diagramming"
+    ],
+    "subtopics": [
+      "Mermaid",
+      "PlantUML",
+      "ASCII diagrams",
+      "Markmap",
+      "Go Diagrams",
+      "Diagrams",
+      "system design"
+    ],
+    "concepts": [
+      "Code-to-diagram tooling",
+      "Named diagram entries"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "diagramming and system design",
+    "primary_topic": "code-to-diagram tools",
+    "secondary_topics": [
+      "system design"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3e044a2c7545007a",
+    "saved_date": "2026-10-01T23:26:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7322125201947742208",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7322125201947742208_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7322125201947742208_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

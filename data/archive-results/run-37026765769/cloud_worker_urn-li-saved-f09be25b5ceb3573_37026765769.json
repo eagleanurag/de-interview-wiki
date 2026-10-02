@@ -1,0 +1,118 @@
+{
+  "id": "urn-li-saved-f09be25b5ceb3573",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340400266862624771",
+    "captured_at": "2026-10-02T00:15:53.189946Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:49Z"
+  },
+  "original_text": "How SQL Query Executes In A Database?\n\nSTEP 1\nThe query string first reaches the Transport Subsystem of the database. This subsystem manages the connection with the client. Also, it performs authentication and authorization checks, and if everything looks fine, it lets the query go to the next step.\n\nSTEP 2\nThe query now reaches the Query Processor subsystem, which has two parts: Query Parser and Query Optimizer.\n\nThe Query Parser breaks down the query into sub-parts (such as SELECT, FROM, WHERE). It checks for any syntax errors and creates a parse tree.\n\nThen, the Query Optimizer goes through the parse tree, checks for semantic errors (for example, if the “users” table exists or not), and finds out the most efficient way to execute the query.\n\nThe output of this step is the execution plan.\n\nSTEP 3\nThe execution plan goes to the Execution Engine. This plan is made up of all the steps needed to execute the query.\n\nThe Execution Engine takes this plan and coordinates the execution of each step by calling the Storage Engine. It also collects the results from each step and returns a combined or unified response to the upper layer.\n\nSTEP 4\nThe Execution Engine sends low-level read and write requests to the Storage Engine based on the execution plan.\n\nThis is handled by the various components of the Storage Engine, such as the transaction manager (for transaction management), lock manager (acquires necessary locks), buffer manager (checks if data pages are in memory), and recovery manager (for rollback or recovery).\n\nOver to you: What else will you add to understand the execution of an SQL Query?\n\n– \nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n\n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340400266862624771_slide_0.jpg",
+      "description": "GIF image, 480x563 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes SQL query execution as a four-step process. The Transport Subsystem manages the client connection, performs authentication and authorization, and forwards accepted queries. The Query Processor parses and optimizes the query to produce an execution plan. The Execution Engine coordinates that plan and sends low-level requests to the Storage Engine, whose transaction, lock, buffer, and recovery managers support data access and database operations.",
+    "topics": [
+      "SQL Query Execution",
+      "Database Query Processing",
+      "Database Storage Engine"
+    ],
+    "subtopics": [
+      "Transport Subsystem",
+      "Authentication and Authorization",
+      "Query Parsing",
+      "Query Optimization",
+      "Execution Planning",
+      "Execution Engine",
+      "Storage Engine",
+      "Transaction Management",
+      "Lock Management",
+      "Buffer Management",
+      "Recovery"
+    ],
+    "concepts": [
+      "SQL Query Execution Flow",
+      "Transport Subsystem",
+      "Query Processor",
+      "Query Parser",
+      "Parse Tree",
+      "Query Optimizer",
+      "Execution Plan",
+      "Execution Engine",
+      "Storage Engine",
+      "Transaction Manager",
+      "Lock Manager",
+      "Buffer Manager",
+      "Recovery Manager"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the main stages involved in executing an SQL query according to the post?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The process begins with the Transport Subsystem, followed by the Query Processor, the Execution Engine, and the Storage Engine.\nThe Query Processor includes the Query Parser and Query Optimizer and produces an execution plan.\nThe Execution Engine coordinates plan execution through requests to the Storage Engine."
+    },
+    {
+      "question": "What responsibilities does the Transport Subsystem perform before a query moves forward?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "It manages the connection between the database and the client.\nIt performs authentication and authorization checks.\nIt allows the query to proceed only after those checks succeed."
+    },
+    {
+      "question": "How do the Query Parser and Query Optimizer divide their responsibilities?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The Query Parser separates the query into parts, checks for syntax errors, and creates a parse tree.\nThe Query Optimizer examines the parse tree, checks for semantic errors, and determines an efficient execution approach.\nThe query-processing stage produces an execution plan."
+    },
+    {
+      "question": "How does the Execution Engine use an execution plan?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "It coordinates the individual steps defined by the execution plan.\nIt calls the Storage Engine to perform the required operations.\nIt collects results from the steps and returns a combined response to the upper layer."
+    },
+    {
+      "question": "What low-level work is performed by the Storage Engine during SQL query execution?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The Storage Engine handles low-level read and write requests issued according to the execution plan.\nThe transaction manager handles transaction management, while the lock manager acquires required locks.\nThe buffer manager checks for data pages in memory, and the recovery manager supports rollback or recovery."
+    }
+  ],
+  "classification": {
+    "domain": "Database Systems",
+    "primary_topic": "SQL Query Execution",
+    "secondary_topics": [
+      "Query Parsing",
+      "Query Optimization",
+      "Execution Planning",
+      "Storage Engine Components",
+      "Transaction Management",
+      "Lock Management",
+      "Buffer Management",
+      "Recovery"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f09be25b5ceb3573",
+    "saved_date": "2026-10-01T23:14:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340400266862624771",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340400266862624771_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7340400266862624771_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

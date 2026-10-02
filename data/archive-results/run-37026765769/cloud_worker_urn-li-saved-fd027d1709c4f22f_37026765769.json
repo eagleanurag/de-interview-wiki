@@ -1,0 +1,121 @@
+{
+  "id": "urn-li-saved-fd027d1709c4f22f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477244849528942592",
+    "captured_at": "2026-10-02T00:15:53.610463Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:30Z"
+  },
+  "original_text": "🚀 Data Engineer Interview Guide 2026: Stop Preparing the Wrong Way!\n\nMost candidates don't fail because they lack skills.\nThey fail because they prepare the wrong things.\n\n❌ Memorizing tool names\n❌ Collecting certificates\n❌ Solving random \"Top 50 Interview Questions\"\n\nCompanies aren't looking for people who know every tool.\nThey're looking for engineers who can solve real business problems.\n\nHere's what actually matters:\n\n1️⃣ Master Data Fundamentals\nTools change. Fundamentals don't.\n\n✔ Data Modeling\n✔ Partitioning & Indexing\n✔ Normalization vs Denormalization\n✔ Data Quality\n\n---\n\n2️⃣ Make SQL Your Superpower\nIf SQL isn't your strongest skill, start there.\n\nFocus on:\n✅ Complex Joins\n✅ Window Functions\n✅ CTEs\n✅ Query Optimization\n✅ Performance Tuning\n\n---\n\n3️⃣ Think Like a Data Engineer\nDon't just write scripts.\n\nLearn to design systems.\n\n✔ Batch vs Streaming\n✔ ETL vs ELT\n✔ Data Lakes vs Data Warehouses\n✔ Scalability & Reliability\n\n---\n\n4️⃣ Build Real Projects\n\nA single well-explained project is worth more than 10 certificates.\n\nShow that you can:\n• Design pipelines\n• Handle failures\n• Optimize performance\n• Solve real business problems\n\n---\n\n5️⃣ Learn to Explain Your Decisions\n\nInterviewers don't just ask:\n\n\"How did you build it?\"\n\nThey ask:\n\nWhy did you choose this approach?\n\nBe ready to explain:\n• Design choices\n• Trade-offs\n• Performance improvements\n• Cost optimization\n\nThat's what differentiates good engineers from great ones.\n\n💡 Pro Tip:\nDon't prepare answers.\nPrepare to explain your thinking.\n\nWhat's the toughest Data Engineering interview question you've faced?\n\nShare it in the comments—let's help each other grow. 👇\nfollow Rajeswari Gelasam for more\n#DataEngineering #Azure #AzureDataFactory #Databricks #PySpark #SQL #DataEngineer #MicrosoftAzure #ETL #BigData #CareerGrowth #InterviewPreparation #TechCareers #Analytics",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7477244849528942592_slide_0.jpg",
+      "description": "JPEG image, 480x693 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a high-level 2026 data engineering interview guide that recommends prioritizing durable data fundamentals, SQL proficiency, data system design, real project experience, and clear explanations of technical decisions. It argues against memorizing tool names, collecting certificates, and solving random question lists. The post lists important preparation areas but does not provide implementation details, worked examples, or code.",
+    "topics": [
+      "Data engineering fundamentals",
+      "SQL proficiency",
+      "Data architecture and system design",
+      "Batch and streaming processing",
+      "ETL and ELT",
+      "Data lakes and data warehouses",
+      "Project-based interview preparation",
+      "Technical decision explanation"
+    ],
+    "subtopics": [
+      "Data modeling",
+      "Partitioning and indexing",
+      "Normalization versus denormalization",
+      "Data quality",
+      "Complex joins",
+      "Window functions",
+      "CTEs",
+      "Query optimization",
+      "Performance tuning",
+      "Batch versus streaming",
+      "ETL versus ELT",
+      "Data lakes versus data warehouses",
+      "Scalability and reliability",
+      "Pipeline design",
+      "Failure handling",
+      "Design trade-offs",
+      "Performance improvements",
+      "Cost optimization"
+    ],
+    "concepts": [
+      "Data engineering fundamentals",
+      "SQL proficiency",
+      "Data system design",
+      "Scalability and reliability",
+      "Project-based evidence",
+      "Technical decision explanation",
+      "Fundamentals over tools"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which data engineering fundamentals should a candidate prioritize for interview preparation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The candidate should identify data modeling, partitioning and indexing, normalization versus denormalization, and data quality.\nThe candidate should explain that these fundamentals are emphasized because tools can change while foundational knowledge remains important."
+    },
+    {
+      "question": "Which SQL capabilities should a candidate develop when preparing for a data engineering interview?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The candidate should prioritize complex joins, window functions, and CTEs.\nThe candidate should also cover query optimization and performance tuning."
+    },
+    {
+      "question": "What data architecture and system-design topics should a data engineer be ready to discuss in an interview?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The candidate should be prepared to discuss batch versus streaming and ETL versus ELT.\nThe candidate should discuss data lakes versus data warehouses.\nThe candidate should address scalability and reliability."
+    },
+    {
+      "question": "In a project discussion, what evidence should a candidate present to demonstrate data engineering capability?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate should explain how they designed pipelines, handled failures, and optimized performance.\nThe candidate should describe how the project solved a real business problem.\nThe candidate should clearly explain the project rather than relying only on a list of technologies used."
+    },
+    {
+      "question": "How should a candidate explain why they chose a particular data engineering approach?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate should explain the reasoning behind the design choices and the associated trade-offs.\nThe candidate should describe any performance improvements and cost optimization.\nThe candidate should focus on explaining their thinking rather than reciting a prepared answer."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Data Fundamentals",
+      "SQL",
+      "Data System Design",
+      "Real-World Project Preparation",
+      "Technical Decision-Making"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fd027d1709c4f22f",
+    "saved_date": "2026-10-01T23:07:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7477244849528942592",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7477244849528942592_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

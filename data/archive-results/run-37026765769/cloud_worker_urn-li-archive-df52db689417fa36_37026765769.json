@@ -1,0 +1,39 @@
+{
+  "id": "urn-li-archive-df52db689417fa36",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.723518Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:39Z"
+  },
+  "original_text": "🚨 WE’RE HIRING | Senior Data Engineer / Data Engineer HashedIn by Deloitte 🚨\n📍 Locations: Bangalore, Mumbai, Kolkata, Gurugram, Hyderabad, Pune, Chennai\n\n🧠 Experience: 1.3 to 7.5 YearsAre you passionate about building scalable data pipelines, working with cloud-native architectures, and delivering real-time analytics solutions? This is your opportunity to be a part of a high-growth, product-focused engineering team at HashedIn by Deloitte.🔧 Key Skills We’re Looking For:✅ Spark (Scala/Python), SQL, PySpark\n✅ Airflow / Prefect / Luigi\n✅ Cloud (GCP, AWS, Azure) – S3, Redshift, BigQuery, Databricks\n✅ Data modeling (Star/Snowflake), Data Warehousing, and Lakehouse\n✅ Strong experience with ETL/ELT pipelines, streaming data, batch jobs\n✅ Familiarity with Kubernetes (K8s), Docker, CI/CD pipelines\n✅ Data Governance, Lineage, Security (GDPR/CCPA), Observability💼 What You’ll Work On:🚀 Design, build, and optimize modern cloud data platforms\n🧱 Architect and scale data lakes, lakehouses, warehouses\n📊 Collaborate with analysts, ML engineers, and DevOps\n🔐 Implement best practices in data privacy, security, compliance🧠 Culture HashedIn by Deloitte Work with the agility of a startup and the impact of an enterprise\nExtreme ownership, fast-paced learning, and a fun tech culture\nA place for problem solvers, builders, and learners\n📩 Interested? Here’s how to apply:\n👉 Drop your email ID in the comments.\n👉 You'll receive a link to upload your CV and fill your details.Let’s build the future of data together!Tag a friend or colleague who’d be a great fit 💥\n#DataEngineering #BigData #CloudEngineering #Spark #GCP #AWS #Azure #Airflow #StreamingData #ETL #Python #Scala #Kubernetes #DataJobs #HashedInByDeloitte #HiringAlert #ReferralDrive #LinkedInJobs #TechHiring #Careers \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a hiring announcement for Data Engineer and Senior Data Engineer roles at HashedIn by Deloitte across several Indian cities. It lists experience requirements, desired skills, responsibilities, and application instructions, but it does not provide technical explanations, implementation details, or interview guidance.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:df52db689417fa36",
+    "saved_date": "2026-10-01T23:13:39Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

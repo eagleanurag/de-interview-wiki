@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-saved-03a44773954bbd3e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339542923673260032",
+    "captured_at": "2026-10-02T00:15:44.521199Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:02Z"
+  },
+  "original_text": "🎯 Just completed an Extreme SQL Challenge: Order Fulfillment (75 pts)!\n 🧠 Simulated real-world inventory logic using window functions, running totals, and smart case handling — deciding if each order was ✅ Full, ⚠️ Partial, or ❌ Unfulfilled.\nIt felt like building a real warehouse system in SQL! 🏭📦\nGrateful to Ankit Bansal sir 🙏 for such a powerful platform filled with hands-on, real-world problems. It's an amazing way to sharpen SQL skills! 💪💻\n📊",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339542923673260032_slide_0.jpg",
+      "description": "JPEG image, 480x227 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A brief completion post reports finishing a 75-point Extreme SQL Challenge titled \"Order Fulfillment.\" It says the solution simulated inventory logic with SQL window functions, running totals, and case handling to classify each order as Full, Partial, or Unfulfilled. The post does not provide SQL code, formulas, data models, or the conditions used to assign each status.",
+    "topics": [
+      "SQL",
+      "Order Fulfillment",
+      "Inventory Logic"
+    ],
+    "subtopics": [
+      "Window Functions",
+      "Running Totals",
+      "CASE Handling",
+      "Order Status Classification"
+    ],
+    "concepts": [
+      "Window Functions",
+      "Running Totals",
+      "CASE Handling",
+      "Order Fulfillment Status Classification"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL techniques were combined in the described Order Fulfillment simulation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The simulation used window functions as part of its inventory logic.\nIt also used running totals and case handling.\nThe techniques were combined to determine an order-level fulfillment status."
+    },
+    {
+      "question": "Which order fulfillment statuses can the described CASE handling assign?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The three statuses are Full, Partial, and Unfulfilled.\nCase handling maps the calculated result to one of those statuses.\nThe source does not specify the rules or thresholds used to distinguish the three categories."
+    },
+    {
+      "question": "At a high level, how do window functions and running totals contribute to the order classification?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Window functions provide calculations used within the challenge's inventory logic.\nRunning totals provide cumulative values that contribute to the calculation.\nThe resulting logic is combined with case handling to assign Full, Partial, or Unfulfilled status."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "Order Fulfillment with SQL",
+    "secondary_topics": [
+      "Window Functions",
+      "Running Totals",
+      "CASE Handling",
+      "Inventory Logic"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:03a44773954bbd3e",
+    "saved_date": "2026-10-01T23:20:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339542923673260032",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339542923673260032_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

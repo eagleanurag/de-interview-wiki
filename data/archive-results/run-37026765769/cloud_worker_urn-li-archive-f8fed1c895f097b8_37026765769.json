@@ -1,0 +1,81 @@
+{
+  "id": "urn-li-archive-f8fed1c895f097b8",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.285450Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:02Z"
+  },
+  "original_text": "If I had to start my Data Engineering journey from scratch,\nHere’s the exact roadmap I'd follow (with resources to get you there faster).\n\n1. Learn SQL \n\n>Basics(GeeksforGeeks) | 🔗https://lnkd.in/giDNAFyV\n>Window's function(Ashutosh Kumar) | 🔗https://lnkd.in/gJ8PVugX\n>Practice(LeetCode) | 🔗https://lnkd.in/gYT5Rzcx\n>Practice(DataLemur 🐵 (Ace the SQL & Data Interview) | 🔗https://lnkd.in/gqm9qwdk\n\n2. Learn Programming(Python recommended)\n\n>Basics(GeeksforGeeks) | 🔗https://lnkd.in/gU3vS7fV\n>Medium(Manish Kumar) | 🔗https://lnkd.in/gP7T_SJ2\n>Practice | 🔗https://lnkd.in/gwzz3tiz\n\n3. Spark \n\n>Basics(Raja's Data Engineering) | 🔗https://lnkd.in/gan3FkTK\n>Databricks(Subham Khandelwal) | 🔗https://lnkd.in/gzRAgvuh\n>Practice | 🔗https://lnkd.in/gX7YrpYg\n\n4. Cloud ( I recommend Azure or AWS)\n\n>ADF (Maheer Basha Shaik) | 🔗https://lnkd.in/gDQaNKqU\n>Udemy Course (Ramesh Retnasamy) | 🔗https://lnkd.in/gNTWiRQH\n\n5. Data Modelling\n\n> Manish Kumar | 🔗https://lnkd.in/gcWpNERG\n> YT Playlist | 🔗https://lnkd.in/gAecHtrU\n\n6. Projects (End to End Projects)\n\n> Ankur Ranjan |🔗 https://lnkd.in/gX3zdcmJ\n> Sagar Prajapati |🔗 https://lnkd.in/gzd9wqzz\n\n7. Miscellaneous Topics\n\n>Airflow(Marc Lamberti) | 🔗https://lnkd.in/gcCmdtir\n>Linux(Technical Guftgu) | 🔗https://lnkd.in/gieXhR69\n>Version-Control(Hitesh Choudhary) | 🔗https://lnkd.in/gTGg2mYB\n>Azure DevOps | 🔗 https://lnkd.in/gFpZkrcA\n\n\nLet me know if you'd like to add more to the list or have any suggestions!\n\n\n𝐂𝐨𝐧𝐧𝐞𝐜𝐭 1:1 𝐰𝐢𝐭𝐡 𝐦𝐞 𝐟𝐨𝐫 𝐲𝐨𝐮𝐫 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐜𝐚𝐫𝐞𝐞𝐫 𝐠𝐮𝐢𝐝𝐚𝐧𝐜𝐞 -> \nhttps://lnkd.in/getNAinh\n\n\n♻️ Liked it ? Repost this !\n➕ Follow for more daily insights on how to grow your career in the data field",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a seven-stage roadmap for starting a Data Engineering journey from scratch. It recommends learning SQL, programming with Python, Spark and Databricks, cloud platforms such as Azure or AWS, data modeling, end-to-end projects, and miscellaneous tools including Airflow, Linux, version control, and Azure DevOps. It supplies resource and practice links but does not explain the technical concepts, describe the projects, or provide implementation guidance. The remaining content is promotional and includes a career-guidance call to action.",
+    "topics": [
+      "Data Engineering Learning Roadmap",
+      "SQL",
+      "Programming",
+      "Spark",
+      "Cloud Platforms",
+      "Data Modeling",
+      "End-to-End Projects",
+      "Supporting Tools"
+    ],
+    "subtopics": [
+      "SQL Basics",
+      "SQL Window Functions",
+      "SQL Practice",
+      "Python",
+      "Spark Basics",
+      "Databricks",
+      "Azure",
+      "AWS",
+      "ADF",
+      "Data Modeling",
+      "End-to-End Projects",
+      "Airflow",
+      "Linux",
+      "Version Control",
+      "Azure DevOps"
+    ],
+    "concepts": [
+      "Data Engineering Learning Roadmap",
+      "SQL Learning",
+      "Python Recommendation",
+      "Spark and Databricks",
+      "Cloud Learning",
+      "Data Modeling",
+      "End-to-End Projects",
+      "Supporting Tools"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Learning Roadmap",
+    "secondary_topics": [
+      "SQL",
+      "Programming",
+      "Spark",
+      "Cloud Platforms",
+      "Data Modeling",
+      "End-to-End Projects",
+      "Supporting Tools"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f8fed1c895f097b8",
+    "saved_date": "2026-10-01T23:33:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

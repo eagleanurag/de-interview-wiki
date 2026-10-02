@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-archive-c0e39a86c1f39e57",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.173181Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:53Z"
+  },
+  "original_text": "Disappear till SEPTEMBER 2025 and..\n\nClear all Data Engineering Rounds!!\n\nHere is HOW can you do in 5 steps \n\n𝗦𝘁𝗲𝗽 𝟭: 𝗦𝗤𝗟\n - Basic SQL Syntax\n - DDL, DML, DCL\n - Joins & Subqueires\n - Views & Indexes\n - CTEs & Window Functions\n\n𝗦𝘁𝗲𝗽 𝟮: 𝗣𝘆𝘁𝗵𝗼𝗻\n - Fundamentals\n - Numpy\n - Pandas\n\n𝗦𝘁𝗲𝗽 𝟯: 𝗣𝘆𝘀𝗽𝗮𝗿𝗸\n - RDD\n - Dataframe\n - Datasets\n - Spark Streaming\n - Optimization techniques\n\n𝗦𝘁𝗲𝗽 𝟰: 𝗗𝗮𝘁𝗮 𝗪𝗮𝗿𝗲𝗵𝗼𝘀𝘂𝗶𝗻𝗴/𝗗𝗮𝘁𝗮 𝗠𝗼𝗱𝗲𝗹𝗶𝗻𝗴\n - OLAP vs OLTP\n - Star & Snowflake Schema\n - Fact & Dimension Tables\n - Slowly Changing Dimensions (SCD)\n\n𝗦𝘁𝗲𝗽 𝟱: 𝗖𝗹𝗼𝘂𝗱 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀\n - Nosql DB \n - Relational DB \n - Datawarehousing \n - Scheduling & Orchestration\n - Messaging\n - ETL Services\n - Storage Services\n - Data Processing Services\n\nFree resources to learn these skills.\n\nAzure Data Engineer Roadmap - https://lnkd.in/dCyr4aph\nSQL - https://lnkd.in/gJXw4XtK\nPython - https://lnkd.in/dt_-2-Uj\nPyspark - https://lnkd.in/gV_5EFtE\nAirflow - https://lnkd.in/guebuHJ7\nKafka - https://lnkd.in/gVZUT52s\nData Modeling - https://lnkd.in/gg6V98Ru\nAzure Cloud - https://lnkd.in/gwc3By9h\nGoogle Cloud - https://lnkd.in/gNwpp2RT\nAWS - https://lnkd.in/gJeUGfjS\nMock Interviews - https://lnkd.in/gV_5EFtE\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a high-level five-step Data Engineering interview preparation roadmap covering SQL, Python, PySpark, data warehousing and modeling, and cloud services. It names learning resources for platforms and tools including Azure, Google Cloud, AWS, Airflow, and Kafka, but does not explain the technical concepts or provide interview questions.",
+    "topics": [
+      "Data Engineering Interview Preparation",
+      "SQL",
+      "Python",
+      "PySpark",
+      "Cloud Data Services",
+      "Data Engineering Learning Resources"
+    ],
+    "subtopics": [
+      "SQL Syntax and Database Commands",
+      "Joins and Subqueries",
+      "Views, Indexes, CTEs, and Window Functions",
+      "NumPy and Pandas",
+      "RDDs, DataFrames, and Datasets",
+      "Spark Streaming and Optimization",
+      "OLAP and OLTP",
+      "Star and Snowflake Schemas",
+      "Fact and Dimension Tables",
+      "Slowly Changing Dimensions",
+      "NoSQL and Relational Databases",
+      "Scheduling and Orchestration",
+      "Messaging, ETL, Storage, and Data Processing Services"
+    ],
+    "concepts": [
+      "SQL Fundamentals",
+      "Python Data Tools",
+      "PySpark Fundamentals",
+      "Cloud Service Categories",
+      "Named Learning Resources"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which subjects are included in the roadmap's SQL preparation step?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer lists basic SQL syntax, DDL, DML, DCL, joins, subqueries, views, indexes, CTEs, and window functions."
+    },
+    {
+      "question": "Which components are listed under the roadmap's PySpark preparation step?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer lists RDDs, DataFrames, Datasets, Spark Streaming, and optimization techniques."
+    },
+    {
+      "question": "What service categories are included under the roadmap's cloud services step?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer lists NoSQL databases, relational databases, data warehousing, scheduling and orchestration, messaging, ETL services, storage services, and data processing services."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "PySpark",
+      "Data Warehousing and Data Modeling",
+      "Cloud Data Services",
+      "Data Engineering Learning Resources"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c0e39a86c1f39e57",
+    "saved_date": "2026-10-01T23:20:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

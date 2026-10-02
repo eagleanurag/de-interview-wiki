@@ -1,0 +1,77 @@
+{
+  "id": "urn-li-archive-bff51ba7278cc74e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.163201Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:09Z"
+  },
+  "original_text": "Most important question asked in Data engineer interview.\n.\n.\n.\n\n➡️How can you handle missing data in PySpark?\n\nHandling missing data in PySpark is crucial for maintaining data integrity. PySpark provides various ways to handle missing values using DataFrame API functions like .fillna(), .dropna(), and .replace(). Below are common methods:\n\n▶️1. Dropping Missing Values\n\n⚡Use .dropna() to remove rows with missing values.\n⚡You can specify a subset of columns to consider for missing values.\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import col\n\n# Initialize Spark Session\nspark = SparkSession.builder.appName(\"MissingDataHandling\").getOrCreate()\n\n# Sample DataFrame with missing values\ndata = [(1, \"Alice\", None), (2, None, 50), (3, \"Bob\", 30), (4, None, None)]\ncolumns = [\"ID\", \"Name\", \"Age\"]\ndf = spark.createDataFrame(data, columns)\n\n# Drop rows where all columns are NULL\ndf_drop_all = df.dropna(how=\"all\") \n\n# Drop rows where any column is NULL\ndf_drop_any = df.dropna(how=\"any\") \n\n# Drop rows where only a specific column is NULL\ndf_drop_subset = df.dropna(subset=[\"Name\"]) \n\ndf_drop_any.show()\n\n▶️2. Filling Missing Values\n\n⚡Use .fillna() to replace null values with specific values.\n⚡You can provide different values for different columns.\n# Fill missing values with a default value\ndf_fill = df.fillna({\"Name\": \"Unknown\", \"Age\": 0})\n\ndf_fill.show()\n\n▶️3. Replacing Missing Values with Other Values\n⚡.replace() can replace None (null) values with a specific value\n⚡df_replace = df.replace(None, \"N/A\")\ndf_replace.show()\n\n▶️4. Using na Functions\n\n⚡PySpark provides df.na as an alias for handling missing values.\ndf.na.drop().show() # Equivalent to df.dropna()\ndf.na.fill(\"Unknown\", subset=[\"Name\"]).show()\ndf.na.replace(None, \"No Data\").show()\n\n▶️5. Using SQL Functions for More Control\n⚡You can use SQL functions to replace nulls dynamically.\nfrom pyspark.sql.functions import when\n\ndf_new = df.withColumn(\"Age\", when(col(\"Age\").isNull(), 25).otherwise(col(\"Age\")))\ndf_new.show()\n\n#dataengineering #bigdata #hadoop #pyspark #python #scala #sql #ETL\n#GCP #cloud\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied post is an incomplete PySpark knowledge snippet ending with \"see more,\" but its visible content explains several ways to handle missing values in Spark DataFrames. It demonstrates dropping rows with dropna(), filling values with fillna(), replacing values with replace(), using the df.na alias, and conditionally replacing null values with when(), isNull(), and otherwise(). The examples use column-specific defaults such as \"Unknown,\" 0, 25, \"N/A,\" and \"No Data.\"",
+    "topics": [
+      "Handling missing data with PySpark DataFrames"
+    ],
+    "subtopics": [
+      "Dropping rows with missing values",
+      "Filling missing values by column",
+      "Replacing missing values",
+      "Using the df.na alias",
+      "Conditionally replacing null values"
+    ],
+    "concepts": [
+      "Missing data in PySpark",
+      "dropna()",
+      "fillna()",
+      "replace()",
+      "df.na alias",
+      "Conditional null replacement"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do dropna(how=\"all\"), dropna(how=\"any\"), and dropna(subset=[\"Name\"]) differ?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The all option removes a row only when all considered columns are null.\nThe any option removes a row when at least one considered column is null.\nThe subset option limits the missing-value check to the named columns."
+    },
+    {
+      "question": "How can different missing-value defaults be supplied for different DataFrame columns in PySpark?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A dictionary can be passed to fillna() with a separate replacement value for each column.\nThe df.na.fill() form can also restrict a default replacement to a specified column subset."
+    },
+    {
+      "question": "How can when(), isNull(), and otherwise() be used to replace null values in a selected column?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "isNull() identifies rows where the selected column is null.\nwhen() supplies a replacement for those null rows, while otherwise() retains the existing non-null value.\nwithColumn() applies the conditional result to the selected DataFrame column."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Missing data handling in PySpark",
+    "secondary_topics": [
+      "PySpark DataFrame API",
+      "Data cleaning",
+      "Null value processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bff51ba7278cc74e",
+    "saved_date": "2026-10-01T23:33:09Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

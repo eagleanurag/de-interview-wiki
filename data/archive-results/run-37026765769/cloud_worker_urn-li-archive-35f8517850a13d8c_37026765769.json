@@ -1,0 +1,39 @@
+{
+  "id": "urn-li-archive-35f8517850a13d8c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.446036Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:32:13Z"
+  },
+  "original_text": "I landed job offers at Meta & Google because I applied to the jobs within a few hours of them being posted. \n\nHere's the LinkedIn hack I used that makes finding newly-posted jobs way easier: \n\nI used to spend 2-3 hours a day refreshing job boards to find jobs as soon as they were posted. \n\nI knew that applying for jobs quickly would increase my chances of landing an interview, but it was SO inefficient looking through hundreds of jobs to find the most recently posted ones. \n\nLuckily, I found a way on LinkedIn to only filter for jobs that have been posted within the past HOUR. Here’s how it works: \n\n1. Search for your desired job and filter for “Past 24 hours” \n2. In the URL, change \"86400\" to \"3600\"\n3. Browse all the jobs that have been posted within 1 hour!\n\n💡 How does this work? \n\nThe “86400” number stands for the amount of seconds it has been since a job has been posted. \n\n86400 = 24 hours, and 3600 = 1 hour. \n\nMeaning, by changing the URL you will only be shown jobs that have been posted in the past 1 hour. You can also play around with the number to filter for jobs that have been posted within any amount of time. \n\nShoutout to run_amucks on reddit for sharing this :)\n\n𝗣.𝗦. You’ll still need to fill out the job application once you find it… here’s a free extension that autofills your job applications (including those pesky Workday ones): https://lnkd.in/gp4dCNZV",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a personal job-search post, not a Data Engineering knowledge post. It claims that applying shortly after jobs were posted helped the author receive offers at Meta and Google, and it describes changing LinkedIn's \"Past 24 hours\" URL value from 86400 seconds to 3600 seconds to display jobs posted within the past hour.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Job Search",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:35f8517850a13d8c",
+    "saved_date": "2026-10-01T23:32:13Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

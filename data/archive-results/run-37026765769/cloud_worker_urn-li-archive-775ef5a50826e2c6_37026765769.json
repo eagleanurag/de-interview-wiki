@@ -1,0 +1,58 @@
+{
+  "id": "urn-li-archive-775ef5a50826e2c6",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.527051Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:29Z"
+  },
+  "original_text": "𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐞𝐫 : What is the difference between WHERE and HAVING? \n\n𝐂𝐚𝐧𝐝𝐢𝐝𝐚𝐭𝐞: 𝐂𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐞 𝐚𝐜𝐜𝐞𝐩𝐭𝐞𝐝, 𝐥𝐞𝐭'𝐬 𝐠𝐨! \n\n1. WHERE Clause :\n - The `WHERE` clause is used to filter rows before any grouping is done.\n - It applies conditions to individual rows in a table.\n - If you want to filter data based on a column's value, you use `WHERE`.\n - Example: If you want to find all orders where the amount is greater than 100, you would use:\n\n SELECT * FROM orders\n WHERE amount > 100;\n\n2. HAVING Clause :\n - The `HAVING` clause is used to filter groups after the `GROUP BY` operation.\n - It applies conditions to groups of rows that result from the grouping.\n - If you want to filter based on an aggregated value (like the sum, average, etc.), you use `HAVING`.\n - Example: If you want to find customers who have made total purchases over 500, you would use:\n\n SELECT customer_id, SUM(amount) AS total_amount\n FROM orders\n GROUP BY customer_id\n HAVING SUM(amount) > 500;",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains that the SQL WHERE clause filters individual rows before grouping, while the HAVING clause filters groups after a GROUP BY operation. It includes examples of filtering orders by an individual amount value and filtering customers by an aggregated purchase total.",
+    "topics": [
+      "query filtering"
+    ],
+    "subtopics": [
+      "WHERE clause",
+      "HAVING clause",
+      "GROUP BY",
+      "row-level filtering",
+      "group-level filtering",
+      "aggregate filtering"
+    ],
+    "concepts": [
+      "WHERE clause",
+      "HAVING clause",
+      "GROUP BY",
+      "Row-level filtering",
+      "Group-level filtering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "Difference between WHERE and HAVING",
+    "secondary_topics": [
+      "row-level filtering",
+      "group-level filtering",
+      "aggregate filtering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:775ef5a50826e2c6",
+    "saved_date": "2026-10-01T23:18:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

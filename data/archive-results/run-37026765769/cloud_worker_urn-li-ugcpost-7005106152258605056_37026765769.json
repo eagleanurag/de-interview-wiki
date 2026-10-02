@@ -1,0 +1,26 @@
+{
+  "id": "urn-li-ugcpost-7005106152258605056",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7005106152258605056/",
+    "captured_at": "2026-10-01T10:29:27.370758Z",
+    "author": null,
+    "published_at": "Dec 4, 2022"
+  },
+  "original_text": "Follow\nMoments from\n#infosys X UNLEASH event 2022, where young minds have gathered to find sustainable solutions for a greener future. 🎈🥳\nCome, let's #UNLEASHWithInfy 🌳♻️🌱🌎",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A brief social media post promoting the Infosys X UNLEASH 2022 event, where young people gathered to explore sustainable solutions for a greener future. It contains no data engineering or other technical knowledge.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Event promotion and sustainability",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "id": "urn-li-saved-2fe16ed2e6b662d5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326448338617147392",
+    "captured_at": "2026-10-02T00:15:46.219144Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:40Z"
+  },
+  "original_text": "Data Engineer | 50K+ LinkedIn | NIT Trichy\n1yr •\nPySpark Interview Cheatsheet, I wish I had this while preparing for Data Engineering Interviews. 🔻\n1/ Optimizing Joins with Broadcast\nWhat it does: Broadcasts smaller DataFrame to all nodes to avoid shuffle in joins.\nHow to apply:\nfrom pyspark.sql.functions import broadcast\ndf_large.join(broadcast(df_small), \"id\")\nUse Case: Joining a large fact table with a small dimension table efficiently.\n2/ Handling Skewed Data in GroupBy\nWhat it does: Mitigates data skew by salting keys to balance partitions.\nHow to apply:\ndf.withColumn(\"salt\", (rand() * 10).cast(\"int\")).groupBy(\"key\", \"salt\").agg(...)\nUse Case: Reducing hotspot partitions in aggregations on skewed keys.\n3/ Dynamic Partition Overwrite\nWhat it does: Overwrites specific partitions without affecting others.\nHow to apply:\nspark.conf.set(\"spark.sql.sources.partitionOverwriteMode\", \"dynamic\")\ndf.write.partitionBy(\"date\").mode(\"overwrite\").parquet(\"path\")\nUse Case: Updating specific date partitions in a data lake.\n4/ Window Functions with Custom Frames\nWhat it does: Defines precise row ranges for window calculations.\nHow to apply:\nfrom pyspark.sql.window import Window\nw = Window.partitionBy(\"category\").orderBy(\"date\").rowsBetween(-6, 0)\ndf.withColumn(\"rolling_avg\", avg(\"sales\").over(w))\nUse Case: Calculating 7-day moving averages for sales trends.\n5/ Caching vs Persist with Storage Levels\nWhat it does: Persists DataFrame with specific storage levels for performance.\nHow to apply:\ndf.persist(pyspark.StorageLevel.MEMORY_AND_DISK)\nUse Case: Optimizing iterative ML pipelines with memory and disk spillover.\n6/ Handling Nulls in Complex Joins\nWhat it does: Manages nulls explicitly to avoid incorrect join results.\nHow to apply:\ndf1.join(df2, (df1.id == df2.id) & (df1.id.isNotNull()), \"left\")\nUse Case: Ensuring accurate results in joins with incomplete data.\n7/ Adaptive Query Execution (AQE)\nWhat it does: Dynamically optimizes query plans at runtime.\nHow to apply:\nspark.conf.set(\"spark.sql.adaptive.enabled\", \"true\")\nUse Case: Improving performance in skewed joins or aggregations automatically.\n8/ Incremental Processing with Delta Lake\nWhat it does: Enables upsert operations for incremental data updates.\nHow to apply:\nfrom delta.tables import DeltaTable\nDeltaTable.forPath(spark, \"path\").alias(\"t\").merge(df.alias(\"s\"), \"t.id = s.id\")...\nUse Case: Updating a data warehouse with streaming or batch data.\n9/ Repartition vs Coalesce Strategically\nWhat it does: Adjusts DataFrame partitions for optimal processing.\nHow to apply:\ndf.repartition(10, \"key\") or df.coalesce(5)\nUse Case: Repartition for parallelism, coalesce to reduce shuffle overhead.\n𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝐑𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬\n1. https://lnkd.in/gV_nsADx\n2. https://lnkd.in/gJv-QK9z\n3. https://lnkd.in/gK8hcJHR\n𝐍𝐞𝐞𝐝 𝐇𝐞𝐥𝐩 𝐰𝐢𝐭𝐡 𝐲𝐨𝐮 𝐝𝐚𝐭𝐚 𝐜𝐚𝐫𝐞𝐞𝐫, 𝐂𝐨𝐧𝐧𝐞𝐜𝐭 1 𝐭𝐨 1 𝐡𝐞𝐫𝐞 :\nhttps://lnkd.in/gA_B7vxW\n♻️ If you found this useful, repost it !\n👋 Follow me for more daily data content\nPySpark on Databricks\ndocs.databricks.com",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a brief PySpark interview cheat sheet with nine techniques and short examples: broadcast joins, salting skewed GroupBy keys, dynamic partition overwrite, custom window frames, persisting a DataFrame with a storage level, explicit null handling in joins, Adaptive Query Execution, Delta Lake merge-based incremental processing, and repartition versus coalesce. It gives use cases involving fact and dimension tables, date-partitioned data lakes, rolling sales averages, iterative ML pipelines, and streaming or batch warehouse updates. The treatment is abbreviated: the Delta merge ends in an ellipsis, and the caching-versus-persist item only demonstrates persist with MEMORY_AND_DISK rather than explaining caching or comparing storage levels.",
+    "topics": [
+      "PySpark",
+      "Delta Lake",
+      "Partitioned Parquet writes",
+      "Databricks"
+    ],
+    "subtopics": [
+      "Broadcast joins",
+      "Data-skew salting in GroupBy operations",
+      "Dynamic partition overwrite",
+      "Custom window frames",
+      "Caching and persist storage levels",
+      "Null handling in joins",
+      "Adaptive Query Execution",
+      "Delta Lake incremental processing",
+      "Repartition versus coalesce"
+    ],
+    "concepts": [
+      "Broadcast Join",
+      "Data-Skew Salting",
+      "Dynamic Partition Overwrite",
+      "Custom Window Frames",
+      "Persist with Storage Levels",
+      "Null Handling in Joins",
+      "Adaptive Query Execution",
+      "Delta Lake Incremental Processing",
+      "Repartition versus Coalesce"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A large fact table must be joined with a small dimension table to reduce join shuffle. How would you apply the technique shown in the post, and why?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The candidate wraps the smaller DataFrame with broadcast and joins it to the large DataFrame on id.\nThe candidate explains that broadcasting sends the smaller DataFrame to all nodes and avoids a shuffle for the join."
+    },
+    {
+      "question": "A GroupBy operation on skewed keys is creating hotspot partitions. How would you apply the post's salting technique?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The candidate adds an integer salt derived from rand() and groups by both key and salt before aggregating.\nThe candidate explains that including the salt in the grouping balances partitions and reduces the skew-induced hotspot."
+    },
+    {
+      "question": "What configuration and write pattern does the post present for dynamically overwriting date-partitioned Parquet data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate sets spark.sql.sources.partitionOverwriteMode to dynamic.\nThe candidate uses overwrite mode with partitionBy(\"date\") and the Parquet write format.\nThe candidate states that specific date partitions are replaced without affecting other partitions."
+    },
+    {
+      "question": "How would you construct the custom window used in the post to calculate a rolling average of sales by category?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The candidate partitions the window by category and orders it by date.\nThe candidate uses rowsBetween(-6, 0) to include the current row and six preceding rows.\nThe candidate applies avg(\"sales\") to that window and assigns the result to the rolling-average column."
+    },
+    {
+      "question": "How does the post demonstrate persistence with a storage level for an iterative ML pipeline?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The candidate uses df.persist(pyspark.StorageLevel.MEMORY_AND_DISK).\nThe candidate identifies MEMORY_AND_DISK as the selected storage level with memory and disk spillover.\nThe candidate does not invent a caching-versus-persist distinction because the post does not explain one."
+    },
+    {
+      "question": "How does the shown left-join condition explicitly manage null IDs?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The candidate combines df1.id == df2.id with df1.id.isNotNull() in the join condition.\nThe candidate uses a left join so the null check is applied without changing the stated join type.\nThe candidate explains that the condition prevents null left-side IDs from participating in matches and helps avoid incorrect results with incomplete data."
+    },
+    {
+      "question": "How is Adaptive Query Execution enabled, and what optimization does the post attribute to it?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The candidate sets spark.sql.adaptive.enabled to true.\nThe candidate explains that AQE optimizes query plans at runtime.\nThe candidate connects AQE to automatic performance improvements for skewed joins and aggregations."
+    },
+    {
+      "question": "How does the post use Delta Lake to support incremental warehouse updates, and what implementation detail is missing?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate loads the Delta table with DeltaTable.forPath, aliases the table and source DataFrames, and begins a merge condition on their id columns.\nThe candidate identifies the operation as an upsert pattern for streaming or batch warehouse updates.\nThe candidate acknowledges that the snippet ends with an ellipsis and does not show the complete merge operation."
+    },
+    {
+      "question": "When adjusting DataFrame partitions, how does the post distinguish repartition from coalesce?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate gives repartition(10, \"key\") as the partitioning example associated with parallelism.\nThe candidate gives coalesce(5) as the example for reducing partition count and shuffle overhead.\nThe candidate frames the choice as selecting between repartitioning for parallelism and coalescing to reduce partitions and shuffle overhead."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Delta Lake",
+      "Spark configuration and query optimization",
+      "Partitioned Parquet writes",
+      "Databricks"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2fe16ed2e6b662d5",
+    "saved_date": "2026-10-01T23:27:40Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326448338617147392",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

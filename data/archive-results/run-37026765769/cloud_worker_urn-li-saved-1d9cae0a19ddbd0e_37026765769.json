@@ -1,0 +1,68 @@
+{
+  "id": "urn-li-saved-1d9cae0a19ddbd0e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327232874330443776",
+    "captured_at": "2026-10-02T00:15:45.374025Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:49Z"
+  },
+  "original_text": "🔍 PySpark Interview Question Asked at AXA XL 💼\nHere's a real-world PySpark coding challenge straight from an AXA XL data engineering interview.\n This one tests your ability to explode arrays, group by multiple columns, and pivot for structured reporting — all in one go!\n✅ Key Concepts:\nexplode()\ngroupBy()\npivot()\nfillna()\n🧠 Great practice for data wrangling and transformation problems using PySpark!\n📸 Check out the question + solution in the image 👇\n 💬 Have you seen a similar one in your interviews?\n#PySpark #DataEngineering #ApacheSpark #BigData #InterviewPreparation #AXAXL #TechCareers #SQLToSpark #PivotInSpark",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327232874330443776_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a PySpark coding challenge attributed to an AXA XL data engineering interview. It says the challenge combines exploding arrays, grouping by multiple columns, and pivoting for structured reporting, and it also lists fillna() as a key concept. However, the referenced image containing the actual question and solution is absent from the supplied content, so the input data, expected output, implementation, and behavior of fillna() are not provided.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Data wrangling and transformation",
+      "Structured reporting"
+    ],
+    "subtopics": [
+      "Exploding arrays with explode()",
+      "Grouping by multiple columns with groupBy()",
+      "Pivoting with pivot()",
+      "Using fillna()"
+    ],
+    "concepts": [
+      "explode()",
+      "groupBy()",
+      "pivot()",
+      "fillna()",
+      "PySpark data wrangling and transformation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark data transformation",
+    "secondary_topics": [
+      "Array transformation",
+      "Grouping and aggregation",
+      "Pivot-based reporting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1d9cae0a19ddbd0e",
+    "saved_date": "2026-10-01T23:25:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327232874330443776",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327232874330443776_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

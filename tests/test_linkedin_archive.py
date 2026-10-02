@@ -1786,9 +1786,9 @@ class TestEnrichmentFanOut:
         ]
 
     def test_each_worker_gets_its_own_enricher(self):
-        from src.pipeline import _enricher_pool
+        from src.pipeline.orchestrate import _enricher_pool
 
-        pool = _enricher_pool()
+        pool = _enricher_pool(3)
 
         first = pool()
         second = pool()

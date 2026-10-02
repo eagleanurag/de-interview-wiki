@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-0a383af6d0f97ae9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328745757790965760",
+    "captured_at": "2026-10-02T00:15:44.654085Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:33Z"
+  },
+  "original_text": "Lead Consultant, AI Data Engineering @ Xebia | Data Architect | Data FDE | Databricks • Spark • Kafka • dbt • Airflow | Gen AI & Agentic Systems | AWS • Azure • GCP | Built 10PB+ Data Platforms | Open to EU Blue Card\n1yr •\nI’ve shared some real-world Python and SQL challenges that will be healpful for your next DE Interview\nExtracting patterns from strings using Python\nYOY % change calculation using SQL\nMerging and sorting lists in Python\nClean SQL and Python code examples for day-to-day tasks\nIf you're into data manipulation, analytics, or engineering, check it out.\n#Python #SQL #DataEngineering #Analytics #YOY #Regex #LinkedInLearning #MediumPost #DataEngineeringInterview\n…see more\nReal Interview Questions for Data Engineering Roles (Mid to Senior Level)- Part III\nmedium.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328745757790965760_slide_0.jpg",
+      "description": "PNG image, 448x217 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a brief promotional post about a data engineering interview resource. It mentions Python and SQL challenge topics, including extracting patterns from strings, calculating year-over-year percentage change, and merging and sorting lists, but it provides no technical explanations, code, or interview questions. The extracted media text is empty, so the substantive content appears incomplete.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0a383af6d0f97ae9",
+    "saved_date": "2026-10-01T23:22:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328745757790965760",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328745757790965760_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7328745757790965760_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

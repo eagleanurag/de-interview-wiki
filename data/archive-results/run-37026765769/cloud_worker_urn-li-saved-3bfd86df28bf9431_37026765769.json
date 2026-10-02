@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-saved-3bfd86df28bf9431",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327540020444049411",
+    "captured_at": "2026-10-02T00:15:46.679143Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:37Z"
+  },
+  "original_text": "AI/ML @ Under Armour | ex-Tesco | ML • Backend • LLMs • RAG • AI Agents • Cloud\n1yr •\nSolving a Classic PySpark Bottleneck: Data Skew in Action\nA few days ago, we ran into a familiar Spark issue: a newly built PySpark job was taking unusually long to complete—and then failed altogether.\nAt first, the logic looked fine. But a closer look at the Spark UI and logs revealed the real culprit: data skew.\nOne partition was carrying a disproportionately large chunk of data, leading to uneven task distribution and slow-running stragglers. A classic “80/20” problem—where a small percentage of data causes a large percentage of processing time.\nHere’s how I fixed it:\n→ Identified the skewed key using the Spark UI’s stage and task metrics\n→ Applied salting to distribute the load more evenly across partitions during joins\n→ Used broadcast joins where possible to reduce shuffles\n→ Tuned spark.sql.shuffle.partitions and enabled adaptive query execution (AQE)\nAfter these changes, the job completed in a fraction of the original time—with much more consistent performance.\nHere is a doc of how to debug spark jobs slow spark jobs.\nDoc Credit- LinkedIn\n#PySpark #DataEngineering #SparkJobs #DataSkew #BigData #PerformanceTuning #SparkUI Databricks #DebuggingTips\n…see more\nSpark optimisation",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327540020444049411_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes diagnosing and fixing data skew in a slow and failing PySpark job. One partition contained a disproportionate amount of data, causing uneven task distribution and stragglers. The reported remedies were identifying the skewed key through Spark UI stage and task metrics, salting skewed joins, using broadcast joins where possible, tuning spark.sql.shuffle.partitions, and enabling adaptive query execution. After these changes, the job reportedly completed in a fraction of its original time with more consistent performance.",
+    "topics": [
+      "Data engineering",
+      "Data skew"
+    ],
+    "subtopics": [
+      "Spark job debugging",
+      "Spark UI and log analysis",
+      "Join performance",
+      "Partition and shuffle tuning"
+    ],
+    "concepts": [
+      "Data skew",
+      "Spark UI stage and task metrics",
+      "Join salting",
+      "Broadcast joins",
+      "spark.sql.shuffle.partitions",
+      "Adaptive query execution"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A PySpark job is taking much longer than expected and then fails. How would you use the information in this post to investigate whether data skew is the cause?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Inspect the Spark UI's stage and task metrics and review the logs.\nLook for evidence that one partition contains a disproportionate share of the data.\nConnect the uneven partition load to slow-running stragglers and the job's excessive runtime."
+    },
+    {
+      "question": "What is data skew, and why can it make a Spark job slow?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Explain that data skew distributes data unevenly across partitions.\nDescribe how one oversized partition creates uneven task distribution and stragglers.\nRecognize that a small portion of the data can consume a large portion of processing time."
+    },
+    {
+      "question": "Which techniques does the post recommend for reducing the impact of skew during joins?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Apply salting so the join load is distributed more evenly across partitions.\nUse broadcast joins where possible to reduce shuffles."
+    },
+    {
+      "question": "Which Spark-level tuning changes are reported for improving the skewed PySpark job?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Tune the spark.sql.shuffle.partitions configuration.\nEnable adaptive query execution, also known as AQE.\nState the reported outcome that the job completed in a fraction of its original time with more consistent performance."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "PySpark data skew and performance optimization",
+    "secondary_topics": [
+      "Spark job debugging",
+      "Join optimization",
+      "Partition and shuffle tuning"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3bfd86df28bf9431",
+    "saved_date": "2026-10-01T23:23:37Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327540020444049411",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327540020444049411_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

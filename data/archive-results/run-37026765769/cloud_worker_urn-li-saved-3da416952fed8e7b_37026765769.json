@@ -1,0 +1,81 @@
+{
+  "id": "urn-li-saved-3da416952fed8e7b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343706350343921664",
+    "captured_at": "2026-10-02T00:15:46.738240Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:49Z"
+  },
+  "original_text": "🔥 𝐋𝐞𝐯𝐞𝐥 𝐔𝐩 𝐘𝐨𝐮𝐫 𝐃𝐚𝐭𝐚𝐛𝐫𝐢𝐜𝐤𝐬 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭 𝐰𝐢𝐭𝐡 𝐓𝐡𝐢𝐬 𝐎𝐧𝐞-𝐂𝐥𝐢𝐜𝐤 𝐒𝐞𝐜𝐮𝐫𝐞 𝐍𝐞𝐭𝐰𝐨𝐫𝐤𝐢𝐧𝐠 𝐒𝐞𝐭𝐮𝐩! 🔐🚀\n\nSay goodbye to complex networking configs! Microsoft has dropped an all-in-one 𝗔𝘇𝘂𝗿𝗲 𝗤𝘂𝗶𝗰𝗸𝘀𝘁𝗮𝗿𝘁 𝗧𝗲𝗺𝗽𝗹𝗮𝘁𝗲 that streamlines your Databricks 𝙙𝙚𝙥𝙡𝙤𝙮𝙢𝙚𝙣𝙩 𝙬𝙞𝙩𝙝 𝙑𝙉𝙚𝙩 𝙄𝙣𝙟𝙚𝙘𝙩𝙞𝙤𝙣, 𝙋𝙧𝙞𝙫𝙖𝙩𝙚 𝙀𝙣𝙙𝙥𝙤𝙞𝙣𝙩𝙨 & 𝙉𝘼𝙏 𝙂𝙖𝙩𝙚𝙬𝙖𝙮 — all in a single shot! 🎯⚡\n\nPerfect for data teams looking to:\n ✅ Launch secure, enterprise-ready Databricks workspaces\n ✅ Protect data with exfiltration controls\n ✅ Automate infrastructure with ease\n\n🛠️ Ready to deploy? Check it out here:\n 👉 Databricks All-in-One Template: https://lnkd.in/gNUG9Y-U\n\n#AzureDatabricks #SecureData #CloudArchitecture #VNetInjection #PrivateEndpoint #NATGateway #DataEngineering #DevOps #InfrastructureAsCode #MicrosoftAzure #QuickstartTemplate #CloudSecurity #ARM",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343706350343921664_slide_0.jpg",
+      "description": "JPEG image, 480x363 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post announces a Microsoft Azure foundational template for deploying Databricks with VNet injection, private endpoints, and a NAT gateway. It claims that the all-in-one template can simplify networking configuration, automate infrastructure, launch secure enterprise-ready workspaces, and provide data exfiltration controls. It does not provide implementation steps, configuration details, or explain how the individual security controls work.",
+    "topics": [
+      "Secure cloud architecture",
+      "Databricks networking",
+      "Infrastructure automation"
+    ],
+    "subtopics": [
+      "VNet injection",
+      "Private endpoints",
+      "NAT gateway",
+      "Data exfiltration controls",
+      "Infrastructure as code"
+    ],
+    "concepts": [
+      "Databricks VNet injection",
+      "Private endpoints",
+      "NAT gateway",
+      "Data exfiltration controls",
+      "Infrastructure as code"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the post claim the template supports secure enterprise Databricks workspaces?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The post associates the template with private networking components and data exfiltration controls.\nIt presents the result as a secure, enterprise-ready Databricks workspace without providing implementation details."
+    },
+    {
+      "question": "What operational problems is the Databricks template intended to address?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "It is intended to reduce the need for complex networking configuration.\nIt is intended to automate infrastructure and simplify the launch of Databricks workspaces."
+    }
+  ],
+  "classification": {
+    "domain": "Cloud data platform engineering",
+    "primary_topic": "Azure Databricks deployment",
+    "secondary_topics": [
+      "Cloud networking",
+      "Cloud security",
+      "Infrastructure automation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3da416952fed8e7b",
+    "saved_date": "2026-10-01T23:14:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343706350343921664",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343706350343921664_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

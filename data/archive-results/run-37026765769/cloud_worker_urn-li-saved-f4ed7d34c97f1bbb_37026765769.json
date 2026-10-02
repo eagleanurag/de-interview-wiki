@@ -1,0 +1,116 @@
+{
+  "id": "urn-li-saved-f4ed7d34c97f1bbb",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7289482734530412544",
+    "captured_at": "2026-10-02T00:15:53.290838Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:58Z"
+  },
+  "original_text": "100K+ @Linkedln🚀 | Software Developer | AI & Tech Content Creator | Helping Brands to Grow | Personal Branding Strategist on LinkedIn™ | Open for Collaboration\n1yr •\n10 Things you need to become an AI/ML engineer:\n1. Framing machine learning problems\n2. Weak supervision and active learning\n3. Processing, training, deploying, inference pipelines\n4. Offline evaluation and testing in production\n5. Performing error analysis. Where to work next\n6. Distributed training. Data and model parallelism\n7. Pruning, quantization, and knowledge distillation\n8. Serving predictions. Online and batch inference\n9. Monitoring models and data distribution shifts\n10. Automatic retraining and evaluation of models\nHere are 10 FREE courses you DO NOT want to miss:\n<>. Google Data Analytics:\n🔹https://lnkd.in/gdQQH5UU\n1. Introduction to Data Science\n- https://lnkd.in/g9r3YCKH\n2. IBM Data Science\n- https://lnkd.in/gCKESD_x\n3. Advanced Data Science with IBM\n- https://lnkd.in/gxc8-nH6\n4. Applied Data Science with Python\n- https://lnkd.in/gX_Q6CZc\n5. Data Science: Foundations using R\n- https://lnkd.in/g2aYiqmb\n6. Learn SQL Basics for Data Science\n- https://lnkd.in/g-x3XBGA\n7. Data Science Fundamentals with Python and SQL\n- https://lnkd.in/gDmzqhtJ\n8. Advanced Statistics for Data Science\n- https://lnkd.in/gQAFM-PT\n9. Mathematics for Machine Learning and Data Science\n- https://lnkd.in/gn7kEyFX\n10. Genomic Data Science\n- https://lnkd.in/g6YMKeHA\nHappy Learning! 🙌\n#mitcourses #freecourses #ibmdatascience #datascience #python #sql #statistics #genomic\n…see more\nMachine Learning Roadmap 🛣️",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7289482734530412544_slide_0.jpg",
+      "description": "JPEG image, 392x490 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a high-level roadmap of ten capabilities needed to become an AI/ML engineer and promotes ten free data science courses. The roadmap covers problem framing, weak supervision, active learning, machine learning pipelines, evaluation, error analysis, distributed training, parallelism, pruning, quantization, knowledge distillation, prediction serving, monitoring, distribution shifts, and automatic retraining. The courses cover introductory, applied, and advanced data science using topics including Python, SQL, R, statistics, mathematics, and genomic data science. The post does not provide definitions, implementation details, or comparisons for the listed techniques.",
+    "topics": [
+      "AI/ML engineering",
+      "Machine learning lifecycle",
+      "Model training and serving",
+      "Model monitoring and retraining",
+      "Data science courses"
+    ],
+    "subtopics": [
+      "Machine learning problem framing",
+      "Weak supervision and active learning",
+      "Processing, training, deployment, and inference pipelines",
+      "Offline evaluation and testing in production",
+      "Error analysis",
+      "Distributed training",
+      "Data parallelism and model parallelism",
+      "Pruning, quantization, and knowledge distillation",
+      "Online and batch inference",
+      "Monitoring models and data distribution shifts",
+      "Automatic model retraining and evaluation",
+      "Python, SQL, and R",
+      "Statistics and mathematics for machine learning",
+      "Genomic data science"
+    ],
+    "concepts": [
+      "Machine Learning Problem Framing",
+      "Weak Supervision and Active Learning",
+      "Machine Learning Pipelines",
+      "Evaluation, Testing, and Error Analysis",
+      "Distributed Training and Parallelism",
+      "Pruning, Quantization, and Knowledge Distillation",
+      "Online and Batch Inference",
+      "Monitoring and Data Distribution Shifts",
+      "Automatic Retraining and Evaluation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which technical capabilities does the post identify as important for becoming an AI/ML engineer?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies problem framing, weak supervision, active learning, machine learning pipelines, evaluation, error analysis, and distributed training.\nThe answer also identifies data parallelism, model parallelism, pruning, quantization, knowledge distillation, prediction serving, monitoring, distribution-shift detection, and automatic retraining and evaluation."
+    },
+    {
+      "question": "Which distributed-training strategies and model-efficiency techniques are included in the roadmap?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The distributed-training strategies named in the post are data parallelism and model parallelism.\nThe model-efficiency techniques named in the post are pruning, quantization, and knowledge distillation."
+    },
+    {
+      "question": "Which activities does the post identify for serving and operating deployed models?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes online inference and batch inference as the two named prediction-serving approaches.\nThe answer includes monitoring models and data distribution shifts.\nThe answer also includes automatic retraining and evaluation of models."
+    },
+    {
+      "question": "What evaluation and analysis activities are included in the AI/ML engineering roadmap?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer includes offline evaluation and testing in production.\nThe answer identifies error analysis and automatic model evaluation."
+    },
+    {
+      "question": "Which programming languages, statistical subjects, and applied data science areas are represented in the advertised course list?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The course list explicitly names Python, SQL, and R.\nThe list also includes statistics, mathematics for machine learning and data science, and genomic data science."
+    }
+  ],
+  "classification": {
+    "domain": "Artificial Intelligence and Machine Learning",
+    "primary_topic": "AI/ML engineering skills",
+    "secondary_topics": [
+      "Machine learning pipelines",
+      "Distributed training",
+      "Model serving",
+      "Model monitoring and retraining",
+      "Data science education"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f4ed7d34c97f1bbb",
+    "saved_date": "2026-10-01T23:36:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7289482734530412544",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7289482734530412544_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "urn-li-saved-4737325338a5facf",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340947122621489152",
+    "captured_at": "2026-10-02T00:15:47.255543Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:26Z"
+  },
+  "original_text": "I faced 3 tough rounds at Databricks for Data Engineer. \nHere’s what surprised me most...\n\nEach round pushed me to think deeper about data, not just code.\n\nHere’s how it went👇\n\n📍 Round 1: Big Data, SQL, and Coding\n - Questions about my project experience and the tools I used.\n - Write an SQL query to find customers with multiple same-day purchases.\n - How to join huge datasets in a distributed system.\n - What happens when you use CROSS JOIN on large data.\n - Handling a 100GB CSV in Python (without memory issues!).\n - Spark: repartitioning vs. coalescing—when to use which.\n\n📍 Round 2: Advanced Big Data + Real-Time Processing\n - Keeping data pipelines consistent and fault-tolerant.\n - How to fix and speed up a slow ETL pipeline.\n - Cloud experience: AWS or GCP, which services and why.\n - Streaming platforms: Apache Kafka stories.\n - Schema evolution in HBase or Cassandra.\n - Spark Streaming: windowed aggregations, fault-tolerance.\n\n📍 Round 3: System Design & Data Architecture\n - Design a system to track global ride locations in real time and make it scale and stay fast.\n - Build a data lake for analytics teams: what to consider for high availability.\n - How to create a smart recommendation system for riders.\n\nEven though I didn’t clear the last round, but I learned that interviewers don’t just ask questions that are technical, but they want to see how you solve big problems too.\n\nSo, if you want to prepare for Data Engineering at tech giants, and avoid the Rejection phase, prepare better with industry experts at Bosscoder Academy. \n\nCheck them here: https://bit.ly/4l35kQ2\n\nThey’ve helped 800+ professionals switch into top data roles with:\n💡 SQL, Python, Big Data, System Design\n💡 1:1 mentorship from experts at MAANG\n💡 Resume + LinkedIn + mock interview prep\n\nLet’s keep learning and building! Which round would challenge you the most?\n\n#Data #Databricks #Sql #Dataengineering #interviewexperience #sponsoredpost",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340947122621489152_slide_0.jpg",
+      "description": "JPEG image, 480x360 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This sponsored interview-experience post describes three Databricks Data Engineer rounds covering Big Data, SQL, coding, real-time processing, system design, and data architecture. It lists questions about distributed joins, CROSS JOIN, processing a 100GB CSV, Spark repartitioning and coalescing, resilient ETL, AWS or GCP, Apache Kafka, HBase or Cassandra schema evolution, Spark Streaming, real-time ride tracking, data-lake high availability, and rider recommendations. It provides no technical answers or implementations, and concludes by promoting Bosscoder Academy.",
+    "topics": [
+      "Databricks Data Engineer Interviews",
+      "Big Data",
+      "SQL and Python Coding",
+      "Distributed Systems",
+      "Apache Spark",
+      "Real-Time and Streaming Processing",
+      "ETL Pipelines",
+      "Cloud Platforms",
+      "Data Lakes",
+      "System Design and Data Architecture"
+    ],
+    "subtopics": [
+      "Same-day customer purchase detection",
+      "Distributed joins and CROSS JOIN",
+      "Large CSV processing in Python",
+      "Spark repartitioning versus coalescing",
+      "ETL performance, consistency, and fault tolerance",
+      "AWS and GCP service selection",
+      "Apache Kafka",
+      "Schema evolution in HBase and Cassandra",
+      "Spark Streaming windowed aggregations",
+      "Global ride-location tracking",
+      "Data-lake high availability",
+      "Rider recommendation systems"
+    ],
+    "concepts": [
+      "Same-day purchase detection with SQL",
+      "Distributed joins and CROSS JOIN",
+      "Memory-conscious processing of a large CSV",
+      "Spark repartitioning versus coalescing",
+      "Consistent and fault-tolerant ETL pipelines",
+      "AWS and GCP service selection",
+      "Apache Kafka experience",
+      "Schema evolution in HBase or Cassandra",
+      "Spark Streaming windowed aggregations",
+      "Real-time global ride-location tracking",
+      "High-availability analytics data lake",
+      "Rider recommendation system"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write an SQL query that identifies customers with multiple purchases made on the same day.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer provides valid SQL that returns customers with more than one purchase on the same day.\nThe answer explains how its logic identifies the qualifying customers."
+    },
+    {
+      "question": "How would you join huge datasets in a distributed system, and what happens when CROSS JOIN is used on large data?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "The answer explains how dataset size and distribution affect joins in a distributed system.\nThe answer describes the behavior and scale implications of CROSS JOIN on large datasets."
+    },
+    {
+      "question": "How would you process a 100GB CSV in Python without causing memory issues?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer presents a Python strategy for processing the 100GB CSV while controlling memory use.\nThe answer explains why the strategy avoids exhausting available memory."
+    },
+    {
+      "question": "When should you use repartitioning versus coalescing in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes repartitioning from coalescing.\nThe answer explains the conditions under which each operation is appropriate."
+    },
+    {
+      "question": "How would you keep an ETL pipeline consistent and fault-tolerant while diagnosing and improving a slow pipeline?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer describes measures for maintaining pipeline consistency and fault tolerance.\nThe answer explains how it would diagnose the cause of slow ETL performance and improve it."
+    },
+    {
+      "question": "How would you implement windowed aggregations with fault tolerance using Spark Streaming?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer explains how Spark Streaming performs windowed aggregations.\nThe answer describes how failures are handled to provide fault tolerance."
+    },
+    {
+      "question": "How would you design a real-time system for tracking global ride locations that scales and remains fast?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer provides an architecture for tracking ride locations globally in real time.\nThe answer explains how the design meets scalability and speed requirements."
+    },
+    {
+      "question": "What should be considered when building a high-availability data lake for analytics teams?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer identifies the high-availability requirements of the analytics data lake.\nThe answer explains how architectural choices provide those requirements."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks Data Engineer Interview Preparation",
+    "secondary_topics": [
+      "Big Data",
+      "SQL",
+      "Python",
+      "Apache Spark",
+      "Real-Time Processing",
+      "ETL Pipelines",
+      "System Design",
+      "Data Architecture",
+      "Data Lakes"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4737325338a5facf",
+    "saved_date": "2026-10-01T23:18:26Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340947122621489152",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340947122621489152_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "urn-li-archive-6994a0319aac4e2b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.276679Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:21Z"
+  },
+  "original_text": "🚀 My L2 Interview Experience at Impetus (Data Engineer | 2–5 YOE)\n\n✅ As I cleared L1 Data Engineer interview at Impetus and wanted to share my experience for L2 Round to help others in the community who are preparing for similar roles.\n\n🧠 Round Focus: SQL | PySpark | Python \n🔍 Questions I Was Asked:\n\n✅ SQL Scenarios:\n\nI was given 3 tables:\n Student(stdId, fname, lname, gpa, enrollmentDate, subjects)\n Subjects(stdId, subName, subStartDate)\n Scholarship(stdId, sAmount, sDate)\n\nThey asked me:\nDo all students receive a scholarship?\nFind the student(s) with maximum and minimum scholarship amount.\nHow many subjects can a student have?\nWhat SQL optimization techniques have you applied in your past work?\n\n✅ PySpark Questions:\n\nHow do you read a text file in PySpark?\nA CSV file has Name and Surname with commas inside values – how would you handle and clean such records?\nExample :\nCSV Format: Id,Name,SurName,DOB,Gender\nValue Contains: 1RavindraRaghuBanshi01-01-2020M\nEach column has fixed indexes. How would you extract and create separate columns?\nWrite code to perform a broadcast join.\nWhat optimization techniques do you follow in Spark?\nExplain Spark Architecture in detail.\n\n✅ Python Coding:\n\nFind the biggest word from given string?\nstring = 'I am going to office' → Expected Output: 'office'\nFind all prime numbers from given list of numbers?\n\n💡 Tip: Be prepared with hands-on coding, real-world examples, and optimization scenarios, especially around Spark, Delta Lake, and SQL.\n\n🤝 I hope this helps others preparing for Data Engineering interviews. \nIf you’ve been through something similar or are preparing for one. feel free to connect or drop a message!\n\nI’m truly enjoying this journey of continuous learning and interviewing 💪\nFeel free to connect or drop questions if you're preparing for similar roles!\n\n#DataEngineer #ImpetusTechnologies #SQL #PySpark #Python #InterviewExperience #LinkedInShare #CareerJourney\n#Repost",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a personal account of an L2 Data Engineer interview at Impetus for a 2–5 YOE role after clearing the L1 interview. It reports a focus on SQL, PySpark, and Python, including multi-table scholarship and subject scenarios, PySpark file reading and CSV parsing, fixed-index field extraction, a broadcast-join coding task, Spark optimization and architecture prompts, and two Python coding exercises. It also recommends hands-on coding, real-world examples, and optimization scenarios involving Spark, Delta Lake, and SQL. The post provides no worked answers or optimization details. Its CSV example is ambiguous because it mentions commas inside values but displays a concatenated value, and it does not provide the exact fixed indexes.",
+    "topics": [
+      "Data engineering interview preparation",
+      "SQL",
+      "PySpark",
+      "Python",
+      "Spark",
+      "Delta Lake"
+    ],
+    "subtopics": [
+      "SQL multi-table scenarios",
+      "Scholarship coverage",
+      "Maximum and minimum scholarship amounts",
+      "Counting subjects per student",
+      "SQL optimization",
+      "Text file reading with PySpark",
+      "CSV parsing and cleaning",
+      "Fixed-position field extraction",
+      "Broadcast joins",
+      "Spark optimization",
+      "Spark architecture",
+      "Largest-word detection",
+      "Prime-number filtering"
+    ],
+    "concepts": [
+      "Three-table student scholarship model",
+      "Universal scholarship coverage",
+      "Maximum and minimum scholarship amounts",
+      "Subjects per student",
+      "SQL optimization experience",
+      "PySpark text file reading",
+      "CSV parsing with embedded commas",
+      "Fixed-index column extraction",
+      "Broadcast join coding",
+      "Spark optimization and architecture",
+      "Largest word detection",
+      "Prime-number filtering",
+      "Delta Lake preparation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Using the Student and Scholarship tables, how would you determine whether every student has a scholarship?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer starts with all Student records and checks for corresponding Scholarship records through the shared stdId field.\nA strong answer explicitly accounts for students who have no matching scholarship record."
+    },
+    {
+      "question": "How would you find the student or students with the maximum and minimum scholarship amounts?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer compares the sAmount values in the Scholarship table and returns the associated stdId values for both extremes.\nA strong answer accounts for the plural wording by recognizing that more than one student may have an extreme amount."
+    },
+    {
+      "question": "How would you calculate how many subjects each student has using the Student and Subjects tables?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer relates Student.stdId to Subjects.stdId before calculating the subject count for each student.\nA strong answer uses the subject information in Subjects rather than relying on the Student.subjects field alone."
+    },
+    {
+      "question": "How would you use PySpark to read a text file?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer demonstrates the PySpark operation used to load the specified text file."
+    },
+    {
+      "question": "The CSV example contains commas inside values but also shows a concatenated, fixed-position record. How should a PySpark solution parse and clean it?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer first clarifies the actual record layout because the comma-delimited description and concatenated example are not consistent.\nFor the fixed-position version, a strong answer maps the appropriate boundaries to Id, Name, SurName, DOB, and Gender.\nA source-grounded answer notes that exact numeric indexes cannot be determined because the post does not provide them."
+    },
+    {
+      "question": "How would you write PySpark code to perform a broadcast join?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides PySpark code that explicitly performs a broadcast join rather than only describing it.\nA strong answer makes the inputs and join keys explicit because the post does not specify them."
+    },
+    {
+      "question": "How would you find the biggest word in the string 'I am going to office'?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer compares the words in the string by length and returns 'office' as required by the post."
+    },
+    {
+      "question": "How would you find all prime numbers from a given list in Python?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer examines each number in the supplied list and returns only the numbers that are prime.\nA source-grounded answer does not claim a specific result because the post provides neither an input list nor an expected output."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL",
+      "PySpark",
+      "Python",
+      "Spark",
+      "Delta Lake"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:6994a0319aac4e2b",
+    "saved_date": "2026-10-01T23:10:21Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "urn-li-archive-06dce9de1efe8316",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.841468Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:05Z"
+  },
+  "original_text": "Microsoft Interview Experience \nCompensation Range: 35LPA + 3L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n\n- Be prepared to talk about your experience\n- Be ready to answer technical questions\n- Be prepared to ask questions\n- Show enthusiasm and passion\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝟭\n\n- Be ready to solve coding problems on sql, python, pyspark.\n- How would you handle missing or invalid data in a data pipeline?\n- How do you secure data in a cloud environment?\n- How would you implement a binary search algorithm?\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝟮\n\n- How would you migrate a petabyte-scale database to Azure?\n- How would you implement real-time data ingestion in Azure using Event Hubs?\n- What are the best practices for optimizing storage costs in Azure Data Lake?\n\n𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗮𝗻𝗱 𝗱𝗲𝘀𝗶𝗴𝗻 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n\n- How would you architect a system that ingests and processes 1 TB of data daily?\n- Design a data pipeline that supports both batch and real-time processing.\n- Explain the impact of data skew in real-time stream processing.\n\n𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n\n- Tell me about a time you had to manage someone’s performance. ​\n- Describe an incident where you learned from your past mistakes. ​\n- How do you set and work toward your goals?\n\nIf you are preparing for Data Engineering interviews then you should check these Interview Experiences for 100+ Companies\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\n#dataengineering #interviews #jobs\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This brief Microsoft Data Engineer interview-experience post reports a compensation range of 35 LPA plus 3 L variable and an application made through referral. It recommends preparation for experience, technical, and candidate questions, then lists likely SQL, Python, and PySpark coding problems along with questions about data quality, cloud security, Azure migration, Event Hubs ingestion, Azure Data Lake costs, scalable architectures, batch and real-time processing, and data skew. It also lists behavioral and managerial questions. The post provides no answers or technical explanations, and the supplied content appears truncated after promotional text.",
+    "topics": [
+      "Data Engineering interview preparation",
+      "SQL, Python, and PySpark coding",
+      "Cloud data security",
+      "Azure database migration",
+      "Real-time ingestion with Azure Event Hubs",
+      "Azure Data Lake storage optimization",
+      "Scalable data architecture",
+      "Batch and real-time processing",
+      "Data skew",
+      "Behavioral and managerial interviewing"
+    ],
+    "subtopics": [
+      "Handling missing or invalid pipeline data",
+      "Implementing binary search",
+      "Migrating a petabyte-scale database to Azure",
+      "Implementing real-time ingestion using Event Hubs",
+      "Optimizing Azure Data Lake storage costs",
+      "Architecting ingestion and processing for 1 TB of data per day",
+      "Supporting batch and real-time processing in one pipeline",
+      "Explaining data skew in real-time stream processing",
+      "Managing performance",
+      "Reflecting on mistakes",
+      "Setting and pursuing goals"
+    ],
+    "concepts": [
+      "SQL, Python, and PySpark Coding",
+      "Binary Search",
+      "Missing or Invalid Pipeline Data",
+      "Cloud Data Security",
+      "Petabyte-Scale Database Migration to Azure",
+      "Real-Time Ingestion with Azure Event Hubs",
+      "Azure Data Lake Storage Cost Optimization",
+      "Daily Data Architecture at 1 TB Scale",
+      "Batch and Real-Time Pipeline Design",
+      "Data Skew"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you implement a binary search algorithm?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer should explain and implement the algorithm, while the post itself provides no implementation details."
+    },
+    {
+      "question": "How would you handle missing or invalid data in a data pipeline?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should give a concrete approach to missing or invalid pipeline data, but the post does not state such an approach."
+    },
+    {
+      "question": "How would you secure data in a cloud environment?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should identify concrete measures for securing cloud data, but the post names no measures."
+    },
+    {
+      "question": "How would you migrate a petabyte-scale database to Azure?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should outline an Azure migration approach suitable for a petabyte-scale database, but the post supplies no steps."
+    },
+    {
+      "question": "How would you implement real-time data ingestion in Azure using Event Hubs?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe a real-time ingestion implementation using Event Hubs, while the post provides no implementation details."
+    },
+    {
+      "question": "What are the best practices for optimizing storage costs in Azure Data Lake?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should present storage-cost optimization practices for Azure Data Lake, but the post does not list any practices."
+    },
+    {
+      "question": "How would you architect a system that ingests and processes 1 TB of data daily?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe an architecture capable of handling 1 TB of daily ingestion and processing, but the post gives no design."
+    },
+    {
+      "question": "How would you design a data pipeline that supports both batch and real-time processing?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain how a single pipeline design supports both processing modes, but the post offers no design."
+    },
+    {
+      "question": "What impact does data skew have in real-time stream processing?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain data skew and its effects on real-time stream processing, but the post provides neither a definition nor the effects."
+    },
+    {
+      "question": "Tell me about a time you had to manage someone's performance.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should provide a specific example of managing someone's performance, but the post includes no example."
+    },
+    {
+      "question": "Describe an incident where you learned from a past mistake.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe the incident, the mistake, and the learning, but the post supplies no incident."
+    },
+    {
+      "question": "How do you set and work toward your goals?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer should explain how goals are established and pursued, while the post provides no method or example."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "SQL, Python, and PySpark coding",
+      "Pipeline data quality",
+      "Cloud data security",
+      "Azure database migration",
+      "Real-time ingestion with Event Hubs",
+      "Azure Data Lake storage optimization",
+      "Scalable and batch/real-time data architectures",
+      "Data skew in stream processing",
+      "Behavioral and managerial interviewing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:06dce9de1efe8316",
+    "saved_date": "2026-10-01T23:20:05Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

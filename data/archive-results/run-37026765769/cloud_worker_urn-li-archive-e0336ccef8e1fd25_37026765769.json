@@ -1,0 +1,79 @@
+{
+  "id": "urn-li-archive-e0336ccef8e1fd25",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.766072Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:40Z"
+  },
+  "original_text": "Fractal Interview Experience.\nCompensation Range: 23LPA + 2L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n- SQL and Python assessment\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱\n- Medium-level SQL question\n- Pyspark code optimization\n- Discussion on Kafka architecture\n- Implement a custom function in PySpark\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱\n- Asked about project architecture\n- How to design a scalable ETL system from scratch\n- Followup on handling schema evolution in Delta Lake\n- Discussion about various azure services.\n\n𝟯𝗿𝗱 𝗥𝗼𝘂𝗻𝗱 (𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹)\n- Leadership and stakeholder management questions\n- Writing efficient test cases for ETL pipelines (Live coding)\n- Discussion on real-world project challenges and optimizations\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This appears to be a truncated Fractal Data Engineer interview experience reporting compensation of 23 LPA plus 2 L variable and an application made through referral. It describes a SQL and Python screening assessment followed by three rounds covering SQL, PySpark optimization, Kafka architecture, custom PySpark functions, project architecture, scalable ETL design, Delta Lake schema evolution, Azure services, stakeholder management, ETL test cases, and project challenges. The post lists interview subjects but does not provide technical answers, implementations, or outcomes.",
+    "topics": [
+      "Data Engineering interview process",
+      "SQL",
+      "Python",
+      "PySpark",
+      "Kafka",
+      "ETL systems",
+      "Delta Lake",
+      "Azure services",
+      "ETL testing"
+    ],
+    "subtopics": [
+      "SQL and Python assessment",
+      "PySpark code optimization",
+      "Kafka architecture",
+      "Custom PySpark functions",
+      "Project architecture",
+      "Scalable ETL design",
+      "Delta Lake schema evolution",
+      "ETL pipeline test cases",
+      "Real-world project challenges and optimizations",
+      "Leadership and stakeholder management"
+    ],
+    "concepts": [
+      "SQL and Python assessment",
+      "PySpark code optimization",
+      "Kafka architecture",
+      "Custom function in PySpark",
+      "Project architecture",
+      "Scalable ETL system design",
+      "Delta Lake schema evolution",
+      "Azure services",
+      "ETL pipeline test cases",
+      "Real-world project optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineer Interview Experience",
+    "secondary_topics": [
+      "SQL assessment",
+      "PySpark optimization",
+      "Kafka architecture",
+      "Scalable ETL design",
+      "Delta Lake schema evolution",
+      "Azure services",
+      "ETL pipeline testing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e0336ccef8e1fd25",
+    "saved_date": "2026-10-01T23:21:40Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

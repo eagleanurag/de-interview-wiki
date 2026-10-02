@@ -1,0 +1,146 @@
+{
+  "id": "urn-li-archive-d2cb56510ef02aca",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.423041Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:02Z"
+  },
+  "original_text": "These 20 PySpark questions are enough to crack 90% of Data Engineer interviews.”\nNo theory. Just real, practical challenges you’ll actually face.\n\n\n💻 20 Real PySpark Questions That Actually Get Asked\n 1. Filter records where status = 'active' and score > 80\n 2. Add a new column based on conditions (when / otherwise)\n 3. Count distinct users per day from a log table\n 4. Drop rows with nulls in a specific column\n 5. Join 2 DataFrames and select only common records\n 6. Write a DataFrame to Parquet partitioned by region\n 7. Read a nested JSON and flatten it into columns\n 8. Explode an array column and keep other columns intact\n 9. Repartition a DataFrame before writing to avoid small files\n 10. Broadcast a small lookup table before a join\n 11. Create a window function to get the latest record per user\n 12. Cache a DataFrame — and unpersist it later\n 13. Remove duplicate rows based on multiple columns\n 14. Apply a custom function using .withColumn()\n 15. Handle schema evolution when reading historical data\n 16. Find the top 3 selling products per category\n 17. Extract values from a struct field\n 18. Log number of records before and after filtering\n 19. Use .transform() to apply a pipeline of operations\n 20. Trigger an Airflow DAG after the PySpark job finishes\n\n⸻\n\n✅ These aren’t just for interviews — they are your day-to-day reality as a Data Engineer.\n\n\n\n\n#PySpark #DataEngineering #ApacheSpark #BigData #DEInterview #ETL #SparkJobs #SQL #InterviewPrep\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post claims that 20 practical PySpark challenges are enough to prepare for 90% of Data Engineer interviews. It lists tasks involving DataFrame transformation, aggregation, data quality, joins, Parquet, nested data, performance management, schema evolution, reusable pipelines, logging, and Airflow orchestration. It provides challenge descriptions only, without theory, code, worked answers, or expected schemas.",
+    "topics": [
+      "PySpark",
+      "Apache Spark DataFrames",
+      "Data transformation",
+      "Parquet",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Filtering and conditional columns",
+      "Distinct-user aggregation",
+      "Null removal and deduplication",
+      "Joins and broadcast lookup tables",
+      "Partitioned Parquet writes",
+      "Nested JSON, arrays, and structs",
+      "Repartitioning and small-file avoidance",
+      "Window functions and latest-record selection",
+      "Top-N results within categories",
+      "Caching and unpersisting",
+      "Schema evolution",
+      "Custom and reusable transformations",
+      "Record-count logging",
+      "Airflow DAG triggering"
+    ],
+    "concepts": [
+      "Conditional DataFrame transformation",
+      "Distinct daily user counting",
+      "Null removal",
+      "Common-record DataFrame joins",
+      "Broadcast lookup tables",
+      "Partitioned Parquet output",
+      "Nested JSON flattening",
+      "Array explosion",
+      "Struct field extraction",
+      "Repartitioning for small-file avoidance",
+      "Latest-record windowing",
+      "Top-N results within groups",
+      "DataFrame cache lifecycle",
+      "Multi-column deduplication",
+      "Custom column functions",
+      "Historical schema evolution",
+      "Reusable transformation pipelines",
+      "Record-count logging"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write a PySpark transformation that keeps only active records with scores above 80 and adds a column based on conditional cases?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The filter retains a row only when its status is active and its score is greater than 80.\nThe new column is derived with when/otherwise logic based on the required conditions."
+    },
+    {
+      "question": "How would you count distinct users for each day from a log table?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The aggregation groups the log data by day.\nUnique users are counted within each day rather than counting every log record."
+    },
+    {
+      "question": "How would you process nested JSON, flatten nested content into columns, explode an array without losing other columns, and extract a struct value?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The nested JSON is read and its nested content is flattened into separate columns.\nArray records are exploded while the other DataFrame columns remain intact.\nThe required value is selected from the struct field."
+    },
+    {
+      "question": "How would you join two DataFrames to retain only common records, and how would you use a small lookup table in the join?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The join retains only records found in both DataFrames.\nThe small lookup table is broadcast before the join."
+    },
+    {
+      "question": "How would you write a DataFrame as region-partitioned Parquet while avoiding small files?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The output is written in Parquet format and partitioned by the region column.\nThe DataFrame is repartitioned before writing when the goal is to avoid small files."
+    },
+    {
+      "question": "How would you use window functions to obtain the latest record per user and the top three selling products per category?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A window function identifies the latest record within each user.\nThe products are ranked within each category and limited to the top three sellers."
+    },
+    {
+      "question": "How would you cache a PySpark DataFrame and release it later in the workflow?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The DataFrame is cached for use within the workflow.\nThe cached DataFrame is explicitly unpersisted when it is no longer needed."
+    },
+    {
+      "question": "How would you handle schema evolution when reading historical data with PySpark?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The reading logic accommodates schema differences between historical and newer data.\nThe solution explicitly addresses how schema changes are handled rather than assuming one unchanged structure."
+    },
+    {
+      "question": "How would you use .transform() to create a reusable operation pipeline and log record counts around filtering?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The .transform() method applies the defined pipeline of DataFrame operations.\nRecord counts are logged before and after the filtering stage."
+    },
+    {
+      "question": "How would you orchestrate an Airflow DAG to run only after a PySpark job finishes?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Successful completion of the PySpark job is a prerequisite for triggering the Airflow DAG.\nThe DAG is not triggered before the PySpark job has finished."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark DataFrames",
+      "Data transformation",
+      "Parquet",
+      "Airflow orchestration",
+      "Data engineering interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d2cb56510ef02aca",
+    "saved_date": "2026-10-01T23:11:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

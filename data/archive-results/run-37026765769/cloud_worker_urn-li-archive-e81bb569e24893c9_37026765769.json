@@ -1,0 +1,77 @@
+{
+  "id": "urn-li-archive-e81bb569e24893c9",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.884259Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:44Z"
+  },
+  "original_text": "🗓️ Another day, another real SQL interview question – continuing my series of practical SQL challenges I’ve come across during GCP Data Engineer interviews.\n\n\n🔶 Question 5: Sales Difference Month Over Month\n\nYou’re given a table with monthly sales data.\nYour task is to add a column that shows the difference between the current month’s sales and the previous month’s sales for each product.\n\n🧾 Input Table: monthly_sales\n\n| product_id | month | sales |\n|------------|-----------|-------|\n| A | January | 100 |\n| A | February | 130 |\n| A | March | 120 |\n| B | January | 80 |\n| B | February | 70 |\n| B | March | 90 |\n\n\n✅ Expected Output:\n\n| product_id | month | sales | sales_diff \n|------------|-----------|-------|------------|\n| A | January | 100 | NULL \n| A | February | 130 | 30 \n| A | March | 120 | -10 \n| B | January | 80 | NULL \n| B | February | 70 | -10 \n| B | March | 90 | 20 \n\n📌 Use SQL window functions or any logic that works — just make sure it handles multiple products properly.\n\n\n---\n\n💬 If you get stuck, feel free to drop a comment — happy to help out!\n👉 And follow me to stay updated — more practical SQL + GCP Data Engineering questions coming up daily.\n\n#sql #windowfunctions #dataengineering #bigquery #sqlinterview #gcpdataengineer #sqlchallenge #interviewprep #analyticsjobs",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a practical SQL interview question about calculating the difference between each product's current-month sales and previous-month sales. It provides a three-month input table for products A and B, the expected sales_diff values, and asks for a SQL window-function solution or equivalent logic that handles multiple products. The first month for each product has a NULL difference because no previous month exists.",
+    "topics": [
+      "SQL",
+      "SQL window functions",
+      "Month-over-month sales calculations",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Product-level partitioning",
+      "Previous-month comparison",
+      "First-month NULL handling",
+      "Expected-output validation"
+    ],
+    "concepts": [
+      "Product-scoped month-over-month difference",
+      "Window-function calculation",
+      "NULL for the first available month",
+      "Current value minus previous value"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write a query that adds a sales_diff column showing the difference between each product's current-month sales and previous-month sales?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "They use a SQL window-function approach or equivalent logic to access the previous row within each product.\nThey keep the rows for different products separate rather than comparing one product with another.\nThey process the months in chronological order and calculate current sales minus previous sales."
+    },
+    {
+      "question": "What value should sales_diff have for the first month of each product, and why?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "They state that the first month for each product should have a NULL sales_diff.\nThey explain that no previous month exists for the first row of each product."
+    },
+    {
+      "question": "How would you validate that the query produces the expected results for products A and B?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "They verify that product A has differences of 30 for February and -10 for March.\nThey verify that product B has differences of -10 for February and 20 for March.\nThey confirm that both January rows have NULL differences and that values are not mixed between products."
+    }
+  ],
+  "classification": {
+    "domain": "data engineering",
+    "primary_topic": "SQL window functions",
+    "secondary_topics": [
+      "Month-over-month sales calculations",
+      "Product-level partitioning",
+      "SQL interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e81bb569e24893c9",
+    "saved_date": "2026-10-01T23:14:44Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "urn-li-archive-1ab377621391d495",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.126948Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:02Z"
+  },
+  "original_text": "📌 𝗘𝗬 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 (𝟯–𝟰 𝗬𝗲𝗮𝗿𝘀 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲)\n.\n.\n.\n.\n🔹 𝗦𝗤𝗟 & 𝗗𝗮𝘁𝗮 𝗠𝗮𝗻𝗶𝗽𝘂𝗹𝗮𝘁𝗶𝗼𝗻\n\nWhat is the difference between RANK(), DENSE_RANK(), and ROW_NUMBER()?\nHow would you find the second highest salary from an employee table?\nWrite a SQL query to find duplicate records in a table.\nWhat is a CTE? When would you use it over subqueries?\nExplain different types of SQL joins with real-time examples.\n\n🔹 𝗣𝘆𝘁𝗵𝗼𝗻 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴\n\nHow would you handle missing values in a large dataset using Python?\nExplain the difference between list, tuple, set, and dictionary.\nWhat are Python generators? How are they useful in data pipelines?\nHow would you optimize a large data transformation using Pandas?\nExplain multithreading vs multiprocessing in Python.\n\n🔹 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 & 𝗕𝗶𝗴 𝗗𝗮𝘁𝗮\n\nDifference between RDD, DataFrame, and Dataset in PySpark?\nHow do you handle skewed data in Spark?\nWhat are broadcast variables and accumulators?\nExplain the Spark execution flow (Job → Stage → Task).\nHow do you optimize a PySpark job?\n\n🔹 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴\n\nWhat are the key components of Azure Data Factory?\nDifference between Azure Blob Storage and Azure Data Lake?\nHow does Azure Databricks integrate with ADF?\nWhat are triggers and pipelines in Azure Data Factory?\nExplain Delta Lake. Why is it used?\n\n🔹 𝗗𝗮𝘁𝗮 𝗠𝗼𝗱𝗲𝗹𝗶𝗻𝗴 & 𝗪𝗮𝗿𝗲𝗵𝗼𝘂𝘀𝗶𝗻𝗴\n\nWhat is the difference between OLTP and OLAP?\nExplain Star Schema vs Snowflake Schema.\nWhat is data partitioning and bucketing?\nWhat is Slowly Changing Dimension (SCD) Type 2?\nHow would you design a data warehouse for a retail chain?\n\n🔹 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼-𝗕𝗮𝘀𝗲𝗱 / 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝗿𝗮𝗹\n\nHow do you handle a failed pipeline in production?\nDescribe a time you optimized a data job and improved performance.\nHave you ever dealt with data duplication issues? How did you fix it?\nHow do you ensure data quality in your ETL processes?\nWhat is your approach to version control and deployment of data pipelines?\n\n#InterviewPreparation #DataEngineer #EY\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "An EY-branded interview question bank for data engineer candidates with 3–4 years of experience. It groups prompts into SQL and data manipulation, Python, PySpark and Spark, Azure data engineering, data modeling and warehousing, and production or behavioral topics. The supplied content contains questions only, without answers, definitions, SQL code, examples, or implementation details, and ends with “see more,” indicating that the displayed post may be incomplete.",
+    "topics": [
+      "SQL and data manipulation",
+      "Python for data engineering",
+      "PySpark and Spark",
+      "Azure data engineering",
+      "Data modeling and data warehousing",
+      "Production data pipelines and behavioral interviewing"
+    ],
+    "subtopics": [
+      "SQL ranking functions and salary-ordering queries",
+      "Duplicate-record detection",
+      "CTEs, subqueries, and SQL joins",
+      "Missing-value handling in large datasets",
+      "Python collections and generators",
+      "Pandas transformation optimization",
+      "Multithreading and multiprocessing",
+      "RDD, DataFrame, and Dataset abstractions",
+      "Skewed data, broadcast variables, and accumulators",
+      "Spark Job → Stage → Task execution flow",
+      "PySpark job optimization",
+      "Azure Data Factory components, triggers, and pipelines",
+      "Azure Blob Storage and Azure Data Lake",
+      "Azure Databricks integration with ADF",
+      "Delta Lake",
+      "OLTP and OLAP",
+      "Star Schema and Snowflake Schema",
+      "Partitioning, bucketing, and SCD Type 2",
+      "Retail data warehouse design",
+      "Pipeline failures, data quality, duplication, version control, and deployment"
+    ],
+    "concepts": [
+      "RANK(), DENSE_RANK(), and ROW_NUMBER()",
+      "Second-highest salary query",
+      "Duplicate-record detection",
+      "CTE versus subquery",
+      "SQL joins",
+      "Missing-value handling",
+      "Python list, tuple, set, and dictionary",
+      "Python generators",
+      "Pandas transformation optimization",
+      "Multithreading versus multiprocessing",
+      "RDD, DataFrame, and Dataset in PySpark",
+      "Skewed data in Spark",
+      "Broadcast variables and accumulators",
+      "Spark Job → Stage → Task execution flow",
+      "PySpark job optimization",
+      "Azure Data Factory components",
+      "Azure Blob Storage versus Azure Data Lake",
+      "Azure Databricks integration with Azure Data Factory",
+      "Azure Data Factory triggers and pipelines",
+      "Delta Lake",
+      "OLTP versus OLAP",
+      "Star Schema versus Snowflake Schema",
+      "Data partitioning and bucketing",
+      "Slowly Changing Dimension Type 2",
+      "Retail-chain data warehouse design",
+      "Production pipeline failure handling",
+      "Data duplication troubleshooting",
+      "ETL data quality",
+      "Data pipeline version control and deployment"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between RANK(), DENSE_RANK(), and ROW_NUMBER() in SQL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer compares the behavior of all three ranking functions."
+    },
+    {
+      "question": "How would you write a SQL query to find the second-highest salary in an employee table?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides a SQL query and explains how it returns the second-highest salary from the employee table."
+    },
+    {
+      "question": "What is a CTE, and when would you use it instead of a subquery?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines a CTE and explains when it is preferable to a subquery."
+    },
+    {
+      "question": "What are Python generators, and how can they be useful in data pipelines?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines a Python generator and explains its usefulness in a data pipeline."
+    },
+    {
+      "question": "What is the Spark execution flow from Job → Stage → Task?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer describes the Job → Stage → Task hierarchy and explains the role of each level."
+    },
+    {
+      "question": "What are triggers and pipelines in Azure Data Factory, and how do they differ?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes ADF triggers from ADF pipelines and explains the role of each."
+    },
+    {
+      "question": "What is Delta Lake, and why is it used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains Delta Lake and identifies the reason for its use."
+    },
+    {
+      "question": "What is the difference between OLTP and OLAP?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer clearly contrasts OLTP and OLAP."
+    },
+    {
+      "question": "How would you handle a failed data pipeline in production?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer describes a concrete response to a pipeline failure in production."
+    },
+    {
+      "question": "How do you ensure data quality in ETL processes?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer describes checks or controls used during ETL processes to protect data quality."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL and data manipulation",
+    "secondary_topics": [
+      "Python for data engineering",
+      "PySpark and Spark",
+      "Azure data engineering",
+      "Data modeling and data warehousing",
+      "Production pipeline operations and data quality"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:1ab377621391d495",
+    "saved_date": "2026-10-01T23:20:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

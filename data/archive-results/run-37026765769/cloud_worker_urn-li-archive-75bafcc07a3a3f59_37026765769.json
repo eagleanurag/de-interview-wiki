@@ -1,0 +1,133 @@
+{
+  "id": "urn-li-archive-75bafcc07a3a3f59",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.515954Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:56Z"
+  },
+  "original_text": "Capgemini – Azure Data Engineer Interview Questions (L1 Round)\n📌 These are actual questions from recent Capgemini screening rounds — be ready to nail them!\n\n\n---\n\n🧠 Topics Covered: ADF, Databricks, Azure Storage, SQL, Monitoring\n\n1️⃣ How does parameterization work in Azure Data Factory (datasets, pipelines, linked services)?\n2️⃣ What are the key differences between Mapping Data Flows vs Data Flow Activities in ADF?\n3️⃣ How do you debug failures in ADF — what steps do you take to isolate the issue?\n4️⃣ What’s the difference between Azure Blob Storage and ADLS Gen2 in terms of performance and security?\n5️⃣ How do you handle incremental loads in ADF using a watermark or timestamp column?\n6️⃣ What are Mount Points in Azure Databricks, and how do you use them with ADLS?\n7️⃣ Write a SQL query to find second highest salary from an employee table.\n8️⃣ What are the different Integration Runtime types in ADF and their use cases?\n9️⃣ How do you trigger a Databricks notebook from ADF and pass values into it?\n🔟 What is the use of activity dependency conditions (e.g., success, failure, completion) in pipeline flows?",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post lists ten questions described as recent Capgemini L1 screening questions for an Azure Data Engineer role. It covers Azure Data Factory parameterization, flow types, debugging, incremental loads, Integration Runtime types, and dependency conditions; Azure Blob Storage versus ADLS Gen2; Azure Databricks mount points and notebook invocation; and one SQL coding task. It provides no answers, code, or technical explanations. Although Monitoring is named as a covered topic, no separate monitoring question appears.",
+    "topics": [
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Storage",
+      "SQL",
+      "Monitoring"
+    ],
+    "subtopics": [
+      "ADF parameterization",
+      "Mapping Data Flows and Data Flow Activities",
+      "ADF debugging and failure isolation",
+      "Azure Blob Storage and ADLS Gen2",
+      "Incremental loads with watermarks or timestamps",
+      "Databricks mount points with ADLS",
+      "Finding the second-highest salary with SQL",
+      "ADF Integration Runtime types",
+      "Triggering Databricks notebooks from ADF",
+      "Pipeline activity dependency conditions"
+    ],
+    "concepts": [
+      "ADF parameterization",
+      "Mapping Data Flows versus Data Flow Activities",
+      "ADF failure debugging",
+      "Azure Blob Storage versus ADLS Gen2",
+      "Incremental loads with watermarks or timestamps",
+      "Databricks mount points with ADLS",
+      "Second-highest salary query",
+      "ADF Integration Runtime types",
+      "Triggering a Databricks notebook from ADF",
+      "Pipeline activity dependency conditions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does parameterization work in Azure Data Factory datasets, pipelines, and linked services?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The response explains how parameters are used across datasets, pipelines, and linked services in Azure Data Factory."
+    },
+    {
+      "question": "What are the key differences between Mapping Data Flows and Data Flow Activities in Azure Data Factory?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The response identifies the relevant differences between Mapping Data Flows and Data Flow Activities."
+    },
+    {
+      "question": "How would you debug and isolate a failure in Azure Data Factory?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The response describes practical steps for isolating the cause of an Azure Data Factory failure."
+    },
+    {
+      "question": "How do Azure Blob Storage and ADLS Gen2 differ in terms of performance and security?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The response compares the performance characteristics of Azure Blob Storage and ADLS Gen2.\nThe response compares the security characteristics of Azure Blob Storage and ADLS Gen2."
+    },
+    {
+      "question": "How do you handle an incremental load in Azure Data Factory using a watermark or timestamp column?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The response explains how a watermark or timestamp column can be used to identify records for an incremental load."
+    },
+    {
+      "question": "What are mount points in Azure Databricks, and how are they used with ADLS?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The response defines Databricks mount points.\nThe response explains how mount points are used with ADLS."
+    },
+    {
+      "question": "Write a SQL query that finds the second-highest salary from an employee table.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response provides a SQL query that uses the employee table to return the second-highest salary."
+    },
+    {
+      "question": "What are the different Integration Runtime types in Azure Data Factory, and what are their use cases?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The response identifies the Integration Runtime types available in Azure Data Factory.\nThe response explains the use case for each Integration Runtime type."
+    },
+    {
+      "question": "How do you trigger an Azure Databricks notebook from Azure Data Factory and pass values into it?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The response explains how Azure Data Factory triggers an Azure Databricks notebook.\nThe response explains how values are passed from Azure Data Factory into the notebook."
+    },
+    {
+      "question": "What is the purpose of success, failure, and completion dependency conditions in Azure Data Factory pipeline flows?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The response explains how success, failure, and completion conditions control activity execution in a pipeline flow."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Factory",
+    "secondary_topics": [
+      "Azure Databricks",
+      "Azure Storage",
+      "SQL",
+      "Data pipeline debugging and monitoring"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:75bafcc07a3a3f59",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

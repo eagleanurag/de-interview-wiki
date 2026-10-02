@@ -1,0 +1,151 @@
+{
+  "id": "urn-li-archive-4cd9f54f74c1942e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.849140Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:53Z"
+  },
+  "original_text": "Give me 2 minutes, I will explain you\n\n25 data terminologies that you need to know as a Data Engineer!\n\n⇥ Data Ingestion – Collecting and importing data from various sources into a storage system (e.g., databases, data lakes)\n\n⇥ ETL (Extract, Transform, Load) – Extracting raw data, transforming it into a usable format, and loading it into a destination system\n\n⇥ ELT (Extract, Load, Transform) – Unlike ETL, data is first loaded into a storage system (like a data lake) before transformation\n\n⇥ Data Pipeline – A series of steps that automate data movement and transformation from one system to another\n\n⇥ Batch Processing – Processing large volumes of data at scheduled intervals rather than in real-time\n\n⇥ Stream Processing – Processing data in real-time as it arrives, often used for live analytics\n\n⇥ Data Lake – A centralized repository that stores raw, structured, and unstructured data for later use\n\n⇥ Data Warehouse – A structured repository optimized for querying and analytics, storing processed data\n\n⇥ Data Mart – A subset of a data warehouse, focused on a specific business domain or department\n\n⇥ OLTP (Online Transaction Processing) – A system designed for handling real-time transactional data, like banking systems\n\n⇥ OLAP (Online Analytical Processing) – A system designed for complex queries and analytical workloads, often used in reporting\n\n⇥ Indexing – A technique to improve database query performance by creating a structured way to access data quickly\n\n⇥ Sharding – Splitting large datasets into smaller, manageable chunks across multiple servers to improve performance\n\n⇥ Partitioning – Dividing a large dataset into smaller parts within a single database to improve query efficiency\n\n⇥ Caching – Temporarily storing frequently accessed data in memory to boost system performance\n\n⇥ Data Governance – Policies ensuring data quality, security, and compliance across an organization\n\n⇥ Data Lineage – Tracking where data originates, how it moves, and how it is transformed\n\n⇥ Schema Evolution – The ability to modify a database or data warehouse structure without affecting existing data\n\n⇥ Big Data – Large and complex datasets requiring specialized tools (e.g., Hadoop, Spark) for processing\n\n⇥ Data Mesh – A decentralized architecture treating data as a product, allowing domain-oriented data ownership\n\n⇥ Data Lakehouse – A hybrid architecture combining the features of data lakes and data warehouses for better flexibility and performance\n\n⇥ Metadata – Data about data, providing information such as structure, source, and usage details\n\n⇥ Data Modeling – Designing a structured format for storing and managing data efficiently\n\n⇥ Data Orchestration – Coordinating various data workflows, often using tools like Apache Airflow\n\n⇥ Lambda Architecture – A data processing architecture handling both real-time and batch data\n\nGet the Interview Call: https://lnkd.in/ges-e-7J\nJoin me: https://lnkd.in/giE3e9yH\nFollow for more 👋\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a concise introductory glossary of 25 Data Engineering terms. It covers ingestion, ETL and ELT, pipelines, processing models, storage systems, analytics workloads, database performance techniques, governance, metadata, and data architectures. It also names Hadoop, Spark, and Apache Airflow as examples but does not provide implementation details.",
+    "topics": [
+      "Data ingestion and integration",
+      "Data processing",
+      "Data storage",
+      "Analytics systems",
+      "Database performance and scalability",
+      "Data governance and metadata",
+      "Data modeling",
+      "Data architecture",
+      "Big data processing",
+      "Data orchestration"
+    ],
+    "subtopics": [
+      "ETL and ELT",
+      "Data pipelines",
+      "Batch and stream processing",
+      "Data lakes, warehouses, data marts, and data lakehouses",
+      "OLTP and OLAP",
+      "Indexing, sharding, partitioning, and caching",
+      "Data governance and data lineage",
+      "Schema evolution and metadata",
+      "Big data tools",
+      "Data Mesh",
+      "Lambda Architecture",
+      "Data orchestration with Apache Airflow"
+    ],
+    "concepts": [
+      "Data Ingestion",
+      "ETL",
+      "ELT",
+      "Data Pipeline",
+      "Batch Processing",
+      "Stream Processing",
+      "Data Lake",
+      "Data Warehouse",
+      "Data Mart",
+      "OLTP",
+      "OLAP",
+      "Indexing",
+      "Sharding",
+      "Partitioning",
+      "Caching",
+      "Data Governance",
+      "Data Lineage",
+      "Schema Evolution",
+      "Big Data",
+      "Data Mesh",
+      "Data Lakehouse",
+      "Metadata",
+      "Data Modeling",
+      "Data Orchestration",
+      "Lambda Architecture"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do data ingestion, ETL, and ELT differ?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Data ingestion collects and imports data from sources into a storage system.\nETL extracts raw data, transforms it into a usable format, and loads it into a destination system.\nELT loads data into a storage system before performing the transformation."
+    },
+    {
+      "question": "What is a data pipeline, and how do batch processing and stream processing differ?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A data pipeline is a series of steps that automates data movement and transformation between systems.\nBatch processing handles large data volumes at scheduled intervals rather than in real time.\nStream processing handles data in real time as it arrives and is often used for live analytics."
+    },
+    {
+      "question": "How do data lakes, data warehouses, data marts, and data lakehouses differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A data lake stores raw, structured, and unstructured data in a centralized repository for later use.\nA data warehouse stores processed data in a structured repository optimized for querying and analytics.\nA data mart is a subset of a data warehouse focused on a particular business domain or department.\nA data lakehouse combines features of data lakes and data warehouses."
+    },
+    {
+      "question": "What is the difference between OLTP and OLAP?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "OLTP handles real-time transactional workloads such as banking transactions.\nOLAP supports complex analytical queries and workloads such as reporting."
+    },
+    {
+      "question": "How do indexing, sharding, partitioning, and caching improve data systems?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Indexing creates a structured way to access data quickly and improves database query performance.\nSharding splits large datasets across multiple servers to improve performance.\nPartitioning divides a large dataset into smaller parts within a single database to improve query efficiency.\nCaching temporarily keeps frequently accessed data in memory to improve system performance."
+    },
+    {
+      "question": "How do data governance, data lineage, and metadata support data management?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Data governance establishes policies for data quality, security, and compliance.\nData lineage tracks the origin, movement, and transformations of data.\nMetadata describes data through information such as its structure, source, and usage."
+    },
+    {
+      "question": "What is the purpose of schema evolution and data modeling?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Schema evolution allows a database or data warehouse structure to be modified without affecting existing data.\nData modeling designs a structured format for storing and managing data efficiently."
+    },
+    {
+      "question": "What characteristics define Data Mesh, Data Lakehouse, and Lambda Architecture?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Data Mesh is a decentralized architecture that treats data as a product and supports domain-oriented ownership.\nData Lakehouse combines data lake and data warehouse features to provide flexibility and performance.\nLambda Architecture handles both real-time and batch data."
+    },
+    {
+      "question": "Which tools does the post associate with big data processing and data orchestration?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Hadoop and Spark are cited as specialized tools for processing big data.\nApache Airflow is cited as a tool commonly used for data orchestration."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Fundamentals",
+    "secondary_topics": [
+      "Data Integration and Pipelines",
+      "Batch and Stream Processing",
+      "Data Storage and Analytics",
+      "Database Performance and Scalability",
+      "Data Governance and Metadata",
+      "Data Architecture"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4cd9f54f74c1942e",
+    "saved_date": "2026-10-01T23:30:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

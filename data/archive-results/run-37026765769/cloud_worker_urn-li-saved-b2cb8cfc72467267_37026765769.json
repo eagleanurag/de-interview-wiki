@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-saved-b2cb8cfc72467267",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327179336220860417",
+    "captured_at": "2026-10-02T00:15:50.867680Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:49Z"
+  },
+  "original_text": "• 1st\nMicrosoft Fabric Data Architect | Freelance Data Consultant | Azure Data Architect | Azure Data Engineer | Databricks Architect | Power BI\n1yr •\nReady to Crack Your Next Azure Data Engineer Interview??🌟\nIf you're aiming for success in Azure Data Engineer interviews, it's all about mastering real-world scenarios and practical challenges. To help you out, here are a few must-know questions to test your knowledge:\n🔑 Sample Questions\n1️⃣ How would you design a scalable ETL pipeline using Azure Data Factory to process terabytes of data daily?\n2️⃣ Explain how you would handle schema drift in Azure Data Factory for dynamic datasets.\n3️⃣ What are the best practices for optimizing Spark jobs in Azure Databricks for large-scale data processing??\n💡 These are just a glimpse of the 25 most important questions that cover:\n- Azure Data Factory\n- Azure Databricks\n- Azure Synapse Analytics\n- PySpark and More\n📄 Want the complete list with detailed answers to ace your interview?\n👉 Check out the PDF now and take a step closer to success!\nLet me know your thoughts or which topic you'd like to deep dive into next!!\n🚀 Want to ace this and more??\n📥 Grab the PDF with all the steps and insights here:\n👉 [Attach your PDF link via Tompate with 25% discount code: Nitya21]\nhttps://lnkd.in/d9gaEB_H\n✨ What’s inside:\n✅ Step-by-step guidance for this and other must-know Azure scenarios.\n✅ Structured insights to help you tackle even the toughest interview questions.\nProven Success: Hundreds of professionals have cracked their interviews using this guide. Don’t miss out—this could be your key to success!\n✅ Repost if you found this useful\n🚀 Follow Aditya Chandak\n#Azure #DataEngineering #DataFactory #Databricks #Synapse #PySpark #CareerGrowth\n…see more\nData Engineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327179336220860417_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post advertises a PDF containing 25 Azure Data Engineer interview questions and detailed answers. The visible content provides three sample questions about large-scale ETL, schema drift, and Spark optimization, but it does not provide the answers, implementation details, or the claimed 25-question list.",
+    "topics": [
+      "Azure Data Engineering",
+      "Data Engineering Interview Preparation",
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Synapse Analytics",
+      "PySpark"
+    ],
+    "subtopics": [
+      "Scalable ETL Pipelines",
+      "Schema Drift",
+      "Dynamic Datasets",
+      "Spark Job Optimization",
+      "Large-Scale Data Processing"
+    ],
+    "concepts": [
+      "Scalable ETL Pipeline Design",
+      "Schema Drift",
+      "Spark Job Optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you design a scalable ETL pipeline using Azure Data Factory to process terabytes of data daily?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains an Azure Data Factory ETL design that scales to a daily terabyte-scale workload."
+    },
+    {
+      "question": "How would you handle schema drift in Azure Data Factory for dynamic datasets?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how Azure Data Factory can accommodate schema drift for dynamic datasets."
+    },
+    {
+      "question": "What are the best practices for optimizing Spark jobs in Azure Databricks for large-scale data processing?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies optimization practices for Spark jobs in Azure Databricks that handle large-scale data processing."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineer Interview Preparation",
+    "secondary_topics": [
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Synapse Analytics",
+      "PySpark",
+      "ETL Pipeline Design",
+      "Schema Drift",
+      "Spark Job Optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b2cb8cfc72467267",
+    "saved_date": "2026-10-01T23:25:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327179336220860417",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327179336220860417_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

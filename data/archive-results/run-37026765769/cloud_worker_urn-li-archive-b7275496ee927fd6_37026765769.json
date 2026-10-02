@@ -1,0 +1,226 @@
+{
+  "id": "urn-li-archive-b7275496ee927fd6",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:42.992313Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:04Z"
+  },
+  "original_text": "I am 𝗵𝗶𝗿𝗶𝗻𝗴 you as a 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 if you can answer these 21 questions:\n\n𝗦𝗤𝗟\n- Write a query to find the second highest salary from an employee table without using MAX in subquery.\n- Explain the difference between INNER JOIN, LEFT JOIN, and FULL OUTER JOIN with examples.\n- Given a sales table, find the top 3 products sold in each region using RANK or DENSE_RANK.\n\n𝗣𝘆𝘁𝗵𝗼𝗻\n- How do you handle a file that is too large to fit into memory in Python? Show an example.\n- What is the difference between mutable and immutable data types? Give examples.\n- Write Python code to merge multiple CSV files from a directory into a single Pandas DataFrame.\n\n𝗣𝘆𝘀𝗽𝗮𝗿𝗸\n- Explain the difference between narrow and wide transformations in Spark. Give examples.\n- How do you perform joins in PySpark and handle skewed data?\n- Given a large dataset, write PySpark code to calculate the average sales per region per month.\n\n𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀\n- Explain the difference between a cluster, job cluster, and all-purpose cluster in Databricks.\n- How do you optimize Delta Lake performance in Databricks?\n- How do you integrate Databricks with Azure Data Lake Storage for both reading and writing data?\n\n𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗙𝗮𝗰𝘁𝗼𝗿𝘆\n- What is the difference between mapping data flows and wrangling data flows?\n- How do you implement incremental load in Azure Data Factory?\n- Explain how triggers work in ADF and how to schedule pipelines.\n\n𝗠𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝗙𝗮𝗯𝗿𝗶𝗰\n- Explain the architecture of OneLake in Microsoft Fabric.\n- How does Fabric differ from Azure Synapse Analytics and Power BI?\n- How would you migrate existing ADF pipelines to Microsoft Fabric Data Factory?\n\n𝗔𝘇𝘂𝗿𝗲 𝗦𝘆𝗻𝗮𝗽𝘀𝗲 𝗔𝗻𝗮𝗹𝘆𝘁𝗶𝗰𝘀\n- Explain the difference between dedicated SQL pool and serverless SQL pool in Synapse.\n- How do you partition data in Synapse for better query performance?\n- What are materialized views in Synapse and when should you use them?\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗻𝗲𝗿𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲 - https://lnkd.in/gPU_wSUv\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This promotional Data Engineering interview-preparation post lists 21 unanswered questions across SQL, Python, Spark, Databricks, Azure Data Factory, Microsoft Fabric, and Azure Synapse Analytics. It identifies topics such as joins, window ranking functions, large-file processing, mutable and immutable types, PySpark transformations and skew, Delta Lake optimization, incremental loads, OneLake architecture, migration, partitioning, and materialized views. It does not provide definitions, code, configurations, examples, solutions, or technical details for any of the questions, and it ends with a LinkedHub link and a request to like and reshare the post.",
+    "topics": [
+      "Data Engineering Interview Preparation",
+      "SQL",
+      "Python and Pandas",
+      "Spark and PySpark",
+      "Azure Databricks",
+      "Delta Lake",
+      "Azure Data Factory",
+      "Microsoft Fabric",
+      "Azure Synapse Analytics"
+    ],
+    "subtopics": [
+      "Finding the second-highest salary without MAX in a subquery",
+      "INNER JOIN, LEFT JOIN, and FULL OUTER JOIN",
+      "Regional product ranking with RANK or DENSE_RANK",
+      "Handling files too large to fit in memory with Python",
+      "Mutable and immutable Python data types",
+      "Merging CSV files with Pandas",
+      "Narrow and wide Spark transformations",
+      "PySpark joins and skewed data",
+      "Average sales per region and month",
+      "Databricks cluster types",
+      "Delta Lake performance optimization",
+      "Databricks integration with Azure Data Lake Storage",
+      "Mapping and wrangling data flows",
+      "Incremental loading in Azure Data Factory",
+      "Azure Data Factory triggers and pipeline scheduling",
+      "OneLake architecture",
+      "Microsoft Fabric compared with Azure Synapse Analytics and Power BI",
+      "Migration from Azure Data Factory to Fabric Data Factory",
+      "Dedicated and serverless SQL pools",
+      "Partitioning data in Azure Synapse Analytics",
+      "Materialized views in Azure Synapse Analytics"
+    ],
+    "concepts": [
+      "Second-highest salary query",
+      "INNER JOIN, LEFT JOIN, and FULL OUTER JOIN",
+      "RANK and DENSE_RANK",
+      "Large-file processing in Python",
+      "Mutable and immutable data types",
+      "CSV consolidation with Pandas",
+      "Narrow and wide transformations",
+      "PySpark joins and skewed data",
+      "Average sales per region and month",
+      "Databricks cluster types",
+      "Databricks and Azure Data Lake Storage integration",
+      "Mapping and wrangling data flows",
+      "Incremental load",
+      "Triggers and pipeline scheduling",
+      "OneLake architecture",
+      "Microsoft Fabric platform comparison",
+      "ADF-to-Fabric Data Factory migration",
+      "Dedicated and serverless SQL pools",
+      "Materialized views"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a query to find the second-highest salary from an employee table without using MAX in a subquery.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer provides an SQL query against an employee table that returns the second-highest salary.\nThe query does not use MAX in a subquery."
+    },
+    {
+      "question": "Explain the difference between INNER JOIN, LEFT JOIN, and FULL OUTER JOIN with examples.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes INNER JOIN, LEFT JOIN, and FULL OUTER JOIN.\nThe answer includes examples that demonstrate the three join types."
+    },
+    {
+      "question": "Given a sales table, find the top three products sold in each region using RANK or DENSE_RANK.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer writes a query that finds the top three products in each region.\nThe query uses RANK or DENSE_RANK."
+    },
+    {
+      "question": "How can Python handle a file that is too large to fit in memory, and what example demonstrates this?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer explains an approach for processing a file too large to fit in memory.\nThe answer includes example Python code."
+    },
+    {
+      "question": "What is the difference between mutable and immutable data types in Python?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer distinguishes mutable and immutable data types.\nThe answer provides examples of each category."
+    },
+    {
+      "question": "Write Python code to merge multiple CSV files from a directory into a single Pandas DataFrame.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer provides Python code that discovers multiple CSV files in a directory.\nThe code combines the files into one Pandas DataFrame."
+    },
+    {
+      "question": "Explain the difference between narrow and wide transformations in Spark and give examples.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes narrow and wide Spark transformations.\nThe answer includes an example of each transformation type."
+    },
+    {
+      "question": "How do you perform joins in PySpark and handle skewed data?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer explains how joins are performed in PySpark.\nThe answer describes how skewed data is handled during the join scenario."
+    },
+    {
+      "question": "Given a large dataset, write PySpark code to calculate average sales per region per month.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer writes PySpark code that aggregates sales by region and month.\nThe code calculates the average sales for each region and month grouping."
+    },
+    {
+      "question": "Explain the difference between a cluster, job cluster, and all-purpose cluster in Databricks.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes the three Databricks cluster types.\nThe answer explains the role and behavior of each cluster type."
+    },
+    {
+      "question": "How can Delta Lake performance be optimized in Databricks?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer identifies optimization techniques for Delta Lake performance in Databricks.\nThe answer explains how those techniques improve performance."
+    },
+    {
+      "question": "How do you integrate Databricks with Azure Data Lake Storage for both reading and writing data?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer explains how Databricks reads data from Azure Data Lake Storage.\nThe answer explains how Databricks writes data to Azure Data Lake Storage."
+    },
+    {
+      "question": "What is the difference between mapping data flows and wrangling data flows in Azure Data Factory?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes mapping data flows from wrangling data flows.\nThe answer describes the relevant characteristics of both Azure Data Factory flow types."
+    },
+    {
+      "question": "How do you implement an incremental load in Azure Data Factory?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer presents an Azure Data Factory implementation for incremental loading.\nThe answer explains how the pipeline loads only the required data during an incremental run."
+    },
+    {
+      "question": "How do triggers work in Azure Data Factory, and how can pipelines be scheduled?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains how Azure Data Factory triggers operate.\nThe answer describes how those triggers schedule pipelines."
+    },
+    {
+      "question": "Explain the architecture of OneLake in Microsoft Fabric.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer describes the components and relationships in the OneLake architecture.\nThe answer connects the architecture to its role within Microsoft Fabric."
+    },
+    {
+      "question": "How does Microsoft Fabric differ from Azure Synapse Analytics and Power BI?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer identifies the differences between Microsoft Fabric and Azure Synapse Analytics.\nThe answer identifies the differences between Microsoft Fabric and Power BI."
+    },
+    {
+      "question": "How would you migrate existing Azure Data Factory pipelines to Fabric Data Factory?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer presents an approach for migrating existing Azure Data Factory pipelines.\nThe answer addresses moving the pipelines into Fabric Data Factory."
+    },
+    {
+      "question": "What is the difference between a dedicated SQL pool and a serverless SQL pool in Azure Synapse Analytics?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes dedicated SQL pools from serverless SQL pools.\nThe answer explains the relevant characteristics of both pool types."
+    },
+    {
+      "question": "How do you partition data in Azure Synapse Analytics for better query performance?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer explains an approach to partitioning data in Azure Synapse Analytics.\nThe answer connects the partitioning approach to improved query performance."
+    },
+    {
+      "question": "What are materialized views in Azure Synapse Analytics, and when should they be used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines materialized views in Azure Synapse Analytics.\nThe answer explains when materialized views should be used."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Question Bank",
+    "secondary_topics": [
+      "SQL Querying and Joins",
+      "Python and Pandas File Processing",
+      "Spark and PySpark Data Processing",
+      "Azure Databricks and Delta Lake",
+      "Azure Data Factory",
+      "Microsoft Fabric and OneLake",
+      "Azure Synapse Analytics"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b7275496ee927fd6",
+    "saved_date": "2026-10-01T23:09:04Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

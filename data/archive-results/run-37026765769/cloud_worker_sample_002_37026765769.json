@@ -1,0 +1,45 @@
+{
+  "id": "sample_002",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample_002",
+    "captured_at": "2026-09-29T18:30:00+05:30",
+    "author": "Sample Author",
+    "published_at": null
+  },
+  "original_text": "Interview question: A SQL query on a large fact table is running slowly. How would you diagnose and optimize it? Consider joins, indexes, statistics, filtering, aggregation, and execution plans.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The content is an interview question about diagnosing and optimizing a slow SQL query against a large fact table. It identifies joins, indexes, statistics, filtering, aggregation, and execution plans as considerations, but provides no diagnostic steps, optimization techniques, or answers.",
+    "topics": [
+      "Large fact table query tuning"
+    ],
+    "subtopics": [
+      "Joins",
+      "Indexes",
+      "Statistics",
+      "Filtering",
+      "Aggregation",
+      "Execution plans"
+    ],
+    "concepts": [
+      "Large fact table query tuning",
+      "Execution plan analysis"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL query performance optimization",
+    "secondary_topics": [
+      "Joins",
+      "Indexes",
+      "Statistics",
+      "Filtering",
+      "Aggregation",
+      "Execution plans"
+    ],
+    "interview_relevant": true
+  }
+}

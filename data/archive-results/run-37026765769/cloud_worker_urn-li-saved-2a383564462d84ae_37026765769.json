@@ -1,0 +1,89 @@
+{
+  "id": "urn-li-saved-2a383564462d84ae",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7329760385434025984",
+    "captured_at": "2026-10-02T00:15:46.000587Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:32Z"
+  },
+  "original_text": "#Pyspark #Sql #AzureDataEngineer #InterviewQuestions \n#PalTech : Write a Pyspark and SQL code to count the number of certificates to be paid from a Certificates table, where each candidate (Name) can have at most two active certificates at any time. A certificate is active from DateofCertification to DateOfExpiry (inclusive of start month, exclusive of end month). If a third certificate is active concurrently, it is not paid.\n\nTable has schema like:\n CertificateId int,\n Name string, \n DateofCertification string, \n DateOfExpiry string\n\nDate like:\nINSERT INTO Certificates (CertificateId, Name, DateofCertification, DateOfExpiry) VALUES\n(1, 'a', 'Nov 2024', 'Mar 2025'), -- Active Nov - Mar 2024\n(2, 'a', 'Dec 2024', 'Feb 2025'), -- Active Dec 2024\n(3, 'a', 'Jan 2025', 'Mar 2025'), -- Inactive\n(3, 'a', 'Feb 2025', 'Mar 2025'), -- Inactive\n(4, 'a', 'Apr 2025', 'May 2025'), -- Active Apr 2025\n(5, 'b', 'May 2024', 'Dec 2024'), -- Active May-Dec 2024\n(6, 'b', 'Oct 2024', 'Feb 2025'), -- Active Oct2024 - Feb 2025\n(7, 'b', 'Nov 2024', 'Mar 2025'), -- Inactive\n(8, 'c', 'Jan 2024', 'Apr 2024'), -- Active Jan-Apr 2024\n(9, 'c', 'Mar 2024', 'Jun 2024'); -- Active Mar-Jun 2024\n\nwill be posting both the solutions in comments.\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7329760385434025984_slide_0.jpg",
+      "description": "JPEG image, 480x218 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is an incomplete data engineering interview prompt asking for PySpark and SQL code to count payable certificates. Certificates belong to candidates identified by Name, and an active period includes DateofCertification but excludes DateOfExpiry. A candidate may have at most two concurrently active certificates, while an overlapping third certificate is unpaid. The post provides a month-year string schema and sample rows, but it does not provide solutions, an expected count, or a rule for deciding which certificate is the third when several overlap. Some sample comments also conflict with the stated dates or interval rule.",
+    "topics": [
+      "PySpark",
+      "SQL",
+      "Certificate payment eligibility",
+      "Temporal overlap handling"
+    ],
+    "subtopics": [
+      "Counting payable certificates",
+      "Concurrent active intervals",
+      "Inclusive start and exclusive end months",
+      "Per-candidate evaluation",
+      "Month-year string dates",
+      "Ambiguous overlap precedence"
+    ],
+    "concepts": [
+      "Active Certificate Interval",
+      "Concurrent Certificate Limit",
+      "Candidate-Level Evaluation",
+      "Month-Year String Representation",
+      "Unspecified Third-Certificate Precedence"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write PySpark logic to count the certificates that qualify for payment when each candidate may have at most two concurrently active certificates?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The logic must evaluate each candidate's certificate periods using an included certification month and an excluded expiry month.\nThe logic must identify months in which more than two certificates for the same Name overlap and exclude the applicable third certificate.\nThe answer must explicitly state how the unpaid certificate is selected because the post does not define precedence among overlapping rows.\nThe final result must count certificate rows that satisfy the payment rule rather than merely counting rows or candidates."
+    },
+    {
+      "question": "How would you express the same certificate payment rule in SQL and return the number of payable certificates?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The SQL must evaluate overlap within each candidate's Name rather than across the entire Certificates table.\nThe interval comparison must include DateofCertification and exclude DateOfExpiry.\nA certificate ending in one month must not overlap another certificate that begins in that same excluded month.\nThe query must apply the two-concurrent-certificate limit and document how it resolves the unpaid third certificate."
+    },
+    {
+      "question": "What ambiguities and data issues should be resolved before trusting an answer for this Certificates dataset?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The sample repeats CertificateId 3, so an answer should state whether certificate rows or distinct certificate IDs define the records being counted.\nThe post does not specify which certificate is considered the third when several certificates overlap.\nSome inline comments conflict with the stated dates or labels, including the first record's reference to 2024 even though its dates span November 2024 to March 2025.\nThe date fields are month-year strings, so the implementation must use a consistent calendar-month interpretation when comparing periods."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark and SQL implementation of concurrent certificate limits",
+    "secondary_topics": [
+      "Half-open monthly intervals",
+      "Per-candidate temporal logic",
+      "Data-quality and business-rule ambiguity"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2a383564462d84ae",
+    "saved_date": "2026-10-01T23:22:32Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7329760385434025984",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7329760385434025984_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

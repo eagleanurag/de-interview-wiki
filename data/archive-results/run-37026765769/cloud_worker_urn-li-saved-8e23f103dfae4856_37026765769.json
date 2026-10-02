@@ -1,0 +1,111 @@
+{
+  "id": "urn-li-saved-8e23f103dfae4856",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7310146449428611072",
+    "captured_at": "2026-10-02T00:15:49.408178Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:32:14Z"
+  },
+  "original_text": "𝗦𝗤𝗟 𝗤𝘂𝗲𝗿𝘆 𝗘𝘅𝗲𝗰𝘂𝘁𝗶𝗼𝗻 𝗢𝗿𝗱𝗲𝗿\n\nIn SQL, queries are executed in a specific order, which can be quite different from the order in which the clauses are written. \n\nHere’s the logical order of SQL query execution:\n\n1. FROM\nSpecifies the tables from which to retrieve or manipulate data.\n\n2. WHERE\nFilters rows based on specified conditions.\nOnly rows that meet the conditions proceed to the next stage.\n\n3. GROUP BY\nGroups rows into sets based on column(s) specified.\nAny aggregate functions (like SUM, COUNT, etc.) will now apply to each group.\n\n4. HAVING\nApplies filters to groups created by GROUP BY.\nOnly groups meeting these conditions move forward.\n\n5. SELECT\nDetermines which columns and expressions to return.\nExecutes any functions or expressions listed in the SELECT clause.\nDeduplication of rows (DISTINCT) happens here if specified.\n\n6. ORDER BY\nSorts the result based on specified column(s) and sort direction (ASC or DESC).\nDoes not impact the final rows selected, only the display order.\n\n7. LIMIT \nRestricts the number of rows returned by the query.\nUseful for pagination or getting a specific subset of rows.\n\n𝗟𝗲𝘁𝘀 𝘂𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱 𝘄𝗶𝘁𝗵 𝗮𝗻 𝘁𝗵𝗶𝘀 𝘀𝗶𝗺𝗽𝗹𝗲 𝗦𝗤𝗟 𝗾𝘂𝗲𝗿𝘆 \n\nSELECT department, COUNT(employee_id) AS total_employees\nFROM employees\nWHERE status = 'active'\nGROUP BY department\nHAVING total_employees > 5\nORDER BY total_employees DESC\nLIMIT 10;\n\n𝗧𝗵𝗶𝘀 𝗾𝘂𝗲𝗿𝘆 𝘄𝗼𝘂𝗹𝗱 𝗲𝘅𝗲𝗰𝘂𝘁𝗲 𝗶𝗻 𝘁𝗵𝗲 𝗳𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 𝗼𝗿𝗱𝗲𝗿:\n\n1. FROM employees\n2. WHERE status = 'active'\n3. GROUP BY department\n4. HAVING total_employees > 5\n5. SELECT department, COUNT(employee_id) AS total_employees\n6. ORDER BY total_employees DESC\n7. LIMIT 10\n\n✅ This Ankit Bansal's YouTube video gives even more clarity on the SQL execution .\nSQL Order of Execution (Logical Explanation) | Namaste SQL | Ankit Bansal\nhttps://lnkd.in/gbdeWjFd \n\n📌 Follow for Data insights :\nhttps://lnkd.in/eviQ9fnj\n\n𝑹𝒆𝒑𝒐𝒔𝒕 ✅ 𝒊𝒇 𝒚𝒐𝒖 𝒇𝒊𝒏𝒅 𝒊𝒕 𝒖𝒔𝒆𝒇𝒖𝒍 \n\n🤝 Follow 👨‍💻 Abhisek Sahu for more\n\n#sql #dataengineering #dataanalyst #dataanalytics #dataengineer #bigdata #analytics #businessanalyst #interviewquestions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7310146449428611072_slide_0.jpg",
+      "description": "GIF image, 480x729 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents the logical execution order of an SQL query as FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, and LIMIT, explaining the purpose of each clause. It demonstrates this order with a query that filters active employees, counts them by department, retains groups with more than five employees, sorts the counts in descending order, and returns at most ten rows.",
+    "topics": [
+      "SQL",
+      "SQL query execution order",
+      "SQL clauses",
+      "Data filtering",
+      "Data aggregation",
+      "Grouping and filtering groups",
+      "Sorting and limiting query results"
+    ],
+    "subtopics": [
+      "FROM and row retrieval",
+      "WHERE row filters",
+      "GROUP BY and aggregate functions",
+      "HAVING group filters",
+      "SELECT expressions and DISTINCT",
+      "ORDER BY sorting",
+      "LIMIT and pagination"
+    ],
+    "concepts": [
+      "Logical SQL execution order",
+      "FROM",
+      "WHERE",
+      "GROUP BY",
+      "Aggregate functions",
+      "HAVING",
+      "SELECT",
+      "DISTINCT",
+      "ORDER BY",
+      "LIMIT"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the logical execution order of the SQL clauses described in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The logical sequence is FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, and LIMIT.\nThe logical execution order can differ from the order in which clauses appear in the query text.\nThe order moves from identifying source tables through filtering, grouping, group filtering, projection, sorting, and limiting results."
+    },
+    {
+      "question": "How do WHERE and HAVING differ in the described SQL execution process?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "WHERE filters individual rows before they are grouped.\nHAVING filters the groups created by GROUP BY.\nOnly rows satisfying WHERE proceed to grouping, and only groups satisfying HAVING proceed to SELECT."
+    },
+    {
+      "question": "Walk through the example query about active employees in its logical execution order.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "FROM identifies the employees table, and WHERE retains rows whose status is active.\nGROUP BY groups the active rows by department, and COUNT(employee_id) calculates total_employees for each group.\nHAVING retains groups with total_employees greater than five.\nSELECT returns department and total_employees, ORDER BY sorts the groups by total_employees in descending order, and LIMIT restricts the result to ten rows."
+    },
+    {
+      "question": "Write an SQL query that counts active employees by department, keeps groups with more than five employees, sorts the counts in descending order, and returns ten rows.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query selects department and COUNT(employee_id) with the alias total_employees.\nThe query filters status equal to active with WHERE and groups the rows by department.\nThe query uses HAVING total_employees > 5 to filter the groups.\nThe query uses ORDER BY total_employees DESC and LIMIT 10 for the final sorting and row restriction."
+    },
+    {
+      "question": "What purposes do SELECT, DISTINCT, ORDER BY, and LIMIT serve in the post's logical query order?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SELECT determines the returned columns and expressions, while DISTINCT can deduplicate returned rows.\nORDER BY sorts results by specified columns and directions such as ASC or DESC.\nLIMIT restricts the number of returned rows and can support pagination."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "SQL query execution order",
+      "Data filtering",
+      "Aggregation and grouping",
+      "Sorting and limiting results"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8e23f103dfae4856",
+    "saved_date": "2026-10-01T23:32:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7310146449428611072",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7310146449428611072_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7310146449428611072_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

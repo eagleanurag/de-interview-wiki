@@ -1,0 +1,177 @@
+{
+  "id": "urn-li-archive-dc4eb4ab225f26c7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.693053Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:52Z"
+  },
+  "original_text": "Tiger Analytics keeps asking these Data Engineering questions repeatedly.\nCTC - 21 LPA\nEXP - 4+\n\n1. Describe your project experience, including specific examples and details about your role and contributions.\n2. Explain all concepts related to triggers in Azure Data Factory (ADF).\n3. Describe how to implement all types of Slowly Changing Dimensions (SCD) in PySpark.\n4. How do you restart a pipeline in ADF if it fails?\n5. Explain how to configure Continuous Integration and Continuous Deployment (CI/CD) in notebooks.\n6. List and describe the activities used in ADF.\n7. How would you sample a random row in a huge dataset without throttling the database?\n8. Explain Databricks Delta Live Tables (DLT), and when would you use batch vs. streaming?\n9. Discuss your experience with AWS services like Glue and Redshift.\n10. Describe the architecture and implementation details of your recent projects.\n11. How do you handle schema evolution in your data pipelines?\n12. What strategies do you use for optimizing Spark jobs?\n13. Can you explain the concept of data partitioning and its benefits?\n14. How do you ensure data quality and integrity in your ETL processes?\n15. Describe a challenging data engineering problem you faced and how you resolved it.\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This promotional Data Engineering interview-preparation post lists 15 questions that Tiger Analytics reportedly asks candidates with 4+ years of experience and a CTC of 21 LPA. It covers Azure Data Factory triggers, activities and pipeline restarts; Slowly Changing Dimensions in PySpark; notebook CI/CD; sampling a random row from a huge dataset without throttling; Databricks Delta Live Tables and batch versus streaming; AWS Glue and Redshift; project architecture; schema evolution; Spark optimization and partitioning; ETL data quality and integrity; and troubleshooting experience. The post does not provide answers, definitions, implementation details, or examples.",
+    "topics": [
+      "Data Engineering interview preparation",
+      "Azure Data Factory (ADF)",
+      "PySpark",
+      "Continuous Integration and Continuous Deployment (CI/CD)",
+      "Databricks Delta Live Tables (DLT)",
+      "AWS Glue and Redshift",
+      "Spark job optimization",
+      "Data pipeline reliability and data quality"
+    ],
+    "subtopics": [
+      "ADF triggers and activities",
+      "Restarting failed ADF pipelines",
+      "Slowly Changing Dimensions in PySpark",
+      "Configuring CI/CD for notebooks",
+      "Sampling random rows from huge datasets",
+      "Delta Live Tables and batch versus streaming",
+      "AWS Glue and Redshift experience",
+      "Project architecture and implementation",
+      "Schema evolution",
+      "Spark job optimization",
+      "Data partitioning",
+      "ETL data quality and integrity",
+      "Data engineering troubleshooting"
+    ],
+    "concepts": [
+      "Azure Data Factory triggers",
+      "Azure Data Factory activities",
+      "Restarting a failed ADF pipeline",
+      "Slowly Changing Dimensions in PySpark",
+      "CI/CD for notebooks",
+      "Random row sampling from a huge dataset",
+      "Databricks Delta Live Tables",
+      "AWS Glue and Redshift",
+      "Schema evolution",
+      "Spark job optimization",
+      "Data partitioning",
+      "ETL data quality and integrity"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Describe your project experience, including specific examples and details about your role and contributions.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should provide specific project examples and describe the candidate's role and contributions."
+    },
+    {
+      "question": "Explain all concepts related to triggers in Azure Data Factory.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should explain the concepts associated with ADF triggers."
+    },
+    {
+      "question": "Describe how to implement all types of Slowly Changing Dimensions in PySpark.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer should describe PySpark implementations for all types of Slowly Changing Dimensions."
+    },
+    {
+      "question": "How do you restart a pipeline in ADF if it fails?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The answer should explain how to restart a failed pipeline in ADF."
+    },
+    {
+      "question": "Explain how to configure Continuous Integration and Continuous Deployment in notebooks.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer should explain how CI/CD is configured for notebooks."
+    },
+    {
+      "question": "List and describe the activities used in ADF.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should list the relevant ADF activities and describe each one."
+    },
+    {
+      "question": "How would you sample a random row in a huge dataset without throttling the database?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer should explain how to obtain a random row from a huge dataset while avoiding database throttling."
+    },
+    {
+      "question": "Explain Databricks Delta Live Tables and when you would use batch versus streaming.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer should explain Delta Live Tables and describe when batch or streaming should be used."
+    },
+    {
+      "question": "Discuss your experience with AWS services like Glue and Redshift.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should describe the candidate's experience with AWS Glue and Redshift."
+    },
+    {
+      "question": "Describe the architecture and implementation details of your recent projects.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer should describe the architecture and implementation details of the candidate's recent project work."
+    },
+    {
+      "question": "How do you handle schema evolution in your data pipelines?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer should describe how schema changes are handled in data pipelines."
+    },
+    {
+      "question": "What strategies do you use for optimizing Spark jobs?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer should describe strategies used to optimize Spark jobs."
+    },
+    {
+      "question": "Can you explain the concept of data partitioning and its benefits?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should explain data partitioning and describe its benefits."
+    },
+    {
+      "question": "How do you ensure data quality and integrity in your ETL processes?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should describe how data quality and integrity are maintained in ETL processes."
+    },
+    {
+      "question": "Describe a challenging data engineering problem you faced and how you resolved it.",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer should describe the challenging problem and explain how it was resolved."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering interview preparation",
+    "secondary_topics": [
+      "Azure Data Factory",
+      "Slowly Changing Dimensions",
+      "PySpark",
+      "Notebook CI/CD",
+      "Databricks Delta Live Tables",
+      "AWS Glue and Redshift",
+      "Schema evolution",
+      "Spark optimization",
+      "Data partitioning",
+      "ETL data quality and integrity"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:dc4eb4ab225f26c7",
+    "saved_date": "2026-10-01T23:20:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

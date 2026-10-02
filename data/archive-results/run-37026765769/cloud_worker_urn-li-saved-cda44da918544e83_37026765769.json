@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-saved-cda44da918544e83",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328101753961209859",
+    "captured_at": "2026-10-02T00:15:51.705550Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:38Z"
+  },
+  "original_text": "Backfilling is one of the messiest things in data engineering.\nYet every engineering team eventually has to face it.\n\nA backfill is, in a nutshell, the retroactive reload of historical data after schema changes, logic fixes or data reprocessing jobs.\n\nIt can be painful because... 🚨 \n⇀ It can break hundreds of downstream pipelines.\n⇀ It requires validation, coordination & precision.\n⇀ It is hard to validate and harder to roll back.\n⇀ It is normally done under tight deadlines.\n\nBut when done right... ✅ \n⇀ It’s clean. \n⇀ It's fast. \n⇀ And almost invisible.\n\n~~~~\n\nThis infographic introduces the two most common backfilling strategies and breaks down the “Shell Game” one, used for small, safe backfills.\n\nThe kind you can pull off without burning everything down. 😉 \n\nOnce taught during Zach Wilson's YT bootcamp 🙌 \n\n#dataengineering \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328101753961209859_slide_0.jpg",
+      "description": "JPEG image, 480x600 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post defines backfilling as the retroactive reload of historical data after schema changes, logic fixes, or data reprocessing jobs. It highlights downstream pipeline disruption, validation, coordination, rollback difficulty, and deadline pressure as common challenges. It mentions two common backfilling strategies and specifically identifies the \"Shell Game\" strategy as suitable for small, safe backfills, but the strategy details and the second strategy are not included in the supplied content. The technical post is therefore an incomplete introduction rather than a full implementation guide.",
+    "topics": [
+      "Backfilling",
+      "Historical data reloads",
+      "Data pipeline operations"
+    ],
+    "subtopics": [
+      "Causes of backfills",
+      "Backfill validation",
+      "Backfill rollback",
+      "Downstream pipeline impact",
+      "Shell Game backfilling strategy"
+    ],
+    "concepts": [
+      "Backfill",
+      "Backfill Risks",
+      "Shell Game Strategy"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is a data engineering backfill, and what events commonly require one?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A backfill is the retroactive reload of historical data.\nCommon triggers include schema changes, logic fixes, and data reprocessing jobs."
+    },
+    {
+      "question": "Why can backfilling be operationally risky?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A backfill can break many downstream pipelines.\nIt requires validation, coordination, and precision, while rollback is difficult.\nBackfills often must be completed under tight deadlines."
+    },
+    {
+      "question": "For what kind of backfill does the post recommend the Shell Game strategy?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The Shell Game strategy is described as suitable for small, safe backfills.\nThe supplied content does not provide the implementation steps for the strategy."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Backfilling",
+    "secondary_topics": [
+      "Historical Data Reloads",
+      "Data Pipeline Validation",
+      "Backfill Rollback"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:cda44da918544e83",
+    "saved_date": "2026-10-01T23:23:38Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328101753961209859",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328101753961209859_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

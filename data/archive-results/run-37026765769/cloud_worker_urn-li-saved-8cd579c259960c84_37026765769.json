@@ -1,0 +1,91 @@
+{
+  "id": "urn-li-saved-8cd579c259960c84",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7307022837305729025",
+    "captured_at": "2026-10-02T00:15:49.318578Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:04Z"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\nTop 50 Databricks Terms You Need to Know for Data Engineering! 🚀\nDatabricks is a cloud-based platform that unifies data engineering, machine learning, and analytics, empowering teams to work collaboratively and efficiently. Built on Apache Spark, Databricks provides tools to manage and analyze massive datasets with ease. With features like Delta Lake for data lake management, real-time processing, and seamless cloud integration, it has become a go-to platform for modern data engineers. Whether you're optimizing Spark workloads or diving into machine learning, mastering Databricks is key to advancing your data skills!\" 📈💡\nFollow Abhishek Agrawal for more such content.\nDownload the PDF to find out how!\n🔗 Join our WhatsApp channel to stay updated on Data Engineering!\nhttps://lnkd.in/dUuscrch 📲\n#Databricks #DataEngineering #MustKnow #spark #bigdata\ndatabricks",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7307022837305729025_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is primarily promotional and advertises a list of Databricks terms and a downloadable PDF without providing the promised terms or PDF content. Its brief technical description presents Databricks as a cloud-based platform for data engineering, machine learning, and analytics. It states that Databricks is built on Apache Spark, supports collaborative work and the management and analysis of massive datasets, and offers features such as Delta Lake for data lake management, real-time processing, and cloud integration.",
+    "topics": [
+      "Databricks",
+      "Apache Spark",
+      "Delta Lake",
+      "Data lake management",
+      "Real-time processing",
+      "Cloud integration"
+    ],
+    "subtopics": [
+      "Unified data engineering, machine learning, and analytics platform",
+      "Large-scale data management and analysis",
+      "Collaborative data work",
+      "Databricks platform capabilities"
+    ],
+    "concepts": [
+      "Databricks",
+      "Apache Spark",
+      "Delta Lake",
+      "Massive dataset management and analysis",
+      "Real-time processing",
+      "Cloud integration"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you describe Databricks based only on the capabilities stated in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Databricks is a cloud-based platform that unifies data engineering, machine learning, and analytics.\nIt supports collaborative work and tools for managing and analyzing massive datasets.\nThe stated capabilities include Delta Lake, real-time processing, and cloud integration."
+    },
+    {
+      "question": "What relationship between Databricks and Apache Spark does the post describe?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post explicitly states that Databricks is built on Apache Spark.\nIt connects Databricks capabilities for managing and analyzing massive datasets with its Apache Spark foundation."
+    },
+    {
+      "question": "What data lake management capability does the post attribute to Databricks?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Delta Lake is identified as a Databricks feature for data lake management.\nThe post does not provide technical details about Delta Lake features or configuration."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks",
+    "secondary_topics": [
+      "Apache Spark",
+      "Delta Lake",
+      "Data lake management",
+      "Real-time processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8cd579c259960c84",
+    "saved_date": "2026-10-01T23:33:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7307022837305729025",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7307022837305729025_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

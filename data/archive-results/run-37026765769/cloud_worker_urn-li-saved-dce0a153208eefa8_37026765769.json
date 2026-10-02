@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-dce0a153208eefa8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340938263118893056",
+    "captured_at": "2026-10-02T00:15:52.522935Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:47Z"
+  },
+  "original_text": "Write cleaner PySpark code - no more temp views!\n\nIf you’re like me and use spark.sql() a lot in PySpark, chances are your code is full of .createOrReplaceTempView() lines. It works, sure ,but it can get messy real quick.\n\nWell, there’s a better way now! Since Spark 3.4.0, you can directly pass DataFrames to SQL without creating temp views.\n\nThat means:\n✔️ Less boilerplate\n✔️ No view name conflicts\n✔️ Code’s way easier to reuse and read\n\nHonestly, this made my pipelines feel much more readable.\n\n♻ Feel free to re-share this post if you find it helpful.\n\nFollow Abhay Singh \n\n𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝒇𝒐𝒓 1 𝒕𝒐 1 𝒈𝒖𝒊𝒅𝒂𝒏𝒄𝒆 : https://lnkd.in/g7Dewhyq",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340938263118893056_slide_0.jpg",
+      "description": "JPEG image, 480x434 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that PySpark code using spark.sql() often relies on createOrReplaceTempView() calls. It states that, starting with Spark 3.4.0, DataFrames can be passed directly to SQL without creating temporary views, reducing boilerplate, avoiding view name conflicts, and making pipelines easier to read and reuse. The post does not provide syntax, examples, limitations, or performance comparisons.",
+    "topics": [
+      "PySpark",
+      "Spark SQL",
+      "Spark 3.4.0",
+      "DataFrames",
+      "temporary views"
+    ],
+    "subtopics": [
+      "Direct DataFrame references in SQL",
+      "Replacing createOrReplaceTempView() calls",
+      "Reducing SQL boilerplate",
+      "Avoiding temporary view name conflicts",
+      "Improving pipeline readability and reuse"
+    ],
+    "concepts": [
+      "Direct DataFrame references in SQL",
+      "createOrReplaceTempView()",
+      "Spark 3.4.0",
+      "Pipeline readability and reuse",
+      "Temporary view name conflicts"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What PySpark capability introduced in Spark 3.4.0 does the post describe?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post says that Spark 3.4.0 allows DataFrames to be passed directly to SQL without first creating temporary views."
+    },
+    {
+      "question": "What benefits does the post claim result from passing DataFrames directly to SQL instead of using createOrReplaceTempView()?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "This approach reduces boilerplate associated with temporary-view registration.\nIt avoids temporary view name conflicts.\nIt makes pipeline code easier to read and reuse."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Spark SQL",
+      "DataFrames",
+      "temporary views"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:dce0a153208eefa8",
+    "saved_date": "2026-10-01T23:14:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340938263118893056",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340938263118893056_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

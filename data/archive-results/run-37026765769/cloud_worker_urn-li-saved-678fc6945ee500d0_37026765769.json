@@ -1,0 +1,72 @@
+{
+  "id": "urn-li-saved-678fc6945ee500d0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7313983651073925121",
+    "captured_at": "2026-10-02T00:15:48.251458Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:49Z"
+  },
+  "original_text": "Just like storing data in the right format matters, so does storing knowledge in your brain the right way! If your mind is a messy CSV instead of a well-indexed Parquet file, good luck retrieving anything under pressure.\n\nLately, I had to revise on Hadoop Data formats - CSV, Parquet, and ORC, trying to keep track of it all was a mess—until I started using mindmaps. They turn scattered information into something you can actually recall—whether it’s for an interview, debugging, or just making sense of things.\n\nSo instead of letting another deep dive disappear into the void, here’s my mindmap on storage formats (like how Parquet’s columnar magic makes analytics faster). Check it out—what’s your go-to format to recall what you read? 👇\n\n🔖 Bookmark this link and expand on it as you gain more knowledge on these formats!\n\n#BigData #CloudComputing #Learning #Mindmaps \n\nhttps://lnkd.in/gkcb62aW",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7313983651073925121_slide_0.jpg",
+      "description": "JPEG image, 480x409 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post introduces a mindmap about the Hadoop data formats CSV, Parquet, and ORC. It presents mindmaps as a way to organize scattered information and improve recall for interviews, debugging, and general understanding. The only technical property explained is that Parquet uses a columnar design, which the post associates with faster analytics. No detailed comparison of the three formats is included in the supplied content.",
+    "topics": [
+      "Hadoop data formats",
+      "columnar storage",
+      "mindmaps for technical learning"
+    ],
+    "subtopics": [
+      "CSV",
+      "Parquet",
+      "ORC",
+      "Parquet and faster analytics",
+      "organizing and recalling technical knowledge"
+    ],
+    "concepts": [
+      "Hadoop data formats",
+      "Parquet",
+      "Mindmaps"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which Hadoop data format does the post identify as columnar, and what analytics benefit does it associate with that design?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The format is Parquet, and the post associates its columnar design with faster analytics."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Hadoop data formats",
+    "secondary_topics": [
+      "columnar storage",
+      "mindmaps for technical learning"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:678fc6945ee500d0",
+    "saved_date": "2026-10-01T23:30:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7313983651073925121",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7313983651073925121_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

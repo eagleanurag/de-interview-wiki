@@ -1,0 +1,160 @@
+{
+  "id": "urn-li-saved-636b049de82811a1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7305188290385588224",
+    "captured_at": "2026-10-02T00:15:48.096772Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:07Z"
+  },
+  "original_text": "Since you're targeting Product-Based companies\n\nTrust me—your database knowledge must be strong in query optimization, indexing, transactions, locking mechanisms, partitioning, and database system design.\n\n➊ 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐅𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐬 & 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞\nUnderstand how databases work, their components, and architecture.\n\n ↳ Database types (Relational, NoSQL)\n ↳ ACID properties & CAP theorem\n ↳ DBMS vs. RDBMS vs. NoSQL\n ↳ Database Storage Engines (InnoDB vs. MyISAM)\n ↳ Database Architecture (Single-tier, Two-tier, Three-tier)\n\n➋ 𝐈𝐧𝐝𝐞𝐱𝐢𝐧𝐠 & 𝐐𝐮𝐞𝐫𝐲 𝐎𝐩𝐭𝐢𝐦𝐢𝐳𝐚𝐭𝐢𝐨𝐧\nImprove query performance with indexing & optimization techniques.\n\n ↳ Types of Indexes (Clustered, Non-clustered, Composite, Unique, Full-text, Bitmap)\n ↳ How Indexing Works (B-Trees, Hash Indexing, etc.)\n ↳ Indexing Best Practices & When NOT to Use Indexes\n ↳ Query Execution Plan (EXPLAIN ANALYZE)\n ↳ Optimizing Joins, Sorting, and Aggregations\n\n➌ 𝐓𝐫𝐚𝐧𝐬𝐚𝐜𝐭𝐢𝐨𝐧𝐬 & 𝐂𝐨𝐧𝐜𝐮𝐫𝐫𝐞𝐧𝐜𝐲 𝐂𝐨𝐧𝐭𝐫𝐨𝐥\nEnsure consistency and integrity in multi-user database environments.\n\n ↳ ACID properties in transactions\n ↳ Transaction isolation levels (READ COMMITTED, REPEATABLE READ, SERIALIZABLE)\n ↳ Locking mechanisms (Pessimistic vs. Optimistic)\n ↳ Deadlocks – Causes & Prevention\n ↳ Multi-Version Concurrency Control (MVCC)\n\n➍ 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐏𝐚𝐫𝐭𝐢𝐭𝐢𝐨𝐧𝐢𝐧𝐠 & 𝐒𝐡𝐚𝐫𝐝𝐢𝐧𝐠\nScale databases by distributing data efficiently.\n\n ↳ Horizontal vs. Vertical Partitioning\n ↳ Range, List, Hash, and Composite Partitioning\n ↳ Sharding Strategies (Key-based, Range-based, Directory-based)\n ↳ Challenges in Sharding (Data consistency, Cross-shard queries)\n ↳ Replication vs. Sharding\n\n➎ 𝐃𝐚𝐭𝐚 𝐌𝐨𝐝𝐞𝐥𝐢𝐧𝐠 & 𝐍𝐨𝐫𝐦𝐚𝐥𝐢𝐳𝐚𝐭𝐢𝐨𝐧\nDesign efficient, scalable database schemas.\n\n ↳ Entity-Relationship (ER) Modeling\n ↳ Normal Forms (1NF to 5NF)\n ↳ Denormalization & When to Use It\n ↳ Star vs. Snowflake Schema (Data Warehousing)\n ↳ Handling One-to-Many & Many-to-Many Relationships\n\n➏ 𝐒𝐐𝐋 𝐐𝐮𝐞𝐫𝐲 𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞 𝐓𝐮𝐧𝐢𝐧𝐠\nOptimize SQL queries for high performance.\n\n ↳ Writing Efficient SQL Queries\n ↳ Avoiding Full Table Scans\n ↳ Use of Proper Indexing Strategies\n ↳ Query Execution Plans & Optimization Techniques\n ↳ Materialized Views & Caching\n\n➐ 𝐍𝐨𝐒𝐐𝐋 𝐯𝐬. 𝐒𝐐𝐋 – 𝐖𝐡𝐞𝐧 𝐭𝐨 𝐔𝐬𝐞 𝐖𝐡𝐚𝐭?\nChoosing the right database for the right use case.\n\n ↳ SQL vs. NoSQL (Key differences)\n ↳ Types of NoSQL Databases (Document, Key-Value, Columnar, Graph)\n ↳ When to Use NoSQL Over SQL\n ↳ CAP Theorem & BASE Properties in NoSQL\n ↳ Examples: MongoDB, Cassandra, DynamoDB\n\nGet the interview call: https://lnkd.in/ges-e-7J\nJoin me: https://lnkd.in/giE3e9yH\nfollow for more 👋\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7305188290385588224_slide_0.jpg",
+      "description": "JPEG image, 480x640 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The supplied post is a high-level database interview-preparation checklist for candidates targeting product-based companies. It emphasizes database fundamentals and architecture, indexing and query optimization, transactions and concurrency control, partitioning and sharding, data modeling and normalization, SQL performance tuning, and choosing between SQL and NoSQL. It names study areas and examples, but it does not provide detailed definitions, comparisons, or worked examples.",
+    "topics": [
+      "Database fundamentals and architecture",
+      "Database system design",
+      "Indexing and query optimization",
+      "Transactions and concurrency control",
+      "Database partitioning and sharding",
+      "Data modeling and normalization",
+      "SQL query performance tuning",
+      "SQL versus NoSQL"
+    ],
+    "subtopics": [
+      "Relational and NoSQL database types",
+      "ACID properties and CAP theorem",
+      "DBMS, RDBMS, and NoSQL distinctions",
+      "InnoDB and MyISAM storage engines",
+      "Single-tier, two-tier, and three-tier database architectures",
+      "Clustered, non-clustered, composite, unique, full-text, and bitmap indexes",
+      "B-Trees and hash indexing",
+      "Indexing best practices and when not to use indexes",
+      "Query execution plans and EXPLAIN ANALYZE",
+      "Optimization of joins, sorting, and aggregations",
+      "READ COMMITTED, REPEATABLE READ, and SERIALIZABLE isolation levels",
+      "Pessimistic and optimistic locking",
+      "Deadlock causes and prevention",
+      "Multi-Version Concurrency Control (MVCC)",
+      "Horizontal and vertical partitioning",
+      "Range, list, hash, and composite partitioning",
+      "Key-based, range-based, and directory-based sharding",
+      "Data consistency and cross-shard query challenges",
+      "Replication versus sharding",
+      "Entity-Relationship (ER) modeling",
+      "Normal forms from 1NF to 5NF",
+      "Denormalization and when to use it",
+      "Star and Snowflake schemas for data warehousing",
+      "One-to-many and many-to-many relationships",
+      "Writing efficient SQL queries",
+      "Avoiding full table scans",
+      "Proper indexing strategies",
+      "Query execution plans and optimization techniques",
+      "Materialized views and caching",
+      "SQL and NoSQL key differences",
+      "Document, key-value, columnar, and graph NoSQL databases",
+      "When to use NoSQL over SQL",
+      "CAP theorem and BASE properties in NoSQL",
+      "MongoDB, Cassandra, and DynamoDB examples"
+    ],
+    "concepts": [
+      "Database types",
+      "DBMS, RDBMS, and NoSQL",
+      "Database storage engines",
+      "Database architecture tiers",
+      "Database system design",
+      "ACID properties",
+      "CAP theorem and BASE properties",
+      "Index types",
+      "Indexing structures and usage",
+      "Query execution plans",
+      "Transaction isolation levels",
+      "Locking mechanisms",
+      "Deadlocks",
+      "Multi-Version Concurrency Control (MVCC)",
+      "Partitioning approaches",
+      "Sharding strategies and challenges",
+      "Replication versus sharding",
+      "ER modeling and relationships",
+      "Normalization and denormalization",
+      "SQL performance tuning",
+      "Materialized views and caching",
+      "NoSQL categories and database selection"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What database fundamentals and architecture topics should be covered for a product-based company interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Relational and NoSQL database types, ACID properties, and the CAP theorem are explicitly listed.\nDBMS, RDBMS, and NoSQL distinctions, InnoDB and MyISAM storage engines, and single-tier, two-tier, and three-tier architectures are also included."
+    },
+    {
+      "question": "How can indexing and query execution planning be used to improve SQL performance?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Strong answers should cover clustered, non-clustered, composite, unique, full-text, and bitmap indexes.\nThey should also mention B-Trees, hash indexing, indexing best practices, and when not to use indexes.\nEXPLAIN ANALYZE, avoiding full table scans, and optimizing joins, sorting, and aggregations are part of the stated performance material."
+    },
+    {
+      "question": "Which transaction and concurrency-control concepts are needed to maintain consistency and integrity in a multi-user database?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "ACID properties and the READ COMMITTED, REPEATABLE READ, and SERIALIZABLE isolation levels are explicitly named.\nPessimistic versus optimistic locking, deadlock causes and prevention, and MVCC should also be covered."
+    },
+    {
+      "question": "Which partitioning and sharding strategies does the post identify, and what challenges does it flag?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Horizontal versus vertical partitioning and range, list, hash, and composite partitioning are listed.\nKey-based, range-based, and directory-based sharding are named, while data consistency and cross-shard queries are identified as challenges.\nReplication versus sharding is also included as a comparison."
+    },
+    {
+      "question": "How would you approach schema design and SQL performance tuning for an efficient, scalable database?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Schema-design answers can cover ER modeling, 1NF to 5NF, denormalization and when to use it, and star versus Snowflake schemas.\nOne-to-many and many-to-many relationships are also part of the modeling material.\nPerformance answers can cover efficient SQL, avoiding full table scans, proper indexing, execution-plan optimization, materialized views, and caching."
+    },
+    {
+      "question": "What SQL-versus-NoSQL comparison points should be considered when choosing a database for a use case?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The comparison should include SQL and NoSQL key differences, when to use NoSQL over SQL, and document, key-value, columnar, and graph database types.\nCAP theorem, BASE properties, and MongoDB, Cassandra, and DynamoDB as examples are also explicitly listed."
+    }
+  ],
+  "classification": {
+    "domain": "Database engineering",
+    "primary_topic": "Database fundamentals and architecture",
+    "secondary_topics": [
+      "Database system design",
+      "Indexing and query optimization",
+      "Transactions and concurrency control",
+      "Database partitioning and sharding",
+      "Data modeling and normalization",
+      "SQL query performance tuning",
+      "SQL versus NoSQL"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:636b049de82811a1",
+    "saved_date": "2026-10-01T23:33:07Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7305188290385588224",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7305188290385588224_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

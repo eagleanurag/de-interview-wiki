@@ -1,0 +1,39 @@
+{
+  "id": "urn-li-archive-4db42b5de8a24f4e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.858589Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:23Z"
+  },
+  "original_text": "As mentioned in my first post, here i am sharing my another interview experience .\n \n🌟 Interview Experience at Truecaller (November 2024) 🌟\n📝 Round 1: Assignment Round 📝\nIn the first round, I was given an assignment that included a design question. My task was to create a comprehensive design document for an end-to-end data pipeline. Additionally, there was a hands-on component involving Spark and Airflow. I completed the assignment within 3-4 days, and I was subsequently shortlisted for the next round.\n💻 Round 2: Technical Interview 💻\nThe second round was a one-hour session conducted by 2-3 engineers. They asked numerous questions focusing on Spark optimization and my previous projects. The primary focus areas for this round were Spark and Kafka.\n👔 Round 3: Hiring Manager Interview 👔\nThis round was with the hiring manager and was centered on my projects and work experience. It included some behavioral questions to assess my fit for the role and the company.\n🤝 Round 4: Behavioral Interview 🤝\nThe final round was entirely behavioral, concentrating on the values I could bring to the company. It involved many scenario-based questions to evaluate my problem-solving skills and cultural fit.\n🎉 Outcome 🎉\nAfter successfully clearing all the rounds, I received an offer letter within 3-4 days.\n💡 Advice 💡\nFocus on strengthening your knowledge and skills in Spark, SQL, and Kafka, as these areas are crucial for the interview process.\nIf you want career guidance/mentorship DM or approach via topmate\n#dataengineering #interview #experience #career",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a personal account of a four-round Truecaller data engineering interview process in November 2024. The assignment involved designing an end-to-end data pipeline and working with Spark and Airflow, while the technical interview focused primarily on Spark optimization, Kafka, and the candidate's projects. Later rounds covered work experience, behavioral scenarios, problem-solving, values, and cultural fit. The post does not provide technical explanations, design details, optimization techniques, or implementation examples.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4db42b5de8a24f4e",
+    "saved_date": "2026-10-01T23:34:23Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-saved-ddaef687d4e5db73",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328241397017288704",
+    "captured_at": "2026-10-02T00:15:52.630061Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:39Z"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n1yr •\n𝗪𝗵𝘆 𝗘𝘃𝗲𝗿𝘆 𝗔𝘀𝗽𝗶𝗿𝗶𝗻𝗴 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗦𝗵𝗼𝘂𝗹𝗱 𝗟𝗲𝗮𝗿𝗻 𝗣𝘆𝗦𝗽𝗮𝗿𝗸\nIf you’re working with large datasets, tools like Pandas can hit limits fast. That’s where 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 comes in—designed to scale effortlessly across big data workloads.\n𝗪𝗵𝗮𝘁 𝗶𝘀 𝗣𝘆𝗦𝗽𝗮𝗿𝗸?\nPySpark is the Python API for Apache Spark—a powerful engine for distributed data processing. It's widely used to build scalable ETL pipelines and handle millions of records efficiently.\n𝗪𝗵𝘆 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝘀 𝗮 𝗠𝘂𝘀𝘁-𝗛𝗮𝘃𝗲 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀:\n✔ Scales to handle massive datasets\n✔ Designed for distributed computing\n✔ Blends SQL with Python for flexible logic\n✔ Perfect for building end-to-end ETL pipelines\n✔ Supports integrations like Hive, Kafka, and Delta Lake\n𝗤𝘂𝗶𝗰𝗸 𝗘𝘅𝗮𝗺𝗽𝗹𝗲:\n```python\nfrom pyspark.sql import SparkSession\nspark = SparkSession.builder.appName(\"Example\").getOrCreate()\ndf = spark.read.csv(\"data.csv\", header=True, inferSchema=True)\ndf.filter(df[\"age\"] > 30).show()\n```\nWhether you're moving into big data, working with real-time systems, or building cloud-native pipelines—𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗶𝘀 𝗮 𝗴𝗮𝗺𝗲-𝗰𝗵𝗮𝗻𝗴𝗲𝗿.\n🔖 Save this for later\n🔁 Repost to help others in their data journey\n📌 Follow Aishwarya Pani for more insights into Data Engineering\n📌 Want to grow in your data journey?\n𝗟𝗲𝘁’𝘀 𝗰𝗼𝗻𝗻𝗲𝗰𝘁: https://lnkd.in/gFKyas-g\n#PySpark #DataEngineering #BigData #ETL #SparkSQL #ApacheSpark #DataPipelines\nPyspark Power Guide",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328241397017288704_slide_0.jpg",
+      "description": "JPEG image, 345x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents PySpark as the Python API for Apache Spark, a distributed data-processing engine intended for large datasets and scalable ETL pipelines. It highlights PySpark's ability to handle massive workloads, combine SQL with Python, and integrate with Hive, Kafka, and Delta Lake. The example creates or retrieves a SparkSession, reads a CSV file with a header and inferred schema, filters for records where age is greater than 30, and displays the result.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Big Data",
+      "ETL Pipelines"
+    ],
+    "subtopics": [
+      "Distributed data processing",
+      "Scalable ETL",
+      "Combining SQL and Python",
+      "CSV ingestion and filtering",
+      "Hive, Kafka, and Delta Lake integrations"
+    ],
+    "concepts": [
+      "PySpark",
+      "Apache Spark",
+      "Distributed Computing",
+      "Scalable ETL Pipelines",
+      "SQL and Python Processing",
+      "SparkSession",
+      "CSV Ingestion",
+      "Data Filtering",
+      "Ecosystem Integrations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is PySpark, and what large-scale data-engineering problems is it presented as solving?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "PySpark is the Python API for Apache Spark.\nApache Spark is described as a distributed data-processing engine.\nPySpark is positioned as a way to handle massive datasets and millions of records efficiently."
+    },
+    {
+      "question": "Why would the post recommend PySpark rather than Pandas for a large dataset?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post states that Pandas can encounter limits when working with large datasets.\nPySpark is designed for distributed computing and scalable processing of massive workloads.\nPySpark supports flexible logic by combining SQL with Python and is intended for scalable ETL pipelines."
+    },
+    {
+      "question": "Explain what the provided PySpark code does from session creation through displaying the result.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The code creates or retrieves a SparkSession and assigns the application the name \"Example\".\nThe code reads data.csv as CSV data with a header and inferred schema.\nThe code filters the data to retain records where age is greater than 30.\nThe code uses show to display the filtered result."
+    },
+    {
+      "question": "How does PySpark support end-to-end ETL workflows according to the post?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "PySpark can ingest CSV data through the SparkSession API.\nIt provides transformation operations such as filtering and combines SQL with Python for processing logic.\nIt is designed to scale ETL workloads involving large datasets and millions of records.\nIt supports integrations with Hive, Kafka, and Delta Lake.\nThe example demonstrates ingestion and transformation but does not show where the filtered result is loaded."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "Distributed Data Processing",
+      "Big Data ETL",
+      "Scalable Data Pipelines"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ddaef687d4e5db73",
+    "saved_date": "2026-10-01T23:24:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328241397017288704",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328241397017288704_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

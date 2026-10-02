@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-archive-6baabf98f2760395",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.339689Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:44Z"
+  },
+  "original_text": "90% of junior data analysts write SLOW SQL code\n(here’s how to fix it)\n\nDifference 1: Column selection\nJunior: Grabs every field “just in case,” this dilutes the results and slows the load.\nSenior: Requests only the three columns the dashboard shows.\n\nDifference 2: Filter strategy\nJunior: Joins huge tables first, with a WHERE clause at the end.\nSenior: Applies time-window and business filters up front, shrinking the data before the heavy joins.\n\nDifference 3: Index\nJunior: Wonders why the query “just hangs.”\nSenior: Checks the execution plan, filters on indexed columns\n\nDifference 4: Query readability\nJunior: One 40-line monster—no comments, no aliases.\nSenior: Breaks logic into CTEs, names steps (“revenue_by_day”), and leaves annotations for future teammates (and future self).\n\n—\n Found this helpful? ♻️ Repost to help an analyst\n #SQL #DataAnalytics #QueryOptimization #CareerGrowth\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents four claimed differences between junior and senior SQL practices: selecting only required columns instead of every field, applying time-window and business filters before large joins, checking the execution plan and filtering on indexed columns when a query hangs, and structuring long queries with CTEs, descriptive names, aliases, and annotations. It is a brief, high-level comparison and does not include SQL examples or detailed execution-plan guidance.",
+    "topics": [
+      "Column selection",
+      "Filter strategy",
+      "Index usage",
+      "Query readability"
+    ],
+    "subtopics": [
+      "Selecting only required columns",
+      "Applying filters before large joins",
+      "Checking execution plans",
+      "Filtering on indexed columns",
+      "Organizing SQL logic with CTEs"
+    ],
+    "concepts": [
+      "Required-column selection",
+      "Early filter application",
+      "Execution-plan and index inspection",
+      "CTE-based query decomposition",
+      "Descriptive naming and annotations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should a SQL query select columns for a dashboard, and what practice does the post contrast with this approach?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The query should request only the three columns displayed by the dashboard.\nSelecting every field as a precaution should be avoided because the post associates it with slower loading."
+    },
+    {
+      "question": "When should time-window and business filters be applied relative to large joins?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The filters should be applied before the heavy joins.\nApplying the filters first reduces the amount of data that enters the joins."
+    },
+    {
+      "question": "What steps does the post recommend when a SQL query hangs?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Check the query's execution plan.\nFilter on indexed columns."
+    },
+    {
+      "question": "How can a long SQL query be organized for readability and future maintenance?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Break the query logic into CTEs.\nUse aliases and descriptive names such as \"revenue_by_day\" for logical steps.\nAdd annotations that help future teammates and maintainers understand the query."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL Query Optimization",
+    "secondary_topics": [
+      "Data Filtering",
+      "Indexing",
+      "Query Readability"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:6baabf98f2760395",
+    "saved_date": "2026-10-01T23:27:44Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

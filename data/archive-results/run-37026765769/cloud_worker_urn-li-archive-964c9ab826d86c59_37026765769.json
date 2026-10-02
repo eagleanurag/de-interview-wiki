@@ -1,0 +1,120 @@
+{
+  "id": "urn-li-archive-964c9ab826d86c59",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.849542Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:32Z"
+  },
+  "original_text": "LTIMINDTREE Data Engineering interview for candidates with 3-6 years of experience.\nQuestion was asked during the Interview :\n\n1. SQL Question: You have given a sales table, Write a SQL and Pyspark query to find products that have exactly two transactions, and return only the details of the second transaction.\nhashtag\n\n#Without_using_windows_function\nid, product, last_trans_date\n\n1, abc, 6-5-25\n2, abc, 7-5-25\n3, bcd, 6-5-25\n\n2. Scenario Based Azure Pipeline Question:\n\nSuppose you are given 100 files in a source location with different formats such as Parquet, CSV, Avro, and JSON. You also have an Excel file containing metadata about these files. Your goal is to build a pipeline that reads this Excel metadata and moves the files: CSV files to a 'csv' folder and Parquet files to a 'parquet' folder, based on their formats. How would you design this pipeline?\n\n3. Scenario Based Databricks Question:\nThere is one CSV file in the source location with the following structure:\nmarkdown\nCopyEdit\nid | Ph no \n-------------------------\n1 | 91 - 8420740724\nYour goal is to load this file into a Delta table. What are the required steps you would follow to achieve this.\nin Delta table should be in this format\n\nid | Ph no \n-------------------------\n1 | 8420740724\n\nData Warehousing:\n\n4. What is SCD Type 2 ? If you need to implement SCD Type 2 using Databricks, what steps would you follow?\n\nData Warehousing: \n\n5. What are fact and dimension tables? Which of these tables changes more frequently?\n\n6. The difference between Snowflake schema and Star Schema?\n\n7. Write a PySpark code snippet to perform an anti join between two DataFrames ?\n\n\"I will post all my interview questions and share my experiences.\"........ \nfor more update follow Pratik Dhok",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post lists seven technical interview questions for Data Engineering candidates with 3–6 years of experience. It covers a SQL and PySpark query for products with exactly two transactions, metadata-driven file routing in Azure Pipelines, loading and transforming a CSV into a Delta table with Databricks, SCD Type 2, fact and dimension tables, Snowflake schema versus star schema, and a PySpark anti join. The SQL example expects the second transaction for product abc and excludes bcd, which has only one transaction. The post does not provide answers or implementations.",
+    "topics": [
+      "SQL",
+      "PySpark",
+      "Azure Pipelines",
+      "Databricks",
+      "Delta tables",
+      "Data warehousing",
+      "File metadata and routing",
+      "Schema design",
+      "Anti joins"
+    ],
+    "subtopics": [
+      "Products with exactly two transactions",
+      "Retrieving the second transaction without window functions",
+      "Routing CSV and Parquet files with Excel metadata",
+      "Loading a CSV into a Delta table",
+      "Normalizing phone numbers",
+      "SCD Type 2 implementation with Databricks",
+      "Fact and dimension tables",
+      "Snowflake schema versus star schema",
+      "PySpark anti joins"
+    ],
+    "concepts": [
+      "Products with exactly two transactions",
+      "Window-function-free queries",
+      "Metadata-driven file routing",
+      "CSV-to-Delta transformation",
+      "SCD Type 2",
+      "Fact and dimension tables",
+      "Snowflake schema and star schema",
+      "PySpark anti join"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write both SQL and PySpark queries for a sales table that find products with exactly two transactions and return only the details of the second transaction without using window functions.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution groups sales by product and retains only products with exactly two transactions.\nIt identifies the second transaction and returns id, product, and last_trans_date without using a window function.\nFor the supplied example, it returns id 2, product abc, and last_trans_date 7-5-25 while excluding bcd."
+    },
+    {
+      "question": "How would you design an Azure Pipeline that reads format metadata from Excel and routes CSV files to a csv folder and Parquet files to a parquet folder?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The design reads file metadata from the supplied Excel file to determine each source file's format.\nIt routes CSV files to csv and Parquet files to parquet based on that metadata.\nThe design recognizes that explicit routing destinations are provided only for CSV and Parquet files."
+    },
+    {
+      "question": "What steps are required in Databricks to load a CSV containing id and Ph no into a Delta table while changing the phone value 91 - 8420740724 to 8420740724?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The workflow loads the single source CSV as part of creating a Delta table in Databricks.\nIt changes Ph no from 91 - 8420740724 to 8420740724 while retaining id as 1.\nIt writes the result with the target columns id and Ph no in Delta table format."
+    },
+    {
+      "question": "What is SCD Type 2, and what steps would you follow to implement it using Databricks?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer defines SCD Type 2.\nIt describes the Databricks implementation steps required for SCD Type 2."
+    },
+    {
+      "question": "What are fact and dimension tables, and which of these table types changes more frequently?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines both fact tables and dimension tables.\nIt explains which of the two table types changes more frequently."
+    },
+    {
+      "question": "What is the difference between Snowflake schema and star schema?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines Snowflake schema.\nIt defines star schema and explains how the two schema types differ."
+    },
+    {
+      "question": "Write a PySpark code snippet that performs an anti join between two DataFrames.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The code performs an anti join between two PySpark DataFrames.\nIt retains rows from one DataFrame that have no match in the other under the selected join condition.\nThe answer states its join-key assumption because the prompt does not provide the DataFrame schemas or a key."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL transaction filtering",
+      "PySpark DataFrame operations",
+      "Azure Pipelines file routing",
+      "Databricks Delta table ingestion",
+      "Slowly Changing Dimensions",
+      "Data warehouse table design",
+      "Schema comparison",
+      "File formats and metadata"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:964c9ab826d86c59",
+    "saved_date": "2026-10-01T23:23:32Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

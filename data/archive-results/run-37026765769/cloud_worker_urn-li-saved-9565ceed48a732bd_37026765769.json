@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-9565ceed48a732bd",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7355809327208681472",
+    "captured_at": "2026-10-02T00:15:49.617326Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:48Z"
+  },
+  "original_text": "I have screened 1000s of resumes.\nAnd the majority of them miss these basic details.\nHere's how you can stand out 👇\n\n1. Font & Formatting:\n- Use 18–24 pt for name, 12–14 pt (bold) for section titles, and 10–12 pt for body text.\n- Stick to simple fonts like Calibri, Arial, Times New Roman, or Helvetica for easy readability.\n\n2. Resume Structure:\n- Fresher: Education → Projects → Skills → Papers → Achievements\n- 0–2 YOE: Summary → Work Ex → Skills → Projects → Education → Certificates\n\n3. Pro Tips\n- Add keywords from the job description\n- Avoid personal pronouns like I, me, my. For ex - Instead of “My job was to increase sales”, write: “Increased sales by 20%”\n\n4. Get it reviewed:\n- If you’re already following all these points but still not getting shortlisted, chances are you are missing some critical detail or underselling yourself.\n\nSo, before you apply, get your resume reviewed by a Senior Data Professional.\n\n𝗚𝗲𝘁 𝘆𝗼𝘂𝗿 𝗿𝗲𝘀𝘂𝗺𝗲 𝗿𝗲𝘃𝗶𝗲𝘄𝗲𝗱 𝗵𝗲𝗿𝗲 \n - https://lnkd.in/gE_7kPEx\n\nThey have been on both sides of the hiring table and can provide an objective perspective. They'll catch mistakes you've overlooked and optimize your resume to make it better. They’ll also help you with the overall interview preparation. 💫\n\nWith their help, you’ll already be ahead of 95% of applicants. ✅\nIf you've read so far, do LIKE the post👍\n\n#dataengineering #resume",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7355809327208681472_slide_0.jpg",
+      "description": "JPEG image, 480x626 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides general resume-writing guidance rather than technical data engineering knowledge. It recommends readable fonts and font sizes, resume section orders for freshers and candidates with 0–2 years of experience, incorporating job-description keywords, avoiding personal pronouns, and obtaining a review from a senior data professional. It also promotes a paid resume-review service and makes claims about standing out to applicants.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Career Development",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9565ceed48a732bd",
+    "saved_date": "2026-10-01T23:09:48Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7355809327208681472",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7355809327208681472_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

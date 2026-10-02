@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-62e08522c59166f9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7307247421867089920",
+    "captured_at": "2026-10-02T00:15:48.046485Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:03Z"
+  },
+  "original_text": "AI | Data | Python | Node JS | AWS | Azure\n1yr •\nMaster Python Like a Pro: Advanced Interview Questions & Answers!\nIf you're looking to level up your Python skills and prepare for high-stakes technical interviews, I've got something valuable for you!\nThis exclusive PDF packed with expert level Python interview questions covering:\n✅ Advanced Python concepts\n✅ Object-Oriented Programming (OOP)\n✅ Algorithms & data structures\n✅ Memory management & performance optimization\n✅ Python for web development (Flask, Django, APIs)\n✅ Decorators, iterators, generators, and more\nDownload the PDF and get ahead in your Python journey.\nPython Advanced Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7307247421867089920_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post for a PDF containing advanced Python interview questions and answers. It advertises coverage of advanced Python concepts, object-oriented programming, algorithms and data structures, memory management, performance optimization, Flask, Django, APIs, decorators, iterators, and generators. The post does not provide the actual questions, answers, or technical explanations.",
+    "topics": [
+      "Python",
+      "Advanced Python Interview Preparation"
+    ],
+    "subtopics": [
+      "Advanced Python Concepts",
+      "Object-Oriented Programming (OOP)",
+      "Algorithms and Data Structures",
+      "Memory Management",
+      "Performance Optimization",
+      "Python Web Development",
+      "Flask",
+      "Django",
+      "APIs",
+      "Decorators",
+      "Iterators",
+      "Generators"
+    ],
+    "concepts": [
+      "Advanced Python Concepts",
+      "Object-Oriented Programming (OOP)",
+      "Algorithms and Data Structures",
+      "Memory Management",
+      "Performance Optimization",
+      "Python Web Development",
+      "Flask",
+      "Django",
+      "APIs",
+      "Decorators",
+      "Iterators",
+      "Generators"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Programming",
+    "primary_topic": "Advanced Python Interview Preparation",
+    "secondary_topics": [
+      "Object-Oriented Programming (OOP)",
+      "Algorithms and Data Structures",
+      "Python Performance",
+      "Python Web Development",
+      "Advanced Python Features"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:62e08522c59166f9",
+    "saved_date": "2026-10-01T23:33:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7307247421867089920",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7307247421867089920_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

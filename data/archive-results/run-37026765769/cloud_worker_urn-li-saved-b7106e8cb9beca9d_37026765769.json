@@ -1,0 +1,55 @@
+{
+  "id": "urn-li-saved-b7106e8cb9beca9d",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7301572245049556992",
+    "captured_at": "2026-10-02T00:15:50.935818Z",
+    "author": "Kalyani V",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:57Z"
+  },
+  "original_text": "• 1st\nsql\nReposted from Rahul Patel • 1yr •\n#DataCleaning\nPyspark Top Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7301572245049556992_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The content is an incomplete repost labeled with SQL, PySpark, data cleaning, and \"Top Interview Questions,\" but it provides no actual interview questions, technical details, or explanations.",
+    "topics": [
+      "SQL",
+      "PySpark",
+      "Data cleaning"
+    ],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "PySpark",
+      "Data cleaning"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b7106e8cb9beca9d",
+    "saved_date": "2026-10-01T23:25:57Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7301572245049556992",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7301572245049556992_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-archive-09728b36993bf43e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.929066Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:43Z"
+  },
+  "original_text": "5 most asked SQL Interview Questions for Data Engineer jobs.\n\n𝟭. 𝗙𝗶𝗻𝗱 𝘁𝗵𝗲 𝗦𝗲𝗰𝗼𝗻𝗱 𝗛𝗶𝗴𝗵𝗲𝘀𝘁 𝗦𝗮𝗹𝗮𝗿𝘆 𝗶𝗻 𝗮 𝗧𝗮𝗯𝗹𝗲\n\nSELECT MAX(salary) AS SecondHighestSalary\nFROM Employee\nWHERE salary < (SELECT MAX(salary) FROM Employee);\n\n𝟮 . 𝗙𝗶𝗻𝗱 𝗼𝘂𝘁 𝗲𝗺𝗽𝗹𝗼𝘆𝗲𝗲𝘀 𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗺𝗼𝗿𝗲 𝘁𝗵𝗮𝗻 𝘁𝗵𝗲𝗶𝗿 𝗺𝗮𝗻𝗮𝗴𝗲𝗿𝘀\n\nSELECT e2.name as Employee\nFROM employee e1\nINNER JOIN employee e2\nON e1.id = e2.managerID\nWHERE e1.salary < e2.salary\n\n𝟯. 𝗙𝗶𝗻𝗱 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿𝘀 𝘄𝗵𝗼 𝗻𝗲𝘃𝗲𝗿 𝗼𝗿𝗱𝗲𝗿\n\nSELECT name as Customers\nFROM Customers\nWHERE id not in (\nSELECT customerId\nFROM Orders);\n\n𝟰. 𝗗𝗲𝗹𝗲𝘁𝗲 𝗱𝘂𝗽𝗹𝗶𝗰𝗮𝘁𝗲 𝗲𝗺𝗮𝗶𝗹𝘀\n\nDELETE p1\nFROM Person p1, Person p2\nWHERE p1.Email = p2.Email AND\np1.Id > p2.Id\n\n𝟱. 𝗖𝗼𝘂𝗻𝘁 𝘁𝗵𝗲 𝗻𝘂𝗺𝗯𝗲𝗿 𝗼𝗳 𝗼𝗿𝗱𝗲𝗿𝘀 𝗽𝗹𝗮𝗰𝗲𝗱 𝗶𝗻 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝘆𝗲𝗮𝗿 𝗮𝗻𝗱 𝗺𝗼𝗻𝘁𝗵.\n\nSELECT COUNT(*) AS order_count\nFROM orders WHERE EXTRACT(YEAR_MONTH FROM order_date) = EXTRACT(YEAR_MONTH FROM CURDATE() - INTERVAL 1 MONTH);\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents five SQL interview tasks with example queries: finding the second-highest employee salary, identifying employees who earn more than their managers, finding customers who never ordered, deleting duplicate email records, and counting orders from the previous month. The visible content ends with an ellipsis, so any additional material is truncated and cannot be analyzed.",
+    "topics": [
+      "SQL",
+      "Data engineering interviews"
+    ],
+    "subtopics": [
+      "Aggregate functions",
+      "Subqueries",
+      "INNER JOIN",
+      "NOT IN",
+      "Self-joins",
+      "DELETE statements",
+      "Date filtering"
+    ],
+    "concepts": [
+      "Second-highest salary with nested MAX",
+      "Comparing employee and manager salaries",
+      "Customers without orders",
+      "Deleting duplicate email records",
+      "Counting previous-month orders"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can you find the second-highest salary in an Employee table using SQL?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer uses a subquery to find the overall maximum salary.\nThe outer query applies MAX to salaries strictly below the overall maximum."
+    },
+    {
+      "question": "How can you identify employees who earn more than their managers?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer joins the Employee table to itself using the manager ID and employee ID relationship.\nThe salary comparison uses the employee alias for the subordinate and the manager alias for the manager."
+    },
+    {
+      "question": "How can you find customers who have never placed an order?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer selects customer IDs from the Orders table in a subquery.\nThe outer query uses NOT IN to retain customers whose IDs do not appear in the Orders result."
+    },
+    {
+      "question": "How can you delete duplicate rows identified by email while retaining one row per email?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer performs a self-join on the Person table using matching email addresses.\nIt deletes the row with the greater ID when another row has the same email and a lower ID."
+    },
+    {
+      "question": "How can you count the orders placed during the previous month?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer extracts the year and month from each order date.\nIt compares that value with the year and month from one month before CURDATE and uses COUNT to count matching orders."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Data engineering interviews",
+      "Relational database queries"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:09728b36993bf43e",
+    "saved_date": "2026-10-01T23:21:43Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

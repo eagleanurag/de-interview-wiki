@@ -1,0 +1,113 @@
+{
+  "id": "urn-li-archive-7187f84a5008fb32",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.350463Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:54Z"
+  },
+  "original_text": "Hey #DataEngineering fam! 👋 My journey has led me to conduct interviews, and I'm spotting questions that go beyond theory – they test real-world experience! (More on those 'not-so-normal' questions soon! 😉)\n\nTo kick things off, let's tackle 5 common, yet crucial, scenarios in ETL. These are the ones where practical know-how shines. What's your go-to solution for these? 👇\n\n1. Optimize an ETL job for 10 million records? 🚀\n* My Take: Don't just SELECT *!\n* Key Strategies:\n* Parallelize: Use Spark partitioning or file-based partitioning (ADLS).\n* Push Logic: Filter/aggregate at source DB (WHERE, GROUP BY).\n* Minimize In-Memory: Be smart with large lookups/joins.\n* Bulk Load: Efficiently write data in batches (ADF Copy Activity, Spark configs).\n\n2. Handle records rejected during transformation? 🚫\n* My Take: One bad record shouldn't break the pipeline!\n* Key Strategies:\n* Redirect: Send bad records to a reject file/table (DLQ in ADLS).\n* Capture Metadata: Log error, source ID, timestamp for debugging.\n* Fault Tolerance: Use ADF's settings or Spark's PERMISSIVE mode / try-except.\n\n3. Pass different file paths for DEV, QA, PROD? ⚙️\n* My Take: Avoid hardcoding at all costs!\n* Key Strategies:\n* Parameterization: Use pipeline parameters in ADF.\n* Environment Variables: Configure paths external to code.\n* Secure Secrets: Use Azure Key Vault for sensitive credentials.\n\n4. Implement Incremental Load (CDC)? 🔄\n* My Take: Efficiently process only new/changed data.\n* Key Strategies:\n* High-Water Mark: Track last_updated_timestamp or max_key.\n* Control Table: Store the last loaded mark for each job.\n* Filtered Query: Pull data using WHERE LastUpdatedTimestamp > :bookmark_value.\n* Delta Lake MERGE: Simplify CDC in Databricks.\n\n5. Load the most recent record per customer from a transaction table? 📊\n* My Take: A classic for getting the latest state of an entity.\n* Key Strategies:\n* Sort & Rank: Group by customer, then sort by date (DESC).\n* Window Functions: Use Spark SQL's ROW_NUMBER() over PARTITION BY CustomerID ORDER BY TransactionDate DESC.\n* Filter: Select WHERE rn = 1 for the latest record.\n\nWhich of these scenarios have you tackled recently? What are your preferred tools or techniques? Share your insights and let's discuss! 👇\n\n#DataEngineering #AzureDatabricks #Databricks #DataFactory #AzureDataFactory #ADF #ADB #AzureDataEngineer #ETL #InterviewQuestions #DataOps #CloudData #Azure #CareerTips #CommunityLearning",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This introductory post presents five practical ETL interview scenarios and recommended strategies: optimizing a job for 10 million records, isolating rejected records, configuring different paths for DEV, QA, and PROD, implementing incremental load with CDC, and selecting the latest transaction for each customer. The suggested techniques include partitioning, source-side filtering and aggregation, memory-conscious joins, bulk loading, reject files or DLQs, ADF parameters, Azure Key Vault, high-water marks, Delta Lake MERGE, and Spark SQL window functions.",
+    "topics": [
+      "Rejected-record handling",
+      "Environment-specific pipeline configuration",
+      "Incremental loading with CDC",
+      "Latest-record transformation"
+    ],
+    "subtopics": [
+      "Partitioning and parallelism",
+      "Selective extraction and source-side aggregation",
+      "Memory-conscious joins and lookups",
+      "Bulk loading in batches",
+      "Reject files, reject tables, and DLQs",
+      "Error metadata and fault tolerance",
+      "ADF pipeline parameters",
+      "Environment variables and secret management",
+      "High-water marks and control tables",
+      "Bookmark-filtered incremental queries",
+      "Delta Lake MERGE",
+      "Customer transaction ranking",
+      "ROW_NUMBER window functions"
+    ],
+    "concepts": [
+      "Selective extraction",
+      "Source-side filtering and aggregation",
+      "Partitioning for parallelism",
+      "Memory-conscious joins and lookups",
+      "Batched bulk loading",
+      "Rejected-record isolation",
+      "Transformation error metadata",
+      "Fault-tolerant transformation handling",
+      "ADF pipeline parameterization",
+      "External environment variables",
+      "Azure Key Vault secret management",
+      "High-water-mark incremental load",
+      "Control table",
+      "Bookmark-filtered query",
+      "Delta Lake MERGE for CDC",
+      "Latest-record-per-customer pattern",
+      "ROW_NUMBER window function"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you optimize an ETL job that processes 10 million records?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer recommends avoiding SELECT *.\nIt uses Spark partitioning or file-based partitioning in ADLS to parallelize processing.\nIt pushes filtering and aggregation to the source database with WHERE and GROUP BY.\nIt handles large lookups and joins carefully to minimize in-memory usage.\nIt writes data in batches using approaches such as ADF Copy Activity or Spark configurations."
+    },
+    {
+      "question": "How would you prevent one invalid record from breaking an ETL pipeline during transformation?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "A strong answer redirects rejected records to a reject file or table, such as a DLQ in ADLS.\nIt records the error, source ID, and timestamp for debugging.\nIt applies fault-tolerant options such as ADF settings, Spark PERMISSIVE mode, or try-except handling."
+    },
+    {
+      "question": "How would you configure an ADF pipeline to use the correct file paths in DEV, QA, and PROD without hardcoding them?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer uses ADF pipeline parameters for environment-specific paths.\nIt configures paths through environment variables external to the code.\nIt uses Azure Key Vault for sensitive credentials."
+    },
+    {
+      "question": "How can an ETL job process only new or changed data for an incremental CDC load?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer tracks a high-water mark such as last_updated_timestamp or max_key.\nIt stores the last loaded mark for each job in a control table.\nIt filters incremental data with a bookmark query such as WHERE LastUpdatedTimestamp > :bookmark_value.\nIt may use Delta Lake MERGE in Databricks to simplify CDC."
+    },
+    {
+      "question": "How would you use Spark SQL to select the most recent transaction for each customer?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer partitions the records by CustomerID.\nIt orders each partition by TransactionDate in descending order.\nIt assigns row numbers with ROW_NUMBER().\nIt filters the ranked results to retain rows where rn = 1."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "ETL",
+    "secondary_topics": [
+      "ETL performance optimization",
+      "Data quality and fault tolerance",
+      "Pipeline configuration and secrets",
+      "Incremental loading and CDC",
+      "Window functions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7187f84a5008fb32",
+    "saved_date": "2026-10-01T23:20:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-37da2381b604b5c3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7300714341224304641",
+    "captured_at": "2026-10-02T00:15:46.471896Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:21Z"
+  },
+  "original_text": "This Resume has an ATS score of more than 93\n\nI have personally used this similar single-column resume in my job hunting and got amazing results\n\nI’m sharing a resume template where you can create your resume quickly and easily: \nhttps://lnkd.in/g6zgbx-R\n\n📍 Kindly like and #repost your Jobseeker friends it is useful for others\n\nTips Do’s and Don’ts for a Winning Resume:\n✔️ Do’s:\n✔️ Define your job search goal and tailor your resume.\n✔️ Use industry buzzwords to match the job description.\n✔️ Highlight achievements with numbers and metrics.\n✔️ Keep a clean, consistent format.\n✔️ Prioritize relevant experiences and list them in reverse chronological order.\n✔️ Proofread and get feedback.\n\n❌ Don’ts:\n❌ Use generic templates or vague claims.\n❌ Misrepresent your GPA, skills, or accomplishments.\n❌ Include lengthy objective statements or references on your resume.\n❌ Exceed two pages—one page for most students.\n❌ Rely on one application—apply broadly!\n\n---------\n\nStart earning in USD with these 7 remote job websites. \n\nHere are 7 websites to help you land that dream remote job!\n\n1/ We Work Remotely\n↳ The largest remote community with 4.5M visitors.\n\n2/ Remote co\n↳ Offers remote roles in customer service, design, HR, sales, and more.\n\n3/ FlexJobs\n↳ Curates high-quality, vetted remote job opportunities.\n\n4/ Remotive\n↳ Features remote jobs in development, marketing, sales, and customer support.\n\n5/ Jobspresso\n↳ Curated remote jobs in tech, marketing, design, and writing.\n\n6/ AngelList\n↳ Connects you with startup jobs, many offering remote work.\n\n7/ JustRemote\n↳ Fully or partially remote positions.\n\n\n👍 Like this post if you found it helpful!\n\nHR Swati Sharma Ajit Kumar Vikas Singh Ishika Rawat Harish kumar😊",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7300714341224304641_slide_0.jpg",
+      "description": "JPEG image, 480x617 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a job-seeking and career-advice post rather than a Data Engineering knowledge post. It claims that a single-column resume template received an ATS score above 93, provides resume-writing do's and don'ts, and lists seven websites for finding remote jobs. It contains no technical Data Engineering concepts or systems.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Career Development",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:37da2381b604b5c3",
+    "saved_date": "2026-10-01T23:34:21Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7300714341224304641",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7300714341224304641_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

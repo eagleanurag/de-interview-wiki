@@ -1,0 +1,79 @@
+{
+  "id": "urn-li-saved-ffccf4f7771b97bd",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326889752870170625",
+    "captured_at": "2026-10-02T00:15:53.702076Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:50Z"
+  },
+  "original_text": "Data Analyst | SQL | POWER BI | Actively Seeking opportunities in Data Analytics\n1yr •\n🚀 Diving Deep into Hotel Booking Data with SQL!\nJust wrapped up an exciting project where I explored hotel booking data to uncover customer behaviors, occupancy trends, and booking patterns across India. 📊\n💡 Key Insights:\n✔️ Found the top 5 customers who book the most in their home cities\n✔️ Analyzed how much revenue and bookings come from female customers\n✔️ Identified customers who book hotels in different states\n✔️ Calculated how full each hotel gets each month to understand their performance\nBig thanks to Ankit Bansal for providing this project in the bootcamp – it’s been a fantastic learning experience and a great opportunity to sharpen my SQL skills. 🙏\n💬 Open to any suggestions or improvements on the SQL queries – always looking to learn and grow!\nStay tuned for Part 2, where I’ll be diving even deeper into customer segmentation and advanced analytics. Can’t wait to share more!\n#SQL #DataAnalysis #HotelIndustry #CareerGrowth #LearningJourney #BootcampProject\n…see more\nHotel Booking analysis",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326889752870170625_slide_0.jpg",
+      "description": "PNG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a brief personal-project announcement about analyzing hotel booking data across India with SQL. The project reportedly examined customer booking behavior, identified the top five customers by bookings in their home cities, analyzed revenue and booking volume from female customers, identified customers who booked in different states, and assessed monthly hotel occupancy as a performance indicator. It does not include SQL queries, results, figures, dataset details, or a Power BI implementation. Customer segmentation and advanced analytics are mentioned only as planned topics for a future second part.",
+    "topics": [
+      "SQL",
+      "Power BI",
+      "Hotel Booking Analytics",
+      "Customer Behavior Analysis",
+      "Hotel Performance Analysis"
+    ],
+    "subtopics": [
+      "Top customers by bookings in home cities",
+      "Revenue and booking volume from female customers",
+      "Customer bookings across states",
+      "Monthly hotel occupancy"
+    ],
+    "concepts": [
+      "SQL",
+      "Power BI",
+      "Customer Booking Frequency",
+      "Revenue and Booking Volume by Customer Gender",
+      "Cross-State Booking Behavior",
+      "Monthly Hotel Occupancy"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "In a portfolio interview, how would you summarize the analytical scope of the hotel booking project?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The project examined customer behavior, occupancy trends, and booking patterns in hotel data from India.\nIt identified the top five customers by booking frequency in their home cities.\nIt analyzed revenue and booking volume contributed by female customers.\nIt identified customers who booked hotels in different states.\nIt evaluated how full each hotel was each month as an indicator of performance."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Hotel Booking Analytics",
+    "secondary_topics": [
+      "SQL",
+      "Power BI",
+      "Customer Behavior",
+      "Revenue Analysis",
+      "Hotel Occupancy"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ffccf4f7771b97bd",
+    "saved_date": "2026-10-01T23:25:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326889752870170625",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326889752870170625_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7326889752870170625_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

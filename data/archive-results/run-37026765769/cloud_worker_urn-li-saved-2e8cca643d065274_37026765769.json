@@ -1,0 +1,154 @@
+{
+  "id": "urn-li-saved-2e8cca643d065274",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345294369790357506",
+    "captured_at": "2026-10-02T00:15:46.090437Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:46Z"
+  },
+  "original_text": "Sr. Data Engineer @ Deloitte | Specializing in End-to-End Data Solutions with Azure Databricks, ADF, PySpark, Synapse, SQL, Python\n1yr •\n⁣🔥 𝐂𝐫𝐚𝐜𝐤𝐢𝐧𝐠 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐬? 𝐘𝐨𝐮 𝐜𝐚𝐧’𝐭 𝐢𝐠𝐧𝐨𝐫𝐞 𝐀𝐩𝐚𝐜𝐡𝐞 𝐒𝐩𝐚𝐫𝐤.⁣\n⁣\nIf you’re aiming for top roles in data engineering, Spark is a must-know.⁣\n⁣\nHere’s a powerful checklist of commonly asked Apache Spark interview questions that’ll help you stay ahead:⁣\n⁣\n🔹 How does Spark work under the hood? Walk through its architecture.⁣\n🔹 Where exactly did you apply Spark in your past projects?⁣\n🔹 What are some key Spark optimization strategies you used?⁣\n🔹 What are transformations vs actions in Spark? Examples?⁣\n🔹 When does shuffle happen and how do you handle it?⁣\n🔹 GroupByKey vs ReduceByKey — which one and why?⁣\n🔹 What are some Spark-related issues you troubleshooted?⁣\n⁣\nAnd it doesn’t stop there...⁣\n⁣\n🚀 More concepts you must prepare:⁣\n⁣\nSpark vs MapReduce — real-world differences⁣\n⁣\nNarrow vs Wide transformations — impact on performance⁣\n⁣\nPartitions — how does Spark manage them?⁣\n⁣\nRDDs — what are they and when to use them⁣\n⁣\nBroadcast variables — when and why?⁣\n⁣\nSparkContext vs SparkSession — do you know the difference?⁣\n⁣\nMemory management in Spark executors⁣\n⁣\nDAGs, Lineage Graphs, Catalyst Optimizer — explain them like you teach⁣\n⁣\nWhy Parquet is Spark’s favorite file format⁣\n⁣\nOverview of Spark Streaming and DStreams⁣\n⁣\nKey libraries in the Spark ecosystem⁣\n⁣\n⁣\n✅ If you can answer these confidently, you’re already in the top 10%.⁣\n⁣\nUse this list to guide your prep, revise what matters, and focus your time on high-impact topics.⁣\n⁣\nFound this helpful? Repost it! 🔁⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣\nFollow Akash AB for more insights on Data⁣ Engineering ✅⁣⁣\n⁣⁣\n#ApacheSpark #DataEngineering #InterviewTips #BigData #ETL #SQL #Python #SparkInterview #CareerGrowth⁣\n⁣\nApache Spark Guide",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345294369790357506_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional Apache Spark interview-preparation checklist rather than a technical explanation. It presents Spark as a must-know for data engineering roles and lists topics including architecture, transformations and actions, shuffle, optimization, troubleshooting, partitions, RDDs, broadcast variables, SparkContext and SparkSession, executor memory, Parquet, streaming, and Spark versus MapReduce. It provides no definitions, examples, answers, architecture details, named optimization strategies, or troubleshooting cases. The supplied extracted media text is empty. An opening profile line mentions Azure Databricks, ADF, PySpark, Synapse, SQL, and Python.",
+    "topics": [
+      "Apache Spark",
+      "Data engineering interview preparation",
+      "Big data"
+    ],
+    "subtopics": [
+      "Spark architecture and under-the-hood execution",
+      "Spark project experience",
+      "Spark optimization strategies",
+      "Transformations and actions",
+      "Shuffle",
+      "GroupByKey versus ReduceByKey",
+      "Spark troubleshooting",
+      "Spark versus MapReduce",
+      "Narrow versus wide transformations",
+      "Partition management",
+      "RDDs",
+      "Broadcast variables",
+      "SparkContext versus SparkSession",
+      "Executor memory management",
+      "DAGs and lineage graphs",
+      "Catalyst Optimizer",
+      "Parquet",
+      "Spark Streaming and DStreams",
+      "Spark ecosystem libraries"
+    ],
+    "concepts": [
+      "Apache Spark",
+      "Spark architecture",
+      "Transformations and actions",
+      "Shuffle",
+      "GroupByKey and ReduceByKey",
+      "Spark optimization",
+      "Narrow and wide transformations",
+      "Partitions",
+      "RDDs",
+      "Broadcast variables",
+      "SparkContext and SparkSession",
+      "Executor memory management",
+      "DAGs, lineage graphs, and Catalyst Optimizer",
+      "Parquet",
+      "Spark Streaming and DStreams",
+      "Spark ecosystem libraries",
+      "Spark versus MapReduce"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does Apache Spark work under the hood, and what is its architecture?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer identifies Spark's architectural components and explains their roles.\nThe answer explains how Spark operates under the hood."
+    },
+    {
+      "question": "What are transformations and actions in Spark, and what examples distinguish them?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer defines transformations and actions, contrasts them, and provides examples of each."
+    },
+    {
+      "question": "How does Spark manage partitions, when does shuffle occur, and how can shuffle be handled?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer explains Spark's partition management.\nThe answer identifies conditions that cause shuffle and describes approaches for handling it."
+    },
+    {
+      "question": "How do GroupByKey and ReduceByKey differ, and which one should be chosen in a given situation?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer compares GroupByKey with ReduceByKey.\nThe answer explains which operation to choose and why."
+    },
+    {
+      "question": "What performance impact do narrow and wide transformations have in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes narrow transformations from wide transformations.\nThe answer explains how the two transformation types affect performance."
+    },
+    {
+      "question": "What is the difference between SparkContext and SparkSession?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer defines SparkContext and SparkSession and explains the difference between them."
+    },
+    {
+      "question": "What are RDDs in Spark, and when should they be used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines RDDs and describes when they should be used."
+    },
+    {
+      "question": "When and why should broadcast variables be used in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer identifies appropriate uses of broadcast variables and explains the reasons for using them."
+    },
+    {
+      "question": "Explain Spark DAGs, lineage graphs, and the Catalyst Optimizer.",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "The answer defines DAGs, lineage graphs, and the Catalyst Optimizer.\nThe answer explains the role of each concept in Spark."
+    },
+    {
+      "question": "What Spark-related issues have you troubleshot, and which Spark optimization strategies have you used?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer describes relevant Spark issues and the troubleshooting performed.\nThe answer identifies concrete optimization strategies used in past work."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark",
+    "secondary_topics": [
+      "Data engineering interview preparation",
+      "Big data"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2e8cca643d065274",
+    "saved_date": "2026-10-01T23:14:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345294369790357506",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345294369790357506_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

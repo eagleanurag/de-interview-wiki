@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-saved-c902c137f7857924",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338780871455318016",
+    "captured_at": "2026-10-02T00:15:51.596562Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:09Z"
+  },
+  "original_text": "🔍 Master PySpark Faster with This Visual Cheatsheet! 💡\n\nWorking with big data often means dealing with massive volumes of distributed data — and PySpark is one of the most powerful tools to get the job done efficiently. Whether you're transforming terabytes of logs, cleaning messy datasets, or running complex aggregations, PySpark’s DataFrame API is your go-to toolkit.\n\nBut let's be honest — keeping track of every function’s syntax isn't always easy. So, I created this visual cheatsheet highlighting some of the most frequently used PySpark functions 🚀\n\n📊 What's Inside the Cheatsheet:\n✔️ select() – Choose specific columns from a DataFrame\n ✔️ filter() – Filter rows based on conditions\n ✔️ groupBy().count() – Aggregate data efficiently\n ✔️ agg() – Perform advanced aggregations like avg, sum, max\n ✔️ join() – Combine multiple datasets based on keys\n ✔️ orderBy() – Sort data\n ✔️ distinct() – Remove duplicates\n ✔️ drop() – Remove columns\n ✔️ withColumn() – Create or modify columns\n ✔️ replace() – Handle missing or invalid values\n ✔️ isNull() – Identify missing values\n ✔️ sample() – Random sampling of your data\n\n🛠️ Why It’s Useful:\n✅ Speeds up development by giving you quick syntax references\n ✅ Helps you transition from Pandas or SQL into PySpark smoothly\n ✅ Ideal for interviews, notebooks, and project kickstarts\n ✅ Great for both beginners and seasoned Spark users\n\n\n🔄 Feel free to save, share, or repost this with your network. Let’s make big data work easier for everyone!\n#PySpark #ApacheSpark #BigData #DataEngineering #DataScience #Python #ETL #SparkSQL #CheatSheet #DataTransformation #MonuKumar #LinkedInLearning #SparkJobs #DataOps #CloudData\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338780871455318016_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post describes a visual cheatsheet for common PySpark DataFrame operations used when working with large, distributed datasets. It identifies functions for selecting and filtering data, aggregating and joining datasets, sorting and removing duplicates, removing and modifying columns, handling missing or invalid values, identifying null values, and random sampling. It claims the cheatsheet can provide quick syntax references and help users transition from Pandas or SQL, but the supplied content does not include the visual cheatsheet, code examples, or detailed syntax beyond the function names and brief descriptions.",
+    "topics": [
+      "PySpark DataFrame API",
+      "Big Data Processing",
+      "Data Transformation"
+    ],
+    "subtopics": [
+      "Selecting and filtering DataFrame data",
+      "Aggregation and joining datasets",
+      "Sorting and removing duplicates",
+      "Column removal, creation, and modification",
+      "Missing and invalid value handling",
+      "Random sampling"
+    ],
+    "concepts": [
+      "PySpark DataFrame API",
+      "select()",
+      "filter()",
+      "groupBy().count()",
+      "agg()",
+      "join()",
+      "orderBy()",
+      "distinct()",
+      "drop()",
+      "withColumn()",
+      "replace()",
+      "isNull()",
+      "sample()"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "For a PySpark DataFrame task that requires selecting columns, retaining rows that meet conditions, and counting grouped records, which listed functions should be used?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The answer should associate select() with choosing specific DataFrame columns.\nThe answer should associate filter() with retaining rows that satisfy conditions.\nThe answer should associate groupBy().count() with counting grouped records."
+    },
+    {
+      "question": "Which PySpark DataFrame functions are described as supporting advanced aggregations and combining datasets based on keys?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should identify agg() as supporting average, sum, and maximum aggregations.\nThe answer should identify join() as the function for combining datasets based on keys."
+    },
+    {
+      "question": "How can sorting, duplicate removal, and column removal be performed with the PySpark functions listed in the post?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer should use orderBy() to sort data.\nThe answer should use distinct() to remove duplicates.\nThe answer should use drop() to remove columns."
+    },
+    {
+      "question": "Which listed functions support creating or modifying columns, identifying missing values, and randomly sampling data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should associate withColumn() with creating or modifying columns.\nThe answer should associate isNull() with identifying missing values.\nThe answer should associate sample() with random data sampling."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame Operations",
+    "secondary_topics": [
+      "Big Data Processing",
+      "Data Transformation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c902c137f7857924",
+    "saved_date": "2026-10-01T23:20:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338780871455318016",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338780871455318016_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

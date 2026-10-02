@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-saved-06f7ead3cd6a4450",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337705010304036867",
+    "captured_at": "2026-10-02T00:15:44.568237Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:54Z"
+  },
+  "original_text": "#DataEngineer #InterviewQuestions #PySpark #SparkSQL \n#AzureDataEngineer #Databricks\nQ :: Find the origin and final destination details of a customer for the below given table :\n----DDL ::\nCREATE TABLE Flights (cust_id INT, flight_id VARCHAR(10), origin VARCHAR(50), destination VARCHAR(50));\n\n-- Insert data into the table\nINSERT INTO Flights (cust_id, flight_id, origin, destination)\nVALUES (1, 'SG1234', 'Delhi', 'Hyderabad'), (1, 'SG3476', 'Kochi', 'Mangalore'), (1, '69876', 'Hyderabad', 'Kochi'), (2, '68749', 'Mumbai', 'Varanasi'), (2, 'SG5723', 'Varanasi', 'Delhi');\n\nAnswer ::\ncust_id | origin | destination\n1 | Delhi | Mangalore\n2 | Mumbai | Delhi\n\ncomment down the answer. if you find it useful #repost\nTable ::",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337705010304036867_slide_0.jpg",
+      "description": "JPEG image, 308x120 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post defines a Flights table containing customer, flight, origin, and destination fields, inserts sample records for two customers, and gives the expected customer-level result. Customer 1 is reported as traveling from Delhi to Mangalore, while customer 2 is reported as traveling from Mumbai to Delhi. Although tagged with PySpark, Spark SQL, Azure Data Engineering, and Databricks, the content does not provide an implementation or general algorithm.",
+    "topics": [
+      "Customer flight itinerary reconstruction",
+      "Flights table schema",
+      "PySpark",
+      "Databricks"
+    ],
+    "subtopics": [
+      "Origin and final destination determination",
+      "Customer-level result derivation",
+      "DDL and sample flight records"
+    ],
+    "concepts": [
+      "Flights table",
+      "Customer itinerary reconstruction",
+      "Customer 1 itinerary",
+      "Customer 2 itinerary",
+      "Implementation omission"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What columns and data types are defined for the Flights table?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The table has cust_id as INT, flight_id as VARCHAR(10), and origin and destination as VARCHAR(50)."
+    },
+    {
+      "question": "Using the supplied records, what origin and final destination should be reported for customers 1 and 2?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Customer 1 should be reported as traveling from Delhi to Mangalore.\nCustomer 2 should be reported as traveling from Mumbai to Delhi."
+    },
+    {
+      "question": "How do the supplied flight values form the two displayed customer itineraries?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "For customer 1, Delhi connects to Hyderabad, Hyderabad connects to Kochi, and Kochi connects to Mangalore.\nFor customer 2, Mumbai connects to Varanasi and Varanasi connects to Delhi.\nThe derivation matches destinations to subsequent origins within each customer's sample records.\nThe post does not provide a general query or rule for resolving ambiguous flight sequences."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Customer flight itinerary reconstruction",
+    "secondary_topics": [
+      "Flights table schema",
+      "PySpark",
+      "Spark SQL",
+      "Azure Data Engineering",
+      "Databricks"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:06f7ead3cd6a4450",
+    "saved_date": "2026-10-01T23:17:54Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337705010304036867",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337705010304036867_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

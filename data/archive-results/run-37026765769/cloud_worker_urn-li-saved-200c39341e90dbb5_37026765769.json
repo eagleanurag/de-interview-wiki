@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-200c39341e90dbb5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7421083202699677696",
+    "captured_at": "2026-10-02T00:15:45.449433Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:34Z"
+  },
+  "original_text": "8mo •\nTake the complexity out of configuring, managing and orchestrating ETL pipelines. This guide preview will get you started.\nGet started with ETL\ndatabricks.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7421083202699677696_slide_0.jpg",
+      "description": "JPEG image, 800x800 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a brief promotional post encouraging readers to use a Databricks guide preview for configuring, managing, and orchestrating ETL pipelines. It provides no technical details, implementation guidance, or substantive ETL concepts.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:200c39341e90dbb5",
+    "saved_date": "2026-10-01T23:07:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7421083202699677696",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7421083202699677696_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7421083202699677696_slide_0.jpg is listed more than once in this record and was counted once; the archive marked this as multi-slide but supplied 1 distinct file(s), so the remaining slides were not collected; the archive counted 2 media item(s) and 1 were usable",
+    "metadata_only": false
+  }
+}

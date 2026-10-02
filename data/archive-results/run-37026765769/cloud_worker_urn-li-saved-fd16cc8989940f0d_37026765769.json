@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-fd16cc8989940f0d",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7350849061920329729",
+    "captured_at": "2026-10-02T00:15:53.644957Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:55Z"
+  },
+  "original_text": "Sometimes it's good to practice some tricky problems.\nIt's been a while since I solved one, so let's give it a shot!\nFound this one on Ankit Bansal 's Namaste SQL platform.\nI’ll share my solution in the comments.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7350849061920329729_slide_0.jpg",
+      "description": "JPEG image, 480x413 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post only announces an intention to practice a tricky problem found on Ankit Bansal's Namaste SQL platform and says the solution will be shared in the comments. It provides no problem statement, technical details, extracted media text, or solution.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "not applicable",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fd16cc8989940f0d",
+    "saved_date": "2026-10-01T23:10:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7350849061920329729",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7350849061920329729_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

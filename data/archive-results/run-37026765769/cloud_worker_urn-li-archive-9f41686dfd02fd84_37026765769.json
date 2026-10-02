@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-archive-9f41686dfd02fd84",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.950986Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:32Z"
+  },
+  "original_text": "𝗪𝗼𝗿𝗸𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗗𝗮𝘁𝗲𝘀 𝗮𝗻𝗱 𝗧𝗶𝗺𝗲𝘀𝘁𝗮𝗺𝗽𝘀 𝗶𝗻 𝗣𝘆𝗦𝗽𝗮𝗿𝗸\n\nDealing with date and time in big data pipelines? PySpark makes it easier with built-in functions to transform and compare date/time values.\n\nHere are some commonly used functions:\n\n-> current_date() – returns the current system date\n\ndf.withColumn(\"today\", current_date())\n\n->current_timestamp() – gives the exact timestamp at the moment.\n\ndf.withColumn(\"now\", current_timestamp())\n\n->to_date() – converts a string column to a date format.\n\ndf.withColumn(\"join_date\", to_date(col(\"join_date_str\"), \"yyyy-MM-dd\"))\n\n->datediff() – gives the number of days between two dates.\n\ndf.withColumn(\"days_diff\", datediff(current_date(), col(\"join_date\")))\n\nadd_months(), months_between(), date_add(), date_sub() – handy for adding/subtracting days or months.\n\nyear(), month(), dayofweek(), weekofyear() – for extracting parts of a date.\n\nThese functions help you filter, transform, or calculate based on date/time values – super helpful in analytics, reporting, and event-based pipelines.\n\n#PySpark #ApacheSpark #DatesAndTimestamps #BigData #DataEngineering #SparkTips #DataWrangling #ETL #DataProcessing #TimeSeries",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post provides a concise introduction to handling dates and timestamps in PySpark big data pipelines. It lists functions for obtaining the current date or timestamp, converting strings to dates, calculating differences, performing date arithmetic, and extracting date components. It also identifies filtering, transformation, analytics, reporting, and event-based pipelines as use cases for these functions.",
+    "topics": [
+      "PySpark date and timestamp processing",
+      "Big data pipeline date and time handling",
+      "Data wrangling and ETL"
+    ],
+    "subtopics": [
+      "Getting the current date and timestamp",
+      "Converting strings to dates",
+      "Calculating differences between dates",
+      "Adding and subtracting dates or months",
+      "Extracting date components"
+    ],
+    "concepts": [
+      "current_date()",
+      "current_timestamp()",
+      "to_date()",
+      "datediff()",
+      "Date arithmetic functions",
+      "Date component extraction functions",
+      "withColumn()"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do current_date() and current_timestamp() differ in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "current_date() returns the current system date.\ncurrent_timestamp() gives the timestamp at the current moment."
+    },
+    {
+      "question": "How would you convert a string column named join_date_str into a date using PySpark?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Use to_date(col(\"join_date_str\"), \"yyyy-MM-dd\") to convert the string using the stated date format.\nUse withColumn() to store the converted value in a join_date column."
+    },
+    {
+      "question": "How can you calculate the number of days between the current date and a join_date column?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Use datediff(current_date(), col(\"join_date\")) to calculate the day difference.\nUse withColumn(\"days_diff\", ...) to add the result as a column."
+    },
+    {
+      "question": "Which functions from the post can be used for date arithmetic and extracting date components?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "add_months(), months_between(), date_add(), and date_sub() support adding or subtracting days or months.\nyear(), month(), dayofweek(), and weekofyear() extract components from a date."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark date and timestamp processing",
+    "secondary_topics": [
+      "Big data pipelines",
+      "Data wrangling",
+      "ETL",
+      "Analytics and reporting",
+      "Event-based pipelines"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:9f41686dfd02fd84",
+    "saved_date": "2026-10-01T23:23:32Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

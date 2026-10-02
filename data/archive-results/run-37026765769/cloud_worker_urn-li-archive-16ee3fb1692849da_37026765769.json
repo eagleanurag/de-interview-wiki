@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-archive-16ee3fb1692849da",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.088771Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:13Z"
+  },
+  "original_text": "27 LPA at Walmart\n\nThese were the EXACT questions asked in 2025.\n\n1. Design Twitter\n2. Design Aarogya Setu\n3. Design a Load Balancer\n4. Design a URL shortener \n5. Design a logging System\n6. Design Google Play Store\n7. Design Zoom car app LLD\n8. Design an E-commerce Platform\n9. Design a Recommendation System\n10. Design of order management system \n11. Design an app for waste management\n12. Design Library management system LLD\n13. Design a Warehouse Management System\n14. Design a reservation system for a parking lot\n15. Design a Real-time Inventory Tracking System\n16. Design a rating system for an e-commerce website\n\n𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗚𝘂𝗶𝗱𝗲.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲:\n - https://lnkd.in/dte69Z5N\n\nStay Hungry, Stay FoolisH!\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post titled \"27 LPA at Walmart\" claims to list 16 design questions asked in 2025. It names Twitter, Aarogya Setu, a load balancer, a URL shortener, a logging system, Google Play Store, a Zoom car app marked LLD, commerce and recommendation systems, order and warehouse management, waste and library management, parking reservations, real-time inventory tracking, and an e-commerce rating system. It provides no requirements, architecture, implementation details, or reference answers. As supplied, the text ends with \"…see more\" and the remaining material is promotional text with a link.",
+    "topics": [
+      "System design interviews",
+      "Design prompts for named applications and systems",
+      "LLD",
+      "E-commerce systems",
+      "Real-time inventory tracking"
+    ],
+    "subtopics": [
+      "Twitter",
+      "Aarogya Setu",
+      "Load Balancer",
+      "URL shortener",
+      "Logging System",
+      "Google Play Store",
+      "Zoom car app LLD",
+      "E-commerce Platform",
+      "Recommendation System",
+      "Order management system",
+      "Waste management app",
+      "Library management system LLD",
+      "Warehouse Management System",
+      "Parking lot reservation system",
+      "Real-time Inventory Tracking System",
+      "E-commerce website rating system"
+    ],
+    "concepts": [
+      "System design",
+      "LLD",
+      "Named application design prompts",
+      "Load balancer",
+      "URL shortener",
+      "Logging system",
+      "E-commerce platform",
+      "Recommendation system",
+      "Order management system",
+      "Warehouse management system",
+      "Real-time inventory tracking system",
+      "E-commerce rating system",
+      "Waste management application",
+      "Library management system",
+      "Parking lot reservation system"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "System design",
+    "primary_topic": "System design interview questions",
+    "secondary_topics": [
+      "Named application design prompts",
+      "LLD",
+      "E-commerce systems",
+      "Real-time inventory tracking"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:16ee3fb1692849da",
+    "saved_date": "2026-10-01T23:09:13Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,133 +1,41 @@
 ﻿name: Run Python Workers
 
+# This workflow validates the repository and publishes the site.
+# It does not call the model.
+#
+# That is a change, and it was made because of what an experiment with
+# this file showed. Run 37026765769 fanned enrichment out as twenty
+# batches over 490 posts; fourteen succeeded and six failed, every
+# failure being a provider response that stopped partway through.
+# Aggregation was skipped because a batch had failed, so nothing
+# deployed. Each post had exactly one attempt there, so a truncated
+# answer was a lost post rather than a re-ask.
+#
+# Enrichment is now a local concern: `python -m src.pipeline` runs it
+# against OpenCode on one machine, retries per post, and writes its
+# results to data/results/, which is committed. Everything below is
+# deterministic and needs no credential, no network and no model.
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
 
+permissions:
+  contents: read
+
+# The suite takes about ten minutes and the wiki job builds several
+# thousand pages, so a generous but real bound: a hung run should be
+# reported rather than occupying a runner for hours.
 jobs:
-  discover:
-    name: Discover posts
+  verify:
+    name: Tests and security
     runs-on: ubuntu-latest
+
+    timeout-minutes: 30
 
     permissions:
       contents: read
-
-    outputs:
-      matrix: ${{ steps.posts.outputs.matrix }}
-      post_count: ${{ steps.posts.outputs.post_count }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Discover post directories
-        id: posts
-        shell: bash
-        run: |
-          python - <<'PY'
-          import json
-          import os
-          from pathlib import Path
-
-          posts = sorted(
-              path.parent.name
-              for path in Path("data/posts").glob("*/post.json")
-          )
-
-          if not posts:
-              raise SystemExit("No posts found under data/posts/")
-
-          # GitHub allows 256 jobs in a matrix per run, and a local
-          # saved-post archive took this repository from seven posts to
-          # nearly five hundred. One job per post would exceed the limit
-          # and the run would be cancelled before it started, so posts
-          # are grouped into batches and each job handles a whole batch.
-          #
-          # The job count is now a function of the batch size rather
-          # than the number of posts, which is what makes the workflow
-          # keep working as material is added.
-          chunk_size = int(
-              os.environ.get("WORKER_BATCH_SIZE", "25")
-          )
-
-          if chunk_size < 1:
-              raise SystemExit(
-                  "WORKER_BATCH_SIZE must be at least 1"
-              )
-
-          batches = [
-              {
-                  "index": number,
-                  "posts": posts[
-                      number * chunk_size : (number + 1) * chunk_size
-                  ],
-              }
-              for number in range(
-                  (len(posts) + chunk_size - 1) // chunk_size
-              )
-          ]
-
-          jobs = len(batches)
-
-          if jobs > 256:
-              raise SystemExit(
-                  f"{jobs} jobs exceeds the 256 GitHub allows. "
-                  f"Raise WORKER_BATCH_SIZE above "
-                  f"{(len(posts) + 255) // 256}."
-              )
-
-          print(f"Discovered {len(posts)} post(s)")
-          print(f"Batch size: {chunk_size}")
-          print(f"Batches (jobs): {jobs}")
-          for batch in batches:
-              print(
-                  f"  - batch {batch['index']}: "
-                  f"{len(batch['posts'])} post(s)"
-              )
-
-          matrix = {"batch": batches}
-
-          matrix_json = json.dumps(
-              matrix,
-              separators=(",", ":"),
-          )
-
-          with open(
-              os.environ["GITHUB_OUTPUT"],
-              "a",
-              encoding="utf-8",
-          ) as output:
-              output.write(
-                  f"matrix={matrix_json}\n"
-              )
-              output.write(
-                  f"post_count={len(posts)}\n"
-              )
-          PY
-
-    env:
-      WORKER_BATCH_SIZE: ${{ vars.WORKER_BATCH_SIZE || '25' }}
-
-  worker:
-    name: Worker - batch ${{ matrix.batch.index }}
-    needs: discover
-    runs-on: ubuntu-latest
-
-    # One post per job used to take about a minute. A batch of 25 takes
-    # roughly half an hour, and a GitHub-hosted job may run for six
-    # hours, so without a bound a single wedged model call would hold a
-    # runner for the rest of the day and the run would still fail at the
-    # end. Four times the expected cost is enough headroom for a slow
-    # batch and short enough that a hang is reported as one.
-    timeout-minutes: 120
-
-    permissions:
-      contents: read
-
-    strategy:
-      fail-fast: false
-      max-parallel: 3
-
-      matrix: ${{ fromJSON(needs.discover.outputs.matrix) }}
 
     steps:
       - name: Checkout repository
@@ -138,163 +46,53 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Install OpenCode
-        run: npm install --global @opencode/cli
-
-      - name: Verify runtime
+      - name: Verify no credential or session is tracked
         run: |
-          python --version
-          node --version
-          opencode --version
+          set -euo pipefail
 
-      - name: Create cloud worker jobs
-        env:
-          RUN_ID: ${{ github.run_id }}
-          BATCH: ${{ toJSON(matrix.batch.posts) }}
+          tracked=$(git ls-files)
 
+          for pattern in '.env' 'chrome_session' 'linkedin_saved_archive' \
+                          'data/incoming/'; do
+            if printf '%s\n' "$tracked" | grep -q "$pattern"; then
+              echo "::error::a tracked path matches $pattern"
+              printf '%s\n' "$tracked" | grep "$pattern" | head -20
+              exit 1
+            fi
+          done
+
+          echo "no credential, session, drop zone or archive is tracked"
+
+      - name: Run the test suite
         run: |
-          python - <<'PY'
-          import json
-          import os
-          from pathlib import Path
+          set -euo pipefail
+          python -m pytest -q
 
-          run_id = os.environ["RUN_ID"]
-          batch = json.loads(os.environ["BATCH"])
-
-          for post_id in batch:
-              job_id = f"cloud_worker_{post_id}_{run_id}"
-
-              job = {
-                  "job_id": job_id,
-                  "post_directory": f"data/posts/{post_id}",
-                  "output_path": f"data/results/{job_id}.json",
-                  "status": "pending",
-                  "attempt": 0,
-                  "max_attempts": 3,
-              }
-
-              path = Path(f"data/jobs/{job_id}.json")
-
-              path.write_text(
-                  json.dumps(job, indent=2),
-                  encoding="utf-8",
-              )
-
-              print(f"Created job: {job_id}")
-          PY
-
-      - name: Run Python workers
-        env:
-          RUN_ID: ${{ github.run_id }}
-
+      - name: Confirm the working tree is unchanged by the tests
         run: |
-          python - <<'PY'
-          import json
-          import os
-          import subprocess
-          import sys
-          from pathlib import Path
+          set -euo pipefail
 
-          run_id = os.environ["RUN_ID"]
+          # The suite writes only into temporary directories, so a
+          # difference here means something wrote into the repository.
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::the test suite modified the repository"
+            git status --porcelain | head -30
+            exit 1
+          fi
 
-          # One post failing costs that post, not the rest of the
-          # batch. Every job is attempted, the failures are named at
-          # the end, and the results that did land are uploaded by the
-          # next step so aggregation can report the shortfall rather
-          # than nothing at all.
-          failures = []
-
-          for path in sorted(Path("data/jobs").glob(
-              f"cloud_worker_*_{run_id}.json"
-          )):
-              print(f"=== {path.name} ===")
-
-              result = subprocess.run(
-                  [
-                      sys.executable,
-                      "-m",
-                      "src.workers.cli",
-                      "--job",
-                      str(path),
-                  ],
-              )
-
-              if result.returncode != 0:
-                  failures.append(path.name)
-
-          print()
-          print(f"Batch finished: {len(failures)} failed")
-
-          for name in failures:
-              print(f"  FAILED {name}")
-
-          # Recorded rather than raised, so the upload step runs and
-          # keeps what succeeded. Aggregation compares the count it
-          # received against the count discovered and fails loudly if
-          # they differ, which is the honest signal.
-          Path("batch-failures.json").write_text(
-              json.dumps({"failed": failures}, indent=2),
-              encoding="utf-8",
-          )
-          PY
-
-      - name: Report batch outcome
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          path = Path("batch-failures.json")
-
-          if not path.is_file():
-              raise SystemExit("The batch step did not report.")
-
-          failed = json.loads(
-              path.read_text(encoding="utf-8")
-          )["failed"]
-
-          if failed:
-              for name in failed:
-                  print(f"::error::{name} failed")
-
-              raise SystemExit(
-                  f"{len(failed)} post(s) in this batch failed."
-              )
-
-          print("Every post in this batch produced a result.")
-          PY
-
-      - name: Upload worker results
-        if: always()
-        uses: actions/upload-artifact@v4
-
-        with:
-          name: cloud-worker-result-${{ matrix.batch.index }}
-          retention-days: 7
-          if-no-files-found: error
-
-          path: |
-            data/jobs/cloud_worker_*.json
-            data/results/cloud_worker_*.json
-
-      - name: Cloud worker completed
-        run: |
-          echo "Worker completed successfully for ${{ matrix.post_id }}."
+          echo "the test suite left the repository untouched"
 
   aggregate:
     name: Aggregate knowledge base
-    needs: [discover, worker]
+    needs: verify
     runs-on: ubuntu-latest
+
+    timeout-minutes: 20
 
     permissions:
       contents: read
@@ -308,40 +106,50 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Download worker artifacts
-        uses: actions/download-artifact@v4
-
-        with:
-          pattern: cloud-worker-result-*
-          path: aggregation/worker-results
-
-      - name: List downloaded worker artifacts
+      - name: Count the committed results
+        id: expected
         run: |
-          find aggregation/worker-results \
-            -type f \
-            -name "cloud_worker_*.json" \
-            | sort
+          set -euo pipefail
 
-      - name: Run aggregation
+          results=$(ls data/results/cloud_worker_*.json 2>/dev/null | wc -l)
+          posts=$(ls -d data/posts/*/post.json 2>/dev/null | wc -l)
+
+          echo "worker results: $results"
+          echo "posts          : $posts"
+
+          if [ "$results" -eq 0 ]; then
+            echo "::error::no worker results are committed"
+            exit 1
+          fi
+
+          echo "expected=$results" >> "$GITHUB_OUTPUT"
+
+      - name: Aggregate the committed results
         env:
-          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
+          EXPECTED: ${{ steps.expected.outputs.expected }}
 
         run: |
+          set -euo pipefail
+
+          mkdir -p aggregation
+
           python -m src.aggregation.aggregator \
-            --input-dir aggregation/worker-results \
+            --input-dir data/results \
             --output aggregation/knowledge_base.json \
-            --expected-post-count "${EXPECTED_POST_COUNT}"
+            --expected-post-count "$EXPECTED"
 
-      - name: Verify canonical knowledge base
+      - name: Verify the canonical knowledge base
         env:
-          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
+          EXPECTED: ${{ steps.expected.outputs.expected }}
 
         run: |
+          set -euo pipefail
+
           test -s aggregation/knowledge_base.json
 
           python - <<'PY'
@@ -349,38 +157,43 @@ jobs:
           import os
           from pathlib import Path
 
-          path = Path("aggregation/knowledge_base.json")
-
           payload = json.loads(
-              path.read_text(encoding="utf-8")
+              Path("aggregation/knowledge_base.json").read_text(
+                  encoding="utf-8"
+              )
           )
 
-          expected = int(
-              os.environ["EXPECTED_POST_COUNT"]
-          )
+          expected = int(os.environ["EXPECTED"])
+          stats = payload["stats"]
+          aggregated = stats["posts_aggregated"]
 
-          aggregated = payload["stats"][
-              "posts_aggregated"
-          ]
-
-          print(f"Expected posts: {expected}")
-          print(f"Aggregated posts: {aggregated}")
-          print(
-              f"Skipped files: "
-              f"{payload['stats']['files_skipped']}"
-          )
+          print(f"Expected posts : {expected}")
+          print(f"Aggregated     : {aggregated}")
+          print(f"Skipped files  : {stats['files_skipped']}")
+          print(f"Topics         : {stats['topics_consolidated']}")
+          print(f"Concepts       : {stats['concepts_consolidated']}")
+          print(f"Technologies   : {stats['technologies_consolidated']}")
+          print(f"Questions      : {stats['questions_consolidated']}")
 
           if aggregated != expected:
               raise SystemExit(
-                  "Canonical knowledge base post count does "
-                  "not match discovered post count."
+                  "The knowledge base covers "
+                  f"{aggregated} post(s), not {expected}. Enrichment "
+                  "is incomplete; run it locally and commit the "
+                  "results."
               )
 
-          for post in payload["posts"]:
-              print(f"  - {post['id']}")
+          # Skipped files are reported rather than ignored, because a
+          # result that silently drops out of the knowledge base is a
+          # post that quietly stops being published.
+          if stats["files_skipped"]:
+              raise SystemExit(
+                  f"{stats['files_skipped']} file(s) were skipped; "
+                  "every committed result should be a post."
+              )
           PY
 
-      - name: Upload canonical knowledge base
+      - name: Upload the canonical knowledge base
         uses: actions/upload-artifact@v4
 
         with:
@@ -389,15 +202,12 @@ jobs:
           if-no-files-found: error
           path: aggregation/knowledge_base.json
 
-      - name: Aggregation completed
-        run: |
-          echo "Canonical knowledge base uploaded as artifact:"
-          echo "  knowledge-base-${{ github.run_id }}"
-
   wiki:
     name: Generate static wiki
-    needs: [aggregate, discover]
+    needs: aggregate
     runs-on: ubuntu-latest
+
+    timeout-minutes: 30
 
     permissions:
       contents: read
@@ -411,72 +221,81 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Download canonical knowledge base
+      - name: Download the knowledge base
         uses: actions/download-artifact@v4
 
         with:
           name: knowledge-base-${{ github.run_id }}
           path: aggregation
 
-      - name: Generate static site
-        env:
-          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
-
+      - name: Generate the site
         run: |
+          set -euo pipefail
+
           python -m src.wiki.generator \
             --input aggregation/knowledge_base.json \
             --output site
 
-      - name: Verify generated site
-        env:
-          EXPECTED_POST_COUNT: ${{ needs.discover.outputs.post_count }}
-
+      - name: Verify the generated site
         run: |
+          set -euo pipefail
+
           test -s site/index.html
           test -s site/search.html
           test -s site/topics.html
           test -s site/questions.html
           test -s site/assets/search-index.json
 
-          python - <<'PY'
-          import json
-          import os
-          from pathlib import Path
+          pages=$(find site -name '*.html' | wc -l)
 
-          site = Path("site")
+          echo "pages generated: $pages"
 
-          expected = int(
-              os.environ["EXPECTED_POST_COUNT"]
-          )
+          if [ "$pages" -lt 2 ]; then
+            echo "::error::the site has almost no pages"
+            exit 1
+          fi
 
-          index = json.loads(
-              (
-                  site / "assets" / "search-index.json"
-              ).read_text(encoding="utf-8")
-          )
+          # The one thing that must never reach a published page: the
+          # path material was imported from.
+          if grep -rlE 'C:\\Users|/Users/|AppData|chrome_session|linkedin_saved_archive' \
+               site --include='*.html' --include='*.json' | head -5 | grep -q .; then
+            echo "::error::a local path reached the generated site"
+            grep -rlE 'C:\\Users|/Users/|AppData|chrome_session' \
+              site --include='*.html' | head -5
+            exit 1
+          fi
 
-          aggregated = index["posts"]
+          echo "no local path in the generated site"
 
-          print(f"Expected posts: {expected}")
-          print(f"Posts in site: {aggregated}")
+      - name: Verify the site is reproducible
+        run: |
+          set -euo pipefail
 
-          if aggregated != expected:
-              raise SystemExit(
-                  "Generated site post count does not match the "
-                  "discovered post count. Refusing to publish a "
-                  "partial knowledge base."
-              )
+          # Byte identical on a second build, so a diff in the
+          # repository means something changed rather than that the
+          # clock moved.
+          cp -r site site-first
 
-          for page in sorted(site.rglob("*.html")):
-              print(f"  - {page.as_posix()}")
-          PY
+          rm -rf site
 
-      - name: Upload Pages artifact
+          python -m src.wiki.generator \
+            --input aggregation/knowledge_base.json \
+            --output site
+
+          if ! diff -r site-first site > /dev/null; then
+            echo "::error::two builds of the same input differ"
+            diff -r site-first site | head -20
+            exit 1
+          fi
+
+          echo "two builds are byte identical"
+
+      - name: Upload the Pages artifact
         uses: actions/upload-pages-artifact@v3
 
         with:
@@ -484,8 +303,16 @@ jobs:
 
   deploy:
     name: Deploy to GitHub Pages
-    needs: [wiki]
+    needs: wiki
     runs-on: ubuntu-latest
+
+    # Only deploy from the default branch, and only when the run was
+    # not a pull request: a fork's Pages belong to the fork.
+    if: >-
+      github.event_name != 'pull_request' &&
+      github.ref == 'refs/heads/main'
+
+    timeout-minutes: 15
 
     permissions:
       pages: write

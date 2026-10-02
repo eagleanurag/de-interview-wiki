@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-d9d68f2f7df28a29",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.546259Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:52Z"
+  },
+  "original_text": "Build Client-native Databricks Apps with Databricks Connect + Streamlit — supercharged on your Lakehouse!\n\nJust dropped a new YouTube video showing how to build interactive, native apps on Databricks using:\n\n✅ Databricks Apps\n👉 A powerful new way to build and share browser-native applications directly on your Lakehouse.\n👉 Think Streamlit-style notebooks, dashboards, and low-code tools — all running securely within Databricks.\n👉 No extra infrastructure. Your data stays governed and performant.\n\n✅ Databricks Connect\n👉 Develop interactively on your laptop (VSCode, Jupyter, Streamlit), while executing code seamlessly on your remote Databricks cluster.\n👉 Debug locally, scale remotely — with zero code change.\n\n✅ Streamlit Jupyter-like interface\n👉 Built a dynamic app where users can:\n\nWrite multiple Python & PySpark cells\n\nExecute them independently (like Jupyter),\n\nMaintain shared state (variables & DataFrames persist across cells),\n\nPreview PySpark DataFrames, run ML, or plot — all in the browser.\n\n🔥 Why this matters:\n✅ Build client-native, shareable tools for analysts & business users, all within the Databricks ecosystem.\n✅ No ETL copy-outs — your app connects directly to your Lakehouse.\n✅ Secure, governed, and infinitely scalable.\n\n#pyspark #databricks #python #streamlit #bigdata \n\nlink in first comment\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post announces a YouTube video about building interactive, client-native applications with Databricks Apps, Databricks Connect, Python, PySpark, and a Streamlit-style interface. It describes developing from a laptop with VSCode, Jupyter, or Streamlit while code runs on a remote Databricks cluster. The browser interface supports independently executed Python and PySpark cells, persistent variables and DataFrames, DataFrame previews, ML, and plots. The post presents direct Lakehouse connectivity as an alternative to ETL copy-outs and claims secure, governed, performant, and scalable execution. The supplied excerpt does not include implementation steps, code, configuration, or validation of these claims.",
+    "topics": [
+      "Databricks application development",
+      "Lakehouse-native interactive applications",
+      "Remote cluster execution",
+      "Python and PySpark development"
+    ],
+    "subtopics": [
+      "Databricks Apps",
+      "Databricks Connect",
+      "Streamlit and Jupyter-style interfaces",
+      "Independent execution of code cells",
+      "Shared state across cells",
+      "Local development with remote Databricks execution"
+    ],
+    "concepts": [
+      "Databricks Apps",
+      "Databricks Connect",
+      "Local-to-remote development workflow",
+      "Streamlit-style application interface",
+      "Independent cell execution",
+      "Shared execution state",
+      "In-browser data operations",
+      "Direct Lakehouse application access",
+      "Governed application execution"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the described Databricks Connect workflow separate local development from remote execution?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The developer works interactively on a laptop using an environment such as VSCode, Jupyter, or Streamlit.\nThe code executes on a remote Databricks cluster rather than entirely on the local machine.\nThe post describes local debugging and remote scaling as possible without changing the code."
+    },
+    {
+      "question": "What execution and state-management capabilities does the described Streamlit-style, Jupyter-like interface provide?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Users can write multiple Python and PySpark cells and execute them independently.\nVariables and DataFrames persist across cells as shared state.\nUsers can preview PySpark DataFrames, run ML, and create plots in the browser."
+    },
+    {
+      "question": "How do Databricks Apps and direct Lakehouse connectivity support the client-native application architecture described in the post?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Databricks Apps provides a browser-native environment for sharing applications within Databricks.\nThe application accesses the Lakehouse directly rather than relying on ETL copy-outs.\nDatabricks Connect allows the interactive application code to execute on a remote Databricks cluster.\nThe post presents this design as reducing extra infrastructure while keeping data governed and performant."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Building interactive applications on Databricks",
+    "secondary_topics": [
+      "Databricks Apps",
+      "Databricks Connect",
+      "Python and PySpark execution",
+      "Lakehouse application architecture",
+      "Interactive application state management"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d9d68f2f7df28a29",
+    "saved_date": "2026-10-01T23:12:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

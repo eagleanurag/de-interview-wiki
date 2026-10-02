@@ -1,0 +1,186 @@
+{
+  "id": "urn-li-saved-986219bfe53b5429",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327875236828258304",
+    "captured_at": "2026-10-02T00:15:49.663959Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:38Z"
+  },
+  "original_text": "80% of Data Engineering Candidates Struggle with These 14 Interview Topics. Learn them and stand out.\n\n1. Batch vs Streaming\nTradeoff: Batch is cost-efficient; Streaming is real-time. Pick wrong and SLAs/costs go off-track.\nInterview Q: How would late-arriving events affect your daily reports?\nDrill: Build a Spark batch job to S3. Rebuild it with Kafka + Flink. Compare freshness vs compute cost.\n\n2. Columnar Formats (Parquet, ORC)\nWhy: Column pruning & compression = 90% less I/O.\nPitfall: Tiny files destroy performance.\nDrill: Compare SQL scan over CSV vs Parquet with EXPLAIN ANALYZE.\n\n3. Partitioning & Clustering\nWhy: Partitioning skips data; clustering reduces scan depth.\nPitfall: Too many partitions = thousands of tiny tasks.\nDrill: Load logs partitioned by dt, then cluster by user_id. Observe task parallelism.\n\n4. Schema Evolution\nWhy: Real-world data changes constantly.\nInterview Q: “How do you evolve a schema without breaking consumers?”\nDrill: Use Avro + Confluent Registry to evolve a schema. Test compatibility modes.\n\n5. Change Data Capture (CDC)\nWhy: Keeps data fresh without full reloads.\nPitfall: Out-of-order events if binlog tracking fails.\nDrill: Stream MySQL binlogs with Debezium → Kafka → PostgreSQL. Check consistency.\n\n6. Watermarks & Late Data\nWhy: Event-time processing needs cutoffs.\nInterview Q: How do you handle 2-hour-late events in a 1-hour window?\nDrill: In Flink, simulate delayed events. Use allowedLateness. Track watermark state.\n\n7. Idempotent Writes\nWhy: Retries shouldn’t duplicate records.\nDrill: In Delta Lake, write with MERGE. Replay Kafka topic—verify counts remain stable.\n\n8. Data Lineage & Metadata\nWhy: You can’t debug metrics if you don’t know what changed them.\nDrill: Use OpenLineage or Marquez with Airflow. Track lineage for one KPI pipeline.\n\n9. Orchestration (Airflow)\nWhy: Manual scripts fail silently. DAGs bring order.\nInterview Q: How would you prevent accidental re-runs?\nDrill: Convert scripts to Airflow DAGs. Use depends_on_past + max_active_runs.\n\n10. Incremental vs Full Loads\nWhy: Full loads waste time and money; incrementals are harder but efficient.\nDrill: Redesign an S3-to-Redshift pipeline to use manifest-based incremental load.\n\n11. Data Skew\nWhy: One hot key can kill your job.\nInterview Q: Why did one task take 10x longer?\nDrill: Introduce skew in a Spark join. Observe stage duration. Fix with salting or repartitioning.\n\n12. Backpressure in Streaming\nWhy: Streams crash if source outruns processing.\nDrill: Overwhelm a Kafka → Spark Structured Streaming job. Tune maxOffsetsPerTrigger.\n\n13. NoSQL (MongoDB, DynamoDB)\nWhy: Not all data fits in rows and columns.\nQ: When would you use NoSQL over a relational DB?\nDrill: Build a product catalog in MongoDB. Run flexible queries on nested fields.\n\n14. Data Security & Access Control\nWhy: Data breaches = instant failure.\nQ: How do you control access to S3 or ADLS?\nDrill: Configure IAM (AWS) or RBAC (Azure) to grant object-level access.\n\n#DElveWithVani",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327875236828258304_slide_0.jpg",
+      "description": "JPEG image, 480x717 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post opens with the claim that 80% of Data Engineering candidates struggle with 14 interview topics. It is a concise, high-level checklist that pairs each topic with a short rationale, often a tradeoff or pitfall, and a hands-on drill using named technologies. The coverage spans batch versus streaming, columnar formats, partitioning and clustering, schema evolution, CDC, watermarks and late data, idempotent writes, lineage and metadata, Airflow orchestration, incremental versus full loads, data skew, streaming backpressure, NoSQL, and data security/access control; the drills do not provide full implementations, detailed compatibility rules, or complete answers to every prompt.",
+    "topics": [
+      "Batch versus streaming",
+      "Columnar formats (Parquet and ORC)",
+      "Partitioning and clustering",
+      "Schema evolution",
+      "Change Data Capture (CDC)",
+      "Watermarks and late data",
+      "Idempotent writes",
+      "Data lineage and metadata",
+      "Airflow orchestration",
+      "Incremental versus full loads",
+      "Data skew",
+      "Streaming backpressure",
+      "NoSQL data storage",
+      "Data security and access control"
+    ],
+    "subtopics": [
+      "Batch cost efficiency versus streaming freshness",
+      "Column pruning, compression, and tiny-file effects",
+      "Partitioning by dt, clustering by user_id, and task parallelism",
+      "Avro, Confluent Registry, and schema compatibility modes",
+      "MySQL binlog CDC through Debezium and Kafka to PostgreSQL",
+      "Event-time cutoffs, allowedLateness, and watermark state",
+      "Delta Lake MERGE and Kafka replay",
+      "OpenLineage or Marquez lineage for an Airflow KPI pipeline",
+      "Airflow DAG order, depends_on_past, and max_active_runs",
+      "Manifest-based incremental loading from S3 to Redshift",
+      "Hot keys, Spark join skew, salting, and repartitioning",
+      "Kafka and Spark Structured Streaming backpressure",
+      "MongoDB and DynamoDB for data outside rows and columns",
+      "IAM and RBAC for object-level access to S3 and ADLS"
+    ],
+    "concepts": [
+      "Batch versus streaming",
+      "Columnar formats and I/O",
+      "Partitioning and clustering",
+      "Schema evolution and compatibility",
+      "Change Data Capture (CDC)",
+      "Watermarks and late data",
+      "Idempotent writes",
+      "Data lineage and metadata",
+      "Airflow DAG orchestration",
+      "Incremental versus full loads",
+      "Data skew and remedies",
+      "Streaming backpressure",
+      "NoSQL data modeling",
+      "Security and access control"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you compare batch and streaming when freshness and compute cost matter?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post characterizes batch as cost-efficient and streaming as real-time.\nIt warns that choosing the wrong approach can send SLAs and costs off-track.\nThe drill compares a Spark batch job writing to S3 with Kafka and Flink on freshness versus compute cost."
+    },
+    {
+      "question": "What benefits and performance pitfall does the post associate with Parquet and ORC, and how does its CSV comparison test the idea?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Parquet and ORC are named as columnar formats.\nThe post attributes 90% less I/O to column pruning and compression.\nIt warns that tiny files destroy performance and suggests comparing CSV and Parquet scans with EXPLAIN ANALYZE."
+    },
+    {
+      "question": "How should logs be partitioned and clustered, and what happens when there are too many partitions?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Partitioning skips data, while clustering reduces scan depth.\nThe drill partitions logs by dt and clusters them by user_id.\nToo many partitions can produce thousands of tiny tasks, and the drill observes task parallelism."
+    },
+    {
+      "question": "Which tools and compatibility checks does the post prescribe for evolving a schema without breaking consumers?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The post says real-world data changes constantly.\nThe drill uses Avro with Confluent Registry.\nIt tests compatibility modes with the goal of not breaking consumers.\nThe post does not specify the individual compatibility-mode rules."
+    },
+    {
+      "question": "How would you implement the CDC path from MySQL to PostgreSQL and verify consistency?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "CDC is described as keeping data fresh without full reloads.\nThe drill streams MySQL binlogs with Debezium through Kafka into PostgreSQL.\nIt checks consistency and identifies out-of-order events as a possible result of failed binlog tracking."
+    },
+    {
+      "question": "What Flink mechanisms does the post suggest for handling a two-hour-late event in a one-hour event-time window?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "Event-time processing needs cutoffs.\nThe Flink drill simulates delayed events, uses allowedLateness, and tracks watermark state.\nThe post does not state whether the two-hour-late event is ultimately included."
+    },
+    {
+      "question": "How can a Delta Lake write remain idempotent when a Kafka topic is replayed?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Retries should not duplicate records.\nThe drill uses Delta Lake with MERGE and replays a Kafka topic.\nIt verifies that counts remain stable."
+    },
+    {
+      "question": "How can lineage and metadata help debug a change in a KPI metric?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post says metrics cannot be debugged without knowing what changed.\nThe suggested tools are OpenLineage or Marquez with Airflow.\nThe drill tracks lineage for one KPI pipeline."
+    },
+    {
+      "question": "Which Airflow controls does the post suggest for preventing accidental re-runs after converting scripts to DAGs?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Manual scripts can fail silently, whereas DAGs bring order.\nThe drill converts scripts to Airflow DAGs.\nIt suggests depends_on_past and max_active_runs for the rerun concern."
+    },
+    {
+      "question": "What tradeoff does the post identify between full loads and manifest-based incremental loads for an S3-to-Redshift pipeline?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The post says full loads waste time and money, while incremental loads are harder but efficient.\nThe drill redesigns an S3-to-Redshift pipeline with a manifest-based incremental load."
+    },
+    {
+      "question": "Why might one task in a Spark join take 10 times longer, and what remedies does the post suggest?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A single hot key can kill a job.\nThe drill introduces skew in a Spark join and observes stage duration.\nIt suggests salting or repartitioning as fixes."
+    },
+    {
+      "question": "How would you tune a Kafka -> Spark Structured Streaming job when the source outruns processing?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "Backpressure is described as the condition where a source outruns processing.\nThe post warns that this can crash streams.\nThe drill tunes maxOffsetsPerTrigger for the Kafka -> Spark Structured Streaming job."
+    },
+    {
+      "question": "What data-shape consideration does the post give for choosing NoSQL such as MongoDB or DynamoDB over a relational database?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The post says not all data fits in rows and columns.\nIt names MongoDB and DynamoDB as NoSQL options.\nThe MongoDB drill builds a product catalog and runs flexible queries on nested fields."
+    },
+    {
+      "question": "How can object-level access to S3 or ADLS be controlled?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The post asks how to control access to S3 or ADLS.\nIt proposes IAM in AWS or RBAC in Azure.\nThe drill grants object-level access."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Topics",
+    "secondary_topics": [
+      "Batch-versus-streaming tradeoffs",
+      "Columnar formats and data layout",
+      "Schema evolution and CDC",
+      "Event-time processing and late data",
+      "Idempotent writes and lineage",
+      "Airflow orchestration and incremental loading",
+      "Data skew, backpressure, NoSQL, and security"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:986219bfe53b5429",
+    "saved_date": "2026-10-01T23:24:38Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327875236828258304",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327875236828258304_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

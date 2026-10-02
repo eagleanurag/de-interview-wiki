@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-247bb39612189557",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347829243361312770",
+    "captured_at": "2026-10-02T00:15:45.593729Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:47Z"
+  },
+  "original_text": "My friend just cracked a 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 interview at Flipkart 🎯\n\nAnd it wasn’t just about knowing tools like Spark or SQL.\nThey really focused on how you think and solve real problems.\n\nSo I asked him to share the exact questions, and here’s what he got 👇\n\n𝗣𝘆𝘁𝗵𝗼𝗻:\n\n- Reverse a string without using shortcuts\n- Find duplicates in a list\n- What are *args and **kwargs?\n- Explain generators\n\n𝗦𝗤𝗟:\n\n- Find the Nth highest salary\n- Use window functions\n- Write an UPSERT\n- Handle duplicate rows\n\n𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 (𝗙𝗹𝗶𝗽𝗸𝗮𝗿𝘁-𝘀𝘁𝘆𝗹𝗲):\n\n- Kafka vs Kinesis and when to use what\n- Handle schema changes in data lake\n- Debug Airflow pipeline failures\n- Real-time data ingestion\n- How to optimize PySpark jobs\n\nHis tip? \nBe ready for scenario-based questions → they matter the most.\n\nIf you're planning to switch into Data Engineering and need a push,\nBosscoder Academy is worth checking out → https://bit.ly/3GwIYI0\n\nThey’ve helped 800+ professionals with:\n✅ Real projects & tools\n✅ 1:1 mentorship\n✅ Resume + mock interview support\n\n#Dataengineer #Flipkart #Careerswitch #Bigdata #Sponsoredpost #LinkedIn #Etl",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347829243361312770_slide_0.jpg",
+      "description": "JPEG image, 480x360 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A sponsored social post reports that a friend obtained a Flipkart Data Engineer interview and that the process emphasized thinking and solving real problems rather than tool knowledge alone. It lists programming tasks involving string reversal, duplicate detection, *args, **kwargs, and generators; SQL tasks involving Nth-highest salary, window functions, UPSERT, and duplicate rows; and senior data engineering topics involving Kafka versus Kinesis, data lake schema changes, Airflow pipeline failures, real-time ingestion, and PySpark optimization. The post does not provide answers, definitions, implementation details, or technical guidance, and it ends by promoting Bosscoder Academy.",
+    "topics": [
+      "Data engineering interviews",
+      "Programming fundamentals",
+      "SQL",
+      "Streaming technologies",
+      "Data lake schema changes",
+      "Real-time data ingestion",
+      "PySpark optimization"
+    ],
+    "subtopics": [
+      "String reversal and duplicate detection",
+      "*args, **kwargs, and generators",
+      "Nth-highest salary queries",
+      "Window functions",
+      "UPSERT and duplicate-row handling",
+      "Kafka versus Kinesis",
+      "Airflow pipeline debugging",
+      "Real-time data ingestion",
+      "PySpark job optimization"
+    ],
+    "concepts": [
+      "Scenario-based interview emphasis",
+      "String reversal without shortcuts",
+      "Duplicate detection",
+      "*args, **kwargs, and generators",
+      "Nth-highest salary",
+      "Window functions",
+      "UPSERT and duplicate-row handling",
+      "Kafka versus Kinesis",
+      "Data lake schema changes",
+      "Airflow pipeline debugging",
+      "Real-time data ingestion",
+      "PySpark job optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What did the post say the Flipkart Data Engineer interview emphasized?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The interview reportedly emphasized how a candidate thinks and solves real problems rather than merely knowing tools such as Spark and SQL.\nThe post specifically advises preparing for scenario-based questions."
+    },
+    {
+      "question": "Which programming and SQL tasks were listed for the Data Engineer interview?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The programming tasks included reversing a string without shortcuts, finding duplicates in a list, and explaining *args, **kwargs, and generators.\nThe SQL tasks included finding the Nth highest salary, using window functions, writing an UPSERT, and handling duplicate rows."
+    },
+    {
+      "question": "Which advanced data engineering subjects were reported for the senior-level interview?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The advanced subjects included choosing when to use Kafka versus Kinesis and handling schema changes in a data lake.\nThe other subjects were debugging Airflow pipeline failures, working with real-time data ingestion, and optimizing PySpark jobs."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Programming fundamentals",
+      "SQL query design",
+      "Streaming technology selection",
+      "Data lake schema management",
+      "Data pipeline troubleshooting",
+      "Real-time ingestion",
+      "PySpark performance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:247bb39612189557",
+    "saved_date": "2026-10-01T23:12:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347829243361312770",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347829243361312770_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "urn-li-archive-4e14b179638cc62a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.866631Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:54Z"
+  },
+  "original_text": "PayPal Interview Experience\nCompensation Range: 29LPA + 2.9L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗥𝗼𝘂𝗻𝗱 𝟭: 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 – 𝗗𝗦𝗔 + 𝗦𝗤𝗟 (𝟰𝟱 𝗺𝗶𝗻𝘀)\nData Structures & Algorithms:\n• Rainwater Trapping – optimized for space and time\n• Priority Queue-based problem for task scheduling\n• Array traversal using prefix sums and sliding window patterns\n\nSQL:\n• Extensive use of window functions – ROW_NUMBER, RANK, LAG, LEAD\n• Aggregations, partitions, and advanced joins\n• Query optimization and performance tuning techniques\n\n𝗥𝗼𝘂𝗻𝗱 𝟮: 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗗𝗲𝘀𝗶𝗴𝗻 + 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 (𝟰𝟱–𝟲𝟬 𝗺𝗶𝗻𝘀)\nProject-Based Discussion:\n• Shared architecture of prior data pipelines\n• Justified choices of tools like Airflow, Glue, Kafka, Snowflake\n• Discussed strategies for data validation, monitoring, and scalability\n\nSystem Design Scenario:\n• Data migration from Hadoop, Oracle DB, and S3 → unified S3 data lake\n• Focused on scalability, error handling, schema management, and fault tolerance\n\nSpark Coding Task:\n• DataFrame joins and transformations in PySpark\n• Handled edge cases like null values, schema mismatches, and skewed data\n• Output written in partitioned Parquet format\n\n𝗥𝗼𝘂𝗻𝗱 𝟯: 𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 + 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼-𝗕𝗮𝘀𝗲𝗱 (𝟲𝟬 𝗺𝗶𝗻𝘀)\n• In-depth discussion on project ownership and collaboration with cross-functional teams\n• Real-time problem scenarios like pipeline delays, replication lags, and Spark job failures\n• Behavioral focus: adaptability, leadership under pressure, and communication\n\n𝗥𝗼𝘂𝗻𝗱 𝟰: 𝗛𝗥 𝗗𝗶𝘀𝗰𝘂𝘀𝘀𝗶𝗼𝗻\n• Offer structure, benefits, and company policies\n• Discussion on organizational values and career progression opportunities\n• Cultural alignment and long-term vision\n\nKey Takeaways:\n• The interview process was balanced across technical, design, and behavioral areas\n• Strong emphasis on SQL, PySpark, and scalable data pipeline design\n• Communication, clarity in thought, and structured problem-solving played a key role\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This PayPal Data Engineer interview experience describes a four-round process covering data structures and algorithms, SQL, data pipeline and system design, PySpark coding, a managerial and senior-employee discussion, and an HR discussion. Technical topics included SQL window functions and performance tuning, pipeline architecture using tools such as Airflow, Glue, Kafka, and Snowflake, migration from Hadoop, Oracle DB, and S3 to a unified S3 data lake, PySpark joins and transformations, and partitioned Parquet output. The process also assessed handling of pipeline delays, replication lags, and Spark job failures, along with project ownership, cross-functional collaboration, leadership under pressure, communication, and structured problem-solving.",
+    "topics": [
+      "Data engineering interview process",
+      "SQL query optimization",
+      "PySpark data processing",
+      "Data pipeline architecture",
+      "Data lake migration",
+      "Scalable data pipelines",
+      "Data engineering troubleshooting",
+      "Project ownership and collaboration"
+    ],
+    "subtopics": [
+      "Data structures and algorithm patterns",
+      "SQL window functions",
+      "Pipeline tool selection",
+      "Data validation and monitoring",
+      "Schema management and fault tolerance",
+      "DataFrame joins and transformations",
+      "Partitioned Parquet output",
+      "Operational failure scenarios"
+    ],
+    "concepts": [
+      "Data Structures and Algorithm Patterns",
+      "SQL Window Functions and Performance",
+      "Data Pipeline Architecture Decisions",
+      "Unified S3 Data Lake Migration",
+      "PySpark DataFrame Processing",
+      "Partitioned Parquet Output",
+      "Data Pipeline Reliability",
+      "Project Ownership and Cross-Functional Collaboration"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which data structures, algorithms, and array patterns were tested in the first round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Rainwater trapping was tested with optimization for both space and time.\nA task-scheduling problem was based on using a priority queue.\nArray traversal questions covered prefix sums and sliding-window patterns."
+    },
+    {
+      "question": "Which SQL capabilities and performance areas should a candidate be prepared to discuss?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The candidate should identify ROW_NUMBER, RANK, LAG, and LEAD as the emphasized window functions.\nThe candidate should cover aggregations, partitions, and advanced joins.\nThe candidate should include query optimization and performance tuning."
+    },
+    {
+      "question": "What should a project-based data pipeline discussion cover when tool choices are challenged?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The candidate should be able to explain the architecture of previous data pipelines.\nThe candidate should justify choices involving Airflow, Glue, Kafka, and Snowflake.\nThe candidate should discuss data validation, monitoring, and scalability."
+    },
+    {
+      "question": "A team is migrating data from Hadoop, Oracle DB, and S3 into a unified S3 data lake. Which design concerns should be addressed?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The design should address scalability.\nThe design should include error handling and fault tolerance.\nThe design should include explicit schema management."
+    },
+    {
+      "question": "For a PySpark task involving DataFrame joins and transformations, what implementation concerns and output format were expected?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The implementation should perform the required DataFrame joins and transformations.\nThe implementation should account for null values, schema mismatches, and skewed data.\nThe result should be written in partitioned Parquet format."
+    },
+    {
+      "question": "Which operational problem scenarios were used to assess troubleshooting and behavioral judgment?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The scenarios included pipeline delays, replication lags, and Spark job failures.\nThe discussion also assessed adaptability, leadership under pressure, and communication."
+    },
+    {
+      "question": "How was project ownership and cross-functional collaboration assessed?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Candidates were asked in depth about their ownership of data engineering projects.\nThe discussion covered collaboration with cross-functional teams.\nThe behavioral focus included adaptability, leadership under pressure, and communication."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Process",
+    "secondary_topics": [
+      "SQL Query Optimization",
+      "PySpark DataFrame Processing",
+      "Data Lake Architecture",
+      "Scalable Data Pipelines",
+      "Data Reliability and Troubleshooting",
+      "Behavioral and Project Ownership"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4e14b179638cc62a",
+    "saved_date": "2026-10-01T23:20:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "urn-li-saved-aed60cfee6c28f28",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326397121371197440",
+    "captured_at": "2026-10-02T00:15:50.643202Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:50Z"
+  },
+  "original_text": "AI/ML @ Under Armour | ex-Tesco | ML • Backend • LLMs • RAG • AI Agents • Cloud\n1yr •\n➊ 20 Must-Know SQL Interview Questions to Ace Your Next Interview\nPreparing for an SQL interview? Here’s a curated list of frequently asked questions, designed to help you build confidence across basic to advanced concepts. Mastering these will prepare you for a range of real-world data challenges.\n➋ What’s Inside:\n→ Correlated vs. Non-Correlated Subqueries\n→ Views vs. Materialized Views\n→ ACID Properties\n→ Recursive CTEs\n→ Partitioning & Indexing\n→ Error Handling in Stored Procedures\nThis guide dives deep into database design, data manipulation, performance optimization, and more. Each question is accompanied by an answer to strengthen your understanding and improve your readiness for interview day.\n➌ Tip: Save this post for your prep, and share it with peers in the data community. Let’s support each other’s growth and career goals.\nDocument Credit: Nitya cloud tech\n#SQL #SQLInterview #DataInterview #DataEngineering #CareerDevelopment #DataManagement #NityaCloudTech\nSQL INTERVIEW QUESTIONS FOF DATA ENGINEER",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326397121371197440_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post advertising a guide containing 20 SQL interview questions across basic to advanced concepts. It identifies correlated and non-correlated subqueries, views and materialized views, ACID properties, recursive CTEs, partitioning and indexing, and error handling in stored procedures. Although it claims that every question includes an answer, the supplied content contains neither the questions nor their answers, so no substantive technical explanations can be derived from it.",
+    "topics": [
+      "SQL interview preparation",
+      "database design",
+      "data manipulation",
+      "performance optimization",
+      "data management"
+    ],
+    "subtopics": [
+      "correlated and non-correlated subqueries",
+      "views and materialized views",
+      "ACID properties",
+      "recursive CTEs",
+      "partitioning and indexing",
+      "error handling in stored procedures"
+    ],
+    "concepts": [
+      "Correlated and Non-Correlated Subqueries",
+      "Views and Materialized Views",
+      "ACID Properties",
+      "Recursive CTEs",
+      "Partitioning and Indexing",
+      "Error Handling in Stored Procedures"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering and database management",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "database design",
+      "data manipulation",
+      "performance optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:aed60cfee6c28f28",
+    "saved_date": "2026-10-01T23:25:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326397121371197440",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326397121371197440_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

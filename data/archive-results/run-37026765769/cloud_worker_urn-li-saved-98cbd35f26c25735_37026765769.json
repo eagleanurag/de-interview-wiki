@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-98cbd35f26c25735",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7292198685361192960",
+    "captured_at": "2026-10-02T00:15:49.693457Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:52Z"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n1yr •\n🚀 Master Delta Lake & Azure Databricks Like a Pro!\nAre you working with Azure Databricks, Delta Lake, or PySpark? Here are the key concepts you need to know to optimize your data workflows:\n🔹 Unity Catalog – Simplify data governance and streamline access control.\n🔹 ACID Transactions in Delta Lake – Ensure data integrity with reliable transactions.\n🔹 External vs. Managed Delta Tables – Understand the differences and know when to use each.\n🔹 Optimization Techniques in Databricks – Improve query performance and reduce costs.\n🔹 Structured Streaming with PySpark – Efficiently process real-time data with ease.\n🔹 Delta Live Tables (ETL Pipelines) – Automate and streamline your ETL workflows for maximum efficiency.\n💡 Whether building scalable pipelines or optimizing big data workloads, mastering these concepts will take your data engineering skills to the next level!\n📢 Like | Save | Share | Follow Aishwarya Pani for career growth tips & data engineering insights!\n#Databricks #DeltaLake #BigData #DataEngineering #PySpark #Azure #ETL #CloudComputing #DataAnalytics #AI #MachineLearning #TechSkills #SQL #DataTransformation #DataGovernance #CareerGrowth #TechCommunity #DataProcessing\n…see more\nDelta Lake with Azure Databricks",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7292198685361192960_slide_0.jpg",
+      "description": "PNG image, 490x297 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This high-level promotional post identifies key concepts for working with Azure Databricks, Delta Lake, and PySpark. It presents Unity Catalog as supporting governance and access control, ACID transactions as supporting data integrity, Databricks optimization as improving query performance and reducing costs, structured streaming as processing real-time data, and Delta Live Tables as automating ETL workflows. It also identifies external versus managed Delta tables as important, but does not explain their differences or provide implementation details.",
+    "topics": [
+      "Azure Databricks",
+      "Delta Lake",
+      "PySpark",
+      "Data governance",
+      "ETL pipelines",
+      "Structured streaming",
+      "Databricks optimization"
+    ],
+    "subtopics": [
+      "Unity Catalog",
+      "ACID transactions",
+      "External and managed Delta tables",
+      "Query performance and cost optimization",
+      "Real-time data processing",
+      "Delta Live Tables"
+    ],
+    "concepts": [
+      "Unity Catalog",
+      "ACID transactions in Delta Lake",
+      "External and managed Delta tables",
+      "Databricks optimization techniques",
+      "Structured Streaming with PySpark",
+      "Delta Live Tables"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, what data engineering problems is Unity Catalog intended to address?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies data governance and access control as the problems addressed by Unity Catalog."
+    },
+    {
+      "question": "What reliability property does the post associate with ACID transactions in Delta Lake?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer states that ACID transactions help ensure data integrity through reliable transactions."
+    },
+    {
+      "question": "Which outcomes are attributed to optimization techniques in Databricks?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer states that optimization techniques improve query performance and reduce costs."
+    },
+    {
+      "question": "What type of data processing does the post associate with structured streaming in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains that structured streaming with PySpark is used to process real-time data efficiently."
+    },
+    {
+      "question": "What ETL role does the post assign to Delta Live Tables?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer says that Delta Live Tables automates and streamlines ETL workflows to improve efficiency."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Lake with Azure Databricks",
+    "secondary_topics": [
+      "PySpark structured streaming",
+      "Data governance with Unity Catalog",
+      "ETL automation with Delta Live Tables",
+      "Databricks query and cost optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:98cbd35f26c25735",
+    "saved_date": "2026-10-01T23:36:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7292198685361192960",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7292198685361192960_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7292198685361192960_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

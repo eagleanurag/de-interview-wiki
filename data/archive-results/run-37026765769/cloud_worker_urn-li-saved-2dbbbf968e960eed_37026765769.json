@@ -1,0 +1,93 @@
+{
+  "id": "urn-li-saved-2dbbbf968e960eed",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338573772557307905",
+    "captured_at": "2026-10-02T00:15:46.070018Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:58Z"
+  },
+  "original_text": "DevOps Engineer| AWS |Terraform |Ansible| Jenkins | Docker | Kubernetes | Python | Bash | CICD | Fintech | kafka | apisix | harbor | CDC\n1yr •\n𝐙𝐞𝐫𝐨 𝐭𝐨 𝐇𝐞𝐫𝐨 𝐀𝐖𝐒 𝐓𝐨𝐩𝐢𝐜-𝟒 𝐑𝐃𝐒\n𝐖𝐡𝐲 𝐂𝐡𝐨𝐨𝐬𝐞 𝐀𝐦𝐚𝐳𝐨𝐧 𝐑𝐃𝐒 𝐟𝐨𝐫 𝐘𝐨𝐮𝐫 𝐀𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬?\nIn today’s cloud-native world, managing databases efficiently is *key* to scaling fast and staying secure. That's where 𝐀𝐦𝐚𝐳𝐨𝐧 𝐑𝐃𝐒 steps in! 💡\nHere’s 𝐰𝐡𝐲 𝐑𝐃𝐒 𝐢𝐬 𝐚 𝐦𝐮𝐬𝐭 for modern applications:\n✅ 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐞𝐝 𝐁𝐚𝐜𝐤𝐮𝐩𝐬 & 𝐏𝐚𝐭𝐜𝐡𝐢𝐧𝐠 – Say goodbye to manual DB maintenance\n✅ 𝐇𝐢𝐠𝐡 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐢𝐥𝐢𝐭𝐲 – Multi-AZ deployments ensure your app never skips a beat\n✅ 𝐒𝐜𝐚𝐥𝐚𝐛𝐢𝐥𝐢𝐭𝐲 – Instantly scale storage and compute as your app grows\n✅ 𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐅𝐢𝐫𝐬𝐭 – Data encrypted at rest & in transit, with tight IAM control\n✅ 𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞 𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠 – Built-in CloudWatch metrics for proactive tuning\nWhether you're deploying a small app or an enterprise-scale solution, 𝐀𝐦𝐚𝐳𝐨𝐧 𝐑𝐃𝐒 𝐬𝐢𝐦𝐩𝐥𝐢𝐟𝐢𝐞𝐬 𝐚𝐧𝐝 𝐬𝐮𝐩𝐞𝐫𝐜𝐡𝐚𝐫𝐠𝐞𝐬 𝐲𝐨𝐮𝐫 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐥𝐚𝐲𝐞𝐫.\n🔧 Supported engines: MySQL | PostgreSQL | MariaDB | Oracle | SQL Server | Aurora\n#AWS #RDS #CloudComputing #DevOps #Database #AWSRDS #vpc #ec2 #AmazonWebServices #CloudNative #HighAvailability #Scalability #AWSCommunity #BuildOnAWS\n#techtalk #cloud #cloudcomputing #AWSDevOps #aws\n#devops #devopsengineer #ci #cd #cicd\n#kubernetes #docker #terraform\n#gitops #devsecops #platformengineering\n…see more\n𝐙𝐞𝐫𝐨 𝐭𝐨 𝐇𝐞𝐫𝐨 𝐀𝐖𝐒 𝐓𝐨𝐩𝐢𝐜-𝟒 𝐑𝐃𝐒",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338573772557307905_slide_0.jpg",
+      "description": "JPEG image, 487x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A brief promotional post presents Amazon RDS as a managed database service for small applications and enterprise-scale solutions. It highlights automated backups and patching, Multi-AZ deployments for high availability, storage and compute scaling, encryption at rest and in transit, IAM controls, and CloudWatch metrics for proactive performance tuning. It lists MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, and Aurora as supported engines. The opening line is a DevOps profile header, but the substantive content focuses on RDS. The social-media excerpt appears truncated and provides no implementation or configuration details.",
+    "topics": [
+      "Amazon RDS",
+      "Managed databases",
+      "Database maintenance",
+      "High availability",
+      "Scalability",
+      "Data security",
+      "Performance monitoring",
+      "Database engine compatibility"
+    ],
+    "subtopics": [
+      "Automated backups and patching",
+      "Multi-AZ deployments",
+      "Storage and compute scaling",
+      "Encryption at rest and in transit",
+      "IAM access control",
+      "CloudWatch metrics",
+      "Supported database engines"
+    ],
+    "concepts": [
+      "Amazon RDS",
+      "Automated backups and patching",
+      "Multi-AZ deployments",
+      "Storage and compute scaling",
+      "Encryption at rest and in transit",
+      "IAM access control",
+      "CloudWatch metrics",
+      "Supported database engines"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which Amazon RDS capabilities address database maintenance and application availability?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post says automated backups and patching remove the need for manual database maintenance.\nIt presents Multi-AZ deployments as the RDS capability for high availability."
+    },
+    {
+      "question": "An application needs its managed database to grow while protecting stored and transmitted data. Which RDS capabilities described in the post address these requirements?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post says RDS can scale both storage and compute as the application grows.\nIt states that data is encrypted at rest and in transit.\nIt identifies IAM as a mechanism for tight access control."
+    }
+  ],
+  "classification": {
+    "domain": "Cloud Database Engineering",
+    "primary_topic": "Amazon RDS",
+    "secondary_topics": [
+      "Managed database operations",
+      "High availability",
+      "Scalability",
+      "Cloud database security",
+      "Performance monitoring"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2dbbbf968e960eed",
+    "saved_date": "2026-10-01T23:12:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338573772557307905",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338573772557307905_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

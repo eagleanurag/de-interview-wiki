@@ -1,0 +1,144 @@
+{
+  "id": "urn-li-archive-9be0372679b7e439",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.924094Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:54Z"
+  },
+  "original_text": "13 Core Data Engineering Concepts That Trip Up 80% of Candidates — Master These to Level Up.\n\nHere’s a breakdown (with real interview-style thinking and how to actually practice):\n\n1. Batch vs Streaming\nBatch is cost-effective, but streaming delivers real-time freshness.\n\nMiss the trade-off, and either your budget or your SLAs get wrecked.\n\nTry this: Build a batch pipeline with Spark writing to S3 → then rebuild it using Kafka + Flink → compare cost, latency, and complexity.\n\n\n\n2. Columnar Data Formats (Parquet, ORC)\nCompression + column pruning = massive I/O savings.\n\nCommon mistake: Tiny Parquet files = slow queries + high overhead.\n\nTry this: Run the same SQL over CSV and Parquet → EXPLAIN ANALYZE → compare scan time.\n\n\n\n3. Partitioning & Clustering\nThink beyond rows — partitioned folders reduce scan load.\n\nBut too many partitions? You’ve got a small file storm.\n\nDrill: Partition logs by dt, cluster by user_id, and inspect Spark stage fan-out.\n\n\n\n4. Schema Evolution\nData changes. Your pipelines must keep up.\n\nQ: “How do you backfill a non-nullable column without breaking prod?”\n\nHands-on: Modify Avro schema in Confluent → test all compatibility modes.\n\n\n\n5. Change Data Capture (CDC)\nThe best way to keep your warehouse in sync — minus the full refresh.\n\nWarning: If you mismanage binlogs, expect duplicate or lost updates.\n\nChallenge: Stream MySQL binlog via Debezium → Kafka → Postgres → check row-level accuracy.\n\n\n\n6. Watermarks & Late Data\nTime windows must close — but not before the data shows up.\n\nQ: “What happens if a user's event arrives 3 hours late?”\n\nSimulate: Use Flink’s allowedLateness, send late events, and observe state cleanup.\n\n\n\n7. Idempotency\nRetrying writes? They better not double your numbers.\n\nTry: Write to Delta Lake using MERGE, replay Kafka topic, and validate totals.\n\n\n\n8. Data Lineage & Metadata Tracking\nIf someone asks “why is this number off?” — you need answers.\n\nHands-on: Integrate OpenLineage with Airflow and trace one KPI’s full journey.\n\n\n\n9. Workflow Orchestration\nAirflow/Dagster gives you retriable, backfillable, observable DAGs.\n\nQ: “How do you stop a daily job from running twice?”\n\nPractice: Migrate cron to Airflow → configure depends_on_past & max_active_runs=1.\n\n\n\n10. Incremental vs Full Loads\nFull loads = simple but costly. Incremental loads = efficient but tricky.\n\nExercise: Convert a Redshift COPY from full S3 scan to incremental using manifests.\n\n\nPro tip: Don’t just memorize theory. Build. Break. Observe. Repeat.\n\n#DataEngineering #BigData #Kafka #Flink #Spark #ETL #Airflow #InterviewPrep #SQL #ApacheFlink #DeltaLake #DataPipeline #StreamingData #RealTimeData #DSJobs #DataEngineer\n\nFollow ANKUR SHUKLA for more 👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This interview-preparation post presents hands-on exercises for batch versus streaming, columnar formats, partitioning and clustering, schema evolution, CDC, watermarks and late data, idempotency, lineage, workflow orchestration, and full versus incremental loads. It emphasizes evaluating trade-offs such as cost, latency, complexity, scan time, file overhead, duplicate or lost updates, and state cleanup. Although the title promises 13 concepts, the supplied content contains only 10 numbered concepts, so the other three are absent.",
+    "topics": [
+      "Batch and streaming processing",
+      "Columnar data formats",
+      "Partitioning and clustering",
+      "Schema evolution",
+      "Change Data Capture",
+      "Watermarks and late data",
+      "Idempotency",
+      "Data lineage and metadata tracking",
+      "Workflow orchestration",
+      "Full and incremental loads"
+    ],
+    "subtopics": [
+      "Cost, latency, and complexity trade-offs",
+      "Parquet and ORC compression and column pruning",
+      "Tiny files and Spark stage fan-out",
+      "Avro compatibility testing in Confluent",
+      "MySQL binlogs, Debezium, Kafka, and Postgres",
+      "Event-time windows, allowedLateness, and state cleanup",
+      "Delta Lake MERGE and Kafka replay",
+      "OpenLineage with Airflow",
+      "Retriable and backfillable DAGs and duplicate-run controls",
+      "Redshift COPY and S3 manifests"
+    ],
+    "concepts": [
+      "Batch versus streaming",
+      "Columnar data formats",
+      "Partitioning and clustering",
+      "Schema evolution and compatibility testing",
+      "Change Data Capture",
+      "Watermarks and late data",
+      "Idempotency",
+      "Data lineage and metadata tracking",
+      "Workflow orchestration",
+      "Incremental versus full loads"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What trade-offs should be evaluated when choosing between a Spark batch pipeline writing to S3 and a Kafka plus Flink streaming pipeline?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Batch processing is cost-effective, while streaming provides real-time freshness.\nThe implementations should be compared across cost, latency, and complexity rather than treating one approach as universally preferable."
+    },
+    {
+      "question": "Why can many tiny Parquet files cause slow queries, and how can the I/O benefit of Parquet over CSV be tested?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Compression and column pruning can reduce I/O, while tiny Parquet files can add overhead and slow queries.\nThe same SQL can be run over CSV and Parquet, and EXPLAIN ANALYZE can be used to compare scan time."
+    },
+    {
+      "question": "How should logs be partitioned and clustered to reduce scan load without creating a small-file storm?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The suggested layout partitions logs by dt and clusters them by user_id.\nPartitioned folders can reduce scan load, but excessive partitioning can produce many small files and increase Spark stage fan-out."
+    },
+    {
+      "question": "Why must data pipelines support schema evolution, and what compatibility validation does the post prescribe for an Avro change in Confluent?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Data changes over time, so pipelines must be able to keep up with those changes.\nThe proposed validation modifies an Avro schema in Confluent and tests all compatibility modes, although the post does not explain how to perform the non-nullable-column backfill safely."
+    },
+    {
+      "question": "What can go wrong when MySQL binlogs are mismanaged during a Debezium-to-Kafka-to-Postgres CDC flow, and how can the flow be validated?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Mismanaged binlogs can result in duplicate or lost updates.\nThe CDC flow should be validated by checking row-level accuracy after data moves through Debezium and Kafka into Postgres."
+    },
+    {
+      "question": "How would you evaluate Flink's handling of an event that arrives three hours late?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Time windows must be allowed to close without closing before all expected data has arrived.\nThe suggested simulation configures allowedLateness, sends late events, and observes state cleanup."
+    },
+    {
+      "question": "How can Delta Lake MERGE and Kafka replay be used to validate idempotent write handling?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Retried writes should not double numerical totals.\nA practical validation writes with Delta Lake MERGE, replays the Kafka topic, and checks whether the totals remain correct."
+    },
+    {
+      "question": "How can OpenLineage and Airflow be used to investigate an incorrect KPI?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "OpenLineage can be integrated with Airflow to capture lineage and metadata.\nThe KPI's full journey through the workflow can then be traced to help explain why its value is incorrect."
+    },
+    {
+      "question": "How does the post propose configuring an Airflow DAG migrated from cron to prevent a daily job from running twice?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The post specifically proposes configuring depends_on_past and max_active_runs=1.\nIt presents Airflow as an orchestration tool for retriable, backfillable, and observable DAGs."
+    },
+    {
+      "question": "What trade-offs distinguish full loads from incremental loads, and how can a full Redshift COPY from S3 be made incremental?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Full loads are simpler but costly, while incremental loads are more efficient but more difficult to implement correctly.\nThe post proposes converting the Redshift COPY exercise to use incremental manifests instead of scanning all of S3."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Core data engineering concepts",
+    "secondary_topics": [
+      "Batch and streaming processing",
+      "Storage optimization",
+      "Data layout",
+      "Schema management",
+      "Data synchronization",
+      "Event-time processing",
+      "Reliable writes",
+      "Data observability",
+      "Workflow orchestration",
+      "Data loading"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:9be0372679b7e439",
+    "saved_date": "2026-10-01T23:26:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

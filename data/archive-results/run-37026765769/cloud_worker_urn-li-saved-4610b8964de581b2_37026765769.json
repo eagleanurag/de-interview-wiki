@@ -1,0 +1,96 @@
+{
+  "id": "urn-li-saved-4610b8964de581b2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7330110065691037696",
+    "captured_at": "2026-10-02T00:15:47.207507Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:36Z"
+  },
+  "original_text": "Databricks Auto Loader can now clean up processed files automatically!\n\nNo more extra notebooks or manual cleanup scripts needed.\n\nWith the new cloudFiles.cleanSource option, Auto Loader can now handle source files after they’ve been processed:\n 🔹 OFF (default): Do nothing\n 🔹 DELETE: Remove files after a retention period (default = 30 days)\n 🔹 MOVE: Move files to an archive path\n\nWhy this matters:\n 🔹 Keeps your source directory organized\n 🔹 Reduces storage costs\n 🔹 Avoids accidental reprocessing\n 🔹 Cleanup only starts after a file is successfully processed\n\n✅ New in Databricks Runtime 16.4 LTS\n\n🔗 Details here: https://lnkd.in/eGVA6H9P \n\n#Databricks #AutoLoader #DataEngineering #Lakehouse #CloudStorage #Streaming #DeltaLake\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7330110065691037696_slide_0.jpg",
+      "description": "JPEG image, 480x325 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "Databricks Auto Loader added a cloudFiles.cleanSource option for managing source files after successful processing. The option supports OFF, which performs no cleanup by default; DELETE, which removes files after a retention period that defaults to 30 days; and MOVE, which moves files to an archive path. The post says this reduces the need for separate cleanup notebooks or scripts, organizes source storage, reduces storage costs, and helps avoid accidental reprocessing. The feature is new in Databricks Runtime 16.4 LTS.",
+    "topics": [
+      "Databricks Auto Loader",
+      "Source file lifecycle management",
+      "Cloud storage cleanup",
+      "Databricks Runtime 16.4 LTS"
+    ],
+    "subtopics": [
+      "cloudFiles.cleanSource option",
+      "OFF, DELETE, and MOVE cleanup modes",
+      "Retention-based file deletion",
+      "Archiving processed source files",
+      "Cleanup after successful processing"
+    ],
+    "concepts": [
+      "Databricks Auto Loader",
+      "cloudFiles.cleanSource",
+      "OFF cleanup mode",
+      "DELETE cleanup mode",
+      "MOVE cleanup mode",
+      "Successful-processing prerequisite",
+      "Databricks Runtime 16.4 LTS"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What cleanup modes are available through the cloudFiles.cleanSource option?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "OFF performs no cleanup and is the default mode.\nDELETE removes processed files after a retention period that defaults to 30 days.\nMOVE moves processed files to an archive path."
+    },
+    {
+      "question": "When does Auto Loader begin cleaning up a source file?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "Cleanup begins only after the source file has been successfully processed."
+    },
+    {
+      "question": "Which cleanup mode should be selected when processed files must be retained in an archive location?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The MOVE mode should be selected because it moves processed files to an archive path.\nThe answer should contrast MOVE with DELETE, which removes files after the retention period, and OFF, which leaves them in place."
+    },
+    {
+      "question": "What benefits does the post associate with automatic cleanup of processed source files?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Automatic cleanup keeps the source directory organized and reduces the need for extra notebooks or manual cleanup scripts.\nIt reduces storage costs and helps avoid accidental reprocessing."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks Auto Loader",
+    "secondary_topics": [
+      "Cloud storage file management",
+      "Post-processing cleanup",
+      "Streaming ingestion"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4610b8964de581b2",
+    "saved_date": "2026-10-01T23:22:36Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7330110065691037696",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7330110065691037696_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

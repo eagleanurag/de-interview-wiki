@@ -1,0 +1,134 @@
+{
+  "id": "urn-li-saved-c090ebe5b9997042",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7296015305749745664",
+    "captured_at": "2026-10-02T00:15:51.122784Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:20Z"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nDon't scratch your head to learn Python.\nLearn These Concepts to be proficient in Python.\n𝐁𝐚𝐬𝐢𝐜𝐬 𝐨𝐟 𝐏𝐲𝐭𝐡𝐨𝐧:\n-Syntax & Style\n-Data Types\n-Variables & Operators\n-Control Flow: if/else, Loops, try/except\n-Functions & Modules\n𝐎𝐛𝐣𝐞𝐜𝐭-𝐎𝐫𝐢𝐞𝐧𝐭𝐞𝐝 𝐏𝐲𝐭𝐡𝐨𝐧:\n-Classes & Objects\n-Inheritance\n-Polymorphism\n-Encapsulation\n𝐊𝐞𝐲 𝐋𝐢𝐛𝐫𝐚𝐫𝐢𝐞𝐬:\n-Pandas: Data Manipulation\n𝐏𝐚𝐧𝐝𝐚𝐬 𝐢𝐧 𝐃𝐞𝐩𝐭𝐡:\n-DataFrames: Creation & Access\n-Filtering & Selection\n-Data Cleaning: Missing Values, Duplicates\n-Merging & Grouping\n𝐃𝐚𝐭𝐚 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬:\n-Lists\n-Tuples\n-Dictionaries\n-Sets\n𝐅𝐢𝐥𝐞 𝐇𝐚𝐧𝐝𝐥𝐢𝐧𝐠:\n-Text Files\n-CSV Files\n-JSON Files\nIf you've read so far, do LIKE the post 👍\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\n…see more\nPython 500 interview questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7296015305749745664_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a high-level Python learning checklist organized into basic Python, object-oriented Python, Pandas, deeper data structures, and file handling. It names relevant topics but does not explain them, provide examples, or demonstrate techniques. The content also contains promotional profile and community links and references \"Python 500 interview questions,\" but no such questions are included in the supplied text.",
+    "topics": [
+      "Python Fundamentals",
+      "Object-Oriented Programming in Python",
+      "Pandas Data Manipulation",
+      "Python Data Structures",
+      "File Handling in Python"
+    ],
+    "subtopics": [
+      "Syntax and Style",
+      "Data Types",
+      "Variables and Operators",
+      "If/Else",
+      "Loops",
+      "Try/Except",
+      "Functions and Modules",
+      "Classes and Objects",
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "DataFrame Creation and Access",
+      "Filtering and Selection",
+      "Missing Values",
+      "Duplicates",
+      "Merging and Grouping",
+      "Lists",
+      "Tuples",
+      "Dictionaries",
+      "Sets",
+      "Text Files",
+      "CSV Files",
+      "JSON Files"
+    ],
+    "concepts": [
+      "Syntax and Style",
+      "Data Types",
+      "Variables and Operators",
+      "Control Flow",
+      "Functions and Modules",
+      "Classes and Objects",
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Pandas",
+      "DataFrames",
+      "Filtering and Selection",
+      "Data Cleaning",
+      "Merging and Grouping",
+      "Lists",
+      "Tuples",
+      "Dictionaries",
+      "Sets",
+      "File Handling"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which control-flow and exception-handling constructs does the post identify as foundational Python topics?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies if/else, loops, and try/except as the listed control-flow foundations."
+    },
+    {
+      "question": "Which object-oriented concepts does the post place in the intermediate Python curriculum?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies classes and objects, inheritance, polymorphism, and encapsulation."
+    },
+    {
+      "question": "What does the post identify Pandas as being used for, and which Pandas tasks does it list?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer associates Pandas with data manipulation and covers DataFrame creation and access, filtering and selection, handling missing values and duplicates, merging, and grouping."
+    },
+    {
+      "question": "Which Python data structures are included in the post's deeper study section?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer lists lists, tuples, dictionaries, and sets."
+    },
+    {
+      "question": "Which file formats does the post include under Python file handling?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies text files, CSV files, and JSON files."
+    }
+  ],
+  "classification": {
+    "domain": "Programming",
+    "primary_topic": "Python Fundamentals",
+    "secondary_topics": [
+      "Object-Oriented Programming in Python",
+      "Pandas Data Manipulation",
+      "Python Data Structures",
+      "File Handling in Python"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c090ebe5b9997042",
+    "saved_date": "2026-10-01T23:35:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7296015305749745664",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7296015305749745664_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "urn-li-saved-ce0f1d5f73004742",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7314232844652814336",
+    "captured_at": "2026-10-02T00:15:51.745352Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:52Z"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲: Cognizant (Hard Level) #PySpark Interview Question — Solution\n\n\n\n\n\n\n\n\n\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧:\nHandle Missing Data Efficiently\nYou have a DataFrame containing sales data. Write a PySpark script to:\nReplace missing values in the price column with the mean price.\nDrop rows where the product column is null.\nFill missing values in the quantity column with 1.\n\n𝐬𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐝𝐚𝐭𝐚𝐬𝐞𝐭\ndata = [ (1, \"Laptop\", 1000, 5), (2, \"Mouse\", None, None), (3, \"Keyboard\", 50, 2), (4, \"Monitor\", 200, None), (5, None, 500, None), ] \n\n# Define schema and create DataFrame \ncolumns = [\"product_id\", \"product\", \"price\", \"quantity\"]\n\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7314232844652814336_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a Cognizant hard-level PySpark interview prompt about handling missing values in a sales DataFrame. It supplies five records and four columns, then asks for the missing price values to be replaced with the mean price, rows with a null product to be dropped, and missing quantity values to be filled with 1. The content is truncated after the DataFrame setup and does not include the requested solution script.",
+    "topics": [
+      "PySpark",
+      "DataFrame missing-data handling",
+      "Data imputation",
+      "Null-value filtering"
+    ],
+    "subtopics": [
+      "Replacing missing price values with the mean",
+      "Dropping rows with a null product",
+      "Filling missing quantity values with 1"
+    ],
+    "concepts": [
+      "Mean imputation",
+      "Null-based row filtering",
+      "Constant-value imputation",
+      "PySpark DataFrame schema"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a PySpark script for the supplied sales records that replaces missing prices with the mean price, drops rows with a null product, and fills missing quantities with 1.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The script creates a PySpark DataFrame with the supplied records and the columns product_id, product, price, and quantity.\nThe script calculates the mean price and uses it to replace missing price values.\nThe script removes the row whose product is null.\nThe script replaces every missing quantity value with 1.\nThe answer explicitly addresses operation order because the row with a null product also contains a non-null price that could affect the calculated mean."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark missing-data handling",
+    "secondary_topics": [
+      "DataFrame transformations",
+      "Mean imputation",
+      "Null-value filtering",
+      "Constant-value imputation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ce0f1d5f73004742",
+    "saved_date": "2026-10-01T23:30:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7314232844652814336",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7314232844652814336_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

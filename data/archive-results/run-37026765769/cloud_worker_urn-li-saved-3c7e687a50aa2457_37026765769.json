@@ -1,0 +1,113 @@
+{
+  "id": "urn-li-saved-3c7e687a50aa2457",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339105847597219840",
+    "captured_at": "2026-10-02T00:15:46.724069Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:01Z"
+  },
+  "original_text": "SAP PI/PO Consultant @ IBM | Ex TCSer | Ex Infoscian | Marketing | Tech || Driving (Helping) Brands to go viral | Brand Partnership | 36k+ followers|10M Impressions | DM for Collabs\n1yr •\n❌ Stop randomly practicing SQL questions hoping to crack MNC interviews.\n✅ Instead, focus on what actually gets asked — with a twist.\nHere are the Top SQL Questions MNCs Love to Ask 👇\n🔹 Basic Level\n✔️ What are the key differences between SQL and NoSQL databases?\n✔️ Explain different types of SQL joins with examples.\n✔️ What’s the difference between CHAR and VARCHAR?\n🔸 Intermediate Level\n✔️ DELETE vs TRUNCATE — what’s the real difference?\n✔️ How do indexes work, and why do they matter?\n✔️ What are aggregate functions in SQL? Give examples.\n⚠️ Heads-up: Don’t just memorize these. MNC recruiters often twist them to test your thinking, not your memory.\n#SQL #TechInterviews #SQLPrep #SQLInterviewQuestions #SQLTips #LearnSQL #SQLLearning #SQLPractice\nSQL Interview Q & A",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339105847597219840_slide_0.jpg",
+      "description": "JPEG image, 392x490 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post advises candidates to focus on commonly asked SQL interview questions rather than practicing randomly because recruiters may twist questions to test reasoning. It lists six conceptual questions covering SQL versus NoSQL, joins, CHAR versus VARCHAR, DELETE versus TRUNCATE, indexes, and aggregate functions. It organizes them into basic and intermediate levels but provides no answers, technical explanations, or examples beyond the questions themselves.",
+    "topics": [
+      "SQL interview preparation",
+      "SQL and NoSQL databases",
+      "SQL joins",
+      "SQL character data types",
+      "SQL DELETE and TRUNCATE statements",
+      "SQL indexes",
+      "SQL aggregate functions"
+    ],
+    "subtopics": [
+      "Basic SQL interview questions",
+      "Intermediate SQL interview questions",
+      "SQL versus NoSQL",
+      "Types of SQL joins",
+      "CHAR versus VARCHAR",
+      "DELETE versus TRUNCATE",
+      "How indexes work and why they matter",
+      "Aggregate functions and examples"
+    ],
+    "concepts": [
+      "SQL and NoSQL database differences",
+      "SQL joins",
+      "CHAR and VARCHAR",
+      "DELETE versus TRUNCATE",
+      "SQL indexes",
+      "SQL aggregate functions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the key differences between SQL and NoSQL databases?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies and explains the key differences between SQL and NoSQL databases."
+    },
+    {
+      "question": "Explain the different types of SQL joins with examples.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer explains different types of SQL joins and illustrates them with examples."
+    },
+    {
+      "question": "What is the difference between CHAR and VARCHAR?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer clearly explains the difference between the CHAR and VARCHAR data types."
+    },
+    {
+      "question": "What is the real difference between DELETE and TRUNCATE?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains the behavioral and operational differences between DELETE and TRUNCATE."
+    },
+    {
+      "question": "How do indexes work, and why do they matter?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer describes how SQL indexes work and explains why they matter."
+    },
+    {
+      "question": "What are aggregate functions in SQL? Give examples.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer explains SQL aggregate functions and provides examples of their use."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Interview Preparation",
+    "secondary_topics": [
+      "SQL Fundamentals",
+      "Database Fundamentals",
+      "SQL Querying"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3c7e687a50aa2457",
+    "saved_date": "2026-10-01T23:19:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339105847597219840",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339105847597219840_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

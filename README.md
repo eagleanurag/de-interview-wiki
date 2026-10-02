@@ -11,8 +11,9 @@ collection                bounded, resumable, read-only
         ↓
 data/posts/<id>/post.json source text, provenance, media
         ↓
-enrichment                one worker per post, validated output,
-                          checked against the post it came from
+ENRICHMENT (local)        one post at a time, bounded retry, isolated
+        ↓                 failure, durable run state
+data/results/             one validated result per post, committed
         ↓
 consolidation             topics · concepts · technologies · questions
         ↓
@@ -21,8 +22,23 @@ canonical knowledge base   one authoritative JSON
 static wiki               posts · topics · concepts · technologies ·
                           questions · saved items · search
         ↓
+git                       commit the results and the posts
+        ↓
+CI                        tests · security · aggregate · build · deploy
+        ↓
 GitHub Pages
 ```
+
+The line that matters is the second one down. Enrichment runs on this
+machine, through OpenCode, and what it produces is committed. Everything
+below that line is deterministic and runs anywhere.
+
+That ordering is the result of an experiment rather than a preference.
+Enrichment as a cloud fan-out was tried — run `37026765769`, 490 posts
+as twenty batches — and six batches failed on truncated provider
+responses, which stopped aggregation and deployment. Moving the model
+call to one local orchestrator means a failed post is one retry, and CI
+becomes something that can run on every push because it calls nothing.
 
 A local saved-post archive enters at the second step, not the first.
 `linkedin-archive` reads files already on the machine and writes them
@@ -44,68 +60,191 @@ pipeline testable and keeps it working when a web interface changes.
 ```bash
 python -m src.pipeline                    # discover → enrich → aggregate → site
 python -m src.pipeline --only enrich      # one stage
+python -m src.pipeline --jobs 3           # three posts at a time
+python -m src.pipeline --attempts 3       # tries per post before giving up
 python -m src.pipeline --force-enrich     # re-enrich everything
-python -m src.pipeline --jobs 6           # six posts at a time
 ```
 
-`--jobs` runs several posts at once. Each post is already its own
-worker result and CI already runs one job per post, so the work is
-independent; this applies the same fan-out locally. One is the default,
-because a bound nobody asked for is a surprise. With several hundred
-posts the difference is the difference between hours and minutes.
+**This is the normal way to process material.** Enrichment runs here,
+against OpenCode on this machine, and its results are committed to
+`data/results/`. GitHub Actions validates the repository and publishes
+the site; it does not call the model. That split is deliberate, and it
+was measured rather than assumed — see
+[Why enrichment is local](#why-enrichment-is-local).
 
-Output goes under `build/`, which is git-ignored, so nothing in this
-command writes into the committed repository. Enrichment is the only
+Output goes under `build/`, which is git-ignored, so this command
+writes nothing into the committed repository. Enrichment is the only
 stage that touches untrusted model output, and one post failing costs
 that post rather than the run.
 
-Enrichment is incremental. Each result records a fingerprint of the
-content it describes, so a post whose text and media have not changed
-keeps the analysis it has and the model is not called again. Editing a
-post, or changing the enrichment contract, invalidates exactly the
-results that no longer apply.
+### `--jobs`
 
-### How the cloud pipeline batches
+How many posts to enrich at once. Each post is independent — its own
+directory, its own result file, its own model call — so this bounds
+concurrency rather than introducing a second pipeline. One is the
+default, because a bound nobody asked for is a surprise.
 
-GitHub allows a matrix of at most **256 jobs per run**, so a local
-archive — which took this repository from seven posts to nearly five
-hundred — could not be enriched one job per post. The workflow
-therefore groups posts into batches of 25 and gives each job a whole
-batch. The job count is a function of the batch size rather than of
-the post count, which is what lets the workflow keep working as
-material is added.
+Start at three. More is faster and, on a free provider, no more
+reliable; if retries climb, that is the provider telling you the bound
+is too high.
 
-One post failing still costs one post: every post in a batch is
-attempted, the failures are named, and the results that did land are
-uploaded regardless, so aggregation reports the shortfall instead of
-nothing at all. Aggregation compares the count it received against the
-count discovered and fails loudly when they differ.
+### `--attempts`
 
-Set `WORKER_BATCH_SIZE` as a repository variable to change the batch
-size. The default is 25. If a repository ever grows past the limit
-again, the workflow refuses to start and says what to raise it to,
-rather than being cancelled without explanation.
+How many times one post is tried before it is written off. Only
+failures a retry can fix are retried: a truncated or throttled response
+is asked again, a missing API key is not. Three by default — enough for
+the failures that actually happened, and low enough that a broken
+provider fails the run rather than appearing to make progress.
+
+A retry is a fresh sample, not a repaired one. Nothing is filled in to
+satisfy validation, and no schema is loosened to accept a short answer:
+the response that finally validates is one the model produced whole.
+
+### Resume
+
+The run is resumable, and interrupting it is not a disaster:
+
+```
+490 posts
+  ↓
+200 enriched
+  ↓  terminal closed, machine restarted
+python -m src.pipeline --jobs 3
+  ↓
+200 reused, 290 processed
+```
+
+Progress is one line per post as it settles:
+
+```
+[  1/490] cached urn-li-saved-00bd7b1ba593332c
+[  2/490] enriched urn-li-saved-02391a7ac96b4fc5 (38.2s)
+[  3/490] retried (2 attempts, 74.1s) urn-li-saved-02d1745fe9579e3a
+[  4/490] FAILED (3 attempts, 2.0s) urn-li-saved-031311e77122b2ac
+```
+
+and the end of the run names every category separately, so "489 of 490"
+and "490 of 490" cannot be confused:
+
+```
+Enrichment
+----------
+Total                           490
+Already complete                179
+Processed                       311
+  of which retried                3
+Permanently failed                0
+Model attempts                   314
+```
+
+### When a post fails
+
+Every post that ends a run without a result gets a record in
+`build/enrichment-state.json`, carrying the stage, the number of
+attempts, the error type, the message, a timestamp, and whether the
+cause is one a retry could have fixed:
+
+```json
+{
+  "post_id": "urn-li-saved-031311e77122b2ac",
+  "stage": "enrich",
+  "status": "failed",
+  "attempts": 3,
+  "retry_count": 2,
+  "error_type": "OpenCodeError",
+  "error_kind": "truncated_response",
+  "error_message": "OpenCode failed with exit code 1. ...",
+  "timestamp": "2026-10-03T02:14:07.881293+00:00",
+  "recoverable": true
+}
+```
+
+Re-run the pipeline to retry them. Nothing that succeeded is re-done.
+
+### Incremental enrichment
+
+Each result records a fingerprint of what enrichment actually read: the
+post's text, and for every media file its path, its extracted text, its
+description and its content digest. A post whose content has not
+changed keeps the analysis it has, and the model is not called again.
+
+Editing a post, or replacing one of its files, invalidates that post
+and nothing else. A change to the enrichment contract invalidates
+everything, because the current version would answer differently about
+the same content.
+
+Changing only the metadata — a new capture date, say — costs nothing.
+The attribution is refreshed from the post without a model call.
+
+### Rebuilding the site
+
+Enrichment is the only stage that needs a model. To rebuild from
+results that already exist:
+
+```bash
+python -m src.pipeline --only aggregate
+python -m src.pipeline --only site
+```
+
+CI does exactly this, then deploys to Pages.
 
 ## Pipeline
 
-The cloud pipeline is defined in
+CI is defined in
 [`.github/workflows/run-python-worker.yml`](.github/workflows/run-python-worker.yml)
-and runs in four stages:
+and runs in four stages, none of which calls a model:
 
-1. **Discover** — scans `data/posts/*/post.json` and builds the
-   matrix. No post list is hardcoded, so adding a post directory is
-   enough to add a worker.
-2. **Worker** — one matrix job per post. Each job creates a job
-   manifest, runs the Python worker (`src/workers/cli.py`) to enrich the
-   post through OpenCode + Space Bunny, and uploads its own artifact
-   named `cloud-worker-result-<post_id>`. Workers never write to the
-   repository and never push commits.
-3. **Aggregate** — runs only after every worker succeeds. It downloads
-   the worker artifacts, runs the Python aggregator, and uploads a
-   single canonical `knowledge_base.json` as artifact
-   `knowledge-base-<run_id>`.
-4. **Generate and deploy** — renders the static site and publishes it to
-   GitHub Pages.
+1. **Verify** — runs the test suite, refuses to proceed if any
+   credential, session, drop zone or archive is tracked, and fails if
+   the tests themselves modified the repository.
+2. **Aggregate** — builds the canonical `knowledge_base.json` from the
+   committed results in `data/results/`, and fails if the knowledge base
+   does not cover every result, or if any result was skipped.
+3. **Wiki** — generates the site, checks that no local path reached a
+   published page, and checks that a second build of the same input is
+   byte identical.
+4. **Deploy** — publishes to GitHub Pages, from `main` only.
+
+Because nothing calls a model, CI runs on every push rather than only
+on request. A change to this repository is now validated before it
+reaches the default branch, which it could not be while the workflow
+was fanning hundreds of model calls out.
+
+## Why enrichment is local
+
+This was measured, not assumed.
+
+Run `37026765769` fanned enrichment out as twenty batches over 490
+posts. Fourteen batches succeeded and six failed; because a batch had
+failed, aggregation and deployment were skipped and nothing shipped.
+
+Every one of those failures was the same thing — the provider returned
+partway through and stopped:
+
+```json
+{"type": "provider.invalid-output",
+ "message": "OpenAI Chat stream ended without finish_reason",
+ "status": 200}
+```
+
+Six of the eight failed posts arrived as a *successful* exit carrying a
+truncated JSON fragment, which the response model rejected as a type
+error. Nothing was wrong with the response format: the answers had
+stopped early. Each post had exactly one attempt there, so each of
+those eight was a lost post rather than a re-ask.
+
+The local orchestrator exists because of that run. It gives each post up
+to three attempts, judges every failure for whether asking again could
+help, isolates one post's failure from the rest, keeps a durable record
+of what it did, and reuses every result that is still current. A failed
+post is now one line in a file rather than a deployment that never
+happened.
+
+The successful results from that run were kept and audited rather than
+discarded: 482 of them, every one valid against the post models. They
+turned out not to be needed, because the local run had already covered
+all 490 posts, and they carry no fingerprint — so, unlike the local
+results, they cannot be judged for reusability.
 
 ## Adding your own material
 

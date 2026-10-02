@@ -1,0 +1,89 @@
+{
+  "id": "urn-li-saved-23809de51d73cb8c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341321351242125316",
+    "captured_at": "2026-10-02T00:15:45.565196Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:08Z"
+  },
+  "original_text": "𝐌𝐨𝐬𝐭 𝐀𝐬𝐤𝐞𝐝 𝐒𝐩𝐚𝐫𝐤 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\n𝐇𝐨𝐰 𝐝𝐨𝐞𝐬 𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐡𝐚𝐬𝐡 𝐣𝐨𝐢𝐧 𝐰𝐨𝐫𝐤?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n𝗛𝗮𝘀𝗵 𝗝𝗼𝗶𝗻 𝗮𝗹𝗴𝗼𝗿𝗶𝘁𝗵𝗺:\nHash Join is performed by first creating a Hash Table based on the join key of the smaller dataset and then looping over the larger table to match the hashed join key values. Rows with the same hash value are considered potential matches. The actual join operation is performed on the matching rows, producing the final result. So, this is only supported for ‘=’ join.\n\n\n𝐁𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭 𝐇𝐚𝐬𝐡 𝐉𝐨𝐢𝐧: In broadcast hash join, copy of one of the join relations are being sent to all the worker nodes and it saves shuffling cost. Spark uses this join strategy when one of the datasets being joined is smaller than a certain size threshold, which is set by default to 10 megabytes. This threshold is determined by a Spark property called ‘spark.sql.autoBroadcastJoinThreshold’, and it can be configured based on specific requirements and has a max limit of 8GB. In simple terms, when the size of one dataset in a join operation is smaller than the specified threshold, Spark automatically chooses a more optimized join strategy for better performance.\n\nFactors:\na. The dataset being broadcasted must fit entirely into the memory of each executor and the driver. The driver initiates the data transfer process.\nb. Only for “=” as Hash Join algorithm is used \nc. All join types are supported other than Full outer join.\n \n\n\n👍Like this post.\n♻ Feel free to re-share this post if you find it helpful.\n#BigData #PySpark #SQL #DataEngineering #Learn #Join\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341321351242125316_slide_0.jpg",
+      "description": "JPEG image, 480x284 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that a hash join builds a hash table from the smaller dataset and scans the larger dataset to find rows with matching hashed join keys. It describes Spark's broadcast hash join as sending a copy of one join relation to all worker nodes to avoid shuffling cost. According to the post, Spark automatically selects this strategy when one dataset is below the threshold configured by spark.sql.autoBroadcastJoinThreshold, which has a stated default of 10 MB and maximum limit of 8 GB. The broadcast relation must fit in the memory of every executor and the driver, the strategy applies to equality joins, and all join types except a full outer join are supported by the post's account.",
+    "topics": [
+      "Broadcast hash joins in Spark",
+      "Hash join execution",
+      "Spark SQL join optimization"
+    ],
+    "subtopics": [
+      "Equality join requirements",
+      "Automatic broadcast join threshold",
+      "Worker-node data distribution",
+      "Shuffle cost reduction",
+      "Memory constraints"
+    ],
+    "concepts": [
+      "Hash Join",
+      "Equality Join Requirement",
+      "Broadcast Hash Join",
+      "spark.sql.autoBroadcastJoinThreshold",
+      "Broadcast Memory Requirement",
+      "Broadcast Join Type Support"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does a hash join use the smaller and larger datasets to produce a join result?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A hash table is first created from the join key of the smaller dataset.\nThe larger dataset is scanned to find rows with matching hashed join-key values.\nRows with the same hash value are potential matches, and the join is performed on the matching rows."
+    },
+    {
+      "question": "How does a broadcast hash join reduce shuffling cost in Spark?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A copy of one join relation is sent to all worker nodes.\nThe broadcast strategy avoids the shuffling cost described in the post.\nThe driver initiates the data transfer process."
+    },
+    {
+      "question": "When does Spark automatically use a broadcast hash join, and what constraints apply?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Spark selects the strategy when one dataset is smaller than the configured auto-broadcast join threshold.\nThe post identifies spark.sql.autoBroadcastJoinThreshold as the relevant property and gives 10 MB as its default value.\nThe broadcast dataset must fit entirely in the memory of every executor and in the driver.\nThe described strategy applies to equality joins and, according to the post, supports every join type except a full outer join."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Broadcast hash joins in Spark",
+    "secondary_topics": [
+      "Hash join algorithms",
+      "Spark SQL configuration",
+      "Join optimization",
+      "Distributed data distribution"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:23809de51d73cb8c",
+    "saved_date": "2026-10-01T23:17:08Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341321351242125316",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341321351242125316_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

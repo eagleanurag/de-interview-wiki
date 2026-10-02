@@ -1,0 +1,151 @@
+{
+  "id": "urn-li-archive-a52dbdf00684bb8a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.078974Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:59Z"
+  },
+  "original_text": "💼 EY GDS – Azure Data Engineer Interview Questions (L2 Round)\n📌 These were recently asked in second-level technical interviews at EY GDS. Expect scenario-based depth and architectural thinking!\n\n\n---\n\n🧠 L2-Level Questions You Must Prepare For:\n\n1️⃣ You have to ingest 100+ tables from on-prem SQL Server to ADLS using ADF.\n👉 How will you design the pipeline framework to support dynamic ingestion and table-wise control?\n\n2️⃣ A data flow is failing due to schema mismatch in one of the source tables.\n👉 How do you handle schema evolution or drift in ADF?\n\n3️⃣ Explain how you implemented row-level security in Synapse Analytics.\n👉 What are the key steps and how do you audit access?\n\n4️⃣ A Databricks notebook is taking too long during joins.\n👉 How do you troubleshoot and optimize join performance in PySpark?\n\n5️⃣ How do you enable end-to-end logging, error handling, and alerting across ADF and Databricks pipelines?\n\n6️⃣ What is your strategy to maintain CI/CD for ADF and Synapse artifacts using Azure DevOps?\n\n7️⃣ You’re designing a system to load 1 TB daily.\n👉 Would you use PolyBase or COPY INTO? Why?\n\n8️⃣ What are Managed Identity, RBAC, and ACLs, and how do you use them to securely access ADLS?\n\n9️⃣ How do you implement parameterized linked services and reusable datasets in ADF?\n\n🔟 Explain how you use delta tables and merge operations to implement SCD Type 2 logic in Databricks.\n\n\n---\n\n💡 L2 Interview Tip:\nEY expects solid understanding of pipeline orchestration, Spark tuning, Azure security, and cost-efficient design — not just tool clicks.\n\n\n---\n\n📩 Want sample answers or real design templates? Drop “EY L2” in the comments!\n📌 Save this for your EY or Big4 prep journey.\n\n#EYGDS #AzureDataEngineer #DataEngineering #ADF #Synapse #Databricks #BigData #AzureSecurity #AzureDevOps #TechInterview #ETL #LinkedInLearning #MorningLearning ☀️ #CloudEngineer #CareerInTech #DataPipelines",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is an EY GDS L2 Azure Data Engineer interview-preparation post presenting ten scenario-based questions described as recently asked in second-level technical interviews. It covers ADF ingestion and orchestration, schema evolution and drift, Synapse Analytics row-level security, Databricks and PySpark join performance, cross-pipeline logging and alerting, CI/CD with Azure DevOps, PolyBase versus COPY INTO, ADLS access control, reusable ADF objects, and delta tables with merge operations for SCD Type 2. The post names preparation themes including pipeline orchestration, Spark tuning, Azure security, and cost-efficient design, but it does not provide sample answers or completed design templates.",
+    "topics": [
+      "EY GDS L2 technical interviews",
+      "Azure data engineering",
+      "ADF pipeline orchestration",
+      "SQL Server to ADLS ingestion",
+      "schema evolution and drift",
+      "Synapse Analytics row-level security",
+      "Databricks and PySpark join performance",
+      "end-to-end logging, error handling, and alerting",
+      "CI/CD with Azure DevOps",
+      "PolyBase and COPY INTO",
+      "ADLS security",
+      "parameterized linked services and reusable datasets",
+      "delta tables and merge operations for SCD Type 2",
+      "Spark tuning",
+      "cost-efficient design"
+    ],
+    "subtopics": [
+      "dynamic ingestion of 100+ SQL Server tables",
+      "table-wise control",
+      "schema mismatch handling",
+      "row-level security implementation and access auditing",
+      "slow-join troubleshooting in PySpark",
+      "end-to-end logging, error handling, and alerting",
+      "CI/CD for ADF and Synapse artifacts",
+      "1 TB daily loading with PolyBase or COPY INTO",
+      "Managed Identity, RBAC, and ACLs for ADLS",
+      "parameterized linked services and reusable datasets",
+      "delta tables and merge operations",
+      "SCD Type 2 logic"
+    ],
+    "concepts": [
+      "Dynamic ingestion and table-wise control",
+      "Schema evolution and drift",
+      "Row-level security and access auditing",
+      "PySpark join troubleshooting and optimization",
+      "End-to-end logging, error handling, and alerting",
+      "CI/CD for ADF and Synapse artifacts",
+      "PolyBase versus COPY INTO",
+      "Managed Identity, RBAC, and ACLs",
+      "Parameterized linked services and reusable datasets",
+      "Delta tables and merge operations for SCD Type 2"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you design an ADF pipeline framework to ingest 100+ tables from on-prem SQL Server into ADLS while supporting dynamic ingestion and table-wise control?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to design an ADF pipeline framework for ingesting 100+ tables from on-prem SQL Server into ADLS.\nIt also explains how the design supports dynamic ingestion and table-wise control."
+    },
+    {
+      "question": "How would you handle a schema mismatch in one source table in an ADF data flow, including schema evolution or drift?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer addresses a schema mismatch in one source table and explains how ADF can handle schema evolution or drift."
+    },
+    {
+      "question": "What are the key steps for implementing row-level security in Synapse Analytics, and how would you audit access?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer outlines the key steps for implementing row-level security in Synapse Analytics.\nIt also explains how access is audited."
+    },
+    {
+      "question": "How would you troubleshoot and optimize slow joins in a Databricks notebook using PySpark?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer describes how to troubleshoot slow joins in a Databricks notebook and optimize join performance in PySpark."
+    },
+    {
+      "question": "How would you enable end-to-end logging, error handling, and alerting across ADF and Databricks pipelines?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer covers logging, error handling, and alerting across ADF and Databricks pipelines."
+    },
+    {
+      "question": "What strategy would you use to maintain CI/CD for ADF and Synapse artifacts with Azure DevOps?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to maintain CI/CD for ADF and Synapse artifacts using Azure DevOps."
+    },
+    {
+      "question": "For a system that loads 1 TB daily, would you use PolyBase or COPY INTO, and why?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer compares PolyBase with COPY INTO for loading 1 TB daily and gives a reason for the choice."
+    },
+    {
+      "question": "What are Managed Identity, RBAC, and ACLs, and how would you use them to securely access ADLS?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines Managed Identity, RBAC, and ACLs and explains how they are used to securely access ADLS."
+    },
+    {
+      "question": "How would you implement parameterized linked services and reusable datasets in ADF?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how to implement parameterized linked services and reusable datasets in ADF."
+    },
+    {
+      "question": "How would you use delta tables and merge operations to implement SCD Type 2 logic in Databricks?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how delta tables and merge operations in Databricks implement SCD Type 2 logic."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure data engineering interview preparation",
+    "secondary_topics": [
+      "ADF dynamic ingestion and table-wise control",
+      "schema evolution and drift",
+      "Synapse Analytics row-level security and auditing",
+      "Databricks and PySpark join performance",
+      "logging, error handling, and alerting",
+      "CI/CD with Azure DevOps",
+      "PolyBase versus COPY INTO",
+      "secure ADLS access with Managed Identity, RBAC, and ACLs",
+      "parameterized linked services and reusable datasets",
+      "delta tables and SCD Type 2"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a52dbdf00684bb8a",
+    "saved_date": "2026-10-01T23:10:59Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

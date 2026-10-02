@@ -1,0 +1,78 @@
+{
+  "id": "urn-li-saved-ac43b4436d7bc593",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7329705187646824448",
+    "captured_at": "2026-10-02T00:15:50.569403Z",
+    "author": "Mohammed Ankoos",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:30Z"
+  },
+  "original_text": "• 2nd\nAZURE DATA ENGINEER at Capgemini |Bigdata|ETL|Azure data factory|Data Bricks|Pyspark|SQL|Python\n1yr •\nReady to Master PySpark? Spark Your Data Engineering Journey!\nI just came across this amazing PySpark Power Guide that covers everything from:\nSparkContext, Py4J, RDDs\nDataFrames & Spark SQL\nFile loading (CSV, JSON, Parquet)\nReal-world Delta Lake usage\nIf you're a Data Engineer or aspiring Big Data professional, this is a must-read!\nI'm currently leveling up my PySpark & Databricks skills to build real-time, scalable pipelines.\nLet’s connect and grow together in this data-driven world!\n#PySpark #DataEngineering #BigData #ApacheSpark #DeltaLake #Databricks #ETL #LinkedInLearning #AzureDataEngineer #CareerGrowth #JobSearch\nReady to Master PySpark? Spark Your Data Engineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7329705187646824448_slide_0.jpg",
+      "description": "JPEG image, 345x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a brief promotional post recommending a PySpark guide. It states that the guide covers SparkContext, Py4J, RDDs, DataFrames, Spark SQL, loading CSV, JSON, and Parquet files, and using Delta Lake in real-world scenarios. The author also mentions developing PySpark and Databricks skills for real-time, scalable data pipelines. No definitions, implementation details, examples, or technical claims about these tools are provided, and the extracted media text is empty or truncated.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Databricks",
+      "Delta Lake",
+      "ETL"
+    ],
+    "subtopics": [
+      "SparkContext",
+      "Py4J",
+      "RDDs",
+      "DataFrames",
+      "Spark SQL",
+      "CSV file loading",
+      "JSON file loading",
+      "Parquet file loading",
+      "Delta Lake usage"
+    ],
+    "concepts": [
+      "SparkContext",
+      "Py4J",
+      "RDDs",
+      "DataFrames",
+      "Spark SQL",
+      "File loading",
+      "Delta Lake",
+      "Databricks"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "Databricks",
+      "Delta Lake",
+      "ETL"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ac43b4436d7bc593",
+    "saved_date": "2026-10-01T23:23:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7329705187646824448",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7329705187646824448_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

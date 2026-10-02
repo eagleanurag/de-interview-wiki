@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-2f61dba2ca435e25",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7458357546396028928",
+    "captured_at": "2026-10-02T00:15:46.155168Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:13Z"
+  },
+  "original_text": "🚨 Accenture + MNC Data Engineer interviews in 2026 are on another level now.\nI reviewed the latest Azure Data Engineering interview questions…\n and one thing became crystal clear 👇\n👉 Companies are NOT hiring “tool users” anymore.\n 👉 They are hiring problem solvers.\n📌 (The guide focuses on real Azure Data Engineering scenarios with ADF, Databricks, Delta Lake & Synapse)\n🔥 One of the MOST asked questions:\n👉 “Explain your end-to-end Azure Data Engineering architecture.”\nMost candidates say:\n ❌ “We used ADF and Databricks…”\nThat’s NOT enough anymore.\n💥 What strong candidates explain:\n✔️ Source Systems → ADF Pipelines\n ✔️ ADLS Gen2 → Raw Storage\n ✔️ Databricks → Bronze → Silver → Gold transformations\n ✔️ Synapse SQL Pool → Curated analytics\n ✔️ Power BI → Reporting\n👉 THAT shows architecture thinking.\n🔥 Real Production Scenario They Asked:\nA retail client processed:\n ✔️ 20M+ transactions daily\n ✔️ Multiple ERP systems\n ✔️ Near real-time dashboards\n🚨 Problem?\n Pipeline runtime = 3 HOURS\n💡 Solution:\n ✔️ Parallel activities in ADF\n ✔️ Spark optimization\n ✔️ Delta Lake partitioning\n🔥 Result:\n Execution time reduced from 3 hours → 40 minutes\n📌 (This exact optimization scenario is explained in the guide)\n💥 Another favorite interview trap:\n👉 “ADF vs Databricks?”\nWrong answer:\n ❌ “Both are ETL tools”\nCorrect mindset:\n ✔️ ADF = orchestration\n ✔️ Databricks = large-scale transformation\n👉 They WORK TOGETHER.\nThey explain features…\n📘 Crack Azure Data Engineer Interviews (Topic-wise Q&A)\n👉 https://lnkd.in/gF4_tCQj\n---------------------**********--------------------\n💼 500+ Company-wise Azure Data Engineer Questions\n👉 https://lnkd.in/gZ4NJDzw\n---------------------**********--------------------\n🔥 Data Engineer Mega Pack (1300+ Scenario Q&A)\n👉 https://lnkd.in/gEushWwU\n---------------------**********--------------------\n📊 600+ Real Questions from Top Companies\n👉 https://lnkd.in/gvX-we8v\n instead of explaining:\n ✔️ WHY they used it\n ✔️ WHAT problem it solved\n ✔️ HOW performance improved\n💬 Preparing for Accenture / Deloitte / Infosys / TCS / MNC Data Engineer interviews?\nComment “AZURE” and I’ll share more real interview Q&A 🔥\n#Azure #DataEngineering #Databricks #ADF #BigData #DeltaLake #InterviewPreparation #TechCareers #CareerGrowth #LinkedInGrowth",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7458357546396028928_slide_0.jpg",
+      "description": "JPEG image, 480x678 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional interview-preparation post argues that Azure Data Engineering interviews assess problem-solving and architecture thinking rather than tool familiarity. It presents an end-to-end flow from source systems through ADF, ADLS Gen2, Databricks, Synapse SQL Pool, and Power BI. It also describes a retail scenario processing more than 20 million transactions daily, where parallel ADF activities, Spark optimization, and Delta Lake partitioning reportedly reduced pipeline runtime from three hours to forty minutes. The supplied content does not explain the detailed implementation of those optimizations or include the contents of the linked guides.",
+    "topics": [
+      "Azure Data Engineering architecture",
+      "Data orchestration and transformation",
+      "Delta Lake partitioning",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "End-to-end flow from source systems to reporting",
+      "ADF and Databricks role separation",
+      "Bronze, Silver, and Gold transformation layers",
+      "Parallel activities in ADF",
+      "Spark optimization",
+      "Delta Lake partitioning",
+      "Retail pipeline runtime optimization"
+    ],
+    "concepts": [
+      "End-to-end Azure Data Engineering flow",
+      "ADF orchestration",
+      "Databricks large-scale transformations",
+      "ADLS Gen2 raw storage",
+      "Bronze, Silver, and Gold layers",
+      "Synapse SQL Pool curated analytics",
+      "Power BI reporting",
+      "Parallel activities in ADF",
+      "Spark optimization",
+      "Delta Lake partitioning",
+      "Claimed runtime reduction",
+      "Architecture thinking over tool listing"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you walk through the end-to-end Azure Data Engineering architecture described in the post?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The flow begins with source systems feeding ADF pipelines and then writing to ADLS Gen2 as raw storage.\nDatabricks handles the Bronze-to-Silver-to-Gold transformations, Synapse SQL Pool supports curated analytics, and Power BI provides reporting.\nADF is framed as the orchestration layer rather than the primary transformation engine."
+    },
+    {
+      "question": "What is the difference between ADF and Databricks in the described architecture?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "ADF is presented as the orchestration layer for pipelines.\nDatabricks is presented as the layer for large-scale transformations.\nThe answer should explain that the two technologies can work together rather than treating both as interchangeable ETL tools."
+    },
+    {
+      "question": "A retail pipeline processes more than 20 million transactions daily from multiple ERP systems and has a three-hour runtime. What optimization approach does the post present, and what outcome does it claim?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The scenario includes multiple ERP sources and near-real-time dashboard requirements.\nThe proposed changes are parallel activities in ADF, Spark optimization, and Delta Lake partitioning.\nThe post claims that these changes reduce execution time from three hours to forty minutes."
+    },
+    {
+      "question": "How should a candidate explain an Azure Data Engineering architecture so that the answer demonstrates more than tool familiarity?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer states why each technology was selected, what pipeline problem it addressed, and how performance improved.\nIt connects ADF to orchestration and Databricks to large-scale transformations.\nIt describes the data flow and claimed performance outcome instead of merely listing tool names."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineering architecture",
+    "secondary_topics": [
+      "Azure Data Factory orchestration",
+      "Databricks large-scale transformations",
+      "Delta Lake partitioning",
+      "Spark optimization",
+      "Data pipeline runtime optimization",
+      "Technical interview communication"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2f61dba2ca435e25",
+    "saved_date": "2026-10-01T23:08:13Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7458357546396028928",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7458357546396028928_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

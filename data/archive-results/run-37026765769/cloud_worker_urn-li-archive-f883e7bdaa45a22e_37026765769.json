@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-archive-f883e7bdaa45a22e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.277589Z",
+    "author": "Kalyani V",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:52Z"
+  },
+  "original_text": "***Inteview Question***\nToday, I explored how different SQL join operations behave using a small dataset, and how they handle duplicates and NULLs. Here's what I discovered:\n\nDatasets\nTable A (Left) Table B (Right)\nId Id\n1 1\n2 2\n2 2\n3 2\n4 4\n6 5\nNULL NULL\n\n1️⃣ INNER JOIN (A.Id = B.Id)\n1 → 1×1 = 1\n2 → 2×3 = 6\n4 → 1×1 = 1\nNULLs won’t match\n✅ Total = 1 + 6 + 1 = 8 rows\n-----------------------------------------\n2️⃣ LEFT JOIN\nFrom A:\n1 → match = 1 row\n2 → 2×3 = 6 rows\n3 → no match = 1 row (NULLs on B side)\n4 → match = 1 row\n6 → no match = 1 row\nNULL → no match = 1 row (even though B has NULL too)\n✅ Total = 1 + 6 + 1 + 1 + 1 + 1 = 11 rows\n----------------------------------------------\n3️⃣ RIGHT JOIN\nFrom B:\n1 → match = 1\n2 → 3×2 = 6\n4 → match = 1\n5 → no match = 1\nNULL → no match = 1\n✅ Total = 1 + 6 + 1 + 1 + 1 = 10 rows\n\n-----------------------------------------------------\n4️⃣ FULL OUTER JOIN\n= LEFT + RIGHT − INNER\n = 11 + 10 − 8 = 13 rows\n✅ NULLs on both sides still do not match, so they count as unmatched on both.\n\n-------------------------------------------------\n5️⃣ CROSS JOIN\n= 7 rows in A × 7 rows in B\n✅ 7 × 7 = 49 rows\n\n#dataEngineer #spark #sqljoins #sql #mysql #azureDataEngineer Coditas #Pyspark #databricks #azuredataengineer",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post uses two seven-row datasets to demonstrate how SQL joins handle duplicate identifiers and NULL values. Duplicate matches multiply result rows, while NULL values do not match, even when NULL appears on both sides. For the supplied data, the INNER JOIN returns 8 rows, the LEFT JOIN returns 11, the RIGHT JOIN returns 10, the FULL OUTER JOIN returns 13, and the CROSS JOIN returns 49.",
+    "topics": [
+      "SQL JOIN operations"
+    ],
+    "subtopics": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "CROSS JOIN",
+      "Duplicate handling",
+      "NULL handling",
+      "Join result cardinality"
+    ],
+    "concepts": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "CROSS JOIN",
+      "Duplicate-driven row multiplication",
+      "NULL non-matching behavior"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "For the supplied datasets, why does the INNER JOIN on Id produce eight rows?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Id 1 produces one row and Id 4 produces one row.\nThe two Id 2 rows in Table A each match all three Id 2 rows in Table B, producing six rows.\nNULL values do not match, so the total is 1 plus 6 plus 1, or 8 rows."
+    },
+    {
+      "question": "How do LEFT JOIN and RIGHT JOIN differ when applied to the supplied datasets?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A LEFT JOIN preserves all seven rows from Table A and returns 11 rows because duplicate matches multiply the Id 2 results.\nA RIGHT JOIN preserves all seven rows from Table B and returns 10 rows because it includes the three Id 2 matches for each of the two rows in Table B.\nUnmatched rows from the preserved table are returned with NULL values on the other side."
+    },
+    {
+      "question": "How many rows does the FULL OUTER JOIN produce for these datasets, and how can the result be verified?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The result contains 13 rows.\nIt can be calculated as 11 LEFT JOIN rows plus 10 RIGHT JOIN rows minus 8 INNER JOIN rows.\nThis leaves three unmatched rows from Table A and two unmatched rows from Table B in addition to the eight matches."
+    },
+    {
+      "question": "Why does the CROSS JOIN return 49 rows for the supplied datasets?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Each table contains seven rows.\nA CROSS JOIN pairs every row from Table A with every row from Table B.\nThe result cardinality is therefore 7 multiplied by 7, or 49 rows."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL JOIN operations",
+    "secondary_topics": [
+      "Duplicate handling in joins",
+      "NULL handling in joins",
+      "Join result cardinality"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f883e7bdaa45a22e",
+    "saved_date": "2026-10-01T23:26:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

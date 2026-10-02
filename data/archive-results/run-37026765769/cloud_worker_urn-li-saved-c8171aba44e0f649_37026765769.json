@@ -1,0 +1,113 @@
+{
+  "id": "urn-li-saved-c8171aba44e0f649",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7301820963241750530",
+    "captured_at": "2026-10-02T00:15:51.578743Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:10Z"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\nEver wonder why SQL is called the backbone of data engineering?\nWhether you realize it or not, SQL powers nearly every step of the data journey in your day-to-day work.\nIn this post, I'll break down how each data engineering component uses SQL to drive essential ETL operations .\n1. Data Ingestion -> (SQL + Connectors = Data Collection)\n2. Data Storage -> (SQL + Data Lake/Data Warehouse = Organized Storage)\n3. Data Processing -> (SQL + Big Data Processing Engines = Data Transformation)\n4. Data Warehousing -> (SQL + Data Warehouse = Efficient Querying)\n5. Data Orchestration -> (SQL + Workflow Tools = Automated Processes)\n6. Data Analytics and BI -> (SQL + BI Tools = Insight Generation)\nThink of the data pipeline like a data factory that transforms raw materials (data) into valuable products (insights)\n1. Data Ingestion\n- Imagine you’re receiving raw materials (data) from different suppliers (databases, APIs, streams)\n- Big Data Component: Apache Sqoop, Kafka Connect, ETL tools (like Talend)\n- SQL queries can be used to extract data from a database into Hadoop using Sqoop or pull data using Spark from a relational database\n2. Data Storage\n- Think of storage like a warehouse where all raw materials and intermediate products are organized and stored\n- Big Data Component: HDFS, Amazon S3 (Data Lakes) or BigQuery, Snowflake\n- SQL is used to create tables in Snowflake or query Parquet files in Hive on a data lake\n3. Data Processing\n- This is like a processing line where raw materials are cleaned, refined, and transformed into useful components.\n- A SQL query in Spark might aggregate sales data from multiple regions .\n4. Data Warehousing\n- Think of this as a specialized storage unit where products are stored in a structured, easily accessible format for final use.\n- Big Data Component: Amazon Redshift, BigQuery, Snowflake.\n- Using SQL to create materialized views in Redshift that aggregate sales data by month.\n5. Data Orchestration\n- This is like a conveyor belt system that moves products automatically\n- Big Data Component: Apache Airflow, AWS Glue.\n- An Airflow task runs a SQL query every morning to pull new sales data, transform it, and load it into a data warehouse.\n6. Data Analytics and BI\n- This is the final stage where products (insights) are packaged and delivered to consumers (stakeholders).\n- Big Data Component: Tableau, Power BI\n- A SQL query in Power BI fetches customer data from Snowflake and visualizes it in a dashboard for the sales team.\n📙 Checkout this Amazing document on SQL. Credit : Fang Ying Sham\n🔷 For SQL, You may want to explore learning from experts like Ankit Bansal (NamasteSQL) : https://lnkd.in/gFb293YM\n🤝 Join our Data Engineering Community : https://lnkd.in/gy4R55Tj\n📌 Follow Abhisek Sahu for more\nRepost ✅ if you find it useful !\n#sql #dataengineering #dataengineer #dataanalyst #analysis #interview #preparation #dataanalysis #powerbi #dataanalysis\n…see more\n16 Page SQL Document",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7301820963241750530_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents SQL as the backbone of data engineering and explains its role across six pipeline stages: ingestion, storage, processing, warehousing, orchestration, and analytics and BI. It uses a factory analogy and provides examples involving connectors, Sqoop, Spark, Snowflake, Redshift, Airflow, and Power BI. The supplied content is a high-level overview rather than a detailed implementation guide and does not provide actual SQL statements or configuration steps.",
+    "topics": [
+      "SQL",
+      "ETL",
+      "data engineering pipelines",
+      "data ingestion",
+      "data storage",
+      "data processing",
+      "data warehousing",
+      "data orchestration",
+      "data analytics and BI"
+    ],
+    "subtopics": [
+      "Connectors and ingestion tools such as Sqoop, Kafka Connect, Talend, and Spark",
+      "SQL for Snowflake tables and Hive queries over Parquet files",
+      "Spark SQL aggregation of sales data",
+      "Redshift materialized views for monthly sales aggregation",
+      "Airflow tasks that schedule SQL pipelines",
+      "Power BI queries against Snowflake for dashboards"
+    ],
+    "concepts": [
+      "SQL",
+      "ETL",
+      "Data ingestion",
+      "Data storage",
+      "Data processing",
+      "Data warehousing",
+      "Data orchestration",
+      "Analytics and BI"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does SQL support the six stages of the data engineering pipeline described in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should connect SQL to extraction during ingestion, table creation or Parquet querying during storage, aggregation and transformation during processing, materialized views during warehousing, scheduled SQL during orchestration, and data retrieval for analytics and BI."
+    },
+    {
+      "question": "A morning sales pipeline must pull new data, transform it, and load it into a data warehouse. How would the post's Airflow example implement this?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "An Airflow task can run a SQL query every morning to pull new sales data.\nThe task can then transform the data and load it into a data warehouse, illustrating SQL-based orchestration."
+    },
+    {
+      "question": "Which SQL use cases does the post associate with ingestion and storage, and which named tools or formats illustrate them?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "For ingestion, the post describes using SQL with Sqoop to extract data from a database into Hadoop and using Spark to pull data from a relational database.\nFor storage, it describes creating tables in Snowflake and querying Parquet files in Hive on a data lake.\nThe post also names HDFS, Amazon S3, BigQuery, and Snowflake as storage components."
+    },
+    {
+      "question": "How could Spark and Redshift be used in the processing and warehousing stages for sales data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A SQL query in Spark could aggregate sales data from multiple regions as part of processing.\nA materialized view in Redshift could aggregate sales data by month as part of warehousing."
+    },
+    {
+      "question": "How does the post connect SQL to analytics and BI, and what example does it give?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post names Tableau and Power BI as analytics and BI tools.\nIn its example, a Power BI SQL query fetches customer data from Snowflake and displays it in a dashboard for the sales team."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "ETL",
+      "data ingestion",
+      "data storage",
+      "data processing",
+      "data warehousing",
+      "data orchestration",
+      "data analytics and BI"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c8171aba44e0f649",
+    "saved_date": "2026-10-01T23:33:10Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7301820963241750530",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7301820963241750530_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

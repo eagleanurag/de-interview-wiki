@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-archive-b5481c9185707ac7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.241735Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:00Z"
+  },
+  "original_text": "🧠 𝗗𝗕𝗔 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲: 𝗧𝗵𝗲 𝗖𝘂𝗿𝗶𝗼𝘂𝘀 𝗖𝗮𝘀𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗖𝗿𝗮𝘄𝗹𝗶𝗻𝗴 𝗦𝗤𝗟 𝗦𝗲𝗿𝘃𝗲𝗿 🧠\n\n𝘐𝘮𝘢𝘨𝘪𝘯𝘦 𝘵𝘩𝘪𝘴:\n\nYou’re the lead DBA for a financial services company. It’s Monday morning. The business-critical MSSQL Server (2019 Enterprise) that powers real-time transaction processing starts slowing down dramatically—but only between 10:30 AM and 1:00 PM. After that, it mysteriously returns to normal.\n\n𝗧𝗵𝗲 𝘀𝗲𝗿𝘃𝗲𝗿 𝗶𝘀 𝗮 𝗯𝗲𝗮𝘀𝘁:\n✅ 32 vCPUs\n✅ 256 GB RAM\n✅ Ultra-fast SSDs\n✅ No recent deployments\n✅ No blocking, no deadlocks\n✅ Indexes and stats are fresh\n✅ TempDB is optimized\n✅ Query Store shows no obvious regressions\n\n𝗬𝗼𝘂 𝗱𝗶𝗴 𝗱𝗲𝗲𝗽𝗲𝗿:\nCPU usage spikes to 95%, but no single query stands out\nMemory usage is stable, no signs of pressure\nI/O latency is low, disk queues are clean\nNo scheduled jobs or backups during the slowdown window\nNo network bottlenecks reported by the infra team\nNo changes in execution plans for key procedures\n\n𝗬𝗼𝘂 𝗲𝘃𝗲𝗻 𝘁𝗿𝗶𝗲𝗱:\nCapturing live query stats\nComparing wait stats before/during/after\nRunning a profiler trace (carefully!)\nIsolating app traffic by module\nStill, the root cause remains elusive.\n\n🧩 𝗛𝗲𝗿𝗲’𝘀 𝘁𝗵𝗲 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 𝗳𝗼𝗿 𝘆𝗼𝘂, 𝗳𝗲𝗹𝗹𝗼𝘄 𝗗𝗕𝗔𝘀:\nWhat would be your next move?\nWhat non-obvious culprits would you investigate?\nHave you faced a similar ghost-in-the-machine scenario?\n\n🔍 𝗦𝗽𝗲𝗰𝗶𝗮𝗹 𝗡𝗼𝘁𝗲:\nThis is a purely imaginary scenario. I don’t have the answer or a solution. The goal is to spark discussion, test our collective knowledge, and think outside the box. Let’s challenge ourselves and learn from each other!\n\nDrop your thoughts, theories, and war stories below 👇\n\n#SQLServer #DBAChallenge #PerformanceTuning #DatabaseMystery #TechCommunity #SQLInsights",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is an imaginary DBA challenge involving a business-critical MSSQL Server 2019 Enterprise instance that slows down only between 10:30 AM and 1:00 PM. CPU usage reaches 95%, but no single query is responsible and memory, storage, locking, scheduled activity, network, and execution-plan indicators do not reveal an obvious cause. Live query statistics, wait-stat comparisons, a carefully conducted profiler trace, and application-traffic isolation have not identified the culprit. The post explicitly provides no root cause or solution and aims to encourage diagnostic discussion.",
+    "topics": [
+      "Intermittent MSSQL Server performance degradation",
+      "CPU bottleneck diagnosis",
+      "Wait statistics analysis",
+      "Live query statistics",
+      "Query Store regression checks",
+      "Application traffic isolation"
+    ],
+    "subtopics": [
+      "Time-bounded slowdown between 10:30 AM and 1:00 PM",
+      "High aggregate CPU usage without one dominant query",
+      "Stable memory usage and low storage latency",
+      "Absence of blocking, deadlocks, and obvious plan regressions",
+      "Comparing system behavior before, during, and after the slowdown",
+      "Tracing and isolating traffic by application module"
+    ],
+    "concepts": [
+      "Intermittent performance degradation",
+      "Aggregate CPU pressure",
+      "Symptom-based bottleneck elimination",
+      "Before-during-after comparison",
+      "Query Store regression assessment",
+      "Traffic isolation by application module",
+      "Unresolved root cause"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What evidence indicates CPU pressure during the slowdown, and what evidence argues against the common bottlenecks already checked?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "CPU usage reaches 95%, while memory usage remains stable and shows no pressure.\nI/O latency is low, disk queues are clean, and neither blocking nor deadlocks are observed.\nNo scheduled jobs or backups run during the window, and the infrastructure team reports no network bottleneck.\nQuery Store and execution-plan checks reveal no obvious regressions."
+    },
+    {
+      "question": "Which diagnostic activities has the DBA already attempted, and what has each activity established?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The DBA has captured live query statistics and compared wait statistics before, during, and after the slowdown.\nA profiler trace has been run carefully, and application traffic has been isolated by module.\nThese activities have not yet identified a dominant query or established the root cause."
+    },
+    {
+      "question": "Why is it not justified to name a definitive root cause from the evidence in this scenario?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The high CPU symptom is not attributed to a specific query, workload module, or other identified source.\nSeveral common bottlenecks have been ruled out, but ruling them out does not establish another cause.\nThe post explicitly states that the scenario is imaginary and that the author has no answer or solution."
+    }
+  ],
+  "classification": {
+    "domain": "Database performance troubleshooting",
+    "primary_topic": "Intermittent CPU-related MSSQL Server slowdown",
+    "secondary_topics": [
+      "Wait statistics comparison",
+      "Live workload profiling",
+      "Application traffic isolation",
+      "Performance bottleneck elimination"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b5481c9185707ac7",
+    "saved_date": "2026-10-01T23:20:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

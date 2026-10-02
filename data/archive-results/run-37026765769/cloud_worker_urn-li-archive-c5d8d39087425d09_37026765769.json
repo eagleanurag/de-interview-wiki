@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-archive-c5d8d39087425d09",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.234385Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:41Z"
+  },
+  "original_text": "Frequently asked DE interview question in #Databricks\n\nHow is schema evolution handled in Delta Lake? \n\nDelta Lake supports schema evolution, which allows you to automatically update the schema of a Delta table as new data with different columns or data types is ingested.\n\nThis is typically done using #mergeSchema, #overwriteSchema, or #autoMerge options during write operations.\n\nExample: \ndf_new.write \\\n .format(\"delta\") \\\n .option(\"mergeSchema\", \"true\") \\\n .mode(\"append\") \\\n .save(\"delta path\")\nThis will add any new columns from df_new to the existing Delta table schema.\n\nKey Options for Schema Evolution:\n\n✨ mergeSchema - Appends new columns (used with append or merge)\n✨overwriteSchema - Overwrites existing schema during full overwrite ✨spark.databricks.delta.schema.autoMerge.enabled - Enables auto-merge in MERGE INTO operations \n\n🔄 Example: MERGE with Schema Evolution\nspark.conf.set(\"spark.databricks.delta.schema.autoMerge.enabled\", \"true\")\n\nMERGE INTO target_table USING updates\nON target_table.id = updates.id\nWHEN MATCHED THEN UPDATE SET *\nWHEN NOT MATCHED THEN INSERT *\nThis allows new columns from the source table to be automatically added to the target.\n\n🛑Note:\nSchema evolution only adds new columns — it does not delete or change data types.\nAlways review schema drift carefully in production pipelines to avoid unexpected behavior.\n\n🎯 If you're using Auto Loader or streaming ingestion, Delta handles evolving schemas incrementally with mergeSchema = true under the hood making it ideal for semi-structured data like JSON.\n\nFollow Eshant Garg for more such content 😊 \n\n#ApacheSpark #ApacheSpark #PySpark #AzureDatabricks #DataIntegration #DataProcessing #DataTransformation #DataEngineering #interviewquestions",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains Delta Lake schema evolution in a Databricks context. It presents schema evolution as automatically updating a Delta table during ingestion, initially mentioning new data with different columns or data types, but its explicit note says the described behavior only adds new columns and does not delete columns or change data types. It demonstrates mergeSchema with an append write, overwriteSchema for a full overwrite, and spark.databricks.delta.schema.autoMerge.enabled for automatic schema merging in MERGE INTO operations. It also provides a MERGE INTO example, recommends reviewing schema drift in production pipelines, and says Auto Loader or streaming ingestion handles evolving schemas incrementally with mergeSchema set to true for semi-structured data such as JSON.",
+    "topics": [
+      "Delta Lake",
+      "schema evolution",
+      "Databricks",
+      "Apache Spark",
+      "PySpark",
+      "data ingestion",
+      "MERGE INTO",
+      "streaming ingestion"
+    ],
+    "subtopics": [
+      "mergeSchema",
+      "overwriteSchema",
+      "schema auto-merge",
+      "MERGE INTO operations",
+      "schema drift",
+      "semi-structured JSON ingestion"
+    ],
+    "concepts": [
+      "Delta Lake schema evolution",
+      "mergeSchema",
+      "overwriteSchema",
+      "spark.databricks.delta.schema.autoMerge.enabled",
+      "MERGE INTO schema evolution",
+      "Schema drift",
+      "Auto Loader and streaming schema evolution"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the post demonstrate adding new columns to an existing Delta table with an append write?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer configures the Delta write with mergeSchema set to true and append mode.\nIt explains that new columns from df_new are added to the existing Delta table schema."
+    },
+    {
+      "question": "What are the roles of mergeSchema, overwriteSchema, and spark.databricks.delta.schema.autoMerge.enabled in the schema-evolution options described?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer says mergeSchema appends new columns and is used with append or merge operations.\nA strong answer says overwriteSchema overwrites the existing schema during a full overwrite.\nA strong answer says the autoMerge configuration enables automatic schema merging in MERGE INTO operations."
+    },
+    {
+      "question": "How would you configure and write the MERGE INTO example to apply updates and inserts while allowing schema auto-merge?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer first sets spark.databricks.delta.schema.autoMerge.enabled to true.\nIt matches target_table and updates on target_table.id = updates.id.\nIt uses WHEN MATCHED THEN UPDATE SET * and WHEN NOT MATCHED THEN INSERT *.\nIt explains that the post associates this configuration with automatically adding new columns from the source to the target."
+    },
+    {
+      "question": "What limitation and production safeguard does the post state for Delta Lake schema evolution?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "A strong answer states that the described schema evolution adds new columns but does not delete columns or change data types.\nIt advises reviewing schema drift carefully in production pipelines to avoid unexpected behavior."
+    },
+    {
+      "question": "How does the post describe schema evolution for Auto Loader or streaming ingestion of semi-structured data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer says Delta handles evolving schemas incrementally with mergeSchema set to true under the hood.\nIt identifies JSON as an example of semi-structured data for this use case."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Lake schema evolution",
+    "secondary_topics": [
+      "Apache Spark and PySpark",
+      "Databricks",
+      "data ingestion",
+      "MERGE INTO",
+      "streaming ingestion",
+      "semi-structured JSON data"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c5d8d39087425d09",
+    "saved_date": "2026-10-01T23:24:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

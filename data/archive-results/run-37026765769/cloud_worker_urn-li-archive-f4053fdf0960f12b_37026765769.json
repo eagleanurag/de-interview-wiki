@@ -1,0 +1,162 @@
+{
+  "id": "urn-li-archive-f4053fdf0960f12b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.120500Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:52Z"
+  },
+  "original_text": "Tata Consultancy Services Interview Experience\n𝗖𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘁𝗶𝗼𝗻: 18 LPA\n𝗣𝗼𝘀𝗶𝘁𝗶𝗼𝗻: Data Engineer\n𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲: 3+ Years\n\n1️⃣ Write a SQL query to identify customers who have not performed any transactions in the last 90 days?\n2️⃣ Explain Slowly Changing Dimensions (SCD Type 1, Type 2, and Type 3) and their use cases.\n3️⃣ How would you design a data platform to support regulatory and compliance reporting in a banking environment?\n4️⃣ A critical regulatory report contains inconsistent customer balances. How would you investigate and resolve the issue?\n\n5️⃣ How would you implement Change Data Capture (CDC) in a large-scale data pipeline?\n6️⃣ Explain the differences between Data Lake, Data Warehouse, and Data Mart.\n7️⃣ A source system sends duplicate transactions due to a technical glitch. How would you prevent duplicate records from impacting downstream systems?\n8️⃣ How would you design an audit framework to track data lineage and transformations?\n\n9️⃣ Explain ACID properties and why they are important in financial data processing.\n🔟 A monthly data load that normally takes 2 hours suddenly takes 8 hours. How would you analyze the bottleneck?\n1️⃣1️⃣ How would you secure sensitive customer data in a data lake environment?\n1️⃣2️⃣ Write a SQL query to calculate a running account balance for each customer transaction.\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗞𝗶𝘁 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀.\n \n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗶𝘁 𝗵𝗲𝗿𝗲 - https://lnkd.in/gAe9zE7t\n \nIf this helped, a 👍 𝗟𝗶𝗸𝗲 or 🔁 𝗥𝗲𝘀𝗵𝗮𝗿𝗲 would really help more 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀 switch smarter.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This Tata Consultancy Services interview-experience post is labeled for a Data Engineer role, 18 LPA compensation, and 3+ years of experience. It lists 12 technical interview questions covering SQL, Slowly Changing Dimensions, banking data platforms, data quality, CDC, storage architectures, duplicate handling, auditing, ACID, performance troubleshooting, security, and running balances. The technical content is incomplete because the post provides only the questions and no candidate responses, SQL solutions, architecture details, or troubleshooting procedures.",
+    "topics": [
+      "SQL",
+      "Slowly Changing Dimensions",
+      "data platform architecture",
+      "regulatory and compliance reporting",
+      "Change Data Capture",
+      "Data Lake",
+      "Data Warehouse",
+      "Data Mart",
+      "duplicate transaction handling",
+      "data lineage and auditing",
+      "ACID properties",
+      "data pipeline performance",
+      "data lake security",
+      "running account balances"
+    ],
+    "subtopics": [
+      "customer inactivity over 90 days",
+      "SCD Type 1, Type 2, and Type 3 use cases",
+      "banking compliance platform design",
+      "inconsistent customer balances",
+      "large-scale CDC implementation",
+      "Data Lake, Data Warehouse, and Data Mart distinctions",
+      "source-system duplicate transactions",
+      "audit framework for lineage and transformations",
+      "ACID in financial data processing",
+      "monthly load slowdown from 2 hours to 8 hours",
+      "sensitive customer data in a data lake",
+      "per-customer running account balances"
+    ],
+    "concepts": [
+      "90-Day Inactive-Customer Query",
+      "Slowly Changing Dimensions",
+      "Banking Compliance Data Platform",
+      "Customer-Balance Inconsistency Troubleshooting",
+      "Change Data Capture",
+      "Data Lake, Data Warehouse, and Data Mart",
+      "Duplicate Transaction Prevention",
+      "Data Lineage and Transformation Auditing",
+      "ACID Properties",
+      "Data-Load Bottleneck Analysis",
+      "Sensitive Data Security in a Data Lake",
+      "Running Account Balance"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query to identify customers who have not performed any transactions in the last 90 days.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query returns customers whose transaction history contains no transactions within the specified 90-day window."
+    },
+    {
+      "question": "Explain Slowly Changing Dimensions Type 1, Type 2, and Type 3 and their use cases.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes SCD Type 1, Type 2, and Type 3 and gives an appropriate use case for each."
+    },
+    {
+      "question": "How would you design a data platform to support regulatory and compliance reporting in a banking environment?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer describes a banking data platform that supports regulatory and compliance reporting requirements."
+    },
+    {
+      "question": "A critical regulatory report contains inconsistent customer balances. How would you investigate and resolve the issue?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer explains how to investigate inconsistent customer balances and correct the source of the inconsistency."
+    },
+    {
+      "question": "How would you implement Change Data Capture in a large-scale data pipeline?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer explains how CDC would be implemented and operated within a large-scale data pipeline."
+    },
+    {
+      "question": "Explain the differences between a Data Lake, a Data Warehouse, and a Data Mart.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer clearly explains the differences among Data Lakes, Data Warehouses, and Data Marts."
+    },
+    {
+      "question": "A source system sends duplicate transactions because of a technical glitch. How would you prevent the duplicate records from affecting downstream systems?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer addresses how to prevent duplicate transactions from propagating into or affecting downstream systems."
+    },
+    {
+      "question": "How would you design an audit framework to track data lineage and transformations?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer designs an audit framework that records data lineage and data transformations."
+    },
+    {
+      "question": "Explain the ACID properties and why they are important in financial data processing.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines the ACID properties and explains their importance for financial data processing."
+    },
+    {
+      "question": "A monthly data load that normally takes 2 hours suddenly takes 8 hours. How would you analyze the bottleneck?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer analyzes the increase from a two-hour load to an eight-hour load and identifies the source of the performance bottleneck."
+    },
+    {
+      "question": "How would you secure sensitive customer data in a data lake environment?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer proposes security controls for protecting sensitive customer data in a data lake environment."
+    },
+    {
+      "question": "Write a SQL query to calculate a running account balance for each customer transaction.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query calculates a cumulative account balance across each customer's transactions."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview questions",
+    "secondary_topics": [
+      "SQL analytics",
+      "Slowly Changing Dimensions",
+      "data platform architecture",
+      "regulatory compliance and auditing",
+      "data quality and reliability",
+      "Change Data Capture",
+      "transaction processing and security",
+      "data pipeline performance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f4053fdf0960f12b",
+    "saved_date": "2026-10-01T23:06:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

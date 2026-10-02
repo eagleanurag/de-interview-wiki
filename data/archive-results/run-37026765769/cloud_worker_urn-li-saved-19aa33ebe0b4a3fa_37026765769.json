@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-19aa33ebe0b4a3fa",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7322839563276615680",
+    "captured_at": "2026-10-02T00:15:45.229673Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:48Z"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲: 𝐀𝐜𝐜𝐞𝐧𝐭𝐮𝐫𝐞 (𝐌𝐞𝐝𝐢𝐮𝐦 𝐋𝐞𝐯𝐞𝐥) 𝐡𝐚𝐬𝐡𝐭𝐚𝐠 #𝐏𝐲𝐒𝐩𝐚𝐫𝐤 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧 — 𝐒𝐨𝐥𝐮𝐭𝐢𝐨𝐧\n\n\n\n\n\n\n\n\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧:\nYou have a dataset of transactions with the following fields:\ntransaction_id (integer): Unique ID for each transaction.\nuser_id (integer): ID of the user performing the transaction.\ntransaction_amount (float): Amount of the transaction.\ntransaction_date (string): Date of the transaction in yyyy-MM-dd format.\nFrom this dataset, perform the following operations:\n\nFor each user, calculate the average gap in days between consecutive transactions.\nIdentify the user with the largest average gap.\n\n𝐬𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐝𝐚𝐭𝐚𝐬𝐞𝐭\ndata = [\n (1, 101, 500.0, \"2024-01-01\"), \n (2, 102, 200.0, \"2024-01-02\"), \n (3, 101, 300.0, \"2024-01-03\"), \n (4, 103, 100.0, \"2024-01-04\"), \n (5, 102, 400.0, \"2024-01-05\"), \n (6, 103, 600.0, \"2024-01-06\"), \n (7, 101, 200.0, \"2024-01-07\"),\n]\ncolumns = [\"transaction_id\", \"user_id\", \"transaction_amount\", \"transaction_date\"]\n\n\n\n\n#ApacheSpark #HadoopEcosystem #SQLQueries #BigData #SQL #Python #Analytics #DataEngineering #DataScience #Hadoop",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7322839563276615680_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a transaction-analysis problem involving user_id and transaction_date values in yyyy-MM-dd format. For each user, the task is to calculate the average number of days between consecutive transactions and identify the user with the largest average gap. From the supplied data, users 101 and 102 both have an average gap of 3 days, while user 103 has an average gap of 2 days, so users 101 and 102 tie for the largest average gap.",
+    "topics": [
+      "Per-user transaction analysis",
+      "Consecutive transaction gaps",
+      "Date arithmetic",
+      "Aggregate calculations",
+      "SQL query problem solving"
+    ],
+    "subtopics": [
+      "Grouping transactions by user",
+      "Calculating differences between transaction dates",
+      "Averaging gaps within each user",
+      "Identifying a maximum average",
+      "Handling tied results"
+    ],
+    "concepts": [
+      "Consecutive transaction gap",
+      "Per-user average gap",
+      "Transaction date format",
+      "Maximum average gap",
+      "Tied maximum result"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Using the supplied dataset, calculate the average gap between consecutive transactions for each user and identify the largest average.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "User 101 has gaps of 2 and 4 days, producing an average gap of 3 days.\nUser 102 has one gap of 3 days, producing an average gap of 3 days.\nUser 103 has one gap of 2 days, producing an average gap of 2 days.\nUsers 101 and 102 tie for the largest average gap at 3 days."
+    },
+    {
+      "question": "Outline the sequence of operations needed to calculate each user's average gap and find the largest value.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Transactions must be associated with their user_id and considered chronologically by transaction_date.\nThe date difference in days is calculated between each transaction and the preceding transaction of the same user.\nThe consecutive gaps are averaged separately for each user.\nThe resulting per-user averages are compared, and all users tied for the maximum are reported."
+    },
+    {
+      "question": "Why must transactions be considered in chronological order when calculating consecutive gaps?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A consecutive gap represents elapsed time between chronologically adjacent transactions.\nFor user 101, the ordered dates are 2024-01-01, 2024-01-03, and 2024-01-07, which produce gaps of 2 and 4 days.\nUsing a different date order would not represent consecutive transactions correctly."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Consecutive transaction gap analysis",
+    "secondary_topics": [
+      "Per-user aggregation",
+      "Date arithmetic",
+      "Maximum-value comparison",
+      "SQL query problem solving"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:19aa33ebe0b4a3fa",
+    "saved_date": "2026-10-01T23:28:48Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7322839563276615680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7322839563276615680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

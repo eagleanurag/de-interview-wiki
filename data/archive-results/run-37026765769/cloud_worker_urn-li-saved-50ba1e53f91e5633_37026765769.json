@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-50ba1e53f91e5633",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339358389367357440",
+    "captured_at": "2026-10-02T00:15:47.475320Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:07Z"
+  },
+  "original_text": "Data Engineer 2 @Flipkart | 🎓 NIT Trichy | 🎥 Content Creator | SQL • Python • Cloud • Databricks • PySpark • Big Data • AI | 🔥 30K+ Community | ⚡ Upskilling Engineers & Helping Brands Go Viral\n1yr •\n🚀 Day 11 of #60DaysOfSpark\n🧱 Strengthening Foundations with Extensions & Recap\nToday I focused on reinforcing key PySpark concepts with:\n✅ SQL-style expressions via selectExpr()\n✅ groupBy() using single & multiple columns\n✅ agg() with multiple aggregations\n✅ Real-world use of groupBy().agg() patterns\nAlso created slides summarizing at the end to revisit and reflect before moving into advanced Spark concepts tomorrow (Window Functions + Pivoting 🔄).\nLet’s build momentum, one transformation at a time. 🚀\n🔄 Feel free to like, comment, or share this with others exploring PySpark!\nPyspark playlist by Subham Khandelwal\nhttps://lnkd.in/gscSM8YE\nDay 10- Dataframe Operation part -2\nhttps://lnkd.in/gPDfkPxx\nDay 12 - Window Functions in Spark\nhttps://lnkd.in/ghGCsAwb\n#PySpark #ApacheSpark #DataEngineering #SparkDataFrame #ETL #BigData #60DaysOfSpark #LearningJourney\n…see more\ngroupBy and Aggregation in Pyspark",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339358389367357440_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This Day 11 entry in a 60DaysOfSpark learning series recaps PySpark DataFrame operations: selectExpr() for SQL-style expressions, groupBy() with single or multiple columns, agg() for multiple aggregations, and the combined groupBy().agg() pattern. It mentions recap slides and identifies Window Functions and Pivoting as upcoming topics, but it does not provide code or worked examples.",
+    "topics": [
+      "PySpark DataFrame operations",
+      "Grouping and aggregation"
+    ],
+    "subtopics": [
+      "selectExpr() for SQL-style expressions",
+      "groupBy() with single and multiple columns",
+      "agg() with multiple aggregations",
+      "Combined groupBy().agg() patterns"
+    ],
+    "concepts": [
+      "selectExpr()",
+      "groupBy()",
+      "agg()",
+      "groupBy().agg()"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is selectExpr() used for in the PySpark operations described in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "selectExpr() is used to apply SQL-style expressions in PySpark."
+    },
+    {
+      "question": "What grouping options does the post identify for groupBy()?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "groupBy() can operate with either a single column or multiple columns."
+    },
+    {
+      "question": "How does the post's groupBy().agg() pattern support grouped aggregation?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The pattern can group data by one or multiple columns and perform multiple aggregations with agg().\nThe post presents this combined pattern as relevant to real-world data processing."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame grouping and aggregation",
+    "secondary_topics": [
+      "selectExpr() transformations",
+      "PySpark DataFrame operations"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:50ba1e53f91e5633",
+    "saved_date": "2026-10-01T23:19:07Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339358389367357440",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339358389367357440_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

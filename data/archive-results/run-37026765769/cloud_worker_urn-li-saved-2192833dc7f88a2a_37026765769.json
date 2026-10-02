@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-2192833dc7f88a2a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345683549418618882",
+    "captured_at": "2026-10-02T00:15:45.490565Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:14Z"
+  },
+  "original_text": "• 1st\nMicrosoft Fabric Data Architect | Freelance Data Consultant | Azure Data Architect | Azure Data Engineer | Databricks Architect | Power BI\n1yr •\n💼 Crack Azure Data Engineer Interviews Like a Pro!\n🌟 Are you preparing for Azure Data Engineer roles in top MNCs? Here's your one-stop solution to mastering the most frequently asked questions!\n📚 What’s Inside?\n✅ Real-world scenarios from Data Lake, Delta Lake, and Data Warehouse.\n✅ Key concepts like ETL pipelines, schema-on-read/write, and ACID transactions.\n✅ Questions on tools: Azure Synapse Analytics, Databricks, Data Factory, and more.\n✅ Challenges on big data processing, optimization techniques, and data governance.\n🌟 BONUS:\nMany of my students have successfully landed jobs at MNCs like TCS, Infosys, and Capgemini after going through these questions!\n💡 Want the full list of Azure Data Engineer questions and answers?\n👉 Get the complete course on Topmate!\n🎟️ Special Offer: First 50 students get a 20% discount with coupon code Nitya21.\n🔑 Why enroll?\n✔️ Detailed explanations.\n✔️ Real-world scenarios for better understanding.\n🌐 Don’t wait – your dream job is just a step away! Check it out 👉\nhttps://lnkd.in/d9gaEB_H\n📢 Share this with your network – it might be the boost someone needs. Let’s conquer Azure interviews together! 💪\n#bigdata #dataengineering #pyspark #sql #spark\nData Engineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345683549418618882_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional LinkedIn post advertising an Azure Data Engineer interview-preparation course, not a technical lesson. The supplied text advertises real-world scenarios from Data Lake, Delta Lake, and Data Warehouse; key concepts such as ETL pipelines, schema-on-read/write, and ACID transactions; questions about Azure Synapse Analytics, Databricks, and Data Factory; and challenges involving big data processing, optimization techniques, and data governance. It provides no definitions, technical explanations, examples, or actual interview questions and answers. It also promotes a Topmate course, a discount, and claimed student job placements, and no extracted media text is supplied.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2192833dc7f88a2a",
+    "saved_date": "2026-10-01T23:14:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345683549418618882",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345683549418618882_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

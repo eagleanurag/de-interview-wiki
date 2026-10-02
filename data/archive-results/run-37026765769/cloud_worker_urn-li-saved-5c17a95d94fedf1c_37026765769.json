@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-5c17a95d94fedf1c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7272933836760461313",
+    "captured_at": "2026-10-02T00:15:47.928684Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:15Z"
+  },
+  "original_text": "SDE @Amazon | 120K+ @Linkedin | EX-TCS | 4 YOE | DSA | System Design(LLD + HLD) | Java | Spring Boot | Microservices | Python | AWS | GenAI | SQL | NOSQL\n1yr •\n#radhekrishna\nHow i prepared for Leadership Questions (Behaviourval Questions) asked for Amazon.\nDuring Amazon interview , you will come across question on Leadership Principles in each round and this is really important to get into Amazon.\nSo don't neglect this if you get chance to interview with Amazon.\nHR had told me to answer all Leadership Questions (Behaviourval) using ‘STAR’ pattern.\nS(Situation): Describe the SITUATION you were in.\nT(task): Explain the TASK that needed to be done.\nA(Action): Detail the ACTION that you took to achieve the task.\nR(Result): Reveal the RESULTS of your action.\nHow to answer in better way:\n1) Give all answer using STAR pattern.\n2) Give answer relating to your work experience / projects using technical terms to get good impression rather than giving general answer.\nNote: I gave very generalised answer in 1st round and feedback was mixed for behavioural question.\nWhat all questions i have prepared?\n-> I just researched for few hours and went through a more than 20+ recent interview experiences on Leetcode and noted all unique Leadership questions(behavioural) at once place.\n-> Prepared for each question using STAR pattern relating to my experience with different different technical terms.\n-> For 1-2 questions that i was not able to relate to my experiences in better way, i took help of chatgpt to frame a better answer.\nNote: I encountered most of the exact questions that I had researched and collected. I am sharing a Google Doc link where I noted these questions with two youtube video link inside this.\nGoogle Doc link: https://lnkd.in/gJtmF7YP\nNote: I really liked this “STAR’ technique and we can use in other companies as well to answer behavioral questions.\nBefore my Amazon interview, I used to be very scared of behavioral questions. However, after the interview, I am no longer afraid of them and feel much more confident.\nKeep coding, Keep applying!!\n#softwareengineering #interview #amazon #leadership\n…see more\nAmazon Leadership Questions1\ndocs.google.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7272933836760461313_slide_0.jpg",
+      "description": "PNG image, 800x420 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a personal account of preparing for Amazon Leadership Principle and behavioral questions rather than a data engineering technical post. The author recommends using the STAR pattern—Situation, Task, Action, and Result—and connecting answers to real work experience and projects with relevant technical terminology rather than giving only a generalized response. The author reports reviewing more than 20 recent interview experiences on Leetcode, preparing answers to the collected questions, and using ChatGPT to frame answers for one or two questions that did not relate well to their experience. The supplied content does not include the individual questions from the linked document.",
+    "topics": [
+      "Amazon interview preparation",
+      "behavioral and leadership interviews",
+      "STAR interview technique",
+      "interview experience research"
+    ],
+    "subtopics": [
+      "Amazon Leadership Principles",
+      "STAR answer structure",
+      "tailoring answers to technical work and projects",
+      "reviewing recent Leetcode interview experiences",
+      "using ChatGPT to frame answers"
+    ],
+    "concepts": [
+      "STAR pattern",
+      "Leadership Principles questions",
+      "Experience-specific behavioral answers",
+      "Recent interview experience research",
+      "ChatGPT-assisted answer framing"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should a candidate structure an answer to an Amazon behavioral or Leadership Principle question?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should describe the Situation, Task, Action, and Result.\nThe candidate should use a relevant work experience or project and explain the result of the action taken."
+    },
+    {
+      "question": "Why can a generalized behavioral answer be weak, and how can technical project experience improve it?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The author received mixed behavioral feedback after giving a generalized response in the first round.\nA stronger response can connect the answer to the candidate's own work or projects and use relevant technical terminology."
+    },
+    {
+      "question": "How can a candidate prepare for behavioral and leadership questions before an Amazon interview?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate can review recent interview experiences and collect recurring leadership questions.\nEach question can be prepared with the STAR pattern and linked to genuine work experience or projects using technical terminology.\nThe post reports using ChatGPT to help frame answers for one or two questions that did not relate well to the candidate's experience."
+    }
+  ],
+  "classification": {
+    "domain": "Software engineering interview preparation",
+    "primary_topic": "Amazon behavioral and leadership interview preparation",
+    "secondary_topics": [
+      "STAR answer framework",
+      "Amazon Leadership Principles",
+      "tailoring behavioral answers to technical projects",
+      "researching recent interview experiences",
+      "using ChatGPT to frame answers"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5c17a95d94fedf1c",
+    "saved_date": "2026-10-01T23:33:15Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7272933836760461313",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7272933836760461313_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7272933836760461313_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

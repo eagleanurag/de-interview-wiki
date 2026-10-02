@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-saved-904fb3e1a066911f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7353268809903824896",
+    "captured_at": "2026-10-02T00:15:49.463977Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:23Z"
+  },
+  "original_text": "• 1st\nTop Data Engineering voice 2023,2024🎖️| Writes to 33K+ | Snr Data Engineer at Kimberly Clark | Python|Spark|PySpark|Genie|Azure data factory|ADLS Gen2|Databricks|Deltalake| Agentic AI | LLM | RAG | Axilon AI |\n1yr •\n𝐈𝐟 𝐘𝐨𝐮’𝐫𝐞 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠, 𝐋𝐞𝐚𝐫𝐧 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 𝐄𝐚𝐫𝐥𝐲\nWhether you're building data pipelines, transforming terabytes of logs, or cleaning data for analytics, PySpark helps you scale Python across distributed systems with ease.⁣\n⁣\nHere are a few PySpark fundamentals every Data Engineer should be confident with:⁣\n⁣\n𝟏. 𝐑𝐞𝐚𝐝𝐢𝐧𝐠 𝐝𝐚𝐭𝐚 𝐞𝐟𝐟𝐢𝐜𝐢𝐞𝐧𝐭𝐥𝐲⁣\n⁣\nspark.read.csv(), json(), parquet()⁣\n⁣\nChoose the right format for performance.⁣\n⁣\n𝟐. 𝐂𝐨𝐫𝐞 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧𝐬⁣\n⁣\nmap, flatMap, filter, union⁣\n⁣\nUnderstand how these shape your RDDs or DataFrames.⁣\n⁣\n𝟑. 𝐀𝐠𝐠𝐫𝐞𝐠𝐚𝐭𝐢𝐨𝐧𝐬 𝐚𝐭 𝐬𝐜𝐚𝐥𝐞⁣\n⁣\ngroupBy, agg, .count()⁣\n⁣\nUse them to build clean summaries and insights from raw data.⁣\n⁣\n𝟒. 𝐂𝐨𝐥𝐮𝐦𝐧 𝐦𝐚𝐧𝐢𝐩𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬⁣\n⁣\nwithColumn() is a go-to tool for feature engineering or adding derived columns.⁣\n⁣\nData Engineering is about building scalable, reliable, and efficient systems-and PySpark makes that possible when you're working with huge datasets.⁣\n⁣\n⁣Found this helpful? Repost it! 🔁⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣\nFollow Girish V for more insights on Data⁣ Engineering ✅⁣\nBetter reach: Shubham Wadekar Rajat Gajbhiye Abhisek Sahu Vaishnavi MURALIDHAR Sumit Mittal Deepak Goyal Karthik Kondpak Shashank Mishra 🇮🇳 Ankita Gulati Asheesh T. Ankur Bhattacharya Ankur Ranjan Sachin Chandrashekhar 🇮🇳 Lovee Kumar Allauddin Khan Pathan Sai Krishna Chivukula Priyam Jain Nimra Ayaz Anurag Sharma Abhishek Jha Gayatri G\n⁣\n#SQL #SQLInterview #SQLPreparation #Database #DataEngineer #DataAnalytics #DataScience #BusinessIntelligence #InterviewTips #TechCareers #CareerGrowth\n⁣\npys",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7353268809903824896_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post introduces PySpark fundamentals for Data Engineers working with large datasets and distributed systems. It covers reading CSV, JSON, and Parquet data, applying transformations, performing aggregations, and creating derived columns. It presents PySpark as a way to run Python-based data pipelines, process large volumes of logs, and prepare data for analytics, but it does not explain transformation behavior or compare data-format performance in detail.",
+    "topics": [
+      "PySpark",
+      "Data Engineering"
+    ],
+    "subtopics": [
+      "Reading CSV, JSON, and Parquet data",
+      "Core transformations with RDDs and DataFrames",
+      "Aggregations at scale",
+      "Column manipulation and feature engineering"
+    ],
+    "concepts": [
+      "PySpark",
+      "spark.read.csv(), spark.read.json(), and spark.read.parquet()",
+      "map, flatMap, filter, and union",
+      "groupBy, agg, and count()",
+      "withColumn()"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which PySpark methods does the post identify for reading CSV, JSON, and Parquet data?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The methods are spark.read.csv(), spark.read.json(), and spark.read.parquet().\nFormat selection should account for performance."
+    },
+    {
+      "question": "Which core PySpark transformations are listed, and what should a Data Engineer understand about them?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The listed transformations are map, flatMap, filter, and union.\nA Data Engineer should understand how each transformation shapes RDDs or DataFrames."
+    },
+    {
+      "question": "Which PySpark operations are presented for aggregation at scale?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The listed operations are groupBy, agg, and count().\nThese operations are used to build summaries and insights from raw data."
+    },
+    {
+      "question": "What data engineering tasks does the post associate with withColumn()?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "withColumn() is used for feature engineering.\nIt can also be used to add derived columns."
+    },
+    {
+      "question": "Why does the post position PySpark as useful for large-scale Data Engineering work?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "PySpark allows Python to scale across distributed systems.\nIt supports data pipelines, transformations of large log volumes, and data cleaning for analytics."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Distributed systems",
+      "RDDs and DataFrames",
+      "Data formats",
+      "Data transformations",
+      "Aggregations",
+      "Feature engineering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:904fb3e1a066911f",
+    "saved_date": "2026-10-01T23:10:23Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7353268809903824896",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7353268809903824896_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

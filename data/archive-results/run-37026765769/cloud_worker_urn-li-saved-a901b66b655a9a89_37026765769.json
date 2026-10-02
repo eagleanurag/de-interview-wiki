@@ -1,0 +1,84 @@
+{
+  "id": "urn-li-saved-a901b66b655a9a89",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7355944631584358400",
+    "captured_at": "2026-10-02T00:15:50.417970Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:48Z"
+  },
+  "original_text": "SAW a SQL question someone posted, without DDL and Solution.\n\nCREATE TABLE SEMP (\n empno INT PRIMARY KEY,\n emailid VARCHAR(100)\n);\n\n\nINSERT INTO SEMP (empno, emailid) VALUES\n(101, 'hari@kln.com'),\n(102, 'kumar@bcd.com'),\n(103, 'surya.k@abc.com'),\n(104, 'kalyan.h@xyz.co.in');\n\n\nSolution: \n\nSELECT\n empno,\n LEFT(emailid, CHARINDEX('@', emailid) - 1) AS ename,\n SUBSTRING(emailid, CHARINDEX('@', emailid) + 1,\n CHARINDEX('.', emailid, CHARINDEX('@', emailid)) - CHARINDEX('@', emailid) - 1\n ) AS orgname\nFROM SEMP;",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7355944631584358400_slide_0.jpg",
+      "description": "JPEG image, 480x197 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a SQL exercise using a SEMP table with an integer primary key and a VARCHAR email address column. Its query uses LEFT, CHARINDEX, and SUBSTRING to extract the email local part before the @ symbol as ename and the segment between @ and the following period as orgname. For the supplied rows, the extracted pairs are hari and kln, kumar and bcd, surya.k and abc, and kalyan.h and xyz.",
+    "topics": [
+      "SQL",
+      "Email string parsing"
+    ],
+    "subtopics": [
+      "Extracting email local parts",
+      "Extracting domain segments",
+      "Using CHARINDEX",
+      "Using LEFT and SUBSTRING"
+    ],
+    "concepts": [
+      "SEMP table",
+      "CHARINDEX",
+      "LEFT",
+      "SUBSTRING",
+      "Derived email fields"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the query extract the portion of an email address before the @ symbol?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer identifies CHARINDEX('@', emailid) as the delimiter position and explains that subtracting one gives the required length for LEFT.\nThe answer states that the resulting value is exposed under the alias ename."
+    },
+    {
+      "question": "How does the SUBSTRING expression calculate the orgname value?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer explains that the starting position is one character after the @ symbol.\nThe answer calculates the length as the period position minus the @ position minus one, which excludes the delimiter characters."
+    },
+    {
+      "question": "What ename and orgname values does the query return for the four inserted rows?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer gives the extracted pairs hari and kln, kumar and bcd, surya.k and abc, and kalyan.h and xyz.\nThe answer can demonstrate that orgname contains only the segment between @ and the first following period."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL string processing",
+    "secondary_topics": [
+      "Email address parsing",
+      "SQL table creation and data insertion"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a901b66b655a9a89",
+    "saved_date": "2026-10-01T23:09:48Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7355944631584358400",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7355944631584358400_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

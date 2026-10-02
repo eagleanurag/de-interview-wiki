@@ -1,0 +1,113 @@
+{
+  "id": "urn-li-saved-833b9010385a31b9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343254116598542337",
+    "captured_at": "2026-10-02T00:15:48.847147Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:03Z"
+  },
+  "original_text": "SQL is a lot more than “𝗦𝗘𝗟𝗘𝗖𝗧 * 𝗙𝗥𝗢𝗠” in the Real Projects!\n\n“Real SQL isn't written to impress. It's written to run every day at 2am without fail.”\nYou get it right?\n\nWith bootcamps and beginner courses, All you know is -\nSELECT, INSERT, UPDATE, DELETE\nThen you feel you’re ready to go.\n\nWhereas, it’s more about -\n✅ 𝗗𝗮𝘁𝗮 𝗜𝗻𝗴𝗲𝘀𝘁𝗶𝗼𝗻 & 𝗖𝗹𝗲𝗮𝗻𝗶𝗻𝗴: SQL isn't just SELECTing. \nIt's joining logs, cleaning messy real-world data with CASE WHEN this, JOIN that, handling NULLs, and writing robust WHERE conditions to filter and shape incoming data.\n✅ 𝗗𝗮𝘁𝗮 𝗧𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗟𝗼𝗴𝗶𝗰: It’s the core logic! \nWriting efficient GROUP BY clauses, using window functions to rank, rank, and transform data before it even gets to the warehouse.\n✅ 𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 & 𝗥𝗲𝗽𝗼𝗿𝘁𝗶𝗻𝗴: Building complex reports with nested WITH common table expressions (CTEs) to break down complex logic, using window functions to analyze trends.\n✅ 𝗗𝗮𝘁𝗮 𝗪𝗮𝗿𝗲𝗵𝗼𝘂𝘀𝗶𝗻𝗴: Structuring data with GROUP BY and PARTITION BY time, optimizing queries for reporting, maybe even using JOINing fact and dimension tables.\n✅ 𝗗𝗮𝘁𝗮 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 & 𝗟𝗼𝗴𝗶𝗰: Using WHERE clauses to filter and ensure data integrity, crafting JOIN statements to link different data sources, handling NULL values, using GROUP BY for aggregation.\n\nWhen you think you know SQL, think if you can really solve these performance hiccups -\n❌ SELECT * on large tables\n❌ No indexes on JOIN columns\n❌ Unnecessary subqueries\n❌ N+1 query patterns\n\nThink of SQL logic as the recipe in a kitchen—master the recipe, and you can cook up solutions with any tool in any kitchen.\n\nWilling to level up? Then take up your SQL Challenge This Week 👇\nFind a real business problem and solve it with SQL:\n\n𝗖𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗮𝗻𝗮𝗹𝘆𝘀𝗶𝘀: Who are your most valuable customers?\n𝗦𝗮𝗹𝗲𝘀 𝘁𝗿𝗲𝗻𝗱𝘀: What patterns exist in your transaction data?\n𝗗𝗮𝘁𝗮 𝗾𝘂𝗮𝗹𝗶𝘁𝘆: What inconsistencies exist in your datasets?\n𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 𝗼𝗽𝘁𝗶𝗺𝗶𝘇𝗮𝘁𝗶𝗼𝗻: Can you make a slow query 10x faster?\n\nShare your results! Post your most complex SQL query and explain what business problem you solved. Tag us(Pooja Jain & Ankita Gulati) - we love seeing real SQL in action.🔥\n\nImage Credits: Brij kishore Pandey\n\nNeed some resources for reference? Refer the comments section 👇\n#data #engineering #reeltorealdata #python #sql #analytics \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343254116598542337_slide_0.jpg",
+      "description": "GIF image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post argues that production SQL goes beyond basic SELECT, INSERT, UPDATE, and DELETE operations. It presents SQL as a recurring, reliable tool for ingesting and cleaning data, handling NULLs, transforming and loading data, building reports, analyzing trends, and maintaining data quality. It highlights JOIN, CASE WHEN, WHERE, GROUP BY, PARTITION BY, window functions, and nested common table expressions, then identifies SELECT * on large tables, missing indexes on JOIN columns, unnecessary subqueries, and N+1 query patterns as performance concerns. It closes with a challenge to solve a real business problem involving customer value, transaction trends, data-quality inconsistencies, or query optimization.",
+    "topics": [
+      "SQL",
+      "Data engineering",
+      "Analytics and reporting"
+    ],
+    "subtopics": [
+      "Data ingestion and cleaning",
+      "Data transformation and loading",
+      "Data analysis and reporting",
+      "Data categorization",
+      "Data quality and integrity",
+      "JOIN operations",
+      "Aggregation with GROUP BY",
+      "Window functions",
+      "PARTITION BY",
+      "Common table expressions",
+      "NULL handling",
+      "SQL performance anti-patterns",
+      "Business analysis with SQL"
+    ],
+    "concepts": [
+      "Production SQL",
+      "Data ingestion and cleaning",
+      "Data transformation and loading",
+      "Analytical reporting",
+      "Data categorization",
+      "Aggregation",
+      "Common table expressions",
+      "Window functions",
+      "SQL performance anti-patterns"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What distinguishes the production SQL practices described in the post from basic CRUD SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer distinguishes basic SELECT, INSERT, UPDATE, and DELETE operations from SQL used for recurring production workloads.\nThe answer explains that production SQL can join logs, clean messy data with CASE WHEN and JOIN, handle NULL values, and filter incoming data with WHERE conditions.\nThe answer includes transformation and reporting work with GROUP BY, window functions, CTEs, and fact-to-dimension joins."
+    },
+    {
+      "question": "Which SQL techniques from the post could be used to build a complex analytical report from transaction data?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer uses nested CTEs to divide complex report logic into manageable parts.\nThe answer uses GROUP BY for aggregation and window functions for ranking, transformation, and trend analysis.\nThe answer considers GROUP BY or PARTITION BY by time when structuring time-oriented results.\nThe answer considers JOIN operations between fact and dimension tables when the report requires that structure."
+    },
+    {
+      "question": "Which SQL performance concerns does the post identify, and what general practices does it imply for avoiding them?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer identifies SELECT * on large tables as a performance concern.\nThe answer identifies missing indexes on JOIN columns as a performance concern.\nThe answer identifies unnecessary subqueries and N+1 query patterns as concerns without claiming that the post provides detailed remedies for them."
+    },
+    {
+      "question": "How do WHERE, JOIN, GROUP BY, and PARTITION BY serve different purposes in the SQL workflows described by the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer explains that WHERE filters data, shapes incoming data, and helps support data integrity.\nThe answer explains that JOIN links logs, tables, or different data sources, including fact and dimension tables.\nThe answer explains that GROUP BY supports aggregation, categorization, and transformation logic.\nThe answer explains that PARTITION BY can be used with time in the categorization and reporting practices described by the post."
+    },
+    {
+      "question": "Which SQL techniques are relevant to each business-analysis challenge proposed in the post?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer maps customer-value analysis to aggregation with GROUP BY and ranking with window functions.\nThe answer maps transaction-trend analysis to time-oriented analysis and window functions.\nThe answer maps data-quality analysis to WHERE conditions, JOIN operations, and NULL handling.\nThe answer maps query optimization to avoiding SELECT * on large tables, missing indexes on JOIN columns, unnecessary subqueries, and N+1 query patterns."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Production SQL",
+    "secondary_topics": [
+      "Data ingestion and cleaning",
+      "Data transformation",
+      "Data quality",
+      "Analytics and reporting",
+      "Query optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:833b9010385a31b9",
+    "saved_date": "2026-10-01T23:16:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343254116598542337",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343254116598542337_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7343254116598542337_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "urn-li-saved-92a955a7ac3f3724",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327458889296232450",
+    "captured_at": "2026-10-02T00:15:49.515308Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:39Z"
+  },
+  "original_text": "🧠 “Do Data engineers still need to master SQL in 2025?”\nYes. Absolutely.\n\nIn one of my recent projects, I was working with Azure Data Factory + Snowflake + dbt.\n The pipelines looked modern, the tools were shiny — but what was at the heart of every transformation?\n → SQL.\n\nWhether it was:\nWriting incremental models in dbt\nBuilding CTEs for layered logic\nCreating views with optimized joins\nOr debugging slow queries in Snowflake\n\nSQL was everywhere.\n And it wasn’t just about writing queries — it was about thinking in sets, designing for performance, and building clean logic that scales.\n\n💡 What I’ve learned:\n You don’t have to know every modern tool — but if you can write good SQL, you can work with almost any data platform.\n\n📌 If you’re just starting in data engineering, make SQL your foundation. Everything else will build on top of it.\n👉 Curious: What’s the most challenging SQL logic you've written in production?\n#DataEngineering #SQL #BigData #ETL #dbt #Snowflake #AzureDataFactory #LinkedInTopVoiceJourney #DataEngineeringTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327458889296232450_slide_0.jpg",
+      "description": "JPEG image, 480x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post argues that SQL remains a foundational skill for data engineers even when modern tools are used. Citing a project with Azure Data Factory, Snowflake, and dbt, it describes SQL as central to incremental models, layered CTEs, optimized views and joins, and debugging slow queries. It presents strong SQL as more than syntax, emphasizing set-based thinking, performance, clean logic, and scalability.",
+    "topics": [
+      "SQL",
+      "Data Engineering",
+      "Modern Data Platforms",
+      "Data Transformation"
+    ],
+    "subtopics": [
+      "SQL Transformations",
+      "Set-Based Thinking",
+      "Query Performance",
+      "Debugging Slow Queries",
+      "dbt Incremental Models",
+      "CTEs",
+      "Views and Joins"
+    ],
+    "concepts": [
+      "SQL as a Foundation",
+      "SQL in Modern Data Stacks",
+      "Incremental Models",
+      "CTEs",
+      "Views with Optimized Joins",
+      "Query Debugging",
+      "Set-Based Thinking",
+      "Clean and Scalable Logic"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why does the post argue that SQL remains essential for data engineers working with modern platforms?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The author's Azure Data Factory, Snowflake, and dbt project still used SQL for its core transformations.\nSQL supports incremental models, CTEs, views, joins, and query debugging.\nThe post presents SQL as a transferable foundation across data platforms."
+    },
+    {
+      "question": "Which data transformation tasks does the post identify as common uses of SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Writing incremental models in dbt is one stated use of SQL.\nBuilding CTEs for layered logic is another stated use.\nCreating views with optimized joins and debugging slow queries in Snowflake also require SQL."
+    },
+    {
+      "question": "What does the post mean by saying that data engineers need good SQL rather than merely SQL syntax?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Strong SQL practice involves thinking in sets.\nData engineers must design queries with performance in mind.\nClean transformation logic should be able to scale."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "dbt",
+      "Snowflake",
+      "Azure Data Factory",
+      "Data Transformation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:92a955a7ac3f3724",
+    "saved_date": "2026-10-01T23:24:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327458889296232450",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327458889296232450_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "urn-li-saved-9c0f6f53e788e03f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338328091057885187",
+    "captured_at": "2026-10-02T00:15:49.918225Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:56Z"
+  },
+  "original_text": "SQL No Fear: RIGHT OR LEFT JOIN\n\nNEVER EVER DO LEFT JOIN!!!\n\n\"Does performance differ? What are the pros and cons?\"\n\nSELECT * FROM TableA\nLEFT JOIN TableB ON TableA.uid = TableB.id\n\nThanks to Zach Wilson!\n\nSee comments for details!\n\n#SQL #DataAnalytics #DataEngineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338328091057885187_slide_0.jpg",
+      "description": "JPEG image, 480x225 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A brief SQL post showing a LEFT JOIN between TableA and TableB on TableA.uid = TableB.id. It strongly states that LEFT JOIN should never be used and asks whether performance differs and what the pros and cons are, but it provides no answers, benchmarks, comparison with RIGHT JOIN, or supporting comment details.",
+    "topics": [
+      "SQL",
+      "SQL joins",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "join performance"
+    ],
+    "subtopics": [
+      "LEFT JOIN syntax",
+      "RIGHT JOIN versus LEFT JOIN",
+      "join performance and pros and cons"
+    ],
+    "concepts": [
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "Join performance and trade-offs"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which join type does the post say should never be used, and how is it demonstrated in its SQL example?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post claims that LEFT JOIN should never be used.\nThe example selects all columns from TableA and uses LEFT JOIN to match TableB rows on TableA.uid = TableB.id."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL joins",
+    "secondary_topics": [
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "join performance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9c0f6f53e788e03f",
+    "saved_date": "2026-10-01T23:20:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338328091057885187",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338328091057885187_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

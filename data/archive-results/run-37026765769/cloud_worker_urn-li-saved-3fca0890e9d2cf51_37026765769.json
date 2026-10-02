@@ -1,0 +1,89 @@
+{
+  "id": "urn-li-saved-3fca0890e9d2cf51",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7311391876236894208",
+    "captured_at": "2026-10-02T00:15:46.922709Z",
+    "author": "Kalyani V",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:51Z"
+  },
+  "original_text": "🚀 Transforming User Hobbies into Separate Rows in PySpark \n\n🔍 Problem Statement:\n Given a dataset containing users and their hobbies stored as a comma-separated string in a single column, transform the data so that each hobby is represented as a separate row for each user.\n\n💡 Input Data:\ndata = [(\"Alice\", \"Badminton,Tennis\"), (\"Bob\", \"Tennis,Cricket\"), (\"Julie\",\"Cricket,Carrom\")]\ncolumn = [\"Name\", \"Hobbies\"]\n\n🔧 Solution:\n✅ Step 1: Create a DataFrameCreate a DataFrame\n``` df = spark.createDataFrame(data, column) ```\n\n✅ Step 2: Import necessary functions\n \n```from pyspark.sql.functions import split, explode```\n\n\n✅ Step 3: Split the hobbies column by comma and explode the array\n\n```display(df.select(df.Name, explode(split(df.Hobbies,\",\"))\n.alias(\"Hobbies\")))```\n\n#pyspark #python #databricks #sparkTransformation #explode #split \n#spark #dataEngineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7311391876236894208_slide_0.jpg",
+      "description": "JPEG image, 480x434 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post demonstrates a PySpark transformation for user records whose hobbies are stored as comma-separated strings. It creates a DataFrame with Name and Hobbies columns, applies split and explode to the Hobbies column, and aliases the exploded values as Hobbies so that each hobby can appear in a separate row. The post does not display the resulting output rows.",
+    "topics": [
+      "PySpark",
+      "Spark DataFrames",
+      "Comma-separated value transformation",
+      "String splitting",
+      "Array exploding",
+      "Data reshaping"
+    ],
+    "subtopics": [
+      "Creating a DataFrame from tuples",
+      "Splitting a hobbies column by commas",
+      "Exploding an array into separate rows",
+      "Selecting and naming the transformed column"
+    ],
+    "concepts": [
+      "PySpark DataFrame",
+      "split",
+      "explode",
+      "select and alias"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can a PySpark DataFrame transform comma-separated hobbies into one row per hobby?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Create a DataFrame with Name and Hobbies columns from the supplied tuples.\nSelect Name and apply explode to split(Hobbies, \",\") for the hobby values.\nAlias the exploded expression as Hobbies."
+    },
+    {
+      "question": "What roles do split and explode play in this transformation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "split divides the Hobbies string at commas into an array.\nexplode turns the elements of that array into separate rows.\nThe user's Name is selected alongside each exploded hobby."
+    },
+    {
+      "question": "For the provided input, what rows would the transformation be expected to produce?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The expected rows are Alice with Badminton, Alice with Tennis, Bob with Tennis, Bob with Cricket, Julie with Cricket, and Julie with Carrom."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark data transformation",
+    "secondary_topics": [
+      "Spark DataFrames",
+      "String splitting",
+      "Array exploding",
+      "One-to-many row transformation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3fca0890e9d2cf51",
+    "saved_date": "2026-10-01T23:26:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7311391876236894208",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7311391876236894208_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "urn-li-share-6143311257098276864",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:share:6143311257098276864/",
+    "captured_at": "2026-10-01T10:29:27.370769Z",
+    "author": "eagleanurag",
+    "published_at": "May 31, 2016"
+  },
+  "original_text": "A Simple Pick & Place Robot By The Team\n@eagleanurag",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The content is only a title identifying a simple pick-and-place robot created by the team @eagleanurag. The extracted media text is empty, so no technical details, implementation methods, components, or operation are provided.",
+    "topics": [
+      "Robotics",
+      "Pick-and-place robots"
+    ],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Robotics",
+    "primary_topic": "Pick-and-place robot",
+    "secondary_topics": [],
+    "interview_relevant": false
+  }
+}

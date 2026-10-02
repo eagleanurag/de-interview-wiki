@@ -1,0 +1,158 @@
+{
+  "id": "urn-li-archive-4a258fbbd327894f",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.805433Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:28Z"
+  },
+  "original_text": "I recently appeared for a Data Engineer interview at Wipro and sharing my experience to help others preparing for similar opportunities.\n📅 Experience: 4 Years\n Here’s a quick summary of the questions I was asked:\n\n✅L1 Technical Interview (Duration: 35 mins)\n\n1. Introduction – Brief about myself and total experience in data engineering.\n2. Python Coding – Flatten a nested list into a single list.\n 📝 list = [4, 7, [6, 3, 2, [7, 9, 2], 4], 1, 3]\n3. SQL – Return counts of all types of joins: INNER, LEFT, RIGHT, FULL OUTER using tables like:\nA B \n1 0 \n1 1 \n2 2 \n3 4 \n2 1 \n3 5\n4. PySpark – write a query to find the average sales per product category.\n5. Project Discussion – Walkthrough of my recent/most confident project.\n6. Follow-up Questions on Project:\n a. Types of data sources used\n b. Number of pipelines handled\n c. Team structure and roles\n d. Cluster configuration used\n7. SQL – Difference between RANK() and DENSE_RANK()\n\n✅ L2 Technical Interview (Duration 45 mins)\n\n1. Introduction – Brief about myself and total experience in data engineering.\n2. Write a SQL query that reports most experience employees in each project. If there is tie, report all employees with most experience.\nProject Table Employee Table\nproj_id emp_id emp_id name year_exp\n3. SQL query to find out employees who earn more than their managers.\n4. PySpark – Read a CSV file with pipe '|' delimiter and filter records by date (column: DOJ, DOL)\n5. Project Discussion – walk me through your most recent project—what was the goal, tools used, and your responsibilities?\n6. What kind of performance optimizations have you implemented in your project?\n7. Azure Data Factory (ADF) - which integration runtime you use for on-prem source to cloud copy?\n8. How do you debug ADF pipeline taking longer time to copy from on-prem SQL server to cloud?\n9. Difference between parquet and delta format? follow-up: features of delta lake?\n10. How do you push your code from one environment to other?\n11. How to debug/fix stored procedure taking too long to execute?\n12. Types of clusters in Databricks and their use cases.\n\n🤝 Feel free to share your experience or connect if you're on the same journey!\n\n#DataEngineering #DataEngineer #Interview #InterviewExperience #BigData #PySpark #SQL #Azure #ADF #DeltaLake #Databricks #InterviewPreparation #CareerGrowth #TechInterviews #LinkedInShare\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied excerpt is a first-person account of a Wipro Data Engineer interview by a candidate with four years of experience. It lists a 35-minute L1 round and a 45-minute L2 round covering Python, SQL, PySpark, Azure Data Factory, Databricks, Parquet, and Delta Lake, along with project discussions, deployment, and performance troubleshooting. It primarily lists questions rather than answers, provides few schemas or expected results, and ends with an ellipsis, so it is incomplete as a technical reference.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Python",
+      "SQL",
+      "PySpark",
+      "Azure Data Factory",
+      "Databricks",
+      "Delta Lake",
+      "Parquet"
+    ],
+    "subtopics": [
+      "Flattening nested Python lists",
+      "INNER, LEFT, RIGHT, and FULL OUTER joins",
+      "RANK() and DENSE_RANK()",
+      "Average sales by product category",
+      "Per-project employee experience with ties",
+      "Comparing employee and manager pay",
+      "Reading pipe-delimited CSV files",
+      "Filtering records by date",
+      "ADF integration runtimes",
+      "ADF copy pipeline troubleshooting",
+      "Parquet and Delta Lake comparison",
+      "Databricks cluster types and use cases",
+      "Stored procedure troubleshooting",
+      "Code deployment across environments"
+    ],
+    "concepts": [
+      "Nested Python list flattening",
+      "SQL join types",
+      "RANK() and DENSE_RANK()",
+      "PySpark aggregation by category",
+      "Per-project experience ranking",
+      "Employee pay compared with manager pay",
+      "Pipe-delimited CSV processing with PySpark",
+      "ADF integration runtimes",
+      "ADF copy pipeline performance troubleshooting",
+      "Parquet and Delta Lake",
+      "Databricks cluster selection",
+      "Stored procedure performance troubleshooting",
+      "Code deployment across environments"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you flatten the supplied nested Python list into a single list?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer produces a single-level Python list containing the numeric elements from the supplied nested structure."
+    },
+    {
+      "question": "How would you return counts for INNER, LEFT, RIGHT, and FULL OUTER joins using the supplied example tables?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer reports results for each of the four named join types using the example A and B data."
+    },
+    {
+      "question": "What is the difference between RANK() and DENSE_RANK()?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer contrasts the behavior and results of the two SQL ranking functions."
+    },
+    {
+      "question": "How would you use PySpark to calculate average sales for each product category?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer uses PySpark to return one average sales value for each product category."
+    },
+    {
+      "question": "How would you find the employees with the most experience in each project while including all tied employees?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer evaluates experience within each project and returns every employee tied for the highest experience."
+    },
+    {
+      "question": "How would you write a SQL query to find employees who earn more than their managers?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer compares each employee with the corresponding manager and returns employees whose pay is greater."
+    },
+    {
+      "question": "How would you read a pipe-delimited CSV with PySpark and filter it by the DOJ and DOL date columns?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer reads the file using the pipe delimiter and applies date-based filtering to the specified columns."
+    },
+    {
+      "question": "Which Azure Data Factory integration runtime is used to copy data from an on-premises source to a cloud destination?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer identifies the ADF integration runtime used for the described on-premises-to-cloud copy."
+    },
+    {
+      "question": "How would you troubleshoot an ADF pipeline that takes too long to copy data from an on-premises SQL Server to a cloud destination?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer provides a diagnostic process for locating and addressing the cause of the slow ADF copy."
+    },
+    {
+      "question": "How do Parquet and Delta Lake differ, and what features does Delta Lake provide?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer contrasts Parquet with Delta Lake and describes features of Delta Lake."
+    },
+    {
+      "question": "How would you diagnose and fix a stored procedure that takes too long to execute?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer explains how to investigate the slow stored procedure and correct the identified cause."
+    },
+    {
+      "question": "What types of Databricks clusters are available, and what are their use cases?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer names the Databricks cluster types and associates each type with its use case."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Python",
+      "SQL",
+      "PySpark",
+      "Azure Data Factory",
+      "Databricks",
+      "Delta Lake",
+      "Parquet"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4a258fbbd327894f",
+    "saved_date": "2026-10-01T23:10:28Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

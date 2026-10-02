@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-b1d1166de74dd1d7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.223188Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:56Z"
+  },
+  "original_text": "Your Databricks job isn't slow. \n\nHere’s the checklist I use for every PySpark job in production:\n\n1. Stop using `cache()` everywhere\n`cache()` is lazy and un-reliable. It spills if memory is full.\nUse `df.persist(StorageLevel.MEMORY_AND_DISK)` and only when you reuse a DF 2+ times.\nAnd always `unpersist()` when done.\n\n2. Let AQE do its job\nIf you disabled Adaptive Query Execution, you’re fighting Spark.\nCheck this:\n`spark.conf.set(\"spark.databricks.adaptive.coalescePartitions.enabled\", \"true\")`\n`spark.conf.set(\"spark.sql.adaptive.enabled\", \"true\")`\nIt fixes skew and small file problems automatically.\n\n3. Broadcast the small table. Always.\nThat 50MB dimension table is shuffling 500GB of fact data.\n`from pyspark.sql.functions import broadcast`\n`fact_df.join(broadcast(dim_df), \"customer_id\")`\nNo shuffle. Instant speedup.\nMost performance issues aren’t about writing better code.\nThey’re about removing the bottlenecks you created.\n\n#Databricks #DataEngineering #PySpark #PerformanceTuning",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a Databricks and PySpark production performance checklist. It recommends replacing broad use of cache() with persist(StorageLevel.MEMORY_AND_DISK) when a DataFrame is reused at least twice, unpersisting it when finished, enabling Adaptive Query Execution to address skew and small-file problems, and broadcasting a small dimension table when joining it to a large fact table to avoid shuffling the fact data.",
+    "topics": [
+      "Databricks",
+      "Adaptive Query Execution",
+      "DataFrame storage optimization",
+      "Join optimization"
+    ],
+    "subtopics": [
+      "Caching and persistence",
+      "Adaptive Query Execution configuration",
+      "Broadcast joins",
+      "Production performance checklists"
+    ],
+    "concepts": [
+      "DataFrame caching and persistence",
+      "StorageLevel.MEMORY_AND_DISK",
+      "Adaptive Query Execution",
+      "Databricks AQE configuration",
+      "Broadcast join",
+      "Unpersisting DataFrames"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should a frequently reused PySpark DataFrame be persisted and cleaned up according to the post?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The post recommends persist(StorageLevel.MEMORY_AND_DISK) rather than using cache() everywhere.\nPersistence should be used when the DataFrame is reused two or more times.\nThe DataFrame should be unpersisted when it is no longer needed."
+    },
+    {
+      "question": "Which Databricks and Spark configurations does the post recommend for enabling Adaptive Query Execution?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Set spark.databricks.adaptive.coalescePartitions.enabled to true.\nSet spark.sql.adaptive.enabled to true.\nThe post states that AQE helps address skew and small-file problems automatically."
+    },
+    {
+      "question": "A 50 MB dimension table is being joined to 500 GB of fact data in PySpark. How does the post recommend optimizing this join?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Broadcast the small dimension table by importing broadcast from pyspark.sql.functions.\nJoin the fact DataFrame to broadcast(dim_df) on customer_id.\nThe post states that broadcasting the dimension table avoids shuffling the large fact data and can provide a major speedup."
+    },
+    {
+      "question": "What production checks does the post recommend before investigating more complex causes of poor PySpark performance?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Check whether cache() is being used indiscriminately and persist only frequently reused DataFrames with MEMORY_AND_DISK.\nVerify that both AQE-related configurations are enabled.\nCheck whether a small dimension table is being shuffled during a join and use a broadcast join instead."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark performance tuning",
+    "secondary_topics": [
+      "Databricks optimization",
+      "Adaptive Query Execution",
+      "DataFrame persistence",
+      "Broadcast joins"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b1d1166de74dd1d7",
+    "saved_date": "2026-10-01T23:06:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

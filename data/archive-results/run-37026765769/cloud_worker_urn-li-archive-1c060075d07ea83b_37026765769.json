@@ -1,0 +1,261 @@
+{
+  "id": "urn-li-archive-1c060075d07ea83b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.181144Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:56Z"
+  },
+  "original_text": "📌 Recently Asked – Impetus Interview for Big Data Engineer\n📍 Round 1 – Technical (Hands-on + Conceptual)\n\nJust came across these questions asked in the R1 round at Impetus for a Big Data Engineer (3–5 yrs) role:\n\n🔷 Project-Based & Real-Time Scenarios\n1️⃣ Walkthrough of your current project and workflow\n 2️⃣ What was the data source in your project?\n 3️⃣ Any production or lower-environment issue you faced and how you resolved it\n\n🔷 Apache Spark & PySpark\n4️⃣ Spark application internal process\n 5️⃣ What is Data Locality?\n 6️⃣ What is DAG (Directed Acyclic Graph) in Spark?\n 7️⃣ Number of stages in PySpark\n 8️⃣ Partitioning logic for 1GB/2GB of data\n 9️⃣ Default partitions after wide transformations\n 🔟 Handling empty partitions after shuffle\n 1️⃣1️⃣ What is Data Skew? How do you handle it?\n 1️⃣2️⃣ Salting technique in Spark\n 1️⃣3️⃣ How does coalesce() help with skew\n 1️⃣4️⃣ Broadcast joins in Spark\n 1️⃣5️⃣ Adaptive Query Execution (AQE)\n 1️⃣6️⃣ RDD vs DataFrame – Why is DataFrame faster?\n 1️⃣7️⃣ Catalyst Optimizer in Spark\n 1️⃣8️⃣ PySpark Coding Task:\n • Find product names where latest month’s sales > average of last 3 months\n 1️⃣9️⃣ SQL Equivalent:\n • Write a SQL query for the same logic\n\n🔷 Python & Problem Solving\n2️⃣0️⃣ What is a Lambda Function?\n 2️⃣1️⃣ Purpose of __init__ method\n 2️⃣2️⃣ What is a Decorator?\n 2️⃣3️⃣ What is GIL (Global Interpreter Lock)?\n 2️⃣4️⃣ What is Pickling and Unpickling in Python?\n 2️⃣5️⃣ What is use of .format() method?\n 2️⃣6️⃣ Logic: Find the first non-repeating character in a string\n\n\n✅ A great mix of real-time concepts, coding challenges, and optimization questions.\nHope this helps others preparing for Impetus or similar roles.\n\n\n\n\n#Impetus #BigDataEngineer #OpenToWork #BigDataEngineer #DataEngineering #PySpark #ApacheSpark #PythonDeveloper #SQL #Databricks #ADF #InterviewPreparation #Hiring #SparkOptimization #AzureDataEngineer #JobSearch #Recruiters #TechInterview #NowHiring #LinkedInJobs",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a question-only compilation reported from Round 1 of an Impetus technical interview for a Big Data Engineer role with 3-5 years of experience. It covers project and workflow walkthroughs, data sources, production or lower-environment troubleshooting, Apache Spark and PySpark concepts, partitioning and shuffle, data-skew handling, broadcast joins, Adaptive Query Execution, RDD versus DataFrame performance, the Catalyst Optimizer, a PySpark sales task with a SQL equivalent, Python language questions, and a string-logic exercise. The supplied content gives the questions but no answers, definitions, schemas, implementations, or worked solutions.",
+    "topics": [
+      "Big Data Engineer interview preparation",
+      "Project-based and real-time interview scenarios",
+      "Apache Spark and PySpark",
+      "Spark execution and partitioning",
+      "Shuffle and data skew mitigation",
+      "Spark joins and optimization",
+      "PySpark and SQL coding",
+      "Python language fundamentals",
+      "String-based problem solving"
+    ],
+    "subtopics": [
+      "Current project and workflow walkthrough",
+      "Data source identification",
+      "Production or lower-environment issue resolution",
+      "Spark application internal process",
+      "Data locality",
+      "DAGs and stages",
+      "Partitioning logic for 1GB and 2GB of data",
+      "Default partitions after wide transformations",
+      "Empty partitions after shuffle",
+      "Data skew definition and handling",
+      "Salting technique",
+      "coalesce() for skew",
+      "Broadcast joins",
+      "Adaptive Query Execution (AQE)",
+      "RDD versus DataFrame performance",
+      "Catalyst Optimizer",
+      "PySpark latest-month sales comparison task",
+      "SQL equivalent query",
+      "Lambda functions and __init__",
+      "Decorators",
+      "Global Interpreter Lock (GIL)",
+      "Pickling and unpickling",
+      ".format() method",
+      "First non-repeating character logic"
+    ],
+    "concepts": [
+      "Project walkthrough and workflow",
+      "Project data source",
+      "Production or lower-environment issue resolution",
+      "Spark application internal process",
+      "Data locality",
+      "DAG (Directed Acyclic Graph)",
+      "Number of stages in PySpark",
+      "Partitioning logic for 1GB/2GB data",
+      "Default partitions after wide transformations",
+      "Empty partitions after shuffle",
+      "Data skew",
+      "Salting technique in Spark",
+      "coalesce() and skew",
+      "Broadcast joins in Spark",
+      "Adaptive Query Execution (AQE)",
+      "RDD versus DataFrame performance",
+      "Catalyst Optimizer",
+      "Latest-month sales versus three-month average",
+      "SQL equivalent of the sales filter",
+      "Lambda functions, __init__, and decorators",
+      "Global Interpreter Lock (GIL)",
+      "Pickling, unpickling, and .format()",
+      "First non-repeating character"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Walk through your current project and workflow.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe the candidate's current project and its workflow."
+    },
+    {
+      "question": "What was the data source in your project?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer should identify the data source used in the project."
+    },
+    {
+      "question": "What production or lower-environment issue did you face, and how did you resolve it?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer should identify the issue and environment and explain how it was resolved."
+    },
+    {
+      "question": "What is the Spark application internal process?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain the internal process of a Spark application."
+    },
+    {
+      "question": "What is Data Locality?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should define data locality in the context of Spark."
+    },
+    {
+      "question": "What is a DAG (Directed Acyclic Graph) in Spark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should define a DAG in Spark."
+    },
+    {
+      "question": "How many stages are there in PySpark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should state the number of stages and the basis for that count."
+    },
+    {
+      "question": "What partitioning logic would you use for 1GB or 2GB of data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should give partitioning logic for both 1GB and 2GB of data."
+    },
+    {
+      "question": "What are the default partitions after wide transformations?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should address the default partition behavior after wide transformations."
+    },
+    {
+      "question": "How do you handle empty partitions after shuffle?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain how empty partitions after a shuffle are handled."
+    },
+    {
+      "question": "What is Data Skew, and how do you handle it?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer should define data skew and describe how it is handled."
+    },
+    {
+      "question": "What is the salting technique in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain the salting technique in Spark."
+    },
+    {
+      "question": "How does coalesce() help with skew?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how coalesce() helps with skew."
+    },
+    {
+      "question": "What are broadcast joins in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain broadcast joins in Spark."
+    },
+    {
+      "question": "What is Adaptive Query Execution (AQE)?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer should define Adaptive Query Execution in Spark."
+    },
+    {
+      "question": "Why is a DataFrame faster than an RDD?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer should compare RDDs and DataFrames and explain the performance difference asked about in the post."
+    },
+    {
+      "question": "What is the Catalyst Optimizer in Spark?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain the Catalyst Optimizer in Spark."
+    },
+    {
+      "question": "Using PySpark, find product names where the latest month's sales are greater than the average of the last 3 months.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong solution should apply the stated condition that the latest month's sales are greater than the average of the last 3 months."
+    },
+    {
+      "question": "Write a SQL query for product names whose latest month's sales are greater than the average of the last 3 months.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong query should express the same latest-month sales and last-3-month average condition in SQL."
+    },
+    {
+      "question": "What is a lambda function?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should define a lambda function."
+    },
+    {
+      "question": "What is the purpose of the __init__ method?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should explain the purpose of __init__."
+    },
+    {
+      "question": "What is a decorator?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should define a decorator."
+    },
+    {
+      "question": "What is the GIL (Global Interpreter Lock)?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain the GIL in Python."
+    },
+    {
+      "question": "What are pickling and unpickling in Python?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should define pickling and unpickling in Python."
+    },
+    {
+      "question": "What is the use of the .format() method?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should explain the use of .format() in Python."
+    },
+    {
+      "question": "Find the first non-repeating character in a string.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong solution should implement the requested logic for finding the first non-repeating character in a string."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark and PySpark",
+    "secondary_topics": [
+      "Project workflow and data sources",
+      "Production and lower-environment troubleshooting",
+      "Spark partitioning, shuffle, and skew mitigation",
+      "PySpark and SQL coding",
+      "Python language fundamentals and problem solving"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:1c060075d07ea83b",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

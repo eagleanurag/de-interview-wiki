@@ -1,0 +1,147 @@
+{
+  "id": "urn-li-archive-05c219e439fb81ca",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.828701Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:22Z"
+  },
+  "original_text": "If You’re a Data Engineer, These Terms Should Be in Your DNA\n\n1. Data Lineage: Trace data’s journey from source to destination. \n2. Data Skew: When one node gets overloaded due to uneven data distribution.\n3. Salting: A trick to fix skew by spreading hot keys across partitions using randomness.\n4. Bucketing: Predefined groups to optimize joins.\n5. Partitioning: Divide data into folders based on column values for faster reads.\n6. Backpressure: When downstream systems slow down and push back on upstream data flow. \n7. Data Drift: When incoming data changes slowly over time types, distributions, or meaning.\n8. Data Masking: Hide sensitive info (PII, PHI) via obfuscation or encryption.\n9. Data Governance: Policies, security and access.\n10. Data Artifacts: Models, dashboards, scripts, logs all byproducts of your data workflows.\n11. CDC (Change Data Capture): Real-time detection of DB changes.\n12. DAG (Directed Acyclic Graph): The backbone of orchestrators like Airflow.\n13. Schema Evolution: When your data structure grows (or mutates).\n14. Idempotency: The job should behave the same even if retried.\n15. Backfilling: Filling historical data gaps.\n16. Data Contracts: Define the structure, format, and SLA expectations between producers and consumers.\n17. Orchestration: Scheduling, managing, and monitoring data workflows. (Airflow, Prefect, Dagster)\n18. Observability: Track pipeline health with logs, metrics, alerts.\n19. Medallion Architecture: Bronze (raw), Silver (cleansed), Gold (curated) layers of data.\n20. Sharding: Horizontal database partitioning for scale and speed.\n21. Data Quality: Validate nulls, uniqueness, types, duplicates and drift.\n22. ACID vs BASE: Choose the right consistency model based on your use case. \n\nThese aren't just terms they're building blocks.\n\n#DataEngineering #BigData #ModernDataStack #ETL #PipelineDesign #Streaming #DataQuality #DataGovernance #DataOps #LinkedInTech #Backpressure #DataDrift #Observability\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied content is a concise, apparently truncated glossary of 22 data engineering terms covering lineage, skew mitigation, data organization, flow control, governance, change tracking, reliability, orchestration, observability, layered architecture, and data quality. It provides short definitions, identifies Airflow, Prefect, and Dagster as orchestration tools, and describes the terms as building blocks of data engineering. It does not provide detailed comparisons of ACID and BASE or implementation examples.",
+    "topics": [
+      "Data engineering terminology",
+      "Data pipeline design",
+      "Data quality and governance",
+      "Data orchestration and observability",
+      "Data architecture"
+    ],
+    "subtopics": [
+      "Data lineage and data contracts",
+      "Data skew, salting, bucketing, partitioning, and sharding",
+      "Backpressure and data drift",
+      "Data masking, governance, and artifacts",
+      "Change data capture and schema evolution",
+      "Idempotency and backfilling",
+      "DAGs and workflow orchestration",
+      "Pipeline observability",
+      "Medallion architecture",
+      "Data quality validation",
+      "Consistency models"
+    ],
+    "concepts": [
+      "Data Lineage",
+      "Data Skew",
+      "Salting",
+      "Bucketing",
+      "Partitioning",
+      "Backpressure",
+      "Data Drift",
+      "Data Masking",
+      "Data Governance",
+      "Data Artifacts",
+      "Change Data Capture",
+      "Directed Acyclic Graph",
+      "Schema Evolution",
+      "Idempotency",
+      "Backfilling",
+      "Data Contracts",
+      "Orchestration",
+      "Observability",
+      "Medallion Architecture",
+      "Sharding",
+      "Data Quality",
+      "ACID versus BASE"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do data lineage and data contracts differ?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Data lineage traces data from its source to its destination.\nA data contract defines the structure, format, and SLA expectations between producers and consumers."
+    },
+    {
+      "question": "A processing node is overloaded because data is distributed unevenly. Which term describes the problem, and which technique does the post identify for addressing it?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Uneven distribution that overloads a node is called data skew.\nSalting addresses skew by spreading hot keys across partitions using randomness."
+    },
+    {
+      "question": "How do bucketing, partitioning, and sharding differ according to the post?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Bucketing uses predefined groups to optimize joins.\nPartitioning divides data into folders based on column values to support faster reads.\nSharding horizontally partitions a database for scale and speed."
+    },
+    {
+      "question": "A downstream system begins processing more slowly and causes pressure on upstream data flow. What is this condition, and how can pipeline health be tracked?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The condition is backpressure, where a slower downstream system pushes back on the upstream flow.\nPipeline health can be tracked through observability using logs, metrics, and alerts."
+    },
+    {
+      "question": "How should data drift be distinguished from data quality validation?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Data drift is a change over time in incoming data types, distributions, or meaning.\nData quality validates nulls, uniqueness, types, duplicates, and drift."
+    },
+    {
+      "question": "How do data masking and data governance address sensitive data?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Data masking hides sensitive information such as PII and PHI through obfuscation or encryption.\nData governance establishes policies, security measures, and access controls."
+    },
+    {
+      "question": "How would the post classify a real-time database change, a changing data structure, a retried job, and a historical data gap?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Real-time detection of database changes is Change Data Capture.\nA data structure that grows or mutates is undergoing schema evolution.\nA job that behaves the same when retried has idempotency.\nFilling a historical data gap is backfilling."
+    },
+    {
+      "question": "What roles do DAGs and orchestration play in data workflows?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A DAG is described as the backbone of orchestrators such as Airflow.\nOrchestration schedules, manages, and monitors data workflows.\nAirflow, Prefect, and Dagster are named as orchestration tools."
+    },
+    {
+      "question": "What does each layer represent in Medallion Architecture?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The Bronze layer contains raw data.\nThe Silver layer contains cleansed data.\nThe Gold layer contains curated data."
+    },
+    {
+      "question": "Which items are considered data artifacts, and what role does logging play in pipeline operations?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Models, dashboards, scripts, and logs are examples of data artifacts produced by data workflows.\nLogs are also used with metrics and alerts to observe pipeline health."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering terminology and pipeline fundamentals",
+    "secondary_topics": [
+      "Data quality and governance",
+      "Pipeline reliability",
+      "Distributed data processing",
+      "Workflow orchestration",
+      "Data architecture"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:05c219e439fb81ca",
+    "saved_date": "2026-10-01T23:15:22Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

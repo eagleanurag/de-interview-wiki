@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-saved-fd723dbfe017c23c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341079772573089792",
+    "captured_at": "2026-10-02T00:15:53.662507Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:25Z"
+  },
+  "original_text": "Storyteller | Data Architect | Building Scalable Data & AI Foundations for Enterprise Performance | Linkedin Top Voice 2025,2024 | Open to collaboration\n1yr •\n𝗧𝗵𝗲 𝗘𝗧𝗟 𝗚𝘂𝗶𝗱𝗲 𝗜 𝗪𝗶𝘀𝗵 𝗜 𝗛𝗮𝗱 𝗪𝗵𝗲𝗻 𝗜 𝗦𝘁𝗮𝗿𝘁𝗲𝗱\nEveryone talks about ETL like it’s just a 3-step process — but in the real world, it’s multi-layered, failure-prone, and mission-critical.\nToday, I’m sharing something special:\n✅ A detailed ETL Pipeline Guide (used in real teams)\n✅ A set of 20 handpicked ETL Interview Questions from real interviews — beginner to advanced\nInside the PDF:\n• What does an end-to-end ETL pipeline look like?\n• Tools used across ingestion, orchestration, and transformatio\n• Best practices for real-time vs batch\n• Interview Qs like:\n→ How do you debug a broken pipeline?\n→ What’s your approach to schema evolution?\n→ How do you implement SCD Type 2?\nThis is NOT theory — it’s what gets asked and what gets built in real roles.\nDownload the free PDF here & let me know your thoughts 👇\nFollow the tag → #reeltorealdata to stay tuned with the complete series.\n👉 Learn more about Data Engineering with Pooja Jain!\n#data #engineering #datamining #bigdata #analytics\nETL Guide & Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341079772573089792_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional LinkedIn post announces a free ETL guide and a set of 20 ETL interview questions. It characterizes real-world ETL as multi-layered, failure-prone, and mission-critical, and mentions end-to-end pipelines, tool usage across ingestion, orchestration, and transformation, real-time versus batch best practices, pipeline debugging, schema evolution, and SCD Type 2. The referenced PDF and extracted media text are not included, so the post does not provide detailed implementations, techniques, tool names, or answers.",
+    "topics": [
+      "ETL pipelines",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "End-to-end ETL pipelines",
+      "Data ingestion",
+      "Data orchestration",
+      "Data transformation",
+      "Real-time processing",
+      "Batch processing",
+      "Pipeline debugging",
+      "Schema evolution",
+      "SCD Type 2"
+    ],
+    "concepts": [
+      "ETL Pipeline",
+      "End-to-End ETL",
+      "ETL Tooling Areas",
+      "Real-Time and Batch Processing",
+      "Pipeline Debugging",
+      "Schema Evolution",
+      "SCD Type 2"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which lifecycle areas does the post identify as requiring tools in an ETL environment?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The post identifies ingestion, orchestration, and transformation as tool-supported ETL areas.\nA complete answer should acknowledge that the supplied content does not name any specific tools."
+    },
+    {
+      "question": "What operational characteristics does the post attribute to real-world ETL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post characterizes real-world ETL as multi-layered, failure-prone, and mission-critical rather than as only a simple three-step process."
+    },
+    {
+      "question": "Which ETL troubleshooting activity is explicitly identified as an interview concern?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The post explicitly identifies debugging a broken pipeline as an interview topic.\nThe answer should not claim a specific debugging methodology because none is supplied."
+    },
+    {
+      "question": "Which implementation concerns are explicitly raised for ETL interview preparation?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The post explicitly raises schema evolution and implementing SCD Type 2.\nThe supplied content does not provide enough detail to explain or compare their implementations."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "ETL pipelines",
+    "secondary_topics": [
+      "Data ingestion",
+      "Data orchestration",
+      "Data transformation",
+      "Real-time processing",
+      "Batch processing",
+      "Pipeline debugging",
+      "Schema evolution",
+      "SCD Type 2"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fd723dbfe017c23c",
+    "saved_date": "2026-10-01T23:18:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341079772573089792",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341079772573089792_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

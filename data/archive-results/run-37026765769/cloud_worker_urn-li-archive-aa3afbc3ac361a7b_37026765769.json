@@ -1,0 +1,102 @@
+{
+  "id": "urn-li-archive-aa3afbc3ac361a7b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.122823Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:58Z"
+  },
+  "original_text": "My friend switched from SDE to Data Engineering and got placed at 20+ LPA.\n\nHere is the roadmap I told him to follow:\n\n𝗪𝗲𝗲𝗸 𝟭: 𝗦𝗤𝗟\n- Basic SQL Syntax\n- DDL, DML, DCL\n- Joins & Subqueries\n- Views & Indexes\n- CTEs & Window Functions\n\n𝗪𝗲𝗲𝗸 𝟮: 𝗣𝘆𝘁𝗵𝗼𝗻\n- Fundamentals\n- Numpy\n- Pandas\n\n𝗪𝗲𝗲𝗸 𝟯-𝟰: 𝗣𝘆𝘀𝗽𝗮𝗿𝗸\n- RDD's\n- Dataframes\n- Datasets\n- Spark Streaming\n- Optimization Techniques\n\n𝗪𝗲𝗲𝗸 𝟱: 𝗗𝗮𝘁𝗮 𝗪𝗮𝗿𝗲𝗵𝗼𝘀𝘂𝗶𝗻𝗴 & 𝗠𝗼𝗱𝗲𝗹𝗹𝗶𝗻𝗴\n- OLAP vs OLTP\n- Star & Snowflake Schema\n- Fact & Dimension Tables\n- Slowly Changing Dimensions (SCD)\n\n𝗪𝗲𝗲𝗸 𝟲: 𝗖𝗜/𝗖𝗗 𝗣𝗶𝗽𝗲𝗹𝗶𝗻𝗲𝘀\n- Merging and Pull Requests\n- Git Hooks\n- Pipeline Configuration\n- Infrastructure as Code\n\n𝗪𝗲𝗲𝗸 𝟳-𝟴: 𝗖𝗹𝗼𝘂𝗱 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀\n- NoSQL DB\n- Relational DB\n- Data Warehousing\n- Scheduling & Orchestration\n- Messaging\n- ETL Services\n- Storage Services\n- Data Processing Services\n\nFree resources to learn these skills.\n\nAzure Data Engineer Roadmap - https://lnkd.in/dCyr4aph\nSQL - https://lnkd.in/gJXw4XtK\nPython - https://lnkd.in/dt_-2-Uj\nPyspark - https://lnkd.in/gV_5EFtE\nAirflow - https://lnkd.in/guebuHJ7\nKafka - https://lnkd.in/gVZUT52s\nData Modeling - https://lnkd.in/gg6V98Ru\nAzure Cloud - https://lnkd.in/gwc3By9h\nGoogle Cloud - https://lnkd.in/gNwpp2RT\nAWS - https://lnkd.in/gJeUGfjS\nMock Interviews - https://lnkd.in/gV_5EFtE\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents an eight-week, topic-level roadmap for an SDE transitioning into data engineering, introduced by an anecdotal 20+ LPA placement claim. It covers SQL, Python, Spark, data warehousing and modeling, data pipeline CI/CD, and cloud data service categories, followed by links labeled as free learning resources. Although the subjects are technically relevant, the post provides no definitions, comparisons, examples, or exercises, so this excerpt does not support substantive interview questions.",
+    "topics": [
+      "Data engineering career transition",
+      "Data engineering learning roadmap",
+      "SQL",
+      "Python",
+      "Spark and PySpark",
+      "Data warehousing",
+      "Data modeling",
+      "Cloud data services",
+      "ETL",
+      "Scheduling and orchestration",
+      "Messaging"
+    ],
+    "subtopics": [
+      "Basic SQL syntax",
+      "DDL",
+      "DML",
+      "DCL",
+      "Joins and subqueries",
+      "Views and indexes",
+      "CTEs and window functions",
+      "Python fundamentals",
+      "NumPy",
+      "Pandas",
+      "RDDs",
+      "DataFrames",
+      "Datasets",
+      "Spark Streaming",
+      "Optimization techniques",
+      "OLAP and OLTP",
+      "Star schema",
+      "Snowflake schema",
+      "Fact tables",
+      "Dimension tables",
+      "Slowly Changing Dimensions",
+      "Merging and pull requests",
+      "Git hooks",
+      "Pipeline configuration",
+      "Infrastructure as Code",
+      "NoSQL databases",
+      "Relational databases",
+      "Data warehousing",
+      "Scheduling and orchestration",
+      "Messaging",
+      "ETL services",
+      "Storage services",
+      "Data processing services"
+    ],
+    "concepts": [
+      "SQL",
+      "Python",
+      "Spark and PySpark",
+      "OLTP and OLAP",
+      "Data modeling",
+      "Cloud data services",
+      "Named learning resources"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Transition and Skills Roadmap",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "Spark",
+      "Data Warehousing",
+      "Data Modeling",
+      "CI/CD",
+      "Cloud Platforms",
+      "ETL and Orchestration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:aa3afbc3ac361a7b",
+    "saved_date": "2026-10-01T23:24:58Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

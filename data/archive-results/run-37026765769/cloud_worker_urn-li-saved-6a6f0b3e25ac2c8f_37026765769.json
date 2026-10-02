@@ -1,0 +1,48 @@
+{
+  "id": "urn-li-saved-6a6f0b3e25ac2c8f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338527952621445120",
+    "captured_at": "2026-10-02T00:15:48.333026Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:06Z"
+  },
+  "original_text": "• 1st\nWrites to 14K+ | Data Engineer | @Tredence Inc. | Certified Databricks Data Engineer | Azure Data Engineer | Snowflake | SQL | Pyspark | Python | ADF | ETL | Airflow |\n1yr •\nHere's interesting SQL question which was asked in interview of 'Google'\nGot better solution? Let me know in comments.\n➕ Do Follow Akhil Rachuri For more Data Engineering content\nBetter reach: Vaishnavi MURALIDHAR Shubham Wadekar Ankita Gulati Ankur Bhattacharya Ankur Ranjan Sumit Mittal Karthik K. Deepak Goyal Sagar Prajapati Shashank Mishra 🇮🇳 Prashant Kumar Pandey Zach Wilson Rajat Gajbhiye Abhishek Jha Andreas Kretz Gowtham SB Robert Sahlin Deepanshu Kalra Gayathri Kannan\ncredit: Ajinkya Gurav\n#dataengineering #databricks #bigdata #datamining #analytics #sql #cloudcomputing #interview #databricks #azuresynapse #usa #powerbi #adls #azuredatabricks #dataengineering #azure #azuredataengineer #azuredatabricks #spark #sparksql #sql #uk #bigdata #dataanalytics #azuredatafactory #europe #deltalake #deltatable #connections #techlake #azuredataengineer #interview #azuredevops #clouddata #jobsforfreshers #aws #gcp #connection #engineering #dataengineer #clouddata #microsoft #pyspark #python #linkedinlearning #data #lakehouse #datawarehouse #hiring #jobs #azurecloud #dataengineering #adf #datafactory #europeanunion #interviewpreparation #data #dataengineering #spark #apachespark #performancetuning #sparkoptimization\n…see more\nGoogle",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338527952621445120_slide_0.jpg",
+      "description": "PNG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional Data Engineering post claims to feature an SQL question asked in a Google interview, but it does not include the question, a solution, or any extracted media text. The remaining content consists of professional credentials, tagged names, and technology-related hashtags.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6a6f0b3e25ac2c8f",
+    "saved_date": "2026-10-01T23:16:06Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338527952621445120",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338527952621445120_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7338527952621445120_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "urn-li-archive-c7812291ac93dd56",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.246437Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:56Z"
+  },
+  "original_text": "SQL Got Me 45 LPA Data Engineering Offer from one of the Big Giants...\n(Here is my Experience for you)\n\nI recently interviewed for a Senior DE role and here’s what Round 1 looked like\n\n🔍 SQL Interview Questions I Faced:\n1. Find the top 3 transactions per user based on amount.\n2. Deduplicate records by user_id, keeping the latest timestamp.\n3. Difference between NOT EXISTS vs LEFT JOIN IS NULL—performance-wise?\n4. Identify users who had gaps > 7 days between logins.\n5. Get rolling 7-day transaction sums per user (window function).\n6. Find products with zero sales for 3 consecutive days.\n7. Identify churned users who haven’t transacted in 30+ days.\n8.Query for first purchase per region using RANK().\n9.Explain how indexing works on composite keys.\n10.Write a query that performs better without using DISTINCT.\n\n📚 FREE SQL Resources That Actually Helped:\n✅ StrataScratch – SQL on real-world datasets: https://lnkd.in/g5UMSA_v\n✅ LeetCode SQL Problems (sorted by difficulty): https://lnkd.in/gZ5tsJqg\n✅ Mode Analytics – SQL Tutorial & Window Functions Game: https://lnkd.in/gEW3QEzx\n✅ 8-hr SQL Crash Course on YouTube (Alex The Analyst): https://lnkd.in/gKPxYX9S\n\nMost people prepare Spark + Airflow. But if SQL breaks you...\n\nFollow this process to ace your interviews...\n\n#repost or #comment for better reach\n\n#DataEngineering #SQL #InterviewPrep #CareerGrowth #TechInterviews #BigData",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied text is a Round 1 Senior Data Engineering interview post centered on SQL. Its title states that SQL helped secure a 45 LPA offer, and the body lists ten exercises involving top-three transactions, latest-record deduplication, NOT EXISTS versus LEFT JOIN IS NULL, temporal activity analysis, rolling sums, zero-sales streaks, churn detection, RANK(), composite-key indexing, and avoiding DISTINCT. It also names StrataScratch, LeetCode, Mode Analytics, and an eight-hour Alex The Analyst SQL course as preparation resources. No query solutions, performance conclusions, indexing explanation, or preparation process are provided, so the content is a question and resource list rather than a complete tutorial.",
+    "topics": [
+      "SQL interview preparation",
+      "SQL query patterns",
+      "SQL window functions",
+      "Temporal activity analysis",
+      "SQL performance and indexing",
+      "SQL learning resources"
+    ],
+    "subtopics": [
+      "Top-three transactions per user",
+      "Deduplication by latest timestamp",
+      "NOT EXISTS versus LEFT JOIN IS NULL",
+      "User login-gap detection",
+      "Rolling seven-day transaction sums",
+      "Consecutive zero-sales days",
+      "Thirty-day user churn detection",
+      "First purchase per region with RANK()",
+      "Composite-key indexing",
+      "Performance without DISTINCT"
+    ],
+    "concepts": [
+      "Top-N transactions per user",
+      "Latest-record deduplication",
+      "NOT EXISTS versus LEFT JOIN IS NULL",
+      "Login-gap detection",
+      "Rolling seven-day transaction sums",
+      "Consecutive zero-sales detection",
+      "Thirty-day user churn detection",
+      "First purchase per region",
+      "Composite-key indexing",
+      "SQL practice resources"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write a SQL query to find the top three transactions per user based on amount?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query limits the result to at most three transactions for each user.\nThe selected transactions have the largest amounts within their own user."
+    },
+    {
+      "question": "How would you deduplicate records by user_id while keeping the row with the latest timestamp?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The output contains one retained record per user_id.\nWhen duplicate user_id rows exist, the retained record has the latest timestamp."
+    },
+    {
+      "question": "How can you identify users whose gaps between login events exceed seven days?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The calculation is based on gaps between successive login events for each user.\nA user is returned when at least one interval is greater than seven days."
+    },
+    {
+      "question": "How would you calculate rolling seven-day transaction sums for each user with a window function?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses a window function.\nThe result calculates transaction totals over a rolling seven-day period for each user."
+    },
+    {
+      "question": "How would you find products with zero sales on three consecutive days?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer checks product sales by day.\nIt identifies three adjacent dates whose sales values are all zero."
+    },
+    {
+      "question": "How would you identify churned users who have not transacted for 30 or more days?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer determines the time since each user's latest transaction.\nUsers with inactivity of 30 days or more are classified as churned."
+    },
+    {
+      "question": "How would you use RANK() to find the first purchase in each region?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses RANK() to order purchases within each region.\nIt selects the purchase ranked first for every region."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Interview Preparation",
+    "secondary_topics": [
+      "SQL Query Patterns",
+      "Window Functions",
+      "Temporal Analysis",
+      "Churn Detection",
+      "SQL Performance",
+      "Indexing",
+      "Practice Resources"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c7812291ac93dd56",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

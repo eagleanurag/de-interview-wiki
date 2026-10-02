@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-saved-f106e46cc564f5eb",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348939055495098368",
+    "captured_at": "2026-10-02T00:15:53.213997Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:04Z"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\n𝐔𝐧𝐝𝐞𝐫𝐬𝐭𝐚𝐧𝐝𝐢𝐧𝐠 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐢𝐧 𝐃𝐚𝐭𝐚𝐛𝐫𝐢𝐜𝐤𝐬\n𝐖𝐡𝐚𝐭 𝐢𝐬 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐢𝐧𝐠?\nUnit testing is a method used to test individual components of your code in isolation to ensure they work as expected.\nWhy is it Important?\n1️⃣ Detects issues at the component level before integrating them into larger systems.\n2️⃣ Ensures functionality, boosting the reliability of your pipelines.\n3️⃣ Prevents breaking changes during updates by acting as a safety net.\n4️⃣ Encourages confident code modifications without fear of introducing errors.\nHow to Implement It?\nLearn step-by-step implementation with practical examples in Databricks.\n🔗 Follow Abhishek Agrawal for more such content.\n📥 Download the PDF to dive deeper into unit testing!\n🔗 𝑱𝒐𝒊𝒏 𝒐𝒖𝒓 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒕𝒐 𝒔𝒕𝒂𝒚 𝒖𝒑𝒅𝒂𝒕𝒆𝒅 𝒐𝒏 𝑫𝒂𝒕𝒂 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓𝒊𝒏𝒈!\nhttps://lnkd.in/dUuscrch 📲\n#unittesting #software #Databricks #azure #cloud #spark #dataengineering\n…see more\nunit testing",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348939055495098368_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post defines unit testing as testing individual code components in isolation to verify that they work as expected. It states that unit testing detects component-level issues before integration, verifies functionality and pipeline reliability, helps prevent breaking changes, and supports confident code modifications. Although it promotes practical unit-testing examples for Databricks and a downloadable PDF, the supplied content does not include the actual implementation steps or examples.",
+    "topics": [
+      "Unit testing",
+      "Databricks",
+      "Data pipeline reliability"
+    ],
+    "subtopics": [
+      "Testing individual components in isolation",
+      "Detecting issues before system integration",
+      "Verifying code functionality",
+      "Preventing breaking changes during updates"
+    ],
+    "concepts": [
+      "Unit testing",
+      "Component-level issue detection",
+      "Functional verification",
+      "Data pipeline reliability",
+      "Change safety"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is unit testing, and what level of a system does it test?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Unit testing evaluates individual code components in isolation.\nThe purpose is to verify that each component works as expected."
+    },
+    {
+      "question": "Why is unit testing useful before integrating components into a larger data pipeline?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "It can detect problems at the component level before integration into a larger system.\nIt helps validate functionality and improve pipeline reliability."
+    },
+    {
+      "question": "How can unit testing reduce the risk of breaking changes during an update?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Unit tests can act as a safety net when code is modified.\nThey can identify behavior that no longer works as expected before the change is fully adopted."
+    },
+    {
+      "question": "Why can unit testing increase confidence when engineers modify Databricks code?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Testing individual components helps engineers verify expected behavior before integration.\nIdentifying failures early can reduce concern about introducing errors into data pipelines."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "Unit testing",
+    "secondary_topics": [
+      "Databricks",
+      "Data pipeline reliability",
+      "Software testing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f106e46cc564f5eb",
+    "saved_date": "2026-10-01T23:12:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348939055495098368",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348939055495098368_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}

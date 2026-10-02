@@ -1,0 +1,84 @@
+{
+  "id": "urn-li-saved-585a43127fc8fad4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339535672422055936",
+    "captured_at": "2026-10-02T00:15:47.825955Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:58Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Python, SQL, PySpark, Azure Data Factory (ADF), Databricks, Delta Lake | Scalable Data Pipelines, ETL/ELT, Data Analytics Solutions\n1yr •\n🚫 Your SQL query looks fine... but is it secretly costing you time and compute? 💸\nI just dropped a deep-dive PDF guide breaking down one of the most commonly misunderstood performance questions in SQL:\n🔍 EXISTS vs IN – Which One Should You Use?\n✨ Real-world examples\n✨ Interview tips\n✨ Performance tuning across engines like Spark, BigQuery & Synapse\n✨ How NULLs can break your logic silently\n✨ When to use LEFT SEMI JOIN in Spark instead\n📌 This isn’t just theory. I’ve seen this mistake tank query performance in real production pipelines — and it's a favorite interview question at companies like Oracle and Capgemini , Accenture.\n✅ TL;DR:\nUse EXISTS when working with large, dynamic, or NULL-prone datasets.\nUse IN only when you're sure the list is small, static, and clean.\n📥 Download the PDF below if you're a Data Engineer, Analyst, or SQL learner who wants to stop guessing and start optimizing.\n👇 Drop a \"SQL 🔥\" in the comments if you’d like a version with query plan visuals too!\n#SQL #DataEngineering #InterviewPrep #PerformanceTuning #Azure #BigQuery #SparkSQL #ArzanishYusufNadeem\ns1",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339535672422055936_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post advertises a PDF about SQL query optimization but does not include the PDF's technical examples, query plans, or extracted media text. It recommends EXISTS for large, dynamic, or NULL-prone datasets and IN for lists that are small, static, and clean. It also warns that NULLs can silently break query logic, claims that apparently correct queries can waste time and compute, and mentions LEFT SEMI JOIN as a Spark option without explaining its conditions or behavior.",
+    "topics": [
+      "SQL query optimization",
+      "EXISTS versus IN",
+      "NULL-related query correctness",
+      "Spark LEFT SEMI JOIN",
+      "SQL performance tuning",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Choosing predicates based on dataset size and stability",
+      "NULL-related logic risks",
+      "Query runtime and compute cost",
+      "Performance tuning across Spark, BigQuery, and Synapse"
+    ],
+    "concepts": [
+      "EXISTS",
+      "IN",
+      "LEFT SEMI JOIN",
+      "NULL-aware query logic",
+      "SQL performance tuning"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, when should EXISTS be preferred over IN, and when is IN appropriate?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post recommends EXISTS for large, dynamic, or NULL-prone datasets.\nThe post recommends IN only when the list is small, static, and clean."
+    },
+    {
+      "question": "What correctness and performance risks does the post associate with choosing SQL predicates without careful evaluation?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The post warns that NULL values can silently break query logic.\nThe post says an apparently correct query can still waste time and compute.\nThe supplied content does not include concrete failure examples, query plans, or performance measurements."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL query performance optimization",
+    "secondary_topics": [
+      "EXISTS versus IN",
+      "NULL-related query correctness",
+      "Spark semi joins",
+      "SQL interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:585a43127fc8fad4",
+    "saved_date": "2026-10-01T23:19:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339535672422055936",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339535672422055936_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  }
+}

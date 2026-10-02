@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-saved-b17d02ea817b6d91",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343477662515892224",
+    "captured_at": "2026-10-02T00:15:50.785778Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:24Z"
+  },
+  "original_text": "AWS Certified Data Engineer | 4 Years Experience | SQL | Python | ETL | PySpark | Spark SQL | AWS | Data Warehousing\n1yr •\n🔥 𝐌𝐚𝐬𝐭𝐞𝐫𝐢𝐧𝐠 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 — 𝐅𝐫𝐨𝐦 𝐅𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐬 𝐭𝐨 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐂𝐨𝐧𝐜𝐞𝐩𝐭𝐬 (𝐌𝐲 𝐂𝐨𝐦𝐩𝐥𝐞𝐭𝐞 𝐆𝐮𝐢𝐝𝐞) 🔥\nAfter spending countless hours working with Apache Spark in real-world data engineering pipelines, I’ve compiled this self-made guide that covers PySpark — from the basics to the most advanced topics.\n📘 𝐖𝐡𝐚𝐭’𝐬 𝐈𝐧𝐬𝐢𝐝𝐞 𝐭𝐡𝐞 𝐆𝐮𝐢𝐝𝐞:\n✅ PySpark Architecture, SparkContext & SparkSession\n✅ RDDs, DataFrames, and Datasets — Deep Dive & Differences\n✅ DAGs, Lineage, Shuffling & Partitioning\n✅ Cache vs Persist, Repartition vs Coalesce\n✅ Broadcast joins, skew mitigation, salting\n✅ Real-world examples, commands, and interview Q&As\n✅ File formats, performance tuning, schema handling\n✅ Spark Submit, Cluster Modes, Deployment Best Practices\n💡 𝐏𝐞𝐫𝐟𝐞𝐜𝐭 𝐟𝐨𝐫:\n✅Data Engineers using Spark in production\n✅Learners preparing for PySpark interviews\n✅Anyone who wants to go from beginner → pro in distributed data processing\n📄 𝐈 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐭𝐡𝐢𝐬 𝐫𝐞𝐬𝐨𝐮𝐫𝐜𝐞 𝐭𝐨 𝐡𝐞𝐥𝐩 𝐩𝐞𝐞𝐫𝐬 𝐧𝐚𝐯𝐢𝐠𝐚𝐭𝐞 𝐭𝐡𝐞 𝐒𝐩𝐚𝐫𝐤 𝐞𝐜𝐨𝐬𝐲𝐬𝐭𝐞𝐦 𝐰𝐢𝐭𝐡 𝐜𝐥𝐚𝐫𝐢𝐭𝐲.\n𝐄𝐯𝐞𝐫𝐲 𝐝𝐚𝐲, 𝐈 𝐝𝐢𝐯𝐞 𝐝𝐞𝐞𝐩𝐞𝐫 𝐢𝐧𝐭𝐨 𝐚𝐧𝐝 𝐬𝐡𝐚𝐫𝐞 𝐤𝐧𝐨𝐰𝐥𝐞𝐝𝐠𝐞 𝐨𝐧:\n🚀 Advanced Data Engineering\n🚀 Python/SQL Optimization\n🚀 AWS Ecosystem & Cloud Solutions\n🚀 Databricks & PySpark\nRepost if you found it useful. Follow Ujjwal Sontakke Jain for #Data related post.\n#PySpark #ApacheSpark #DataEngineering #BigData #ETL #SparkOptimization #SparkSQL #LearningTogether #UjjwalTechTalks #SparkInterviewPrep #DistributedComputing #TechCommunity\n…see more\nMastering_PySpark",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343477662515892224_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post for a self-made PySpark guide rather than the guide's instructional content. It says the resource covers Apache Spark architecture, SparkContext and SparkSession; RDDs, DataFrames, and Datasets; DAGs, lineage, shuffling, and partitioning; cache versus persist; repartition versus coalesce; broadcast joins, skew mitigation, and salting; file formats, schema handling, and performance tuning; and Spark Submit, cluster modes, and deployment best practices. It advertises examples, commands, and interview Q&As, but none are included in the supplied text, so no substantive definitions, techniques, or comparisons can be established from this post alone.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "distributed data processing",
+      "ETL",
+      "Spark performance optimization",
+      "Spark deployment"
+    ],
+    "subtopics": [
+      "PySpark architecture",
+      "SparkContext and SparkSession",
+      "RDDs, DataFrames, and Datasets",
+      "DAGs and lineage",
+      "Shuffling and partitioning",
+      "Cache versus Persist",
+      "Repartition versus Coalesce",
+      "Broadcast joins",
+      "Skew mitigation and salting",
+      "File formats and schema handling",
+      "Spark performance tuning",
+      "Spark Submit and cluster modes",
+      "Deployment best practices"
+    ],
+    "concepts": [
+      "PySpark Architecture",
+      "SparkContext and SparkSession",
+      "RDDs, DataFrames, and Datasets",
+      "DAGs and Lineage",
+      "Shuffling and Partitioning",
+      "Cache versus Persist",
+      "Repartition versus Coalesce",
+      "Broadcast Joins",
+      "Skew Mitigation and Salting",
+      "File Formats and Schema Handling",
+      "Spark Performance Tuning",
+      "Spark Submit, Cluster Modes, and Deployment"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "distributed data processing",
+      "Spark performance optimization",
+      "ETL",
+      "Spark deployment"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b17d02ea817b6d91",
+    "saved_date": "2026-10-01T23:15:24Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343477662515892224",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343477662515892224_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  }
+}
