@@ -57,11 +57,25 @@ jobs:
 
           tracked=$(git ls-files)
 
+          # The match is captured rather than tested in a pipeline
+          # because `grep -q` exits as soon as it finds one, closing the
+          # pipe on printf. Under `set -o pipefail` that SIGPIPE made a
+          # real match report printf's status rather than grep's, so a
+          # tracked credential read as no match and the guard passed on
+          # exactly the input it exists to catch.
+          #
+          # Whether it misfires depends on how far printf got before
+          # grep exited, so it behaves correctly on a handful of tracked
+          # paths and wrongly on a repository's worth. Measured against a
+          # 1,500-path listing, close to this repository's, a tracked
+          # .env was reported clean.
           for pattern in '.env' 'chrome_session' 'linkedin_saved_archive' \
                           'data/incoming/'; do
-            if printf '%s\n' "$tracked" | grep -q "$pattern"; then
+            match=$(printf '%s\n' "$tracked" | grep -- "$pattern" || true)
+
+            if [ -n "$match" ]; then
               echo "::error::a tracked path matches $pattern"
-              printf '%s\n' "$tracked" | grep "$pattern" | head -20
+              printf '%s\n' "$match" | head -20
               exit 1
             fi
           done

@@ -240,6 +240,55 @@ def test_the_secret_guard_names_the_real_paths():
         assert pattern in body, pattern
 
 
+def test_the_tracked_path_guard_cannot_report_a_clean_tree_wrongly():
+    """
+    The guard must be able to fail.
+
+    It was written as ``printf ... | grep -q "$pattern"`` inside an
+    ``if``. ``grep -q`` exits the moment it finds a match, which closes
+    the pipe on ``printf``; under ``set -o pipefail`` the pipeline then
+    reports printf's SIGPIPE status rather than grep's, so the condition
+    is false and the guard passes on exactly the input it exists to
+    catch.
+
+    Whether it misfires depends on how far printf got before grep
+    exited, so it passes on a handful of tracked paths and fails on a
+    repository's worth. Measured against a 1,500-path listing -- close to
+    this repository's -- a tracked ``.env`` was reported clean.
+
+    Asserted structurally because the failure is a shell race that no
+    unit test here can run, but the shape that causes it is knowable:
+    a quiet grep at the end of a pipeline whose status is trusted.
+    """
+
+    document = workflow()
+
+    body = body_of(
+        document["jobs"]["verify"],
+        "Verify no credential or session is tracked",
+    )
+
+    # Comments describe the shell and so may name the construct that is
+    # forbidden; only the shell itself is judged.
+    shell = "\n".join(
+        line
+        for line in body.splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    )
+
+    assert "pipefail" in shell
+
+    # The match is captured, and the capture is tested for emptiness.
+    assert "match=$(printf" in shell
+    assert '[ -n "$match" ]' in shell
+
+    # The quiet form is what closes the pipe early.
+    assert "grep -q" not in shell, (
+        "grep -q exits on the first match and kills printf; capture the "
+        "match instead"
+    )
+
+
 def test_the_tests_may_not_write_into_the_repository():
     document = workflow()
 

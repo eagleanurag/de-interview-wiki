@@ -893,7 +893,12 @@ def test_command_is_non_interactive_and_auto_approved():
 
     executable = command[0]
 
-    assert executable == runner.executable
+    # Compared against the name, not the resolved path: the resolved
+    # path only exists where OpenCode is installed, and asserting on it
+    # made this contract unverifiable on CI. The two agree wherever
+    # OpenCode is present, and executable_name is what build_command
+    # actually uses, so this pins the real rule rather than a proxy.
+    assert executable == runner.executable_name
     assert "opencode" in executable.lower()
 
     assert command[1] == "run"
