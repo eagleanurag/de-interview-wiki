@@ -288,6 +288,46 @@ def test_the_tracked_path_guard_cannot_report_a_clean_tree_wrongly():
         "match instead"
     )
 
+    # Extended regular expressions, explicitly. Plain grep matches basic
+    # ones, where a group is `\(` and `(^|/)` is a run of literal
+    # characters -- which is how an anchored pattern came to match
+    # nothing at all while looking correct.
+    assert "grep -E --" in shell
+
+    # And .env is anchored, because .env.example is tracked on purpose.
+    assert r"'\.env$'" in shell
+
+
+def test_the_tracked_path_guard_patterns_are_anchored_where_it_matters():
+    """
+    `.env.example` must stay trackable; `.env` must not.
+
+    The template is how somebody learns which variables exist without
+    ever holding a value, and flagging it would have pushed somebody
+    towards deleting the one file that explains the setup.
+    """
+
+    document = workflow()
+
+    shell = "\n".join(
+        line
+        for line in body_of(
+            document["jobs"]["verify"],
+            "Verify no credential or session is tracked",
+        ).splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    )
+
+    # Not a bare substring: that matches .env.example, .envrc,
+    # config/environment.yaml and anything else containing the letters.
+    assert r"'\.env$'" in shell
+    assert r"'\.env'" not in shell
+
+    # The things that are never legitimate to track stay as they were.
+    for pattern in ("chrome_session", "linkedin_saved_archive",
+                    "data/incoming/"):
+        assert f"'{pattern}'" in shell, pattern
+
 
 def test_the_tests_may_not_write_into_the_repository():
     document = workflow()

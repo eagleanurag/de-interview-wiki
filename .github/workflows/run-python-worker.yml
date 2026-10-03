@@ -69,9 +69,24 @@ jobs:
           # paths and wrongly on a repository's worth. Measured against a
           # 1,500-path listing, close to this repository's, a tracked
           # .env was reported clean.
-          for pattern in '.env' 'chrome_session' 'linkedin_saved_archive' \
-                          'data/incoming/'; do
-            match=$(printf '%s\n' "$tracked" | grep -- "$pattern" || true)
+          #
+          # Patterns are anchored where a loose match would be wrong.
+          # `.env.example` is tracked deliberately and must stay so: it
+          # is how somebody learns which variables exist without ever
+          # holding a value. Matching `.env` as a substring flagged it
+          # -- and because the SIGPIPE bug above was swallowing the
+          # result, that over-broad pattern had never actually been
+          # exercised until the bug was fixed.
+          #
+          # `\.env$` rather than `(^|/)\.env$` because plain grep
+          # matches basic regular expressions, where a group is written
+          # `\(` and the anchored form silently matched nothing at all.
+          # Ending the path is the whole requirement, and it needs no
+          # group. -E is passed anyway so that a future pattern can use
+          # one without changing the dialect under it.
+          for pattern in '\.env$' 'chrome_session' \
+                          'linkedin_saved_archive' 'data/incoming/'; do
+            match=$(printf '%s\n' "$tracked" | grep -E -- "$pattern" || true)
 
             if [ -n "$match" ]; then
               echo "::error::a tracked path matches $pattern"
