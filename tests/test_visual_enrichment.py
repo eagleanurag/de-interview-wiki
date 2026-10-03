@@ -938,6 +938,7 @@ class TestProcessors:
 
     def test_vision_parses_a_batched_array(self):
         processor = VisionProcessor(client=FakeClient())
+        supply(processor, "a.jpg", "b.jpg")
 
         analyses = processor.analyse(
             [Path("a.jpg"), Path("b.jpg")]
@@ -953,6 +954,7 @@ class TestProcessors:
         """
 
         processor = VisionProcessor(client=FakeClient(single=True))
+        supply(processor, "a.jpg")
 
         analyses = processor.analyse([Path("a.jpg")])
 
@@ -960,6 +962,7 @@ class TestProcessors:
 
     def test_vision_strips_a_markdown_fence(self):
         processor = VisionProcessor(client=FakeClient(fenced=True))
+        supply(processor, "a.jpg")
 
         analyses = processor.analyse([Path("a.jpg")])
 
@@ -978,6 +981,7 @@ class TestProcessors:
         processor = VisionProcessor(
             client=FakeClient(raw='[{"index":0,"visible_text":"a"')
         )
+        supply(processor, "a.jpg", "b.jpg")
 
         with pytest.raises(ValueError, match="not valid JSON"):
             processor.analyse([Path("a.jpg"), Path("b.jpg")])
@@ -986,6 +990,7 @@ class TestProcessors:
         processor = VisionProcessor(
             client=FakeClient(short=True)
         )
+        supply(processor, "a.jpg", "b.jpg")
 
         with pytest.raises(ValueError, match="left out"):
             processor.analyse([Path("a.jpg"), Path("b.jpg")])
@@ -995,6 +1000,42 @@ class TestProcessors:
 
         with pytest.raises(ValueError, match="batch limit"):
             processor.analyse([Path(f"{i}.jpg") for i in range(40)])
+
+    def test_an_answer_without_an_asset_is_refused(self):
+        """
+        Provenance is not optional.
+
+        An analysis that cannot name the file it came from must not be
+        built at all, rather than stored and discovered later. This is
+        the check that would have caught the composite swallowing the
+        assets on the first real run.
+        """
+
+        processor = VisionProcessor(client=FakeClient())
+
+        # Deliberately not calling supply().
+        with pytest.raises(ValueError, match="cannot be given provenance"):
+            processor.analyse([Path("a.jpg")])
+
+    def test_the_composite_forwards_the_assets(self):
+        """
+        The composite is what the orchestrator holds.
+
+        When it swallowed the assets, sixteen batches ran, nothing
+        failed, and nothing was stored.
+        """
+
+        inner = Scripted()
+        composite = CompositeVisualProcessor([inner])
+
+        supply(composite, "a.jpg")
+
+        assert inner.assets.get("a.jpg") is not None
+
+        composite.analyse([Path("a.jpg")])
+
+        assert inner.calls == [["a.jpg"]]
+        assert inner.calls and inner.assets
 
     def test_the_composite_falls_through_to_what_works(self):
         class Broken:
@@ -1028,6 +1069,29 @@ class TestProcessors:
 
         assert "truncated_response" in note
         assert classify(RuntimeError(TRUNCATION)).recoverable
+
+
+def supply(processor, *names: str) -> None:
+    """
+    Hand a processor the assets it is about to read.
+
+    Every real call goes through this, because an answer without an
+    asset cannot be given provenance and must not be stored. Tests that
+    skipped it were testing the parser rather than the stage.
+    """
+
+    processor.set_assets(
+        {
+            name: VisualAsset(
+                path=f"media/{name}",
+                filename=name,
+                sha256=f"{index:064d}",
+                sequence=index,
+                role=AssetRole.SLIDE,
+            )
+            for index, name in enumerate(names)
+        }
+    )
 
 
 class FakeClient:
@@ -1288,10 +1352,15 @@ class TestExtraction:
 
         from src.visual.processor import _to_analysis
 
+        asset = VisualAsset(
+            path="media/a.jpg", filename="a.jpg", sha256="a" * 64
+        )
+
         analysis = _to_analysis(
             {"code": [{"language": "", "code": "x = 1"}]},
             0,
             Path("a.jpg"),
+            assets_by_path={"a.jpg": asset},
         )
 
         assert analysis.code_blocks[0].language is None
@@ -1299,12 +1368,17 @@ class TestExtraction:
     def test_a_diagram_description_is_carried(self):
         from src.visual.processor import _to_analysis
 
+        asset = VisualAsset(
+            path="media/a.jpg", filename="a.jpg", sha256="a" * 64
+        )
+
         analysis = _to_analysis(
             {
                 "diagram": "Source goes to ADF, then ADLS, then Databricks"
             },
             0,
             Path("a.jpg"),
+            assets_by_path={"a.jpg": asset},
         )
 
         assert "ADF" in analysis.diagram_description
@@ -1361,6 +1435,8 @@ class TestExtraction:
             Path("a.jpg"),
             assets_by_path={"a.jpg": asset},
         )
+
+        # Provenance comes from the file, whatever the answer claims.
 
         assert analysis.sequence == 7
         assert analysis.source_asset_hash == "f" * 64
@@ -2062,6 +2138,7 @@ class TestSafety:
         """
 
         processor = VisionProcessor(client=FakeClient())
+        supply(processor, "passwd")
 
         analyses = processor.analyse([Path("/etc/passwd")])
 

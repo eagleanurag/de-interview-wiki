@@ -351,6 +351,16 @@ def _to_analysis(
 
     asset = (assets_by_path or {}).get(path.name)
 
+    if asset is None or not asset.sha256:
+        # Raised here rather than left to fail at the store. An analysis
+        # that cannot name the file it came from is not a degraded
+        # analysis, it is not an analysis, and the whole point of this
+        # stage is that every visual fact traces to a slide.
+        raise ValueError(
+            f"no asset was supplied for {path.name!r}, so this answer "
+            "cannot be given provenance and must not be stored"
+        )
+
     code_blocks = []
 
     for block in entry.get("code") or []:
@@ -381,9 +391,9 @@ def _to_analysis(
         )
 
     return VisualAnalysis(
-        source_asset_hash=asset.sha256 if asset else "",
+        source_asset_hash=asset.sha256,
         source_path=f"media/{path.name}",
-        sequence=asset.sequence if asset else index,
+        sequence=asset.sequence,
         extracted_text=(str(entry.get("visible_text") or "").strip() or None),
         visual_summary=(str(entry.get("summary") or "").strip() or None),
         diagram_description=(str(entry.get("diagram") or "").strip() or None),
@@ -482,6 +492,29 @@ class CompositeVisualProcessor(VisualProcessor):
 
     def available(self) -> bool:
         return any(processor.available() for processor in self.processors)
+
+    def set_assets(self, assets: dict) -> None:
+        """
+        Hand the assets to every processor underneath.
+
+        Forwarded, because the composite is what the orchestrator holds
+        and it was this class that swallowed the assets. Provenance is
+        assembled from them -- a content digest and a sequence, both
+        facts about the file -- so a processor that never receives them
+        cannot supply either, and every analysis came back naming no
+        source at all.
+
+        Found by the first real run over the archive: sixteen batches,
+        no failures reported, and nothing stored, because the store
+        refuses to save an analysis with an empty digest. That refusal
+        is the only reason the problem was visible rather than silent.
+        """
+
+        for processor in self.processors:
+            setter = getattr(processor, "set_assets", None)
+
+            if callable(setter):
+                setter(assets)
 
     def describe(self) -> str:
         return "+".join(
