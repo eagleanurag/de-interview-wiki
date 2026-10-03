@@ -1,0 +1,80 @@
+{
+  "id": "urn-li-saved-89ad03cf7f4808f9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338761969245605889",
+    "captured_at": "2026-10-02T00:15:49.020254Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:53Z"
+  },
+  "original_text": "This resume got me #dataengineering interviews at Microsoft, Amazon, Deloitte, BCG, GS, CoinDCX and more!\n\nRecruiters overlooked my Data Analyst experience, so I had to reshape my resume to break into Data Engineering. I focused on 3 key things:\n\n✅ Optimized for scale: Highlighted projects where I built pipelines handling TBs of data, reduced processing time, or improved system efficiency.\n✅ Tech stack with depth: Focused on Spark, Kafka, Airflow, and cloud (AWS/GCP/Azure) with concrete examples of how I used them to solve problems.\n✅ Business impact: Showed how my work led to faster insights, cost savings, or automation, not just that I built pipelines.\n\nI spent a lot of time on my resume, got it reviewed by multiple people, and kept revising it until I received positive feedback.\n\nIf you're transitioning into Data Engineering, don’t rely on guesswork. It took me almost a year, but if you want faster results and fewer rejections, get help from Senior Data Experts with years of hiring experience.\nConnect with them on a FREE call here: https://lnkd.in/eeUpcUKT\n\nThey will review and optimize your resume, prepare you for interviews, help with job applications and even assist with referrals. Try it out! ⚡\nAll the best!\n\n#dataengineering #resume #paidpartnership #resumetips #datainterviews #jobsearch",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338761969245605889_slide_0.jpg",
+      "description": "JPEG image, 480x679 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional career post describes transitioning from Data Analytics to Data Engineering by reshaping a resume around three areas: evidence of scale or efficiency, depth in a technology stack, and business impact. The technologies named are Spark, Kafka, Airflow, AWS, GCP, and Azure. The author recommends repeated resume review and revision, says the transition took almost a year, and advertises resume-review, interview-preparation, application, and referral services through a paid partnership.",
+    "topics": [
+      "Data engineering career transition",
+      "Resume optimization",
+      "Data engineering interviews",
+      "Job search strategy"
+    ],
+    "subtopics": [
+      "Repositioning Data Analyst experience for Data Engineering roles",
+      "Highlighting terabyte-scale data pipelines",
+      "Presenting processing-time and efficiency improvements",
+      "Demonstrating depth in Spark, Kafka, Airflow, and cloud platforms",
+      "Connecting data engineering work to business outcomes",
+      "Iterative resume review and revision"
+    ],
+    "concepts": [
+      "Data Engineering Resume Repositioning",
+      "Scalability Evidence",
+      "Technology Stack Depth",
+      "Business Impact",
+      "Iterative Resume Refinement"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering Career Development",
+    "primary_topic": "Data Engineering Resume Optimization",
+    "secondary_topics": [
+      "Career Transition",
+      "Data Engineering Interview Preparation",
+      "Technology Stack Presentation",
+      "Business Impact Communication"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:89ad03cf7f4808f9",
+    "saved_date": "2026-10-01T23:20:53Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338761969245605889",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338761969245605889_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b4bb4c0b1a06368530a751331a0f113a7f2cbee2b0301655f6222ab3f3f2a7f4",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

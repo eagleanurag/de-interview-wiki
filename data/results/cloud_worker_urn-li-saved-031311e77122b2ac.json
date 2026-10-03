@@ -1,0 +1,131 @@
+{
+  "id": "urn-li-saved-031311e77122b2ac",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341086920443068416",
+    "captured_at": "2026-10-02T00:15:44.483656Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:25Z"
+  },
+  "original_text": "Databricks Corporate Trainer & Consultant | Microsoft Certified Trainer (MCT) | GenAI, Microsoft Fabric, Azure & Power BI Expert | Founder & CEO | Investor\n1yr •\n🚀 𝗨𝗻𝗹𝗼𝗰𝗸 𝘁𝗵𝗲 𝗣𝗼𝘄𝗲𝗿 𝗼𝗳 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 𝗟𝗮𝗸𝗲𝗵𝗼𝘂𝘀𝗲\nFrom ingestion to AI, the Azure Databricks Data Intelligence Platform simplifies the entire data lifecycle:\n🔹 𝗜𝗻𝗴𝗲𝘀𝘁 & 𝗦𝘁𝗿𝗲𝗮𝗺 with Lakeflow and partner tools\n🔹 𝗤𝘂𝗲𝗿𝘆 𝗘𝘅𝘁𝗲𝗿𝗻𝗮𝗹 𝗦𝗼𝘂𝗿𝗰𝗲𝘀 using Lakehouse & Catalog Federation\n🔹 𝗕𝘂𝗶𝗹𝗱 & 𝗗𝗲𝗽𝗹𝗼𝘆 𝗠𝗟/𝗚𝗲𝗻 𝗔𝗜 with Mosaic AI, AutoML, and MLflow\n🔹 𝗕𝗜 & 𝗦𝗤𝗟 with Databricks SQL, Power BI, and Tableau\n🔹 𝗦𝗲𝗰𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗦𝗵𝗮𝗿𝗶𝗻𝗴 via Delta Sharing & Databricks Marketplace\n🔹 𝗚𝗼𝘃𝗲𝗿𝗻 𝗘𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 through Unity Catalog\nDatabricks on 𝗔𝘇𝘂𝗿𝗲 𝘂𝗻𝗶𝗳𝗶𝗲𝘀 𝗱𝗮𝘁𝗮, 𝗔𝗜, 𝗮𝗻𝗱 𝗮𝗻𝗮𝗹𝘆𝘁𝗶𝗰𝘀 on one scalable platform.\nReady to modernize your stack?\n#AzureDatabricks #Lakehouse #DataEngineering #AI #BigData #BI #MachineLearning #MLOps #GenAI #DataScience #Analytics #DataPlatform #CloudComputing #StreamingData #UnityCatalog #DeltaSharing #PowerBI #AzureData #ModernDataStack\nDatabricks Lakehouse Reference Architectures on AZURE",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341086920443068416_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a high-level promotional overview of the Azure Databricks Data Intelligence Platform on Azure. It says the platform covers the entire data lifecycle and lists ingestion and streaming with Lakeflow and partner tools; external-source querying with Lakehouse and Catalog Federation; building and deploying ML and generative AI with Mosaic AI, AutoML, and MLflow; BI and SQL with Databricks SQL, Power BI, and Tableau; secure data sharing with Delta Sharing and Databricks Marketplace; and governance through Unity Catalog. It claims Databricks on Azure unifies data, AI, and analytics on one scalable platform. The closing line mentions Databricks Lakehouse Reference Architectures on Azure, but the extracted media text is empty, and no architecture details, implementation guidance, configurations, or examples are supplied.",
+    "topics": [
+      "Azure Databricks Data Intelligence Platform",
+      "Data engineering",
+      "Data lifecycle",
+      "Lakehouse",
+      "External-source querying",
+      "Machine learning and generative AI",
+      "Business intelligence and SQL",
+      "Secure data sharing",
+      "Data governance",
+      "Databricks Lakehouse Reference Architectures"
+    ],
+    "subtopics": [
+      "Ingest and stream with Lakeflow and partner tools",
+      "Query external sources using Lakehouse and Catalog Federation",
+      "Build and deploy ML and generative AI with Mosaic AI, AutoML, and MLflow",
+      "BI and SQL with Databricks SQL, Power BI, and Tableau",
+      "Secure data sharing via Delta Sharing and Databricks Marketplace",
+      "Governance through Unity Catalog",
+      "Databricks on Azure unifying data, AI, and analytics on one scalable platform",
+      "Reference architectures on Azure, with no details supplied"
+    ],
+    "concepts": [
+      "Azure Databricks Data Intelligence Platform",
+      "Data lifecycle",
+      "Lakeflow",
+      "Lakehouse",
+      "Catalog Federation",
+      "Mosaic AI",
+      "AutoML",
+      "MLflow",
+      "Databricks SQL",
+      "Power BI",
+      "Tableau",
+      "Delta Sharing",
+      "Databricks Marketplace",
+      "Unity Catalog",
+      "Databricks Lakehouse Reference Architectures"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which tools does the post name for building and deploying ML and generative AI?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post names Mosaic AI, AutoML, and MLflow for building and deploying ML and generative AI."
+    },
+    {
+      "question": "Which tools does the post list for BI and SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post lists Databricks SQL, Power BI, and Tableau for BI and SQL."
+    },
+    {
+      "question": "Which capabilities does the post identify for secure data sharing and governance?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies Delta Sharing and Databricks Marketplace for secure data sharing.\nThe post identifies Unity Catalog for governance."
+    },
+    {
+      "question": "What does the post claim Databricks on Azure unifies?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post claims that Databricks on Azure unifies data, AI, and analytics on one scalable platform."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering and cloud data platforms",
+    "primary_topic": "Azure Databricks Data Intelligence Platform",
+    "secondary_topics": [
+      "Lakehouse",
+      "Data ingestion and streaming",
+      "External-source querying",
+      "Machine learning and generative AI",
+      "Business intelligence and SQL",
+      "Secure data sharing",
+      "Data governance",
+      "Databricks Lakehouse reference architectures"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:031311e77122b2ac",
+    "saved_date": "2026-10-01T23:18:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341086920443068416",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341086920443068416_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "6c8750ab28e8c81c1246f1261e4b2baccb2471b544a86f02f99d062eff0b3f95",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data ingestion and streaming"
+      ],
+      "concepts": [],
+      "questions": [
+        "Which capabilities does the post associate with ingestion and streaming, and which with querying external sources?"
+      ]
+    }
+  }
+}

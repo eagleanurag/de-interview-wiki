@@ -1,0 +1,91 @@
+{
+  "id": "urn-li-saved-b0d924537ed21a07",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346070545882337280",
+    "captured_at": "2026-10-02T00:15:50.717501Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:40Z"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : IBM \n\n#PySpark Interview Question — Solution\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nYou are working as a Data Engineer for a company. The sales team has provided you with a dataset containing sales information. However, the data has some missing values that need to be addressed before processing. You are required to perform the following tasks:\n1. Load the following sample dataset into a PySpark DataFrame:\n\n2. Perform the following operations:\na. Replace all NULL values in the Quantity column with 0.\nb. Replace all NULL values in the Price column with the average price of the existing data.\nc. Drop rows where the Product column is NULL.\nd. Fill missing Sales_Date with a default value of '2025-01-01'.\ne. Drop rows where all columns are NULL.\n\n\n𝐬𝐜𝐡𝐞𝐦𝐚 \ndata = [ (1, \"Laptop\", 10, 50000, \"North\", \"2025-01-01\"), (2, \"Mobile\", None, 15000, \"South\", None), (3, \"Tablet\", 20, None, \"West\", \"2025-01-03\"), (4, \"Desktop\", 15, 30000, None, \"2025-01-04\"), (5, None, None, None, \"East\", \"2025-01-05\") ] columns = [\"Sales_ID\", \"Product\", \"Quantity\", \"Price\", \"Region\", \"Sales_Date\"]\n\n\nKarthik K. Seekho Bigdata Institute\nStart Your Data Engineering Career Today!\nLearn Big Data, Spark, AWS, and more.\nExplore the Full Syllabus & Course Details: seekhobigdata.com\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346070545882337280_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents an incomplete PySpark interview prompt that supplies five sales records and six DataFrame columns. The required cleaning operations are to replace missing Quantity values with 0, replace missing Price values with the available average price, remove rows with a missing Product, fill missing Sales_Date values with '2025-01-01', and remove rows in which every column is NULL. No implementation or completed solution is shown.",
+    "topics": [
+      "PySpark DataFrames",
+      "Missing-value handling",
+      "Sales data cleaning"
+    ],
+    "subtopics": [
+      "Loading tuples into a DataFrame",
+      "Replacing NULL values with constants",
+      "Replacing a missing numeric value with an average",
+      "Dropping rows with a missing Product",
+      "Applying a default date",
+      "Dropping all-NULL rows"
+    ],
+    "concepts": [
+      "PySpark DataFrame",
+      "Quantity NULL replacement",
+      "Price average replacement",
+      "Product-based row filtering",
+      "Sales_Date default value",
+      "All-NULL row filtering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you implement the required missing-value handling for the supplied sales dataset in PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer defines a DataFrame using the six supplied column names.\nThe answer replaces NULL Quantity values with 0 and missing Sales_Date values with '2025-01-01'.\nThe answer replaces a NULL Price with the average calculated from the available non-NULL Price values.\nThe answer drops rows with a NULL Product and also applies the required all-NULL row filter."
+    },
+    {
+      "question": "Which specific records or values are affected by the cleaning operations in the sample dataset?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The Mobile record receives a Quantity of 0 and a Sales_Date of '2025-01-01'.\nThe Tablet record receives an average Price calculated from the available Price values of 50000, 15000, and 30000.\nThe record with Sales_ID 5 is removed because its Product is NULL.\nNo supplied row is removed by the all-NULL rule because every sample row contains at least one non-NULL value.\nThe NULL Region in the Desktop record is not changed because the prompt gives no Region-cleaning operation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame missing-value handling",
+    "secondary_topics": [
+      "Data cleaning",
+      "Sales data preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b0d924537ed21a07",
+    "saved_date": "2026-10-01T23:13:40Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346070545882337280",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346070545882337280_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "adb51c36e6b7d219d5d6bc131faae6c73733ec75e1a913bf46567d73be5895e8",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

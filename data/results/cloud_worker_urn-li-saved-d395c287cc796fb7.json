@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-d395c287cc796fb7",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340261895330852864",
+    "captured_at": "2026-10-02T00:15:52.101138Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:04Z"
+  },
+  "original_text": "Manager Analytics & Data Science||Trainer ||207k LinkedIn ||210k Instagram || 50M+ Impressions || Click “Follow” to learn Data Analytics & Data Science daily ||DM for Collaborations\n1yr •\nComprehensive Guide to Pandas: Data Manipulation and Analysis\nThis PDF provides a thorough exploration of the Pandas library, a powerful tool for data analysis in Python. It includes detailed explanations of key features such as data structures, indexing, and data cleaning techniques. Readers will find practical examples and hands-on exercises that demonstrate how to manipulate and analyze datasets effectively. Whether you are a beginner or looking to enhance your data analysis skills, this guide offers valuable insights and best practices for leveraging Pandas in real-world applications\nPS : If you want to learn data analytics from me ( paid ) then you can connect with me here : https://lnkd.in/gZBCK5T2\nData Analysts Community : https://lnkd.in/dqrdbCqw\nPdf credit goes to respective owner\nFollow Ajay Y. for more resources\nPandas Notes",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340261895330852864_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A brief promotional post describes a PDF guide to Pandas, a Python library for data analysis. The advertised guide covers Pandas data structures, indexing, data cleaning, data manipulation, and dataset analysis through examples and exercises, but the supplied content does not include the guide's actual technical details or notes.",
+    "topics": [
+      "Pandas",
+      "Data analysis with Python",
+      "Data manipulation"
+    ],
+    "subtopics": [
+      "Pandas data structures",
+      "Indexing",
+      "Data cleaning techniques",
+      "Dataset analysis"
+    ],
+    "concepts": [
+      "Pandas",
+      "Pandas data structures",
+      "Indexing",
+      "Data cleaning techniques",
+      "Data manipulation and analysis"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is Pandas, and what data analysis tasks is it presented as supporting?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Pandas is a Python library used for data analysis.\nThe post associates Pandas with manipulating and analyzing datasets."
+    },
+    {
+      "question": "Which technical subjects does the advertised Pandas guide say it covers?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The guide covers Pandas data structures, indexing, and data cleaning techniques.\nThe guide includes practical examples and hands-on exercises for manipulating and analyzing datasets."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Pandas",
+    "secondary_topics": [
+      "Data analysis with Python",
+      "Data manipulation",
+      "Data cleaning",
+      "Indexing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d395c287cc796fb7",
+    "saved_date": "2026-10-01T23:19:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340261895330852864",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340261895330852864_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "519e16f01dd5aad4be42bed8ecd3d1aff257d57f5e2568b758df78f599306b24",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

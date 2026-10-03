@@ -1,0 +1,147 @@
+{
+  "id": "urn-li-archive-ce10384857368251",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.270553Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:56Z"
+  },
+  "original_text": "🚀 Crack PySpark + Databricks Interviews with Confidence!\n\nHere are some of the most commonly asked scenario-based questions that every Data Engineer should be ready for 👇\n\n🔹 How do you handle schema evolution in Delta Lake tables?\n🔹 How to implement Slowly Changing Dimension (SCD Type 2) using PySpark in Databricks?\n🔹 How do you optimize a Spark job running slow in Databricks?\n🔹 How do you implement merge (upsert) operations in Delta Lake?\n🔹 How to perform time travel in Delta tables?\n🔹 How do you handle data quality validations in a PySpark pipeline?\n🔹 How to handle duplicate records before writing to a Delta table?\n🔹 How do you manage partitioning and clustering in Delta Lake for performance?\n🔹 How do you schedule and monitor jobs in Databricks Workflows?\n🔹 How to integrate Azure Data Factory (or Airflow) with Databricks notebooks?\n\n\n#Databricks #PySpark #DeltaLake #BigData #ApacheSpark #DataEngineering #ETL #InterviewQuestions #LinkedInTech\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A scenario-based Data Engineering interview post focused on PySpark, Databricks, and Delta Lake. It lists questions about schema evolution, SCD Type 2, slow Spark jobs, merge and upsert operations, time travel, data quality, duplicate records, partitioning, clustering, workflows, and integration with Azure Data Factory or Airflow. The visible content provides no answers, code, implementation steps, or configuration details, and it appears truncated after an ellipsis.",
+    "topics": [
+      "PySpark",
+      "Databricks",
+      "Delta Lake",
+      "Apache Spark",
+      "Azure Data Factory",
+      "Airflow",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Delta Lake schema evolution",
+      "Slowly Changing Dimension Type 2",
+      "Spark job performance optimization",
+      "Delta Lake merge and upsert operations",
+      "Delta Lake time travel",
+      "PySpark data quality validation",
+      "Duplicate record handling",
+      "Partitioning and clustering",
+      "Databricks Workflows",
+      "Databricks notebook integration"
+    ],
+    "concepts": [
+      "Schema evolution",
+      "Slowly Changing Dimension Type 2",
+      "Delta Lake merge and upsert",
+      "Delta Lake time travel",
+      "Data quality validation",
+      "Duplicate record handling",
+      "Partitioning and clustering",
+      "Databricks job scheduling and monitoring",
+      "Databricks integration with external orchestrators"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you handle schema evolution in Delta Lake tables?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how schema evolution is handled in Delta Lake tables."
+    },
+    {
+      "question": "How would you implement Slowly Changing Dimension Type 2 using PySpark in Databricks?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to implement an SCD Type 2 solution with PySpark in Databricks."
+    },
+    {
+      "question": "How do you optimize a Spark job that is running slowly in Databricks?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to diagnose and optimize a slow Spark job in Databricks."
+    },
+    {
+      "question": "How do you implement merge or upsert operations in Delta Lake?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how merge and upsert operations are implemented in Delta Lake."
+    },
+    {
+      "question": "How do you perform time travel in Delta tables?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how time travel is performed in Delta tables."
+    },
+    {
+      "question": "How do you handle data quality validations in a PySpark pipeline?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how data quality validations are incorporated into a PySpark pipeline."
+    },
+    {
+      "question": "How do you handle duplicate records before writing to a Delta table?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how duplicate records are handled before a write to a Delta table."
+    },
+    {
+      "question": "How do you manage partitioning and clustering in Delta Lake for performance?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how partitioning and clustering are managed for Delta Lake performance."
+    },
+    {
+      "question": "How do you schedule and monitor jobs in Databricks Workflows?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how jobs are scheduled and monitored with Databricks Workflows."
+    },
+    {
+      "question": "How do you integrate Azure Data Factory or Airflow with Databricks notebooks?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how Azure Data Factory or Airflow is integrated with Databricks notebooks."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark and Databricks scenario-based interview preparation",
+    "secondary_topics": [
+      "Delta Lake operations",
+      "Data quality validation",
+      "Duplicate record handling",
+      "Partitioning and clustering",
+      "Workflow scheduling and monitoring",
+      "Orchestration integration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ce10384857368251",
+    "saved_date": "2026-10-01T23:09:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "899a835331e7f6c946f8a6b678906e57b13b60fd637e6736a9c1923da7e94489",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Spark job performance optimization"
+      ],
+      "questions": []
+    }
+  }
+}

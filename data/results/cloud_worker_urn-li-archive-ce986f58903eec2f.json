@@ -1,0 +1,107 @@
+{
+  "id": "urn-li-archive-ce986f58903eec2f",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.304093Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:10Z"
+  },
+  "original_text": "🔐 🚀 #2nd technical round #EPAM\n⚖️ Posting the #second half of the interview\n#Interview completed in perfect 85 mins\n1️⃣ Delta lake and properties\n2️⃣ Datawarehouse vs Datalake\n3️⃣ Join strategies in spark.\n4️⃣ Caching and persist\n5️⃣ Parquet file vs csv file.\n6️⃣ Predicate pushdown possible in csv file or not ?\n7️⃣ Predicate pushdown and projection pruning\n8️⃣ Deployment questions using azure devops and git\n9️⃣ Unit testing using pytest.\n🔟 Azure key vault and unity catalog purpose\n1️⃣ 1️⃣ Python coding:\ndictionary {a:10,b:25,c:28}\nreturn the key with maximum value\noutput:\"c\"\nSolved using two approaches :\n🥇 Using normal dictionary logic \n🥈 Using dictionary comprehensions\n\n1️⃣ 2️⃣ How do you work on slow performing spark job ?\n1️⃣ 3️⃣ How many unity catalogs you have implemented ?\n\n➕ These are the questions asked in the 2nd technical round.\nInterview seemed easier than 1st round.\n\n🗝️ 😀 Do follow Apurva Gawande for more content \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post is a recap of an EPAM second technical round reported as lasting 85 minutes. It lists questions about Delta Lake properties, data warehouses versus data lakes, Spark joins, caching and persistence, Parquet versus CSV, predicate pushdown, projection pruning, Azure DevOps and Git deployment, pytest, Azure Key Vault, Unity Catalog, and slow Spark jobs. It also includes a Python dictionary task whose expected output is \"c\". The post does not provide technical answers, implementation code, specific Delta Lake properties, troubleshooting steps, or the number of Unity Catalog implementations.",
+    "topics": [
+      "Delta Lake",
+      "Data warehouses and data lakes",
+      "Spark",
+      "Parquet and CSV",
+      "Predicate pushdown and projection pruning",
+      "Azure DevOps and Git deployment",
+      "pytest unit testing",
+      "Azure Key Vault and Unity Catalog",
+      "Python dictionary processing",
+      "Spark performance troubleshooting"
+    ],
+    "subtopics": [
+      "Delta Lake properties",
+      "Data warehouse versus data lake",
+      "Spark join strategies",
+      "Spark caching and persist",
+      "Parquet file versus CSV file",
+      "Predicate pushdown for CSV files",
+      "Relationship between predicate pushdown and projection pruning",
+      "Deployment using Azure DevOps and Git",
+      "Unit testing with pytest",
+      "Purpose of Azure Key Vault",
+      "Purpose of Unity Catalog",
+      "Number of Unity Catalog implementations",
+      "Finding the key with the maximum dictionary value",
+      "Approaches for a slow-performing Spark job"
+    ],
+    "concepts": [
+      "Delta Lake properties",
+      "Spark join strategies",
+      "Spark caching and persist",
+      "Parquet file versus CSV file",
+      "Predicate pushdown for CSV files",
+      "Projection pruning",
+      "Azure DevOps and Git deployment",
+      "pytest unit testing",
+      "Azure Key Vault purpose",
+      "Unity Catalog purpose",
+      "Unity Catalog implementation count",
+      "Maximum-value dictionary lookup",
+      "Slow Spark job troubleshooting"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given the Python dictionary {\"a\": 10, \"b\": 25, \"c\": 28}, return the key with the maximum value.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The correct output is \"c\" because it is associated with the largest value, 28.\nThe post reports that the task was solved using normal dictionary logic and a dictionary comprehension, although it does not show either implementation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Lake",
+    "secondary_topics": [
+      "Delta Lake properties",
+      "Data warehouse versus data lake",
+      "Spark joins, caching, persistence, and performance",
+      "Parquet and CSV",
+      "Predicate pushdown and projection pruning",
+      "Azure DevOps and Git deployment",
+      "pytest unit testing",
+      "Azure Key Vault and Unity Catalog",
+      "Python dictionary processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ce986f58903eec2f",
+    "saved_date": "2026-10-01T23:19:10Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5254b2df14cd0cb5052c15b9bd223fc976acffc2d4c73bd1a936cb5f452fd0d9",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Data warehouse versus data lake"
+      ],
+      "questions": []
+    }
+  }
+}

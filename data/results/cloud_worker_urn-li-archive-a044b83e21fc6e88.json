@@ -1,0 +1,66 @@
+{
+  "id": "urn-li-archive-a044b83e21fc6e88",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.016037Z",
+    "author": "Renuka Srivastava",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:41Z"
+  },
+  "original_text": "Hi everyone, I recently came across an interesting data engineering coding question in an interview. I thought it would be valuable to share it here and see the different ways it can be solved using SQL or PySpark.\nFeel free to share your approach in the comments! I'll be posting my solution shortly.\n\ndataA=[(21,),(54,),(34,),(45,),(47,),(90,),(100,)]\ndataB=[('A',),('B',),('C',),('K',),('E',),('F',),('G',)]\n\nresult expected:\nresult_df=[(21,'A'),(54,'B'),(34,'C'),(45,'K'),(47,'E'),(90,'F'),(100,'G')]",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a data engineering coding problem involving two single-column datasets: dataA contains seven integers, while dataB contains seven character labels. The expected result pairs values by their corresponding row positions, producing a two-column DataFrame with seven rows. The author mentions SQL and PySpark as possible implementation options but does not provide a solution.",
+    "topics": [
+      "SQL",
+      "PySpark",
+      "row-wise data pairing",
+      "coding interviews"
+    ],
+    "subtopics": [
+      "pairing ordered single-column datasets",
+      "creating a two-column DataFrame"
+    ],
+    "concepts": [
+      "Positional record pairing",
+      "Single-column input datasets",
+      "Two-column result DataFrame"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Using either SQL or PySpark, how would you produce result_df by combining dataA and dataB?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution must pair each value in dataA with the value at the same row position in dataB.\nThe output must contain seven rows and two columns, beginning with (21, 'A') and ending with (100, 'G').\nThe pairing must follow the displayed sequence, including 34 with C, 45 with K, 47 with E, and 90 with F."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Positional pairing of two single-column datasets",
+    "secondary_topics": [
+      "SQL",
+      "PySpark",
+      "DataFrame transformation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a044b83e21fc6e88",
+    "saved_date": "2026-10-01T23:27:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "37d4df247763debb362e5938197089a368a3141618549930002c58471a052e7f",
+    "enricher_version": "3"
+  }
+}

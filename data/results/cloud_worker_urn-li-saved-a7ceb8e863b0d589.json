@@ -1,0 +1,108 @@
+{
+  "id": "urn-li-saved-a7ceb8e863b0d589",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326463455274668032",
+    "captured_at": "2026-10-02T00:15:50.403335Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:41Z"
+  },
+  "original_text": "🚨 PySpark Red Flags in Interviews\n🚫 Don’t say these in interviews 👇\n\n❌ “I use PySpark like Pandas.”\n ✅ PySpark is lazy, distributed, and works in a cluster context.\n\n❌ “I use collect() to get data to my machine.”\n ✅ Dangerous! Use show(), take(), or better, write output to storage.\n\n❌ “I always use groupBy().”\n ✅ Try reduceByKey() or agg() smartly to optimize shuffles.\n\n🔥 Say this instead:\n “I always check the query plan with explain() and tune based on partition skew or stage bottlenecks.”\n\n📌 Note to self: Avoid red flags = Extra brownie points!\n\n#InterviewMistakes #PySparkRealityCheck #DataEngineerInterviews",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326463455274668032_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This brief PySpark interview checklist warns against describing PySpark as equivalent to Pandas, using collect() to move data to a local machine, and always using groupBy(). It recommends understanding lazy, distributed execution in a cluster context; preferring show(), take(), or storage output when possible; considering reduceByKey() or agg() to optimize shuffles; and using explain() to inspect query plans and investigate partition skew or stage bottlenecks.",
+    "topics": [
+      "PySpark",
+      "Distributed data processing",
+      "Interview pitfalls"
+    ],
+    "subtopics": [
+      "Lazy and cluster-based execution",
+      "Safe result retrieval",
+      "Shuffle-aware aggregation",
+      "Query plan inspection",
+      "Partition skew",
+      "Stage bottlenecks"
+    ],
+    "concepts": [
+      "PySpark execution model",
+      "collect()",
+      "show(), take(), and storage output",
+      "Aggregation and shuffles",
+      "Query plan inspection",
+      "Partition skew",
+      "Stage bottlenecks"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why is describing PySpark as something you use like Pandas an interview red flag?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should explain that PySpark is lazy and distributed rather than interchangeable with Pandas.\nThe answer should mention that PySpark operates in a cluster context."
+    },
+    {
+      "question": "A PySpark job uses collect() to retrieve its results to the local machine. What concern does the post raise, and what alternatives does it recommend?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The answer should identify collect() to the local machine as dangerous.\nThe answer should recommend show(), take(), or writing the output to storage."
+    },
+    {
+      "question": "How should a candidate approach aggregation when groupBy() is not the only option?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should avoid claiming that groupBy() is always used.\nThe answer should recommend considering reduceByKey() or agg() with shuffle optimization in mind."
+    },
+    {
+      "question": "What should you do before tuning a PySpark query that appears to have performance problems?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer should recommend inspecting the query plan with explain().\nThe answer should identify partition skew and stage bottlenecks as possible tuning signals."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Distributed execution",
+      "Result handling",
+      "Aggregation optimization",
+      "Performance troubleshooting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a7ceb8e863b0d589",
+    "saved_date": "2026-10-01T23:24:41Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326463455274668032",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326463455274668032_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "de967bb857d1f31540fc0366674ad931220cb983273806ae04beb26dd7045215",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Query optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

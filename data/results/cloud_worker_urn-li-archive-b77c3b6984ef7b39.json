@@ -1,0 +1,217 @@
+{
+  "id": "urn-li-archive-b77c3b6984ef7b39",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.026109Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:53Z"
+  },
+  "original_text": "Databricks asked these SQL questions in a Data Engineering interview ( 2+ YOE ) \nCTC – 50 LPA (Difficulty level = Intermediate)\n\n1.⁠ ⁠Write a SQL query using Delta tables to compute cumulative revenue per day\n2.⁠ ⁠Retrieve the first and last login per user from a huge event log table\n3.⁠ ⁠Find the top 3 customers by spend in each region (use window functions)\n4.⁠ ⁠Detect duplicate records in a transactional table and delete extras safely\n5.⁠ ⁠Get users who made purchases in 3 consecutive months\n6.⁠ ⁠Identify skewed joins in SQL and propose fixes using broadcast hints\n7.⁠ ⁠Compute a 7-day moving average of product sales on Delta Lake\n8.⁠ ⁠Pivot daily sales into month-wise columns\n9.⁠ ⁠Find customers who bought products every month in a year\n10.⁠ ⁠Rank products by sales per year, resetting rank each year\n11.⁠ ⁠Find employees earning more than their department average\n12.⁠ ⁠Find the median transaction amount (no built-in median)\n13.⁠ ⁠Get all users who placed their first order in the last 30 days\n14.⁠ ⁠Compare price change between two dates for each product\n15.⁠ ⁠Identify customers whose first and last transaction is on the same day\n16.⁠ ⁠Calculate the percentage of returning users for each month\n17.⁠ ⁠Retrieve products that have never been sold\n18.⁠ ⁠Detect schema drift in historical Delta data snapshots\n19.⁠ ⁠Find departments where at least 2 employees have identical salaries\n20.⁠ ⁠Group users by login streaks of 3+ consecutive days.\n\n#sql #dataengineer\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post lists 20 intermediate SQL and Data Engineering interview questions attributed to Databricks for candidates with at least 2 years of experience. The questions cover Delta tables, Delta Lake, window functions, cumulative and moving metrics, temporal analysis, duplicate handling, skewed joins, schema drift, and user purchase or login patterns. It is a question list only and does not provide schemas, sample data, SQL solutions, or answer criteria.",
+    "topics": [
+      "SQL for Data Engineering",
+      "Databricks",
+      "Delta Lake",
+      "Analytical SQL"
+    ],
+    "subtopics": [
+      "Cumulative and moving metrics",
+      "First and last event extraction",
+      "Window functions and ranking",
+      "Duplicate detection and safe deletion",
+      "Consecutive-month and login-streak analysis",
+      "Skewed joins and broadcast hints",
+      "Temporal comparisons and recency filters",
+      "Pivoting monthly sales",
+      "Returning-user percentages",
+      "Historical Delta schema drift",
+      "Salary and transaction analysis"
+    ],
+    "concepts": [
+      "Delta tables",
+      "Cumulative daily revenue",
+      "First and last login extraction",
+      "Top-N customers by region",
+      "Duplicate-safe deletion",
+      "Consecutive purchase months",
+      "Skewed joins and broadcast hints",
+      "Seven-day moving average",
+      "Sales pivoting",
+      "Annual product ranking",
+      "Department salary comparison",
+      "Median without a built-in function",
+      "First-order recency filtering",
+      "Product price comparison",
+      "Same-day first and last transactions",
+      "Returning-user percentage",
+      "Products never sold",
+      "Delta schema drift",
+      "Duplicate department salaries",
+      "Login streaks"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query using Delta tables to compute cumulative revenue per day.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses Delta tables and produces a running revenue total through each day."
+    },
+    {
+      "question": "Retrieve the first and last login per user from a huge event-log table.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The result contains one row per user with the earliest and latest login timestamps while accounting for the event table's large size."
+    },
+    {
+      "question": "Find the top three customers by spend in each region using window functions.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses a window function to rank customers by spend within each region and retains the first three customers per region."
+    },
+    {
+      "question": "Detect duplicate records in a transactional table and delete extras safely.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution identifies extra copies and deletes them without removing records that should remain."
+    },
+    {
+      "question": "Find users who made purchases in three consecutive months.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The logic evaluates purchase months for each user and returns only users with purchases in three consecutive months."
+    },
+    {
+      "question": "Identify skewed joins in SQL and propose fixes using broadcast hints.",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer identifies skew in the join inputs and explains how broadcast hints can be used as the requested fix."
+    },
+    {
+      "question": "Compute a seven-day moving average of product sales on Delta Lake.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution operates on Delta Lake data and produces a rolling seven-day average for each product's sales."
+    },
+    {
+      "question": "Pivot daily sales into month-wise columns.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The result reorganizes daily sales values into separate columns representing months."
+    },
+    {
+      "question": "Find customers who bought products every month in a year.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The logic checks each customer's purchases across the months of the specified year and returns customers present in every month."
+    },
+    {
+      "question": "Rank products by sales per year, resetting the rank each year.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The ranking is partitioned by year so that ranks restart for each year."
+    },
+    {
+      "question": "Find employees earning more than their department average.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query compares each employee's salary with the average salary of the employee's department and retains employees above that average."
+    },
+    {
+      "question": "Find the median transaction amount without using a built-in median function.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution calculates the median from ordered transaction amounts without using a built-in median function."
+    },
+    {
+      "question": "Get all users who placed their first order in the last 30 days.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The result filters users by the date of their earliest order and restricts that date to the most recent 30 days."
+    },
+    {
+      "question": "Compare the price change between two dates for each product.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query associates each product with its prices at the two specified dates and calculates the change between them."
+    },
+    {
+      "question": "Identify customers whose first and last transactions occurred on the same day.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The logic determines each customer's earliest and latest transaction dates and retains customers for which both dates are identical."
+    },
+    {
+      "question": "Calculate the percentage of returning users for each month.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query calculates returning users for each month and expresses the result as a percentage."
+    },
+    {
+      "question": "Retrieve products that have never been sold.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query returns only products that have no sales records."
+    },
+    {
+      "question": "Detect schema drift in historical Delta data snapshots.",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The solution inspects schema differences across historical Delta data snapshots and identifies where schemas have changed."
+    },
+    {
+      "question": "Find departments where at least two employees have identical salaries.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query groups or compares salaries within departments and identifies departments containing at least two employees with the same salary."
+    },
+    {
+      "question": "Group users by login streaks of three or more consecutive days.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The logic derives each user's daily login history and groups users whose login sequences contain at least three consecutive days."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Databricks",
+      "Delta Lake",
+      "Window Functions",
+      "Temporal Analysis",
+      "Data Quality",
+      "Query Optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b77c3b6984ef7b39",
+    "saved_date": "2026-10-01T23:09:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "fb458f9b52ab9b568451c0ecfbb3ee9b7a251673c42d186352ceda0fcf22e275",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data Quality",
+        "Query Optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

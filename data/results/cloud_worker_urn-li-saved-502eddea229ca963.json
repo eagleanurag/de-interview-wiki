@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-502eddea229ca963",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341276741132328961",
+    "captured_at": "2026-10-02T00:15:47.429407Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:14Z"
+  },
+  "original_text": "🚀 Master PySpark Functions in One Glance! \n\nIf you're preparing for Data Engineering interviews or working with Spark at scale, this 1-page PySpark Functions Cheatsheet will save you hours!\n\n🔥 Whether you're building ETL pipelines, transforming huge datasets, or just brushing up for an interview — knowing these core PySpark functions is a must:\n\n🔹 Column Operations (col, lit, alias)\n🔹 Aggregations (count, sum, avg, collect_list)\n🔹 String Manipulations (concat, substr, regex)\n🔹 Date & Time Logic (current_date, datediff, add_months)\n🔹 Null Handling (when, coalesce, isNull)\n🔹 Window Functions (row_number, rank, lag)\n🔹 JSON & Struct Processing (from_json, struct)\n🔹 Mathematical and Array Functions\n…and more — all categorized and simplified in a visual format.\n\n📌 Save it. Share it. Bookmark it for your next PySpark project!\n✅ Especially useful for anyone targeting roles at EY, PwC, EXL, IBM, or any big data engineering \n\nLet’s connect and grow in the data space! 💡\n\n#PySpark #DataEngineering #BigData #ApacheSpark #ETL #LinkedInLearning #SparkSQL #TechCheatsheet #InterviewPrep #AzureDataEngineer #DataEngineer #LearningNeverStops\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341276741132328961_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post for a one-page visual PySpark functions cheat sheet intended for data engineering interview preparation and Spark-related ETL work. It names functions across several categories, including column operations, aggregations, string manipulation, date and time logic, null handling, window functions, and JSON and struct processing. The actual cheat sheet is not present, the post ends with a truncation marker, and the extracted media text is empty, so no function definitions, syntax, examples, or behavioral details are provided.",
+    "topics": [
+      "PySpark functions",
+      "Apache Spark",
+      "ETL pipelines"
+    ],
+    "subtopics": [
+      "Column operations",
+      "Aggregations",
+      "String manipulation",
+      "Date and time logic",
+      "Null handling",
+      "Window functions",
+      "JSON and struct processing",
+      "Mathematical functions",
+      "Array functions"
+    ],
+    "concepts": [
+      "Column operations",
+      "Aggregation functions",
+      "String manipulation functions",
+      "Date and time functions",
+      "Null-handling functions",
+      "Window functions",
+      "JSON and struct processing",
+      "Mathematical and array functions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which named functions does the post place in the column-operation and aggregation categories?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies col, lit, and alias as column-operation functions.\nIt identifies count, sum, avg, and collect_list as aggregation functions."
+    },
+    {
+      "question": "Which string-manipulation, date-and-time, and null-handling functions are named in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer lists concat, substr, and regex for string manipulation.\nIt lists current_date, datediff, and add_months for date and time logic.\nIt lists when, coalesce, and isNull for null handling."
+    },
+    {
+      "question": "Which window and JSON-processing functions does the post identify?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies row_number, rank, and lag as window functions.\nIt identifies from_json and struct as functions for JSON and struct processing."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark functions",
+    "secondary_topics": [
+      "Apache Spark",
+      "Spark SQL",
+      "ETL pipelines"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:502eddea229ca963",
+    "saved_date": "2026-10-01T23:17:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341276741132328961",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341276741132328961_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2f7d7b38c838210cd710979bbfa46e32ccbd6134f5940a90e9346c61358f071c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Spark SQL"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

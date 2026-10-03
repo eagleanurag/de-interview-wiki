@@ -1,0 +1,66 @@
+{
+  "id": "urn-li-saved-db46892d13cf15fd",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7351712296550727680",
+    "captured_at": "2026-10-02T00:15:52.363039Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:25Z"
+  },
+  "original_text": "TUV Certified IMS internal Auditor | ISO 9001:2015 | ISO 14001:2015 | ISO 45001:2018 | CAPA | Customer Complaints | Skill Matrix | TQM | RCA | 8D | SPC | Process Capability (Cp, Cpk) | Lean Manufacturing\n1yr •\nSQL Learners & Job Seekers – This one’s for you!\nI've compiled a set of 5 intermediate and 5 complex SQL questions topic-wise for practice, based on real interview patterns and use cases.\nWhether you're preparing for data analyst, BI, or SQL developer roles, this PDF will give you hands-on query-building challenges across key SQL topics.\nFeel free to download, solve, and share with your connections.\nLet’s learn and grow together!\nComment below or DM me if you’d like more practice resources or have feedback!\n#SQL #DataAnalyst #SQLPractice #SQLQueries #IntermediateSQL #AdvancedSQL #DataScience #BusinessIntelligence #LearningSQL #JobPreparation #InterviewPrep #AnalyticsCommunity #AadityaPrajapt\nSQL PRACTISE QUESTIONS",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7351712296550727680_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post promotes a downloadable PDF containing five intermediate and five complex SQL practice questions organized by topic and based on interview patterns and use cases. It targets candidates preparing for data analyst, business intelligence, or SQL developer roles. The supplied content does not include the actual questions, SQL topics, query examples, or solutions, so no technical SQL concept can be evaluated from it. An opening line lists quality and audit credentials but is unrelated to the SQL promotion.",
+    "topics": [
+      "SQL practice",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "Intermediate SQL questions",
+      "Complex SQL questions",
+      "Query-building challenges"
+    ],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "SQL and analytics",
+    "primary_topic": "SQL practice",
+    "secondary_topics": [
+      "Job preparation"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:db46892d13cf15fd",
+    "saved_date": "2026-10-01T23:10:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7351712296550727680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7351712296550727680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "df29a3add187598e2b20b1f3cf6efc638796b9df3c1cbbb56aa6ab7b96bf687f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

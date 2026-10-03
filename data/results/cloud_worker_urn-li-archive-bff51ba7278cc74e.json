@@ -1,0 +1,95 @@
+{
+  "id": "urn-li-archive-bff51ba7278cc74e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.163201Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:09Z"
+  },
+  "original_text": "Most important question asked in Data engineer interview.\n.\n.\n.\n\n➡️How can you handle missing data in PySpark?\n\nHandling missing data in PySpark is crucial for maintaining data integrity. PySpark provides various ways to handle missing values using DataFrame API functions like .fillna(), .dropna(), and .replace(). Below are common methods:\n\n▶️1. Dropping Missing Values\n\n⚡Use .dropna() to remove rows with missing values.\n⚡You can specify a subset of columns to consider for missing values.\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import col\n\n# Initialize Spark Session\nspark = SparkSession.builder.appName(\"MissingDataHandling\").getOrCreate()\n\n# Sample DataFrame with missing values\ndata = [(1, \"Alice\", None), (2, None, 50), (3, \"Bob\", 30), (4, None, None)]\ncolumns = [\"ID\", \"Name\", \"Age\"]\ndf = spark.createDataFrame(data, columns)\n\n# Drop rows where all columns are NULL\ndf_drop_all = df.dropna(how=\"all\") \n\n# Drop rows where any column is NULL\ndf_drop_any = df.dropna(how=\"any\") \n\n# Drop rows where only a specific column is NULL\ndf_drop_subset = df.dropna(subset=[\"Name\"]) \n\ndf_drop_any.show()\n\n▶️2. Filling Missing Values\n\n⚡Use .fillna() to replace null values with specific values.\n⚡You can provide different values for different columns.\n# Fill missing values with a default value\ndf_fill = df.fillna({\"Name\": \"Unknown\", \"Age\": 0})\n\ndf_fill.show()\n\n▶️3. Replacing Missing Values with Other Values\n⚡.replace() can replace None (null) values with a specific value\n⚡df_replace = df.replace(None, \"N/A\")\ndf_replace.show()\n\n▶️4. Using na Functions\n\n⚡PySpark provides df.na as an alias for handling missing values.\ndf.na.drop().show() # Equivalent to df.dropna()\ndf.na.fill(\"Unknown\", subset=[\"Name\"]).show()\ndf.na.replace(None, \"No Data\").show()\n\n▶️5. Using SQL Functions for More Control\n⚡You can use SQL functions to replace nulls dynamically.\nfrom pyspark.sql.functions import when\n\ndf_new = df.withColumn(\"Age\", when(col(\"Age\").isNull(), 25).otherwise(col(\"Age\")))\ndf_new.show()\n\n#dataengineering #bigdata #hadoop #pyspark #python #scala #sql #ETL\n#GCP #cloud\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a code-oriented overview of handling missing values in PySpark DataFrames. It demonstrates creating a sample DataFrame with null values and using dropna(), fillna(), replace(), df.na functions, and a conditional when() expression. The examples cover dropping rows, assigning replacement values, and conditionally changing null values.",
+    "topics": [
+      "Handling missing data in PySpark",
+      "PySpark DataFrame API",
+      "Null-value operations"
+    ],
+    "subtopics": [
+      "Dropping rows with null values",
+      "Filling null values with defaults",
+      "Replacing null values",
+      "Using df.na functions",
+      "Conditionally handling null values"
+    ],
+    "concepts": [
+      "Missing Data",
+      "DataFrame.dropna()",
+      "DataFrame.fillna()",
+      "DataFrame.replace()",
+      "df.na Functions",
+      "Conditional Null Handling"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do the how=\"all\", how=\"any\", and subset options of dropna() differ?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The all option removes a row only when all evaluated columns contain missing values.\nThe any option removes a row when at least one evaluated column contains a missing value.\nThe subset option evaluates only the specified columns when deciding whether to remove a row."
+    },
+    {
+      "question": "For the sample DataFrame in the post, which rows remain after each of the three demonstrated dropna() operations?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Using how=\"all\" removes row 4 and leaves rows 1, 2, and 3.\nUsing how=\"any\" removes rows 1, 2, and 4 and leaves row 3.\nUsing subset=[\"Name\"] removes rows 2 and 4 and leaves rows 1 and 3."
+    },
+    {
+      "question": "How would you replace missing Name and Age values with column-specific defaults using the method shown in the post?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer can use df.fillna({\"Name\": \"Unknown\", \"Age\": 0}) to assign a different default to each column."
+    },
+    {
+      "question": "How can a PySpark DataFrame expression replace a null Age with 25 while leaving non-null ages unchanged?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer uses withColumn() to replace the Age column.\nThe when(col(\"Age\").isNull(), 25) branch handles null values.\nThe otherwise(col(\"Age\")) branch preserves existing non-null values."
+    },
+    {
+      "question": "Which df.na operations correspond to the missing-data handling approaches demonstrated in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "df.na.drop() provides the demonstrated drop behavior.\ndf.na.fill() can fill selected columns with a specified value.\ndf.na.replace() can replace null values with another value."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Handling missing data in PySpark",
+    "secondary_topics": [
+      "PySpark DataFrame transformations",
+      "Dropping and filling null values",
+      "Conditional null replacement"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bff51ba7278cc74e",
+    "saved_date": "2026-10-01T23:33:09Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "bc2fe938f7232d561e3c29f7ff7e87795d1462ec832545fe6a2a076780d08e57",
+    "enricher_version": "3"
+  }
+}

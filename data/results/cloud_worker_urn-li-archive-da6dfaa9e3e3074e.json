@@ -1,0 +1,79 @@
+{
+  "id": "urn-li-archive-da6dfaa9e3e3074e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.564359Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:53Z"
+  },
+  "original_text": "PySpark Interview Question :\n\nQuestion:\nYou are given a DataFrame named students_df containing details of students from different Indian cities. The DataFrame may contain duplicate student records based on their name and city.\nYour task is to:\nRemove duplicates based on name and city columns.\nShow the final DataFrame without duplicates.\n\nSample Input Data :\ndata = [\n (\"Rahul Sharma\", 22, \"Delhi\"),\n (\"Priya Verma\", 21, \"Mumbai\"),\n (\"Rahul Sharma\", 22, \"Delhi\"),\n (\"Anjali Mehta\", 23, \"Pune\"),\n (\"Priya Verma\", 21, \"Mumbai\"),\n (\"Karan Singh\", 24, \"Delhi\")\n]\n\n# Step 3: Define schema and create DataFrame\ncolumns = [\"name\", \"age\", \"city\"]\n\nExpected Output:\n+-------------+---+--------+\n| name|age| city|\n+-------------+---+--------+\n| Karan Singh | 24| Delhi|\n| Priya Verma | 21| Mumbai|\n| Anjali Mehta| 23| Pune|\n|Rahul Sharma | 22| Delhi|\n+-------------+---+--------+\n\n\nWrite your answer in the comment box :\n\n\nKarthik K. Seekho Bigdata Institute\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a PySpark interview task asking for duplicates to be removed from a student DataFrame based on the name and city columns. It provides six sample input records and an expected four-record output, but it does not include a schema definition, implementation, or solution.",
+    "topics": [
+      "PySpark",
+      "DataFrame operations",
+      "Record deduplication"
+    ],
+    "subtopics": [
+      "Removing duplicates by selected columns",
+      "Defining duplicates with name and city",
+      "Displaying a deduplicated DataFrame"
+    ],
+    "concepts": [
+      "students_df",
+      "Deduplication criterion",
+      "Sample duplicate records",
+      "Expected deduplicated result"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given students_df, how would you remove duplicate records based on the name and city columns and display the final DataFrame?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The solution must use the name and city columns as the duplicate criterion.\nThe solution must retain only one record for each distinct name-city combination.\nThe solution must display the resulting deduplicated DataFrame."
+    },
+    {
+      "question": "Which student records are duplicated in the sample input, and how should they appear in the expected output?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Rahul Sharma from Delhi appears twice in the input and should appear once in the output.\nPriya Verma from Mumbai appears twice in the input and should appear once in the output."
+    },
+    {
+      "question": "What row count should result after deduplicating the sample students_df by name and city?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The input contains six rows.\nRemoving the repeated Rahul Sharma and Priya Verma records produces four output rows."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame deduplication",
+    "secondary_topics": [
+      "Data cleaning",
+      "Duplicate removal",
+      "DataFrame output"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:da6dfaa9e3e3074e",
+    "saved_date": "2026-10-01T23:25:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "bfa9a52a3f4a6d3500b3f8bfe2cbc0acee049a9ed173bf55a049846fbb5bc82f",
+    "enricher_version": "3"
+  }
+}

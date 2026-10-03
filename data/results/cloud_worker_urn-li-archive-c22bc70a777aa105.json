@@ -1,0 +1,137 @@
+{
+  "id": "urn-li-archive-c22bc70a777aa105",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.194584Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:36Z"
+  },
+  "original_text": "EY Interview Experience.\nCompensation: 27 LPA\nPosition: Data Engineer\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱 – 𝗦𝗽𝗮𝗿𝗸 + 𝗣𝘆𝘁𝗵𝗼𝗻 + 𝗦𝗤𝗟 (𝗟𝟭 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗥𝗼𝘂𝗻𝗱)\n\nSpark:\n- Repartition vs Coalesce\n- Read Modes in Spark\n- map vs flatMap\n- Shared Variables\n\nPySpark Coding:\n- Calculate min/max marks per student from subject-wise score columns using least() and greatest()\n\nPython:\n- Inheritance behavior with Parent and Child classes\n- Effects of overriding variables across instances\n\nSQL:\n- For each date, return product count and names sold — GROUP_CONCAT() + COUNT(DISTINCT)\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗦𝗤𝗟 + 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 (𝗟𝟮 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗥𝗼𝘂𝗻𝗱)\n\nSQL:\n- Symmetric difference between two tables using UNION of NOT IN queries\nHighest salary per department using DENSE_RANK()\n\nPySpark:\n- Remove duplicates using ROW_NUMBER() over name partition\nKept only row_number = 1 rows\n\n𝟯𝗿𝗱 𝗥𝗼𝘂𝗻𝗱 – 𝗖𝗹𝗶𝗲𝗻𝘁 𝗥𝗼𝘂𝗻𝗱 (𝗣𝗿𝗼𝗷𝗲𝗰𝘁 + 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼-𝗕𝗮𝘀𝗲𝗱 𝗤𝘀)\n\nSpark Theoretical:\n- Optimization techniques in Spark\n- What are Delta Tables\n- Delta vs Parquet\n- How does Databricks Catalog work\n- Initial vs Incremental loads\n- Data loss prevention strategies\n\nProject Discussion:\n- Faced challenges and how they were solved\n- Emphasis on real project ownership\n\nPySpark Task:\n- Given process(year, month, day, flag, units) table\n- For each date: compute total units and count of flagged IDs\n- Used groupBy on year, month, day with sum(units) and count(flag) aggregations\n\nInterview referance - https://lnkd.in/gKqgqBTD\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "An EY Data Engineer interview post reports compensation of 27 LPA and describes three rounds. The first two technical rounds cover Spark, PySpark, Python, and SQL, while the client round covers Spark theory, project discussion, and a PySpark aggregation task. Concrete tasks include using least() and greatest() for per-student marks, grouping products by date, finding a symmetric difference with UNION and NOT IN, ranking department salaries with DENSE_RANK(), removing duplicates with ROW_NUMBER(), and aggregating units and flags by date. The post also names repartition versus coalesce, Spark read modes, map versus flatMap, shared variables, Spark optimization, Delta Tables, Parquet, Databricks Catalog, initial versus incremental loads, and data loss prevention, but provides little or no explanation of those topics or the project challenges.",
+    "topics": [
+      "Data engineering interview experience",
+      "Spark",
+      "PySpark",
+      "Python",
+      "SQL",
+      "Databricks Catalog",
+      "Delta Tables",
+      "Parquet",
+      "Initial and incremental loads",
+      "Data loss prevention"
+    ],
+    "subtopics": [
+      "Spark repartition versus coalesce",
+      "Spark read modes",
+      "Spark map versus flatMap",
+      "Spark shared variables",
+      "Spark optimization techniques",
+      "PySpark least() and greatest()",
+      "PySQL date-level aggregation",
+      "SQL GROUP_CONCAT() and COUNT(DISTINCT)",
+      "SQL symmetric difference with UNION and NOT IN",
+      "SQL highest salary with DENSE_RANK()",
+      "PySpark duplicate removal with ROW_NUMBER()",
+      "Python inheritance and instance variables",
+      "Delta Tables versus Parquet",
+      "Databricks Catalog",
+      "Project ownership and challenge resolution"
+    ],
+    "concepts": [
+      "Repartition versus coalesce",
+      "Spark read modes",
+      "map versus flatMap",
+      "Spark shared variables",
+      "Per-student minimum and maximum marks",
+      "Parent and Child inheritance",
+      "Overriding variables across instances",
+      "Date-level product aggregation",
+      "Symmetric table difference",
+      "Highest salary per department",
+      "Duplicate removal with ROW_NUMBER()",
+      "Spark optimization techniques",
+      "Delta Tables",
+      "Delta versus Parquet",
+      "Databricks Catalog",
+      "Initial versus incremental loads",
+      "Data loss prevention strategies",
+      "Date-level units and flag aggregation",
+      "Real project ownership"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you calculate minimum and maximum marks per student from subject-wise score columns in PySpark using least() and greatest()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The post specifies least() and greatest() as the functions used to calculate the per-student minimum and maximum from subject-wise scores."
+    },
+    {
+      "question": "How would you return the product count and names sold for each date using GROUP_CONCAT() and COUNT(DISTINCT)?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query groups the results by date, uses COUNT(DISTINCT) for the product count, and uses GROUP_CONCAT() for the names sold."
+    },
+    {
+      "question": "How can the symmetric difference between two tables be found using UNION and NOT IN queries?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The post identifies a UNION of NOT IN queries as the method for obtaining the records that differ between the two tables."
+    },
+    {
+      "question": "How would you find the highest salary in each department using DENSE_RANK()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution uses DENSE_RANK() to identify the highest salary within each department."
+    },
+    {
+      "question": "How would you remove duplicates by name in PySpark using ROW_NUMBER()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "ROW_NUMBER() is applied with a partition based on name.\nOnly rows whose row_number value is 1 are retained."
+    },
+    {
+      "question": "How would you aggregate a process table by date to calculate total units and the described count of flagged IDs?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Rows are grouped by year, month, and day.\nThe grouped data applies sum(units) for total units and count(flag) for the flagged-ID count described in the post."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Experience",
+    "secondary_topics": [
+      "Spark",
+      "PySpark",
+      "Python",
+      "SQL",
+      "Databricks",
+      "Delta Tables",
+      "Parquet",
+      "Data Loading",
+      "Data Loss Prevention"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c22bc70a777aa105",
+    "saved_date": "2026-10-01T23:13:36Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2bc25d69524711fc52a6c748f886cafac19e826cd6e7e8b5e3817ab178675f15",
+    "enricher_version": "3"
+  }
+}

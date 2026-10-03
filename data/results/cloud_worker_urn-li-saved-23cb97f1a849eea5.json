@@ -1,0 +1,71 @@
+{
+  "id": "urn-li-saved-23cb97f1a849eea5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7426107288421031936",
+    "captured_at": "2026-10-02T00:15:45.579525Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:52Z"
+  },
+  "original_text": "🧠 One of the SQL Interview questions that was asked in PWC.\nPlease find the input and output for this question.\n\nCalculate running account balance \n\nDifficulty level - medium.\n\nPlease try to comment your solutions both in SQL and pyspark.\nI will post the solution in comments.\n\n♻️ 𝗥𝗲𝗽𝗼𝘀𝘁 if this was helpful!\n🔔 𝗙𝗼𝗹𝗹𝗼𝘄 Rajula ChandraSekhar Reddy for more insights on Data Engineering!\n\n#SQLInterviewquestions #dataengineer #carriergrowth #learning #interviewpreparation #SQLTips #Interviews",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7426107288421031936_slide_0.jpg",
+      "description": "JPEG image, 480x344 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a medium-difficulty SQL interview prompt described as having been asked at PWC. It asks readers to calculate a running account balance and provide solutions in SQL and PySpark. The post does not include input data, a schema, expected output, or a solution, so the technical question is incomplete.",
+    "topics": [
+      "Running account balance calculation",
+      "SQL",
+      "PySpark"
+    ],
+    "subtopics": [
+      "SQL interview question design",
+      "Input and output requirements for running-balance questions"
+    ],
+    "concepts": [
+      "Running account balance",
+      "SQL solution request",
+      "PySpark solution request"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Running account balance calculation",
+    "secondary_topics": [
+      "SQL interview questions",
+      "PySpark"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:23cb97f1a849eea5",
+    "saved_date": "2026-10-01T23:08:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7426107288421031936",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7426107288421031936_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "6dd108a5194c7f8f10149146f202f4cc589af013a42a8550602d3298a190943f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

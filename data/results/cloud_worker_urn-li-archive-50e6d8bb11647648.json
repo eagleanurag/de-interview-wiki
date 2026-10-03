@@ -1,0 +1,117 @@
+{
+  "id": "urn-li-archive-50e6d8bb11647648",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.040609Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:07Z"
+  },
+  "original_text": "Booking.com Interview Experience.\nCompensation Range: 28LPA + 2.8L variable\nPosition: Data Engineer\nApplication Method: Online through portal\n\n𝗢𝗻𝗹𝗶𝗻𝗲 𝗔𝘀𝘀𝗲𝘀𝘀𝗺𝗲𝗻𝘁 (𝗥𝗼𝘂𝗻𝗱 𝟭)\n- SQL query involving tricky joins\n- Coding question on data aggregation related to hotels\n\n𝗛𝗥 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 (𝗥𝗼𝘂𝗻𝗱 𝟮)\n- Self-introduction and motivation to join\n- Discussion on salary expectations and role\n- Overview of company and work culture\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 (𝗥𝗼𝘂𝗻𝗱 𝟯)\n- Live coding with engineers\n- Medium-level LeetCode-style question (hotel data, aggregation + window functions)\n- Emphasis on explaining the thought process\n- Code ran but solution wasn’t perfect - still got positive feedback to candidate\n\n𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗥𝗼𝘂𝗻𝗱 (𝗥𝗼𝘂𝗻𝗱 𝟰)\n- Design a system to store hotel data with support for both real-time and batch querying\n- Tech stack discussion: optimal databases, deployment strategy, and user interaction\n- Clarified requirements, explained trade-offs, and discussed scaling strategies\n\n𝗛𝗶𝗿𝗶𝗻𝗴 𝗠𝗮𝗻𝗮𝗴𝗲𝗿 𝗥𝗼𝘂𝗻𝗱 (𝗥𝗼𝘂𝗻𝗱 𝟱)\n- Scheduled after 2 months of initial confirmation\n- Behavioral questions: conflict resolution, disagreement handling, team collaboration\n- Final outcome: Rejected for that role, offered a lower-level position with reduced compensation, which candidate declined\n\nIf you are preparing for Data Engineering interviews then you should check these Interview Experiences for 100+ Companies\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\n#dataengineering \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a Booking.com Data Engineer interview experience rather than a technical tutorial. It reports a compensation range of 28 LPA plus 2.8 L variable and describes five rounds. The online assessment included a SQL query with tricky joins and a separate coding question on hotel-related data aggregation; the second round covered self-introduction, motivation, salary expectations, role, company, and work culture. The technical round used a medium-level, LeetCode-style hotel-data problem involving aggregation and window functions, emphasized explaining the thought process, and noted that imperfect code still received positive feedback. The system-design round required storing hotel data for real-time and batch querying and discussed databases, deployment strategy, user interaction, requirements, trade-offs, and scaling. The final manager round, scheduled two months after initial confirmation, covered conflict resolution, disagreement handling, and team collaboration. The candidate was rejected for the role but declined a lower-level offer. The supplied excerpt appears incomplete: it does not show the actual code, name specific database technologies, or provide detailed design answers, and it ends with a promotional 'see more' line.",
+    "topics": [
+      "Data Engineering Interview Experience",
+      "SQL Joins",
+      "Data Aggregation",
+      "Window Functions",
+      "Live Coding",
+      "Real-Time and Batch Querying",
+      "System Design",
+      "Scalability and Trade-offs",
+      "Behavioral Interviews",
+      "Interview Process and Compensation"
+    ],
+    "subtopics": [
+      "Online assessment",
+      "Tricky SQL joins",
+      "Hotel-related data aggregation",
+      "Self-introduction and motivation",
+      "Salary expectations and role discussion",
+      "Company and work culture",
+      "Live coding with engineers",
+      "Medium-level LeetCode-style hotel-data problem",
+      "Explaining the thought process",
+      "Hotel-data storage",
+      "Real-time and batch query support",
+      "Database and deployment strategy",
+      "User interaction",
+      "Requirements clarification",
+      "Trade-offs and scaling strategies",
+      "Conflict resolution, disagreement handling, and team collaboration",
+      "Final-round scheduling and outcome"
+    ],
+    "concepts": [
+      "Tricky SQL joins",
+      "Hotel data aggregation",
+      "Window functions",
+      "Thought-process explanation",
+      "Real-time and batch query support",
+      "Tech-stack discussion",
+      "Requirements clarification",
+      "Trade-offs and scaling strategies",
+      "Behavioral interview themes"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What SQL and hotel-data tasks were included in the online assessment?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The online assessment included a SQL query involving tricky joins.\nIt also included a coding question about data aggregation related to hotels."
+    },
+    {
+      "question": "What was emphasized in the technical live-coding round?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The medium-level, LeetCode-style problem used hotel data, aggregation, and window functions.\nThe round emphasized explaining the thought process during live coding."
+    },
+    {
+      "question": "Which requirements and design considerations were presented in the hotel-data system-design round?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The system had to store hotel data and support both real-time and batch querying.\nThe tech-stack discussion covered database selection, deployment strategy, and user interaction.\nThe candidate clarified requirements, explained trade-offs, and discussed scaling strategies."
+    },
+    {
+      "question": "Which behavioral topics were covered in the final manager round?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The final round covered conflict resolution, disagreement handling, and team collaboration."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Experience",
+    "secondary_topics": [
+      "SQL Joins",
+      "Data Aggregation",
+      "Window Functions",
+      "Live Coding",
+      "Real-Time and Batch Querying",
+      "System Design",
+      "Scalability and Trade-offs",
+      "Behavioral Interviews",
+      "Interview Process and Compensation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:50e6d8bb11647648",
+    "saved_date": "2026-10-01T23:19:07Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c97c5d4f06e246eaab6246ac93f60641b17501b411873681ca79f4c6f635f795",
+    "enricher_version": "3"
+  }
+}

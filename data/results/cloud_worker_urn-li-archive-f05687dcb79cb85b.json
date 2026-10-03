@@ -1,0 +1,91 @@
+{
+  "id": "urn-li-archive-f05687dcb79cb85b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.084074Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:31Z"
+  },
+  "original_text": "Today I was reading about multi statements transactions feature in Databricks.\n\nTo be honest, I never really realized that databricks doesn't support multi table multi transactions and Franco Patano in his session at AI summit did mention that 70 to 80% of overall transactions are single table transactions only.\n\nSo, basically, if you are updating, deleting or inserting multiple tables in same transaction, either all should fail or all pass. Classic warehousing thing, BEGIN and COMMIT. \n\nFranco gave the classical example of star schema where you do need multi transaction support. You need to make sure that fact and dimensions both have the data.\n\nSo, this feature is in private preview right now.\n\nDatabricks uses optimistic concurrency where it never locks the table when multiple people read/write the table. It creates the snapshot for each transaction in such a way that there are no dirty reads for users doing different transactions at the same time on same table.\n\nOnly at the write time it sees that if any updates were made on the table, If there were changes, it'll get the updated records and then do it's own commit afterwards. It's like a git rebase.\n\nAnother cool feature is; concurrency is not at table or partition level; it is at the row level, in case if multiple transactions are updating the same row at same time, it'll retry and try to commit.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post reports that Databricks had a multi-statement transaction feature in private preview for coordinating inserts, updates, or deletes across multiple tables so that either all changes succeed or all fail. It motivates this capability with maintaining consistency between fact and dimension data in a star schema and relays Franco Patano's claim that 70% to 80% of transactions are single-table transactions. It describes Databricks concurrency control as optimistic and snapshot-based, with write-time conflict detection, row-level concurrency, and retries rather than table or partition locking.",
+    "topics": [
+      "Databricks transactions",
+      "Multi-statement transactions",
+      "Optimistic concurrency",
+      "Row-level concurrency",
+      "Star schema consistency"
+    ],
+    "subtopics": [
+      "Single-table transactions",
+      "Multi-table atomicity",
+      "Transaction snapshots",
+      "Dirty-read prevention",
+      "Write-time conflict detection",
+      "Conflict retry behavior",
+      "Fact and dimension consistency"
+    ],
+    "concepts": [
+      "Multi-statement transactions",
+      "All-or-nothing multi-table writes",
+      "Single-table transactions",
+      "Star schema consistency",
+      "Optimistic concurrency",
+      "Transaction snapshots",
+      "Write-time conflict detection",
+      "Git rebase analogy",
+      "Row-level concurrency"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the post describe Databricks optimistic concurrency and transaction snapshots?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "They explain that transactions do not lock the table when users concurrently read or write it.\nThey explain that each transaction receives a snapshot intended to prevent dirty reads between concurrent transactions.\nThey state that changes are checked for at write time rather than through an upfront table lock.\nThey describe obtaining updated records before attempting the transaction's own commit."
+    },
+    {
+      "question": "Why would coordinated multi-table transactions be useful when changing fact and dimension data in a star schema?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "They connect the need for coordination to keeping both fact and dimension data correct.\nThey explain that related changes across tables should either all succeed or all fail.\nThey relate this behavior to the classic BEGIN and COMMIT transaction model described in the post.\nThey note that the discussed Databricks capability was in private preview at the time of the post."
+    },
+    {
+      "question": "What does the post say should happen when two transactions update the same row concurrently?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "They identify the concurrency scope as the row rather than the entire table or partition.\nThey explain that the conflicting transaction retries and then attempts to commit.\nThey connect this behavior to optimistic, write-time conflict detection rather than locking the table upfront."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks transaction processing and concurrency control",
+    "secondary_topics": [
+      "Multi-table transaction atomicity",
+      "Optimistic concurrency",
+      "Row-level conflict handling",
+      "Star schema data consistency"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f05687dcb79cb85b",
+    "saved_date": "2026-10-01T23:11:31Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d92125cd4f41d2ce612711a539e4abe07cebdeacc4e7c442dd8819510dc39df2",
+    "enricher_version": "3"
+  }
+}

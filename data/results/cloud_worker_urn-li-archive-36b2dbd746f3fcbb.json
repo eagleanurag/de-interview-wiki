@@ -1,0 +1,102 @@
+{
+  "id": "urn-li-archive-36b2dbd746f3fcbb",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.474536Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:47Z"
+  },
+  "original_text": "𝐒𝐨𝐦𝐞𝐭𝐢𝐦𝐞𝐬 𝐢𝐭'𝐬 𝐧𝐨𝐭 𝐭𝐡𝐞 𝐡𝐚𝐫𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦𝐬 𝐭𝐡𝐚𝐭 𝐭𝐫𝐢𝐩 𝐮𝐬 𝐮𝐩 — 𝐢𝐭'𝐬 𝐭𝐡𝐞 𝐞𝐚𝐬𝐲 𝐨𝐧𝐞𝐬 𝐰𝐞 𝐨𝐯𝐞𝐫𝐥𝐨𝐨𝐤.\n\nIn the rush to prepare for medium to hard-level concepts — complex joins, optimizations, system design — we often forget to revise the basics. But in interviews, missing out on simple questions can cost you the opportunity.\n\nI had seen a similar experience in an 𝐀𝐦𝐚𝐳𝐨𝐧 interview, where the questions were easy on the surface.\n\nHere are a few question examples:\n\n1. Join Counts with Nulls & Duplicates: Given two tables with null and repeated values and calculate row count for all types of joins:\n\n* INNER JOIN\n* LEFT JOIN\n* RIGHT JOIN\n* FULL OUTER JOIN\n* CROSS JOIN\n\n2. UNION vs UNION ALL: Given two tables with duplicate values, explain and write queries to demonstrate UNION and UNION ALL\n\n3. Custom Join Output\nGiven:\nTable 1:x, x, x, x, y, y\nTable 2: x, x, y\n\nExpected Output:\nx x \nx x \nx null \nx null \ny y \ny y\n\nDesign SQL logic to achieve this.\n\n4. What happens when you submit a Spark job: Explain the internal execution flow from DAG creation to task scheduling and execution.\n\n5. Data Modeling + Metrics Calculation: Problem statement required:\n\n* Designing a data model for delivery riders and routes\n* Writing SQL to compute metrics like: Minimum time taken on a given path, Average delivery time per route, etc \n\n𝐊𝐞𝐲 𝐭𝐚𝐤𝐞𝐚𝐰𝐚𝐲: Even “easy” questions demand clarity, speed, and precision. Don't skip revisiting the basics during interview prep — they often matter the most.\n\nLooking to understand the complete set of topics required for thorough preparation - https://lnkd.in/dqW_8dMP\n\nFollow Shubham Y. for more updates and insights!\n\n#DataEngineering #AmazonInterview #SQL #Spark #SystemDesign #InterviewPreparation #BigData #DataModeling #amazon",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post argues that data engineering interview preparation should include basic SQL and data engineering concepts, not only complex joins, optimizations, and system design. It presents five examples involving join row counts with nulls and duplicates, UNION versus UNION ALL, custom join output, Spark job execution flow, and delivery data modeling with SQL-based metrics. It provides question prompts and an expected result for the custom join example, but it does not provide complete worked solutions.",
+    "topics": [
+      "SQL joins",
+      "SQL set operations",
+      "Custom join output",
+      "Spark job execution",
+      "Data modeling",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Join counts with nulls and duplicate values",
+      "INNER, LEFT, RIGHT, FULL OUTER, and CROSS JOIN",
+      "UNION versus UNION ALL",
+      "Preserving rows and representing unmatched values with null",
+      "DAG creation, task scheduling, and task execution",
+      "Delivery rider and route models",
+      "Minimum and average delivery-time metrics"
+    ],
+    "concepts": [
+      "Join row counts with nulls and duplicates",
+      "Standard join types",
+      "UNION and UNION ALL",
+      "Custom join output with nulls",
+      "Spark job execution flow",
+      "Delivery data modeling",
+      "Delivery metrics calculation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given two tables containing null and repeated values, calculate the output row count for INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and CROSS JOIN.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution calculates row counts for all five listed join types.\nThe reasoning explicitly accounts for nulls and repeated values in both tables."
+    },
+    {
+      "question": "Given two tables containing duplicate values, explain the difference between UNION and UNION ALL and write queries demonstrating both operators.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer explains how the two operators handle duplicate rows.\nThe answer provides SQL examples using both UNION and UNION ALL with duplicate-containing inputs."
+    },
+    {
+      "question": "Design SQL logic for Table 1 containing x, x, x, x, y, y and Table 2 containing x, x, y that produces x x, x x, x null, x null, y y, y y.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query produces two x-x rows, followed by two x-null rows and two y-y rows.\nThe logic handles repeated values and represents unmatched values from the first table with null."
+    },
+    {
+      "question": "What happens internally after a Spark job is submitted, from DAG creation through task scheduling and execution?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The explanation begins with creation of the execution DAG.\nThe explanation connects DAG creation to task scheduling and then to task execution."
+    },
+    {
+      "question": "Design a data model for delivery riders and routes and write SQL to calculate metrics such as minimum time taken on a given path and average delivery time per route.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The model represents both delivery riders and routes.\nThe SQL calculates minimum time for a specified path and average delivery time for each route."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL joins and set operations",
+    "secondary_topics": [
+      "Spark job execution",
+      "Data modeling",
+      "Delivery metrics with SQL",
+      "Technical interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:36b2dbd746f3fcbb",
+    "saved_date": "2026-10-01T23:14:47Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8a86fdf969d78ded0a126795499a8f09d0301172a5128b43d4efc982cda34492",
+    "enricher_version": "3"
+  }
+}

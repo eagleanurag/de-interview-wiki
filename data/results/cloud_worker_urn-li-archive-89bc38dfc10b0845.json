@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-archive-89bc38dfc10b0845",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.785072Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:58Z"
+  },
+  "original_text": "𝗠𝘆 𝗝𝘂𝗻𝗶𝗼𝗿 𝗰𝗿𝗮𝗰𝗸𝗲𝗱 𝟮𝟮 𝗟𝗣𝗔 𝗼𝗳𝗳𝗲𝗿 𝗮𝘁 Deloitte\nRole - Data Engineer\nHere is my complete Interview Experience.\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n- General discussion on profile and past experience\n- No theoretical questions, directly moved to hands-on SQL questions\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱 (𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗖𝗼𝗱𝗶𝗻𝗴)\n- Medium-level SQL query: Calculate total revenue per customer using Orders and Order_Items tables\n- Write SQL to get customers who spent the most in the last month (based on order_date)\n- PySpark scenario: Join two DataFrames with different schema using row numbers\n- Topics discussed:\nㆍ Writing CTEs and using aggregate functions\nㆍDate filtering using functions like DATE_SUB\nㆍ PySpark Window functions for row_number and joining logic\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱 (𝗧𝗲𝗰𝗵 𝗟𝗲𝗮𝗱 𝗗𝗶𝘀𝗰𝘂𝘀𝘀𝗶𝗼𝗻)\n- In-depth discussion on past project architecture\n- What technologies were used and how much data was handled\n- Challenges faced in Spark-based pipelines and how they were resolved\n- PySpark live coding:\nㆍ Write code to find customers who spent more than ₹1000 from store S1 in the last month\nㆍ Required working with three datasets: Customer, Store, and Sales\nㆍ Logic included DataFrame joins, date filtering using add_months(), and aggregation\n\n𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 𝗥𝗼𝘂𝗻𝗱\n- Focused on stakeholder and leadership discussions\n- Real-world project challenges and team collaboration\n- Discussion on how business requirements were translated into scalable pipelines\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗻𝗲𝗿𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲 - https://lnkd.in/ep43pVjW\n\n💙- If you've read so far, do LIKE and RESHARE the post",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post describes a four-stage Data Engineer interview experience at Deloitte. The screening covered the candidate's profile and experience without theoretical questions, after which the process moved to hands-on SQL and PySpark work. SQL tasks involved CTEs, aggregate functions, customer revenue, last-month filtering with DATE_SUB, and identifying the highest-spending customers. PySpark tasks involved DataFrame joins, row_number window functions, add_months date filtering, and combining Customer, Store, and Sales data. Later rounds covered project architecture, Spark pipeline challenges, stakeholder discussions, and translating business requirements into scalable pipelines. The post does not provide complete code, schemas, architecture diagrams, data-volume figures, or detailed challenge resolutions.",
+    "topics": [
+      "Data engineering interview preparation",
+      "SQL",
+      "PySpark",
+      "Spark-based data pipelines",
+      "DataFrame joins",
+      "Window functions"
+    ],
+    "subtopics": [
+      "CTEs and aggregate functions",
+      "Customer revenue calculation",
+      "Last-month customer spending",
+      "DATE_SUB date filtering",
+      "Joining DataFrames with different schemas",
+      "row_number window functions",
+      "add_months date filtering",
+      "Customer, Store, and Sales integration",
+      "Project architecture and Spark pipeline troubleshooting",
+      "Business requirements and scalable pipelines"
+    ],
+    "concepts": [
+      "Customer-level revenue aggregation",
+      "Common table expressions",
+      "Aggregate functions",
+      "Last-month SQL filtering",
+      "Highest-spending customer analysis",
+      "row_number window function",
+      "DataFrame join logic with row numbers",
+      "add_months date filtering",
+      "Multi-dataset customer spend analysis",
+      "Spark pipeline architecture discussion"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you calculate total revenue per customer using the Orders and Order_Items tables?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The order and order-item data must be related before calculating customer-level revenue.\nAggregate functions are used to calculate a total for each customer.\nA CTE can be used to organize intermediate query logic."
+    },
+    {
+      "question": "How would you identify the customer or customers who spent the most in the last month based on order_date?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query restricts orders to the last month using order_date.\nDATE_SUB is the date function identified in the post for this type of filtering.\nSpending is aggregated by customer before the highest total is selected."
+    },
+    {
+      "question": "How does the row_number window function support the described join between two PySpark DataFrames with different schemas?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "row_number is used as a PySpark window function.\nThe generated row numbers are incorporated into the join logic for the two DataFrames."
+    },
+    {
+      "question": "What operations are needed to find customers who spent more than ₹1000 in store S1 during the last month using the Customer, Store, and Sales datasets?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The three datasets are combined with DataFrame joins.\nThe data is filtered for store S1 and for activity in the last month using add_months().\nSpending is aggregated by customer and the result is limited to totals greater than ₹1000."
+    },
+    {
+      "question": "What aspects of a previous Spark project should a candidate be prepared to explain in a second-round data engineering interview?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The candidate explains the architecture of the previous project and the technologies used.\nThe candidate describes the amount of data handled.\nThe candidate discusses challenges encountered in Spark-based pipelines and how they were resolved."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL and PySpark",
+    "secondary_topics": [
+      "Customer revenue and spending analysis",
+      "DataFrame joins",
+      "Window functions",
+      "Date filtering",
+      "Spark pipeline architecture",
+      "Scalable pipeline design"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:89bc38dfc10b0845",
+    "saved_date": "2026-10-01T23:06:58Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ab8f3729ff051b2f14f3d71388e8d6479d4b456060528dae894f86c919848e32",
+    "enricher_version": "3"
+  }
+}

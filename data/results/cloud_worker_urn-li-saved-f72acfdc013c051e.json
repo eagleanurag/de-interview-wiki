@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-f72acfdc013c051e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7307959299186532353",
+    "captured_at": "2026-10-02T00:15:53.365956Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:32:17Z"
+  },
+  "original_text": "Senior Data Engineer at Carelon 👨‍💻 | 100K+ LinkedIn | Mentor 👨‍🏫 | Creator | Open to Brand Partnerships & Collaborations 🤝\n1yr •\n𝐇𝐢𝐠𝐡𝐞𝐫 𝐒𝐚𝐥𝐚𝐫𝐲 𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞 𝐛𝐲 𝐥𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐚𝐧𝐲 𝐬𝐩𝐞𝐜𝐢𝐟𝐢𝐜 𝐭𝐞𝐜𝐡?\n𝘠𝘦𝘱!\nSpark\nEven after you have learnt Spark, would you still want to be a on premise data engineer working on hdfs, yarn, etc?\n𝘕𝘰 𝘗𝘰𝘪𝘯𝘵!\nIf you are not on cloud yet, you are missing out on that higher salary!\nYou will also need to learn how Spark can be used in Cloud\nHere's how:\n↳ 𝐀𝐖𝐒: Use EMR for managed Spark clusters, S3 for scalable storage, and Glue for streamlined ETL workflows.\n↳𝐀𝐳𝐮𝐫𝐞: Databricks offers advanced Spark features like MLflow and Unity Catalog, while Blob Storage ensures reliable data storage.\n↳𝐆𝐂𝐏: Run Spark on Dataproc, integrate with BigQuery for analytics, and use GCS for efficient data storage.\n𝐍𝐨𝐰, 𝐲𝐨𝐮 𝐦𝐚𝐲 𝐚𝐬𝐤?\nWhich Cloud!\nSimple\n𝐒𝐡𝐨𝐮𝐥𝐝 𝐛𝐞 𝐀𝐖𝐒!\nWhy?\n𝐉𝐮𝐬𝐭 𝐠𝐨𝐨𝐠𝐥𝐞 \"𝐜𝐥𝐨𝐮𝐝 𝐦𝐚𝐫𝐤𝐞𝐭 𝐬𝐡𝐚𝐫𝐞 𝐬𝐭𝐚𝐢𝐬𝐭𝐚\"\nYou will get the answer.\nFor now, enjoy this amazing spark document by Rahul.\nAnd to learn Spark on AWS, learn from an AWS Cloud Sr Data Engineer.\nP.S:\nLearn no-nonsense AWS Data Engineering with 351+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 group for notification : https://w.sachin.cloud\n(phone privacy ensured, you won't see others )\nApache Spark for Beginners",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7307959299186532353_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional post argues that data engineers who know Spark should learn to use it in cloud environments rather than remain focused on on-premises infrastructure such as HDFS and YARN. It associates Spark with AWS EMR, S3, and Glue; Azure Databricks and Blob Storage; and GCP Dataproc, BigQuery, and GCS. It recommends AWS based on a suggestion to search cloud market-share, job-market, and salary statistics, but it does not provide those figures, implementation guidance, code, or detailed architecture.",
+    "topics": [
+      "Apache Spark",
+      "Cloud data engineering",
+      "Managed Spark deployments",
+      "Cloud storage and ETL services"
+    ],
+    "subtopics": [
+      "On-premises HDFS and YARN",
+      "AWS EMR, S3, and Glue",
+      "Azure Databricks and Blob Storage",
+      "GCP Dataproc, BigQuery, and GCS",
+      "Cloud job-market claims"
+    ],
+    "concepts": [
+      "Cloud-based Spark",
+      "AWS Spark stack",
+      "GCP Spark stack",
+      "On-premises Spark infrastructure",
+      "AWS-first career recommendation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Cloud-based Apache Spark",
+    "secondary_topics": [
+      "Managed cloud Spark deployments",
+      "Provider-specific data engineering stacks",
+      "On-premises infrastructure",
+      "Cloud job-market claims"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f72acfdc013c051e",
+    "saved_date": "2026-10-01T23:32:17Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7307959299186532353",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7307959299186532353_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "acb6e06ebef9352d72faff432c7e49f1bc439287398d71870272716e0812e85d",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Azure Spark stack"
+      ],
+      "questions": [
+        "How does the post propose combining Spark with supporting services on AWS, Azure, and GCP?"
+      ]
+    }
+  }
+}

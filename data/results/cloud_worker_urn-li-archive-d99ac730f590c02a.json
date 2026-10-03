@@ -1,0 +1,126 @@
+{
+  "id": "urn-li-archive-d99ac730f590c02a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.532838Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:00Z"
+  },
+  "original_text": "Data Engineering interviews are usually 𝟯–𝟰 𝗿𝗼𝘂𝗻𝗱𝘀....\nthat can get you paid ₹12 LPA or ₹45 LPA...\n\n𝗥𝗼𝘂𝗻𝗱 𝟭: SQL + Problem Solving\nThis is where 50% of people get rejected.\n→ “Find 2nd latest transaction per user”\n→ “Rank records inside partitions”\n→ “Explain why NULLs break NOT IN”\n\n𝗥𝗼𝘂𝗻𝗱 𝟮: Data Pipeline Design\nThey don’t care if you know Airflow or Spark.\n→ “Build a pipeline for 100M+ daily events”\n→ “What if one batch fails mid-way?”\n→ “How do you deal with schema drift or late-arriving data?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟯: System Design or Architecture\n→ “Design a data lake that scales and survives failures”\n→ “How do you track global ride data in real time?”\n→ “What are the tradeoffs of batch vs stream in this use case?”\n\n𝗥𝗼𝘂𝗻𝗱 𝟰: Stakeholder & Behaviorals\n→ “Explain a failed pipeline to a non-technical manager”\n→ “Tell me a time your data was wrong — what did you do?”\n→ “Can analysts trust what you build?”\n\n\nFollow Me Venkat Sai Kalyanam for more such content 😌 \nComment “CFBR” for better reach",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a brief promotional overview rather than a technical tutorial. It states that data engineering interviews usually have three to four rounds and organizes them into SQL and problem solving, data pipeline design, system design or architecture, and stakeholder and behavioral interviews. It provides example prompts but no SQL queries, technical explanations, architecture designs, handling procedures, or sample answers. The post also says the pipeline-design round is not framed around whether candidates know Airflow or Spark.",
+    "topics": [
+      "Data engineering interview structure",
+      "SQL problem solving",
+      "Data pipeline design",
+      "System design and architecture",
+      "Stakeholder and behavioral interviews"
+    ],
+    "subtopics": [
+      "Finding the second latest transaction per user",
+      "Ranking records within partitions",
+      "NULL behavior with NOT IN",
+      "Pipelines for 100M+ daily events",
+      "Midway batch failure",
+      "Schema drift",
+      "Late-arriving data",
+      "Scalable and failure-resistant data lakes",
+      "Real-time global ride data",
+      "Batch-versus-stream trade-offs",
+      "Explaining pipeline failures to non-technical managers",
+      "Responding to incorrect data",
+      "Analyst trust"
+    ],
+    "concepts": [
+      "Second latest transaction per user",
+      "Partitioned record ranking",
+      "NULL values with NOT IN",
+      "Large-scale pipeline design",
+      "Schema drift and late-arriving data",
+      "Scalable and failure-resistant data lakes",
+      "Batch versus stream for real-time ride data",
+      "Pipeline-failure communication",
+      "Data correctness and analyst trust",
+      "Airflow and Spark interview framing"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you find the second latest transaction for each user in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides a SQL approach that identifies the second most recent transaction independently for each user."
+    },
+    {
+      "question": "How would you rank records inside partitions?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how rank positions are assigned to records within each partition."
+    },
+    {
+      "question": "Why can NULL values break NOT IN in SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains how NULL values can prevent a NOT IN expression from producing the expected result."
+    },
+    {
+      "question": "How would you design a pipeline for 100M+ daily events while addressing a batch that fails midway, schema drift, and late-arriving data?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses processing more than 100 million events per day.\nA strong answer directly addresses the case of a batch failing midway.\nA strong answer addresses both schema drift and late-arriving data."
+    },
+    {
+      "question": "How would you design a data lake that scales and survives failures?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses both scalability and survival of failures.\nA strong answer provides an architecture for the data lake."
+    },
+    {
+      "question": "For a real-time global ride-data use case, what trade-offs would you consider between batch and stream?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer compares batch and stream in the context of real-time global ride data.\nA strong answer explains the trade-offs relevant to that use case."
+    },
+    {
+      "question": "How would you explain a failed pipeline to a non-technical manager, respond to a time when data was wrong, and address whether analysts can trust what you build?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer communicates a pipeline failure in a way suitable for a non-technical manager.\nA strong answer describes an incident involving wrong data and explains what was done.\nA strong answer addresses why analysts should or should not trust the data."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL problem solving",
+      "Large-scale data pipeline design",
+      "Data pipeline failure scenarios",
+      "Schema drift and late-arriving data",
+      "Data lake architecture",
+      "Batch and stream trade-offs",
+      "Stakeholder communication",
+      "Data quality and analyst trust"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d99ac730f590c02a",
+    "saved_date": "2026-10-01T23:11:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9f270262a280288752d65822afa86e10cf5431ce71abbcc0502a906625de7509",
+    "enricher_version": "3"
+  }
+}

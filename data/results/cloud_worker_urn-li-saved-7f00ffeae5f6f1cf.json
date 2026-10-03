@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-saved-7f00ffeae5f6f1cf",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348523794187079680",
+    "captured_at": "2026-10-02T00:15:48.649913Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:05Z"
+  },
+  "original_text": "𝐌𝐮𝐬𝐭 𝐓𝐫𝐲 : Accenture (Medium Level)\n#PySpark #SQL Interview Question — Solution\n\n\n𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧\nAnkur Warikoo, an influential figure in Indian social media, shares a guideline in one of his videos called the 20-6-20 rule for determining whether one can afford to buy a phone or not. The rule for affordability entails three conditions:\n\n \n\n1. Having enough savings to cover a 20 percent down payment.\n2. Utilizing a maximum 6-month EMI plan (no-cost) for the remaining cost.\n3. Monthly EMI should not exceed 20 percent of one's monthly salary.\nGiven the salary and savings of various users, along with data on phone costs, the task is to write an SQL to generate a list of phones (comma-separated) that each user can afford based on these criteria, display the output in ascending order of the user name.\n\n \n\nTable: users\n+----------------+-------------+\n| COLUMN_NAME | DATA_TYPE |\n+----------------+-------------+\n| user_name | varchar(10) |\n| monthly_salary | int |\n| savings | int |\n+----------------+-------------+\nTable: phones\n+-------------+-------------+\n| COLUMN_NAME | DATA_TYPE |\n+-------------+-------------+\n| cost | int |\n| phone_name | varchar(15) |\n+-------------+-------------+\n𝐬𝐜𝐡𝐞𝐦𝐚 \nCREATE TABLE users (\n user_name VARCHAR(50),\n monthly_salary INT,\n savings INT\n);\n\nCREATE TABLE phones (\n phone_name VARCHAR(50),\n cost INT\n);\nINSERT INTO users (user_name, monthly_salary, savings) VALUES\n('Rahul', 40000, 15000),\n('Vivek', 70000, 10000);\n\nINSERT INTO phones (phone_name, cost) VALUES\n('iphone-12', 60000),\n('oneplus-12', 50000),\n('iphone-14', 70000);\n\n\n\nThanks to Ankit Bansal and NamasteSQL for the question\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348523794187079680_slide_0.jpg",
+      "description": "JPEG image, 480x339 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The visible post is a medium-level SQL interview exercise based on a 20-6-20 rule for determining which phones each user can afford. It defines users and phones tables, supplies two user records and three phone records, and requests comma-separated affordable phone names for each user in ascending user-name order. The post is tagged as both PySpark and SQL, but the visible task asks for SQL and includes no completed SQL or PySpark solution. The supplied content appears truncated after the sample data, and the extracted media text is empty.",
+    "topics": [
+      "SQL",
+      "PySpark",
+      "Rule-based affordability filtering",
+      "Relational data analysis",
+      "Aggregation and sorting"
+    ],
+    "subtopics": [
+      "20-6-20 affordability rule",
+      "Down-payment eligibility",
+      "Six-month EMI eligibility",
+      "Per-user phone selection",
+      "Comma-separated phone lists",
+      "Ascending user-name ordering"
+    ],
+    "concepts": [
+      "20-6-20 affordability rule",
+      "User-phone affordability test",
+      "Users relation",
+      "Phones relation",
+      "Per-user affordable-phone output"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should the 20-6-20 rule be translated into affordability conditions for each user-phone pair?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A phone qualifies when the user's savings cover 20 percent of its cost.\nThe remaining 80 percent of the cost is treated as a balance repaid over six months.\nThe resulting monthly EMI must not exceed 20 percent of the user's monthly salary.\nBoth the down-payment and EMI conditions must be satisfied for the phone to be included."
+    },
+    {
+      "question": "Write a SQL query that returns each user with a comma-separated list of affordable phones and sorts the result by ascending user_name.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query evaluates phone costs against each user's savings and monthly salary from the two supplied tables.\nIt applies both the 20 percent down-payment condition and the six-month EMI condition before including a phone.\nIt groups qualifying phone names by user and concatenates them with commas.\nIt orders the resulting rows by user_name in ascending order."
+    },
+    {
+      "question": "Using the supplied records, which phones can Rahul and Vivek afford under the stated rule?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Rahul can afford oneplus-12 and iphone-12, but not iphone-14.\nRahul's qualifying phones require down payments of 10,000 and 12,000, while their approximate six-month EMIs are 6,666.67 and 8,000 respectively; the iphone-14 EMI exceeds his 8,000 limit.\nVivek can afford only oneplus-12 because its 10,000 down payment equals his savings, while the other phones require larger down payments."
+    }
+  ],
+  "classification": {
+    "domain": "SQL data engineering",
+    "primary_topic": "Rule-based relational filtering and aggregation",
+    "secondary_topics": [
+      "Business-rule arithmetic",
+      "Multi-table query logic",
+      "Delimited-list aggregation",
+      "Result ordering",
+      "PySpark interview context"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7f00ffeae5f6f1cf",
+    "saved_date": "2026-10-01T23:12:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348523794187079680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348523794187079680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d958a826c8483749f883d5c0958d9c486f64806635a58882ce780a88a318e3da",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

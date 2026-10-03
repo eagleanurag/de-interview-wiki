@@ -1,0 +1,198 @@
+{
+  "id": "urn-li-archive-efa99583513031f4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.038635Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:38Z"
+  },
+  "original_text": "Virtusa keeps asking these Data Engineering questions repeatedly.\nCTC - 29 LPA\nEXP - 4+\n\n1. What are the different execution modes in Apache Spark (local, standalone, YARN, Mesos)?\n2. What’s the difference between reduceByKey and groupByKey in Spark and when to use each?\n3. Explain the architecture of Apache Spark, including the driver, cluster manager, and worker nodes.\n4. Compare Spark RDDs vs. DataFrames: use cases and performance implications.\n5. Describe internal vs. external Hive tables and their use cases.\n6. Explain partitioning in Hive - why it’s used and how it impacts performance.\n7. How do you optimize SQL queries for performance? (talk about indexing, execution plans, projection pruning etc.)\n8. Describe a data pipeline you’ve built - what tools (e.g., Airflow, PySpark) did you use and what challenges did you face?\n9. Explain CI/CD in data engineering - how you implemented it in ETL pipelines.\n10. How do you ensure data quality and validation in your pipelines?\n11. What experience do you have with AWS data services (e.g., S3, EMR, Glue)? Provide a concrete example.\n12. Describe a scenario where you used Spark Streaming with Kafka for real‑time analytics.\n13. How have you implemented data modeling in big data contexts (e.g., star schema, snowflake)?\n14. Discuss data lakehouse architecture and how it differs from traditional data lakes or warehouses.\n15. Provide an example of a performance or scalability issue you faced in a pipeline and how you resolved it.\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a promotional Virtusa post stating a CTC of 29 LPA and 4+ years of experience and listing 15 Data Engineering interview questions. The questions cover Apache Spark, Hive, SQL optimization, data pipelines, CI/CD, data quality, AWS services, streaming, data modeling, lakehouse architecture, and performance or scalability. The excerpt provides no answers, definitions, comparisons, or implementation details and ends with promotional content and an ellipsis.",
+    "topics": [
+      "Data engineering interviews",
+      "Apache Spark",
+      "Hive",
+      "Data pipelines",
+      "CI/CD in ETL pipelines",
+      "Data quality and validation",
+      "AWS data services",
+      "Real-time analytics",
+      "Big data data modeling",
+      "Data lakehouse architecture",
+      "Pipeline performance and scalability"
+    ],
+    "subtopics": [
+      "Spark execution modes: local, standalone, YARN, and Mesos",
+      "reduceByKey and groupByKey",
+      "Spark driver, cluster manager, and worker nodes",
+      "Spark RDDs and DataFrames",
+      "Internal and external Hive tables",
+      "Hive partitioning",
+      "Indexing, execution plans, and projection pruning",
+      "Data pipeline tools and implementation challenges",
+      "CI/CD implementation in ETL pipelines",
+      "Data quality and validation in pipelines",
+      "AWS S3, EMR, and Glue",
+      "Spark Streaming with Kafka",
+      "Star schema and snowflake data modeling",
+      "Data lakehouse architecture versus data lakes and warehouses",
+      "Pipeline performance and scalability troubleshooting"
+    ],
+    "concepts": [
+      "Apache Spark execution modes",
+      "reduceByKey versus groupByKey",
+      "Apache Spark architecture",
+      "Spark RDDs versus DataFrames",
+      "Internal versus external Hive tables",
+      "Hive partitioning",
+      "Data pipeline implementation",
+      "CI/CD in ETL pipelines",
+      "Data quality and validation",
+      "AWS data services",
+      "Spark Streaming with Kafka",
+      "Big data data modeling",
+      "Data lakehouse architecture",
+      "Pipeline performance and scalability troubleshooting"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the different execution modes in Apache Spark: local, standalone, YARN, and Mesos?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer identifies local, standalone, YARN, and Mesos as the execution modes."
+    },
+    {
+      "question": "What is the difference between reduceByKey and groupByKey in Spark, and when should each be used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the difference between reduceByKey and groupByKey and states when to use each."
+    },
+    {
+      "question": "Explain the architecture of Apache Spark, including the driver, cluster manager, and worker nodes.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer describes the Spark architecture with the driver, cluster manager, and worker nodes."
+    },
+    {
+      "question": "Compare Spark RDDs and DataFrames, including their use cases and performance implications.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer compares RDDs and DataFrames, including their use cases and performance implications."
+    },
+    {
+      "question": "Describe internal and external Hive tables and their use cases.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer describes both internal and external Hive tables and explains their use cases."
+    },
+    {
+      "question": "Explain partitioning in Hive, why it is used, and how it impacts performance.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the purpose of Hive partitioning and its impact on performance."
+    },
+    {
+      "question": "How do you optimize SQL queries for performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer discusses indexing, execution plans, and projection pruning when explaining SQL performance optimization."
+    },
+    {
+      "question": "Describe a data pipeline you have built, including the tools you used and the challenges you faced.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer describes a data pipeline, identifies tools such as Airflow or PySpark when relevant, and explains the challenges faced."
+    },
+    {
+      "question": "How is CI/CD implemented in ETL pipelines?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains CI/CD in data engineering and describes how it was implemented in ETL pipelines."
+    },
+    {
+      "question": "How do you ensure data quality and validation in your pipelines?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how data quality and validation were ensured in a pipeline."
+    },
+    {
+      "question": "What experience do you have with AWS data services such as S3, EMR, and Glue, and what concrete example can you provide?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer gives concrete experience with AWS services such as S3, EMR, or Glue and provides a concrete example."
+    },
+    {
+      "question": "Describe a scenario in which you used Spark Streaming with Kafka for real-time analytics.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer describes a scenario using Spark Streaming with Kafka for real-time analytics."
+    },
+    {
+      "question": "How have you implemented data modeling in big data contexts, such as a star schema or snowflake?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer describes a big data data-modeling implementation, such as a star schema or snowflake."
+    },
+    {
+      "question": "Discuss data lakehouse architecture and how it differs from traditional data lakes or warehouses.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer contrasts data lakehouse architecture with traditional data lakes and warehouses."
+    },
+    {
+      "question": "Provide an example of a performance or scalability issue you faced in a pipeline and explain how you resolved it.",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer describes a pipeline performance or scalability issue and explains how it was resolved."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Apache Spark",
+      "Hive",
+      "SQL query optimization",
+      "Data pipelines",
+      "CI/CD in ETL pipelines",
+      "Data quality and validation",
+      "AWS data services",
+      "Real-time analytics",
+      "Big data data modeling",
+      "Data lakehouse architecture",
+      "Pipeline performance and scalability"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:efa99583513031f4",
+    "saved_date": "2026-10-01T23:13:38Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2074ec0e9f74f7ffed53c903d50b6827166c6ee9757e51aba5c62cf6238a6d86",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "SQL query optimization"
+      ],
+      "concepts": [
+        "SQL query optimization"
+      ],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-ebca332c77c8dfa0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7294558213721460736",
+    "captured_at": "2026-10-02T00:15:53.083041Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:29Z"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\n𝐃𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐅𝐢𝐥𝐞 𝐅𝐨𝐫𝐦𝐚𝐭𝐬 𝐚𝐧𝐝 𝐖𝐡𝐞𝐧 𝐭𝐨 𝐔𝐬𝐞 𝐓𝐡𝐞𝐦\n𝐂𝐒𝐕\n𝐏𝐚𝐫𝐪𝐮𝐞𝐭\n𝐉𝐒𝐎𝐍\n𝐗𝐌𝐋\n𝐀𝐯𝐫𝐨\nAlso, it contains a big comparison 𝐜𝐡𝐞𝐚𝐭 𝐬𝐡𝐞𝐞𝐭 at the end, so keep scrolling and read it through.\nCheck out the attached PDF for the same.\nFollow Abhishek Agrawal for more such content.\n🔗 Join our WhatsApp channel to stay updated on Data Engineering!\nhttps://lnkd.in/ew4mp24d 📲\n#csv #parquet #avro #json #xml #deltalake #delta #storage #cloud #azure #aws #gcp\n…see more\nfile type and how to use adf",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7294558213721460736_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional job post for a Senior Data Engineer role focused on Azure Databricks, Microsoft Fabric, Azure Data Factory, PySpark, Spark, Azure Synapse, SQL, and data platforms. It indicates that candidates should be open to working in Germany or the UAE and references file formats, a large comparison sheet, and an attached PDF, but it does not provide technical explanations, comparisons, or substantive knowledge.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ebca332c77c8dfa0",
+    "saved_date": "2026-10-01T23:35:29Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7294558213721460736",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7294558213721460736_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d945e69f9c76b291d80b357d5d5ea91ef20b510fa1f26a0faddfe30523fe72da",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "urn-li-saved-28d5d2e9922fe940",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345654919057612801",
+    "captured_at": "2026-10-02T00:15:45.923124Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:14Z"
+  },
+  "original_text": "Preparing for the placements in the last few months or getting ready to make a switch? Here are 10 LeetCode articles you can't miss for your preparation for companies like Google, Microsoft or Amazon....\n\n1. Sliding Window: Optimize brute force solutions for subarray/substring problems involving contiguous elements. Crucial for array and string manipulation.\nLink: https://lnkd.in/gTPKniq8\n\n2. Two Pointers: Efficiently process pairs or groups of elements without nested loops. Great for sorted arrays, partitioning, and in-place operations.\nLink: https://lnkd.in/gZueEGr9\n\n3. Substring Problems: Techniques to find, compare, or manipulate substrings. Often involves dynamic programming or sliding windows.\nLink: https://lnkd.in/gn7Te8zM\n\n4. Dynamic Programming - Part 1: Introduction to breaking problems into overlapping subproblems with memoization and tabulation.\nLink: https://lnkd.in/gciVHmyT\n\n5. Dynamic Programming - Part 2: Tackle advanced DP problems like matrix DP, interval DP, and multi-dimensional states.\nLink: https://lnkd.in/gjgD46t6\n\n6. Binary Search: Master standard and advanced binary search variations, including rotated arrays and unknown search bounds.\nLink: https://lnkd.in/gxqu6XqS\n\n7. Backtracking: Explore all potential solutions recursively. Essential for permutations, combinations, and puzzles.\nLink: https://lnkd.in/geKFNQsH\n\n8. Tree Patterns: DFS, BFS, recursion, and structural manipulation — the backbone of tree-based problems.\nLink: https://lnkd.in/gDudCzr9\n\n9. Graph Patterns: Traversals, connected components, shortest paths, and topological sorts. Core for advanced interviews.\nLink: https://lnkd.in/gY2AFJac\n\n10. Greedy Algorithms: Make the best choice locally at each step to find optimal global solutions. Common in scheduling, intervals, and path optimization.\nLink: https://lnkd.in/gCazBs6V\n\nMaster these patterns, and you'll approach any interview problem with confidence.\n\nPersonal DSA Sheet: https://lnkd.in/gnH8d4Dh",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345654919057612801_slide_0.jpg",
+      "description": "JPEG image, 480x640 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post curates 10 LeetCode articles for placement or career-switch preparation. It briefly describes pattern-based approaches to sliding windows, two pointers, substrings, dynamic programming, binary search, backtracking, trees, graphs, and greedy algorithms, but it does not provide detailed implementations or worked examples.",
+    "topics": [
+      "LeetCode interview preparation",
+      "Data structures and algorithms",
+      "Array and string problem-solving",
+      "Tree and graph problem-solving"
+    ],
+    "subtopics": [
+      "Sliding window",
+      "Two pointers",
+      "Substring techniques",
+      "Dynamic programming",
+      "Binary search",
+      "Backtracking",
+      "Tree patterns",
+      "Graph patterns",
+      "Greedy algorithms"
+    ],
+    "concepts": [
+      "Sliding Window",
+      "Two Pointers",
+      "Substring Problem Techniques",
+      "Dynamic Programming Fundamentals",
+      "Advanced Dynamic Programming",
+      "Binary Search",
+      "Backtracking",
+      "Tree Patterns",
+      "Graph Patterns",
+      "Greedy Algorithms"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What kind of problems is the sliding-window pattern intended to optimize?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "It targets subarray and substring problems involving contiguous elements.\nIt replaces brute-force solution attempts with a sliding-window approach."
+    },
+    {
+      "question": "How do sliding-window and two-pointer techniques differ in their stated uses?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Sliding windows address contiguous subarrays and substrings.\nTwo pointers process pairs or groups of elements without nested loops and are useful for sorted arrays, partitioning, and in-place operations."
+    },
+    {
+      "question": "Which techniques does the post identify for solving substring problems?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Substring techniques can be used to find, compare, or manipulate substrings.\nThe post associates these problems with dynamic programming or sliding windows."
+    },
+    {
+      "question": "What dynamic-programming foundations and advanced forms are included in the preparation list?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Dynamic programming breaks a problem into overlapping subproblems and uses memoization or tabulation.\nThe advanced forms named are matrix DP, interval DP, and multidimensional states."
+    },
+    {
+      "question": "What binary-search variations should an interview candidate prepare to recognize?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The preparation list includes standard and advanced binary-search variations.\nIt specifically mentions rotated arrays and searches with unknown bounds."
+    },
+    {
+      "question": "How does backtracking explore solutions, and which problem types is it associated with?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Backtracking explores potential solutions recursively.\nThe post associates it with permutations, combinations, and puzzles."
+    },
+    {
+      "question": "Which methods and operations are grouped under tree problem patterns?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The listed tree methods are DFS, BFS, and recursion.\nThe category also includes structural manipulation of trees."
+    },
+    {
+      "question": "Which graph problem families are identified as important for advanced interviews?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The listed graph patterns are traversals, connected components, shortest paths, and topological sorts."
+    },
+    {
+      "question": "What reasoning characterizes a greedy algorithm, and where is it commonly applied?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A greedy algorithm makes the best local choice at each step while seeking a globally optimal solution.\nThe post gives scheduling, interval problems, and path optimization as common applications."
+    }
+  ],
+  "classification": {
+    "domain": "Data Structures and Algorithms",
+    "primary_topic": "LeetCode interview preparation",
+    "secondary_topics": [
+      "Array and string algorithms",
+      "Dynamic programming",
+      "Searching",
+      "Recursive problem-solving",
+      "Tree and graph algorithms",
+      "Greedy algorithms"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:28d5d2e9922fe940",
+    "saved_date": "2026-10-01T23:14:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345654919057612801",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345654919057612801_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "376abd608e0ef3907dd5d0081a93bbfc2c3ec3d7e135aedd2d15994fad599cb8",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

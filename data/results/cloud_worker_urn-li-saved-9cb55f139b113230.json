@@ -1,0 +1,153 @@
+{
+  "id": "urn-li-saved-9cb55f139b113230",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7304810765977296896",
+    "captured_at": "2026-10-02T00:15:49.958558Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:06Z"
+  },
+  "original_text": "𝐏𝐖𝐂 𝐩𝐲𝐬𝐩𝐚𝐫𝐤 𝐃𝐚𝐭𝐚𝐞𝐧𝐠𝐢𝐧𝐞𝐞𝐫 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 2️⃣ 0️⃣ 2️⃣ 5️⃣ \n\n1️⃣ Write a PySpark code to read a CSV file and display the schema.\n\n2️⃣ How do you handle missing or null values in a DataFrame?\n\n3️⃣ Write a PySpark query to group data by a column and calculate aggregations (like sum, count).\n\n4️⃣ How do you join two DataFrames in PySpark? Explain different types of joins.\n\n5️⃣ How can you remove duplicate rows in a DataFrame?\n\n6️⃣ Write PySpark code to filter rows based on a condition.\n\n7️⃣ How do you add a new column to a DataFrame?\n\n8️⃣ How do you sort a DataFrame by multiple columns?\n\n9️⃣ Build a PySpark pipeline to clean, transform, and aggregate data for reporting.\n\n1️⃣ 0️⃣ Given a log file, write PySpark code to find the top 10 IP addresses by request count.\n\n#Pyspark #Spark #Dataengineer #Interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7304810765977296896_slide_0.jpg",
+      "description": "JPEG image, 480x466 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a question-only post listing ten PySpark data engineering interview prompts for 2025. It covers CSV ingestion and schema inspection, null handling, grouped aggregations, DataFrame joins and deduplication, filtering, column creation, sorting, reporting pipelines, and ranking IP addresses by request count. The post provides questions but no answers, code, methods, or technical explanations.",
+    "topics": [
+      "PySpark DataFrame operations",
+      "Data transformation and aggregation",
+      "Reporting pipelines",
+      "Log file analysis"
+    ],
+    "subtopics": [
+      "Reading CSV files and displaying schemas",
+      "Handling missing and null values",
+      "Grouping data and calculating sum and count aggregations",
+      "Joining DataFrames and explaining join types",
+      "Removing duplicate rows",
+      "Filtering rows by conditions",
+      "Adding DataFrame columns",
+      "Sorting by multiple columns",
+      "Cleaning, transforming, and aggregating data for reporting",
+      "Counting requests per IP address"
+    ],
+    "concepts": [
+      "CSV ingestion and schema inspection",
+      "Missing-value handling",
+      "Grouped aggregations",
+      "DataFrame joins",
+      "Duplicate-row removal",
+      "Row filtering",
+      "Column creation",
+      "Multi-column sorting",
+      "Reporting data pipeline",
+      "IP request-count ranking"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write PySpark code to read a CSV file and display its schema.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer includes PySpark code that reads the CSV file and displays the resulting DataFrame schema."
+    },
+    {
+      "question": "How do you handle missing or null values in a PySpark DataFrame?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer explains how missing or null values in a DataFrame can be handled."
+    },
+    {
+      "question": "Write a PySpark query that groups data by a column and calculates aggregations such as sum and count.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer groups records by a column and demonstrates sum and count aggregations."
+    },
+    {
+      "question": "How do you join two DataFrames in PySpark, and what are the different types of joins?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer explains how two DataFrames are joined and describes the behavior of different join types."
+    },
+    {
+      "question": "How can you remove duplicate rows from a PySpark DataFrame?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer demonstrates how duplicate rows are removed from a DataFrame."
+    },
+    {
+      "question": "Write PySpark code to filter DataFrame rows based on a condition.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer includes code that applies a condition to select the required DataFrame rows."
+    },
+    {
+      "question": "How do you add a new column to a PySpark DataFrame?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer demonstrates adding a new column to an existing DataFrame."
+    },
+    {
+      "question": "How do you sort a PySpark DataFrame by multiple columns?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer demonstrates sorting a DataFrame according to multiple columns."
+    },
+    {
+      "question": "Build a PySpark pipeline that cleans, transforms, and aggregates data for reporting.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer organizes the pipeline into cleaning, transformation, and aggregation stages that produce reporting data."
+    },
+    {
+      "question": "Given a log file, write PySpark code to find the top ten IP addresses by request count.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer processes the log data, counts requests for each IP address, and identifies the ten addresses with the highest counts."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Spark DataFrames",
+      "Data cleaning",
+      "Data aggregation",
+      "Reporting pipelines",
+      "Log analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9cb55f139b113230",
+    "saved_date": "2026-10-01T23:33:06Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7304810765977296896",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7304810765977296896_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "965672f1d9cfeddfe9ef2b33fc6918b87f7992a130b76540343eee7771c0f11c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data quality and cleaning"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

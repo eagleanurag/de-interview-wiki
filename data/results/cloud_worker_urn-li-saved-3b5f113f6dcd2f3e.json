@@ -1,0 +1,130 @@
+{
+  "id": "urn-li-saved-3b5f113f6dcd2f3e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7294210419810844672",
+    "captured_at": "2026-10-02T00:15:46.634530Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:47Z"
+  },
+  "original_text": "• 1st\nPassionate Payments Professional | Writes to 30+ | Java Backend Developer | Exploring SWIFT, RTGS, RTP & ISO 20022\n1yr •\nMaster SQL in Just 16 Pages🔥\nSQL is the backbone of data management, and mastering it can unlock countless opportunities. I recently came across a concise yet powerful guide that covers essential SQL concepts in just 16 pages! Here’s a quick breakdown of the key topics covered:\n~ Database Basics: Creating, using, and managing databases\n~ Tables & Data Manipulation: Creating tables, inserting, updating, and deleting records\n~ SQL Commands: DDL, DML, DCL, TCL, and DQL explained\n~ Advanced Queries: Joins, Subqueries, CASE Statements, and Window Functions\n~ Aggregation & Ranking: COUNT, SUM, AVG, RANK, DENSE_RANK, NTILE\n~ Views & Temporary Tables: Creating views, CTEs, and temp tables\n~ Data Cleaning & Formatting: String functions, NULL handling, and removing duplicates\n~ Stored Procedures & Transactions: Writing reusable SQL procedures and managing transactions.\nFor anyone looking to level up their SQL skills, this document is a goldmine.\nIf you're working with databases, whether in backend development, data analysis, or fintech (like me in the payments space 💳), these concepts are a must-know.\nWould you like me to break down any of these topics in detail?\nLet me know in the commens\nDoc Credit- Fang Ying sham\n#SQL #Database #DataManagement #BackendDevelopment #Learning #Tech\nSQL in 16 Pages",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7294210419810844672_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post summarizes a 16-page SQL guide covering database and table management, SQL command categories, advanced queries, aggregation and ranking, reusable query structures, data cleaning, stored procedures, and transactions. It provides only a high-level list of topics, without SQL syntax, detailed explanations, examples, or the guide's actual content.",
+    "topics": [
+      "SQL",
+      "Database management",
+      "Data manipulation",
+      "Data cleaning",
+      "Stored procedures",
+      "Transactions"
+    ],
+    "subtopics": [
+      "Database creation, use, and management",
+      "Table creation and record manipulation",
+      "DDL, DML, DCL, TCL, and DQL",
+      "Joins and subqueries",
+      "CASE statements and window functions",
+      "Aggregation and ranking functions",
+      "Views, CTEs, and temporary tables",
+      "String functions and NULL handling",
+      "Duplicate removal"
+    ],
+    "concepts": [
+      "Database management",
+      "Tables and data manipulation",
+      "SQL command categories",
+      "Joins",
+      "Subqueries",
+      "CASE statements",
+      "Window functions",
+      "Aggregation functions",
+      "Ranking functions",
+      "Views",
+      "CTEs",
+      "Temporary tables",
+      "String functions",
+      "NULL handling",
+      "Duplicate removal",
+      "Stored procedures",
+      "Transactions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which database and table operations does the post say the SQL guide covers?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The guide covers creating, using, and managing databases.\nIt covers creating tables and inserting, updating, and deleting records."
+    },
+    {
+      "question": "Which SQL command categories and advanced query techniques are identified in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The identified SQL command categories are DDL, DML, DCL, TCL, and DQL.\nThe identified advanced query techniques are joins, subqueries, CASE statements, and window functions."
+    },
+    {
+      "question": "Which functions listed in the post are associated with aggregation and ranking, and what query structures are also covered?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "COUNT, SUM, and AVG are listed as aggregation functions.\nRANK, DENSE_RANK, and NTILE are listed as ranking functions.\nViews, CTEs, and temporary tables are listed as covered query structures."
+    },
+    {
+      "question": "Which techniques does the post associate with cleaning and formatting database records?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The post identifies string functions as a data cleaning and formatting technique.\nIt identifies NULL handling and removing duplicates as additional data cleaning tasks."
+    },
+    {
+      "question": "Which SQL features does the post identify for reusable database logic and managing database operations?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Stored procedures are presented as reusable SQL procedures.\nTransactions are identified as a database operation for which the guide provides coverage."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Database management",
+      "Data manipulation",
+      "Advanced queries",
+      "Data cleaning",
+      "Stored procedures",
+      "Transactions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3b5f113f6dcd2f3e",
+    "saved_date": "2026-10-01T23:36:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7294210419810844672",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7294210419810844672_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c3f211ed0351ec58f1e7b302aa31e1a05c87b12da228281194d32c5701112225",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-71bed76aceda00b5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.370027Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:58Z"
+  },
+  "original_text": "Those who post Top 10/20 free resources for your SQL learning and all.\n\nYou just need 2 free youtube channel to get expertise in SQL.\n\n1- Venkat K : Kudvenkat \nhttps://lnkd.in/gNR4KvNq\n\n2- Ankit Bansal \nhttps://lnkd.in/gHtMfPCS\n\nTrust me, You will be confident after following these two channels.\n\n#sql #upskill #youtube #learning \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post recommends two free YouTube channels, Kudvenkat by Venkat K and Ankit Bansal, for learning SQL and claims that following them can build expertise and confidence. It contains no SQL concepts, techniques, exercises, or other technical instruction, and the supplied excerpt appears incomplete.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "SQL education",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:71bed76aceda00b5",
+    "saved_date": "2026-10-01T23:24:58Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "facfcac88ae61e7966a8fbc40404b11d62e385972ca2bed4a475315e1b8697df",
+    "enricher_version": "3"
+  }
+}

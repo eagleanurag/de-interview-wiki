@@ -1,0 +1,95 @@
+{
+  "id": "urn-li-saved-5c92b9e372e48267",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7463473804212842496",
+    "captured_at": "2026-10-02T00:15:47.946638Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:03Z"
+  },
+  "original_text": "3x Featured at Times Square, New York | Top 0.1% Mentor @Topmate | Data Expert | Azure Data Engineer & Career Coach | 32K+ @LinkedIn | 2x Microsoft Fabric Certified | Azure Data Engineering Content Creator\n4mo •\n𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗣𝗿𝗼𝗯𝗹𝗲𝗺 𝗔𝘀𝗸𝗲𝗱 𝗶𝗻 𝗜𝗕𝗠 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\nIf you’re preparing for Data Engineering interviews, you need to be comfortable solving practical PySpark scenarios like this.\nThis is the kind of PySpark scenario many candidates struggle to solve during live Data Engineering interviews\nI’ve explained one real IBM Azure Data Engineer interview question with complete implementation logic and PySpark solution breakdown.\n📊 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼 -\nYou are given Indian railway booking data, and you need to identify the top 2 revenue-generating routes using aggregation + window functions.\n𝗪𝗵𝗮𝘁 𝘆𝗼𝘂’𝗹𝗹 𝗹𝗲𝗮𝗿𝗻 𝗳𝗿𝗼𝗺 𝘁𝗵𝗶𝘀 𝗣𝗗𝗙 -\n✅ How to approach real interview problems\n✅ Step-by-step logic (interview-ready explanation)\n✅ PySpark groupBy + aggregation usage\n✅ Window functions (dense_rank) explained clearly\n✅ How to extract Top-N results efficiently\n𝗜’𝘃𝗲 𝗮𝗹𝘀𝗼 𝗰𝗼𝗺𝗽𝗶𝗹𝗲𝗱 𝟮𝟬𝟬+ 𝗔𝗽𝗮𝗰𝗵𝗲 𝗦𝗽𝗮𝗿𝗸 & 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 𝘄𝗶𝘁𝗵 𝗱𝗲𝘁𝗮𝗶𝗹𝗲𝗱 𝗮𝗻𝘀𝘄𝗲𝗿𝘀 𝗶𝗻𝘁𝗼 𝗼𝗻𝗲 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗺𝗮𝘀𝘁𝗲𝗿𝘆 𝗸𝗶𝘁 𝘁𝗼 𝗵𝗲𝗹𝗽 𝘆𝗼𝘂 𝗰𝗿𝗮𝗰𝗸 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝘀 𝘄𝗶𝘁𝗵 𝗰𝗼𝗻𝗳𝗶𝗱𝗲𝗻𝗰𝗲\n👉 𝗚𝗲𝘁 𝘁𝗵𝗲 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗸𝗶𝘁 𝗵𝗲𝗿𝗲 - https://lnkd.in/dC4jKnkp\n📌 𝗔𝗹𝘀𝗼 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 - 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗔𝗹𝗹-𝗶𝗻-𝗢𝗻𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗠𝗮𝘀𝘁𝗲𝗿𝘆 𝗞𝗶𝘁\n📥 𝗚𝗲𝘁 𝘁𝗵𝗲 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗸𝗶𝘁 𝗵𝗲𝗿𝗲 - https://lnkd.in/dpBtyiKf\n📌 𝗔𝗹𝘀𝗼 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 - 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗙𝗮𝗰𝘁𝗼𝗿𝘆 & 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗠𝗮𝘀𝘁𝗲𝗿𝘆 𝗞𝗶𝘁\n👉 𝗔𝗰𝗰𝗲𝘀𝘀 𝗞𝗶𝘁 𝗛𝗲𝗿𝗲 - https://lnkd.in/dS527dxY\n💙 𝗜𝗳 𝘆𝗼𝘂 𝗳𝗼𝘂𝗻𝗱 𝘁𝗵𝗶𝘀 𝗵𝗲𝗹𝗽𝗳𝘂𝗹, 𝗱𝗼𝗻’𝘁 𝗳𝗼𝗿𝗴𝗲𝘁 𝘁𝗼 𝗟𝗜𝗞𝗘 👍 𝗮𝗻𝗱 𝗦𝗔𝗩𝗘 🔖 𝘁𝗵𝗶𝘀 𝗽𝗼𝘀𝘁!\n#PySpark #ApacheSpark #DataEngineer\n#AzureDataEngineer #PySpark #SparkSQL\n#AzureDatabricks #BigDataEngineering\n#DataEngineerJobs #InterviewPreparation\nIBM",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7463473804212842496_slide_0.jpg",
+      "description": "JPEG image, 320x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post outlines an IBM Azure Data Engineer interview scenario involving Indian railway booking data. The goal is to identify the top two revenue-generating routes by using PySpark groupBy operations, aggregation, a dense_rank window function, and Top-N extraction. Although the post says a complete implementation is available through a link, the supplied content does not include the schema, code, or full implementation steps.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Data Engineering Interview Preparation",
+      "Top-N Data Analysis"
+    ],
+    "subtopics": [
+      "Indian railway booking data",
+      "Revenue aggregation by route",
+      "groupBy operations",
+      "dense_rank window functions",
+      "Top-N result extraction"
+    ],
+    "concepts": [
+      "PySpark Interview Scenario",
+      "groupBy and Aggregation",
+      "Window Functions",
+      "dense_rank",
+      "Top-N Extraction"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What high-level PySpark approach does the post present for identifying the top two revenue-generating railway routes?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The railway booking data is grouped and aggregated to calculate revenue by route.\nA dense_rank window function is used to rank the route results.\nThe first two ranks are retained to produce the top two routes."
+    },
+    {
+      "question": "Which techniques does the post explicitly identify for solving the railway-booking interview problem?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The listed techniques are PySpark groupBy, aggregation, window functions, dense_rank, and Top-N extraction.\nThe post presents these techniques as an interview-ready approach rather than including the complete implementation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "Spark SQL",
+      "Window Functions",
+      "Top-N Data Analysis",
+      "Data Engineering Interview Preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5c92b9e372e48267",
+    "saved_date": "2026-10-01T23:08:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7463473804212842496",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7463473804212842496_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "091c4dabeea3083bd4b7e0d47b16c108bf21ed67bf38850f67512d712577cd03",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Spark SQL"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "urn-li-saved-51d788586371eb85",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7301772876238491651",
+    "captured_at": "2026-10-02T00:15:47.496374Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:12Z"
+  },
+  "original_text": "DATABRICKS INTERVIEW QUESTIONS!!!\nPart-1\nQ. If you have to process 100 GB of data? How you will decide the cluster configuration? \n\nSTEP 1: Number of executor cores required?\n - We start by deciding how many executor cores we need\n\n - One partition is of 128MB of size by default \n\n- important to remember \n- To calculate number of cores required, you have to calculate total number of partitions you will end up having 100GB = 100*1024 MB = 102400MB Number of partitions = 102400/128 = 800 Therefore, 800 executor cores in total are required\n\n STEP 2: Number of executors required? Now that we know how many cores, next we need to find how many executors are required. \n\n- On an average, its recommended to have 2-5 executor cores in one executor - If we take number of executors cores in one executor = 4 then, total number of executors = 800/4 = 200 Therefore, 200 executors are required to perform this task\n\n STEP 3: Total executor memory required? Important step! how much memory to be assigned to each executor \n\n-By default, total memory of an executor core should be 4 times the (default partition memory) = 4*128 = 512 MB Therefore, total executor memory = number of cores*512 = 4*512 = 2GB \n\nSUMMARIZE: Total memory required to process 100GB of data \n\nWe are here! lets finalize on total memory to be required to process 100GBs of data Each executor has 2GB of memory \nWe have total of 200 executors \nTherefore, 400GB of total minimum memory required to process 100GB of data completely in parallel.\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7301772876238491651_slide_0.jpg",
+      "description": "JPEG image, 480x373 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a three-step Databricks cluster-sizing method for processing 100 GB of data. It assumes a default partition size of 128 MB, calculates 102400/128 = 800 partitions, and uses that result to size 800 executor cores. It then assumes four cores per executor, which produces 200 executors. Finally, it assigns 512 MB per executor core, calculates 2 GB of memory for each four-core executor, and concludes that 200 executors require 400 GB of total memory for complete parallel processing under the stated assumptions.",
+    "topics": [
+      "Databricks cluster configuration",
+      "Executor sizing",
+      "Partition-based data processing",
+      "Memory sizing",
+      "Parallel processing"
+    ],
+    "subtopics": [
+      "Calculating executor cores from partition count",
+      "Choosing executor cores per executor",
+      "Calculating memory per executor",
+      "Calculating aggregate executor memory"
+    ],
+    "concepts": [
+      "Default partition size",
+      "Partition count for 100 GB",
+      "Executor core requirement",
+      "Executor cores per executor",
+      "Executor count",
+      "Memory per executor core",
+      "Memory per executor",
+      "Total executor memory"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the post calculate the number of executor cores needed to process 100 GB of data?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The calculation uses the stated default partition size of 128 MB.\nIt converts 100 GB to 102400 MB and divides by 128 MB to obtain 800 partitions.\nIt then presents 800 executor cores as the required total."
+    },
+    {
+      "question": "How does the post determine the number of executors from the required executor cores?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The post states that an executor is recommended to have two to five executor cores.\nIts example selects four executor cores for each executor.\nIt divides 800 executor cores by four and calculates 200 executors."
+    },
+    {
+      "question": "How does the post calculate memory per executor and total memory for the 100 GB task?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The calculation uses 512 MB per executor core, based on four times the stated 128 MB default partition size.\nFour executor cores require 2 GB of memory under the post's calculation.\nMultiplying 2 GB per executor by 200 executors produces the stated total of 400 GB."
+    },
+    {
+      "question": "Which assumptions support the cluster configuration shown in the post?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The calculation assumes a default partition size of 128 MB.\nIt uses the post's recommendation of two to five executor cores per executor and selects four.\nThe conclusion applies to the post's stated sizing method rather than introducing additional configuration factors."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks cluster configuration",
+    "secondary_topics": [
+      "Executor sizing",
+      "Partition sizing",
+      "Memory calculation",
+      "Parallel data processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:51d788586371eb85",
+    "saved_date": "2026-10-01T23:33:12Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7301772876238491651",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7301772876238491651_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "7c1d243e9a6b972815a5e82360469080f21d738ec3e545bb7f81381a4ad2a31c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "urn-li-saved-9c0f6f53e788e03f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338328091057885187",
+    "captured_at": "2026-10-02T00:15:49.918225Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:56Z"
+  },
+  "original_text": "SQL No Fear: RIGHT OR LEFT JOIN\n\nNEVER EVER DO LEFT JOIN!!!\n\n\"Does performance differ? What are the pros and cons?\"\n\nSELECT * FROM TableA\nLEFT JOIN TableB ON TableA.uid = TableB.id\n\nThanks to Zach Wilson!\n\nSee comments for details!\n\n#SQL #DataAnalytics #DataEngineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338328091057885187_slide_0.jpg",
+      "description": "JPEG image, 480x225 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post shows a SQL LEFT JOIN query that joins TableA.uid to TableB.id, claims that LEFT JOIN should never be used, and asks whether performance differs and what the pros and cons are. It provides no performance comparison, supporting evidence, explanation, or comment details, so its central claim cannot be evaluated from the supplied content.",
+    "topics": [
+      "SQL",
+      "SQL joins",
+      "LEFT JOIN",
+      "JOIN performance"
+    ],
+    "subtopics": [
+      "LEFT JOIN syntax",
+      "Performance differences",
+      "Pros and cons of joins"
+    ],
+    "concepts": [
+      "LEFT JOIN query example",
+      "Absolute rejection of LEFT JOIN",
+      "JOIN performance and trade-offs"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL joins",
+    "secondary_topics": [
+      "LEFT JOIN",
+      "JOIN performance",
+      "JOIN trade-offs"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9c0f6f53e788e03f",
+    "saved_date": "2026-10-01T23:20:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338328091057885187",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338328091057885187_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c9f2cbc49af835e68899d85c163960979a31d0beca7ff50322606918d90d8ffe",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

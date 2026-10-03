@@ -1,0 +1,93 @@
+{
+  "id": "urn-li-saved-f106e46cc564f5eb",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348939055495098368",
+    "captured_at": "2026-10-02T00:15:53.213997Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:04Z"
+  },
+  "original_text": "Senior Data Engineer | Azure Databricks | Microsoft Fabric | Azure Data Factory | PySpark | Spark | Azure Synapse | SQL | Data Platform | Open to Germany 🇩🇪 & UAE\n1yr •\n𝐔𝐧𝐝𝐞𝐫𝐬𝐭𝐚𝐧𝐝𝐢𝐧𝐠 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐢𝐧 𝐃𝐚𝐭𝐚𝐛𝐫𝐢𝐜𝐤𝐬\n𝐖𝐡𝐚𝐭 𝐢𝐬 𝐔𝐧𝐢𝐭 𝐓𝐞𝐬𝐭𝐢𝐧𝐠?\nUnit testing is a method used to test individual components of your code in isolation to ensure they work as expected.\nWhy is it Important?\n1️⃣ Detects issues at the component level before integrating them into larger systems.\n2️⃣ Ensures functionality, boosting the reliability of your pipelines.\n3️⃣ Prevents breaking changes during updates by acting as a safety net.\n4️⃣ Encourages confident code modifications without fear of introducing errors.\nHow to Implement It?\nLearn step-by-step implementation with practical examples in Databricks.\n🔗 Follow Abhishek Agrawal for more such content.\n📥 Download the PDF to dive deeper into unit testing!\n🔗 𝑱𝒐𝒊𝒏 𝒐𝒖𝒓 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒕𝒐 𝒔𝒕𝒂𝒚 𝒖𝒑𝒅𝒂𝒕𝒆𝒅 𝒐𝒏 𝑫𝒂𝒕𝒂 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓𝒊𝒏𝒈!\nhttps://lnkd.in/dUuscrch 📲\n#unittesting #software #Databricks #azure #cloud #spark #dataengineering\n…see more\nunit testing",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348939055495098368_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that unit testing checks individual code components in isolation to verify that they work as expected. It presents unit testing as a way to detect component-level issues before integration, improve data pipeline reliability, prevent breaking changes during updates, and make code modifications more confident. Although the post mentions practical examples in Databricks and links to a PDF, the supplied content does not include implementation steps or examples.",
+    "topics": [
+      "Unit testing",
+      "Databricks"
+    ],
+    "subtopics": [
+      "Component-level testing",
+      "Testing code in isolation",
+      "Data pipeline reliability",
+      "Detecting issues before integration",
+      "Preventing breaking changes"
+    ],
+    "concepts": [
+      "Unit testing",
+      "Component-level issue detection",
+      "Pipeline reliability",
+      "Change safety"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is unit testing, and what level of a system does it test?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The purpose is to verify that each tested component works as expected."
+    },
+    {
+      "question": "Why is unit testing useful before components are integrated into a larger data pipeline?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "It verifies functionality and supports greater pipeline reliability."
+    },
+    {
+      "question": "How can unit testing reduce the risk of breaking changes during code updates?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "This supports more confident code modifications and helps prevent errors from being introduced during updates."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Unit testing",
+    "secondary_topics": [
+      "Databricks",
+      "Data pipeline reliability"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f106e46cc564f5eb",
+    "saved_date": "2026-10-01T23:12:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348939055495098368",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348939055495098368_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "27676c1c9cc68517c7f709eff0975f3846a75bd52afb51f11077fa120bb94207",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

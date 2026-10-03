@@ -1,0 +1,156 @@
+{
+  "id": "urn-li-archive-d2cb56510ef02aca",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.423041Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:02Z"
+  },
+  "original_text": "These 20 PySpark questions are enough to crack 90% of Data Engineer interviews.”\nNo theory. Just real, practical challenges you’ll actually face.\n\n\n💻 20 Real PySpark Questions That Actually Get Asked\n 1. Filter records where status = 'active' and score > 80\n 2. Add a new column based on conditions (when / otherwise)\n 3. Count distinct users per day from a log table\n 4. Drop rows with nulls in a specific column\n 5. Join 2 DataFrames and select only common records\n 6. Write a DataFrame to Parquet partitioned by region\n 7. Read a nested JSON and flatten it into columns\n 8. Explode an array column and keep other columns intact\n 9. Repartition a DataFrame before writing to avoid small files\n 10. Broadcast a small lookup table before a join\n 11. Create a window function to get the latest record per user\n 12. Cache a DataFrame — and unpersist it later\n 13. Remove duplicate rows based on multiple columns\n 14. Apply a custom function using .withColumn()\n 15. Handle schema evolution when reading historical data\n 16. Find the top 3 selling products per category\n 17. Extract values from a struct field\n 18. Log number of records before and after filtering\n 19. Use .transform() to apply a pipeline of operations\n 20. Trigger an Airflow DAG after the PySpark job finishes\n\n⸻\n\n✅ These aren’t just for interviews — they are your day-to-day reality as a Data Engineer.\n\n\n\n\n#PySpark #DataEngineering #ApacheSpark #BigData #DEInterview #ETL #SparkJobs #SQL #InterviewPrep\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post claims that 20 PySpark questions are enough to crack 90% of Data Engineer interviews and presents them as practical day-to-day work. The supplied text lists filtering and conditional columns, aggregation, null and duplicate handling, joins, partitioned Parquet output, nested JSON and arrays, repartitioning, broadcast lookups, window functions, caching, schema evolution, top-product analysis, struct extraction, record-count logging, reusable transformations, and Airflow orchestration. It provides task statements but no solutions or detailed explanations. The text is visibly truncated after 'see more', although all 20 numbered tasks are present.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Data Engineering",
+      "ETL",
+      "Parquet",
+      "JSON",
+      "Airflow"
+    ],
+    "subtopics": [
+      "Filtering records by status and score",
+      "Conditional column creation with when and otherwise",
+      "Counting distinct users per day",
+      "Removing rows with null values",
+      "Selecting common records from DataFrame joins",
+      "Writing Parquet partitioned by region",
+      "Reading and flattening nested JSON",
+      "Exploding arrays while retaining other columns",
+      "Repartitioning before writes",
+      "Broadcasting small lookup tables",
+      "Finding the latest record per user with a window function",
+      "Caching and unpersisting DataFrames",
+      "Removing duplicates based on multiple columns",
+      "Applying custom functions with withColumn",
+      "Handling schema evolution for historical data",
+      "Finding the top three selling products per category",
+      "Extracting values from struct fields",
+      "Logging record counts before and after filtering",
+      "Applying operation pipelines with transform",
+      "Triggering an Airflow DAG after PySpark completion"
+    ],
+    "concepts": [
+      "Filtering, Conditional Columns, and Count Logging",
+      "Common-Record Joins and Broadcast Lookups",
+      "Partitioned Parquet Output",
+      "Repartitioning to Avoid Small Files",
+      "Nested and Array Data Processing",
+      "Latest Record Selection",
+      "DataFrame Cache Lifecycle",
+      "Custom and Reusable DataFrame Transformations",
+      "Schema Evolution",
+      "Per-Category Top-Product Analysis"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What filter predicate should be applied to retain the requested records, and what record counts should be logged?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The filter retains records whose status is 'active' and whose score is greater than 80.\nThe number of records is logged both before and after filtering."
+    },
+    {
+      "question": "Which operations are requested for nested JSON, an array column, and a struct field?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The nested JSON is read and flattened into columns.\nThe array is exploded while the other columns remain intact.\nThe required values are extracted from the struct field."
+    },
+    {
+      "question": "What format, partition key, and write preparation are requested for regional DataFrame output?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The output format is Parquet, and the partition key is region.\nThe DataFrame is repartitioned before writing to avoid small files."
+    },
+    {
+      "question": "What join result and broadcast action are requested for common records and a small lookup table?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Only records common to both DataFrames are selected.\nThe small lookup table is broadcast before the join."
+    },
+    {
+      "question": "What per-user result should the requested window function produce?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The window function returns the latest record for each user."
+    },
+    {
+      "question": "What caching lifecycle is requested for the DataFrame?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The DataFrame is cached, and it is later unpersisted."
+    },
+    {
+      "question": "Which selling products should the result retain for each category?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The result ranks selling products within each category and retains the top three."
+    },
+    {
+      "question": "Which DataFrame methods are named for applying a custom function and a reusable operation pipeline?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The custom function is applied with .withColumn().\nThe .transform() method applies the pipeline of operations."
+    },
+    {
+      "question": "What event ordering is requested between the PySpark job and the Airflow DAG?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The Airflow DAG is triggered after the PySpark job has finished."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "DataFrame transformations",
+      "Data quality operations",
+      "Join and broadcast operations",
+      "Parquet partitioning",
+      "Nested JSON processing",
+      "Window functions",
+      "Caching",
+      "Schema evolution",
+      "Airflow orchestration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d2cb56510ef02aca",
+    "saved_date": "2026-10-01T23:11:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b87af1cc68945908f819b041f2422a94a11c8f49d5c64727b97a0dd56fd090d7",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Aggregation and Data Quality Operations",
+        "Post-Job Airflow Orchestration"
+      ],
+      "questions": []
+    }
+  }
+}

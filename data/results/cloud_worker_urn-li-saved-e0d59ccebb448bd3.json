@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-saved-e0d59ccebb448bd3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7348931483375431681",
+    "captured_at": "2026-10-02T00:15:52.679588Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:00Z"
+  },
+  "original_text": "🔍Deloitte SQL Interview Question- Calculate the net change in the number of products.\n🚨This question was asked in a data engineering interview at Deloitte.\n\nThis is Problem 2 of the StrataScratch Interview Series.\n\n✅ Input table:\nYou are given a table called Car_launch_events with three columns.\n(Year,Company_Name,Product_Name)\nWith 2 years of data from 2019 and 2020\n\n🎯 Your task is to calculate the net change in the number of products launched by companies in 2020 compared to 2019.\n👇But there is a catch, you can't do this with multiple subqueries or by using CTEs.\n\n 🧠Brainstorm, and please drop your solution below in the comments.\n📸 I have attached the input table and expected output snapshot to the post.\n\n------\n\n#Deloitte #SQL #SQLChallenge #BigQuery #DataEngineer #InterviewPrep #DataAnalytics #SQLInterview #Big4Interviews",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7348931483375431681_slide_0.jpg",
+      "description": "JPEG image, 480x645 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A Deloitte-tagged SQL interview challenge provides the Car_launch_events table with Year, Company_Name, and Product_Name columns for 2019 and 2020. The task is to calculate the net change in products launched in 2020 compared with 2019 without using CTEs or multiple subqueries. The post references an input snapshot and expected output, but neither is included, and it does not provide a solution, so the exact result grain and query implementation cannot be determined from the text.",
+    "topics": [
+      "SQL",
+      "BigQuery",
+      "year-over-year product launch analysis"
+    ],
+    "subtopics": [
+      "counting product launches",
+      "calculating net change between 2019 and 2020",
+      "writing SQL without CTEs or multiple subqueries"
+    ],
+    "concepts": [
+      "Car_launch_events input table",
+      "Product launch counting",
+      "Net change",
+      "Query construction restrictions",
+      "Incomplete expected output"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What calculation and query restrictions are specified in the Car_launch_events challenge?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The task compares the number of products launched by companies in 2020 with the number launched in 2019.\nThe source table is Car_launch_events with Year, Company_Name, and Product_Name columns.\nThe solution must not use CTEs or multiple subqueries."
+    },
+    {
+      "question": "Write a BigQuery SQL query that calculates the net change in products launched in 2020 compared with 2019 while avoiding CTEs and multiple subqueries.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query calculates product launch counts from Car_launch_events for both 2019 and 2020.\nThe query subtracts the 2019 count from the 2020 count to produce the net change.\nThe query uses neither a CTE nor multiple subqueries."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering and Analytics",
+    "primary_topic": "Calculating year-over-year net change with SQL",
+    "secondary_topics": [
+      "BigQuery",
+      "product launch aggregation",
+      "SQL queries without CTEs or multiple subqueries"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e0d59ccebb448bd3",
+    "saved_date": "2026-10-01T23:12:00Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348931483375431681",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7348931483375431681_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "32ce2287432877833d4956d3c6a8a100d97c23064b90698728567aa0b5a10674",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

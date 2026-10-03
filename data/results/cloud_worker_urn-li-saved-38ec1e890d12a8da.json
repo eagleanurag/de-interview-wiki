@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-saved-38ec1e890d12a8da",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7289968746004152321",
+    "captured_at": "2026-10-02T00:15:46.541346Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:25Z"
+  },
+  "original_text": "HR guide for salary negotiation 💰\n\nMany people find dealing with HR for package negotiation quite challenging.\n\nTo solve this problem and address the tricky questions like:\n\n- What are your salary expectations?\n- Your expectation is beyond our budget.\n- Can you join within 30 days?\n- Are you willing to travel?\n- And many more...\n\nI have created a detailed HR Guide which will help you answer these questions easily.\n\n📩 Want the guide? \n\nDrop \"HR Guide\" in the comments, and I’ll send it to you!\n\nFollow Deepak Goyal for more interview tips\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a promotional post inviting readers to request an HR guide about handling salary negotiations and questions from recruiters. It mentions topics such as salary expectations, budget constraints, joining timelines, and travel, but it does not include the guide or provide technical knowledge.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Human Resources",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:38ec1e890d12a8da",
+    "saved_date": "2026-10-01T23:35:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7289968746004152321",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "443686aed060b2bcf5193eb2970cce8ee406c416e560be0fc8a202ff4c737419",
+    "enricher_version": "3"
+  }
+}

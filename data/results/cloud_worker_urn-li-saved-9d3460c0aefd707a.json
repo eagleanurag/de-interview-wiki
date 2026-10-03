@@ -1,0 +1,166 @@
+{
+  "id": "urn-li-saved-9d3460c0aefd707a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345405753475616768",
+    "captured_at": "2026-10-02T00:15:50.019868Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:45Z"
+  },
+  "original_text": "𝐓𝐨𝐩 𝟏𝟎 𝐓𝐞𝐜𝐡 𝐌𝐚𝐡𝐢𝐧𝐝𝐫𝐚 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 (𝟐𝟎𝟐𝟓)\n\n\n.\n.\n.\n\n1. What are the key differences between Apache Hadoop and Apache Spark?\n\n2. Write a SQL query to fetch the second highest salary from an employee's table.\n\n3. Describe a real-world ETL pipeline you have built. What tools did you use?\n\n4. How does partitioning and bucketing improve performance in Hive?\n\n5. How have you used Apache Spark for data transformation and processing?\n\n6. What is a Slowly Changing Dimension (SCD)? Explain Type 1 and Type 2 with examples.\n\n7. What is schema evolution in Parquet or Avro, and how is it handled?\n\n8. How do you manage late-arriving data in a real-time streaming pipeline?\n\n9. Write a PySpark script to read a CSV file, remove nulls, and save it in Parquet format.\n\n10. What methods or tools do you use to ensure data quality in your pipelines?\n\n#DataEngineering #BigData #ApacheSpark #Hadoop #HDFS #ETL #DataPipeline #CloudDataEngineering #AWSDataEngineering #SQL #DataLake #ITInterview #DataEngineerInterview #InterviewPreparation #TechMahindraInterview #TechInterviewTips #GCP #AWS #DistributedSystems #TechMCQ #DataPipeline #CloudDataEngineering #AWSDataEngineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345405753475616768_slide_0.jpg",
+      "description": "JPEG image, 480x120 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a 2025 Tech Mahindra data engineering interview question list containing ten prompts. It covers Hadoop and Spark, SQL, ETL, Hive performance, Slowly Changing Dimensions, Parquet and Avro schema evolution, real-time streaming, PySpark file processing, and data quality. The supplied content contains no answers, implementations, tool selections, or additional technical explanations.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Apache Hadoop",
+      "Apache Spark",
+      "SQL",
+      "ETL pipelines",
+      "Hive",
+      "Partitioning and bucketing",
+      "Slowly Changing Dimensions",
+      "Schema evolution",
+      "Parquet",
+      "Avro",
+      "Real-time streaming",
+      "Late-arriving data",
+      "PySpark",
+      "Data quality"
+    ],
+    "subtopics": [
+      "Hadoop versus Spark",
+      "Second-highest salary query",
+      "Real-world ETL pipeline design",
+      "Hive partitioning and bucketing performance",
+      "Spark data transformation and processing",
+      "SCD Type 1 and Type 2",
+      "Parquet and Avro schema evolution",
+      "Late-arriving data management",
+      "CSV-to-Parquet processing with PySpark",
+      "Pipeline data quality methods and tools"
+    ],
+    "concepts": [
+      "Apache Hadoop and Apache Spark",
+      "Second-highest salary query",
+      "ETL pipeline",
+      "Hive partitioning and bucketing",
+      "Apache Spark data transformation and processing",
+      "Slowly Changing Dimension, Type 1 and Type 2",
+      "Schema evolution in Parquet and Avro",
+      "Late-arriving data in real-time streaming",
+      "PySpark CSV-to-Parquet processing",
+      "Pipeline data quality"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the key differences between Apache Hadoop and Apache Spark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should compare Apache Hadoop and Apache Spark and state their key differences."
+    },
+    {
+      "question": "Write a SQL query to fetch the second highest salary from an employee's table.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer should provide a SQL query that fetches the second-highest salary from an employee table."
+    },
+    {
+      "question": "Describe a real-world ETL pipeline you have built. What tools did you use?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe a concrete real-world ETL pipeline the candidate built.\nIt should identify the tools used in that pipeline."
+    },
+    {
+      "question": "How does partitioning and bucketing improve performance in Hive?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how partitioning and bucketing improve performance in Hive."
+    },
+    {
+      "question": "How have you used Apache Spark for data transformation and processing?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should give a concrete example of using Apache Spark for data transformation and processing."
+    },
+    {
+      "question": "What is a Slowly Changing Dimension (SCD)? Explain Type 1 and Type 2 with examples.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should define a Slowly Changing Dimension and explain Type 1 and Type 2 with examples."
+    },
+    {
+      "question": "What is schema evolution in Parquet or Avro, and how is it handled?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer should define schema evolution in Parquet or Avro and describe how it is handled."
+    },
+    {
+      "question": "How do you manage late-arriving data in a real-time streaming pipeline?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain an approach to managing late-arriving data in a real-time streaming pipeline."
+    },
+    {
+      "question": "Write a PySpark script to read a CSV file, remove nulls, and save it in Parquet format.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should provide a PySpark script that reads a CSV file, removes nulls, and writes the result in Parquet format."
+    },
+    {
+      "question": "What methods or tools do you use to ensure data quality in your pipelines?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should identify methods or tools for ensuring data quality in data pipelines."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Apache Hadoop and Apache Spark",
+      "SQL",
+      "ETL",
+      "Hive",
+      "Slowly Changing Dimensions",
+      "Schema evolution in Parquet and Avro",
+      "Real-time streaming and late-arriving data",
+      "PySpark",
+      "Data quality"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9d3460c0aefd707a",
+    "saved_date": "2026-10-01T23:14:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345405753475616768",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345405753475616768_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "1a74e7b60df27af83ee5663341f5c66186ba83edc25f5933b1755136e92a1069",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

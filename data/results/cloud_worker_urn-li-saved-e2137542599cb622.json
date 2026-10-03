@@ -1,0 +1,112 @@
+{
+  "id": "urn-li-saved-e2137542599cb622",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7299738386641121281",
+    "captured_at": "2026-10-02T00:15:52.711430Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:25Z"
+  },
+  "original_text": "• 1st\nMicrosoft Fabric Data Architect | Freelance Data Consultant | Azure Data Architect | Azure Data Engineer | Databricks Architect | Power BI\n1yr •\n💡 Facing Performance Issues in Spark? Let’s Solve It Together!\nData Engineer Interview Questions asked in Accenture Deloitte KPMG Sapient Tata Consultancy Services HCLTech and more!!\n🔥 Imagine this: You're running a Spark job on a massive dataset, and suddenly, some tasks are taking forever to complete. What could be the problem? Partition imbalance!\n🎯 Here's a sneak peek into solving such challenges:\n1️⃣ Identify the issue: Use the Spark UI to locate skewed partitions.\n2️⃣ Repartition intelligently: Use `repartition(n)` or `coalesce(n)` depending on the need.\n3️⃣ Leverage AQE: Enable Adaptive Query Execution for dynamic optimizations.\n4️⃣ Data salting: Break down those heavy keys causing skew.\n🚀 Advanced techniques like custom partitioners, pre-aggregation, and optimizing file formats (Parquet or ORC) can take your Spark jobs to the next level.\n✨ Curious about how these methods can transform your Spark workflows?\nDive deeper into this and more real-world scenarios!\n🌟 If you're preparing for Data Engineering interviews, mastering these questions significantly boosts your chances of success!\nWant structured documents covering ALL Data Engineer Interview Questions?\n👉 Get them now directly from our Topmate digital store.\nhttps://lnkd.in/dDUHbcwr\n💸 Exclusive Offer: The first 20 people get an instant 20% discount! Use the code Nitya21 to grab your edge today!\n💬 I'm confident that if you go through these well-curated questions, you'll have a high chance of cracking your interview.\n📈 Don’t miss this opportunity to stay ahead and ace your next big career move!\n#DataEngineering #InterviewPreparation #Azure #CloudComputing #DataAnalytics #TechCareer #CareerSuccess #DataEngineer #MNCJobs #TechInterviews #JobHunt #ITJobs #CrackTheInterview #BigData #SQL #TechTips\nData Engineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7299738386641121281_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional Data Engineering interview-preparation post presents a high-level Spark troubleshooting scenario involving slow tasks on a massive dataset. It identifies partition imbalance as the problem and recommends locating skewed partitions with the Spark UI, using repartition(n) or coalesce(n) according to the need, enabling Adaptive Query Execution for dynamic optimization, and applying data salting to heavy keys. It also lists custom partitioners, pre-aggregation, and the Parquet and ORC file formats as additional optimization techniques. The post does not explain how to implement these techniques or provide criteria for choosing between repartition(n) and coalesce(n).",
+    "topics": [
+      "Partition imbalance and data skew",
+      "Adaptive Query Execution",
+      "Data salting",
+      "Parquet and ORC optimization",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Using the Spark UI to locate skewed partitions",
+      "Repartitioning with repartition(n)",
+      "Reducing partitions with coalesce(n)",
+      "Dynamic optimization with Adaptive Query Execution",
+      "Breaking down heavy keys",
+      "Custom partitioners",
+      "Pre-aggregation",
+      "Parquet and ORC file formats"
+    ],
+    "concepts": [
+      "Partition imbalance",
+      "Skewed partitions",
+      "Spark UI",
+      "repartition(n)",
+      "coalesce(n)",
+      "Adaptive Query Execution",
+      "Data salting",
+      "Custom partitioners",
+      "Pre-aggregation",
+      "Parquet and ORC"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A Spark job is processing a massive dataset, but some tasks take much longer than others. How would you diagnose and address the problem using the techniques in the post?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Use the Spark UI to locate skewed partitions.\nRecognize partition imbalance as a cause of uneven task completion times.\nConsider repartition(n) or coalesce(n) according to the need.\nEnable Adaptive Query Execution for dynamic optimization.\nUse data salting to break down heavy keys that cause skew."
+    },
+    {
+      "question": "Which additional optimization techniques does the post identify for improving Spark workloads after addressing basic partition imbalance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Custom partitioners are listed as an advanced Spark optimization technique.\nPre-aggregation is listed as an advanced optimization technique.\nParquet and ORC are identified as optimized file-format choices."
+    },
+    {
+      "question": "What role does Adaptive Query Execution play in the Spark optimization approach described by the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Adaptive Query Execution is abbreviated as AQE.\nAQE should be enabled to provide dynamic optimizations."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Spark performance troubleshooting",
+    "secondary_topics": [
+      "Partition imbalance",
+      "Data skew mitigation",
+      "Spark job optimization",
+      "Parquet and ORC file formats"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e2137542599cb622",
+    "saved_date": "2026-10-01T23:34:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7299738386641121281",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7299738386641121281_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "897d5ec2f7fc53711eb7088d5c62d77269457150312958803caea3f90d498517",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Spark performance optimization",
+        "Spark job partitioning"
+      ],
+      "concepts": [],
+      "questions": [
+        "What partitioning functions does the post recommend for intelligent Spark job repartitioning?"
+      ]
+    }
+  }
+}

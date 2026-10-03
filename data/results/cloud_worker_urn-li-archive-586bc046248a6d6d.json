@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-archive-586bc046248a6d6d",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.118744Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:31Z"
+  },
+  "original_text": "Most asked question in Data Engineer interview\nDelta Table vs Parquet format-----------------------------------------------------\n***Delta Table is Built on Parquet Format : \n Delta Lake is an enhanced storage layer on top of Parquet files. It inherits Parquet's columnar storage benefits, enabling high performance and efficient compression.\n\n***Delta Adds ACID Transactions to Parquet :\n Unlike Parquet, Delta tables support ACID transactions, ensuring data consistency, reliability, and concurrency control. Supports MERGE, DELETE, UPDATE, which are not possible directly in Parquet.\n\n***Delta Provides Schema Evolution and Enforcement :\n Delta allows schema evolution, making it easier to handle changes in data structure. Schema enforcement ensures data integrity, whereas Parquet lacks strict schema management.\n\n***Delta Offers Time Travel & Versioning :\n Delta maintains multiple versions of data, enabling time travel queries.\n SELECT * FROM my_delta_table VERSION AS OF 5;\n Parquet does not maintain historical versions.\n\n***Delta Supports Optimized Performance & Compaction :\n Delta optimizes small files through auto-compaction and OPTIMIZE commands, reducing performance bottlenecks. It also supports ZORDER BY for faster queries.\n\n#dataengineer #azuredataengineer #databricks",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post compares Delta Lake with Parquet for data engineering interviews. It describes Delta Lake as an enhanced storage layer built on Parquet that adds ACID transactions, MERGE, DELETE, UPDATE, schema evolution and enforcement, time travel and versioning, and performance optimization through small-file compaction, OPTIMIZE, and ZORDER BY.",
+    "topics": [
+      "Delta Lake",
+      "Parquet",
+      "storage formats",
+      "transactional data management",
+      "schema management",
+      "data versioning"
+    ],
+    "subtopics": [
+      "Delta Lake enhancements over Parquet",
+      "ACID transactions and concurrency control",
+      "MERGE, DELETE, and UPDATE operations",
+      "schema evolution and enforcement",
+      "time travel queries",
+      "small-file compaction",
+      "ZORDER BY"
+    ],
+    "concepts": [
+      "Delta Lake",
+      "Parquet",
+      "ACID transactions",
+      "Delta DML operations",
+      "Schema evolution and enforcement",
+      "Time travel and versioning",
+      "Compaction and ZORDER BY"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does Delta Lake extend Parquet?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "Delta Lake is an enhanced storage layer built on Parquet files.\nIt retains Parquet's columnar storage and compression benefits.\nIt adds transactional, schema management, versioning, and optimization capabilities."
+    },
+    {
+      "question": "What data modification and consistency capabilities does Delta Lake provide that Parquet lacks?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Delta tables support ACID transactions for consistency, reliability, and concurrency control.\nDelta supports MERGE, DELETE, and UPDATE operations.\nThe post states that these operations cannot be performed directly on Parquet."
+    },
+    {
+      "question": "How do schema evolution and schema enforcement differ between Delta Lake and Parquet?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Delta supports schema evolution so changes in data structure can be handled.\nDelta also provides schema enforcement to support data integrity.\nParquet is described as lacking strict schema management."
+    },
+    {
+      "question": "How can time travel be used with a Delta table?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A historical Delta table version can be queried with SELECT * FROM my_delta_table VERSION AS OF 5.\nDelta maintains multiple versions, whereas Parquet does not maintain historical versions."
+    },
+    {
+      "question": "How can Delta Lake address small-file performance bottlenecks?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Delta supports auto-compaction and OPTIMIZE commands for optimizing small files.\nDelta also supports ZORDER BY to make queries faster.\nCompaction reduces the small-file bottlenecks described in the post."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Lake",
+    "secondary_topics": [
+      "Parquet",
+      "ACID transactions",
+      "schema evolution",
+      "time travel",
+      "storage optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:586bc046248a6d6d",
+    "saved_date": "2026-10-01T23:22:31Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "43dbd119604d0f47c333e90ce10a1e75f52bb526a27446565a2818e10aa30111",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "query optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "id": "urn-li-archive-be6870d42b84cf6a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.140434Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:42Z"
+  },
+  "original_text": "I thought I knew SQL... until my interviewer asked me these!\"\nSQL interviews can be tricky! Here are some thought-provoking questions that tested my knowledge:\n1️⃣ How do you calculate the median salary in a department using SQL?\n 2️⃣ What’s the difference between correlated and non-correlated subqueries?\n 3️⃣ How can you update data in one table based on values from another?\n 4️⃣ What are window functions and how are they different from GROUP BY?\n 5️⃣ How do you find gaps in a sequence (like missing invoice numbers)?\n 6️⃣ How would you delete every nth row from a table?\n 7️⃣ How can you transpose columns into rows (unpivot) in SQL?\n 8️⃣ What’s the purpose of the COALESCE function, and how is it different from ISNULL or NVL?\n 9️⃣ How do you calculate the difference in days, months, or years between two dates?\n 🔟 How do you write a SQL query to show cumulative percentage of sales per region?\n 1️⃣1️⃣ How do you rank items within partitions based on a custom sorting logic?\n 1️⃣2️⃣ What’s the difference between EXISTS and IN?\n 1️⃣3️⃣ How can you detect and prevent deadlocks in SQL queries?\n 1️⃣4️⃣ How would you handle slowly changing dimensions in SQL?\n 1️⃣5️⃣ How do you detect circular references in a hierarchical table structure?\n 1️⃣6️⃣ What’s the difference between a clustered and non-clustered index?\n 1️⃣7️⃣ How do you audit changes (INSERT/UPDATE/DELETE) in a table using SQL?\n 1️⃣8️⃣ What is a recursive CTE, and where would you use it?\n 1️⃣9️⃣ How do you filter the top 3 products by revenue within each category?\n 2️⃣0️⃣ What strategies can you use to reduce the execution time of complex joins?\nSQL is powerful, but the right questions make you think beyond the basics. Which of these do you find the trickiest? Let’s discuss!\n#SQL #DataEngineering #InterviewQuestions #CareerGrowth\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied excerpt is a question-only post that lists 20 SQL interview prompts covering calculations, subqueries, data modification, window functions, sequence gaps, unpivot, SQL functions, date differences, cumulative percentages, partitioned ranking, deadlocks, slowly changing dimensions, hierarchical data, indexes, auditing, recursive CTEs, top-3 product filtering, and complex-join performance. It provides no SQL code, definitions, worked examples, or answer explanations, so it supports topic identification but not additional technical conclusions. The trailing ellipsis and 'see more' marker suggest that the supplied excerpt may be incomplete.",
+    "topics": [
+      "SQL",
+      "SQL interviews",
+      "Data engineering",
+      "SQL query writing",
+      "SQL performance",
+      "Data modeling",
+      "Change auditing"
+    ],
+    "subtopics": [
+      "Median salary by department",
+      "Correlated versus non-correlated subqueries",
+      "Updating one table from another",
+      "Window functions versus GROUP BY",
+      "Gaps in sequences and missing invoice numbers",
+      "Deleting every nth row",
+      "Transposing columns into rows with unpivot",
+      "COALESCE, ISNULL, and NVL",
+      "Date differences in days, months, and years",
+      "Cumulative percentage of sales by region",
+      "Ranking items within partitions using custom sorting logic",
+      "EXISTS versus IN",
+      "Deadlock detection and prevention",
+      "Slowly changing dimensions",
+      "Circular references in hierarchical tables",
+      "Clustered versus non-clustered indexes",
+      "Auditing INSERT, UPDATE, and DELETE changes",
+      "Recursive CTE",
+      "Top 3 products by revenue within each category",
+      "Reducing execution time of complex joins"
+    ],
+    "concepts": [
+      "Median salary by department",
+      "Correlated and non-correlated subqueries",
+      "Updating one table from another",
+      "Window functions versus GROUP BY",
+      "Gaps in sequences and missing invoice numbers",
+      "Deleting every nth row",
+      "Transposing columns into rows with unpivot",
+      "COALESCE, ISNULL, and NVL",
+      "Date differences in days, months, and years",
+      "Cumulative percentage of sales by region",
+      "Ranking items within partitions using custom sorting logic",
+      "EXISTS versus IN",
+      "Deadlock detection and prevention",
+      "Slowly changing dimensions",
+      "Circular references in hierarchical tables",
+      "Clustered versus non-clustered indexes",
+      "Auditing INSERT, UPDATE, and DELETE changes",
+      "Recursive CTE",
+      "Top 3 products by revenue within each category",
+      "Reducing execution time of complex joins"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you calculate the median salary in a department using SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain a SQL approach for calculating the median salary within a department."
+    },
+    {
+      "question": "What is the difference between correlated and non-correlated subqueries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would distinguish correlated subqueries from non-correlated subqueries and explain the difference between them."
+    },
+    {
+      "question": "How can you update data in one table based on values from another?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how to update data in one table based on values from another table."
+    },
+    {
+      "question": "What are window functions and how are they different from GROUP BY?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain what window functions are and how they differ from GROUP BY."
+    },
+    {
+      "question": "How do you find gaps in a sequence, such as missing invoice numbers?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how to identify gaps in a sequence such as missing invoice numbers."
+    },
+    {
+      "question": "How would you delete every nth row from a table?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to delete every nth row from a table using SQL."
+    },
+    {
+      "question": "How can you transpose columns into rows, or unpivot them, in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how to transpose columns into rows using an unpivot operation."
+    },
+    {
+      "question": "What is the purpose of the COALESCE function, and how is it different from ISNULL or NVL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer would explain the purpose of COALESCE and how it differs from ISNULL and NVL."
+    },
+    {
+      "question": "How do you calculate the difference in days, months, or years between two dates?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how to calculate differences in days, months, and years between two dates."
+    },
+    {
+      "question": "How do you write a SQL query to show cumulative percentage of sales per region?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to write a query for cumulative percentage of sales per region."
+    },
+    {
+      "question": "How do you rank items within partitions based on a custom sorting logic?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how to rank items within partitions using custom sorting logic."
+    },
+    {
+      "question": "What is the difference between EXISTS and IN?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain the difference between EXISTS and IN."
+    },
+    {
+      "question": "How can you detect and prevent deadlocks in SQL queries?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to detect and prevent deadlocks in SQL queries."
+    },
+    {
+      "question": "How would you handle slowly changing dimensions in SQL?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain an SQL approach to handling slowly changing dimensions."
+    },
+    {
+      "question": "How do you detect circular references in a hierarchical table structure?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to detect circular references in a hierarchical table structure."
+    },
+    {
+      "question": "What is the difference between a clustered and a non-clustered index?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain the difference between clustered and non-clustered indexes."
+    },
+    {
+      "question": "How do you audit changes, including INSERT, UPDATE, and DELETE, in a table using SQL?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to audit INSERT, UPDATE, and DELETE changes in a table using SQL."
+    },
+    {
+      "question": "What is a recursive CTE, and where would you use it?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain what a recursive CTE is and identify a use for it."
+    },
+    {
+      "question": "How do you filter the top 3 products by revenue within each category?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how to filter the top 3 products by revenue within each category."
+    },
+    {
+      "question": "What strategies can you use to reduce the execution time of complex joins?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain strategies for reducing the execution time of complex joins."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL interview questions",
+    "secondary_topics": [
+      "Median salary and cumulative percentage calculations",
+      "Correlated and non-correlated subqueries",
+      "Table-to-table updates and row deletion",
+      "Window functions, unpivot, and ranking",
+      "COALESCE, ISNULL, NVL, and date differences",
+      "Deadlocks and complex-join execution time",
+      "Slowly changing dimensions and hierarchical data",
+      "Clustered and non-clustered indexes",
+      "Auditing INSERT, UPDATE, and DELETE changes",
+      "Recursive CTEs",
+      "Top 3 products by revenue within categories"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:be6870d42b84cf6a",
+    "saved_date": "2026-10-01T23:21:42Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "80393e64eac5a52720621cc83b0a588800907c53d5180ed29366261c74610d45",
+    "enricher_version": "3"
+  }
+}

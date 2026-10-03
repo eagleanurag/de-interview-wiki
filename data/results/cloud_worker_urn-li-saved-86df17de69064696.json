@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-saved-86df17de69064696",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7350116676970909696",
+    "captured_at": "2026-10-02T00:15:48.931356Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:58Z"
+  },
+  "original_text": "🔍 When the query worked… but wasn’t enough.\n\nToday I solved a SQL problem where I had to identify the top 3 products within the top-selling category based on total sales. \n\nI wrote a query using a simple subquery with LIMIT 1 — and it worked. Gave me exactly what I wanted.\n\n✅ Mission accomplished? Not quite.\n\nAs always, my curiosity nudged me to check how others solved it. The NamasteSQL’s solution by Ankit Bansal used a RANK() window function. \nAt first glance, it seemed overkill — but when I dug deeper, I realized something very important:\n\n👉 My query was static, not scalable.\n\nWhy? Because in case of a tie in the top category, my query would only return one of them — whichever came first — due to LIMIT 1.\n\nThe RANK()-based approach, however, handled ties correctly and returned all top categories, making it a scalable and reliable solution.\n\n💡 Key takeaway:\nEven when your solution works, don’t stop there. Go further and ask “can it work better?”\n\nCheck why other solutions exist. It’s where deeper learning begins.\nPractising SQL isn’t just about getting the right answer — it’s about thinking beyond the answer.\n\n#SQL #Analytics #DataLearning #ScalableSolutions #LearningByDoing #LinkedInLearning #opentowork #SundaySolutions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7350116676970909696_slide_0.jpg",
+      "description": "JPEG image, 480x212 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post compares two SQL approaches for finding the top three products by total sales within the top-selling category. It explains that a subquery using LIMIT 1 can return only one of multiple tied top-selling categories, while a RANK()-based approach handles the ties and returns all top categories. Its main lesson is to evaluate whether a working query is also robust and scalable by considering alternative solutions.",
+    "topics": [
+      "SQL",
+      "Analytics",
+      "Scalable query design"
+    ],
+    "subtopics": [
+      "Top-selling category selection",
+      "Product ranking by total sales",
+      "Tie handling",
+      "Window functions",
+      "LIMIT 1",
+      "Alternative solution evaluation"
+    ],
+    "concepts": [
+      "LIMIT 1 in a subquery",
+      "RANK() window function",
+      "Tie-aware category selection",
+      "Scalable SQL solutions",
+      "Learning from alternative solutions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why can a subquery using LIMIT 1 return an incomplete result when selecting the top-selling category?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "If multiple categories tie for top sales, the other tied categories are omitted."
+    },
+    {
+      "question": "How does the RANK()-based approach in the post handle tied top-selling categories?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "This makes the category-selection step more robust than the LIMIT 1 subquery approach."
+    },
+    {
+      "question": "A SQL query returns the expected products when there is one top-selling category, but it may omit valid results when categories tie. How should the query be reassessed?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Evaluate robustness and scalability rather than stopping at a query that works for the initial data."
+    },
+    {
+      "question": "Why is comparing alternative SQL solutions valuable even after a query produces the expected result?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Reviewing alternatives can lead to more reliable and scalable SQL solutions."
+    }
+  ],
+  "classification": {
+    "domain": "SQL and Analytics",
+    "primary_topic": "Tie-aware SQL ranking",
+    "secondary_topics": [
+      "Window functions",
+      "Scalable query design",
+      "Top-selling category analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:86df17de69064696",
+    "saved_date": "2026-10-01T23:10:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7350116676970909696",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7350116676970909696_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "fc8b0c5f40aabcbb5e9002062011f5f8a9715a85e70b9637779d3f71b38006a6",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

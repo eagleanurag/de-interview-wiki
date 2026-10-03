@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-fe48559b75960f4a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338057794547343360",
+    "captured_at": "2026-10-02T00:15:53.686782Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:09Z"
+  },
+  "original_text": "• 1st\nLead Data Engineer | Databricks & Azure Data Platform | Team of 7 | $100M Revenue Impact | 7-Eleven | Ex-Maersk | 45K+ Community\n1yr •\nGive me 2 minutes, and I'll tell you exact 𝐫𝐨𝐚𝐝𝐦𝐚𝐩 𝐭𝐨 𝐛𝐞𝐜𝐨𝐦𝐞 𝐚𝐧 𝐀𝐳𝐮𝐫𝐞 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫\n𝟏𝟑-𝐒𝐭𝐞𝐩 𝐀𝐳𝐮𝐫𝐞 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐑𝐨𝐚𝐝𝐦𝐚𝐩:\n① 𝐌𝐚𝐬𝐭𝐞𝐫 𝐒𝐐𝐋 𝐅𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐬\nGrasp queries, joins, aggregations, CTEs, windows, and query tuning.\n② 𝐄𝐱𝐩𝐥𝐨𝐫𝐞 𝐀𝐳𝐮𝐫𝐞 𝐒𝐭𝐨𝐫𝐚𝐠𝐞 𝐎𝐩𝐭𝐢𝐨𝐧𝐬\nUnderstand Blob Storage, Azure Data Lake Gen2, and Azure SQL DB.\n③ 𝐁𝐮𝐢𝐥𝐝 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞𝐬 𝐰𝐢𝐭𝐡 𝐀𝐳𝐮𝐫𝐞 𝐃𝐚𝐭𝐚 𝐅𝐚𝐜𝐭𝐨𝐫𝐲\nDesign ETL/ELT workflows — trigger, monitor, transform with ease.\n④ 𝐆𝐞𝐭 𝐟𝐚𝐦𝐢𝐥𝐢𝐚𝐫 𝐰𝐢𝐭𝐡 𝐀𝐳𝐮𝐫𝐞 𝐃𝐞𝐯𝐎𝐩𝐬\nUse Git repos, CI/CD pipelines, and IaC for automation.\n⑤ 𝐒𝐞𝐜𝐮𝐫𝐞 𝐂𝐫𝐞𝐝𝐬 𝐰𝐢𝐭𝐡 𝐀𝐳𝐮𝐫𝐞 𝐊𝐞𝐲 𝐕𝐚𝐮𝐥𝐭\nStore secrets like connection strings and access tokens.\n⑥ 𝐋𝐞𝐚𝐫𝐧 𝐃𝐚𝐭𝐚 𝐖𝐚𝐫𝐞𝐡𝐨𝐮𝐬𝐢𝐧𝐠 𝐅𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐬\nStar vs Snowflake schema, facts & dimensions, partitioning.\n⑦ 𝐔𝐬𝐞 𝐏𝐲𝐭𝐡𝐨𝐧 𝐟𝐨𝐫 𝐃𝐚𝐭𝐚 𝐓𝐚𝐬𝐤𝐬\nAutomation, Pandas, and PySpark for large-scale processing.\n⑧ 𝐃𝐢𝐯𝐞 𝐢𝐧𝐭𝐨 𝐃𝐚𝐭𝐚𝐛𝐫𝐢𝐜𝐤𝐬\nRun notebooks, create Spark clusters, build streaming jobs.\n⑨ 𝐌𝐚𝐬𝐭𝐞𝐫 𝐃𝐞𝐥𝐭𝐚 𝐋𝐚𝐤𝐞\nVersioned data, ACID transactions, and time travel made easy.\n⑩ 𝐔𝐧𝐝𝐞𝐫𝐬𝐭𝐚𝐧𝐝 𝐀𝐩𝐚𝐜𝐡𝐞 𝐒𝐩𝐚𝐫𝐤\nDistributed processing with Spark SQL, DataFrames, and MLlib.\n⑪ 𝐄𝐱𝐩𝐥𝐨𝐫𝐞 𝐌𝐢𝐜𝐫𝐨𝐬𝐨𝐟𝐭 𝐅𝐚𝐛𝐫𝐢𝐜\nLearn how Fabric unifies Synapse, Data Factory & Power BI.\n⑫ 𝐁𝐮𝐢𝐥𝐝 𝐑𝐞𝐚𝐥 𝐏𝐫𝐨𝐣𝐞𝐜𝐭𝐬\nCreate end-to-end pipelines and share your work on GitHub.\n⑬ 𝐏𝐫𝐞𝐩 𝐟𝐨𝐫 𝐑𝐞𝐬𝐮𝐦𝐞 + 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐬\nPractice case studies, scenario-based questions & certifications.\n💡Want to Learn From Expert? Join the 𝐅𝐑𝐄𝐄 𝐌𝐚𝐬𝐭𝐞𝐫𝐜𝐥𝐚𝐬𝐬 and get expert guidance!\n📅 𝐃𝐚𝐭𝐞: 11th June 2025\n⏰ 𝐓𝐢𝐦𝐞: 8:30 PM IST\n🔗Register here for Masterclass Link:\nhttps:/ /https://lnkd.in/dzNQGBXG\n🎓 𝐖𝐡𝐚𝐭 𝐘𝐨𝐮\n’𝐥𝐥 𝐆𝐚𝐢𝐧 𝐢𝐧 𝐭𝐡𝐞 𝐅𝐑𝐄𝐄 𝐌𝐚𝐬𝐭𝐞𝐫𝐜𝐥𝐚𝐬𝐬?\n✔ Introduction to Data Engineering\n✔ A Complete Learning Roadmap\n✔ Essential Tools & Technologies\n✔ How to Gain Real-World Experience\n✔ Certifications to Boost Your Profile\n✔ Interview Preparation Strategies\n✔ Salary Trends & Career Growth Insights\n✔ Live Q&A with Industry Experts\n🔗 𝐉𝐨𝐢𝐧 𝐭𝐡𝐞 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 Channel for Updates:\nhttps://lnkd.in/dvQ4K8qQ\n𝐅𝐨𝐫 𝐦𝐨𝐫𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬, 𝐯𝐢𝐬𝐢𝐭:\nhttps:/ /https://lnkd.in/dzNQGBXG\n…see more\nAzure",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338057794547343360_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post for a free Azure Data Engineering masterclass rather than a substantive technical lesson. It advertises a 13-item roadmap that mostly names SQL, Azure services, data-modeling subjects, Python, Databricks, Spark, Delta Lake, and Fabric, with brief descriptions of subjects such as ETL/ELT workflows, secrets management, Delta Lake time travel, and Fabric unification. It also includes a Lead Data Engineer profile headline, registration links, an event date and time of 11 June 2025 at 8:30 PM IST, and promises covering certifications, interview preparation, salary trends, career growth, real-world experience, and a live Q&A. The post does not provide enough technical explanation to support useful interview questions.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering Education and Career Development",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fe48559b75960f4a",
+    "saved_date": "2026-10-01T23:12:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338057794547343360",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338057794547343360_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "20f3aa4f0b251d69a912505c20674edac7039a964b7b3d9f72d5c5356c634d05",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

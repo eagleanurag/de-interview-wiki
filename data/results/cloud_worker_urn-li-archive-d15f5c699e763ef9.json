@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-d15f5c699e763ef9",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.360079Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:06Z"
+  },
+  "original_text": "🚨 EY LLP is Hiring!\n\n📌 Open Positions:\n\n1. Power Apps + Microsoft Dynamics 365 CE Technical Consultant (3 - 10 years)\n\n2. Power Apps + Power Automate Developer (2+ years)\n\n🔹 Immediate joiners preferred\n📍 Multiple locations\n\nIf you’re looking for an exciting opportunity in the Power Platform space, share your CV via DM.\n\n#EYCareers #PowerApps #PowerAutomate #Dynamics365 #MicrosoftPowerPlatform #ImmediateJoiners #Hiring #TechJobs",
+  "media": [],
+  "ai_analysis": {
+    "summary": "EY LLP is hiring for Power Apps with Microsoft Dynamics 365 CE Technical Consultant and Power Apps with Power Automate Developer roles. The positions require 3 to 10 years and at least 2 years of experience respectively, prefer immediate joiners, are available in multiple locations, and accept CV submissions by direct message. The post does not provide technical details or responsibilities.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Careers and hiring",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d15f5c699e763ef9",
+    "saved_date": "2026-10-01T23:17:06Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8a1359d14ebfe9ee8bac233ba0e50b5f25b83d98a692afe9b5e37dd1cc5c7723",
+    "enricher_version": "3"
+  }
+}

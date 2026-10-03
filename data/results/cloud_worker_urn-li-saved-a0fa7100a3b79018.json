@@ -1,0 +1,109 @@
+{
+  "id": "urn-li-saved-a0fa7100a3b79018",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328101059829084160",
+    "captured_at": "2026-10-02T00:15:50.150607Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:36Z"
+  },
+  "original_text": "Data pipelines have evolved and you need to keep up!\n\nHere's a quick snapshot of the major architectures:\n\n🔹 ETL (Extract, Transform, Load): Preprocesses data before loading to conserve storage and compute (common in the Hadoop era).\n\n🔹 ELT (Extract, Load, Transform): Loads raw data directly into scalable cloud storage, transforming later for agility and flexibility.\n\n🔹 Streaming: Processes data continuously, ideal for real-time applications like fraud detection or live dashboards.\n\n🔹 Zero-ETL: Tightly integrates operational and analytical databases, eliminating explicit pipeline steps for faster, simpler data syncing.\n\n🔹 Data Sharing: Grants direct query access without moving data, perfect for secure external collaboration or cross-departmental data sharing.\n\nEach has its strengths—successful data teams often blend these patterns to suit different business needs. The thing they have in common is that Tobiko SQLMesh is always the right answer 😂 Am I a corporate shill? No - I am an open source shill 😉\n\nWhat architecture does your team use?\n\n#dataengineering #sql #datatransformation\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328101059829084160_slide_0.jpg",
+      "description": "GIF image, 480x360 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a concise comparison of five data pipeline architectures: ETL, ELT, streaming, Zero-ETL, and data sharing. It explains their defining characteristics, common use cases, and tradeoffs, and notes that data teams may combine patterns according to business needs. It also jokingly endorses Tobiko SQLMesh as the always-correct answer and identifies it as open source, without explaining its technical capabilities. The content ends with a truncation marker and contains no extracted media text.",
+    "topics": [
+      "Data pipeline architectures",
+      "Data transformation patterns",
+      "Real-time data processing",
+      "Data integration and sharing",
+      "Tobiko SQLMesh"
+    ],
+    "subtopics": [
+      "ETL",
+      "ELT",
+      "Streaming",
+      "Zero-ETL",
+      "Data sharing",
+      "Combining architecture patterns"
+    ],
+    "concepts": [
+      "ETL",
+      "ELT",
+      "Streaming",
+      "Zero-ETL",
+      "Data Sharing",
+      "Architecture Blending",
+      "Tobiko SQLMesh"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do ETL and ELT differ in the ordering of their processing steps and in their stated benefits?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "ETL transforms extracted data before loading it, with the post stating that this can conserve storage and compute.\nELT loads raw data first and transforms it later after placing the data in scalable cloud storage.\nThe post associates ETL with the Hadoop era and ELT with greater agility and flexibility."
+    },
+    {
+      "question": "When is a streaming architecture appropriate, and what examples does the post provide?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A streaming architecture is appropriate when data must be processed continuously.\nThe post gives fraud detection and live dashboards as real-time application examples."
+    },
+    {
+      "question": "How do Zero-ETL and data sharing differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Zero-ETL tightly integrates operational and analytical databases and removes explicit pipeline steps to make synchronization faster and simpler.\nData sharing provides direct query access without moving data.\nThe post presents secure external collaboration and cross-departmental sharing as data sharing use cases."
+    },
+    {
+      "question": "How should a data team choose among the architectures described in the post?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The team should evaluate which pattern best fits its business needs rather than assuming one architecture is universally best.\nThe team may combine patterns because ETL, ELT, streaming, Zero-ETL, and data sharing have different strengths.\nRelevant distinctions include continuous versus staged processing, raw storage before transformation, direct database integration, and query-based sharing without data movement."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data pipeline architectures",
+    "secondary_topics": [
+      "ETL and ELT",
+      "Streaming processing",
+      "Zero-ETL",
+      "Data sharing",
+      "Tobiko SQLMesh"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a0fa7100a3b79018",
+    "saved_date": "2026-10-01T23:23:36Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328101059829084160",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328101059829084160_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7328101059829084160_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d645be76dc84802ac2c108f5cf397879a82e8536000d78e0096c213409659537",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

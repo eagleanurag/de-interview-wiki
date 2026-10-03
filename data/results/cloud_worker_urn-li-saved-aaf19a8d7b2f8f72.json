@@ -1,0 +1,120 @@
+{
+  "id": "urn-li-saved-aaf19a8d7b2f8f72",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339028967460347905",
+    "captured_at": "2026-10-02T00:15:50.492886Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:33Z"
+  },
+  "original_text": "• 2nd\nAI & Tech Content Creator | Software Engineer | AI & SaaS | Dynamics 365 | Product Launches | Developer × Marketing\n1yr •\n🚀 Getting Started with AWS? Here's What You Need to Know! ☁️\nIf you're preparing for cloud interviews and just diving into Amazon Web Services (AWS), start with the basics that interviewers love to ask:\n🔸 What is AWS?\n🔸 Core Services: EC2, S3, RDS, Lambda\n🔸 IAM Roles & Permissions\n🔸 VPC, Subnets, and Networking Basics\n🔸 Cost Management & Free Tier\n🔸 Hands-on practice using AWS Console\n🧠 Pro Tip: Focus on real-world use cases and basic architecture diagrams — they leave a strong impression in interviews!\n🎯 Stay consistent, build small projects, and keep learning.\n#AWS #CloudComputing #Beginners #AWSforBeginners #InterviewPreparation #TechCareers #LearnCloud #CloudJourney #AWSInterview\nAWS Basics",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339028967460347905_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a brief beginner-oriented post about preparing for cloud interviews by learning AWS basics. It lists what AWS is, EC2, S3, RDS, Lambda, IAM roles and permissions, VPC, subnets, networking basics, cost management, and Free Tier as study areas. It also recommends hands-on practice with the AWS Console, real-world use cases, basic architecture diagrams, small projects, consistent learning, and continuing to learn. The post does not explain the individual services or provide detailed technical procedures.",
+    "topics": [
+      "AWS fundamentals",
+      "cloud computing",
+      "cloud interview preparation",
+      "AWS core services",
+      "IAM roles and permissions",
+      "VPC and subnet networking",
+      "AWS cost management",
+      "hands-on AWS learning"
+    ],
+    "subtopics": [
+      "Amazon Web Services (AWS)",
+      "EC2",
+      "S3",
+      "RDS",
+      "Lambda",
+      "IAM roles and permissions",
+      "VPC",
+      "subnets",
+      "networking basics",
+      "AWS Console",
+      "cost management",
+      "Free Tier",
+      "real-world use cases",
+      "basic architecture diagrams",
+      "small projects"
+    ],
+    "concepts": [
+      "Amazon Web Services (AWS)",
+      "EC2",
+      "S3",
+      "RDS",
+      "Lambda",
+      "IAM roles and permissions",
+      "VPC, subnets, and networking basics",
+      "Cost management and Free Tier",
+      "AWS Console",
+      "Real-world use cases and basic architecture diagrams",
+      "Small projects and consistent learning"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What AWS fundamentals does the post tell a beginner preparing for cloud interviews to study?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post says to understand what AWS is.\nIt lists EC2, S3, RDS, and Lambda as core services.\nIt also lists IAM roles and permissions, VPC, subnets, networking basics, cost management, and Free Tier.\nIt recommends hands-on practice using the AWS Console."
+    },
+    {
+      "question": "What practical approach does the post recommend for strengthening AWS interview preparation?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post recommends focusing on real-world use cases.\nIt recommends using basic architecture diagrams.\nIt advises practicing hands-on with the AWS Console and building small projects.\nIt encourages consistency and continued learning."
+    },
+    {
+      "question": "Which permissions and networking topics does the post include in its AWS basics checklist?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The checklist includes IAM roles and permissions.\nIt includes VPC, subnets, and networking basics."
+    }
+  ],
+  "classification": {
+    "domain": "Cloud computing",
+    "primary_topic": "AWS fundamentals",
+    "secondary_topics": [
+      "AWS core services",
+      "IAM roles and permissions",
+      "VPC and subnet networking",
+      "AWS cost management and Free Tier",
+      "cloud interview preparation",
+      "hands-on AWS Console practice"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:aaf19a8d7b2f8f72",
+    "saved_date": "2026-10-01T23:13:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339028967460347905",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339028967460347905_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "53cc89914280b3ae5e201dc75cfc8cc0ba2396ca28df8810f6bf366db41bf367",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

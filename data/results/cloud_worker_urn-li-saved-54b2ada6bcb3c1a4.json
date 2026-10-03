@@ -1,0 +1,108 @@
+{
+  "id": "urn-li-saved-54b2ada6bcb3c1a4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477345172167520256",
+    "captured_at": "2026-10-02T00:15:47.590968Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:15Z"
+  },
+  "original_text": "You don't need to know all of SQL.\nYou just need to know the 20% you'll use every day.\n👇\n\nWhen I first started learning SQL, I tried to memorize everything.\nEvery function.\nEvery clause.\nEvery keyword.\nThe problem?\nI rarely used most of them.\n\nOver time, I realized the same patterns kept showing up.\n• Filtering and aggregating data\n• Joining tables\n• Window functions\n• CTEs\n• CASE WHEN logic\n• Working with dates\n• Sorting results\n\nIf you get comfortable with these concepts, you'll solve the majority of SQL problems you'll see at work and in interviews.\n\nThe rest?\n\nYou'll learn naturally as new problems come up.\n\nThat's one of the reasons SQL has stayed relevant for decades.\n\nIt's not about memorizing syntax.\n\nIt's about knowing which pattern to reach for.\n\n💾 Save this cheat sheet for your next SQL interview.\n\n💬 If you could only master one SQL topic, which one would it be?\n\nFollow for more simple breakdowns on SQL, data engineering, and Gen AI.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7477345172167520256_slide_0.jpg",
+      "description": "JPEG image, 480x721 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post argues that SQL learners do not need to memorize every function, clause, or keyword. It recommends becoming comfortable with recurring practical patterns: filtering and aggregating data, joining tables, using window functions and CTEs, applying CASE WHEN logic, working with dates, and sorting results. It claims that these patterns are used frequently at work and in interviews, while less common SQL knowledge can be learned as new problems arise.",
+    "topics": [
+      "SQL",
+      "SQL query patterns",
+      "SQL learning strategy"
+    ],
+    "subtopics": [
+      "Filtering and aggregating data",
+      "Joining tables",
+      "Window functions",
+      "Common table expressions (CTEs)",
+      "CASE WHEN logic",
+      "Working with dates",
+      "Sorting results"
+    ],
+    "concepts": [
+      "Core SQL patterns",
+      "Filtering and aggregating data",
+      "Joining tables",
+      "Window functions",
+      "Common table expressions",
+      "CASE WHEN logic",
+      "Working with dates",
+      "Sorting results",
+      "Pattern-oriented SQL learning"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which recurring SQL patterns does the post recommend prioritizing for everyday work and interviews?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer identifies filtering, aggregation, joins, window functions, CTEs, CASE WHEN logic, date work, and result sorting."
+    },
+    {
+      "question": "Why does the post recommend learning recurring SQL patterns instead of memorizing every SQL function, clause, and keyword?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains that most syntax is rarely used while the same practical patterns repeatedly appear at work and in interviews."
+    },
+    {
+      "question": "How should a candidate prepare for practical SQL problems based on the approach described in the post?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer recommends becoming comfortable with the frequently used SQL patterns and learning less common knowledge as new problems arise."
+    },
+    {
+      "question": "What does the post mean by knowing which SQL pattern to reach for?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer says that practical SQL competence depends on recognizing recurring problem patterns rather than memorizing complete syntax."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Query patterns",
+      "Interview preparation",
+      "Practical SQL learning"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:54b2ada6bcb3c1a4",
+    "saved_date": "2026-10-01T23:07:15Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7477345172167520256",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7477345172167520256_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "1b0923dc3bcd967059fb50a7e1a20c31d59e0cc6d1eb68959d1dc1e3a2c5d0e5",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

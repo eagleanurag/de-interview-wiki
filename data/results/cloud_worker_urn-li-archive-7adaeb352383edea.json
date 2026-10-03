@@ -1,0 +1,133 @@
+{
+  "id": "urn-li-archive-7adaeb352383edea",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.596405Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:39Z"
+  },
+  "original_text": "🚀 Data Engineering Interview Questions (Python | PySpark | Spark | SQL)\n\nHere’s a list of questions during Data Engineering interviews:\n\n1. Write a Python program to sort a list of integers in descending order without using the sort() function.\n2. Write Spark code to read a file from a specified location.\n3. Define JDBC and explain how it's used in connecting Spark to databases.\n4. You’re given two CSV files with no common columns — how would you join them?\n5. In PySpark, create two DataFrames with no matching columns and perform a cross join.\n6. A table contains bank statements — write an SQL query to calculate a rolling sum of transactions.\n7. Explain the concept of lazy evaluation in PySpark.\n8. What’s the difference between RDD and DataFrame in Apache Spark?\n9. Write a PySpark query to filter employees where:\nAge > 25\nSalary < 5 lakh\nName starts with 'A'\n\n#DataEngineering #PySpark #Spark #SQL #Python #BigData #InterviewQuestions #DataEngineer\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied content is a list of nine Data Engineering interview questions covering Python, Spark, PySpark, SQL, JDBC, CSV files, DataFrames, RDDs, lazy evaluation, rolling sums, joins, and employee filtering. It provides questions but no answers or worked examples, and the supplied excerpt ends with a \"…see more\" marker, so additional content is not available here.",
+    "topics": [
+      "Python",
+      "Apache Spark",
+      "PySpark",
+      "SQL",
+      "JDBC",
+      "CSV",
+      "Data Engineering interview questions"
+    ],
+    "subtopics": [
+      "Python list sorting without sort()",
+      "Reading files with Spark",
+      "JDBC connections between Spark and databases",
+      "Joining CSV files with no common columns",
+      "Cross joins in PySpark",
+      "Rolling sums in SQL",
+      "Lazy evaluation in PySpark",
+      "RDD versus DataFrame in Apache Spark",
+      "Filtering employees by stated conditions"
+    ],
+    "concepts": [
+      "Python descending sort without sort()",
+      "Spark file reading",
+      "JDBC in Spark database connections",
+      "Joining CSVs with no common columns",
+      "PySpark cross join",
+      "SQL rolling transaction sum",
+      "Lazy evaluation in PySpark",
+      "RDD versus DataFrame",
+      "PySpark employee filtering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a Python program to sort a list of integers in descending order without using the sort() function.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer provides a Python program that sorts a list of integers in descending order without calling sort()."
+    },
+    {
+      "question": "Write Spark code to read a file from a specified location.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer includes Spark code that reads a file from a location specified by the question."
+    },
+    {
+      "question": "Define JDBC and explain how it's used in connecting Spark to databases.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines JDBC and explains its use in connecting Spark to databases."
+    },
+    {
+      "question": "You’re given two CSV files with no common columns — how would you join them?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses the two CSV files' lack of common columns and explains how they would be joined."
+    },
+    {
+      "question": "In PySpark, create two DataFrames with no matching columns and perform a cross join.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer creates two PySpark DataFrames with no matching columns and demonstrates the requested cross join."
+    },
+    {
+      "question": "A table contains bank statements — write an SQL query to calculate a rolling sum of transactions.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer writes an SQL query for the bank-statement table that calculates a rolling sum of transactions."
+    },
+    {
+      "question": "Explain the concept of lazy evaluation in PySpark.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains lazy evaluation in PySpark."
+    },
+    {
+      "question": "What’s the difference between RDD and DataFrame in Apache Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer compares RDDs and DataFrames in Apache Spark."
+    },
+    {
+      "question": "Write a PySpark query to filter employees where age is greater than 25, salary is less than 5 lakh, and name starts with 'A'.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer applies all three filters: age greater than 25, salary less than 5 lakh, and names beginning with 'A'."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering interview questions",
+    "secondary_topics": [
+      "Python",
+      "Spark",
+      "PySpark",
+      "SQL",
+      "JDBC",
+      "RDDs and DataFrames"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7adaeb352383edea",
+    "saved_date": "2026-10-01T23:21:39Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a662986a3a1122c4ca73a47f75031bd5f86852ce7a3a8f09e337c8280cf96155",
+    "enricher_version": "3"
+  }
+}

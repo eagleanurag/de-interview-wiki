@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-saved-e68a5e7f21c72695",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7312423116813606912",
+    "captured_at": "2026-10-02T00:15:52.905193Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:51Z"
+  },
+  "original_text": "Data Analyst SQL Challenge – Amazon Interview\n\n 🚀Are you ready to tackle a real-world SQL challenge?🚀\n\n \nIn a recent Amazon Data Analyst interview, a candidate was given the following SQL task:\n\n📈 Scenario:\nYou’re working with a retail business and need to identify customers who have made purchases exceeding $100.\nYou have two tables:\n\n- customers: Contains customer_id and name\n- orders: Contains order_id, customer_id,and order_amount\n\n 🔎Task:\nJoin these tables to calculate the total purchase amount for each customer, and then select customers whose total purchase amount exceeds $100.\n\n 💡How would you solve this challenge?\nThis problem tests your ability to work with JOINs and aggregate functions in SQL.\n\n👋 Share your solution or thoughts in the comments below!\n\nBonus points if you can also solve it using Python!\n\nFollow Aditya Bansal for more SQL lessons!!\n\n#AmazonInterview #SQL #DataAnalyst #InterviewPrep #Analytics #DataScience #ProblemSolving #SQLQuery\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7312423116813606912_slide_0.jpg",
+      "description": "JPEG image, 405x304 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents an Amazon Data Analyst interview task involving customers and orders tables. The goal is to join the tables, calculate each customer's total purchase amount, and return customers whose purchases exceed $100. The post identifies JOINs and aggregate functions as the skills being tested and mentions Python only as an optional bonus.",
+    "topics": [
+      "SQL",
+      "Retail customer purchase analysis",
+      "Python"
+    ],
+    "subtopics": [
+      "JOINs",
+      "Aggregate functions",
+      "Per-customer order totals",
+      "Purchase threshold filtering"
+    ],
+    "concepts": [
+      "Joining customers and orders",
+      "Per-customer purchase aggregation",
+      "Purchase threshold filtering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you solve the retail task of finding customers whose total purchases exceed $100?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution joins the customers and orders tables using their shared customer_id.\nThe solution aggregates order amounts for each customer to obtain a total purchase amount.\nThe solution filters for totals greater than $100 and returns the qualifying customer information."
+    },
+    {
+      "question": "Which SQL capabilities are tested by this challenge, and why?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "JOINs are needed to associate customers with their orders.\nAggregate functions are needed to calculate total purchase amounts for each customer.\nThe result must be restricted to customers whose aggregate purchase amount exceeds $100."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "JOINs",
+      "Aggregate functions",
+      "Retail customer purchase analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e68a5e7f21c72695",
+    "saved_date": "2026-10-01T23:30:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7312423116813606912",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7312423116813606912_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5d78a446013504c76e8d03247d2bcbafb49705af0dfd625c7f5b61c7d7a82be2",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

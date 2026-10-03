@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-archive-26b37091f94cc6a3",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.349148Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:32Z"
+  },
+  "original_text": "You are given a PySpark DataFrame named web_traffic with the following schema:\n| user_id | page_url | session_id | timestamp | \n\nuser_id: Unique identifier for each user.\npage_url: The URL of the page visited by the user.\nsession_id: Unique identifier for each browsing session.\ntimestamp: The timestamp of the page visit.\n\nYour task is to write a PySpark program to:\nIdentify the top 3 most visited pages (page_url) across all users.\nFor each of these top 3 pages, calculate the average number of unique users visiting the page per session.\nSample Input:\n+---------+-------------------+------------+-------------------+\n| user_id | page_url | session_id | timestamp |\n+---------+-------------------+------------+-------------------+\n| 1 | /home | A | 2025-05-18 10:00 |\n| 2 | /home | A | 2025-05-18 10:05 |\n| 1 | /about | B | 2025-05-18 10:10 |\n| 3 | /home | C | 2025-05-18 10:15 |\n| 3 | /contact | C | 2025-05-18 10:20 |\n| 4 | /home | D | 2025-05-18 10:25 |\n| 4 | /about | D | 2025-05-18 10:30 |\n| 5 | /home | E | 2025-05-18 10:35 |\n| 5 | /contact | E | 2025-05-18 10:40 |\n+---------+-------------------+------------+-------------------+\n\nSample Output:\n+------------+----------------------+\n| page_url | avg_users_per_session |\n+------------+----------------------+\n| /home | 1.75 |\n| /about | 1.50 |\n| /contact | 1.50 |\n+------------+----------------------+\n\n#PySpark #ApacheSpark #DataEngineering #ETL #SparkSQL #DistributedComputing #TechCommunity #ProblemSolving #LearningEveryDay #ProgrammingChallenges",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post provides a PySpark DataFrame schema, sample web-traffic records, and a programming task to rank page_url values by visit count and calculate the average number of distinct users visiting each selected page per session. The sample contains five /home visits and two visits each for /about and /contact. The displayed averages are not explained and do not match the direct interpretation of the metric: averaging distinct users over sessions containing each page gives 1.25 for /home and 1.00 for both /about and /contact. The post does not specify whether sessions without a visit to a page should contribute zero, and it does not provide a program or implementation.",
+    "topics": [
+      "PySpark DataFrame analysis",
+      "Web traffic aggregation",
+      "Top pages by visit count",
+      "Distinct-user counting by browsing session",
+      "Sample-output validation"
+    ],
+    "subtopics": [
+      "Selecting the three most visited page URLs",
+      "Counting distinct users for each page and session",
+      "Averaging page-level session counts",
+      "Clarifying the session denominator",
+      "Checking expected results against source records"
+    ],
+    "concepts": [
+      "web_traffic DataFrame",
+      "Most visited page",
+      "Unique users per page and session",
+      "Average unique users per session",
+      "Top-three page selection",
+      "Sample-output inconsistency"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you implement the requested calculation as a PySpark program?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Count the visit records for each page_url and select the three pages with the highest counts.\nCount distinct user_id values for each page_url and session_id combination.\nAverage those page-and-session user counts for each selected page.\nCombine the ranking and average results while preserving each selected page_url."
+    },
+    {
+      "question": "At what aggregation grain should the average number of unique users per session be calculated?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Users should first be made distinct within each page_url and session_id combination.\nThe page-level result should then be calculated by averaging those session-level distinct-user counts.\nThe calculation should explicitly define whether sessions without a visit to the page contribute zero because the post leaves that denominator unspecified."
+    },
+    {
+      "question": "Why does the provided sample output appear inconsistent with the stated metric?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The /home session-level distinct-user counts are 2, 1, 1, and 1, which average to 1.25 over its four page-visiting sessions.\nThe /about and /contact counts are 1 and 1 in their respective page-visiting sessions, so both average to 1.00.\nThe displayed averages require correction or a different metric that the post would need to define."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark web-traffic aggregation",
+    "secondary_topics": [
+      "Top-page ranking",
+      "Session-level distinct-user metrics",
+      "Expected-output troubleshooting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:26b37091f94cc6a3",
+    "saved_date": "2026-10-01T23:22:32Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "62f9fb971675f7f4ac84a66cd2fe00ffcd1d0c4423147c263d570678259e2d41",
+    "enricher_version": "3"
+  }
+}

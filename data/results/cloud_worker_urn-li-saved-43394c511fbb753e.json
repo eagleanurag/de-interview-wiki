@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-saved-43394c511fbb753e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7324837204147539969",
+    "captured_at": "2026-10-02T00:15:47.067576Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:43Z"
+  },
+  "original_text": "Visualizing a SQL query\n\nSQL statements are executed by the database system in several steps, including:\n- Parsing the SQL statement and checking its validity\n- Transforming the SQL into an internal representation, such as relational algebra\n- Optimizing the internal representation and creating an execution plan that utilizes index information\n- Executing the plan and returning the results\n\n-- \nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n\n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7324837204147539969_slide_0.jpg",
+      "description": "GIF image, 480x624 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a concise textual outline of how a database system executes a SQL statement. It describes parsing and validity checking, transformation into an internal representation such as relational algebra, optimization and execution-plan creation using index information, and execution of the plan to return results. No actual visualization is present in the supplied content.",
+    "topics": [
+      "SQL",
+      "Database query processing"
+    ],
+    "subtopics": [
+      "SQL parsing and validity checking",
+      "Internal query representations",
+      "Relational algebra",
+      "Execution-plan creation",
+      "Index information",
+      "Query execution"
+    ],
+    "concepts": [
+      "SQL parsing and validity checking",
+      "Internal query representation",
+      "Execution plan",
+      "Plan execution and result return"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What stages does a database system use to process and execute a SQL statement?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The database system parses the SQL statement and checks its validity.\nIt transforms the SQL into an internal representation such as relational algebra.\nIt optimizes the internal representation and creates an execution plan that uses index information.\nIt executes the plan and returns the results."
+    },
+    {
+      "question": "At what point does index information enter the SQL processing flow?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Index information is considered when the database system optimizes the internal representation and creates an execution plan.\nThe resulting plan utilizes that index information before the plan is executed."
+    },
+    {
+      "question": "Explain the end-to-end path from a SQL statement to returned query results.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The statement is parsed and checked for validity before it is transformed into an internal representation.\nThe internal representation is optimized and converted into an execution plan that utilizes index information.\nThe database system executes the plan and returns the resulting data."
+    }
+  ],
+  "classification": {
+    "domain": "Database Systems",
+    "primary_topic": "SQL query execution",
+    "secondary_topics": [
+      "Query processing",
+      "Query optimization",
+      "Execution planning"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:43394c511fbb753e",
+    "saved_date": "2026-10-01T23:27:43Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7324837204147539969",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7324837204147539969_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7324837204147539969_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "104d3fa85acf1546862dd20680d54cddbf72eb64e503da4ce54a115883864f92",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Query optimization"
+      ],
+      "concepts": [
+        "Query optimization"
+      ],
+      "questions": []
+    }
+  }
+}

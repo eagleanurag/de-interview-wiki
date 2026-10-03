@@ -1,0 +1,136 @@
+{
+  "id": "urn-li-saved-317b7e21d6cef2e5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7293931585970552832",
+    "captured_at": "2026-10-02T00:15:46.242795Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:47Z"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nYou will be 100x better at PySpark..\nIf you cover these 4 key topics:\nData Processing and Transformation\n↳ RDD (Resilient Distributed Dataset) operations\n↳ DataFrame and Dataset APIs\n↳ SQL operations on DataFrames\n↳ Data cleaning and preprocessing techniques\n↳ Window functions and aggregations\nAdvanced PySpark Features\n↳ User-Defined Functions (UDFs)\n↳ Broadcast variables and accumulators\n↳ Partitioning and data distribution\n↳ Caching and persistence strategies\n↳ Optimization techniques (e.g., Catalyst optimizer)\nStreaming with PySpark\n↳ Structured Streaming basics\n↳ Windowing operations\n↳ Stateful processing\n↳ Integration with Kafka and other streaming sources\n↳ Handling late and out-of-order data\nPySpark in Production\n↳ Cluster configuration and resource management\n↳ Performance tuning and optimization\n↳ Monitoring and debugging Spark applications\n↳ Integration with data lakes and warehouses\n↳ Best practices for writing efficient PySpark code\nGet your preparation solidified with this interview questionnaire!\nIf you've read so far, do LIKE the post 👍\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\nTop 50+ Apache Spark Interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7293931585970552832_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post presents a four-part PySpark interview-preparation checklist covering data processing and transformation, advanced PySpark features, Structured Streaming, and production practices. It names the topics to study but does not provide detailed explanations, code, configurations, or worked examples.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Data processing and transformation",
+      "Advanced PySpark features",
+      "Structured Streaming",
+      "Production PySpark"
+    ],
+    "subtopics": [
+      "RDD operations",
+      "DataFrame and Dataset APIs",
+      "SQL operations on DataFrames",
+      "Data cleaning and preprocessing",
+      "Window functions and aggregations",
+      "User-Defined Functions",
+      "Broadcast variables and accumulators",
+      "Partitioning and data distribution",
+      "Caching and persistence strategies",
+      "Catalyst optimizer",
+      "Streaming windowing operations",
+      "Stateful processing",
+      "Kafka integration",
+      "Late and out-of-order data",
+      "Cluster configuration and resource management",
+      "Performance tuning and optimization",
+      "Monitoring and debugging Spark applications",
+      "Data lake and warehouse integration",
+      "Efficient PySpark code"
+    ],
+    "concepts": [
+      "RDD operations",
+      "DataFrame and Dataset APIs",
+      "SQL operations on DataFrames",
+      "Data cleaning and preprocessing",
+      "Window functions and aggregations",
+      "User-Defined Functions",
+      "Broadcast variables and accumulators",
+      "Partitioning and data distribution",
+      "Caching and persistence strategies",
+      "Catalyst optimizer",
+      "Structured Streaming",
+      "Streaming windowing operations",
+      "Stateful processing",
+      "Kafka integration",
+      "Late and out-of-order data",
+      "Cluster configuration and resource management",
+      "Performance tuning and optimization",
+      "Monitoring and debugging Spark applications",
+      "Efficient PySpark code"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which PySpark data-processing and transformation capabilities should a candidate be prepared to discuss?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies RDD operations and the DataFrame and Dataset APIs.\nIt includes SQL operations on DataFrames.\nIt also covers data cleaning and preprocessing techniques, window functions, and aggregations."
+    },
+    {
+      "question": "What advanced PySpark features are included in this interview-preparation checklist?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer names User-Defined Functions, broadcast variables, and accumulators.\nIt includes partitioning and data distribution.\nIt also identifies caching and persistence strategies.\nIt mentions optimization techniques such as the Catalyst optimizer."
+    },
+    {
+      "question": "Which concepts should a candidate understand when preparing for PySpark streaming interviews?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer covers Structured Streaming basics, windowing operations, and stateful processing.\nIt includes integration with Kafka and other streaming sources.\nIt also addresses handling late and out-of-order data."
+    },
+    {
+      "question": "What production knowledge areas are identified for PySpark interview preparation?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer includes cluster configuration and resource management.\nIt covers performance tuning and optimization.\nIt identifies monitoring and debugging Spark applications.\nIt also mentions integration with data lakes and warehouses and best practices for writing efficient PySpark code."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Data processing and transformation",
+      "Advanced PySpark features",
+      "Structured Streaming",
+      "Production PySpark"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:317b7e21d6cef2e5",
+    "saved_date": "2026-10-01T23:36:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7293931585970552832",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7293931585970552832_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "e8bef636b00946f1cbfef691f4a144a9ebd32621bb258ca8faffb2528b18a031",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Data lake and warehouse integration"
+      ],
+      "questions": []
+    }
+  }
+}

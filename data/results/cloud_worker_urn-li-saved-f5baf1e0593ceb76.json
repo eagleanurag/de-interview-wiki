@@ -1,0 +1,93 @@
+{
+  "id": "urn-li-saved-f5baf1e0593ceb76",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7355607628678356993",
+    "captured_at": "2026-10-02T00:15:53.330660Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:49Z"
+  },
+  "original_text": "• 1st\nI talk about databricks and snowflake. All views are mine.\n1yr •\nThis is a great MCP guidebook I found online talking about real use cases.\nWhat is MCP, How to build the MCP clients locally.\nExamples with Ollama, Cursor, CrewAI, MindsDB AssemblyAI building Voice agents, Unified Data Servers , Agentic RAG, Deep Research Agents etc\nMCP and Agents",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7355607628678356993_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post points to an online MCP guidebook covering what MCP is, how to build MCP clients locally, and examples involving Ollama, Cursor, CrewAI, MindsDB, AssemblyAI, voice agents, Unified Data Servers, Agentic RAG, and Deep Research Agents. It also mentions the author's Databricks and Snowflake views, but the supplied content contains no technical explanations or implementation details.",
+    "topics": [
+      "MCP",
+      "MCP clients",
+      "AI agents",
+      "Agentic RAG",
+      "Deep Research Agents",
+      "Unified Data Servers",
+      "voice agents",
+      "Ollama",
+      "Cursor",
+      "CrewAI",
+      "MindsDB",
+      "AssemblyAI",
+      "Databricks",
+      "Snowflake"
+    ],
+    "subtopics": [
+      "Building MCP clients locally",
+      "MCP and AI agents",
+      "Agentic RAG",
+      "Deep Research Agents",
+      "Unified Data Servers",
+      "Voice agents built with AssemblyAI"
+    ],
+    "concepts": [
+      "MCP guidebook",
+      "Local MCP clients",
+      "MCP and agents",
+      "Agentic RAG and Deep Research Agents",
+      "Unified Data Servers",
+      "Voice agents"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "AI agents and developer tooling",
+    "primary_topic": "MCP",
+    "secondary_topics": [
+      "MCP client development",
+      "AI agents",
+      "Agentic RAG",
+      "Deep Research Agents",
+      "Unified Data Servers",
+      "voice agents"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f5baf1e0593ceb76",
+    "saved_date": "2026-10-01T23:09:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7355607628678356993",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7355607628678356993_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "07ba3fb33b34e47d6bfa4377b41019b3974d48f795cb29bdce90883e67ffa5bd",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "id": "urn-li-saved-e4ebd122a1fcf463",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344573867153047552",
+    "captured_at": "2026-10-02T00:15:52.813722Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:20Z"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\n💰12–15 LPA Package! | 𝐀𝐦𝐞𝐫𝐢𝐜𝐚𝐧 𝐄𝐱𝐩𝐫𝐞𝐬𝐬 - 𝐑𝐞𝐚𝐥 𝐏𝐲𝐭𝐡𝐨𝐧 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n𝐑𝐨𝐥𝐞: Data Analyst (0–3 Years)\n𝐈𝐟 𝐲𝐨𝐮'𝐫𝐞 𝐩𝐫𝐞𝐩𝐚𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰, 𝐭𝐡𝐢𝐬 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐬𝐢𝐠𝐧 𝐭𝐨 𝐠𝐨 𝐛𝐞𝐲𝐨𝐧𝐝 𝐛𝐚𝐬𝐢𝐜 𝐬𝐲𝐧𝐭𝐚𝐱 𝐚𝐧𝐝 𝐟𝐨𝐜𝐮𝐬 𝐨𝐧 𝐫𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝 𝐏𝐲𝐭𝐡𝐨𝐧 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐬𝐨𝐥𝐯𝐢𝐧𝐠.\n📌 These are actual Python questions asked by American Express — designed to test your logic, clarity, and business understanding:\n🔹 Find duplicate rows using Pandas groupby() and filter()\n🔹 Difference between merge(), join(), and concat() — with real-world dataframes\n🔹 Fetch the 𝐬𝐞𝐜𝐨𝐧𝐝-𝐡𝐢𝐠𝐡𝐞𝐬𝐭 𝐬𝐚𝐥𝐚𝐫𝐲 — nlargest() vs rank()\n🔹 Employees earning more than their managers — self-merge logic with Pandas\n🔹 Difference between apply(), map(), lambda, np.where() — and when to use what\n🔹 Detect anomalies or fraud patterns using groupby().filter() and conditional logic\n🔹 Reshape and pivot data — pivot(), pivot_table(), melt(), and stack()/unstack()\n🔹 Working with datetime — parsing, extracting components, and time-based filtering\n🔹 Year-over-Year or Month-over-Month growth — using shift() and pct_change()\n🔹 Optimize Pandas performance — avoid loops, use vectorization and numba if needed\n🔹 Real-world use of itertools, collections.Counter, defaultdict in data handling\n💡 𝐓𝐢𝐩: Don’t just memorize Pandas functions — learn how to think in terms of DataFrames. AmEx wants you to write clean, readable logic — not hacky code.\nDrop a comment if found useful!👇\n…see more\nReal Python Interview Questions American Express",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7344573867153047552_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post describes an American Express Data Analyst role for candidates with 0–3 years of experience and lists claimed Python interview questions without providing answers or worked examples. The technical coverage includes Pandas DataFrame operations, duplicate and anomaly filtering, combining DataFrames, salary ranking, employee-manager self-merges, conditional operations, reshaping, datetime processing, growth calculations, performance optimization, and Python standard-library tools. The post advises candidates to write clean, readable, DataFrame-oriented logic rather than merely memorizing Pandas functions.",
+    "topics": [
+      "Python interview preparation",
+      "Pandas DataFrame operations",
+      "Data manipulation and reshaping",
+      "Time-series calculations",
+      "Python standard-library data handling"
+    ],
+    "subtopics": [
+      "Duplicate detection with groupby() and filter()",
+      "Combining DataFrames with merge(), join(), and concat()",
+      "Second-highest salary calculation with nlargest() and rank()",
+      "Employee-manager comparison with a Pandas self-merge",
+      "Conditional and functional operations with apply(), map(), lambda, and np.where()",
+      "Anomaly and fraud-pattern detection",
+      "Pivoting and reshaping with pivot(), pivot_table(), melt(), stack(), and unstack()",
+      "Datetime parsing, component extraction, and time-based filtering",
+      "Year-over-Year and Month-over-Month growth with shift() and pct_change()",
+      "Vectorization, loop avoidance, and numba",
+      "Data handling with itertools, Counter, and defaultdict"
+    ],
+    "concepts": [
+      "Pandas groupby() and filter()",
+      "merge(), join(), and concat()",
+      "nlargest() and rank()",
+      "Pandas self-merge",
+      "apply(), map(), lambda, and np.where()",
+      "Pandas data reshaping",
+      "Datetime processing",
+      "Period-over-period growth",
+      "Pandas vectorization and numba",
+      "itertools, Counter, and defaultdict",
+      "DataFrame-oriented problem solving"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you find duplicate rows in a Pandas DataFrame using groupby() and filter()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution uses groupby() and filter() to identify duplicate rows.\nThe DataFrame logic is clean and readable rather than hacky."
+    },
+    {
+      "question": "What are the differences among merge(), join(), and concat() when working with real-world DataFrames?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer distinguishes all three DataFrame operations.\nThe comparison is grounded in real-world DataFrame use cases rather than isolated syntax."
+    },
+    {
+      "question": "How would you fetch the second-highest salary using nlargest() or rank()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution identifies the second-highest salary.\nThe answer explains the use of nlargest() and rank() for the task."
+    },
+    {
+      "question": "How would you use a Pandas self-merge to find employees who earn more than their managers?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution uses a self-merge to associate employees with their managers.\nThe logic retains employees whose salaries are greater than their managers' salaries."
+    },
+    {
+      "question": "When should apply(), map(), lambda, or np.where() be used in data analysis?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer compares apply(), map(), lambda, and np.where().\nThe answer explains when each construct is appropriate rather than treating them as interchangeable."
+    },
+    {
+      "question": "How could groupby().filter() and conditional logic be used to detect anomaly or fraud patterns?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The solution groups the data before applying filters.\nConditional logic is used to identify anomalous or suspicious patterns."
+    },
+    {
+      "question": "Which reshaping techniques would you consider for pivoting or changing the layout of tabular data?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer considers pivot() and pivot_table() for pivoting.\nThe answer also considers melt(), stack(), and unstack() when changing table layout."
+    },
+    {
+      "question": "How would you parse datetime values, extract their components, and apply time-based filters in Pandas?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution parses datetime values before processing them.\nThe answer extracts datetime components and performs time-based filtering."
+    },
+    {
+      "question": "How do shift() and pct_change() support Year-over-Year or Month-over-Month growth calculations?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution uses shift() to obtain the comparison period.\nThe answer uses pct_change() to calculate the period-over-period growth."
+    },
+    {
+      "question": "How would you optimize a slow Pandas data-processing solution without relying on Python loops?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The optimization avoids loops where possible.\nThe answer uses vectorization and considers numba if it is needed."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Python data analysis with Pandas",
+    "secondary_topics": [
+      "DataFrame manipulation",
+      "Data quality and anomaly detection",
+      "Time-series calculations",
+      "Python performance optimization",
+      "Python standard-library data handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e4ebd122a1fcf463",
+    "saved_date": "2026-10-01T23:15:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7344573867153047552",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7344573867153047552_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "0cd0277a309b35215b15d56bf6ef192591c9ab5d0ca84dcaaa0687cdff824b0f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data quality and anomaly detection",
+        "Python performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

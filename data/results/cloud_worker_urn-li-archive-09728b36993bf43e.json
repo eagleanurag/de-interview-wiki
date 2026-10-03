@@ -1,0 +1,96 @@
+{
+  "id": "urn-li-archive-09728b36993bf43e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.929066Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:43Z"
+  },
+  "original_text": "5 most asked SQL Interview Questions for Data Engineer jobs.\n\n𝟭. 𝗙𝗶𝗻𝗱 𝘁𝗵𝗲 𝗦𝗲𝗰𝗼𝗻𝗱 𝗛𝗶𝗴𝗵𝗲𝘀𝘁 𝗦𝗮𝗹𝗮𝗿𝘆 𝗶𝗻 𝗮 𝗧𝗮𝗯𝗹𝗲\n\nSELECT MAX(salary) AS SecondHighestSalary\nFROM Employee\nWHERE salary < (SELECT MAX(salary) FROM Employee);\n\n𝟮 . 𝗙𝗶𝗻𝗱 𝗼𝘂𝘁 𝗲𝗺𝗽𝗹𝗼𝘆𝗲𝗲𝘀 𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗺𝗼𝗿𝗲 𝘁𝗵𝗮𝗻 𝘁𝗵𝗲𝗶𝗿 𝗺𝗮𝗻𝗮𝗴𝗲𝗿𝘀\n\nSELECT e2.name as Employee\nFROM employee e1\nINNER JOIN employee e2\nON e1.id = e2.managerID\nWHERE e1.salary < e2.salary\n\n𝟯. 𝗙𝗶𝗻𝗱 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿𝘀 𝘄𝗵𝗼 𝗻𝗲𝘃𝗲𝗿 𝗼𝗿𝗱𝗲𝗿\n\nSELECT name as Customers\nFROM Customers\nWHERE id not in (\nSELECT customerId\nFROM Orders);\n\n𝟰. 𝗗𝗲𝗹𝗲𝘁𝗲 𝗱𝘂𝗽𝗹𝗶𝗰𝗮𝘁𝗲 𝗲𝗺𝗮𝗶𝗹𝘀\n\nDELETE p1\nFROM Person p1, Person p2\nWHERE p1.Email = p2.Email AND\np1.Id > p2.Id\n\n𝟱. 𝗖𝗼𝘂𝗻𝘁 𝘁𝗵𝗲 𝗻𝘂𝗺𝗯𝗲𝗿 𝗼𝗳 𝗼𝗿𝗱𝗲𝗿𝘀 𝗽𝗹𝗮𝗰𝗲𝗱 𝗶𝗻 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝘆𝗲𝗮𝗿 𝗮𝗻𝗱 𝗺𝗼𝗻𝘁𝗵.\n\nSELECT COUNT(*) AS order_count\nFROM orders WHERE EXTRACT(YEAR_MONTH FROM order_date) = EXTRACT(YEAR_MONTH FROM CURDATE() - INTERVAL 1 MONTH);\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A truncated list of five SQL interview exercises for data engineer roles, accompanied by queries. The examples address finding the second-highest salary, comparing employees with their managers, finding customers with no orders, deleting duplicate email records, and counting orders from the previous month. The employee query as written selects salaries where e1.salary is less than e2.salary, which does not match the heading's claim that employees earn more than their managers. The final query uses EXTRACT(YEAR_MONTH ...) without identifying a SQL dialect or explaining the syntax.",
+    "topics": [
+      "SQL",
+      "Data engineering interview preparation",
+      "SQL query patterns"
+    ],
+    "subtopics": [
+      "Nested subqueries and aggregate functions",
+      "Employee-manager self-joins",
+      "Set exclusion with NOT IN",
+      "Duplicate-record deletion",
+      "Date-based order filtering"
+    ],
+    "concepts": [
+      "Second-highest salary with MAX",
+      "Employee-manager self-join",
+      "Customers without orders using NOT IN",
+      "Duplicate email deletion with a self-join",
+      "Previous-month order count"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Explain how the provided query finds the second-highest salary in the Employee table.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The inner query computes the maximum salary.\nThe outer query excludes salaries equal to that maximum and applies MAX to the remaining rows."
+    },
+    {
+      "question": "What does the employee-manager self-join actually return, and does its condition match the question heading?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The join matches e1.id to e2.managerID and the query returns e2.name.\nThe condition e1.salary < e2.salary selects pairs where the e1 salary is lower, so it does not find employees earning more than their managers as stated in the heading."
+    },
+    {
+      "question": "Write or explain a query that returns customers who have never appear in the Orders table.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The subquery selects customerId values from Orders.\nThe Customers query uses NOT IN to retain only customers whose ids are absent from that result."
+    },
+    {
+      "question": "Explain how the DELETE statement removes duplicate email records while retaining one Person row.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The self-join pairs Person rows that have equal email values.\nThe p1.Id > p2.Id condition deletes the row with the larger ID and retains the lowest-ID row for matching emails."
+    },
+    {
+      "question": "How does the final query attempt to count orders placed in the previous month?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "It filters orders by comparing the EXTRACT expression for order_date with the expression for one month before CURDATE.\nCOUNT(*) counts the rows that remain after that filter, while the source does not specify a SQL dialect for the shown YEAR_MONTH syntax."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering SQL",
+    "primary_topic": "SQL interview queries",
+    "secondary_topics": [
+      "Subqueries and aggregation",
+      "Self-joins",
+      "Set exclusion",
+      "Duplicate-record deletion",
+      "Date-based filtering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:09728b36993bf43e",
+    "saved_date": "2026-10-01T23:21:43Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ed995d9914eb50e82178d5d6a4ade06cab9efa89014932d71a7659279e4454ed",
+    "enricher_version": "3"
+  }
+}

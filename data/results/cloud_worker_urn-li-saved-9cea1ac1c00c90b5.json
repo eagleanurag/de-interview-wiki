@@ -1,0 +1,96 @@
+{
+  "id": "urn-li-saved-9cea1ac1c00c90b5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7428910228877934592",
+    "captured_at": "2026-10-02T00:15:49.980228Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:50Z"
+  },
+  "original_text": "You have a 50GB file to process in Databricks. How do you configure your compute?\n\nFor a 50GB file, Spark will create roughly 400 partitions (51,200MB / 128MB). To process all at once, you may opt to take 400 cores, which will be an overkill for sure.\n\nI would suggest a cluster with 40 to 100 cores which is around 10 to 25 worker nodes; assuming 4 cores each. This allows the data to be processed in 4 to 10 'waves.' Regarding memory, I'd recommend at least 4GB of RAM per core which is around 16GB per node to handle the 128MB partition plus the overhead for deserialization, shuffles, and the Spark engine itself.\n\n#Dataengineering #Spark #Databricks",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7428910228877934592_slide_0.jpg",
+      "description": "JPEG image, 480x249 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a rule-of-thumb for configuring Databricks compute to process a 50GB file with Spark. It estimates roughly 400 partitions using a 128MB partition size, rejects using 400 cores as excessive, and recommends 40 to 100 cores. Assuming four cores per worker, this corresponds to 10 to 25 worker nodes and four to ten processing waves. It recommends at least 4GB of RAM per core, or 16GB per node, to accommodate each partition and overhead from deserialization, shuffles, and the Spark engine.",
+    "topics": [
+      "Spark",
+      "Databricks",
+      "cluster compute sizing"
+    ],
+    "subtopics": [
+      "partition estimation",
+      "core allocation",
+      "worker node sizing",
+      "memory sizing",
+      "processing waves"
+    ],
+    "concepts": [
+      "Partition estimation",
+      "Core allocation",
+      "Worker node sizing",
+      "Processing waves",
+      "Memory per core"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Using the assumptions in the post, how many Spark partitions would a 50GB file contain with a 128MB partition size?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post converts 50GB to 51,200MB and divides it by 128MB to estimate roughly 400 partitions."
+    },
+    {
+      "question": "How would you size a Databricks cluster for the 50GB Spark processing job described in the post?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The post recommends 40 to 100 cores rather than using all 400 cores at once.\nAssuming four cores per worker, the recommendation corresponds to 10 to 25 worker nodes.\nThe resulting compute would process approximately 400 partitions in four to ten waves."
+    },
+    {
+      "question": "Why does the post recommend at least 4GB of RAM per core for this Spark workload?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The recommendation allows memory for the 128MB partition plus overhead from deserialization, shuffles, and the Spark engine.\nAt four cores per node, 4GB per core corresponds to 16GB of RAM per node."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks compute sizing for Spark",
+    "secondary_topics": [
+      "Spark partitioning",
+      "cluster resource planning",
+      "worker memory sizing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9cea1ac1c00c90b5",
+    "saved_date": "2026-10-01T23:08:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7428910228877934592",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7428910228877934592_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "47d60453347544db76774077347792cde87456a11f12a4f71a865d454e4c3876",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

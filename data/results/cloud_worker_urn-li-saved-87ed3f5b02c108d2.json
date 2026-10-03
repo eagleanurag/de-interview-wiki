@@ -1,0 +1,78 @@
+{
+  "id": "urn-li-saved-87ed3f5b02c108d2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339623632530284545",
+    "captured_at": "2026-10-02T00:15:48.969388Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:11Z"
+  },
+  "original_text": "LWD 23rd OCT | GCP Certified Data Engineer ✅ | Building Scalable ELT Pipelines | BigQuery + dbt + Airflow + PySpark | Medallion Architecture | Freelance Consultant | Open to Remote Projects\n1yr •\n𝗛𝗲𝗿𝗲 𝗶𝘀 𝗛𝗼𝘄 𝗢𝗻𝗲 𝗕𝗼𝗼𝗸 𝗛𝗲𝗹𝗽𝗲𝗱 𝗠𝗲 𝗧𝗿𝘂𝗹𝘆 𝗨𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴\nA few weeks ago, I was diving deep into the world of data engineering—curious but overwhelmed. Articles, tutorials, and courses were helpful, but something always felt missing: structure, clarity, and a real-world mindset.\nThen I found this gem:\n👉 \"𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗣𝘆𝘁𝗵𝗼𝗻\" 𝗯𝘆 𝗣𝗮𝘂𝗹 𝗖𝗿𝗶𝗰𝗸𝗮𝗿𝗱\n📍 Read here https://lnkd.in/gS5XYfB9\nThis book didn’t just teach me what a data engineer does—it showed me how they think. It broke down the complexities of real-world data workflows, from ingestion to modelling to pipeline automation. All with Python as the engine.\nHere is what stood out to me:\n• It’s practical—not just theory, but hands-on guidance.\n• It makes data pipeline automation approachable.\n• It explains how to structure data for usability and scalability.\n• And most importantly, it made me realize:\n𝗗𝗮𝘁𝗮 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗶𝘀 𝗻𝗼𝘁 𝗷𝘂𝘀𝘁 𝗮𝗯𝗼𝘂𝘁 𝘁𝗼𝗼𝗹𝘀. 𝗜𝘁 𝗶𝘀 𝗮𝗯𝗼𝘂𝘁 𝘀𝗼𝗹𝘃𝗶𝗻𝗴 𝗺𝗲𝘀𝘀𝘆 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀 𝘄𝗶𝘁𝗵 𝗲𝗹𝗲𝗴𝗮𝗻𝘁 𝘀𝘆𝘀𝘁𝗲𝗺𝘀.\nWhether you are a data scientist wanting to understand the backend, a software engineers curious about pipelines, or someone just starting out—this book can give you a solid foundation and a clear path forward.\nIf you are exploring data engineering, I highly recommend giving it a read. Please follow the link to get complete book.\n#DataEngineering #Python #CareerGrowth #LearningResources #Books #DataPipelines #LinkedInLearning #PersonalGrowth #TechJourney\n…see more\nData Engineering with Python",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339623632530284545_slide_0.jpg",
+      "description": "JPEG image, 382x471 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional LinkedIn post recommending the book \"Data Engineering with Python\" by Paul Cerny. It says the book provides practical guidance on real-world data workflows involving ingestion, modeling, and pipeline automation, with Python presented as the engine. It also says the book addresses structuring data for usability and scalability. The post's header lists scalable ELT work with BigQuery, dbt, Airflow, and PySpark and mentions Medallion Architecture, but it does not explain those tools or the architecture.",
+    "topics": [
+      "Data engineering",
+      "Data engineering learning resources",
+      "ELT pipelines",
+      "Data pipeline automation"
+    ],
+    "subtopics": [
+      "Data ingestion",
+      "Data modeling",
+      "Scalable data structuring",
+      "Medallion Architecture"
+    ],
+    "concepts": [
+      "Data Engineering with Python",
+      "Real-world data workflows",
+      "Data pipeline automation",
+      "Scalable data structuring",
+      "Scalable ELT technology stack",
+      "Medallion Architecture"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering learning resources",
+    "secondary_topics": [
+      "ELT pipelines",
+      "Data pipeline automation",
+      "Data ingestion and modeling"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:87ed3f5b02c108d2",
+    "saved_date": "2026-10-01T23:17:11Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339623632530284545",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339623632530284545_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "cb641bd74c541e9b1597e6fae5b27a292b66525cdaf8720e0bdadc3a5cb846ab",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

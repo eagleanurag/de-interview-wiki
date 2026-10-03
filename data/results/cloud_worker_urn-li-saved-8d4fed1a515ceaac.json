@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-8d4fed1a515ceaac",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337817883038707714",
+    "captured_at": "2026-10-02T00:15:49.338433Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:16Z"
+  },
+  "original_text": "Top 50 LLM Interview Questions.\n\n(great resource to learn LLM basics)\n\nExplore the key concepts, techniques, and challenges of Large Language Models (LLMs) with this comprehensive guide, crafted for AI enthusiasts and professionals preparing for interviews.\n\nI have shared a link to this PDF in the comments.\n\n👉 Interested in ML/AI Engineering? Sign up for our newsletter for in- depth lessons and get a FREE eBook with 150+ core DS/ML lessons: link in the comments.\n_____\nShare this with your network if you found this insightful ♻️\nFollow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Learning!",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337817883038707714_slide_0.jpg",
+      "description": "JPEG image, 480x541 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post advertising a claimed guide titled \"Top 50 LLM Interview Questions\" and an AI/ML newsletter. It mentions that the PDF would cover Large Language Model concepts, techniques, and challenges, but it does not provide the PDF, interview questions, or any technical explanations.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Artificial Intelligence and Machine Learning",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8d4fed1a515ceaac",
+    "saved_date": "2026-10-01T23:14:16Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337817883038707714",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337817883038707714_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "3ea1bc4080600dd3975f00c161d47c5e6ab58ae0ede2a24507914f72cd35662a",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

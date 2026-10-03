@@ -1,0 +1,114 @@
+{
+  "id": "urn-li-saved-0807b28413f7becc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7352033129559216129",
+    "captured_at": "2026-10-02T00:15:44.594328Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:27Z"
+  },
+  "original_text": "Converting Databricks External Table to Managed tables is much easier now.\n\nManaged Tables provide you with great features like Predictive Optimizations which automatically Analyze, Optimize and do the Vacuuming for you. Also there's no limitations of collecting stats only for first 32 columns.\n\nThere are other features like DROP UNDROP tables and it definitely saves a lot of storage with its Optimizations.\n\nIn order to convert, all you have to do is ALTER with SET MANAGED instead of deep copying your tables.\n\nOther notable Features:\n\n1) ROLLBACK to External tables within 14 days with UNSET MANAGED.\n2) Not much downtime converting to Managed tables.\n3) Concurrency support. What if someone is writing to External table and conversion happening at the same time.\n\nOne thing to be careful of is: Is that table being used by 3rd party tools. \n\nActually, I was researching about; how to query Databricks Managed Tables using Athena. For External tables, I could run Glue crawlers on it to keep transaction logs in sync; not sure how to make it work with Managed tables as well ; still researching \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7352033129559216129_slide_0.jpg",
+      "description": "JPEG image, 480x314 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post claims that a Databricks External Table can be converted to a Managed Table without deep copying by using ALTER with SET MANAGED. It highlights Predictive Optimizations for automatic analysis, optimization, and vacuuming; removal of the stated 32-column statistics limitation; DROP and UNDROP table features; potential storage savings; little downtime; and concurrency during conversion. It also states that the conversion can be rolled back to an External Table within 14 days by using UNSET MANAGED, while warning that dependencies on third-party tools should be checked. The post is incomplete regarding whether Athena can query Managed Tables and whether Glue crawlers can keep their transaction logs synchronized as they reportedly did for External Tables.",
+    "topics": [
+      "Databricks Managed Tables",
+      "External-to-managed table conversion",
+      "Predictive Optimizations",
+      "Table lifecycle operations",
+      "Data integration and transaction-log synchronization"
+    ],
+    "subtopics": [
+      "Converting External Tables with ALTER and SET MANAGED",
+      "Rolling back Managed Tables with UNSET MANAGED",
+      "Automatic analysis, optimization, and vacuuming",
+      "Statistics collection beyond the first 32 columns",
+      "Conversion downtime and concurrency",
+      "Third-party tool compatibility",
+      "Querying Managed Tables with Athena",
+      "Synchronizing transaction logs with Glue crawlers"
+    ],
+    "concepts": [
+      "Databricks External Table",
+      "Databricks Managed Table",
+      "External-to-managed conversion",
+      "Predictive Optimizations",
+      "Statistics collection",
+      "DROP and UNDROP",
+      "Managed conversion rollback",
+      "Conversion concurrency",
+      "Third-party tool compatibility",
+      "Athena querying of Managed Tables",
+      "Glue crawler transaction-log synchronization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the post describe converting a Databricks External Table into a Managed Table?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The conversion uses ALTER with SET MANAGED rather than deep copying the table.\nThe post associates the conversion with little downtime, but it does not provide the complete command or configuration."
+    },
+    {
+      "question": "What benefits does the post attribute to Databricks Managed Tables?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Predictive Optimizations automatically perform analysis, optimization, and vacuuming.\nStatistics collection is not limited to the first 32 columns.\nThe post lists DROP and UNDROP capabilities and potential storage savings."
+    },
+    {
+      "question": "What operational checks and rollback options are identified for a Managed Table conversion?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The table should be checked for use by third-party tools before conversion.\nThe post claims concurrency support for conversion overlapping with writes and reports little downtime.\nThe conversion can be reversed to an External Table within 14 days by using UNSET MANAGED."
+    },
+    {
+      "question": "What integration problem remains unresolved when querying Databricks Managed Tables with Athena?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The author was unsure whether Managed Tables could be queried with Athena in the same way as External Tables.\nGlue crawlers were reportedly used to keep External Table transaction logs synchronized, but the post does not establish that this works for Managed Tables."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks Managed Table conversion",
+    "secondary_topics": [
+      "Predictive Optimizations",
+      "Table lifecycle and rollback",
+      "Conversion concurrency and compatibility",
+      "Athena and Glue crawler integration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0807b28413f7becc",
+    "saved_date": "2026-10-01T23:10:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7352033129559216129",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7352033129559216129_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "860151630dac095276f9237e694c37895b82ab86114f3839ee2c1d39fa096bcc",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "urn-li-archive-1c060075d07ea83b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.181144Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:56Z"
+  },
+  "original_text": "📌 Recently Asked – Impetus Interview for Big Data Engineer\n📍 Round 1 – Technical (Hands-on + Conceptual)\n\nJust came across these questions asked in the R1 round at Impetus for a Big Data Engineer (3–5 yrs) role:\n\n🔷 Project-Based & Real-Time Scenarios\n1️⃣ Walkthrough of your current project and workflow\n 2️⃣ What was the data source in your project?\n 3️⃣ Any production or lower-environment issue you faced and how you resolved it\n\n🔷 Apache Spark & PySpark\n4️⃣ Spark application internal process\n 5️⃣ What is Data Locality?\n 6️⃣ What is DAG (Directed Acyclic Graph) in Spark?\n 7️⃣ Number of stages in PySpark\n 8️⃣ Partitioning logic for 1GB/2GB of data\n 9️⃣ Default partitions after wide transformations\n 🔟 Handling empty partitions after shuffle\n 1️⃣1️⃣ What is Data Skew? How do you handle it?\n 1️⃣2️⃣ Salting technique in Spark\n 1️⃣3️⃣ How does coalesce() help with skew\n 1️⃣4️⃣ Broadcast joins in Spark\n 1️⃣5️⃣ Adaptive Query Execution (AQE)\n 1️⃣6️⃣ RDD vs DataFrame – Why is DataFrame faster?\n 1️⃣7️⃣ Catalyst Optimizer in Spark\n 1️⃣8️⃣ PySpark Coding Task:\n • Find product names where latest month’s sales > average of last 3 months\n 1️⃣9️⃣ SQL Equivalent:\n • Write a SQL query for the same logic\n\n🔷 Python & Problem Solving\n2️⃣0️⃣ What is a Lambda Function?\n 2️⃣1️⃣ Purpose of __init__ method\n 2️⃣2️⃣ What is a Decorator?\n 2️⃣3️⃣ What is GIL (Global Interpreter Lock)?\n 2️⃣4️⃣ What is Pickling and Unpickling in Python?\n 2️⃣5️⃣ What is use of .format() method?\n 2️⃣6️⃣ Logic: Find the first non-repeating character in a string\n\n\n✅ A great mix of real-time concepts, coding challenges, and optimization questions.\nHope this helps others preparing for Impetus or similar roles.\n\n\n\n\n#Impetus #BigDataEngineer #OpenToWork #BigDataEngineer #DataEngineering #PySpark #ApacheSpark #PythonDeveloper #SQL #Databricks #ADF #InterviewPreparation #Hiring #SparkOptimization #AzureDataEngineer #JobSearch #Recruiters #TechInterview #NowHiring #LinkedInJobs",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is an incomplete, question-only post reporting Round 1 hands-on and conceptual questions for an Impetus Big Data Engineer role. It covers project and workflow experience, production troubleshooting, Apache Spark and PySpark internals, partitioning, shuffle, skew and optimization, a PySpark coding task, its SQL equivalent, Python fundamentals, and a string-logic problem. It provides no answers, project examples, code, stage counts, partitioning formulas, or issue-resolution details. Databricks and ADF appear only as hashtags, and the extracted media text is empty.",
+    "topics": [
+      "Big Data Engineer interview preparation",
+      "Data engineering project experience",
+      "Production troubleshooting",
+      "Apache Spark application internals",
+      "Spark partitioning, shuffle, and optimization",
+      "PySpark coding",
+      "SQL query writing",
+      "Python fundamentals"
+    ],
+    "subtopics": [
+      "Project walkthroughs and data sources",
+      "Production and lower-environment issue resolution",
+      "Spark application processes, data locality, and DAGs",
+      "Partitioning and empty partitions after shuffle",
+      "Data skew, salting, and coalesce()",
+      "Broadcast joins and Adaptive Query Execution",
+      "RDD versus DataFrame and Catalyst Optimizer",
+      "Latest-month versus three-month-average sales logic",
+      "Python functions, methods, decorators, formatting, GIL, and pickling",
+      "First non-repeating character logic"
+    ],
+    "concepts": [
+      "Project and workflow walkthrough",
+      "Production and lower-environment troubleshooting",
+      "Spark application internal process",
+      "Data locality and DAGs in Spark",
+      "PySpark stage count",
+      "Partitioning and shuffle",
+      "Data skew, salting, and coalesce()",
+      "Broadcast joins",
+      "Adaptive Query Execution",
+      "RDD versus DataFrame",
+      "Catalyst Optimizer",
+      "PySpark sales comparison",
+      "SQL sales comparison",
+      "Python language fundamentals",
+      "Global Interpreter Lock",
+      "Pickling and unpickling",
+      "First non-repeating character"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you walk through your current data engineering project and workflow, including its data source?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The response describes the current project and its workflow.\nThe response identifies the data source used by the project."
+    },
+    {
+      "question": "Describe a production or lower-environment issue you faced and how you resolved it.",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The response describes the issue encountered in the stated environment.\nThe response explains how the issue was resolved."
+    },
+    {
+      "question": "Explain the internal process of a Spark application, including data locality and the role of a DAG in Spark.",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "The answer explains the internal process of a Spark application.\nThe answer defines data locality and explains what a DAG is in Spark."
+    },
+    {
+      "question": "How would you choose partitioning logic for 1GB or 2GB of data in Spark, and how would you address default partitions after wide transformations and empty partitions after shuffle?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer gives partitioning logic for both stated data sizes.\nThe answer addresses default partitions after wide transformations and the handling of empty partitions after shuffle."
+    },
+    {
+      "question": "What is data skew in Spark, and how do salting and coalesce() help handle it?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer defines data skew in Spark.\nThe answer explains the salting technique and how coalesce() helps with skew."
+    },
+    {
+      "question": "What are broadcast joins and Adaptive Query Execution in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains broadcast joins in Spark.\nThe answer explains Adaptive Query Execution in Spark."
+    },
+    {
+      "question": "Compare RDDs and DataFrames in Spark, explain why DataFrames are faster, and describe the Catalyst Optimizer.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer compares RDDs with DataFrames and addresses why DataFrames are faster.\nThe answer describes the Catalyst Optimizer in Spark."
+    },
+    {
+      "question": "Implement a PySpark task that finds product names whose latest month's sales are greater than the average of the last three months.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The implementation applies the stated comparison between latest-month sales and the average of the last three months.\nThe implementation outputs the product names that satisfy the comparison."
+    },
+    {
+      "question": "Write a SQL query equivalent to the PySpark task for comparing latest-month sales with the average of the last three months.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query applies the same sales comparison as the PySpark task.\nThe query returns the product names that satisfy the comparison."
+    },
+    {
+      "question": "What are lambda functions, decorators, and the .format() method used for in Python, and what is the purpose of the __init__ method?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer defines lambda functions and decorators and explains their purposes in Python.\nThe answer states the purpose of the __init__ method and explains what the .format() method does."
+    },
+    {
+      "question": "What is the Global Interpreter Lock in Python, and what are pickling and unpickling?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains the Global Interpreter Lock in Python.\nThe answer defines pickling and unpickling."
+    },
+    {
+      "question": "Implement logic to find the first non-repeating character in a string.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution identifies character frequencies or otherwise determines which characters repeat.\nThe solution returns the first character that does not repeat."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark and PySpark interview preparation",
+    "secondary_topics": [
+      "Data engineering projects and troubleshooting",
+      "Spark partitioning and optimization",
+      "SQL coding",
+      "Python fundamentals"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:1c060075d07ea83b",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f82fde7ec8c6d61169ba9073612ec7489c13fb9524e96a75661a14da9a95691a",
+    "enricher_version": "3"
+  }
+}

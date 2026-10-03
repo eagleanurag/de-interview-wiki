@@ -1,0 +1,80 @@
+{
+  "id": "urn-li-saved-6fb92c648c68c07a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327546343013396482",
+    "captured_at": "2026-10-02T00:15:48.420840Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:43Z"
+  },
+  "original_text": "With this resume, I got selected by 7+ companies for Data Engineering roles \n(Impetus, Deloitte, Coforge, Brillio, LTC etc…)\n\nIf you're struggling to get interview calls despite strong skills, the problem might be your resume. Here’s how I optimised mine to stand out:\n\n✔️ Tailor your resume for each role\nDon’t send the same version everywhere. Highlight tools and tech stacks mentioned in the JD. If it says \"Airflow\" or \"Azure,\" make sure those aren’t hidden in a corner.\n\n✔️ Add impact, not just activities\nInstead of: “Built data pipelines using Spark”\nSay: “Built scalable Spark pipelines that reduced processing time by 40%” Companies want outcomes, not just actions.\n\n✔️ Keep it clean and keyword-optimised\nYour resume should pass through ATS bots and impress hiring managers. Include keywords like PySpark, Azure, Airflow, Snowflake, etc., where relevant.\n\n✔️ Highlight projects and certifications\nPersonal/side projects and certifications (like Azure DP-203, Snowflake COF-C02) show your commitment to growth — they set you apart from others.\n\n✔️ Keep it short but deep\nFocus on the depth of your experience with tools like Spark, Hive, Kafka, and Python — not on everything you’ve ever done.\n\n📌 If you’re applying for data engineering roles in 2025, take time to audit your resume.\n It’s your first impression, make it count.\n\nNote → Even the best resume won’t matter if your skills don’t back it up. You need deep knowledge of tools like Spark, SQL, Python, Airflow, and real-world data systems.\n\nSo, if you are looking for a platform to help you, start building your portfolio and mastering those in-demand tools with Bosscoder Academy → https://bit.ly/4iZYdGG\n\nThey have helped over 800+ tech professionals to switch to their dream companies, and you too can switch your career with their help through:\n💡A structured curriculum covering ETL, Big Data, Cloud, and Advanced Data Ops.\n💡Mentorship from experts at Google, Samsung, and more.\n💡Hands-on projects to build a portfolio in Big Data and data processing.\n💡Resume building, mock interviews & 100% job switch assistance. \n\n#dataengineering #upskilling #brandpartnership #resume\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327546343013396482_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post presents resume-optimization advice for candidates seeking Data Engineering roles in 2025. It recommends tailoring each resume to a job description, emphasizing outcomes over activities, using relevant ATS keywords, highlighting projects and certifications, and keeping the resume concise while demonstrating technical depth. It names tools including Spark, PySpark, Hive, Kafka, Python, SQL, Airflow, Azure, and Snowflake, but does not explain how those technologies work. The post also advertises Bosscoder Academy's curriculum, mentorship, hands-on projects, and job-switch assistance. The supplied content ends with a platform-style \"see more\" marker and contains no extracted media text.",
+    "topics": [
+      "Data Engineering Career Development",
+      "Resume Optimization"
+    ],
+    "subtopics": [
+      "Job-description-specific resume tailoring",
+      "ATS keyword optimization",
+      "Impact-oriented experience statements",
+      "Technical skill depth",
+      "Projects and certifications",
+      "Portfolio development"
+    ],
+    "concepts": [
+      "Role-Specific Resume Tailoring",
+      "Impact-Oriented Bullet Points",
+      "ATS Keyword Optimization",
+      "Projects and Certifications",
+      "Depth Over Breadth",
+      "Technical Skills Must Support the Resume",
+      "Portfolio and Hands-On Projects"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering Career Development",
+    "primary_topic": "Data Engineering Resume Optimization",
+    "secondary_topics": [
+      "ATS Optimization",
+      "Impact-Driven Resume Writing",
+      "Technical Skill Development",
+      "Projects and Certifications"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6fb92c648c68c07a",
+    "saved_date": "2026-10-01T23:24:43Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327546343013396482",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327546343013396482_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "7109c2963510404cd4ca18a336f0147b4655306a5078d5774e741592f5fb531e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

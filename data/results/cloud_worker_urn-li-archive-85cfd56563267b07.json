@@ -1,0 +1,147 @@
+{
+  "id": "urn-li-archive-85cfd56563267b07",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.766387Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:29Z"
+  },
+  "original_text": "EXL Data Analyst Interview Experience:\nCTC: ₹12–15 LPA\n\nSQL Questions\n • Retrieve the top 3 revenue-generating products within each category.\n • Identify products with revenue higher than the average across all products.\n • Use LAG() and CASE to find customers showing month-over-month spending growth.\n • Mark each user’s first and last transaction in a dataset.\n • Find employees under the same manager who also earn identical salaries.\n\n\nPython Questions\n • Reverse a list manually (without .reverse() or slicing).\n • Convert a mixed string like “abc123xyz” to uppercase without using .upper().\n • Extract keys from a dictionary where values are even.\n • Check if two strings are anagrams using a custom function.\n • Create a frequency map for each character in a string.\n\n\nExcel Questions\n • Practical differences between COUNT, COUNTA, and COUNTBLANK.\n • Use INDEX + MATCH to look up a value to the left of your reference column.\n • Apply IFERROR in nested formulas for error handling.\n • Highlight duplicate values while skipping the first occurrence.\n • Calculate total sales using SUMIFS with multiple criteria (e.g., Region = “West”, Month = “Jan”).\n\n\nPower BI Questions\n • Difference between a calculated column and a measure.\n • Handling many-to-many relationships in your data model.\n • Write a DAX measure for running total (cumulative sales) per customer.\n • Use slicers to apply dynamic filters across visuals.\n • Design a KPI visual comparing current vs. previous month sales.\n\nFollow Digvijay Rajput For More.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post reports an EXL Data Analyst interview experience with a stated CTC of ₹12–15 LPA and lists SQL, Python, Excel, and Power BI questions. The SQL questions cover revenue analysis, spending trends, transactions, and employee grouping; the remaining sections cover programming, spreadsheet functions, data modeling, DAX, filtering, and visualization. No answers or implementation details are provided.",
+    "topics": [
+      "SQL",
+      "Python",
+      "Excel",
+      "Power BI",
+      "DAX"
+    ],
+    "subtopics": [
+      "Revenue analysis and category-level product rankings",
+      "Customer spending trends and transaction identification",
+      "Employee manager and salary grouping",
+      "List, string, and dictionary manipulation",
+      "Excel counting functions and lookup formulas",
+      "Excel error handling, duplicate detection, and conditional aggregation",
+      "Power BI calculated columns, measures, and relationships",
+      "DAX running totals",
+      "Power BI filtering and KPI visualization"
+    ],
+    "concepts": [
+      "Top products within each category",
+      "Products above average revenue",
+      "Month-over-month spending growth",
+      "First and last transactions",
+      "Employees with the same manager and salary",
+      "Manual list reversal",
+      "Manual uppercase conversion",
+      "Dictionary keys with even values",
+      "Custom anagram check",
+      "Character frequency map",
+      "COUNT, COUNTA, and COUNTBLANK",
+      "Left lookup with INDEX and MATCH",
+      "Nested IFERROR formulas",
+      "Duplicate highlighting excluding the first occurrence",
+      "Multi-criteria sales calculation",
+      "Calculated columns and measures",
+      "Many-to-many relationships",
+      "Running-total DAX measure",
+      "Slicer-based visual filtering",
+      "Current-versus-previous-month KPI visual"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you retrieve the top three revenue-generating products within each category?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer retrieves the three highest-revenue products separately for every category."
+    },
+    {
+      "question": "How would you use LAG() and CASE to find customers showing month-over-month spending growth?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer uses LAG() and CASE to identify customers whose spending increased from one month to the next."
+    },
+    {
+      "question": "How can you check whether two strings are anagrams using a custom Python function?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The custom function compares the two strings and determines whether they are anagrams."
+    },
+    {
+      "question": "What are the practical differences between COUNT, COUNTA, and COUNTBLANK in Excel?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer explains the practical differences among all three Excel counting functions."
+    },
+    {
+      "question": "How can INDEX and MATCH retrieve a value located to the left of a reference column?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer uses INDEX and MATCH to perform the requested left-side lookup."
+    },
+    {
+      "question": "How would you calculate total sales for Region = \"West\" and Month = \"Jan\" using SUMIFS?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer uses SUMIFS with both the region and month criteria to calculate total sales."
+    },
+    {
+      "question": "What is the difference between a calculated column and a measure in Power BI?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains the distinction between calculated columns and measures in Power BI."
+    },
+    {
+      "question": "How should many-to-many relationships be handled in a Power BI data model?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer addresses the handling of many-to-many relationships within the Power BI data model."
+    },
+    {
+      "question": "How would you write a DAX measure for cumulative sales per customer?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer defines a DAX measure that calculates running or cumulative sales for each customer."
+    },
+    {
+      "question": "How would you design a Power BI KPI visual comparing current-month sales with previous-month sales?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The KPI visual presents current-month sales alongside previous-month sales for comparison."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Data Analyst interview preparation",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "Excel",
+      "Power BI",
+      "DAX"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:85cfd56563267b07",
+    "saved_date": "2026-10-01T23:18:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "694e5bd3b71149a053046523b70be5062a41228e1a6c94caf1c3a8415adc147a",
+    "enricher_version": "3"
+  }
+}

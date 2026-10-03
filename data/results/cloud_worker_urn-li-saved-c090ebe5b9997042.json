@@ -1,0 +1,139 @@
+{
+  "id": "urn-li-saved-c090ebe5b9997042",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7296015305749745664",
+    "captured_at": "2026-10-02T00:15:51.122784Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:20Z"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nDon't scratch your head to learn Python.\nLearn These Concepts to be proficient in Python.\n𝐁𝐚𝐬𝐢𝐜𝐬 𝐨𝐟 𝐏𝐲𝐭𝐡𝐨𝐧:\n-Syntax & Style\n-Data Types\n-Variables & Operators\n-Control Flow: if/else, Loops, try/except\n-Functions & Modules\n𝐎𝐛𝐣𝐞𝐜𝐭-𝐎𝐫𝐢𝐞𝐧𝐭𝐞𝐝 𝐏𝐲𝐭𝐡𝐨𝐧:\n-Classes & Objects\n-Inheritance\n-Polymorphism\n-Encapsulation\n𝐊𝐞𝐲 𝐋𝐢𝐛𝐫𝐚𝐫𝐢𝐞𝐬:\n-Pandas: Data Manipulation\n𝐏𝐚𝐧𝐝𝐚𝐬 𝐢𝐧 𝐃𝐞𝐩𝐭𝐡:\n-DataFrames: Creation & Access\n-Filtering & Selection\n-Data Cleaning: Missing Values, Duplicates\n-Merging & Grouping\n𝐃𝐚𝐭𝐚 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬:\n-Lists\n-Tuples\n-Dictionaries\n-Sets\n𝐅𝐢𝐥𝐞 𝐇𝐚𝐧𝐝𝐥𝐢𝐧𝐠:\n-Text Files\n-CSV Files\n-JSON Files\nIf you've read so far, do LIKE the post 👍\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\n…see more\nPython 500 interview questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7296015305749745664_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is an incomplete promotional Python-learning post rather than a detailed tutorial. It lists basic Python fundamentals, object-oriented programming, Pandas data manipulation, Python data structures, and text, CSV, and JSON file handling. It also advertises AWS Data Engineering training and a WhatsApp group, mentions the phrase \"Python 500 interview questions,\" and provides no explanations, code, examples, or substantive AWS Data Engineering details. The supplied content includes a \"…see more\" marker and empty extracted media text.",
+    "topics": [
+      "Python",
+      "Pandas",
+      "Object-oriented Python",
+      "Python data structures",
+      "File handling",
+      "AWS Data Engineering training"
+    ],
+    "subtopics": [
+      "Syntax and style",
+      "Data types",
+      "Variables and operators",
+      "Control flow",
+      "Functions and modules",
+      "Classes and objects",
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Pandas data manipulation",
+      "DataFrame creation and access",
+      "Filtering and selection",
+      "Data cleaning",
+      "Missing values",
+      "Duplicates",
+      "Merging and grouping",
+      "Lists",
+      "Tuples",
+      "Dictionaries",
+      "Sets",
+      "Text files",
+      "CSV files",
+      "JSON files"
+    ],
+    "concepts": [
+      "Python syntax and style",
+      "Python data types",
+      "Variables and operators",
+      "Python control flow",
+      "Functions and modules",
+      "Object-oriented Python",
+      "Pandas",
+      "DataFrames",
+      "Filtering and selection",
+      "Data cleaning",
+      "Merging and grouping",
+      "Python data structures",
+      "File handling"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which basic Python topics does the post identify as important for proficiency?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer lists syntax and style, data types, variables and operators, and control flow through if/else, loops, and try/except.\nA strong answer also includes functions and modules."
+    },
+    {
+      "question": "Which object-oriented Python concepts are included in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer names classes and objects, inheritance, polymorphism, and encapsulation."
+    },
+    {
+      "question": "What Pandas topics does the post emphasize?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies Pandas as a key library for data manipulation.\nA strong answer lists DataFrame creation and access, filtering and selection, data cleaning for missing values and duplicates, and merging and grouping."
+    },
+    {
+      "question": "Which Python data structures does the post list?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer names lists, tuples, dictionaries, and sets."
+    },
+    {
+      "question": "Which file formats does the post include under file handling?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer names text files, CSV files, and JSON files."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Python",
+    "secondary_topics": [
+      "Pandas",
+      "Object-oriented programming",
+      "Python data structures",
+      "File handling",
+      "AWS Data Engineering training"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c090ebe5b9997042",
+    "saved_date": "2026-10-01T23:35:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7296015305749745664",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7296015305749745664_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "20e037b5c7cb6508a54ae3114f13b062609826b13c9f2e9115d49bced591953b",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

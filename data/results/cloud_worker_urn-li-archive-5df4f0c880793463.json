@@ -1,0 +1,121 @@
+{
+  "id": "urn-li-archive-5df4f0c880793463",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.127884Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:50Z"
+  },
+  "original_text": "10 lessons I learnt while preparing for #SQL in data engineering interviews:\n1️⃣ You feel #SQL is dead but it mirrors actual reporting and product analytics in every real company.\n2️⃣ Don’t write a query until you’ve broken the problem into mental steps.\n3️⃣ Most SQL interviews don’t test edge cases but your #real project will. Think beyond the happy path that will help in #problem-solving.\n4️⃣ Window functions are the closest thing to miracle to solve any query at granular level. Learn RANK, LAG, and ROW_NUMBER.\n💰 Bonus tip: Practice #lead, #lag more ( I have observed most candidates are avoiding that)\n5️⃣ Filters should come before joins. Joins come before aggregations. Never scan too much it can take forever to execute your query.\n6️⃣ Don’t jump straight into #code. Analyse all the datasets first .Writing the logic in pseudocode first can save hours, same applies to your SQL query. Make the #mental map of your query.\n❌ Never ever hesitate to use pen 🖊️ and paper 📝 .\n7️⃣ Practicing 100 questions badly won’t help. Practicing 20 deeply will.\n🤑 Bonus tip: Go from simple to #medium, stay at medium level unless you have solved the query repetitively at least 5 times in 1 week span. Then go at #hard level and repeat the same.\n8️⃣ Subqueries look cool but CTEs keep your queries debuggable and modular. People can understand it better. #Remember you are a team-player.\nIt will help you write #clean queries.\n9️⃣ #Practice writing the same query three ways. It’ll teach you flexibility in real interviews and you will suddenly feel like #expert in some months.\n🔟 Avoid chaining more than multiple CTEs unless necessary.Be concise & clear.\nBest #SQL developers are known for their 🥇 simplicity, 🥈 clarity not for ❌ complexity.\n✍ I learnt these lessons from my own experience and still #failing and #improving regularly .\n\n🙏 Tagging the best Ankit Bansal Sir for in depth knowledge of #SQL.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post shares ten lessons learned while preparing for SQL data engineering interviews. It argues that SQL remains important for reporting and product analytics, recommends breaking problems into steps and analyzing datasets before writing code, and emphasizes considering edge cases beyond the happy path. It highlights RANK, LAG, and ROW_NUMBER, advises placing filters before joins and joins before aggregations to avoid excessive scanning, and recommends pseudocode and a mental model of the query. It favors deep practice over question volume, progressing from simple to medium and hard questions, writing the same query in multiple ways, and using concise, clear, modular CTEs instead of unnecessary complexity.",
+    "topics": [
+      "SQL",
+      "Data engineering interview preparation",
+      "SQL problem solving",
+      "SQL query design",
+      "SQL window functions",
+      "Query readability and modularity",
+      "SQL practice strategies"
+    ],
+    "subtopics": [
+      "SQL for reporting and product analytics",
+      "Problem decomposition and pseudocode",
+      "Edge-case analysis",
+      "RANK, LAG, LEAD, and ROW_NUMBER",
+      "Filter, join, and aggregation ordering",
+      "CTEs versus subqueries",
+      "Progressive practice and repeated solutions",
+      "Query simplicity and clarity"
+    ],
+    "concepts": [
+      "SQL in data engineering work",
+      "Problem decomposition",
+      "Edge-case awareness",
+      "Window functions",
+      "Filter, join, and aggregation ordering",
+      "Pseudocode and mental query mapping",
+      "Deep SQL practice",
+      "CTEs for modularity and debuggability",
+      "Alternative query formulations",
+      "Concise and clear query design"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should a candidate approach a SQL problem before writing the query?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The candidate should break the problem into mental steps before writing code.\nThe candidate should analyze the datasets, write the logic in pseudocode, and create a mental map of the query."
+    },
+    {
+      "question": "Which window functions does the post prioritize, and what kind of work are they intended to support?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The prioritized functions are RANK, LAG, and ROW_NUMBER.\nThe post presents window functions as useful for solving queries at a granular level and also recommends additional practice with LEAD and LAG."
+    },
+    {
+      "question": "How does the post recommend ordering filters, joins, and aggregations in a SQL query?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Filters should be considered before joins, and joins should come before aggregations.\nAvoiding excessive scanning is important because scanning too much data can cause a query to take a very long time to execute."
+    },
+    {
+      "question": "What should a SQL interview candidate consider beyond the expected happy path?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate should think about edge cases even if typical SQL interviews do not test them.\nThe reasoning is that real projects require broader problem-solving than only handling the expected path."
+    },
+    {
+      "question": "Why does the post favor CTEs over subqueries?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "CTEs are described as keeping queries debuggable and modular.\nThey make queries easier for people to understand and support clean, team-friendly SQL."
+    },
+    {
+      "question": "How should a candidate progress when practicing SQL interview questions?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate should practice a smaller number of questions deeply rather than completing many poorly.\nThe candidate should progress from simple to medium and remain at medium unless a query has been solved repetitively at least five times within one week, then move to hard questions and repeat them."
+    },
+    {
+      "question": "How can rewriting a query and limiting unnecessary CTE chains improve SQL work?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Writing the same query in three ways develops flexibility for interviews.\nAvoiding unnecessary CTE chains and keeping queries concise supports simplicity and clarity rather than complexity."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Data engineering interview preparation",
+      "SQL problem solving",
+      "SQL window functions",
+      "Query performance",
+      "CTEs and query readability",
+      "Practice methodology"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5df4f0c880793463",
+    "saved_date": "2026-10-01T23:09:50Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ea7630367bc9dd5d1d9e76d64c994ae82e5f9568d626b2bd8cd57d44a159c35f",
+    "enricher_version": "3"
+  }
+}

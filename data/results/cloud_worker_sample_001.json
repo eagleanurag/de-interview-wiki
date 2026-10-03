@@ -1,0 +1,78 @@
+{
+  "id": "sample_001",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample-post",
+    "captured_at": "2026-09-29T18:15:00+05:30",
+    "author": "Sample Author",
+    "published_at": null
+  },
+  "original_text": "Interview question: You have a large Delta Lake table in Databricks. The query is taking too long. How would you investigate and optimize the workload? Consider partitioning, data skipping, Z-Ordering, Spark execution plans, and file sizes.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/databricks_dashboard.png",
+      "description": "PNG image, 1200x700 pixels",
+      "extracted_text": null
+    },
+    {
+      "type": "pdf",
+      "path": "media/interview_notes.pdf",
+      "description": null,
+      "extracted_text": "--- Page 1 ---\nDatabricks Interview Question\nHow would you optimize a large Delta Lake table?\nConsider partitioning, data skipping, Z-Ordering, and file sizes."
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a Databricks interview question about investigating and optimizing a slow query against a large Delta Lake table. It identifies partitioning, data skipping, Z-Ordering, Spark execution plans, and file sizes as considerations, but it does not provide an optimization methodology, recommended changes, or technical explanations.",
+    "topics": [
+      "Databricks troubleshooting"
+    ],
+    "subtopics": [
+      "Partitioning",
+      "Data skipping",
+      "Z-Ordering",
+      "Spark execution plans",
+      "File sizes"
+    ],
+    "concepts": [
+      "Delta Lake table",
+      "Partitioning",
+      "Data skipping",
+      "Z-Ordering",
+      "Spark execution plans",
+      "File sizes"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "You have a large Delta Lake table in Databricks and its query is taking too long. How would you investigate and optimize the workload?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The investigation addresses partitioning as a consideration in the slow workload.\nThe investigation considers data skipping as a potential optimization focus.\nThe investigation evaluates Z-Ordering as a potential optimization focus.\nThe investigation examines Spark execution plans as part of diagnosing query performance.\nThe investigation considers file sizes as part of diagnosing the workload."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Lake query performance optimization",
+    "secondary_topics": [
+      "Partitioning",
+      "Data skipping",
+      "Z-Ordering",
+      "Spark execution plans",
+      "File sizes"
+    ],
+    "interview_relevant": true
+  },
+  "_enrichment": {
+    "source_digest": "b47be571b57b26982c37c269b8ff04f44c075de1d6a976d03ac606232f414467",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Delta Lake query performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

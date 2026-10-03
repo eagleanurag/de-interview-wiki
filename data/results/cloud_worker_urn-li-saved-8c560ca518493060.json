@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-saved-8c560ca518493060",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7357567222967357443",
+    "captured_at": "2026-10-02T00:15:49.222207Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:46Z"
+  },
+  "original_text": "⚡ How I made my PySpark job 3× faster (and saved my sanity) by reordering just two lines\n\nA few weeks back, one of my PySpark jobs suddenly started crawling like it had hit Monday mode 🐢 — what usually ran in 10 minutes was now taking 30+. Time to investigate.\n\nAfter diving into the Spark UI and some profiling, I spotted the issue:\nA wide transformation (groupBy) was happening before a simple filter.\n\n📉 That meant Spark was shuffling way more data than necessary — a silent performance killer.\n\n🕵️‍♂️ What’s interesting?\nThis job ran just fine earlier, even with the same ordering.\nWhy?\nThe data volume recently increased significantly, and grouping large unfiltered data was no longer cheap.\nLesson: what works today might not scale tomorrow.\n\n🎯 Fix? Flip the order.\n\nBefore:\ngroupBy → filter\n\ndf.groupBy(\"sys_id\").agg(...).filter(\"status = 'active'\")\n\nAfter:\nfilter → groupBy\n\ndf.filter(\"status = 'active'\").groupBy(\"sys_id\").agg(...)\n\n✅ Result:\n • ~65% faster execution\n • Fewer shuffle partitions\n • Happier cluster 😌\n\n🔍 Takeaway:\nApply narrow transformations like filter() as early as possible to minimize the data passed to expensive operations like groupBy or join.\n\n💬 Have you seen similar bottlenecks in your Spark jobs? Share your favorite performance hacks!\n\n#PySpark #ApacheSpark #BigData #DataEngineering #PerformanceTuning",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7357567222967357443_slide_0.jpg",
+      "description": "JPEG image, 480x569 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a PySpark job that became slow after its data volume increased. Using Spark UI and profiling, the author identified a wide groupBy operation occurring before a narrow status filter, which was causing Spark to shuffle more data than necessary. Reordering the operations to filter active records before grouping by sys_id reportedly improved execution time by approximately 65% and reduced shuffle partitions. The main lesson is to apply narrow transformations early so less data reaches expensive operations such as groupBy or join.",
+    "topics": [
+      "Transformation ordering",
+      "Shuffle reduction"
+    ],
+    "subtopics": [
+      "Filtering before grouping",
+      "Narrow and wide transformations",
+      "Performance under increased data volume",
+      "Spark UI and profiling",
+      "Early filtering before groupBy or join"
+    ],
+    "concepts": [
+      "Wide groupBy transformation",
+      "Narrow filter transformation",
+      "Filter-before-groupBy optimization",
+      "Excessive shuffling",
+      "Shuffle partition reduction",
+      "Data-volume-sensitive performance",
+      "Spark UI and profiling"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A PySpark job groups by sys_id and then filters for active status. The job becomes slow after its data volume grows. What issue does the post identify, and how should the operations be reordered?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The wide groupBy was occurring before the narrow filter and was shuffling more data than necessary.\nThe filter should be applied before the groupBy so only active records are passed into the expensive operation."
+    },
+    {
+      "question": "Rewrite the reported PySpark operation so that active records are filtered before records are grouped by sys_id.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The reordered expression is df.filter(\"status = 'active'\").groupBy(\"sys_id\").agg(...).\nThe filter must appear before the groupBy in the rewritten operation."
+    },
+    {
+      "question": "Why did a transformation ordering that worked earlier become a performance problem after the job's data volume increased?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The job was grouping large amounts of unfiltered data, which had previously been relatively cheap but was no longer cheap at the higher volume.\nThe scenario demonstrates that an acceptable execution plan may not remain scalable as data grows.\nApplying narrow transformations early can reduce the data passed to expensive operations such as groupBy or join."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark performance optimization",
+    "secondary_topics": [
+      "Apache Spark transformation ordering",
+      "Shuffle reduction",
+      "Performance scalability"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8c560ca518493060",
+    "saved_date": "2026-10-01T23:09:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7357567222967357443",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7357567222967357443_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "317154e4d68a84ace40e8665c1a2fc9538c4c51d7b24e4c3f6b6b12a2eedd1ec",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "PySpark performance optimization",
+        "Apache Spark performance tuning"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

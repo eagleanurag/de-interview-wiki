@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-92d44cac5ecd6e96",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338040534755618817",
+    "captured_at": "2026-10-02T00:15:49.549832Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:34Z"
+  },
+  "original_text": "🚀 SQL interview questions for Deloitte\n\nQuestion:\nYou're given a table containing loan information.\nYour task is to analyze loan repayment data to assess credit risk. Write an SQL to create 2 flags for each loan.\n1️⃣ fully_paid_flag: 1 if the loan was fully repaid irrespective of payment date else it should be 0.\n2️⃣ on_time_flag: 1 if the loan was fully repaid on or before due date else 0.\n\n\n📊 Table: loan\n\n✅ Columns: \n1️⃣ loan_id :: INT\n2️⃣ customer_id :: INT\n3️⃣ loan_amount :: INT\n4️⃣ due_date :: DATE\n\n📊 Table: payment\n\n✅ Columns: \n1️⃣ loan_id :: INT\n2️⃣ payment_id :: INT\n3️⃣ payment_amount :: INT\n4️⃣ payment_date :: DATE\n\n\n👇 Can you crack this?\nDrop your query in the comments — \n\nSolutions: https://lnkd.in/gkfw2_nk\n\n#SQL \n#DataAnalytics \n#InterviewPrep \n#amazon\n#SQLInterview \n#DataAnalyst\n#businessanalyst",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338040534755618817_slide_0.jpg",
+      "description": "JPEG image, 480x465 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents an SQL interview problem involving two tables, loan and payment, and requiring one fully_paid_flag and one on_time_flag for each loan. Full repayment is determined without considering the payment date, while on-time repayment additionally requires completion on or before the due date. The source provides column definitions but no solution query or explicit rule for identifying the repayment completion date from separately recorded payments.",
+    "topics": [
+      "SQL",
+      "Loan repayment analysis",
+      "Credit risk assessment"
+    ],
+    "subtopics": [
+      "Fully paid loan flagging",
+      "On-time repayment flagging",
+      "Loan-payment record association",
+      "Repayment amount evaluation",
+      "Payment date and due date comparison"
+    ],
+    "concepts": [
+      "fully_paid_flag",
+      "on_time_flag",
+      "Loan-payment relationship",
+      "Repayment amount evaluation",
+      "Temporal repayment evaluation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Using the provided loan and payment schemas, write an SQL query that returns fully_paid_flag and on_time_flag for each loan.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query associates loan and payment records using loan_id.\nThe query evaluates whether the recorded payment amounts fully cover loan_amount.\nThe fully_paid_flag is based on full repayment without considering payment_date.\nThe on_time_flag requires both full repayment and a repayment completion date on or before due_date.\nThe answer makes its repayment-completion assumption explicit because the source does not specify how to identify that date from separately recorded payments."
+    }
+  ],
+  "classification": {
+    "domain": "SQL and Data Analytics",
+    "primary_topic": "SQL loan repayment flagging",
+    "secondary_topics": [
+      "Credit risk assessment",
+      "Loan and payment data analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:92d44cac5ecd6e96",
+    "saved_date": "2026-10-01T23:21:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338040534755618817",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338040534755618817_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "addca2d714f0294084bc6c402a57dfa97790af8de6d131dceb48fff8a001c5d4",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

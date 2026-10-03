@@ -1,0 +1,136 @@
+{
+  "id": "urn-li-archive-f69d525bb73ce491",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.211379Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:54Z"
+  },
+  "original_text": "Experian Interview Experience for the role Data Engineer(3 yrs+ experiene)\n\n1. What is difference of mapreduce and spark\n2. Why spark without using inmemory computation is 10x faster than mapreduce\n3. Spark is written in scala , how the code written in pyspark is getting executed\n4. What is the task\n5. Difference of dataset and dataframe\n6. Given below identify the dataset and dataframe:\n Dataset<Row> \n Dataset<Employee>\n Dataset<dept>\n7. Given the below identify the transformations and actions\n filter, reducebykey, reduce, read, write, collect \n8. Where glue catalog is stored.\n9. If there is any data from s3 glacier , how to retrieve\n10. While using athena if any one of the data is moved to glacier , will the data is visible here\n😶‍🌫️😶‍🌫️\nfollow for more interview questions\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is an incomplete list of interview questions attributed to an Experian Data Engineer interview for candidates with 3+ years of experience. It covers MapReduce and Spark, Spark performance and execution, PySpark, Scala, tasks, Datasets, DataFrames, transformations and actions, Glue Catalog storage, S3 Glacier retrieval, and Athena visibility. The post provides no answers to the questions and ends with promotional text and a truncation marker.",
+    "topics": [
+      "MapReduce versus Spark",
+      "Spark in-memory computation",
+      "PySpark execution with Scala",
+      "Spark tasks",
+      "Spark Datasets and DataFrames",
+      "Spark transformations and actions",
+      "Glue Catalog storage",
+      "S3 Glacier data retrieval",
+      "Athena visibility for S3 Glacier data"
+    ],
+    "subtopics": [
+      "MapReduce and Spark performance comparison",
+      "Execution of Python code in PySpark",
+      "Dataset type examples: Dataset<Row>, Dataset<Employee>, and Dataset<dept>",
+      "Operation classification: filter, reduceByKey, reduce, read, write, and collect",
+      "Storage location of the Glue Catalog",
+      "Retrieval of data from S3 Glacier",
+      "Athena access to data moved to S3 Glacier"
+    ],
+    "concepts": [
+      "MapReduce and Spark",
+      "In-memory computation",
+      "PySpark and Scala",
+      "Task",
+      "Dataset and DataFrame",
+      "Typed Dataset examples",
+      "Transformations and actions",
+      "Glue Catalog storage",
+      "S3 Glacier data retrieval",
+      "Athena visibility for S3 Glacier data"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between MapReduce and Spark, and how should the performance comparison involving in-memory computation and the stated ten-times figure be explained?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Explains the requested difference between MapReduce and Spark.\nAddresses the stated ten-times performance comparison and the role of in-memory computation."
+    },
+    {
+      "question": "How is code written in PySpark executed when Spark is written in Scala?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Explains the relationship between PySpark, Python code, and the Scala implementation of Spark.\nDescribes how Python code reaches execution in the Spark environment."
+    },
+    {
+      "question": "What is the difference between a Dataset and a DataFrame in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Clearly distinguishes the two Spark data abstractions.\nDescribes the type information associated with each abstraction."
+    },
+    {
+      "question": "How would you identify Dataset<Row>, Dataset<Employee>, and Dataset<dept> when comparing Datasets and DataFrames?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Identifies the element type represented by each typed Dataset expression."
+    },
+    {
+      "question": "Which of filter, reduceByKey, reduce, read, write, and collect are transformations, and which are actions?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Classifies every listed operation as either a transformation or an action.\nExplains the basis used for each classification."
+    },
+    {
+      "question": "What is a task in Spark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Defines a Spark task and explains its role in Spark execution."
+    },
+    {
+      "question": "Where is the Glue Catalog stored?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "States the storage location of the Glue Catalog."
+    },
+    {
+      "question": "How can data stored in S3 Glacier be retrieved?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Describes a process for retrieving data from S3 Glacier.\nIdentifies any access or restoration requirements relevant to the retrieval."
+    },
+    {
+      "question": "If data is moved to S3 Glacier, will that data remain visible when using Athena?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "Explains whether Athena can access data after it is moved to S3 Glacier.\nDescribes the conditions that determine whether the moved data is visible."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Spark",
+    "secondary_topics": [
+      "MapReduce",
+      "PySpark",
+      "Scala",
+      "Datasets and DataFrames",
+      "Transformations and actions",
+      "Glue Catalog",
+      "S3 Glacier",
+      "Athena"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f69d525bb73ce491",
+    "saved_date": "2026-10-01T23:09:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "59050b8978913d4a27b9bcc0f258ade3f4411cea32f06544e4c2042e36aaf38b",
+    "enricher_version": "3"
+  }
+}

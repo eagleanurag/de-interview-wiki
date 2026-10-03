@@ -1,0 +1,121 @@
+{
+  "id": "urn-li-saved-b642d369d3208200",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347836932237729792",
+    "captured_at": "2026-10-02T00:15:50.903639Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:50Z"
+  },
+  "original_text": "𝗦𝗤𝗟 𝗝𝗼𝗶𝗻𝘀 𝗗𝗲𝗺𝘆𝘀𝘁𝗶𝗳𝗶𝗲𝗱: 𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗬𝗼𝘂𝗿 𝗗𝗮𝘁𝗮 𝗟𝗶𝗸𝗲 𝗮 𝗣𝗿𝗼\n\nEver felt overwhelmed by SQL joins? You’re not alone. But they don’t have to be a mystery! Here’s your quick-start guide to the most common joins and when to use them:\n\n1️⃣ 𝗜𝗡𝗡𝗘𝗥 𝗝𝗢𝗜𝗡: Finds matching rows in both tables.\n🛠 Example: Identify customers who made purchases.\n\n2️⃣ 𝗟𝗘𝗙𝗧 𝗝𝗢𝗜𝗡: Returns all rows from the left table, with matches from the right.\n🛠 Example: List all customers, even those without orders.\n\n3️⃣ 𝗥𝗜𝗚𝗛𝗧 𝗝𝗢𝗜𝗡: Similar to LEFT JOIN but focuses on the right table.\n🛠 Example: Display all orders, even if some customers are missing.\n\n4️⃣ 𝗙𝗨𝗟𝗟 𝗢𝗨𝗧𝗘𝗥 𝗝𝗢𝗜𝗡: Combines all rows from both tables, filling gaps with NULL.\n🛠 Example: Pinpoint unmatched records between tables.\n\n5️⃣ 𝗖𝗥𝗢𝗦𝗦 𝗝𝗢𝗜𝗡: Matches every row in one table with every row in another.\n🛠 Example: Generate all possible product combinations.\n\n6️⃣ 𝗦𝗘𝗟𝗙 𝗝𝗢𝗜𝗡: When a table joins itself.\n🛠 Example: Map employee-manager relationships.\n\n🔑 Pro Tips for SQL Efficiency:\n👉 Index your join columns for faster queries.\n👉 Use subqueries or CTEs to simplify complex joins.\n👉 Analyze execution plans to optimize performance.\n\n🎓 Want to Learn More?\nCheck out Ankit Bansal's YouTube channel for bite-sized SQL tutorials.\n\nJoin my channels for more such job openings and resources:\n𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦: https://lnkd.in/gg2nGrSc\n𝗪𝗵𝗮𝘁𝘀𝗮𝗽𝗽: https://lnkd.in/g83E7yt8\n𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺: https://lnkd.in/gg4uym3s\n\nCheck out my curated resources for your ultimate job preparation\n🔹️DS/ML Resume Template: https://lnkd.in/gpa8d-H7\n🔹️Data Science Roadmap & Blueprint: https://lnkd.in/gjX6sCju\n🔹️Data Engineering Interview Prep. Kit & Sol.: https://lnkd.in/gf9YDq_n\n🔹️Data Science Interview Prep. Kit + Solution: https://lnkd.in/g3ZyPb3E\n\n#sql #data #interview #fresher",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347836932237729792_slide_0.jpg",
+      "description": "GIF image, 480x595 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A beginner-oriented guide to six common SQL join types, explaining their behavior and illustrative use cases: INNER, LEFT, RIGHT, FULL OUTER, CROSS, and SELF JOIN. It also recommends indexing join columns, using subqueries or CTEs to simplify complex joins, and analyzing execution plans to improve performance.",
+    "topics": [
+      "SQL",
+      "SQL joins",
+      "SQL query performance"
+    ],
+    "subtopics": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "CROSS JOIN",
+      "SELF JOIN",
+      "Join-column indexing",
+      "Subqueries and CTEs",
+      "Execution plan analysis"
+    ],
+    "concepts": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "CROSS JOIN",
+      "SELF JOIN",
+      "Join-column indexing",
+      "Subqueries and CTEs",
+      "Execution plan analysis"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between an INNER JOIN and a LEFT JOIN?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "An INNER JOIN returns only rows that match in both tables.\nA LEFT JOIN preserves every row from the left table and includes matching rows from the right table."
+    },
+    {
+      "question": "A report must list every customer, including customers who have never placed an order. Which join type should be used?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A LEFT JOIN should be used because it preserves all rows from the customer table.\nCustomers without matching orders remain in the result."
+    },
+    {
+      "question": "When would a RIGHT JOIN be preferable to a LEFT JOIN?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A RIGHT JOIN is appropriate when every row from the right table must be preserved.\nThe post's example displays all orders even when some associated customers are missing."
+    },
+    {
+      "question": "How do FULL OUTER JOIN and CROSS JOIN differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A FULL OUTER JOIN combines rows from both tables and uses NULL to fill gaps where no match exists.\nA CROSS JOIN pairs every row in one table with every row in the other table, such as when generating all possible product combinations."
+    },
+    {
+      "question": "What is a SELF JOIN, and what relationship can it represent?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A SELF JOIN joins a table to itself.\nIt can represent relationships within the same table, such as employee-manager relationships."
+    },
+    {
+      "question": "What practices does the post recommend for improving the efficiency of complex SQL joins?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Index the columns used in joins to improve query speed.\nUse subqueries or CTEs to simplify complex joins.\nAnalyze execution plans to optimize performance."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL joins",
+    "secondary_topics": [
+      "SQL performance optimization",
+      "SQL query construction"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b642d369d3208200",
+    "saved_date": "2026-10-01T23:12:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347836932237729792",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347836932237729792_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7347836932237729792_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "3571c8ef6f4f2ff950952aa04ccfebb21d4361025504ec37d49d8657d917e5c4",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

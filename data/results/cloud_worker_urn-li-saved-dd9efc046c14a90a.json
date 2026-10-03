@@ -1,0 +1,130 @@
+{
+  "id": "urn-li-saved-dd9efc046c14a90a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505120949038518272",
+    "captured_at": "2026-10-02T00:15:52.580758Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:12Z"
+  },
+  "original_text": "Immediate Joiner| Data AI Engineer🌳| Solution Architect | Python | SQL | AWS | Azure | Big Data | Databricks | GenAI\n2w •\nThe path from Data Engineer → AI Engineer is becoming clearer.\nAI may get the attention, but Data Engineering is still the foundation.\nIt needs reliable:\n• Data ingestion\n• Data transformation\n• Data storage\n• Data retrieval\n• Data quality\n• Evaluation\n• Monitoring\n• Governance\n🛠️ Stage 1 — Strengthen Data Engineering\nMaster the fundamentals:\n• SQL & Python\n• ETL/ELT pipelines\n• Data modeling & warehousing\n• Apache Spark\n• Batch & streaming\n• Data quality & governance\n• Cloud data platforms\nLearning resources:\n🔗 Microsoft Learn — Data Engineer Career Path\nhttps://lnkd.in/gBBpz_kB\n🔗 Databricks — Get Started with Data Engineering\nhttps://lnkd.in/gEXvDQWm\n🤖 Stage 2 — Add ML & AI Fundamentals\nUnderstand what happens after your pipeline delivers the data:\n• Supervised & unsupervised learning\n• Feature engineering\n• Model evaluation\n• Embeddings\n• Transformers\n• Basic MLOps\nYou don't need to become a research-level ML scientist.\nYou need enough ML knowledge to understand how your data supports AI systems.\n🧠 Stage 3 — Learn Generative AI\nThis is where the Data Engineer → AI Engineer transition becomes especially interesting.\nLearn:\n• LLM fundamentals\n• Transformers\n• Embeddings\n• Vector search\n• RAG architectures\n• Chunking & retrieval\n• Fine-tuning\n• LLM evaluation\n• AI agents\nLearning resources:\n🔗 Hugging Face — LLM Course\nhttps://lnkd.in/gSbeF8pV\n🔗 Microsoft Learn — AI Engineer Career Path\nhttps://lnkd.in/gy_2RFpG\n🔗 Microsoft Learn — AI Concepts\nhttps://lnkd.in/g74R74h4\n🔎 Stage 4 — Build AI + Data Systems\nNow combine both skill sets.\nFor example:\nData Sources\n↓\nETL/ELT\n↓\nLakehouse / Warehouse\n↓\nData Quality\n↓\nEmbeddings\n↓\nVector Store\n↓\nRAG\n↓\nLLM\n↓\nAPI / Application\n↓\nMonitoring & Evaluation\nThis is where strong Data Engineering becomes a serious advantage.\n🚀 Stage 5 — Production AI Engineering\nMove beyond prototypes:\n• CI/CD for AI applications\n• Model & prompt evaluation\n• Observability\n• Security & governance\n• Cost optimization\n• Scalable inference\n• Responsible AI\n• Production deployment\nThe goal isn't simply:\n“I know how to use ChatGPT or an LLM.”\nThe goal is:\n“I can build and operate a reliable AI system using high-quality data.”\n📈 The skill evolution\nData Engineer\nSQL → Python → ETL → Spark → Cloud → Data Platforms\n⬇️\nAI-Ready Data Engineer\n+ ML fundamentals → Embeddings → Vector Search → RAG\n⬇️\nAI Engineer\n+ LLMs → AI Applications → Agents → Evaluation → MLOps → Production\nNow add AI skills on top of that foundation.\nThe future isn't Data Engineering OR AI.\nIt's Data Engineering + AI.\n#DataEngineering #AI #ArtificialIntelligence #AIEngineering #GenerativeAI #LLM #RAG #MLOps #CloudComputing #CareerGrowth\nTraining for Data Engineers\nlearn.microsoft.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7505120949038518272_slide_0.jpg",
+      "description": "PNG image, 800x420 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a five-stage career roadmap for Data Engineers who want to become AI Engineers. It argues that strong Data Engineering remains the foundation for reliable AI systems, beginning with SQL, Python, ETL/ELT, data modeling, warehousing, Apache Spark, batch and streaming, data quality, governance, and cloud data platforms. It then adds ML fundamentals, generative AI skills, combined data and AI system development, and production concerns such as evaluation, observability, security, governance, cost optimization, scalable inference, and deployment. The central message is that the goal is not merely to use an LLM, but to build and operate a reliable AI system with high-quality data.",
+    "topics": [
+      "Data Engineer to AI Engineer career progression",
+      "Data Engineering foundations",
+      "Machine learning fundamentals",
+      "Generative AI engineering",
+      "AI system architecture",
+      "Production AI engineering"
+    ],
+    "subtopics": [
+      "SQL and Python fundamentals",
+      "ETL/ELT pipelines",
+      "Data modeling and warehousing",
+      "Apache Spark",
+      "Batch and streaming data processing",
+      "Data quality and governance",
+      "Cloud data platforms",
+      "Supervised and unsupervised learning",
+      "Feature engineering",
+      "Embeddings and vector search",
+      "RAG architectures",
+      "Chunking and retrieval",
+      "Fine-tuning and LLM evaluation",
+      "AI agents",
+      "Basic MLOps",
+      "CI/CD for AI applications",
+      "AI observability",
+      "Security and responsible AI",
+      "Scalable inference",
+      "Production deployment"
+    ],
+    "concepts": [
+      "Data Engineering as the AI foundation",
+      "Data Engineering fundamentals",
+      "ML fundamentals for Data Engineers",
+      "Generative AI skills",
+      "Combined data and AI architecture",
+      "Production AI engineering",
+      "Reliable AI systems"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why does the post argue that Data Engineering remains the foundation for AI engineering?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies reliable ingestion, transformation, storage, retrieval, data quality, evaluation, monitoring, and governance as necessary capabilities."
+    },
+    {
+      "question": "How does the post structure the progression from Data Engineer to AI Engineer?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer presents the progression as Data Engineering fundamentals, ML and AI fundamentals, generative AI, combined AI and data systems, and production AI engineering."
+    },
+    {
+      "question": "What sequence does the proposed AI and data system architecture follow?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer traces the flow from data sources through ETL/ELT, a lakehouse or warehouse, data quality, embeddings, a vector store, RAG, an LLM, and an API or application."
+    },
+    {
+      "question": "What concerns must be addressed when moving an AI application beyond a prototype?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer includes CI/CD, model and prompt evaluation, observability, security, governance, cost optimization, scalable inference, responsible AI, and production deployment."
+    },
+    {
+      "question": "Which generative AI capabilities should a Data Engineer learn to support AI systems?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer names LLM fundamentals, transformers, embeddings, vector search, RAG, chunking, retrieval, fine-tuning, LLM evaluation, and AI agents."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering and Artificial Intelligence",
+    "primary_topic": "Transition from Data Engineer to AI Engineer",
+    "secondary_topics": [
+      "Data Engineering foundations",
+      "Machine learning fundamentals",
+      "Generative AI",
+      "RAG system architecture",
+      "Production AI and MLOps"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:dd9efc046c14a90a",
+    "saved_date": "2026-10-01T23:07:12Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7505120949038518272",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7505120949038518272_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7505120949038518272_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c9325fa242199d887367681d4f8995c5fa224a05d08b360aa7cba7a1e950327a",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

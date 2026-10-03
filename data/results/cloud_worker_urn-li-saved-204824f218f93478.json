@@ -1,0 +1,161 @@
+{
+  "id": "urn-li-saved-204824f218f93478",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347855268489154561",
+    "captured_at": "2026-10-02T00:15:45.469328Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:45Z"
+  },
+  "original_text": "𝐄𝐘 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 :\n\n\n\n\n\n\n\n\n\n\n1.Explain your project architecture? \n2. How much data u handled in day to day basis and what is the business case of your project? \n3.What Cloud u used in your project? And questions then regarding aws services Like how u transmit the data from local path to aws S3 during extracting data from source \n4. What is the cluster node for your EMR? \n5. Write a sql query to join between dept emp sales to return sum and avg salary? \n6.Write a spark code to evaluate dept wise 10th highest salary and top 6 salary using pyspark data frame? \n7. What is scd and what is surrogate key why it is required? \n8. What types of join in spark and why broadcast required? \n9.What is the optimizations techniques you used in ur spark codes? \n10.Some questions from pandas and what is the major difference between pandas and spark?",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347855268489154561_slide_0.jpg",
+      "description": "JPEG image, 300x168 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The content is an unanswerized list of 10 data engineering interview questions. It asks about project architecture, daily data volume, business value, cloud usage, transferring data from a local path to AWS S3, EMR cluster nodes, SQL joins and salary aggregation, department-wise salary rankings with PySpark DataFrames, SCD, surrogate keys, Spark join types and broadcast, Spark optimization, and differences between pandas and Spark. No answers, code, figures, architecture details, definitions, optimization techniques, or implementation examples are provided.",
+    "topics": [
+      "Data Engineering Interview Preparation",
+      "Project Architecture and Business Case",
+      "AWS S3 Data Extraction",
+      "EMR Cluster Infrastructure",
+      "SQL Joins and Aggregation",
+      "PySpark DataFrame Processing",
+      "SCD and Surrogate Keys",
+      "Spark Joins and Broadcast",
+      "Spark Optimization",
+      "Pandas Versus Spark"
+    ],
+    "subtopics": [
+      "Daily Data Volume",
+      "Local-to-AWS S3 Data Transfer",
+      "EMR Cluster Nodes",
+      "Sum and Average Salary Calculation",
+      "Department-wise 10th-highest Salary",
+      "Department-wise Top Six Salaries",
+      "Types of Spark Joins",
+      "Rationale for Broadcast",
+      "Comparison of Pandas and Spark"
+    ],
+    "concepts": [
+      "Project Architecture",
+      "Daily Data Volume and Business Case",
+      "Local-to-AWS S3 Extraction",
+      "EMR Cluster Node",
+      "SQL Join and Salary Aggregation",
+      "Department-wise Salary Ranking",
+      "SCD",
+      "Surrogate Key",
+      "Spark Join Types and Broadcast",
+      "Spark Optimization",
+      "Pandas Versus Spark"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Explain the architecture of your data engineering project.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The candidate should describe the architecture of the project they worked on."
+    },
+    {
+      "question": "How much data did you handle each day, and what was the business case for the project?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should state the amount of data handled per day and explain the project's business case."
+    },
+    {
+      "question": "Which cloud did you use, and how did you transmit data from a local path to AWS S3 during extraction?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should identify the cloud used and explain how data moved from a local path to AWS S3 during extraction."
+    },
+    {
+      "question": "Which cluster node did you use for EMR?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The answer should identify the cluster node used in the EMR environment."
+    },
+    {
+      "question": "Write a SQL query that joins the referenced dept, emp, and sales inputs and returns the sum and average salary.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer should provide the join logic and SQL calculations for the sum and average salary across the referenced inputs."
+    },
+    {
+      "question": "Write PySpark DataFrame code to calculate department-wise 10th-highest salaries and the top six salaries.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer should use a PySpark DataFrame to organize salaries by department and return both the 10th-highest and top six salaries."
+    },
+    {
+      "question": "What is SCD, what is a surrogate key, and why is a surrogate key required?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should define SCD, define a surrogate key, and explain why the surrogate key is required."
+    },
+    {
+      "question": "What types of joins does Spark support, and why is broadcast required?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should describe the Spark join types and explain the rationale for broadcast."
+    },
+    {
+      "question": "Which Spark optimization techniques did you use in your code?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should name the Spark optimization techniques the candidate actually used in their code."
+    },
+    {
+      "question": "What are the major differences between pandas and Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should state the major differences between pandas and Spark."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Project Architecture",
+      "AWS S3",
+      "EMR",
+      "SQL",
+      "PySpark",
+      "SCD",
+      "Surrogate Keys",
+      "Apache Spark",
+      "Pandas"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:204824f218f93478",
+    "saved_date": "2026-10-01T23:12:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347855268489154561",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347855268489154561_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "aad93b102bece75f51c5cb3da49be2fbea4cf391c940aeaa4d34c084783733a9",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

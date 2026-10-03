@@ -1,0 +1,79 @@
+{
+  "id": "urn-li-saved-c4f5b44494fd081c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346749628664463363",
+    "captured_at": "2026-10-02T00:15:51.234692Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:30Z"
+  },
+  "original_text": "Believe me, there is only one way to learn #SQL.\n\nThat is by practicing it everyday.\n\nNo matter which bootcamp you join or which roadmap you follow, if you don't practice regularly you won't master SQL.\n\nHere are few websites where you can practice SQL regularly.\n\n[1.] Leetcode\n[2.] DataLemur\n[3.] Stratascratch\n[4.] Ankit Bansal's YT\n\nIf you are able to solve medium-hard level problems on these websites, you are good to crack any interview.\n\nFollow Mohit Motwani for more.\nDM me for more FREE resources. \n\n#sql #dataengineering #dataanalyst #linkedin #growth #interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346749628664463363_slide_0.jpg",
+      "description": "JPEG image, 480x279 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A motivational SQL-learning post argues that mastery requires practicing every day rather than relying only on bootcamps or roadmaps. It lists LeetCode, DataLemur, Stratascratch, and Ankit Bansal's YT as practice resources and claims that solving medium-hard problems on them indicates readiness for interviews. It does not provide SQL syntax, exercises, technical techniques, or a detailed readiness assessment.",
+    "topics": [
+      "SQL practice",
+      "SQL mastery",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "Daily SQL practice",
+      "SQL practice resources",
+      "Medium-hard SQL exercises"
+    ],
+    "concepts": [
+      "Practice SQL every day",
+      "SQL practice resources",
+      "Medium-hard problems as interview readiness"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should someone practice SQL to prepare for interviews based on this post?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The person should practice SQL every day rather than relying only on a bootcamp or roadmap.\nThe person can use LeetCode, DataLemur, Stratascratch, and Ankit Bansal's YT for regular practice.\nThe person should aim to solve medium-hard problems, which the post associates with readiness for interviews."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL practice",
+    "secondary_topics": [
+      "SQL interview preparation",
+      "SQL learning resources"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c4f5b44494fd081c",
+    "saved_date": "2026-10-01T23:11:30Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346749628664463363",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346749628664463363_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "e52c9c61195ea10884f3ea21d276d71fbc7a02a48e929ca3c390215c8b139951",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

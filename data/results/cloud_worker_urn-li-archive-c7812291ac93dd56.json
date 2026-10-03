@@ -1,0 +1,141 @@
+{
+  "id": "urn-li-archive-c7812291ac93dd56",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.246437Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:56Z"
+  },
+  "original_text": "SQL Got Me 45 LPA Data Engineering Offer from one of the Big Giants...\n(Here is my Experience for you)\n\nI recently interviewed for a Senior DE role and here’s what Round 1 looked like\n\n🔍 SQL Interview Questions I Faced:\n1. Find the top 3 transactions per user based on amount.\n2. Deduplicate records by user_id, keeping the latest timestamp.\n3. Difference between NOT EXISTS vs LEFT JOIN IS NULL—performance-wise?\n4. Identify users who had gaps > 7 days between logins.\n5. Get rolling 7-day transaction sums per user (window function).\n6. Find products with zero sales for 3 consecutive days.\n7. Identify churned users who haven’t transacted in 30+ days.\n8.Query for first purchase per region using RANK().\n9.Explain how indexing works on composite keys.\n10.Write a query that performs better without using DISTINCT.\n\n📚 FREE SQL Resources That Actually Helped:\n✅ StrataScratch – SQL on real-world datasets: https://lnkd.in/g5UMSA_v\n✅ LeetCode SQL Problems (sorted by difficulty): https://lnkd.in/gZ5tsJqg\n✅ Mode Analytics – SQL Tutorial & Window Functions Game: https://lnkd.in/gEW3QEzx\n✅ 8-hr SQL Crash Course on YouTube (Alex The Analyst): https://lnkd.in/gKPxYX9S\n\nMost people prepare Spark + Airflow. But if SQL breaks you...\n\nFollow this process to ace your interviews...\n\n#repost or #comment for better reach\n\n#DataEngineering #SQL #InterviewPrep #CareerGrowth #TechInterviews #BigData",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post claims that SQL preparation led to a 45 LPA senior data engineering offer from an unnamed large company and lists ten SQL questions from Round 1. The prompts cover top transactions per user, deduplication, existence checks, time-gap and churn analysis, rolling windows, consecutive zero-sales dates, regional ranking with RANK(), composite-key indexing, and avoiding DISTINCT. It also lists StrataScratch, LeetCode, Mode Analytics, and an Alex The Analyst YouTube crash course as practice resources. It provides no SQL solutions, schemas, performance evidence, or other interview-round details, so it is an incomplete technical reference.",
+    "topics": [
+      "SQL",
+      "Data engineering interview preparation",
+      "SQL practice resources"
+    ],
+    "subtopics": [
+      "Top three transactions per user",
+      "Deduplication by latest timestamp",
+      "NOT EXISTS versus LEFT JOIN IS NULL",
+      "Login-gap detection",
+      "Rolling seven-day transaction sums",
+      "Consecutive zero-sales days",
+      "User churn detection",
+      "First purchase per region with RANK()",
+      "Composite-key indexing",
+      "Query optimization without DISTINCT"
+    ],
+    "concepts": [
+      "Top-N transactions per user",
+      "Timestamp-based deduplication",
+      "NOT EXISTS versus LEFT JOIN IS NULL",
+      "Login-gap analysis",
+      "Rolling transaction sums",
+      "Consecutive zero-sales detection",
+      "Transaction-based churn detection",
+      "Regional purchase ranking",
+      "Composite-key indexing",
+      "SQL interview practice resources"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query that finds the top three transactions per user based on transaction amount.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The result returns up to three transactions for each user, ordered by transaction amount."
+    },
+    {
+      "question": "Deduplicate records by user_id while keeping the row with the latest timestamp.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The result retains one record per user_id using the most recent timestamp."
+    },
+    {
+      "question": "Compare NOT EXISTS with LEFT JOIN followed by IS NULL from a performance perspective.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains how each approach checks for the absence of a related row and compares their performance trade-offs."
+    },
+    {
+      "question": "Write a query that identifies users with gaps greater than seven days between logins.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query identifies successive login intervals lasting more than seven days for each user."
+    },
+    {
+      "question": "Calculate rolling seven-day transaction sums for each user using a window function.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses a window function to produce a rolling seven-day transaction total for each user."
+    },
+    {
+      "question": "Find products that had zero sales for three consecutive days.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query evaluates each product's daily sales and identifies an unbroken sequence of three days with no sales."
+    },
+    {
+      "question": "Identify users who have not transacted for 30 or more days.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query returns users whose most recent transaction was at least 30 days ago."
+    },
+    {
+      "question": "Write a query using RANK() to find the first purchase in each region.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query uses RANK() to order purchases within each region and identify the first purchase."
+    },
+    {
+      "question": "Explain how indexing works for composite keys.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The explanation describes an index formed from multiple key columns and how that index is used."
+    },
+    {
+      "question": "Write a query that is more performant than an equivalent query using DISTINCT without using DISTINCT itself.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query returns the required rows without DISTINCT and provides a performance-based reason for that formulation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "SQL query patterns",
+      "SQL performance and indexing",
+      "SQL interview practice resources"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c7812291ac93dd56",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4e0ff9658a3cca0cb9ca12e7754fdbfbfaeda58bbf0962c3434ab76b42b34273",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "DISTINCT-free query optimization"
+      ],
+      "questions": []
+    }
+  }
+}

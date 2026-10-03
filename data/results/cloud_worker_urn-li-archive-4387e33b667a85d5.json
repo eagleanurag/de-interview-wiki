@@ -1,0 +1,186 @@
+{
+  "id": "urn-li-archive-4387e33b667a85d5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.663955Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:05Z"
+  },
+  "original_text": "Uber Data Engineering interview will be 17X easier with these questions\nCTC= 31+ LPA\n\n1. Write SQL to find the top 3 drivers by average rating, only including drivers with more than 100 trips.\n2. Find users who booked a ride more than once within a 10-minute window (self-join or window functions).\n3. Given a rides table, find the most frequently traveled route in the past 30 days.\n4. Write an efficient query to detect duplicates based on customer ID and timestamp but only return the latest one.\n5. Find the difference in trip counts between two consecutive weeks for each driver.\n\n6. Given a stream of integers, design a data structure to return the median at any time.\n7. Detect a cycle in a directed graph representing trip routes between cities.\n8. Merge K sorted linked lists.\n9. Implement an LRU (Least Recently Used) cache.\n10. Given a list of ride timestamps, find the longest continuous ride streak.\n\n11, Design a distributed pipeline to detect ride anomalies in real time using stream processing.\n12. How would you scale a pipeline that ingests 100M GPS events per day and serves analytics queries under 1s?\n13. Design a versioned schema system for your data warehouse to handle backward-incompatible changes.\n\n14.How would you implement exactly-once delivery in a Kafka + Spark Structured Streaming setup?\n15. Explain your approach to handling late-arriving data in a real-time processing pipeline (with watermarks, state cleanup, etc.).\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount for next few people.\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The visible content is an apparently truncated promotional post about Uber Data Engineering interviews, claiming they will be \"17X easier\" and showing \"CTC= 31+ LPA.\" It lists 15 unanswered prompts: five SQL tasks, five data structure and algorithm tasks, and five distributed pipeline, scalability, schema-versioning, delivery-semantics, and late-data questions. The post provides no solutions or implementation details and ends with promotional links and a discount code.",
+    "topics": [
+      "Uber Data Engineering interview preparation",
+      "SQL analytics",
+      "Data structures and algorithms",
+      "Real-time stream processing",
+      "Distributed pipeline architecture",
+      "Scalability and low-latency analytics",
+      "Data warehouse schema versioning",
+      "Kafka and Spark Structured Streaming",
+      "Delivery semantics and late-arriving data"
+    ],
+    "subtopics": [
+      "Top drivers by average rating",
+      "Repeated ride bookings within a 10-minute window",
+      "Most frequently traveled route",
+      "Latest-record duplicate detection",
+      "Week-over-week trip count differences",
+      "Median of an integer stream",
+      "Directed graph cycle detection",
+      "Merging sorted linked lists",
+      "Least Recently Used caching",
+      "Continuous ride streaks",
+      "Real-time ride anomaly detection",
+      "High-volume GPS ingestion",
+      "Sub-one-second analytics queries",
+      "Backward-incompatible warehouse schema changes",
+      "Exactly-once delivery",
+      "Watermarks and state cleanup"
+    ],
+    "concepts": [
+      "Top drivers by average rating",
+      "Repeated bookings within a time window",
+      "Most frequent route",
+      "Latest-record duplicate detection",
+      "Consecutive-week trip count difference",
+      "Streaming median",
+      "Directed graph cycle detection",
+      "Merging K sorted linked lists",
+      "Least Recently Used cache",
+      "Continuous ride streak",
+      "Real-time ride anomaly detection",
+      "High-volume GPS pipeline",
+      "Versioned warehouse schemas",
+      "Exactly-once delivery",
+      "Late-arriving data handling"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write SQL to find the top three drivers by average rating, including only drivers with more than 100 trips.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer filters drivers to those with more than 100 trips, groups by driver, calculates average rating, and returns the top three."
+    },
+    {
+      "question": "Find users who booked a ride more than once within a 10-minute window.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies multiple bookings by the same user within a 10-minute window and uses a self-join or window functions."
+    },
+    {
+      "question": "Given a rides table, find the most frequently traveled route in the past 30 days.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer limits the data to the past 30 days, counts route occurrences, and identifies the route with the highest frequency."
+    },
+    {
+      "question": "Write an efficient query to detect duplicates based on customer ID and timestamp and return only the latest record.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies records with matching customer IDs and timestamps and retains only the latest matching record."
+    },
+    {
+      "question": "Find the difference in trip counts between two consecutive weeks for each driver.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer calculates each driver's trip count for both consecutive weeks and returns the difference."
+    },
+    {
+      "question": "Given a stream of integers, design a data structure that can return the median at any time.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer specifies a data structure that supports receiving integers and returning the current median after values arrive."
+    },
+    {
+      "question": "Detect a cycle in a directed graph representing trip routes between cities.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how to determine whether the directed trip-route graph contains a cycle."
+    },
+    {
+      "question": "Merge K sorted linked lists.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to combine K sorted linked lists while preserving sorted order."
+    },
+    {
+      "question": "Implement a Least Recently Used cache.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer specifies the cache operations and Least Recently Used eviction behavior."
+    },
+    {
+      "question": "Given a list of ride timestamps, find the longest continuous ride streak.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer processes the ride timestamps to identify the longest continuous streak."
+    },
+    {
+      "question": "Design a distributed pipeline to detect ride anomalies in real time using stream processing.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses both distributed pipeline design and real-time ride anomaly detection using stream processing."
+    },
+    {
+      "question": "How would you scale a pipeline that ingests 100 million GPS events per day and serves analytics queries in under one second?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses scaling for 100 million daily GPS events while maintaining analytics query latency below one second."
+    },
+    {
+      "question": "Design a versioned schema system for a data warehouse that must handle backward-incompatible changes.",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how warehouse schema versions and backward-incompatible changes are managed."
+    },
+    {
+      "question": "How would you implement exactly-once delivery in a Kafka and Spark Structured Streaming setup?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how exactly-once delivery is implemented using Kafka and Spark Structured Streaming."
+    },
+    {
+      "question": "How would you handle late-arriving data in a real-time processing pipeline?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer explains late-data handling through mechanisms including watermarks and state cleanup."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL analytics",
+      "Data structures and algorithms",
+      "Real-time stream processing",
+      "Distributed pipeline architecture",
+      "Scalability and query latency",
+      "Data warehouse schema evolution",
+      "Kafka and Spark Structured Streaming",
+      "Late-arriving data"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4387e33b667a85d5",
+    "saved_date": "2026-10-01T23:17:05Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "10490e9357e561d8170bd29d98e24e4ac4edf1fb2e1c913ba8f848aa3a4391c6",
+    "enricher_version": "3"
+  }
+}

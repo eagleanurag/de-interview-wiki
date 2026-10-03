@@ -1,0 +1,173 @@
+{
+  "id": "urn-li-archive-36e0845f85f931f3",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.482741Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:48Z"
+  },
+  "original_text": "🚀 Sharing the Data Engineer Interview Questions Asked at Koantek\n\nI recently interviewed for a Data Engineer role, and the discussion reinforced something important: modern Data Engineering interviews are less about memorizing definitions and more about practical problem-solving, real production scenarios, and hands-on experience.\n\nSharing the technical round questions here — hope this helps others preparing for similar roles 👇\n\n🔹 Technical Interview Questions\n1️⃣ Introduce yourself and walk through your professional background.\n2️⃣ Explain your current roles and responsibilities.\n3️⃣ What is an incremental pipeline? How would you design and implement it in production?\n4️⃣ Explain the logic for implementing Slowly Changing Dimension (SCD Type 2).\n5️⃣ In SCD Type 2 using MERGE, does a source row get evaluated once or multiple times? How does it trigger both UPDATE and INSERT?\n6️⃣ Write SQL and PySpark logic to remove duplicate records.\n7️⃣ What are Spark transformations? Explain narrow vs. wide transformations with examples.\n8️⃣ What are the different cluster types in Databricks? When would you use each?\n9️⃣ What is Databricks Auto Loader? In which scenarios is it most useful?\n🔟 Have you ever faced an OutOfMemory (OOM) error? How did you debug and resolve it?\n1️⃣1️⃣ What Spark optimization techniques have you used in real projects?\n1️⃣2️⃣ What SQL optimization techniques do you typically apply?\n1️⃣3️⃣ Write PySpark code to read a CSV file.\n1️⃣4️⃣ What are the key differences between Spark 1.6 and Spark 2.x?\n1️⃣5️⃣ What is Adaptive Query Execution (AQE)? How does it help optimize Spark jobs at runtime?\n1️⃣6️⃣ How would you debug a slow-running Spark job in a production environment?\n\nHope this helps fellow Data Engineers preparing for interviews. Would love to connect and exchange learnings!\n\n#DataEngineering #ApacheSpark #Databricks #PySpark #SQL #InterviewExperience #InterviewQuestions #LearningInPublic #CareerGrowth #Azure",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A Data Engineer shares 16 questions from an interview at Koantek and states that modern Data Engineering interviews emphasize practical problem-solving, production scenarios, and hands-on experience. The list covers professional introductions, incremental pipelines, SCD Type 2 with MERGE, duplicate removal, Spark transformations, Databricks clusters and Auto Loader, OOM and slow-job troubleshooting, Spark and SQL optimization, PySpark CSV reads, Spark version differences, and Adaptive Query Execution. The post identifies subjects candidates were asked about but does not provide answers or detailed technical explanations.",
+    "topics": [
+      "Data Engineering interview preparation",
+      "Incremental data pipelines",
+      "Slowly Changing Dimension Type 2",
+      "SQL and PySpark duplicate removal",
+      "Apache Spark transformations",
+      "Databricks clusters and Auto Loader",
+      "Spark performance troubleshooting and optimization",
+      "SQL optimization",
+      "PySpark file reading",
+      "Adaptive Query Execution"
+    ],
+    "subtopics": [
+      "Production pipeline design",
+      "MERGE-based SCD Type 2 logic",
+      "Narrow and wide Spark transformations",
+      "Databricks cluster selection",
+      "Auto Loader use cases",
+      "OutOfMemory debugging and resolution",
+      "CSV reading with PySpark",
+      "Spark 1.6 versus Spark 2.x",
+      "Runtime Spark query optimization",
+      "Slow-running Spark job diagnosis"
+    ],
+    "concepts": [
+      "Incremental pipeline",
+      "Slowly Changing Dimension Type 2",
+      "MERGE with UPDATE and INSERT",
+      "Duplicate record removal",
+      "Narrow and wide Spark transformations",
+      "Databricks cluster types",
+      "Databricks Auto Loader",
+      "Spark OutOfMemory troubleshooting",
+      "Spark optimization",
+      "SQL optimization",
+      "Reading a CSV with PySpark",
+      "Spark 1.6 and Spark 2.x",
+      "Adaptive Query Execution",
+      "Slow-running Spark job diagnosis"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is an incremental pipeline, and how would you design and implement one in production?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "It explains what makes the pipeline incremental.\nIt describes the design and implementation of the pipeline in a production setting."
+    },
+    {
+      "question": "Explain the logic for implementing a Slowly Changing Dimension Type 2.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "It clearly explains the implementation logic for SCD Type 2."
+    },
+    {
+      "question": "In an SCD Type 2 implementation using MERGE, is a source row evaluated once or multiple times, and how are both UPDATE and INSERT triggered?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "It states whether a source row is evaluated once or multiple times.\nIt explains how the MERGE triggers both an UPDATE and an INSERT."
+    },
+    {
+      "question": "Write SQL and PySpark logic to remove duplicate records.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "It provides SQL logic that removes duplicate records.\nIt provides PySpark logic that removes duplicate records."
+    },
+    {
+      "question": "What are Spark transformations, and how do narrow transformations differ from wide transformations?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "It defines Spark transformations.\nIt explains the difference between narrow and wide transformations.\nIt provides examples of narrow and wide transformations."
+    },
+    {
+      "question": "What cluster types are available in Databricks, and when should each be used?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "It identifies the Databricks cluster types.\nIt explains the circumstances in which each cluster type should be used."
+    },
+    {
+      "question": "What is Databricks Auto Loader, and in which scenarios is it most useful?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "It defines Databricks Auto Loader.\nIt identifies scenarios where Auto Loader is most useful."
+    },
+    {
+      "question": "Have you encountered an OutOfMemory error, and how did you debug and resolve it?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "It describes a real OutOfMemory error encountered by the candidate.\nIt explains how the error was debugged.\nIt explains how the error was resolved."
+    },
+    {
+      "question": "Which Spark optimization techniques have you used in real projects?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "It identifies Spark optimization techniques used in real projects.\nIt explains how the techniques were applied in those projects."
+    },
+    {
+      "question": "Which SQL optimization techniques do you typically apply?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "It identifies SQL optimization techniques that the candidate regularly applies.\nIt explains the purpose of those techniques."
+    },
+    {
+      "question": "Write PySpark code to read a CSV file.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "It provides valid PySpark code for reading the CSV file."
+    },
+    {
+      "question": "What are the key differences between Spark 1.6 and Spark 2.x?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "It identifies the key differences between Spark 1.6 and Spark 2.x.\nIt explains the significance of those differences."
+    },
+    {
+      "question": "What is Adaptive Query Execution, and how does it optimize Spark jobs at runtime?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "It defines Adaptive Query Execution.\nIt explains how Adaptive Query Execution optimizes Spark jobs at runtime."
+    },
+    {
+      "question": "How would you debug a slow-running Spark job in a production environment?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "It describes a process for diagnosing a slow-running Spark job.\nIt explains how the debugging process is applied in a production environment."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Incremental Pipelines",
+      "Slowly Changing Dimension Type 2",
+      "Apache Spark",
+      "Databricks",
+      "PySpark",
+      "SQL",
+      "Performance Troubleshooting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:36e0845f85f931f3",
+    "saved_date": "2026-10-01T23:08:48Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "126a6fe6948e3d539a30dd4ce75e0be8b7af861bc63d42e61a3b2f1888afe4a6",
+    "enricher_version": "3"
+  }
+}

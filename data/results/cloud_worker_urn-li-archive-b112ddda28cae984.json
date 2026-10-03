@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-archive-b112ddda28cae984",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.215338Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:00Z"
+  },
+  "original_text": "Flipkart keeps asking these Data Engineering questions repeatedly\nCTC - 30+\n\n1. Find the top 3 most profitable product categories per month, based on total revenue (quantity × price), sorted by month and revenue. (SQL)\n\n𝗗𝗮𝘁𝗮𝘀𝗲𝘁:\norders(order_id, customer_id, order_date, total_amount)\norder_items(order_id, product_id, quantity, price)\nproducts(product_id, category, brand)\n\n2. For each user, merge overlapping sessions and calculate their total active time (in minutes). (Python)\n\n𝗗𝗮𝘁𝗮𝘀𝗲𝘁:\nsessions = [\n {\"user_id\": 1, \"start\": \"2023-06-01 10:00\", \"end\": \"2023-06-01 11:00\"},\n {\"user_id\": 1, \"start\": \"2023-06-01 10:30\", \"end\": \"2023-06-01 12:00\"},\n {\"user_id\": 2, \"start\": \"2023-06-01 09:00\", \"end\": \"2023-06-01 10:00\"},\n # ...\n]\n\n3. Calculate, for each user, the conversion funnel rate between:\nview → click\nclick → purchase\n (i.e., what % of views turned into clicks, and what % of clicks turned into purchases) (Pyspark)\n\n𝗗𝗮𝘁𝗮𝘀𝗲𝘁:\nevents(user_id: string, event_type: string, event_timestamp: timestamp)\nTypes: click, view, purchase, login\n\n4. For each city, find the retention rate for users who signed up in January 2024 and made at least one transaction in February 2024. (SQL)\n\n𝗗𝗮𝘁𝗮𝘀𝗲𝘁:\ntransactions(transaction_id, user_id, transaction_date, amount)\nusers(user_id, signup_date, city)\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A promotional post claims Flipkart repeatedly asks Data Engineering questions and lists four exercises: a SQL top-three monthly product-category revenue query, a Python overlapping-session merge and active-time calculation, a PySpark per-user two-stage conversion funnel, and a SQL city-level retention query for a January 2024 signup cohort. It supplies schemas or sample input but no solutions, expected outputs, or a precise retention-rate formula.",
+    "topics": [
+      "Data engineering interview preparation",
+      "SQL",
+      "Python",
+      "PySpark"
+    ],
+    "subtopics": [
+      "Top-N monthly revenue analysis",
+      "Overlapping-session aggregation",
+      "Per-user conversion funnel rates",
+      "City-level cohort retention"
+    ],
+    "concepts": [
+      "Top product categories by monthly revenue",
+      "Overlapping-session merging",
+      "Two-stage user conversion funnel",
+      "City-level retention cohort"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Using orders, order_items, and products, find the three product categories with the highest revenue for each month.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Revenue is calculated by multiplying quantity by price and aggregating the result by month and product category.\nOnly the top three categories are retained within each month.\nThe output is ordered by month and revenue as requested."
+    },
+    {
+      "question": "Write Python code that merges overlapping sessions for each user and calculates total active time in minutes.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The logic processes each user independently and merges overlapping session intervals before summing their durations.\nThe resulting durations are expressed in minutes.\nFor the supplied user 1 sessions, the merged interval is 10:00 to 12:00, which totals 120 minutes."
+    },
+    {
+      "question": "Using the events dataset, calculate the view-to-click and click-to-purchase conversion rates for each user.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer calculates both funnel rates separately for each user from the relevant event types.\nThe first rate represents clicks as a percentage of views, and the second represents purchases as a percentage of clicks.\nLogin events are not treated as part of either requested funnel transition."
+    },
+    {
+      "question": "Using users and transactions, calculate a retention rate by city for users who signed up in January 2024 and made at least one transaction in February 2024.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The cohort filter selects January 2024 signup dates and requires at least one transaction in February 2024.\nEach user's city comes from the users dataset, and the result is summarized by city.\nThe answer explicitly defines the retention numerator and denominator because the post does not specify the exact rate formula."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview problem solving",
+    "secondary_topics": [
+      "SQL revenue analytics",
+      "Python session processing",
+      "PySpark funnel analysis",
+      "Cohort retention analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b112ddda28cae984",
+    "saved_date": "2026-10-01T23:16:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "88fd718b7dc22acdbaa7e85b916def2f5224f6bb1df80623367119ad5876052e",
+    "enricher_version": "3"
+  }
+}

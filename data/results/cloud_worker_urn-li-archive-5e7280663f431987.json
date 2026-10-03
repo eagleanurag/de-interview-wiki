@@ -1,0 +1,66 @@
+{
+  "id": "urn-li-archive-5e7280663f431987",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.201967Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:30Z"
+  },
+  "original_text": "## Rising Temperature\nGiven a dataset of daily temperatures, how do we find which days were hotter than the previous one?\nQues:- Write a solution in pyspark to find all dates' id with higher temperatures compared to its previous dates (yesterday).\ndata = [\n (1, \"2015-01-01\", 10),\n (2, \"2015-01-02\", 25),\n (3, \"2015-01-03\", 20),\n (4, \"2015-01-04\", 30)\n]\n\nschema = StructType([\n StructField(\"id\", IntegerType(), True),\n StructField(\"recordDate\", StringType(), True),\n StructField(\"temperature\", IntegerType(), True)\n])\n\ndf = spark.createDataFrame(data, schema)\n\nNote : Do not use window function\n\nO/P:-\n+---+\n| Id|\n+---+\n| 2|\n| 4|\n+---+\n\n#pyspark #coding #challange #databricks #interviewques\nSumanta BanerjeePradip AwasthiNITYANAND SINGHMayank Kumar",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a PySpark coding exercise over four daily temperature records. The task is to find each date whose temperature is strictly higher than the temperature on the immediately previous date, without using a window function. Although the input data, schema, and expected IDs are provided, the original content does not include a solution.",
+    "topics": [
+      "PySpark DataFrame programming",
+      "Daily temperature comparison",
+      "Window-function avoidance"
+    ],
+    "subtopics": [
+      "Creating a DataFrame with an explicit schema",
+      "Comparing temperatures with the previous date",
+      "Returning IDs for hotter dates"
+    ],
+    "concepts": [
+      "Explicit DataFrame schema",
+      "Previous-date comparison",
+      "Strictly hotter records",
+      "No window function"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a PySpark solution that returns the IDs of dates whose temperatures are higher than those on the immediately previous dates without using a window function.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution represents the input with id, recordDate, and temperature fields according to the provided schema.\nThe solution compares each temperature only with the temperature on the immediately preceding date.\nThe solution does not use a window function.\nThe solution applies a strict greater-than comparison.\nThe result for the supplied data contains IDs 2 and 4."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame programming",
+    "secondary_topics": [
+      "Date-based temperature comparison",
+      "Filtering hotter records"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5e7280663f431987",
+    "saved_date": "2026-10-01T23:22:30Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "620cef4df86bc8779531bbb5c3103b54d1f1ad4dbc49a9b04c6f698386e78897",
+    "enricher_version": "3"
+  }
+}

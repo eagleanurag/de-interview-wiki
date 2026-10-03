@@ -1,0 +1,113 @@
+{
+  "id": "urn-li-saved-ddaef687d4e5db73",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328241397017288704",
+    "captured_at": "2026-10-02T00:15:52.630061Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:39Z"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n1yr •\n𝗪𝗵𝘆 𝗘𝘃𝗲𝗿𝘆 𝗔𝘀𝗽𝗶𝗿𝗶𝗻𝗴 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗦𝗵𝗼𝘂𝗹𝗱 𝗟𝗲𝗮𝗿𝗻 𝗣𝘆𝗦𝗽𝗮𝗿𝗸\nIf you’re working with large datasets, tools like Pandas can hit limits fast. That’s where 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 comes in—designed to scale effortlessly across big data workloads.\n𝗪𝗵𝗮𝘁 𝗶𝘀 𝗣𝘆𝗦𝗽𝗮𝗿𝗸?\nPySpark is the Python API for Apache Spark—a powerful engine for distributed data processing. It's widely used to build scalable ETL pipelines and handle millions of records efficiently.\n𝗪𝗵𝘆 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝘀 𝗮 𝗠𝘂𝘀𝘁-𝗛𝗮𝘃𝗲 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀:\n✔ Scales to handle massive datasets\n✔ Designed for distributed computing\n✔ Blends SQL with Python for flexible logic\n✔ Perfect for building end-to-end ETL pipelines\n✔ Supports integrations like Hive, Kafka, and Delta Lake\n𝗤𝘂𝗶𝗰𝗸 𝗘𝘅𝗮𝗺𝗽𝗹𝗲:\n```python\nfrom pyspark.sql import SparkSession\nspark = SparkSession.builder.appName(\"Example\").getOrCreate()\ndf = spark.read.csv(\"data.csv\", header=True, inferSchema=True)\ndf.filter(df[\"age\"] > 30).show()\n```\nWhether you're moving into big data, working with real-time systems, or building cloud-native pipelines—𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗶𝘀 𝗮 𝗴𝗮𝗺𝗲-𝗰𝗵𝗮𝗻𝗴𝗲𝗿.\n🔖 Save this for later\n🔁 Repost to help others in their data journey\n📌 Follow Aishwarya Pani for more insights into Data Engineering\n📌 Want to grow in your data journey?\n𝗟𝗲𝘁’𝘀 𝗰𝗼𝗻𝗻𝗲𝗰𝘁: https://lnkd.in/gFKyas-g\n#PySpark #DataEngineering #BigData #ETL #SparkSQL #ApacheSpark #DataPipelines\nPyspark Power Guide",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328241397017288704_slide_0.jpg",
+      "description": "JPEG image, 345x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This introductory post explains PySpark as the Python API for Apache Spark and positions it for scalable, distributed processing of large datasets rather than workloads where Pandas may encounter limits. It highlights SQL and Python flexibility, end-to-end ETL use, and integrations with Hive, Kafka, and Delta Lake. A basic example creates or retrieves a SparkSession, reads a CSV file with a header and inferred schema, filters records to those older than 30, and displays the results. The post provides a concise overview rather than an in-depth treatment of architecture or performance.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Big Data",
+      "Distributed Data Processing",
+      "ETL Pipelines",
+      "Pandas",
+      "Spark SQL",
+      "Hive",
+      "Kafka",
+      "Delta Lake"
+    ],
+    "subtopics": [
+      "PySpark fundamentals",
+      "Large-dataset scalability",
+      "Distributed computing",
+      "Python and SQL integration",
+      "CSV ingestion",
+      "Data filtering",
+      "ETL pipeline development",
+      "PySpark ecosystem integrations"
+    ],
+    "concepts": [
+      "PySpark",
+      "Apache Spark",
+      "Distributed data processing",
+      "Pandas scalability comparison",
+      "Scalable ETL pipelines",
+      "SQL and Python integration",
+      "PySpark ecosystem integrations",
+      "SparkSession initialization",
+      "CSV ingestion with inferred schema",
+      "Filtering and displaying records"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What does the post define PySpark as, and why does it position PySpark as a suitable alternative to Pandas for large datasets?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": ""
+    },
+    {
+      "question": "What steps does the PySpark example perform to initialize processing, load data, and select records older than 30?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": ""
+    },
+    {
+      "question": "According to the post, why is PySpark suitable for end-to-end ETL pipelines that handle large datasets?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": ""
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "Big Data",
+      "Distributed Data Processing",
+      "ETL Pipelines",
+      "Spark SQL"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ddaef687d4e5db73",
+    "saved_date": "2026-10-01T23:24:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328241397017288704",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328241397017288704_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "979c43cf170b2622bf85401c0bb3404e85018ec1a32b74960769e7a2da0a8fe2",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "urn-li-saved-298bb940c5fcd6b7",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341672457843453952",
+    "captured_at": "2026-10-02T00:15:45.974686Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:04Z"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\n𝐆𝐞𝐭 ₹𝟐𝟎+ 𝐋𝐏𝐀 𝐨𝐟𝐟𝐞𝐫𝐬 𝐰𝐢𝐭𝐡 𝐣𝐮𝐬𝐭 𝐒𝐐𝐋 𝐬𝐤𝐢𝐥𝐥𝐬?\n𝐘𝐄𝐒. And here’s exactly how to prepare.\n(𝐒𝐚𝐯𝐞 𝐭𝐡𝐢𝐬 𝐫𝐨𝐚𝐝𝐦𝐚𝐩) 🔻\n✅ Understand SQL syntax & basic SELECT statements\n✅ Learn filtering and sorting with WHERE and ORDER BY\n✅ Master aggregations: COUNT, SUM, AVG, MIN, MAX\n✅ Get comfortable with string functions: LIKE, TRIM, UPPER, LOWER\n✅ Work with dates: CURRENT_DATE, DATEDIFF, DATEADD\n✅ Deep dive into JOINs: FULL OUTER, CROSS, SELF JOIN\n✅ Write subqueries, nested queries & explore CTEs\n✅ Level up with window functions: ROW_NUMBER, RANK, DENSE_RANK\n✅ Use CASE statements to apply conditional logic\nThis roadmap builds your 𝐜𝐨𝐫𝐞 𝐒𝐐𝐋 𝐦𝐮𝐬𝐜𝐥𝐞.\nBut if you're aiming for 𝐭𝐨𝐩 𝐌𝐍𝐂 𝐫𝐨𝐥𝐞𝐬 𝐚𝐧𝐝 ₹𝟐𝟎𝐋𝐏𝐀+ 𝐨𝐟𝐟𝐞𝐫𝐬 – that’s not all.\n💬 𝐘𝐨𝐮𝐫 𝐭𝐮𝐫𝐧:\nWhere are you in this roadmap right now?\nOr if you’ve cracked interviews with SQL, what helped you the most?\nFollow Bhavesh Arora for more!\nCrack any role with SQL",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341672457843453952_slide_0.jpg",
+      "description": "PNG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a progressive SQL preparation roadmap. It starts with syntax and SELECT statements, advances through filtering, sorting, aggregation, string and date functions, and then covers JOINs, subqueries, nested queries, CTEs, window functions, and CASE statements. It claims that this progression builds core SQL skills but is not sufficient by itself for top multinational-company roles and high-paying interviews. The post does not provide detailed explanations, query examples, or interview questions.",
+    "topics": [
+      "SQL",
+      "SQL query development",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "SQL syntax and SELECT statements",
+      "Filtering with WHERE",
+      "Sorting with ORDER BY",
+      "Aggregate functions",
+      "String functions",
+      "Date functions",
+      "JOIN operations",
+      "Subqueries and nested queries",
+      "Common table expressions",
+      "Window functions",
+      "Conditional logic with CASE"
+    ],
+    "concepts": [
+      "SQL Syntax and SELECT Statements",
+      "Filtering with WHERE",
+      "Sorting with ORDER BY",
+      "Aggregate Functions",
+      "String Functions",
+      "Date Functions",
+      "JOIN Operations",
+      "Subqueries and Nested Queries",
+      "Common Table Expressions",
+      "Window Functions",
+      "CASE Statements"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL skills make up the progression from basic query writing to advanced querying in the proposed roadmap?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The progression begins with SQL syntax, basic SELECT statements, filtering with WHERE, and sorting with ORDER BY.\nIt continues through aggregate, string, and date functions before introducing JOINs, subqueries, nested queries, and CTEs.\nThe advanced stage includes ROW_NUMBER, RANK, DENSE_RANK, and conditional logic with CASE statements."
+    },
+    {
+      "question": "How do WHERE and ORDER BY serve different purposes in a SQL query?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "WHERE is used for filtering results.\nORDER BY is used for sorting results."
+    },
+    {
+      "question": "Which aggregate, string, and date functions are included in the SQL roadmap?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The aggregate functions are COUNT, SUM, AVG, MIN, and MAX.\nThe string functions are LIKE, TRIM, UPPER, and LOWER.\nThe date functions are CURRENT_DATE, DATEDIFF, and DATEADD."
+    },
+    {
+      "question": "Which JOIN variants and compositional query techniques does the roadmap cover?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The JOIN variants are FULL OUTER JOIN, CROSS JOIN, and SELF JOIN.\nThe compositional query techniques are subqueries, nested queries, and CTEs."
+    },
+    {
+      "question": "Which ranking functions and conditional construct are identified as advanced SQL skills?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The ranking window functions are ROW_NUMBER, RANK, and DENSE_RANK.\nCASE statements are used to apply conditional logic."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "SQL Fundamentals",
+      "Advanced SQL",
+      "Interview Preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:298bb940c5fcd6b7",
+    "saved_date": "2026-10-01T23:17:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341672457843453952",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341672457843453952_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7341672457843453952_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "20bad3e1cbbfdac0f687fc3767a93576c121d4b056f32e32a4943a290ef3404c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

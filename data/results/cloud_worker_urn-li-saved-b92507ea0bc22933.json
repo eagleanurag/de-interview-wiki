@@ -1,0 +1,90 @@
+{
+  "id": "urn-li-saved-b92507ea0bc22933",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327558140156149760",
+    "captured_at": "2026-10-02T00:15:50.990084Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:43Z"
+  },
+  "original_text": "Avoid this common mistake in your next analytics interview! [Detailed Solution Video in Comment]\n\n👉🏻Avoid using Limit for problems like - Find the highest Salary of Employee, Find the top 5 products by sales etc.\n\nWhy ❓\n\n✅ As it doesn't handle cases where there will be \"ties\" ! Thus a chance of having more than 5 records in top 5 products is possible !\n\n👉🏻 Use Rank / Dense Rank accordingly and present a complete solution !\n\nfollow Gaurav Agrawal for more !\n\n#analytics #businessanalytics #dataanalytics #sql #interviewprep\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327558140156149760_slide_0.jpg",
+      "description": "JPEG image, 480x447 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post warns analytics interview candidates not to use LIMIT for highest-salary or top-N product queries because ties can cause more records to qualify than the requested number. It recommends using RANK or DENSE_RANK accordingly. The promised detailed solution or video is not included, and the extracted media text is empty.",
+    "topics": [
+      "SQL",
+      "Analytics interview preparation",
+      "Tie-aware ranking"
+    ],
+    "subtopics": [
+      "Using LIMIT for top-N queries",
+      "Finding the highest employee salary",
+      "Finding the top five products by sales",
+      "Handling ties with RANK and DENSE_RANK"
+    ],
+    "concepts": [
+      "LIMIT",
+      "Ties",
+      "RANK",
+      "DENSE_RANK"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "You need the top five products by sales, but some products have equal sales. Why might a query using LIMIT be incomplete, and what does the post recommend?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A LIMIT-based query can fail to account for tied records, allowing more than five products to qualify for the top-five result.\nThe post recommends using RANK or DENSE_RANK appropriately to handle ties."
+    },
+    {
+      "question": "What problem can occur when LIMIT is used to find the highest salary, and how should the query account for ties?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "LIMIT may not properly handle employees whose salaries are tied for the highest value.\nRANK or DENSE_RANK should be used accordingly instead of relying only on LIMIT."
+    }
+  ],
+  "classification": {
+    "domain": "Data analytics and SQL",
+    "primary_topic": "Tie-aware SQL ranking",
+    "secondary_topics": [
+      "SQL LIMIT",
+      "RANK",
+      "DENSE_RANK",
+      "Top-N queries",
+      "Analytics interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b92507ea0bc22933",
+    "saved_date": "2026-10-01T23:24:43Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327558140156149760",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327558140156149760_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "7f3447ddc2f3c49f46164ec48016a5c292baf76db043fac8d8e294630c356ca1",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

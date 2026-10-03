@@ -1,0 +1,180 @@
+{
+  "id": "urn-li-saved-247bb39612189557",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347829243361312770",
+    "captured_at": "2026-10-02T00:15:45.593729Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:47Z"
+  },
+  "original_text": "My friend just cracked a 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 interview at Flipkart 🎯\n\nAnd it wasn’t just about knowing tools like Spark or SQL.\nThey really focused on how you think and solve real problems.\n\nSo I asked him to share the exact questions, and here’s what he got 👇\n\n𝗣𝘆𝘁𝗵𝗼𝗻:\n\n- Reverse a string without using shortcuts\n- Find duplicates in a list\n- What are *args and **kwargs?\n- Explain generators\n\n𝗦𝗤𝗟:\n\n- Find the Nth highest salary\n- Use window functions\n- Write an UPSERT\n- Handle duplicate rows\n\n𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 (𝗙𝗹𝗶𝗽𝗸𝗮𝗿𝘁-𝘀𝘁𝘆𝗹𝗲):\n\n- Kafka vs Kinesis and when to use what\n- Handle schema changes in data lake\n- Debug Airflow pipeline failures\n- Real-time data ingestion\n- How to optimize PySpark jobs\n\nHis tip? \nBe ready for scenario-based questions → they matter the most.\n\nIf you're planning to switch into Data Engineering and need a push,\nBosscoder Academy is worth checking out → https://bit.ly/3GwIYI0\n\nThey’ve helped 800+ professionals with:\n✅ Real projects & tools\n✅ 1:1 mentorship\n✅ Resume + mock interview support\n\n#Dataengineer #Flipkart #Careerswitch #Bigdata #Sponsoredpost #LinkedIn #Etl",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347829243361312770_slide_0.jpg",
+      "description": "JPEG image, 480x360 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This sponsored post reports that a friend secured a Flipkart Data Engineer interview and emphasizes problem-solving rather than familiarity with tools such as Spark and SQL. It lists Python, SQL, and data engineering interview topics, including Kafka versus Kinesis, data lake schema changes, Airflow pipeline debugging, real-time data ingestion, and PySpark optimization. It says scenario-based questions matter most but provides no answers, detailed techniques, or complete preparation guidance, and it ends by promoting Bosscoder Academy.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Python",
+      "SQL",
+      "Spark",
+      "Kafka",
+      "Kinesis",
+      "Airflow",
+      "Data lakes",
+      "Real-time data ingestion",
+      "PySpark optimization"
+    ],
+    "subtopics": [
+      "String reversal without shortcuts",
+      "Duplicate detection in lists",
+      "*args and **kwargs",
+      "Generators",
+      "Nth-highest salary queries",
+      "SQL window functions",
+      "UPSERT",
+      "Duplicate row handling",
+      "Kafka versus Kinesis",
+      "Data lake schema changes",
+      "Airflow pipeline failure debugging",
+      "Real-time data ingestion",
+      "PySpark job optimization",
+      "Scenario-based problem solving"
+    ],
+    "concepts": [
+      "Problem-solving-oriented interviews",
+      "Python interview fundamentals",
+      "SQL query and data-handling tasks",
+      "Kafka versus Kinesis",
+      "Data lake schema changes",
+      "Airflow pipeline debugging",
+      "Real-time data ingestion",
+      "PySpark job optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you reverse a string without using shortcuts?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer directly addresses reversing a string without shortcuts."
+    },
+    {
+      "question": "How would you find duplicates in a list?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer explains how duplicates in a list are identified."
+    },
+    {
+      "question": "What are *args and **kwargs in Python?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer explains *args and **kwargs."
+    },
+    {
+      "question": "How do generators work in Python?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains what generators are and how they function."
+    },
+    {
+      "question": "How would you find the Nth highest salary using SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer provides a SQL approach for finding the Nth highest salary."
+    },
+    {
+      "question": "How would you use SQL window functions?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer demonstrates how window functions are used."
+    },
+    {
+      "question": "How would you write an UPSERT?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer shows how an UPSERT is written."
+    },
+    {
+      "question": "How would you handle duplicate rows?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains how duplicate rows are handled."
+    },
+    {
+      "question": "How do Kafka and Kinesis differ, and when should each be used?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer contrasts Kafka with Kinesis and explains when each should be used."
+    },
+    {
+      "question": "How would you handle schema changes in a data lake?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer presents an approach to handling schema changes in a data lake."
+    },
+    {
+      "question": "How would you debug a failing Airflow pipeline?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer presents an approach to debugging an Airflow pipeline failure."
+    },
+    {
+      "question": "How would you handle real-time data ingestion?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer addresses handling real-time data ingestion."
+    },
+    {
+      "question": "How would you optimize a PySpark job?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer presents ways to optimize a PySpark job."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Python fundamentals",
+      "SQL",
+      "PySpark",
+      "Kafka",
+      "Kinesis",
+      "Airflow",
+      "Data lake schema changes",
+      "Real-time data ingestion"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:247bb39612189557",
+    "saved_date": "2026-10-01T23:12:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347829243361312770",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347829243361312770_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "93fd77475e2d5f631fda13bf8409951824739a878c47e94ae5ae50411cf7b3c9",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

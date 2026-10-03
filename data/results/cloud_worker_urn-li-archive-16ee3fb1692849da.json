@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-16ee3fb1692849da",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.088771Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:13Z"
+  },
+  "original_text": "27 LPA at Walmart\n\nThese were the EXACT questions asked in 2025.\n\n1. Design Twitter\n2. Design Aarogya Setu\n3. Design a Load Balancer\n4. Design a URL shortener \n5. Design a logging System\n6. Design Google Play Store\n7. Design Zoom car app LLD\n8. Design an E-commerce Platform\n9. Design a Recommendation System\n10. Design of order management system \n11. Design an app for waste management\n12. Design Library management system LLD\n13. Design a Warehouse Management System\n14. Design a reservation system for a parking lot\n15. Design a Real-time Inventory Tracking System\n16. Design a rating system for an e-commerce website\n\n𝗞𝗲𝗲𝗽𝗶𝗻𝗴 𝘁𝗵𝗶𝘀 𝗶𝗻 𝗺𝗶𝗻𝗱, 𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗚𝘂𝗶𝗱𝗲.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲:\n - https://lnkd.in/dte69Z5N\n\nStay Hungry, Stay FoolisH!\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post claims to list system-design questions asked in 2025 for a 27 LPA opportunity at Walmart. The list includes Twitter, Aarogya Setu, load balancers, URL shorteners, logging systems, Google Play Store, e-commerce, recommendation systems, order and warehouse management, parking reservations, real-time inventory tracking, and rating systems. It provides no answers, requirements, design decisions, technical explanations, or data engineering concepts, and it ends with a promotional message and link.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "System design interview report",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:16ee3fb1692849da",
+    "saved_date": "2026-10-01T23:09:13Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5b84fe907039f236d3b3738b559116d1387c9eacfd778281e785f746381f834f",
+    "enricher_version": "3"
+  }
+}

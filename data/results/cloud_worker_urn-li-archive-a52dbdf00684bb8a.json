@@ -1,0 +1,139 @@
+{
+  "id": "urn-li-archive-a52dbdf00684bb8a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.078974Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:59Z"
+  },
+  "original_text": "💼 EY GDS – Azure Data Engineer Interview Questions (L2 Round)\n📌 These were recently asked in second-level technical interviews at EY GDS. Expect scenario-based depth and architectural thinking!\n\n\n---\n\n🧠 L2-Level Questions You Must Prepare For:\n\n1️⃣ You have to ingest 100+ tables from on-prem SQL Server to ADLS using ADF.\n👉 How will you design the pipeline framework to support dynamic ingestion and table-wise control?\n\n2️⃣ A data flow is failing due to schema mismatch in one of the source tables.\n👉 How do you handle schema evolution or drift in ADF?\n\n3️⃣ Explain how you implemented row-level security in Synapse Analytics.\n👉 What are the key steps and how do you audit access?\n\n4️⃣ A Databricks notebook is taking too long during joins.\n👉 How do you troubleshoot and optimize join performance in PySpark?\n\n5️⃣ How do you enable end-to-end logging, error handling, and alerting across ADF and Databricks pipelines?\n\n6️⃣ What is your strategy to maintain CI/CD for ADF and Synapse artifacts using Azure DevOps?\n\n7️⃣ You’re designing a system to load 1 TB daily.\n👉 Would you use PolyBase or COPY INTO? Why?\n\n8️⃣ What are Managed Identity, RBAC, and ACLs, and how do you use them to securely access ADLS?\n\n9️⃣ How do you implement parameterized linked services and reusable datasets in ADF?\n\n🔟 Explain how you use delta tables and merge operations to implement SCD Type 2 logic in Databricks.\n\n\n---\n\n💡 L2 Interview Tip:\nEY expects solid understanding of pipeline orchestration, Spark tuning, Azure security, and cost-efficient design — not just tool clicks.\n\n\n---\n\n📩 Want sample answers or real design templates? Drop “EY L2” in the comments!\n📌 Save this for your EY or Big4 prep journey.\n\n#EYGDS #AzureDataEngineer #DataEngineering #ADF #Synapse #Databricks #BigData #AzureSecurity #AzureDevOps #TechInterview #ETL #LinkedInLearning #MorningLearning ☀️ #CloudEngineer #CareerInTech #DataPipelines",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post lists ten scenario-based L2 technical interview questions reportedly asked at EY GDS for Azure data engineering roles. The scenarios cover ADF ingestion and schema drift, Synapse Analytics row-level security, Databricks and PySpark join optimization, cross-pipeline logging and alerting, Azure DevOps CI/CD, loading 1 TB daily, ADLS access controls, reusable ADF components, and Delta tables for SCD Type 2. It provides preparation themes but no sample answers, implementation details, or design templates.",
+    "topics": [
+      "L2 data engineering interview preparation",
+      "Azure data engineering scenarios",
+      "Pipeline orchestration and operations",
+      "Cloud data security",
+      "Scalable and cost-efficient data engineering"
+    ],
+    "subtopics": [
+      "Dynamic ingestion from on-prem SQL Server to ADLS with ADF",
+      "Schema evolution and drift in ADF",
+      "Row-level security and access auditing in Synapse Analytics",
+      "PySpark join performance in Databricks",
+      "End-to-end logging, error handling, and alerting",
+      "CI/CD for ADF and Synapse artifacts with Azure DevOps",
+      "PolyBase versus COPY INTO for a 1 TB daily load",
+      "Managed Identity, RBAC, and ACLs for ADLS",
+      "Parameterized linked services and reusable ADF datasets",
+      "Delta tables and merge operations for SCD Type 2"
+    ],
+    "concepts": [
+      "Dynamic ingestion framework",
+      "Schema evolution and drift",
+      "Row-level security",
+      "PySpark join optimization",
+      "Pipeline logging, error handling, and alerting",
+      "CI/CD for data platform artifacts",
+      "Large-scale loading with PolyBase or COPY INTO",
+      "ADLS access control",
+      "Parameterized and reusable ADF components",
+      "SCD Type 2 with Delta tables"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you design an ADF pipeline framework to dynamically ingest more than 100 on-prem SQL Server tables into ADLS with table-wise control?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses dynamic ingestion for more than 100 on-prem SQL Server tables loaded into ADLS through ADF.\nIt explains how the pipeline framework provides table-wise control."
+    },
+    {
+      "question": "How would you handle a failing ADF data flow caused by a schema mismatch in a source table?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer addresses diagnosing the source schema mismatch.\nIt explains how to handle schema evolution or drift in ADF."
+    },
+    {
+      "question": "How would you implement row-level security in Synapse Analytics and audit access?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains the key implementation steps for row-level security in Synapse Analytics.\nIt also covers how access to the protected data is audited."
+    },
+    {
+      "question": "How would you troubleshoot and optimize slow joins in a Databricks notebook using PySpark?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer describes how to investigate slow joins in a Databricks notebook.\nIt covers optimization approaches for join performance in PySpark."
+    },
+    {
+      "question": "How would you enable end-to-end logging, error handling, and alerting across ADF and Databricks pipelines?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer covers logging across ADF and Databricks pipelines.\nIt addresses error handling and alerting across both pipeline environments."
+    },
+    {
+      "question": "What CI/CD strategy would you use for ADF and Synapse artifacts with Azure DevOps?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer describes a CI/CD strategy for ADF artifacts.\nIt also explains how the strategy manages Synapse artifacts using Azure DevOps."
+    },
+    {
+      "question": "For a system that must load 1 TB daily, would you use PolyBase or COPY INTO, and why?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer compares PolyBase and COPY INTO for the stated 1 TB daily load.\nIt justifies the selected approach in terms of the system requirements and cost-efficient design."
+    },
+    {
+      "question": "What are Managed Identity, RBAC, and ACLs, and how would you use them to access ADLS securely?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines Managed Identity, RBAC, and ACLs.\nIt explains how the three concepts are used to secure access to ADLS."
+    },
+    {
+      "question": "How do you implement parameterized linked services and reusable datasets in ADF?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how linked services are parameterized in ADF.\nIt also describes how datasets are designed for reuse."
+    },
+    {
+      "question": "How do you use Delta tables and merge operations to implement SCD Type 2 logic in Databricks?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains the roles of Delta tables and merge operations.\nIt describes how those elements implement SCD Type 2 logic in Databricks."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "L2 Azure data engineering interview preparation",
+    "secondary_topics": [
+      "ADF pipeline architecture",
+      "Synapse Analytics security",
+      "Databricks and PySpark optimization",
+      "Azure DevOps CI/CD",
+      "ADLS access control",
+      "Delta-based SCD Type 2"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a52dbdf00684bb8a",
+    "saved_date": "2026-10-01T23:10:59Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "07d62d5a33cabd37a9e8620398f0e7db8536adc815c58f5483e6aeb5ec2f8f1c",
+    "enricher_version": "3"
+  }
+}

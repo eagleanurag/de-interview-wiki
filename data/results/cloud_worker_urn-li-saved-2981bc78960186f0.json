@@ -1,0 +1,107 @@
+{
+  "id": "urn-li-saved-2981bc78960186f0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7342880360839462912",
+    "captured_at": "2026-10-02T00:15:45.952004Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:05Z"
+  },
+  "original_text": "• 1st\nWrites to 14K+ | Data Engineer | @Tredence Inc. | Certified Databricks Data Engineer | Azure Data Engineer | Snowflake | SQL | Pyspark | Python | ADF | ETL | Airflow |\n1yr •\n𝑺𝑸𝑳 𝑭𝒖𝒏𝒄𝒕𝒊𝒐𝒏𝒔 is an incredibly versatile tool, and mastering window functions can take your data analysis and engineering skills to the next level! 🌟\nWindow functions are a game-changer for tasks like:\n➡️ Running totals\n➡️ Ranking rows\n➡️ Moving averages\n➡️ Lag and lead analysis\nUnlike aggregate functions, which condense data into a single value, window functions provide a granular view of your data row by row while leveraging the context of other rows. This capability is essential for building advanced analytics solutions in modern data systems.\nPro Tip: Use PARTITION BY and ORDER BY creatively to group and organize data for even more customized analyses.\nLet’s continue to explore and leverage these incredible tools to transform how we approach data! 🚀\n🤝 Follow 👨‍💻 Akhil Rachuri for a regular curated feed of #dataengineering insights and valuable content!\n.\nBetter reach: Shubham Wadekar Vaishnavi MURALIDHAR Sumit Mittal Deepak Goyal Karthik K. Shashank Mishra 🇮🇳 Ankita Gulati Asheesh T. Ankur Bhattacharya Ankur Ranjan Sachin Chandrashekhar 🇮🇳 Lovee Kumar Allauddin Khan Pathan Sai Krishna Chivukula Priyam Jain Nimra Ayaz Anurag Sharma Abhishek Jha Gayatri G\n#DataEngineeringInterview #ApacheSpark #InterviewPrep #DataEngineering #TechInterviewTips #data #dataengineering #dataengineerjobs #interviewquestions #interviewprep #newlearnings #interviewpreparation #interviewtips #dataengineers #interviewsuccess #followme #ETL #dataengineerjobs #spark #azurecloud #datacleaning #pyspark #optimization #interviewsuccess #interviewskills #DataEngineering #DataScience #LinkedInLearning #DataProcessing #BigData #InterviewPrep #TechCareer #DataJobs #KnowledgeSharing #TechSkills #BigData #LearningResources #LinkedInLearning #DataScience #PySparkFunctions #CareerDevelopment #mapreduce #interviewguidance #interviewingskills #PySpark #DataCleaning #DataScience #LinkedInLearning #certified #certification #azurecertified #codingchallenge #hadoop #hadoopadministration #hadoopdeveloper #DeltaLake #DataLakes #BigData #DataEngineering #DataScience #DataManagement #LinkedInLearning #DataInfrastructure\n…see more\nSQL Functions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7342880360839462912_slide_0.jpg",
+      "description": "JPEG image, 487x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that SQL window functions retain row-level detail while using context from other rows, unlike aggregate functions that reduce data to a single value. It identifies running totals, row ranking, moving averages, and lag and lead analysis as use cases. It also recommends using PARTITION BY and ORDER BY to group and organize data for customized analysis. The visible technical content appears incomplete because it ends with a see-more marker and provides no extracted media text or implementation examples.",
+    "topics": [
+      "SQL",
+      "SQL window functions",
+      "Data analysis and engineering"
+    ],
+    "subtopics": [
+      "Running totals",
+      "Row ranking",
+      "Moving averages",
+      "Lag and lead analysis",
+      "Aggregate functions",
+      "PARTITION BY",
+      "ORDER BY"
+    ],
+    "concepts": [
+      "SQL window functions",
+      "Aggregate functions",
+      "PARTITION BY",
+      "ORDER BY",
+      "Window-function analytical tasks"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do SQL window functions differ from aggregate functions?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Aggregate functions condense data into a single value.\nWindow functions preserve row-level detail while using context from other rows."
+    },
+    {
+      "question": "Which analytical tasks does the post identify as suitable for SQL window functions?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The identified tasks are running totals, ranking rows, moving averages, and lag and lead analysis.\nThese tasks are supported by the ability to retain a row-by-row view while using other rows as context."
+    },
+    {
+      "question": "How can PARTITION BY and ORDER BY be used to customize a window-function analysis?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "PARTITION BY can be used to group the data associated with an analysis.\nORDER BY can be used to organize the data.\nThe post presents the two clauses together as building blocks for customized window-function analysis."
+    },
+    {
+      "question": "A calculation must retain each row while using other rows to produce a running total. Which function category described in the post is suitable, and why?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "SQL window functions are suitable because they provide a granular, row-by-row view while using context from other rows.\nRunning totals are explicitly identified as a window-function use case.\nAn aggregate function would instead condense the data into a single value."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL window functions",
+    "secondary_topics": [
+      "Aggregate functions",
+      "Running totals",
+      "Row ranking",
+      "Moving averages",
+      "Lag and lead analysis",
+      "PARTITION BY and ORDER BY"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2981bc78960186f0",
+    "saved_date": "2026-10-01T23:16:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7342880360839462912",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7342880360839462912_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f906ffdecd475813fc7ba3d55f05170d767c794792ecf9b3d7439b7d8bdec6c3",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

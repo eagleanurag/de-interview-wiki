@@ -1,0 +1,71 @@
+{
+  "id": "urn-li-archive-a3bacf7cf30609cf",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.061837Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:34Z"
+  },
+  "original_text": "#pyspark #challenge #dataengineer\nGiving you a challenge to test your spark skills. \n\nCan you write a PySpark code that overwrites only those partitions which have data in the incremental load while preserving the existing partition data? The code should ensure that the new data is merged with the existing data without losing any current partition data.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents an incomplete PySpark coding challenge to implement an incremental load that overwrites only partitions containing incremental data, merges the new data with existing data in those partitions, and preserves data in all unaffected partitions. No code, schema, partition field, or implementation details are provided.",
+    "topics": [
+      "PySpark",
+      "incremental data loading",
+      "partitioned data management"
+    ],
+    "subtopics": [
+      "selective partition overwrite",
+      "merging incremental and existing partition data",
+      "preserving unaffected partitions"
+    ],
+    "concepts": [
+      "Incremental load",
+      "Selective partition overwrite",
+      "Partition data preservation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write PySpark code that overwrites only the partitions containing data from an incremental load while preserving all other partition data?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The code identifies which partitions contain data in the incremental input.\nThe write operation is restricted to those identified partitions rather than applied to every partition.\nThe implementation merges the incremental data with existing data without removing unaffected partition data."
+    },
+    {
+      "question": "An incremental PySpark load contains data for only some existing partitions. What behavior is required to avoid data loss?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Only partitions represented by the incremental input may be affected by the overwrite.\nNew data must be combined with the current data in the affected partitions.\nPartitions absent from the incremental input must retain their existing data."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Selective partition overwrite with PySpark",
+    "secondary_topics": [
+      "incremental data loading",
+      "partition data preservation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:a3bacf7cf30609cf",
+    "saved_date": "2026-10-01T23:22:34Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ccf7763285ef223ea686e03828bd139e8b6fb52aa54bd0d0c68a82119691a0b8",
+    "enricher_version": "3"
+  }
+}

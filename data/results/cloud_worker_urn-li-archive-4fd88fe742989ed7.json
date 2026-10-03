@@ -1,0 +1,170 @@
+{
+  "id": "urn-li-archive-4fd88fe742989ed7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.911020Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:57Z"
+  },
+  "original_text": "🔹 Interview Experience | Azure Data Engineer Role at CGI 🔹\nI recently attended an interview for an Azure Data Engineer role at CGI and wanted to share some interesting technical questions that could help anyone preparing for similar roles. 🚀\n\n🟦 Data Warehousing & Modeling\n1️⃣ What are the SCD (Slowly Changing Dimension) types?\nHow many versions of history will be stored in each type?\n🟦 SQL Concepts\n2️⃣ A table has a column Id defined as IDENTITY(). It has 5 rows.\na. If all 5 rows are deleted and a new row is inserted, what will be the Id value?\nb. If all 5 rows are truncated and a new row is inserted, what will be the Id value?\n3️⃣ How many NULL values can a primary key and a unique key have?\n4️⃣ Given the below tables:\nTable ATable B1111001111\n\nHow many rows will an INNER JOIN produce?\nHow many rows will a LEFT ANTI JOIN produce?\n5️⃣ A table has columns: user, activity, timestamp.\nHow do you find each user's latest activity?\n🟦 Indexing\n6️⃣ How many clustered indexes can a table have?\n7️⃣ How many non-clustered indexes can a table have?\n🟦 Apache Spark & Databricks\n8️⃣ What are cache() and persist() in Spark?\nIf memory is not sufficient, what happens in both cases?\n9️⃣ What are bucketing, repartition, and coalesce in Spark?\n🔟 What is the difference between RANK() and DENSE_RANK() in Spark SQL?\n1️⃣1️⃣ What are optimizations, ZORDER BY, and VACUUM in Databricks?\n1️⃣2️⃣ In Unity Catalog, if the storage is external and Delta Lake is managed storage,\nHow do you recover data if it is lost in each case?\n1️⃣3️⃣ What is the default size of broadcast variable in Spark?\nIs it configurable? If yes, how? (Write code example)\n1️⃣4️⃣ How do you create a Spark session? (Write code example)\n1️⃣5️⃣ How do you restore a table in Delta Lake? (Write the command)\n\n✅ #AzureDataEngineer #CGI #DataEngineering #ADF #Databricks #ApacheSpark #SQL #InterviewPreparation #BigData #DeltaLake #UnityCatalog #PySpark #LinkedInNetworking",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post lists technical questions from an Azure Data Engineer interview at CGI. It covers dimensional modeling, SQL constraints and queries, indexing, Apache Spark, Databricks, Delta Lake, and Unity Catalog. The post does not provide answers, code examples, configuration values, or recovery procedures. The Tables A and B formatting is corrupted, so their join row counts cannot be determined from the supplied content.",
+    "topics": [
+      "Technical interview preparation",
+      "Data warehousing and modeling",
+      "SQL",
+      "Indexing",
+      "Apache Spark",
+      "Databricks",
+      "Delta Lake",
+      "Unity Catalog",
+      "PySpark"
+    ],
+    "subtopics": [
+      "Slowly Changing Dimension types and history",
+      "IDENTITY behavior after deletion and truncation",
+      "Primary-key and unique-key NULL rules",
+      "INNER JOIN and LEFT ANTI JOIN row counts",
+      "Finding each user's latest activity",
+      "Clustered and non-clustered index counts",
+      "Spark cache and persist under insufficient memory",
+      "Spark bucketing, repartition, and coalesce",
+      "Spark SQL RANK and DENSE_RANK",
+      "Databricks optimizations, ZORDER BY, and VACUUM",
+      "Recovery for external and managed Delta Lake storage",
+      "Spark broadcast variable size and configuration",
+      "Spark session creation",
+      "Delta Lake table restoration"
+    ],
+    "concepts": [
+      "Slowly Changing Dimension",
+      "IDENTITY",
+      "Primary key and unique key NULL rules",
+      "INNER JOIN and LEFT ANTI JOIN",
+      "Latest activity per user",
+      "Clustered and non-clustered indexes",
+      "Spark cache and persist",
+      "Spark bucketing, repartition, and coalesce",
+      "RANK and DENSE_RANK",
+      "Databricks optimizations, ZORDER BY, and VACUUM",
+      "Unity Catalog storage recovery",
+      "Spark broadcast variable configuration",
+      "Spark session creation",
+      "Delta Lake table restoration"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the Slowly Changing Dimension types, and how many versions of history does each type store?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Names each SCD type and states the number of historical versions retained by each type."
+    },
+    {
+      "question": "For a table with five rows and an IDENTITY Id column, what happens to the Id after all rows are deleted and a new row is inserted, and what happens after all rows are truncated and a new row is inserted?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Explains the resulting Id behavior after deletion and after truncation without assuming an initial Id value that the post does not provide."
+    },
+    {
+      "question": "How many NULL values can a primary key and a unique key contain?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "States the permitted NULL count for both a primary key and a unique key."
+    },
+    {
+      "question": "Given a table with user, activity, and timestamp columns, how do you find each user's latest activity?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Provides a SQL query using the stated columns that returns the latest activity for each user."
+    },
+    {
+      "question": "How many clustered indexes and how many non-clustered indexes can a table have?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "States the allowed number of clustered indexes and non-clustered indexes for a table."
+    },
+    {
+      "question": "What are cache() and persist() in Spark, and what happens with each when memory is insufficient?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Defines both methods and explains their respective behavior when available memory is insufficient."
+    },
+    {
+      "question": "How do bucketing, repartition, and coalesce differ in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Explains the purpose and differences of all three Spark operations."
+    },
+    {
+      "question": "What is the difference between RANK() and DENSE_RANK() in Spark SQL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Explains how the output of RANK() differs from the output of DENSE_RANK()."
+    },
+    {
+      "question": "What are ZORDER BY and VACUUM in Databricks?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Defines ZORDER BY and VACUUM in the Databricks context stated by the post."
+    },
+    {
+      "question": "In Unity Catalog, how should lost data be recovered when storage is external and when Delta Lake storage is managed?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "Describes a separate recovery approach for external storage and for managed Delta Lake storage."
+    },
+    {
+      "question": "What is the default size of the Spark broadcast variable, and can it be configured?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "States the default size, explains whether it is configurable, and shows the relevant configuration code if it is configurable."
+    },
+    {
+      "question": "How do you create a Spark session?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Provides a code example that creates a Spark session."
+    },
+    {
+      "question": "How do you restore a table in Delta Lake?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Provides the Delta Lake command used to restore the table."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Data warehousing and modeling",
+      "SQL",
+      "Indexing",
+      "Apache Spark",
+      "Databricks",
+      "Delta Lake",
+      "Unity Catalog"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4fd88fe742989ed7",
+    "saved_date": "2026-10-01T23:10:57Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "03ba774214da17cb5814196198ad7e977f20d584a9d6cda0a22eebcf7a9ab7d5",
+    "enricher_version": "3"
+  }
+}

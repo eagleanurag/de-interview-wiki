@@ -1,0 +1,136 @@
+{
+  "id": "urn-li-saved-39b04fac9232d283",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7353272605207879680",
+    "captured_at": "2026-10-02T00:15:46.553722Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:22Z"
+  },
+  "original_text": "30 Blogs to Learn 30 System Design Concepts:\n\n1. APIs: https://lnkd.in/dsbwPZ6N\n2. JWTs: https://lnkd.in/ghtXYRqU\n3. Webhooks: https://lnkd.in/geHxGX-7\n4. API Gateways: https://lnkd.in/gtyXmvf4\n5. Load Balancing: https://lnkd.in/gvxfwEUr\n6. Proxy vs Reverse Proxy: https://lnkd.in/gMTtidBq\n7. Scalability: https://lnkd.in/gPGhW-qK\n8. Availability: https://lnkd.in/gQk2p4_6\n9. SPOF: https://lnkd.in/gw_uHZWn\n10. CAP Theorem: https://lnkd.in/g_tFqJJb\n11. SQL vs NoSQL: https://lnkd.in/gHyC9qWc\n12. ACID Transactions: https://lnkd.in/dB3QHiMz\n13. Database Indexes: https://lnkd.in/g_-bQWtA\n14. Database Sharding: https://lnkd.in/g9mc-d5m\n15. Consistent Hashing: https://lnkd.in/gR9wFDpz\n16. CDC: https://lnkd.in/gWhGwh9Z\n17. Caching: https://lnkd.in/gBSeTstS\n18. Caching Strategies: https://lnkd.in/dVk7nZ_Y\n19. Cache Eviction Policies: https://lnkd.in/gQAEXEmq\n20. CDN: https://lnkd.in/gaW4Vkpy\n21. Rate Limiting Algorithms: https://lnkd.in/gYDxg8XY\n22. Message Queues: https://lnkd.in/g-jnNGDC\n23. Bloom Filters: https://lnkd.in/gfGjCrSZ\n24. Idempotency: https://lnkd.in/gDB3AJij\n25. Concurrency vs Parallelism: https://lnkd.in/gGZXhjBD\n26. Long Polling vs WebSockets: https://lnkd.in/d9xKD28K\n27. Stateful vs. Stateless Architecture: https://lnkd.in/gz_ccK-Y\n28. Batch vs Stream Processing: https://lnkd.in/gKtj_qWh\n29. Strong vs. Eventual Consistency: https://lnkd.in/gCc5cNdE\n30. REST vs GraphQL: https://lnkd.in/gM5VHKQS\n\n♻️ Repost to help others in your network.\n\n👉 Subscribe to my newsletter and get a FREE System Design Interview Handbook in your inbox: blog.algomaster.io",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7353272605207879680_slide_0.jpg",
+      "description": "JPEG image, 480x474 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a promotional list titled \"30 Blogs to Learn 30 System Design Concepts.\" It provides links for topics spanning APIs, databases, distributed-system design, caching, messaging, processing, and consistency. It does not define the concepts, explain their trade-offs, or provide examples; it only lists topic names and links before promoting a system design interview handbook.",
+    "topics": [
+      "API interfaces and communication",
+      "Scalability and resilience",
+      "Databases and transactions",
+      "Data distribution and consistency",
+      "Messaging and data movement",
+      "Caching and request handling",
+      "Application and processing architecture",
+      "Concurrency"
+    ],
+    "subtopics": [
+      "APIs",
+      "JWTs",
+      "Webhooks",
+      "API Gateways",
+      "Load Balancing",
+      "Proxy vs Reverse Proxy",
+      "Scalability",
+      "Availability",
+      "SPOF",
+      "CAP Theorem",
+      "SQL vs NoSQL",
+      "ACID Transactions",
+      "Database Indexes",
+      "Database Sharding",
+      "Consistent Hashing",
+      "CDC",
+      "Caching",
+      "Caching Strategies",
+      "Cache Eviction Policies",
+      "CDN",
+      "Rate Limiting Algorithms",
+      "Message Queues",
+      "Bloom Filters",
+      "Idempotency",
+      "Concurrency vs Parallelism",
+      "Long Polling vs WebSockets",
+      "Stateful vs. Stateless Architecture",
+      "Batch vs Stream Processing",
+      "Strong vs. Eventual Consistency",
+      "REST vs GraphQL"
+    ],
+    "concepts": [
+      "APIs",
+      "JWTs",
+      "Webhooks",
+      "API Gateways",
+      "Load Balancing",
+      "Proxy vs Reverse Proxy",
+      "Scalability",
+      "Availability",
+      "SPOF",
+      "CAP Theorem",
+      "SQL vs NoSQL",
+      "ACID Transactions",
+      "Database Indexes",
+      "Database Sharding",
+      "Consistent Hashing",
+      "CDC",
+      "Caching",
+      "Caching Strategies",
+      "Cache Eviction Policies",
+      "CDN",
+      "Rate Limiting Algorithms",
+      "Message Queues",
+      "Bloom Filters",
+      "Idempotency",
+      "Concurrency vs Parallelism",
+      "Long Polling vs WebSockets",
+      "Stateful vs. Stateless Architecture",
+      "Batch vs Stream Processing",
+      "Strong vs. Eventual Consistency",
+      "REST vs GraphQL"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "System Design",
+    "primary_topic": "System Design Learning Resources",
+    "secondary_topics": [
+      "API Design",
+      "Scalability and Availability",
+      "Database Design",
+      "Caching",
+      "Messaging",
+      "Data Consistency",
+      "Processing Architectures"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:39b04fac9232d283",
+    "saved_date": "2026-10-01T23:10:22Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7353272605207879680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7353272605207879680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "09ed4b5772fd273d0b1ebf7b75914f598b1ca445c7837ddc0e819ebfba462349",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

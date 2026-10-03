@@ -1,0 +1,97 @@
+{
+  "id": "urn-li-archive-06dce9de1efe8316",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.841468Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:05Z"
+  },
+  "original_text": "Microsoft Interview Experience \nCompensation Range: 35LPA + 3L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n\n- Be prepared to talk about your experience\n- Be ready to answer technical questions\n- Be prepared to ask questions\n- Show enthusiasm and passion\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝟭\n\n- Be ready to solve coding problems on sql, python, pyspark.\n- How would you handle missing or invalid data in a data pipeline?\n- How do you secure data in a cloud environment?\n- How would you implement a binary search algorithm?\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝟮\n\n- How would you migrate a petabyte-scale database to Azure?\n- How would you implement real-time data ingestion in Azure using Event Hubs?\n- What are the best practices for optimizing storage costs in Azure Data Lake?\n\n𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗮𝗻𝗱 𝗱𝗲𝘀𝗶𝗴𝗻 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n\n- How would you architect a system that ingests and processes 1 TB of data daily?\n- Design a data pipeline that supports both batch and real-time processing.\n- Explain the impact of data skew in real-time stream processing.\n\n𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\n\n- Tell me about a time you had to manage someone’s performance. ​\n- Describe an incident where you learned from your past mistakes. ​\n- How do you set and work toward your goals?\n\nIf you are preparing for Data Engineering interviews then you should check these Interview Experiences for 100+ Companies\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\n#dataengineering #interviews #jobs\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A promotional Microsoft Data Engineer interview-experience post lists compensation of 35 LPA plus 3L variable, a referral application, a non-screen round, two technical rounds, an architecture and design round, and a managerial round. The technical prompts cover SQL, Python, PySpark, binary search, missing or invalid pipeline data, cloud data security, petabyte-scale database migration to Azure, real-time ingestion with Event Hubs, Azure Data Lake storage-cost optimization, processing 1 TB daily, batch and real-time pipelines, and data skew. The post does not provide interview answers, implementation guidance, or an interview result.",
+    "topics": [
+      "Microsoft Data Engineer interview experience",
+      "Data engineering interview preparation",
+      "SQL, Python, and PySpark coding",
+      "Cloud data security",
+      "Petabyte-scale database migration to Azure",
+      "Real-time data ingestion with Azure Event Hubs",
+      "Azure Data Lake storage-cost optimization",
+      "Data architecture and pipeline design",
+      "Data skew in real-time stream processing",
+      "Managerial and behavioral interviews"
+    ],
+    "subtopics": [
+      "Compensation and referral application",
+      "Non-screen interview preparation",
+      "Binary search implementation",
+      "Handling missing or invalid data",
+      "Securing data in a cloud environment",
+      "Migrating a petabyte-scale database to Azure",
+      "Implementing real-time ingestion with Event Hubs",
+      "Optimizing Azure Data Lake storage costs",
+      "Architecting ingestion and processing for 1 TB daily",
+      "Supporting both batch and real-time processing",
+      "Impact of data skew in stream processing",
+      "Managing another person's performance",
+      "Learning from mistakes",
+      "Setting and working toward goals"
+    ],
+    "concepts": [
+      "Data Engineer Interview Logistics",
+      "Interview Round Structure",
+      "SQL, Python, and PySpark Coding",
+      "Binary Search",
+      "Missing or Invalid Pipeline Data",
+      "Cloud Data Security",
+      "Petabyte-Scale Azure Migration",
+      "Event Hubs Real-Time Ingestion",
+      "Azure Data Lake Storage-Cost Optimization",
+      "Daily Data Architecture at 1 TB Scale",
+      "Batch and Real-Time Pipeline Support",
+      "Data Skew in Real-Time Stream Processing",
+      "Managerial and Behavioral Competencies"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "SQL, Python, and PySpark",
+      "Data Pipeline Quality and Security",
+      "Azure Data Engineering",
+      "Data Architecture and Scalability",
+      "Real-Time Stream Processing",
+      "Managerial and Behavioral Interviewing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:06dce9de1efe8316",
+    "saved_date": "2026-10-01T23:20:05Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a8946da8c5c94f16b9c68924f030e8b2cba95d79da07459d96efaa3facd0b31e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data quality in data pipelines"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

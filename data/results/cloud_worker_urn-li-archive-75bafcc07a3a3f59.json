@@ -1,0 +1,139 @@
+{
+  "id": "urn-li-archive-75bafcc07a3a3f59",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.515954Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:56Z"
+  },
+  "original_text": "Capgemini – Azure Data Engineer Interview Questions (L1 Round)\n📌 These are actual questions from recent Capgemini screening rounds — be ready to nail them!\n\n\n---\n\n🧠 Topics Covered: ADF, Databricks, Azure Storage, SQL, Monitoring\n\n1️⃣ How does parameterization work in Azure Data Factory (datasets, pipelines, linked services)?\n2️⃣ What are the key differences between Mapping Data Flows vs Data Flow Activities in ADF?\n3️⃣ How do you debug failures in ADF — what steps do you take to isolate the issue?\n4️⃣ What’s the difference between Azure Blob Storage and ADLS Gen2 in terms of performance and security?\n5️⃣ How do you handle incremental loads in ADF using a watermark or timestamp column?\n6️⃣ What are Mount Points in Azure Databricks, and how do you use them with ADLS?\n7️⃣ Write a SQL query to find second highest salary from an employee table.\n8️⃣ What are the different Integration Runtime types in ADF and their use cases?\n9️⃣ How do you trigger a Databricks notebook from ADF and pass values into it?\n🔟 What is the use of activity dependency conditions (e.g., success, failure, completion) in pipeline flows?",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post lists 10 questions claimed to be from recent Capgemini L1 screening rounds for Azure Data Engineer roles. It covers Azure Data Factory parameterization, data flows, debugging, incremental loads, Integration Runtime, and dependency conditions; Azure Databricks Mount Points and notebook integration; Azure Blob Storage and ADLS Gen2; SQL; and monitoring. It provides question prompts only, with no answers, explanations, examples, or technical details.",
+    "topics": [
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Storage",
+      "SQL",
+      "Monitoring"
+    ],
+    "subtopics": [
+      "ADF parameterization for datasets, pipelines, and linked services",
+      "Mapping Data Flows versus Data Flow Activities",
+      "ADF failure debugging",
+      "Azure Blob Storage versus ADLS Gen2",
+      "Incremental loads using watermarks or timestamp columns",
+      "Databricks Mount Points with ADLS",
+      "Finding the second-highest salary with SQL",
+      "ADF Integration Runtime types and use cases",
+      "Triggering Databricks notebooks from ADF and passing values",
+      "ADF activity dependency conditions"
+    ],
+    "concepts": [
+      "ADF parameterization",
+      "Mapping Data Flows and Data Flow Activities",
+      "ADF failure debugging",
+      "Azure Blob Storage and ADLS Gen2",
+      "Watermark-based incremental loads",
+      "Databricks Mount Points",
+      "Second-highest salary query",
+      "Integration Runtime types",
+      "ADF-triggered Databricks notebooks",
+      "Activity dependency conditions",
+      "Monitoring"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does parameterization work in Azure Data Factory datasets, pipelines, and linked services?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "What are the key differences between Mapping Data Flows and Data Flow Activities in Azure Data Factory?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "How would you debug a failure in Azure Data Factory and isolate the cause?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "What are the differences between Azure Blob Storage and ADLS Gen2 in terms of performance and security?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "How do you handle incremental loads in Azure Data Factory using a watermark or timestamp column?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "What are Mount Points in Azure Databricks, and how are they used with ADLS?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "Write a SQL query that finds the second-highest salary from an employee table.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": ""
+    },
+    {
+      "question": "What are the different Integration Runtime types in Azure Data Factory, and what are their use cases?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "How do you trigger a Databricks notebook from Azure Data Factory and pass values into it?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": ""
+    },
+    {
+      "question": "What is the purpose of activity dependency conditions such as success, failure, and completion in Azure Data Factory pipeline flows?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": ""
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Factory",
+    "secondary_topics": [
+      "Azure Databricks",
+      "Azure Blob Storage",
+      "ADLS Gen2",
+      "SQL",
+      "Monitoring"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:75bafcc07a3a3f59",
+    "saved_date": "2026-10-01T23:10:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8e41543ab342b1aba009c0d2af3ad5be34d1661cd7378d182590e9d1165002c9",
+    "enricher_version": "3"
+  }
+}

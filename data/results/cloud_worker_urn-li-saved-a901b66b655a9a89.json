@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-saved-a901b66b655a9a89",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7355944631584358400",
+    "captured_at": "2026-10-02T00:15:50.417970Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:48Z"
+  },
+  "original_text": "SAW a SQL question someone posted, without DDL and Solution.\n\nCREATE TABLE SEMP (\n empno INT PRIMARY KEY,\n emailid VARCHAR(100)\n);\n\n\nINSERT INTO SEMP (empno, emailid) VALUES\n(101, 'hari@kln.com'),\n(102, 'kumar@bcd.com'),\n(103, 'surya.k@abc.com'),\n(104, 'kalyan.h@xyz.co.in');\n\n\nSolution: \n\nSELECT\n empno,\n LEFT(emailid, CHARINDEX('@', emailid) - 1) AS ename,\n SUBSTRING(emailid, CHARINDEX('@', emailid) + 1,\n CHARINDEX('.', emailid, CHARINDEX('@', emailid)) - CHARINDEX('@', emailid) - 1\n ) AS orgname\nFROM SEMP;",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7355944631584358400_slide_0.jpg",
+      "description": "JPEG image, 480x197 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a SQL table named SEMP with an integer employee number as the primary key and a varchar email address. It inserts four sample employees and uses CHARINDEX, LEFT, and SUBSTRING to extract the employee number, the portion of emailid before the @ symbol as ename, and the portion between @ and the next dot as orgname.",
+    "topics": [
+      "SQL",
+      "SQL string functions",
+      "Email address parsing"
+    ],
+    "subtopics": [
+      "Creating a table with a primary key",
+      "Extracting text before a delimiter",
+      "Extracting text between delimiters",
+      "Using CHARINDEX with LEFT and SUBSTRING",
+      "Querying sample employee email addresses"
+    ],
+    "concepts": [
+      "SEMP table",
+      "CHARINDEX",
+      "LEFT",
+      "SUBSTRING",
+      "Nested delimiter search",
+      "Computed ename and orgname"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Explain how the query extracts ename and orgname from the emailid column.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The query finds the position of @ and uses LEFT with a length of that position minus one to extract the text before @.\nThe query finds the position of the next dot and uses its position to calculate the start and length passed to SUBSTRING."
+    },
+    {
+      "question": "Write a SQL query that returns empno, the text before @, and the text between @ and the next dot from SEMP.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query selects empno and calculates ename with LEFT and CHARINDEX.\nThe query calculates orgname with nested CHARINDEX calls used as the start and length arguments of SUBSTRING.\nThe query reads the source values from SEMP."
+    },
+    {
+      "question": "Why does the query pass CHARINDEX('@', emailid) as the third argument to the CHARINDEX call that searches for a dot?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The third argument sets the starting position for the dot search to the position of the @ symbol.\nThis lets the query calculate the segment after @ and before the following dot."
+    },
+    {
+      "question": "What ename and orgname values does the query derive for employee 103?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The ename is surya.k because it is the portion of surya.k@abc.com before @.\nThe orgname is abc because it is the portion after @ and before the next dot."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL string manipulation",
+    "secondary_topics": [
+      "Email address parsing",
+      "SQL table creation",
+      "String delimiter handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a901b66b655a9a89",
+    "saved_date": "2026-10-01T23:09:48Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7355944631584358400",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7355944631584358400_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "3f424f6c1ddf5493bd060a94badab5a7876d9d2bf58dd6827ce3d2aa18756675",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

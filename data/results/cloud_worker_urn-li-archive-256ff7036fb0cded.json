@@ -1,0 +1,71 @@
+{
+  "id": "urn-li-archive-256ff7036fb0cded",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.270514Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:41Z"
+  },
+  "original_text": "🚨 𝗦𝗤𝗟 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗗𝗮𝘆 – 𝗗𝗮𝘆 𝟲/𝟮𝟱\n\n🧩 𝗣𝗿𝗼𝗯𝗹𝗲𝗺 𝗦𝘁𝗮𝘁𝗲𝗺𝗲𝗻𝘁:\n\nYou’re given a table `Orders` that logs customer purchases.\nx -- x ----------------x -----------x ---------- x\n| id | customer_ name | product | quantity |\nx -- x ----------------x ---------- x -----------x\n| 1 | Alice | Pen | 2 |\n| 2 | Bob | Notebook | NULL |\n| 3 | Charlie | Pen | 3 |\n| 4 | Dana | Pencil | NULL |\n| 5 | Eva | Eraser | 1 |\nx -- x ----------------x ------------x --------- x\n\n🎯 𝗧𝗮𝘀𝗸:\nWrite a SQL query to return 𝗼𝗻𝗹𝘆 𝘁𝗵𝗼𝘀𝗲 𝗼𝗿𝗱𝗲𝗿𝘀 𝘄𝗵𝗲𝗿𝗲 𝘁𝗵𝗲 𝗾𝘂𝗮𝗻𝘁𝗶𝘁𝘆 𝗶𝘀 𝗻𝗼𝘁 𝗡𝗨𝗟𝗟.\n\n💡 𝗛𝗶𝗻𝘁: You can’t use `= NULL` in SQL – remember how to check for NULLs properly.\n\n🧠 Think before you scroll…\n✅ 𝗔𝗻𝘀𝘄𝗲𝗿 𝗶𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗰𝗼𝗺𝗺𝗲𝗻𝘁𝘀!\n📌 Follow for more daily SQL questions to level up your data interview game.\n\n#SQL #SQLChallenge #NullValues #DataJobs #TechInterview #25DaysOfSQL #Day6\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This Day 6 SQL challenge provides an Orders table containing customer purchase records and asks for a query that returns only rows where quantity is not NULL. The post hints that NULL values must be checked with proper SQL NULL syntax rather than comparison to NULL.",
+    "topics": [
+      "SQL",
+      "NULL handling",
+      "Data filtering"
+    ],
+    "subtopics": [
+      "Filtering rows with IS NOT NULL",
+      "Querying an Orders table"
+    ],
+    "concepts": [
+      "Orders Table",
+      "NULL",
+      "IS NOT NULL",
+      "Equality Comparison with NULL"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query that returns only rows from the Orders table where quantity is not NULL.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query selects from the Orders table and uses a WHERE clause with quantity IS NOT NULL.\nThe answer does not use = NULL to test for missing quantity values."
+    },
+    {
+      "question": "Which Orders records should be returned when filtering for rows where quantity is not NULL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The returned records are Alice's Pen order, Charlie's Pen order, and Eva's Eraser order.\nBob's Notebook order and Dana's Pencil order are excluded because their quantity values are NULL."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL NULL Filtering",
+    "secondary_topics": [
+      "WHERE Clauses",
+      "Data Quality"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:256ff7036fb0cded",
+    "saved_date": "2026-10-01T23:21:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "73bf355facd81725ea02482f963722089db79b9bc566637835452457202c5a67",
+    "enricher_version": "3"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "urn-li-saved-d7422a109ccd91f1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345350873159520256",
+    "captured_at": "2026-10-02T00:15:52.191373Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:14:45Z"
+  },
+  "original_text": "If you haven't got real-time Data Engineering experience\nHere's how you can make your own project for FREE !\n\nHere’s a step-by-step guide to take you from raw data to a Power BI dashboard-all with FREE cloud tools. No more excuses. \n\nIf you want to stand out, build and share real work.\n\nHere’s how you do it 👇\n\n1️⃣ Source Data (Python + Public Datasets)\n\nObjective: Ingest real-world data into your pipeline.\n\n- Use Python (`requests` or `pandas`) to fetch open datasets (CSV/JSON)\n- Good sources: datahub.io, Google Dataset Search, Kaggle\n- Save data locally or push to Azure Data Lake Gen2 / DBFS\n\n(example)\npython\nimport pandas as pd\nurl = \"https://lnkd.in/gc7rWW-K\"\ndf = pd.read_csv(url)\ndf.to_csv(\"global_temp.csv\", index=False)\n\n2️⃣ Transform in Databricks (PySpark)\n\nObjective: Clean and process data at scale using Spark.\n\n- Upload your CSV to Databricks (Community Edition is FREE)\n- Open a notebook, clean and join data with PySpark\n- Save as Delta table or write to external storage\n\n(example)\npython\ndf = spark.read.csv(\"/FileStore/global_temp.csv\", header=True, inferSchema=True)\ndf_cleaned = df.filter(\"Mean > 0\").withColumnRenamed(\"Mean\", \"MeanTemperature\")\ndf_cleaned.write.format(\"delta\").save(\"/mnt/processed/global_temp\")\n\n\n3️⃣ Load to Online Data Warehouse\n\nObjective: Store clean data for analytics/reporting.\n\n- Set up Azure SQL Database (free tier)\n- Use Databricks JDBC or pyodbc to load clean data\n\n(example)\npython\ndf_cleaned.write \\\n.format(\"jdbc\") \\\n.option(\"url\", \"jdbc:sqlserver://.database.windows.net:1433;database=\") \\\n.option(\"dbtable\", \"dbo.GlobalTemperature\") \\\n.option(\"user\", \"\") \\\n.option(\"password\", \"\") \\\n.mode(\"overwrite\") \\\n.save()\n\n4️⃣ Build Dashboards in Power BI\n\nObjective: Visualize data and derive insights.\n\n- Open Power BI Desktop\n- Connect to Azure SQL\n- Create line charts, KPIs, slicers\n- Publish to Power BI Service (optional)\n\n\nProject Structure:\n- /data → raw datasets (CSV/JSON)\n- /sql → transformation logic\n- /notebooks → Databricks notebooks\n- /tests → validation scripts\n- README.md → overview + setup\n\n\nKey Skills You Practice:\n• Python scripting\n• PySpark transformations\n• Databricks workflows\n• Azure SQL integration\n• Power BI reporting\n• Cloud-native workflow\n\n\nYou can use other tools like ADF for ingestion, key-vault for better security and airflow for scheduling your pipeline.\n\n\n💡 Add this project to your portfolio or use it in interviews. All tools are free or have generous tiers. No paid subscriptions.\n\n\nNeed help setting this up or want feedback on your repo? \nConnect 1:1 here ➡️ https://lnkd.in/gH4DeYb4\n\n\n♻️ Found this useful? Repost it to help others!\n➕ Follow for more daily Data Engineering guides.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345350873159520256_slide_0.jpg",
+      "description": "JPEG image, 480x260 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a free, portfolio-oriented project that moves public data from ingestion to reporting. Python fetches open CSV or JSON datasets and saves them locally or in cloud storage. Databricks Community Edition and PySpark then clean, filter, join, and rename the data before saving it as a Delta table or writing it to external storage. The processed data is loaded into Azure SQL Database through JDBC or pyodbc and connected to Power BI Desktop for line charts, KPIs, and slicers. It also suggests a repository structure containing data, SQL logic, notebooks, tests, and a README, plus optional use of ADF, Key Vault, and Airflow.",
+    "topics": [
+      "End-to-end data engineering portfolio project",
+      "Python data ingestion",
+      "Databricks and PySpark transformations",
+      "Delta tables",
+      "Azure SQL Database integration",
+      "Power BI dashboards",
+      "Cloud pipeline workflows"
+    ],
+    "subtopics": [
+      "Fetching public CSV and JSON datasets",
+      "Cleaning and joining data with PySpark",
+      "Loading data through JDBC or pyodbc",
+      "Visualizing Azure SQL data with Power BI",
+      "Organizing data, SQL, notebooks, and tests",
+      "Optional ingestion, security, and scheduling tools"
+    ],
+    "concepts": [
+      "Public dataset ingestion with Python",
+      "Local and cloud data staging",
+      "Databricks Community Edition",
+      "PySpark data cleaning",
+      "Delta table output",
+      "Azure SQL Database loading",
+      "Power BI reporting",
+      "Data project organization",
+      "Optional pipeline extensions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Describe the proposed flow from a public dataset to a Power BI dashboard.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Python retrieves a public CSV or JSON dataset and stores it locally or in cloud storage.\nDatabricks and PySpark clean and process the data before it is saved as a Delta table or written to external storage.\nThe clean data is loaded into Azure SQL Database and connected to Power BI Desktop for reporting."
+    },
+    {
+      "question": "Write the core PySpark transformation sequence shown for the global temperature dataset.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The sequence reads the CSV with a header and inferred schema.\nIt filters for rows where Mean is greater than zero and renames the Mean column to MeanTemperature.\nIt writes the cleaned DataFrame in Delta format to the processed path."
+    },
+    {
+      "question": "How does the example load cleaned Databricks data into Azure SQL Database?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The JDBC writer specifies the SQL Server URL, database, destination table, username, and password.\nThe destination table is dbo.GlobalTemperature in the example.\nThe data is written with overwrite mode."
+    },
+    {
+      "question": "What reporting steps and visual elements are proposed after Azure SQL Database is available?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Power BI Desktop connects to Azure SQL as the reporting data source.\nThe dashboard can include line charts, KPIs, and slicers.\nPublishing the dashboard to Power BI Service is optional."
+    },
+    {
+      "question": "Where would ADF, Key Vault, and Airflow fit into the proposed project?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "ADF is suggested as an alternative tool for ingestion.\nKey Vault is suggested as a way to improve security.\nAirflow is suggested as a tool for scheduling the pipeline."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "End-to-end cloud data pipeline project",
+    "secondary_topics": [
+      "Python data ingestion",
+      "PySpark transformations",
+      "Databricks",
+      "Azure SQL Database",
+      "Power BI reporting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d7422a109ccd91f1",
+    "saved_date": "2026-10-01T23:14:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345350873159520256",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345350873159520256_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2a0c645dee9c4929fb7ed18f814d3dba6e97f33780490d7f1cf492028dac591e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

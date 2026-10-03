@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-e3ed75a8e2064ab0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7475890208442347521",
+    "captured_at": "2026-10-02T00:15:52.773498Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:16Z"
+  },
+  "original_text": "Data Engineer | Azure | Databricks | PySpark | ETL | SQL | Open to opportunities in Gurgaon | Immediate Joiner\n3mo •\nA lot of you have reached out to me asking for interview preparation videos and guidance.\nThis time, I wanted to do it in a more structured and practical way.\n🎯 So, I'm starting a new YouTube series: Interview Preparation Series\nIn this series, I'll cover:\n✅ PySpark Interview Questions\n✅ SQL Interview Questions\n✅ Data Engineering Scenarios\n✅ Real Interview Questions Asked by many Companies\n✅ Hands-on Explanations with Examples\n✅ Tips to Crack Data Engineer Interviews\nWhether you're a fresher, an aspiring Data Engineer, or someone preparing for product-based and analytics companies, this series will help you strengthen your concepts and boost your confidence.\n📺 Episode 1 is live now! ( Interview Question asked in Tiger Analytics)\nI'd love your support and feedback. If you find the content useful, feel free to like, share, and subscribe.\n#DataEngineering #PySpark #SQL #Azure #Databricks #TigerAnalytics #InterviewPreparation #DataEngineer #CareerGrowth #TechJobs #Learning #YouTube\nTiger Analytics Data Engineer Interview Questions & Answers | PySpark, SQL, ADF | Part 1\nyoutube.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7475890208442347521_slide_0.jpg",
+      "description": "JPEG image, 800x450 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional announcement for a YouTube data engineering interview preparation series. It states that future episodes will cover PySpark and SQL interview questions, data engineering scenarios, questions reported as being asked by companies, hands-on examples, and interview tips. It advertises the first episode as a Tiger Analytics data engineer interview discussion and mentions Azure Databricks, PySpark, SQL, ETL, and ADF in its text or title. No technical questions, answers, techniques, or examples are actually provided.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering Careers and Interview Preparation",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e3ed75a8e2064ab0",
+    "saved_date": "2026-10-01T23:07:16Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7475890208442347521",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7475890208442347521_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4264a9ff3f96e006c372aa0e088fe21a6ea3e0058eaa21acef42cc6f9c5ba325",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

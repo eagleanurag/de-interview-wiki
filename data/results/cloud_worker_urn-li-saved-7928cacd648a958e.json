@@ -1,0 +1,104 @@
+{
+  "id": "urn-li-saved-7928cacd648a958e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341653522993528832",
+    "captured_at": "2026-10-02T00:15:48.511165Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:17Z"
+  },
+  "original_text": "🧠 PySpark Window Functions — The Secret Weapon Most Data Engineers Overlook\n\nIf you’re still relying solely on groupBy() in your PySpark pipelines, it’s time to level up.\n\nWhile groupBy() is great for collapsing data and summarizing across groups, it destroys the row-level context. That’s where Window Functions come in — they give you the power to perform complex analytics without collapsing the data.\n\n⸻\n\n⚙️ What Can You Do With Window Functions?\n\nWith just a few lines of code, you can:\n✅ Get the latest record per user\n✅ Rank items within each category\n✅ Compare a row to its previous or next one\n✅ Compute running totals, moving averages, and more\n\nAll while preserving every row in your dataset.\n\n🎯 Why This Matters\n\nAs Data Engineers, we often work with time-based event logs, user histories, or ranking scenarios.\n\nWindow functions let us solve these problems cleanly, keeping the dataset intact, scalable, and readable.\n\n⸻\n\nIf you’re not using them yet, start today.\nYour future self (and your pipelines) will thank you.\n\n#DataEngineering #PySpark #WindowFunctions #BigData #ETL #SparkSQL #CareerTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341653522993528832_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a high-level introduction to PySpark window functions and their role in preserving row-level context while performing analytics. It contrasts them with groupBy(), which collapses data into group-level summaries, and highlights use cases involving user histories, event logs, rankings, comparisons between adjacent rows, running totals, and moving averages. The post does not provide code or implementation details.",
+    "topics": [
+      "PySpark window functions",
+      "Row-level data analytics",
+      "Grouped aggregation",
+      "User history analysis",
+      "Time-based event log analysis",
+      "Ranking and running calculations"
+    ],
+    "subtopics": [
+      "Preserving rows while calculating analytics",
+      "Finding the latest record per user",
+      "Ranking items within categories",
+      "Comparing previous and next rows",
+      "Computing running totals",
+      "Computing moving averages"
+    ],
+    "concepts": [
+      "PySpark Window Functions",
+      "groupBy()",
+      "Row-Level Context",
+      "Latest Record per User",
+      "Ranking within Categories",
+      "Adjacent Row Comparison",
+      "Running and Moving Calculations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do PySpark window functions differ from groupBy() when processing data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "groupBy() collapses records into group-level summaries and therefore removes row-level context.\nWindow functions perform analytical calculations while preserving every row in the dataset."
+    },
+    {
+      "question": "What analytical tasks can PySpark window functions perform without collapsing the data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "They can identify the latest record per user and rank items within categories.\nThey can compare a row with its previous or next row.\nThey can compute running totals and moving averages while retaining every row."
+    },
+    {
+      "question": "A PySpark pipeline must analyze user histories while retaining individual records. Why would window functions be more suitable than relying only on groupBy()?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Window functions preserve the records and row-level context needed for user-history analysis.\nUsing only groupBy() would collapse the data into summaries and remove individual row context.\nWindow functions can support tasks such as finding the latest record for each user without collapsing the dataset."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark window functions",
+    "secondary_topics": [
+      "Row-preserving analytics",
+      "User history analysis",
+      "Time-based event log processing",
+      "Ranking",
+      "Running totals and moving averages"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7928cacd648a958e",
+    "saved_date": "2026-10-01T23:15:17Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341653522993528832",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341653522993528832_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2c9c3315006f92823b57266afa67ba449a9652674d60f100389f2ac48d236e14",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

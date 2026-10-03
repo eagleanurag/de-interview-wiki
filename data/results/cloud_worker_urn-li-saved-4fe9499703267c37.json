@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-saved-4fe9499703267c37",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340223573149560832",
+    "captured_at": "2026-10-02T00:15:47.398116Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:53Z"
+  },
+  "original_text": "AWS Certified Data Engineer | 4 Years Experience | SQL | Python | ETL | PySpark | Spark SQL | AWS | Data Warehousing\n1yr •\n🚀 20 𝑺𝒆𝒄𝒓𝒆𝒕𝒔 𝒕𝒐 𝑶𝒑𝒕𝒊𝒎𝒊𝒛𝒊𝒏𝒈 𝑺𝑸𝑳 𝑸𝒖𝒆𝒓𝒊𝒆𝒔 — 𝑨 𝑮𝒖𝒊𝒅𝒆 𝑰 𝑪𝒓𝒆𝒂𝒕𝒆𝒅 𝒇𝒐𝒓 𝑬𝒗𝒆𝒓𝒚 𝑫𝒂𝒕𝒂 𝑷𝒓𝒐𝒇𝒆𝒔𝒔𝒊𝒐𝒏𝒂𝒍 🚀\nWriting 𝑺𝑸𝑳 is one thing. Writing 𝒉𝒊𝒈𝒉-𝒑𝒆𝒓𝒇𝒐𝒓𝒎𝒂𝒏𝒄𝒆 𝑺𝑸𝑳 is a whole different skill set.\nTo help bridge that gap, I’ve put together a practical guide: “20 𝑺𝒆𝒄𝒓𝒆𝒕𝒔 𝒕𝒐 𝑶𝒑𝒕𝒊𝒎𝒊𝒛𝒊𝒏𝒈 𝑺𝑸𝑳 𝑸𝒖𝒆𝒓𝒊𝒆𝒔” — distilled from real-world experience, tuning pain points, and best practices.\n📘 𝑾𝒉𝒂𝒕 𝒚𝒐𝒖’𝒍𝒍 𝒍𝒆𝒂𝒓𝒏 𝒊𝒏 𝒕𝒉𝒊𝒔 𝒈𝒖𝒊𝒅𝒆:\n✅ Smart indexing strategies\n✅ Why to avoid SELECT *\n✅ How to paginate efficiently\n✅ Choosing the right JOINs (INNER, LEFT, EXISTS)\n✅ Eliminating unnecessary subqueries\n✅ Handling wildcards and WHERE clause pitfalls\n✅ Materialized views, execution plans, batching, stats tuning — and more\n💡 Whether you’re a data analyst, engineer, or backend developer — this cheat sheet will help you fine-tune your queries and avoid common bottlenecks.\n📄 𝑰 𝒄𝒓𝒆𝒂𝒕𝒆𝒅 𝒕𝒉𝒊𝒔 𝒅𝒐𝒄𝒖𝒎𝒆𝒏𝒕 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒄𝒐𝒎𝒎𝒖𝒏𝒊𝒕𝒚 𝒕𝒐 𝒔𝒖𝒑𝒑𝒐𝒓𝒕 𝒊𝒏𝒕𝒆𝒓𝒗𝒊𝒆𝒘 𝒑𝒓𝒆𝒑, 𝒓𝒆𝒂𝒍-𝒘𝒐𝒓𝒍𝒅 𝑺𝑸𝑳 𝒕𝒖𝒏𝒊𝒏𝒈 𝒂𝒏𝒅 𝒅𝒂𝒚-𝒕𝒐-𝒅𝒂𝒚 𝒅𝒆𝒃𝒖𝒈𝒈𝒊𝒏𝒈.\n𝑬𝒗𝒆𝒓𝒚 𝒅𝒂𝒚, 𝑰 𝒅𝒊𝒗𝒆 𝒅𝒆𝒆𝒑𝒆𝒓 𝒊𝒏𝒕𝒐 𝒂𝒏𝒅 𝒔𝒉𝒂𝒓𝒆 𝒌𝒏𝒐𝒘𝒍𝒆𝒅𝒈𝒆 𝒐𝒏:\n🚀 Advanced Data Engineering\n🚀 Python/SQL Optimization\n🚀 AWS Ecosystem & Cloud Solutions\n🚀 Databricks & PySpark\nRepost if you found it useful. Follow Ujjwal Sontakke Jain for #Data related post.\n#SQL #QueryOptimization #DataEngineering #PerformanceTuning #SQLTips #DatabaseDesign #SQLBestPractices #LearningTogether #UjjwalTechTalks #ETL #BackendDevelopment\n20_Secrets_To_Optimizing_SQL_Queries",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340223573149560832_slide_0.jpg",
+      "description": "PNG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post for a guide titled \"20 Secrets to Optimizing SQL Queries.\" It claims the guide draws on real-world experience, tuning pain points, and best practices, and it lists subjects such as indexing, SELECT *, pagination, JOINs, subqueries, wildcards, WHERE clauses, materialized views, execution plans, batching, and statistics tuning. However, the post does not actually explain these subjects or provide SQL examples, techniques, findings, or figures. It also mentions the author's experience with data engineering, Python, ETL, PySpark, Spark SQL, AWS, data warehousing, Databricks, and AWS cloud solutions.",
+    "topics": [
+      "Data engineering"
+    ],
+    "subtopics": [
+      "Indexing strategies",
+      "SELECT * usage",
+      "Efficient pagination",
+      "INNER, LEFT, and EXISTS JOIN choices",
+      "Unnecessary subqueries",
+      "Wildcards and WHERE clause pitfalls",
+      "Materialized views",
+      "Execution plans",
+      "Batching",
+      "Statistics tuning"
+    ],
+    "concepts": [
+      "High-performance SQL",
+      "Indexing strategies",
+      "Avoiding SELECT *",
+      "Efficient pagination",
+      "JOIN selection",
+      "Subquery elimination",
+      "Wildcard and WHERE clause pitfalls",
+      "Materialized views",
+      "Execution plans",
+      "Batching and statistics tuning"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL query optimization",
+    "secondary_topics": [
+      "SQL performance tuning",
+      "Data warehousing",
+      "ETL"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4fe9499703267c37",
+    "saved_date": "2026-10-01T23:17:53Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340223573149560832",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340223573149560832_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7340223573149560832_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "55bc4eb9f578c7c83947002954caa0e7d2f9e34b5e9117578a0a01de32b3318f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "SQL query optimization",
+        "SQL performance tuning"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

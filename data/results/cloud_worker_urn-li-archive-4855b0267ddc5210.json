@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-archive-4855b0267ddc5210",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.726523Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:53Z"
+  },
+  "original_text": "If you’re just getting into Data Engineering, always remember:\nSQL → Data Modeling → ETL → Orchestration\n\nNot the other way around.\n\nSQL → To actually understand your data\nData Modeling → To make sense of chaos\nETL → To move, clean, and transform at scale\nOrchestration → To keep the whole thing running (even at 2 am)\n\nChase the flashy tools later.\nFirst, get these basics down, because every “data fire” starts with a skipped step here.\n\nShare this if you agree. \n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post recommends that aspiring data engineers learn foundational skills in the order SQL, data modeling, ETL, and orchestration. It presents SQL as the foundation for understanding data, data modeling as a way to make sense of disorderly information, ETL as the process of moving, cleaning, and transforming data at scale, and orchestration as keeping the overall process running. It advises beginners to establish these basics before pursuing flashy tools.",
+    "topics": [
+      "Data Engineering Fundamentals",
+      "SQL",
+      "Data Modeling",
+      "ETL",
+      "Orchestration"
+    ],
+    "subtopics": [
+      "Recommended Data Engineering Learning Order",
+      "Role of SQL",
+      "Role of Data Modeling",
+      "ETL Processes",
+      "Pipeline Orchestration"
+    ],
+    "concepts": [
+      "SQL",
+      "Data Modeling",
+      "ETL",
+      "Orchestration",
+      "Data Engineering Learning Sequence"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What learning sequence does the post recommend for someone starting in Data Engineering?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The recommended sequence is SQL, data modeling, ETL, and orchestration.\nThe post argues that foundational skills should be learned before flashy tools."
+    },
+    {
+      "question": "What purpose does each stage of the recommended Data Engineering foundation serve?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SQL helps a data engineer understand the data.\nData modeling helps make sense of chaotic data.\nETL moves, cleans, and transforms data at scale.\nOrchestration keeps the overall process running."
+    },
+    {
+      "question": "Why does the post recommend learning Data Engineering basics before pursuing flashy tools?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post treats SQL, data modeling, ETL, and orchestration as the core foundation of Data Engineering.\nIt argues that problems arise when one of these foundational steps is skipped."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Fundamentals",
+    "secondary_topics": [
+      "SQL",
+      "Data Modeling",
+      "ETL",
+      "Orchestration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4855b0267ddc5210",
+    "saved_date": "2026-10-01T23:12:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b9e2494658ccb47ba477f752102caa0fbd26a6b93738a49f40d8fa8e06bbd82f",
+    "enricher_version": "3"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-archive-f439c2a71fa71356",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.180359Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:49Z"
+  },
+  "original_text": "Not a joke, many Data Engineers don’t fully understand the Medallion architecture or their caveats.\n\n\nHere’s a simple, crisp breakdown of the Medallion Architecture and why each layer matters:\n\n\n🔹 Bronze (Raw Ingestion)\n\n- All incoming data lands here-> logs, JSON, CSV, streaming events\n- Data stays in its original form (think Delta Lake tables)\n- Use schema-on-read to keep raw JSON/XML (no forced schema yet)\n- Partition by ingest date/hour for fast file pruning\n- Add audit columns (ingest_timestamp, source_file, batch_id) for full traceability\n\nWhy care? Bronze is your “source of truth.” You can recover, reprocess, or track every record.\n\n\n🔹 Silver (Cleansed & Curated)\n\n- Cleaned, standardized view of Bronze data\n- Enforce data types, drop nulls, fill defaults (schema-on-write)\n- Use joins and dedupe logic (window functions help remove duplicates)\n- Add data profiling and constraints (NOT NULL, CHECK) to stop bad data early\n\nWhy care? Silver gives you reliable, consistent tables for analytics, reports, and ML models.\n\n\n🔹 Gold (Business Aggregations)\n\n- Highly curated, aggregated tables or dimensional models\n- Pre-compute metrics (daily active users, revenue by region)\n- Use Slowly Changing Dimension (SCD) for customer data\n- Partition and Z-order in Delta for super-fast queries\n\n\nWhy care? Gold delivers high-performance datasets for BI tools and ML feature stores.\n\n\nKey Benefits Across Layers\n\n1. Modularity & Maintainability – Keep ingestion, cleaning, and aggregation logic separate\n2. Data Quality – Catch issues step by step\n3. Scalability – Stream and batch workloads scale on their own\n4. Governance & Lineage – Track every change with audit columns and Delta logs\n\n\nWhat else you would like to add here ?\n\n\n♻️ Found this useful? Repost it!\n➕ Follow for more daily insights on building robust data solutions.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents Medallion Architecture as a three-layer data design: Bronze stores raw ingested data for traceability and reprocessing, Silver cleanses and standardizes it with enforced schemas, constraints, joins, and deduplication, and Gold provides curated aggregates and dimensional models for analytics, business intelligence, and machine learning. It also describes Delta Lake practices such as ingestion-date partitioning, Z-ordering, and Delta logs, along with audit columns, data quality, modularity, scalability, governance, and lineage benefits.",
+    "topics": [
+      "Medallion Architecture",
+      "Data ingestion",
+      "Data quality",
+      "Data modeling",
+      "Delta Lake"
+    ],
+    "subtopics": [
+      "Bronze raw ingestion",
+      "Silver data cleansing and curation",
+      "Gold business aggregations",
+      "Schema-on-read and schema-on-write",
+      "Partitioning and file pruning",
+      "Deduplication with window functions",
+      "Slowly Changing Dimensions",
+      "Data governance and lineage"
+    ],
+    "concepts": [
+      "Bronze Layer",
+      "Silver Layer",
+      "Gold Layer",
+      "Schema-on-Read",
+      "Schema-on-Write",
+      "Auditability and Lineage",
+      "Layered Data Quality"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the roles of the Bronze, Silver, and Gold layers in Medallion Architecture?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Bronze preserves incoming data in its original form and provides traceability, recovery, and reprocessing capabilities.\nSilver cleanses and standardizes Bronze data through schema enforcement, constraints, joins, and deduplication.\nGold provides curated aggregates or dimensional models for business intelligence and machine learning use cases."
+    },
+    {
+      "question": "How does Medallion Architecture use schema-on-read and schema-on-write?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Bronze can preserve raw JSON or XML with schema-on-read rather than forcing a schema during ingestion.\nSilver uses schema-on-write to enforce data types, handle nulls and defaults, and apply constraints."
+    },
+    {
+      "question": "How would you process incoming records that may contain duplicates before exposing analytics-ready metrics?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Incoming records would first land in Bronze with their original form and audit metadata for traceability.\nSilver would cleanse and standardize the records, apply constraints, and use joins and window functions to remove duplicates.\nGold would expose curated tables or precomputed metrics for analytics, with partitioning or Z-ordering used when appropriate."
+    },
+    {
+      "question": "Why should ingestion, cleansing, and aggregation logic be separated into different Medallion layers?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Separation improves modularity and maintainability by keeping each stage focused on a distinct responsibility.\nIt supports step-by-step data quality checks and allows stream and batch workloads to scale separately.\nIt creates clear points for audit columns and Delta logs to support governance and lineage."
+    },
+    {
+      "question": "How can an engineer trace and reprocess data after it has entered the Bronze layer?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Audit columns such as ingest_timestamp, source_file, and batch_id can identify where and when a record entered the pipeline.\nBronze preserves the original data so it can be tracked, recovered, or reprocessed.\nDelta logs can support governance and lineage across the layered data flow."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Medallion Architecture",
+    "secondary_topics": [
+      "Raw Data Ingestion",
+      "Data Cleansing",
+      "Data Quality",
+      "Delta Lake",
+      "Business Intelligence Data Modeling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f439c2a71fa71356",
+    "saved_date": "2026-10-01T23:09:49Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "74bb4ddf749181cb68493183346a9c0ccaa1541fed2ccca7084c3cf1f2e84d30",
+    "enricher_version": "3"
+  }
+}

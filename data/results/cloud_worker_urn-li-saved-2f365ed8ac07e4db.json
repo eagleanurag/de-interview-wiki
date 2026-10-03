@@ -1,0 +1,115 @@
+{
+  "id": "urn-li-saved-2f365ed8ac07e4db",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7357640130028822529",
+    "captured_at": "2026-10-02T00:15:46.132114Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:45Z"
+  },
+  "original_text": "🎯 SQL Interview Prep Just Got More Interesting!\n This one question tested everything from joins to window functions — and I loved every bit of it! 🔥\n\n🧩 The Challenge:\n From movie rating data, I had to find:\n 🎬 The highest-rated movie in Feb 2020\n 🙋‍♂️ The most active reviewer (by number of ratings)\nSounds simple? It’s not — unless you master:\n ✅ Joins\n ✅ CTEs\n ✅ AVG(), COUNT()\n ✅ DENSE_RANK() and ROW_NUMBER()\n ✅ Smart filtering using dates\n\n🔍 What I Did:\n 🧠 Broke the problem down using 3 CTEs\n 📅 Filtered ratings from February 2020\n 🏆 Used ranking functions to get top movie & top user\n 💡 Combined results using UNION ALL — just two clean rows, all insights packed!\n\n📈 Why This Matters in Interviews:\n 🎯 It shows you understand business logic\n 🧠 You can apply real SQL tools like ranking and aggregation\n 🚀 You can communicate insights, not just write queries\n\n🙏 Shoutout to Ankit Bansal constantly guiding me to think deeper and write cleaner SQL. Your mentorship is gold! 💎\n\n👨‍🎓 If you're preparing for interviews — practice problems like this.\n \n#SQLInterview #DataAnalytics #LearningSQL #StudentsInTech #InterviewPreparation #SQLProjects #CTE #WindowFunctions #MentorshipMatters #AnkitBansal #SQLChallenge",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7357640130028822529_slide_0.jpg",
+      "description": "JPEG image, 480x242 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a SQL interview challenge involving movie rating data. The goal was to find the highest-rated movie in February 2020 and the most active reviewer by number of ratings. The author says the solution used three CTEs, joins, AVG(), COUNT(), DENSE_RANK(), ROW_NUMBER(), date filtering, and UNION ALL to produce two result rows. The post presents these skills as evidence of business-logic understanding, SQL proficiency, and the ability to communicate insights. It does not provide the SQL query, data schema, join conditions, exact assignment of ranking functions, or tie-handling behavior.",
+    "topics": [
+      "SQL interview preparation",
+      "Movie rating analysis",
+      "Joins",
+      "Common table expressions",
+      "Aggregate functions",
+      "Window functions",
+      "Date filtering",
+      "Set operations"
+    ],
+    "subtopics": [
+      "Finding the highest-rated movie for February 2020",
+      "Finding the most active reviewer by rating count",
+      "Breaking a query into three CTEs",
+      "Ranking movies and reviewers",
+      "Combining results with UNION ALL"
+    ],
+    "concepts": [
+      "Joins",
+      "Common table expressions (CTEs)",
+      "AVG()",
+      "COUNT()",
+      "DENSE_RANK()",
+      "ROW_NUMBER()",
+      "Date filtering",
+      "UNION ALL",
+      "Business-logic translation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the described solution use three CTEs to approach the movie-rating challenge?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution organizes the work into three CTEs.\nThe query filters ratings to February 2020 and uses ranking to identify the top movie and top user.\nThe answer should not invent CTE definitions, table names, join keys, or columns because the post does not provide them."
+    },
+    {
+      "question": "Which calculations and ranking functions are relevant to finding the highest-rated movie and the most active reviewer?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "AVG() and COUNT() are identified as aggregate functions used in the solution.\nReviewer activity is measured by the number of ratings.\nDENSE_RANK() and ROW_NUMBER() are named as the ranking functions used to obtain the top movie and top user.\nThe post does not specify which ranking function was assigned to each result or how ties were handled."
+    },
+    {
+      "question": "Why did the solution use UNION ALL, and what final output did the post describe?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "UNION ALL was used to combine the top-movie and top-reviewer results.\nThe combined output contained two clean rows.\nThe post does not provide the exact column layout or the underlying SELECT statements."
+    },
+    {
+      "question": "What technical skills does the post say this SQL challenge demonstrates in an interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The challenge tests joins, CTEs, aggregate functions, ranking functions, and date filtering.\nIt demonstrates the ability to translate business requirements into SQL.\nIt also emphasizes communicating analytical insights rather than only writing a query."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL movie rating analysis",
+    "secondary_topics": [
+      "CTEs",
+      "Joins",
+      "Aggregation",
+      "Window functions",
+      "Date filtering",
+      "UNION ALL",
+      "SQL interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2f365ed8ac07e4db",
+    "saved_date": "2026-10-01T23:09:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7357640130028822529",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7357640130028822529_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d6fbb6c1bd10da2d923bb2261b56859f46749502989bf04f455cb8b0e2c1c138",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "urn-li-saved-fa52410dce01214f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7359647311267864578",
+    "captured_at": "2026-10-02T00:15:53.514086Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:05Z"
+  },
+  "original_text": "Abhirup Pal actually brought up an interesting scenario related to Databricks ALL Purpose Compute and Serverless clusters how they behave differently with respect to casting the columns.\n\n\"Turns out Serverless have Stricter Type casting rules or lacks certain implicit conversions available in All Purpose/Job Cluster Environments.\"\n\nActually he was kind enough to give me an EXAMPLE as well to try it out: Below and in the Screenshot\n\ndata = [\n (\"123\",), # valid\n (\"00456\",), # valid with leading zeros\n (\"abc\",), # invalid\n (\"12.34\",), # invalid for BIGINT\n (\"\",), # empty string\n (None,), # null value\n]\nSo, what do you think the default behavior of spark should be?\n\n1) Should it fail the casting altogether from String to Bigint, and float to bigint?\n2) Should it convert float to integer, and have NULLS for others?\n3) Should it convert float to NULL as well?\n\n\nAll Purpose Compute used : 16.2 DBR\nServerless: Both Version 2,3\n\nEDiT: Sergiibmemtioned the reason related to ansi sql on by default in serverless. \n\nThe question now why it’s off in classic compute and on in serverless?\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7359647311267864578_slide_0.jpg",
+      "description": "JPEG image, 480x260 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post reports that Databricks Serverless Compute applies stricter Spark type-casting rules and lacks some implicit conversions available in All Purpose Compute and Job Cluster environments. It provides sample string values for an attempted BIGINT cast but does not state the actual results or select among the proposed default behaviors for invalid, empty, or null values. An edit attributes the difference to ANSI SQL being enabled by default in Serverless Compute, while leaving unanswered why it is disabled in classic compute and enabled in Serverless Compute. The supplied content ends with \"see more\" and contains no extracted media text, so the outcome and configuration discussion are incomplete.",
+    "topics": [
+      "Databricks",
+      "Apache Spark",
+      "Data type casting"
+    ],
+    "subtopics": [
+      "All Purpose Compute versus Serverless Compute",
+      "String-to-BIGINT casting",
+      "Implicit type conversions",
+      "ANSI SQL mode",
+      "Empty-string and NULL handling"
+    ],
+    "concepts": [
+      "Databricks All Purpose Compute",
+      "Databricks Serverless Compute",
+      "String-to-BIGINT casting",
+      "Implicit type conversion",
+      "ANSI SQL mode",
+      "Empty-string and NULL casting inputs"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the reported scenario, how does type-casting behavior differ between Databricks All Purpose Compute and Serverless Compute?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The post characterizes Serverless Compute as having stricter casting rules and lacking certain implicit conversions available in All Purpose or Job Cluster environments.\nThe reported test used 16.2 DBR for All Purpose Compute and Serverless versions 2 and 3."
+    },
+    {
+      "question": "How should the supplied example be interpreted when casting string values to BIGINT?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The values \"123\" and \"00456\" are explicitly labeled valid, including the leading-zero value.\nThe values \"abc\" and \"12.34\" are explicitly labeled invalid, with the latter specified as invalid for BIGINT.\nThe source does not state how the empty string and null value should be handled or choose among the proposed casting policies."
+    },
+    {
+      "question": "What ANSI SQL-mode observation is associated with the casting difference, and what explanation remains missing?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The edit says ANSI SQL is on by default in Serverless Compute and identifies that setting as related to the casting difference.\nThe supplied content does not explain why ANSI SQL is off in classic compute and on in Serverless Compute.\nThe post associates ANSI SQL mode with the difference without providing a complete causal explanation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks Spark type casting",
+    "secondary_topics": [
+      "Databricks compute environments",
+      "Implicit type conversions",
+      "ANSI SQL mode",
+      "NULL and empty-string handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fa52410dce01214f",
+    "saved_date": "2026-10-01T23:09:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7359647311267864578",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7359647311267864578_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "26af1ef5d4481408f864ffa4a10ea0642833c5c87186e5ce885086fcd9c3599a",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

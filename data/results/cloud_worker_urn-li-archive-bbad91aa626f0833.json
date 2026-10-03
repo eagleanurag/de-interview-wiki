@@ -1,0 +1,109 @@
+{
+  "id": "urn-li-archive-bbad91aa626f0833",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.047471Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:41Z"
+  },
+  "original_text": "If I were to start learning #python again for analytics, this is how I would prioritize topics for learning:\n\nWeek 1: Learning python basics + Control flow Statement\n⏩ Syntax, data types, variables, and basic operations\n⏩If-Else condition, For and While loop ,Functions\n\nWeek 2: Data structures and data manipulations\n⏩Lists and dictionaries\n⏩Working with Text Data\n\nWeek 3 &4: Data Analysis Libraries\n⏩Reading from and writing to files (CSV, XLSX)\n⏩Introduction to Numpy, Pandas & Matplotlib\n\nData Manipulations using pandas:\n⏩Working with data frames and series\n⏩Basic operations Filtering, Merging, Sorting, Aggregating data\n\nData Visualization using Matplotlib/Seaborn:\n⏩Creating Histograms, Scatterplot, Charts (Line, Bar, Pie)\n\nNow start building mini projects. [ Start with basic EDA and keep adding complexities with time]\n\nI will deprioritize learning and implementing ML algo's at the start and focus more on basics initially.\n\nGaurav Agrawal\n\n#analytics #python #datafam\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This post presents a four-week Python learning roadmap for analytics. It begins with syntax, data types, variables, basic operations, conditionals, loops, and functions, followed by lists, dictionaries, text-data handling, and reading and writing CSV and XLSX files. Weeks three and four introduce NumPy, Pandas, and Matplotlib, including DataFrames, Series, filtering, merging, sorting, aggregation, and visualization with Matplotlib and Seaborn. The post recommends starting with basic exploratory data analysis mini-projects, increasing complexity over time, and deprioritizing machine-learning algorithms initially in favor of fundamentals.",
+    "topics": [
+      "Python for analytics",
+      "Python fundamentals and control flow",
+      "Data structures and text-data handling",
+      "File-based data handling",
+      "Data analysis with NumPy and Pandas",
+      "Data visualization with Matplotlib and Seaborn",
+      "Exploratory data analysis mini-projects"
+    ],
+    "subtopics": [
+      "Syntax, data types, variables, and basic operations",
+      "If-else conditions, for loops, while loops, and functions",
+      "Lists and dictionaries",
+      "Working with text data",
+      "Reading and writing CSV and XLSX files",
+      "Pandas DataFrames and Series",
+      "Filtering, merging, sorting, and aggregating data with Pandas",
+      "Histograms, scatterplots, line charts, bar charts, and pie charts",
+      "Basic exploratory data analysis projects",
+      "Prioritizing fundamentals before machine-learning algorithms"
+    ],
+    "concepts": [
+      "Python Fundamentals",
+      "Control Flow and Functions",
+      "Lists and Dictionaries",
+      "Text and File Data",
+      "NumPy",
+      "Pandas DataFrames and Series",
+      "Pandas Data Manipulation",
+      "Matplotlib and Seaborn Visualization",
+      "Exploratory Data Analysis Projects"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you organize the proposed four-week roadmap for learning Python for analytics?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Week one covers syntax, data types, variables, basic operations, conditionals, loops, and functions.\nWeek two covers lists, dictionaries, and working with text data.\nWeeks three and four introduce file handling, NumPy, Pandas, Matplotlib, and Seaborn."
+    },
+    {
+      "question": "Which data structures and file-handling skills should be covered before beginning work with Pandas?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer identifies lists and dictionaries as the relevant Python data structures.\nIt also includes working with text data and reading and writing CSV and XLSX files."
+    },
+    {
+      "question": "Which Pandas objects and operations are included in an introductory Python analytics curriculum?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer identifies DataFrames and Series as the Pandas objects covered.\nIt names filtering, merging, sorting, and aggregation as the core data-manipulation operations."
+    },
+    {
+      "question": "What visualizations should an early analytics practitioner learn to create with Matplotlib and Seaborn?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer includes histograms and scatterplots.\nIt also includes line charts, bar charts, and pie charts."
+    },
+    {
+      "question": "How does the post recommend progressing from Python study to practical analytics work?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The recommendation is to begin with basic exploratory data analysis mini-projects and increase their complexity over time.\nMachine-learning algorithms are deprioritized initially while the learner focuses on Python and analytics fundamentals."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Python for Analytics",
+    "secondary_topics": [
+      "Python Fundamentals",
+      "Data Analysis",
+      "Data Manipulation",
+      "Data Visualization",
+      "Exploratory Data Analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bbad91aa626f0833",
+    "saved_date": "2026-10-01T23:13:41Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a1afcc354e9dafdac6b812dea741007abf53ceefce19cebc5b55b82c279c655a",
+    "enricher_version": "3"
+  }
+}

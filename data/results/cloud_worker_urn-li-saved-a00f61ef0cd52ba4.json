@@ -1,0 +1,124 @@
+{
+  "id": "urn-li-saved-a00f61ef0cd52ba4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7468953134913077248",
+    "captured_at": "2026-10-02T00:15:50.122229Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:32Z"
+  },
+  "original_text": "Data Engineering Stack\n\nThis is what a complete data engineering stack actually looks like.\n\nMost people learn tools in isolation…\nbut real-world engineering is about how everything connects.\n\nThis visual breaks down the full data journey - from raw data to business decisions 👇\n\n→ Data Sources: Databases, APIs, SaaS tools feeding raw data\n→ Ingestion: Airbyte, Fivetran, Kafka bringing data into the system\n→ Storage: S3, BigQuery, Snowflake acting as your data foundation\n→ Processing: Spark, dbt, Airflow transforming raw data into usable formats\n→ Querying: SQL tools to explore and extract insights\n→ Analysis: Python, R, Excel turning data into understanding\n→ Visualization: Tableau, Power BI, Looker telling the story\n→ Governance: Data quality, cataloging, and trust layers\n→ Machine Learning: Predictive models and advanced analytics\n→ Real-Time: Streaming systems for instant insights\n→ Orchestration: Managing workflows and pipelines\n→ Monitoring: Ensuring everything runs reliably\n\nThe key shift?\n\nDon’t focus on mastering one tool.\nFocus on understanding the flow.\n\nBecause tools will change.\nBut the architecture behind them stays the same.\n\nSave this - it’s your blueprint for becoming a complete data professional.\n\n♻️ Repost if this helps \n👉 Follow Abhisek Sahu for more !!\n\n#dataengineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7468953134913077248_slide_0.jpg",
+      "description": "GIF image, 480x600 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a high-level, end-to-end data engineering stack organized around the flow from raw data sources to business decisions. It groups specific tools into data sources, ingestion, storage, processing, querying, analysis, and visualization, then identifies governance, machine learning, real-time systems, orchestration, and monitoring as additional stack areas. Its central message is that data engineers should understand how these components connect rather than focus on mastering one tool in isolation.",
+    "topics": [
+      "End-to-end data engineering stack",
+      "Data flow from sources to business decisions",
+      "Data pipeline operations and governance"
+    ],
+    "subtopics": [
+      "Data sources",
+      "Data ingestion",
+      "Data storage",
+      "Data processing",
+      "Data querying",
+      "Data analysis",
+      "Data visualization",
+      "Data governance",
+      "Machine learning",
+      "Real-time systems",
+      "Workflow orchestration",
+      "Pipeline monitoring"
+    ],
+    "concepts": [
+      "Data Sources",
+      "Ingestion",
+      "Storage",
+      "Processing",
+      "Querying",
+      "Analysis",
+      "Visualization",
+      "Governance",
+      "Machine Learning",
+      "Real-Time Systems",
+      "Orchestration",
+      "Monitoring"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you describe the end-to-end data engineering flow presented in the post?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The flow begins with databases, APIs, and SaaS tools that supply raw data.\nIngestion brings data into the system, storage provides the data foundation, and processing transforms raw data into usable formats.\nSQL querying extracts insights, analysis tools develop understanding, and visualization tools communicate the story.\nGovernance, machine learning, real-time systems, orchestration, and monitoring are also identified as important parts of the broader stack."
+    },
+    {
+      "question": "What responsibilities distinguish ingestion, storage, processing, querying, and analysis?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Ingestion brings external data into the system, with Airbyte, Fivetran, and Kafka given as examples.\nStorage acts as the data foundation, with S3, BigQuery, and Snowflake listed as examples.\nProcessing transforms raw data into usable formats, with Spark, dbt, and Airflow named by the post.\nQuerying uses SQL tools to explore data and extract insights.\nAnalysis uses tools such as Python, R, and Excel to turn data into understanding."
+    },
+    {
+      "question": "What roles do governance, orchestration, and monitoring play in a complete data engineering stack?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Governance covers data quality, cataloging, and trust layers.\nOrchestration manages workflows and pipelines.\nMonitoring helps ensure that the data engineering environment runs reliably."
+    },
+    {
+      "question": "How do machine learning and real-time processing differ within the stack described by the post?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "Machine learning covers predictive models and advanced analytics.\nReal-time processing uses streaming systems to provide instant insights."
+    },
+    {
+      "question": "Why does the post emphasize understanding the overall data flow instead of mastering only one tool?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Real-world data engineering depends on how sources, ingestion, storage, processing, analysis, and visualization connect.\nIndividual tools may change, while the architecture and flow connecting the stack components remain the central focus."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "End-to-end data engineering architecture",
+    "secondary_topics": [
+      "Data pipeline lifecycle",
+      "Analytics workflow",
+      "Data governance",
+      "Real-time data systems",
+      "Pipeline orchestration and monitoring"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a00f61ef0cd52ba4",
+    "saved_date": "2026-10-01T23:07:32Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7468953134913077248",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7468953134913077248_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7468953134913077248_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8b55c68940f7450fe2cb2ac01147f4798ca19ed61b7e120cd1e29832ab0c6c6e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

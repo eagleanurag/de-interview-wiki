@@ -1,0 +1,189 @@
+{
+  "id": "urn-li-saved-58205ad8f0377ee0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338452429295730688",
+    "captured_at": "2026-10-02T00:15:47.755677Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:32Z"
+  },
+  "original_text": "The ONLY AWS Data Engineering roadmap I suggest if you are looking to switch in 2025.\n\n🚀 AWS Data Engineer Roadmap — Step by Step 🛠️\nA practical roadmap to go from basics to cloud-native pipelines:\n\n🔹 Level 1: Foundations\n 1. SQL – Master joins, windows, CTEs, tuning.\n 2. Python – Automate ETL, handle files, use boto3.\n 3. Data Modeling – OLTP vs OLAP, star/snowflake schemas.\n\n🔹 Level 2: AWS Core\n 4. S3 – Buckets, lifecycle, versioning, partitions.\n 5. IAM – Roles, policies, least privilege.\n 6. EC2 & VPC – Basic compute & network setup.\n\n🔹 Level 3: ETL & Pipelines\n 7. Glue – Spark jobs, crawlers, catalog.\n 8. Lambda – Event-driven mini ETLs.\n 9. Step Functions – Workflow orchestration.\n 10. Kinesis – Real-time streaming pipelines.\n\n🔹 Level 4: Storage & Querying\n 11. Redshift – DWH concepts, COPY, Serverless.\n 12. RDS/Aurora – Managed SQL DBs.\n 13. Athena – Query S3 with SQL + Glue Catalog.\n\n🔹 Level 5: Orchestration & Monitoring\n 14. Airflow (MWAA) – Build DAGs with AWS operators.\n 15. CloudWatch – Logs, alerts, metrics.\n 16. CloudTrail – Audit and trace user activity.\n\n🔹 Level 6: Security & Governance\n 17. Encryption/KMS – Secure S3, Redshift, Athena.\n 18. Lake Formation – Row/column-level access control.\n\n🔹 Level 7: IaC\n 19. Terraform/CloudFormation – Infra as code for repeatable pipelines.\n\n🔹 Level 8: Advanced\n 20. DataOps – CI/CD for ETL jobs.\n 21. ML Integration – Preprocess data for SageMaker.\n 22. Cost Optimization – Monitor & optimize AWS usage.\n\n🔹 Final Step: Projects\n 23. Build:\n• S3 → Glue → Redshift (Batch)\n• Lambda → Kinesis → Redshift (Streaming)\n• Athena + QuickSight dashboard\n• Airflow DAGs for Glue pipelines\n• IaC-based full pipeline\n\n⸻\n\n\n#AWS #DataEngineering #CloudComputing #Glue #Redshift #Airflow #Kinesis #BigData #CareerRoadmap #SQL #Pyspark #Techinterviews\n\nIf you've read so far, do LIKE and RESHARE the post👍",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338452429295730688_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post proposes an AWS Data Engineering roadmap for someone looking to switch in 2025. It progresses from foundations through advanced topics, covering SQL, Python, data modeling, AWS services, ETL and pipelines, storage and querying, orchestration and monitoring, security and governance, infrastructure as code, DataOps, ML integration, and cost optimization, then ends with project examples. It is a high-level learning outline and does not provide implementation instructions.",
+    "topics": [
+      "AWS Data Engineering",
+      "Foundations",
+      "SQL",
+      "Python",
+      "Data Modeling",
+      "AWS Core",
+      "ETL and Pipelines",
+      "Storage and Querying",
+      "Orchestration and Monitoring",
+      "Security and Governance",
+      "Infrastructure as Code",
+      "Advanced",
+      "DataOps",
+      "ML Integration",
+      "Cost Optimization",
+      "Projects"
+    ],
+    "subtopics": [
+      "SQL joins, windows, CTEs, and tuning",
+      "Python ETL automation, file handling, and boto3",
+      "OLTP versus OLAP and star and snowflake schemas",
+      "S3 buckets, lifecycle, versioning, and partitions",
+      "IAM roles, policies, and least privilege",
+      "EC2 and VPC basic compute and network setup",
+      "Glue Spark jobs, crawlers, and catalog",
+      "Lambda event-driven mini ETLs",
+      "Step Functions workflow orchestration",
+      "Kinesis real-time streaming pipelines",
+      "Redshift DWH concepts, COPY, and Serverless",
+      "RDS/Aurora managed SQL DBs",
+      "Athena SQL queries on S3 with Glue Catalog",
+      "Airflow (MWAA) DAGs with AWS operators",
+      "CloudWatch logs, alerts, and metrics",
+      "CloudTrail audit and user-activity tracing",
+      "Encryption/KMS for securing S3, Redshift, and Athena",
+      "Lake Formation row- and column-level access control",
+      "Terraform/CloudFormation IaC for repeatable pipelines",
+      "DataOps CI/CD for ETL jobs",
+      "ML preprocessing for SageMaker",
+      "Monitoring and optimizing AWS usage",
+      "S3 -> Glue -> Redshift batch project",
+      "Lambda -> Kinesis -> Redshift streaming project",
+      "Athena + QuickSight dashboard",
+      "Airflow DAGs for Glue pipelines",
+      "IaC-based full pipeline"
+    ],
+    "concepts": [
+      "Roadmap structure",
+      "SQL",
+      "Python",
+      "Data Modeling",
+      "S3",
+      "IAM",
+      "EC2 and VPC",
+      "Glue",
+      "Lambda",
+      "Step Functions",
+      "Kinesis",
+      "Redshift",
+      "RDS/Aurora",
+      "Athena",
+      "Glue Catalog",
+      "Airflow (MWAA)",
+      "CloudWatch",
+      "CloudTrail",
+      "Encryption/KMS",
+      "Lake Formation",
+      "Terraform/CloudFormation",
+      "DataOps",
+      "ML Integration",
+      "SageMaker",
+      "Cost Optimization",
+      "QuickSight",
+      "Project pipelines"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL, Python, and data-modeling capabilities does the roadmap place in its foundations level?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SQL includes joins, windows, CTEs, and tuning.\nPython is used for ETL automation, file handling, and boto3.\nData modeling includes the OLTP versus OLAP distinction and star and snowflake schemas."
+    },
+    {
+      "question": "What responsibilities does the roadmap assign to S3 and IAM, and what EC2 and VPC fundamentals does it include?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "S3 is listed with buckets, lifecycle, versioning, and partitions.\nIAM is listed with roles, policies, and least privilege.\nEC2 and VPC are listed for basic compute and network setup."
+    },
+    {
+      "question": "Which capabilities are assigned to Glue, Lambda, Step Functions, and Kinesis in the ETL and Pipelines level?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Glue is listed with Spark jobs, crawlers, and a catalog.\nLambda is listed for event-driven mini ETLs.\nStep Functions is listed for workflow orchestration.\nKinesis is listed for real-time streaming pipelines."
+    },
+    {
+      "question": "Which storage and querying options are listed for Redshift, RDS/Aurora, and Athena?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Redshift is associated with DWH concepts, COPY, and Serverless.\nRDS/Aurora are described as managed SQL DBs.\nAthena queries S3 with SQL and the Glue Catalog."
+    },
+    {
+      "question": "For the proposed batch and streaming projects, which service sequences are specified?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The batch project is listed as S3 -> Glue -> Redshift.\nThe streaming project is listed as Lambda -> Kinesis -> Redshift."
+    },
+    {
+      "question": "What dashboard, orchestration, and infrastructure-as-code projects are included in the final step?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The dashboard project combines Athena with QuickSight.\nThe orchestration project uses Airflow DAGs for Glue pipelines.\nThe full pipeline project is described as IaC-based.\nThe infrastructure-as-code section names Terraform and CloudFormation."
+    },
+    {
+      "question": "Which monitoring, auditing, encryption, and access-control capabilities are named?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "CloudWatch is listed with logs, alerts, and metrics.\nCloudTrail is listed for audit and tracing user activity.\nEncryption/KMS is listed for securing S3, Redshift, and Athena.\nLake Formation is listed for row- and column-level access control."
+    },
+    {
+      "question": "What advanced practices are listed under DataOps, ML Integration, and Cost Optimization?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "DataOps is described as CI/CD for ETL jobs.\nML Integration includes preprocessing data for SageMaker.\nCost Optimization involves monitoring and optimizing AWS usage."
+    }
+  ],
+  "classification": {
+    "domain": "AWS Data Engineering",
+    "primary_topic": "AWS Data Engineer Roadmap",
+    "secondary_topics": [
+      "Foundations",
+      "AWS Core",
+      "ETL and Pipelines",
+      "Storage and Querying",
+      "Orchestration and Monitoring",
+      "Security and Governance",
+      "Infrastructure as Code",
+      "Advanced",
+      "Projects"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:58205ad8f0377ee0",
+    "saved_date": "2026-10-01T23:13:32Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338452429295730688",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338452429295730688_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9ae3f4b1826cebaf7cbdf14e24cb678d6503c14b4ff9527638c4d62b28f7b4d6",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

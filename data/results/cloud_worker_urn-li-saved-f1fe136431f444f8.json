@@ -1,0 +1,123 @@
+{
+  "id": "urn-li-saved-f1fe136431f444f8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7325097644559638528",
+    "captured_at": "2026-10-02T00:15:53.230762Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:42Z"
+  },
+  "original_text": "🔥 12 Excel Functions You've Never Heard Of\nThere are countless functions in the Excel library…with many new ones popping up.\nStay ahead of the game and get familiar with these functions 👇\n\n➡️ HSTACK\n=HSTACK(array1, [array2], ...)\n\nCombines arrays horizontally - perfect when you need to merge columns from different sheets into a single array. It takes your separate columns and puts them side by side automatically.\n\n➡️ VSTACK\n=VSTACK(array1, [array2], ...)\n\nStacks your arrays on top of each other. When you have multiple data sets that need to be combined into one, VSTACK does it in one simple command.\n\n➡️ DROP\n=DROP(array, rows, [cols])\n\nRemoves specific rows from your data range. Whether it's stripping out header rows or removing trailing rows, it cleans your data instantly.\n\n➡️ CHOOSE\n=CHOOSE(index, value1, [value2], ...)\n\nPulls specific values from a list based on position. Need the third item from a range? CHOOSE(3, range) gets it done. Perfect for creating dynamic references or custom dropdown selections.\n\n➡️ EXPAND\n=EXPAND(array, rows, [cols])\n\nStretches your data to fill a specified size. It repeats values to create patterns or fill templates - essential when you need to duplicate data across multiple rows and columns.\n\n➡️ MAP\n=MAP(array, lambda)\n\nApplies a formula to every element in your array. Instead of creating helper columns, MAP processes calculations across entire ranges in one go. Perfect for bulk data transformations.\n\n➡️ GROUPBY\n=GROUPBY(array, groupBy_array, [value_array], [operation])\n\nSummarizes data based on specific criteria without pivot tables. It groups similar items together and performs calculations within those groups, giving you instant summary reports.\n\n➡️ BYCOL\n=BYCOL(array, lambda)\n\nProcesses calculations column by column. Want to sum each column separately? BYCOL handles it efficiently without multiple formulas.\n\n➡️ BYROW\n=BYROW(array, lambda)\n\nProcess entire rows of data with a single command. Perfect for calculating running totals or row-based metrics.\n\n➡️ SCAN\n=SCAN(initial_value, array, lambda)\n\nCreates running calculations across a range. It tracks cumulative totals, running averages, or any progressive calculation you need across your dataset.\n\n➡️ LAMBDA\n=LAMBDA(parameter(s), calculation)\n\nBuilds custom functions directly in Excel. No VBA needed - just write your calculation logic and reuse it anywhere in your workbook.\n\n➡️ PIVOTBY\n=PIVOTBY(values, rows, columns, [aggregate])\n\nCreates pivot-like summaries without the complexity of pivot tables. Get grouped totals and summaries with a single function, making data analysis faster and simpler.\n\n===\n\nOne function can replace hours of manual work.\n\nHave you ever used any of these functions? Let us know in the comments below 👇",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7325097644559638528_slide_0.jpg",
+      "description": "JPEG image, 480x621 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post lists 12 Excel functions for combining, reshaping, transforming, summarizing, and calculating array or range data. It provides each function's basic syntax and describes uses including combining arrays with HSTACK and VSTACK, removing rows with DROP, selecting values with CHOOSE, expanding data with EXPAND, processing arrays with MAP, BYCOL, and BYROW, creating summaries with GROUPBY and PIVOTBY, producing progressive calculations with SCAN, and defining reusable custom functions with LAMBDA.",
+    "topics": [
+      "Excel functions",
+      "Array processing",
+      "Data transformation",
+      "Data summarization"
+    ],
+    "subtopics": [
+      "Combining arrays horizontally and vertically",
+      "Reshaping and expanding ranges",
+      "Applying calculations across arrays, rows, and columns",
+      "Grouping and summarizing data",
+      "Running and progressive calculations",
+      "Reusable custom functions"
+    ],
+    "concepts": [
+      "HSTACK",
+      "VSTACK",
+      "DROP",
+      "CHOOSE",
+      "EXPAND",
+      "MAP",
+      "GROUPBY",
+      "BYCOL",
+      "BYROW",
+      "SCAN",
+      "LAMBDA",
+      "PIVOTBY"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do HSTACK and VSTACK differ when combining data in Excel?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "HSTACK combines arrays horizontally by placing columns side by side.\nVSTACK combines arrays vertically by stacking data sets on top of one another."
+    },
+    {
+      "question": "Which function would you use to apply a calculation to every element of an array without creating helper columns?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "MAP applies a lambda formula to every element of an array.\nThe lambda performs the calculation across the full range without helper columns."
+    },
+    {
+      "question": "How do BYROW, BYCOL, and SCAN differ in how they process data?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "BYROW processes complete rows, while BYCOL processes columns separately.\nSCAN creates progressive calculations across a range while tracking an initial value and cumulative state."
+    },
+    {
+      "question": "How can Excel produce grouped summaries without using a traditional pivot table?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "GROUPBY groups similar items by criteria and performs an operation within each group.\nPIVOTBY creates pivot-like summaries from values and row and column groupings, with an optional aggregation."
+    },
+    {
+      "question": "How would you create a reusable custom calculation in Excel without VBA?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "LAMBDA defines parameters and calculation logic as a custom function.\nThe resulting function can be reused throughout the workbook without VBA."
+    },
+    {
+      "question": "Which functions can reshape a range by removing rows or extending it to a target size?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "DROP removes specified rows from a range.\nEXPAND stretches an array to a specified size by repeating values to fill rows or columns."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "Excel array functions",
+    "secondary_topics": [
+      "Data transformation",
+      "Data aggregation",
+      "Range reshaping"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f1fe136431f444f8",
+    "saved_date": "2026-10-01T23:27:42Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7325097644559638528",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7325097644559638528_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b26fe8c33baf836563a20c80caca9a0c6c119cf3c74a5915091b861caddf02e4",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

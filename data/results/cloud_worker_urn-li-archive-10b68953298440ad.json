@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-archive-10b68953298440ad",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.004354Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:37Z"
+  },
+  "original_text": "🚀 #PySpark Data Engineering Scenario-Based Questions-:\n\n\n1. Incremental Data Processing\nQuestion-: You need to process new data arriving daily without reprocessing historical data. How would you implement an incremental data processing pipeline in PySpark?\n\nAnswer-:\n**Incremental Data Processing in PySpark:**\nUse **watermarking or max timestamp tracking** to identify new data. Filter daily loads using a **timestamp or ID column**, and store the last processed value in **metadata storage** (like a Delta table or checkpoint).\n\n\\#PySpark #IncrementalLoad #DataPipeline #BigData #DataEngineering\n\n2.Handling Large Datasets\nQuestion-:How would you optimize a PySpark job that processes a large dataset (1TB+) to improve performance and reduce execution time?\n\nAnswer-:\n*Handling Large Datasets in PySpark:*\nTo optimize a PySpark job for 1TB+ data, use **partitioning**, **persist intermediate results**, **broadcast small datasets**, **avoid shuffles**, and prefer **DataFrame APIs over RDDs**. Enable **predicate pushdown**, tune **Spark configurations**, and leverage **columnar formats like Parquet** for faster reads.\n\n\\#PySpark #BigData #PerformanceTips #DataEngineering\n\n3. Data Skew Handling\nQuestion-:One of your PySpark jobs is failing due to data skew. How would you identify and resolve the issue?\n\nAnswer-:\n**Handling Data Skew in PySpark:**\nIdentify skew by analyzing key distribution. Fix it using techniques like **salting keys**, **broadcast joins** for small tables, or **repartitioning**. Monitor skewed stages in Spark UI for insights.\n\n\\#PySpark #DataSkew #PerformanceOptimization #BigData #DataEngineering\n\nDeepak Goyal",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents three scenario-based PySpark data engineering questions with concise answers. It covers incremental processing through watermarking or maximum timestamp tracking and metadata storage, performance optimization for datasets larger than 1 TB through partitioning, caching, broadcast joins, shuffle avoidance, DataFrame APIs, predicate pushdown, Spark configuration tuning, and Parquet, and data skew troubleshooting through key-distribution analysis, Spark UI monitoring, salting, broadcast joins, and repartitioning.",
+    "topics": [
+      "PySpark",
+      "Data Engineering"
+    ],
+    "subtopics": [
+      "Incremental Data Processing",
+      "Large Dataset Performance Optimization",
+      "Data Skew Handling"
+    ],
+    "concepts": [
+      "Incremental Data Processing",
+      "Watermarking and Maximum Timestamp Tracking",
+      "Incremental Filtering",
+      "Incremental Metadata Storage",
+      "Partitioning",
+      "Persisting Intermediate Results",
+      "Broadcasting Small Datasets",
+      "Shuffle Avoidance",
+      "DataFrame APIs over RDDs",
+      "Predicate Pushdown",
+      "Spark Configuration Tuning",
+      "Parquet",
+      "Data Skew Detection",
+      "Data Skew Resolution"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you implement an incremental PySpark pipeline that processes new daily data without reprocessing historical data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Use watermarking or maximum timestamp tracking to identify new data.\nFilter daily loads using a timestamp column or an ID column.\nStore the last processed value in metadata storage such as a Delta table or checkpoint."
+    },
+    {
+      "question": "How would you optimize a PySpark job that processes a dataset larger than 1 TB?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Use partitioning, persist intermediate results, and avoid shuffles.\nBroadcast small datasets and prefer DataFrame APIs over RDDs.\nEnable predicate pushdown and tune Spark configurations.\nUse columnar formats such as Parquet for faster reads."
+    },
+    {
+      "question": "A PySpark job is failing because of data skew. How would you identify and resolve the problem?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Analyze key distribution and monitor skewed stages in Spark UI.\nUse salting keys or repartitioning to address skew.\nUse a broadcast join when the joined table is small."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Incremental Data Processing",
+      "Large Dataset Performance Optimization",
+      "Data Skew Handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:10b68953298440ad",
+    "saved_date": "2026-10-01T23:21:37Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9cfabda50a87bed7d9bf3e9d2f42889a06f6e951e6007270e7f9bdeac7d8bce6",
+    "enricher_version": "3"
+  }
+}

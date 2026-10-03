@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-saved-fd723dbfe017c23c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341079772573089792",
+    "captured_at": "2026-10-02T00:15:53.662507Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:25Z"
+  },
+  "original_text": "Storyteller | Data Architect | Building Scalable Data & AI Foundations for Enterprise Performance | Linkedin Top Voice 2025,2024 | Open to collaboration\n1yr •\n𝗧𝗵𝗲 𝗘𝗧𝗟 𝗚𝘂𝗶𝗱𝗲 𝗜 𝗪𝗶𝘀𝗵 𝗜 𝗛𝗮𝗱 𝗪𝗵𝗲𝗻 𝗜 𝗦𝘁𝗮𝗿𝘁𝗲𝗱\nEveryone talks about ETL like it’s just a 3-step process — but in the real world, it’s multi-layered, failure-prone, and mission-critical.\nToday, I’m sharing something special:\n✅ A detailed ETL Pipeline Guide (used in real teams)\n✅ A set of 20 handpicked ETL Interview Questions from real interviews — beginner to advanced\nInside the PDF:\n• What does an end-to-end ETL pipeline look like?\n• Tools used across ingestion, orchestration, and transformatio\n• Best practices for real-time vs batch\n• Interview Qs like:\n→ How do you debug a broken pipeline?\n→ What’s your approach to schema evolution?\n→ How do you implement SCD Type 2?\nThis is NOT theory — it’s what gets asked and what gets built in real roles.\nDownload the free PDF here & let me know your thoughts 👇\nFollow the tag → #reeltorealdata to stay tuned with the complete series.\n👉 Learn more about Data Engineering with Pooja Jain!\n#data #engineering #datamining #bigdata #analytics\nETL Guide & Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341079772573089792_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post announcing a downloadable ETL pipeline guide and 20 ETL interview questions ranging from beginner to advanced. It characterizes real-world ETL as multi-layered, failure-prone, and mission-critical, then lists end-to-end pipelines, ingestion, orchestration, transformation, real-time versus batch best practices, pipeline debugging, schema evolution, and SCD Type 2 as subjects covered by the advertised PDF. The PDF content is not provided, so there are no named tools, technical details, recommended practices, implementation examples, or interview answers to analyze. The transformation bullet is truncated, and the extracted media text is empty.",
+    "topics": [
+      "ETL pipelines",
+      "Data ingestion",
+      "Data orchestration",
+      "Data transformation",
+      "Real-time and batch processing",
+      "Schema evolution",
+      "SCD Type 2",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "End-to-end ETL pipeline structure",
+      "Tooling across ingestion, orchestration, and transformation",
+      "Real-time versus batch best practices",
+      "Pipeline debugging",
+      "Schema evolution approaches",
+      "SCD Type 2 implementation"
+    ],
+    "concepts": [
+      "ETL",
+      "End-to-end ETL pipeline",
+      "Ingestion, orchestration, and transformation",
+      "Real-time versus batch",
+      "Pipeline debugging",
+      "Schema evolution",
+      "SCD Type 2"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "ETL pipelines",
+    "secondary_topics": [
+      "Pipeline debugging",
+      "Schema evolution",
+      "SCD Type 2",
+      "Real-time versus batch processing",
+      "Data engineering interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fd723dbfe017c23c",
+    "saved_date": "2026-10-01T23:18:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341079772573089792",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341079772573089792_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "3fa2b659447d3b3fd06c2c701c81d5c64141a61404b40f396c4734c2a8af2e2a",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "id": "urn-li-saved-67855222b135be16",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509801763013595136",
+    "captured_at": "2026-10-02T00:15:48.189362Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:55Z"
+  },
+  "original_text": "Big Data Engineer | Ex-Carelon | Ex-Mindtree | Crafting Scalable, High-Impact Data Pipelines | AWS, Azure, Databricks, Snowflake | PySpark, SQL, Python | Driving Insights in Healthcare , Retail, Insurance & Bankin\n4d •\nOptum India Interview Experience | Position: 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 |\n𝗥𝗼𝘂𝗻𝗱 𝟭 - 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹\n1️⃣ Write a SQL query to fetch the third highest salary from the Employee table without using TOP or LIMIT.\n2️⃣ Given two tables — Customers and Orders — write a query to find customers who haven’t placed any orders in the last 6 months.\n3️⃣ Explain the difference between INNER JOIN, LEFT JOIN, and CROSS JOIN with an example.\n4️⃣ In Python, how would you optimize data transformations when processing a 10GB CSV file?\n5️⃣ How do you handle and remove duplicates efficiently using pandas?\n𝗥𝗼𝘂𝗻𝗱 𝟮 - 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹\n1️⃣ How would you design an ADF pipeline to move data from multiple on-prem SQL databases to Azure Data Lake and then load into Synapse Analytics?\n2️⃣ Explain your approach for incremental and CDC (Change Data Capture) data loading in Azure.\n3️⃣ How do you handle parameterization and dynamic content in ADF pipelines for reusability?\n4️⃣ Describe how you implement error handling, alerting, and monitoring in ADF.\n5️⃣ What are some Spark job optimization techniques to improve performance and reduce shuffle?\n6️⃣ You notice a DataBricks job that runs fine in dev but takes 3× longer in production — how do you debug this?\n𝗥𝗼𝘂𝗻𝗱 𝟯 - 𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 / 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝗿𝗮𝗹\n1️⃣ Tell me about a time when you had to handle a production incident under pressure. What steps did you take?\n2️⃣ How do you manage communication when multiple teams depend on your data pipelines?\n3️⃣ Describe how you deal with tight deadlines or changing priorities during a sprint.\n4️⃣ How do you handle disagreements between data engineering and business stakeholders?\n🎥 Level Up Your Data Engineering Skills! Check out my YouTube channel\n📺 Subscribe for more technical deep dives: https://lnkd.in/gdMQm-tA\nIf you've read so far, do LIKE and RESHARE the post 👍\nDivya Gopal\nyoutube.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7509801763013595136_slide_0.jpg",
+      "description": "JPEG image, 800x800 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is an Optum India Data Engineer interview-experience post that lists technical and behavioral questions rather than providing a completed technical explanation. It asks about SQL, Python and pandas, ADF pipelines from multiple on-prem SQL databases to Azure Data Lake and Synapse Analytics, incremental and CDC loading, Spark optimization, Databricks troubleshooting, and data-engineering behavior. The post provides no answers, code, implementation details, or outcomes, and the opening profile line appears truncated at the incomplete word \"Bankin\".",
+    "topics": [
+      "Data engineering interview questions",
+      "SQL",
+      "SQL joins",
+      "Python data transformations",
+      "pandas duplicate handling",
+      "ADF pipeline design",
+      "Azure Data Lake",
+      "Synapse Analytics",
+      "Incremental loading",
+      "Change Data Capture (CDC)",
+      "ADF parameterization and dynamic content",
+      "ADF error handling, alerting, and monitoring",
+      "Spark job optimization",
+      "Databricks troubleshooting",
+      "Production incident response",
+      "Data pipeline communication",
+      "Sprint and stakeholder management"
+    ],
+    "subtopics": [
+      "Third-highest salary from Employee without TOP or LIMIT",
+      "Customers without orders in the last 6 months",
+      "INNER JOIN, LEFT JOIN, and CROSS JOIN differences and examples",
+      "Python optimization for a 10GB CSV file",
+      "Duplicate handling and removal with pandas",
+      "ADF movement from multiple on-prem SQL databases to Azure Data Lake",
+      "Loading Azure Data Lake data into Synapse Analytics",
+      "Incremental loading and CDC in Azure",
+      "ADF parameterization and dynamic content for reusability",
+      "ADF error handling, alerting, and monitoring",
+      "Spark job optimization and shuffle reduction",
+      "Databricks development versus production runtime",
+      "Handling production incidents under pressure",
+      "Managing communication when multiple teams depend on data pipelines",
+      "Handling tight deadlines and changing priorities during a sprint",
+      "Resolving disagreements between data engineering and business stakeholders"
+    ],
+    "concepts": [
+      "Third-highest salary without TOP or LIMIT",
+      "Customers without orders in the last 6 months",
+      "INNER JOIN, LEFT JOIN, and CROSS JOIN",
+      "10GB CSV transformation optimization",
+      "Duplicate removal with pandas",
+      "ADF pipeline from on-prem SQL to Azure Data Lake and Synapse Analytics",
+      "Incremental and CDC data loading",
+      "ADF parameterization and dynamic content",
+      "ADF error handling, alerting, and monitoring",
+      "Spark performance and shuffle reduction",
+      "Databricks development-to-production performance gap",
+      "Production incident response",
+      "Communication across data-pipeline dependencies",
+      "Sprint deadlines and changing priorities",
+      "Data engineering and business stakeholder disagreements"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query to fetch the third-highest salary from the Employee table without using TOP or LIMIT.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should provide a SQL query that returns the third-highest salary from Employee without TOP or LIMIT."
+    },
+    {
+      "question": "Given Customers and Orders tables, how would you find customers who have not placed any orders in the last 6 months?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should show how to use Customers and Orders to identify customers with no orders during the last 6 months."
+    },
+    {
+      "question": "Explain the difference between INNER JOIN, LEFT JOIN, and CROSS JOIN with an example.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should distinguish INNER JOIN, LEFT JOIN, and CROSS JOIN and provide an example."
+    },
+    {
+      "question": "In Python, how would you optimize data transformations when processing a 10GB CSV file?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to optimize Python transformations while processing a 10GB CSV file."
+    },
+    {
+      "question": "How do you handle and remove duplicates efficiently using pandas?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer should present an efficient pandas approach to handling and removing duplicates."
+    },
+    {
+      "question": "How would you design an ADF pipeline to move data from multiple on-prem SQL databases to Azure Data Lake and then load it into Synapse Analytics?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe an ADF flow from multiple on-prem SQL databases to Azure Data Lake and then into Synapse Analytics."
+    },
+    {
+      "question": "What approach would you use for incremental and CDC data loading in Azure?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe how incremental loading and Change Data Capture are handled in Azure."
+    },
+    {
+      "question": "How do parameterization and dynamic content support reusability in ADF pipelines?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how parameterization and dynamic content make ADF pipelines reusable."
+    },
+    {
+      "question": "How do you implement error handling, alerting, and monitoring in ADF?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer should cover error handling, alerting, and monitoring for an ADF pipeline."
+    },
+    {
+      "question": "What Spark job optimization techniques can improve performance and reduce shuffle?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer should identify Spark job optimization techniques that improve performance and reduce shuffle."
+    },
+    {
+      "question": "How would you debug a Databricks job that runs well in development but takes three times longer in production?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer should provide a debugging approach for a Databricks job whose production runtime is three times its development runtime."
+    },
+    {
+      "question": "Tell me about a time when you had to handle a production incident under pressure. What steps did you take?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe the steps taken to handle a production incident under pressure."
+    },
+    {
+      "question": "How do you manage communication when multiple teams depend on your data pipelines?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to manage communication when multiple teams depend on data pipelines."
+    },
+    {
+      "question": "How do you handle tight deadlines or changing priorities during a sprint?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer should describe how to handle tight deadlines and changing priorities during a sprint."
+    },
+    {
+      "question": "How do you handle disagreements between data engineering and business stakeholders?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to handle disagreements between data engineering and business stakeholders."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL querying and joins",
+      "Python and pandas data processing",
+      "ADF and Azure data integration",
+      "Incremental and CDC loading",
+      "Spark performance optimization",
+      "Databricks production troubleshooting",
+      "Data engineering incident and stakeholder management"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:67855222b135be16",
+    "saved_date": "2026-10-01T23:06:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7509801763013595136",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7509801763013595136_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5874508eb7ec319390d49f64af03d568497a4e5ffddd9af489543b545731e861",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

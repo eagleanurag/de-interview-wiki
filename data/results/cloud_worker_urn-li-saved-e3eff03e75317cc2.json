@@ -1,0 +1,220 @@
+{
+  "id": "urn-li-saved-e3eff03e75317cc2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7319949257480843265",
+    "captured_at": "2026-10-02T00:15:52.788240Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:49Z"
+  },
+  "original_text": "🔥 Infosys pyspark interview questions for( 2 to 5 years experience)\n\n\n\n1. Core PySpark Concepts\n\nWhat are the differences between RDD, DataFrame, and Dataset in PySpark?\n\nHow is lazy evaluation implemented in PySpark?\n\nExplain the lineage of a DataFrame and how Spark handles fault tolerance.\n\nWhat is the role of Catalyst Optimizer in PySpark?\n\n\n\n---\n\n2. DataFrame Operations\n\nHow do you read CSV, JSON, and Parquet files in PySpark?\n\nHow would you perform groupBy and aggregate operations in PySpark?\n\nExplain how to join multiple DataFrames. What are different types of joins?\n\nWhat is the difference between select() and selectExpr()?\n\n\n\n---\n\n3. Performance Tuning\n\nHow do you optimize PySpark jobs?\n\nWhat is persist() vs cache()?\n\nHow do you handle skewed data in Spark?\n\nWhat are broadcast joins? When and how do you use them?\n\n\n\n---\n\n4. Spark SQL\n\nHow do you register a DataFrame as a temporary view?\n\nCan you run SQL queries directly in PySpark? How?\n\nExplain window functions with an example.\n\n\n\n---\n\n5. Real-world Scenarios\n\nGiven a log file, how would you extract the top 10 most frequent IPs?\n\nHow do you handle missing/null values in PySpark?\n\nHow to detect and remove duplicates from a DataFrame?\n\n\n\n---\n\n6. Deployment and Environment\n\nWhat’s the difference between local mode and cluster mode in Spark?\n\nHow do you submit a PySpark job to a cluster?\n\nHow do you monitor and debug Spark applications?\n\n\n\n---\n\n7. File Formats and Partitions\n\nWhat are the advantages of Parquet over CSV or JSON?\n\nHow do you repartition or coalesce data? When would you use each?\n\n\n\n---\n\n8. UDFs (User Defined Functions)\n\nHow do you write and use a UDF in PySpark?\n\nWhat are the performance considerations when using UDFs?\n\n\n\n---\n\n9. Integration & Workflow\n\nHow have you integrated PySpark with Hadoop/HDFS, Hive, or Kafka?\n\nDescribe an end-to-end pipeline you built using PySpark.\n\n\n\n---\n\n10. Miscellaneous\n\nDifference between narrow and wide transformations?\n\nHow is schema evolution handled in PySpark?\n\nHow do you handle schema-on-read vs schema-on-write?",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7319949257480843265_slide_0.jpg",
+      "description": "JPEG image, 480x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This post is a question-only guide to PySpark interview topics for candidates with 2 to 5 years of experience. It organizes questions around core PySpark concepts, DataFrame operations, performance tuning, Spark SQL, real-world scenarios, deployment, file formats, partitioning, UDFs, integrations, transformations, and schemas. It provides no answers, technical explanations, examples, or extracted media text, so it supports topic identification but not factual solutions.",
+    "topics": [
+      "PySpark",
+      "Spark",
+      "Spark SQL",
+      "DataFrame processing",
+      "Performance tuning",
+      "Data formats and partitioning",
+      "Deployment and monitoring",
+      "Workflow integration"
+    ],
+    "subtopics": [
+      "RDD, DataFrame, and Dataset",
+      "Lazy evaluation, lineage, and fault tolerance",
+      "Catalyst Optimizer",
+      "DataFrame operations and joins",
+      "Caching, persistence, skewed data, and broadcast joins",
+      "Temporary views, SQL queries, and window functions",
+      "Null handling and duplicate removal",
+      "Local mode and cluster mode",
+      "Parquet, repartitioning, and coalescing",
+      "User-defined functions",
+      "Hadoop/HDFS, Hive, and Kafka integration",
+      "Narrow and wide transformations",
+      "Schema evolution, schema-on-read, and schema-on-write"
+    ],
+    "concepts": [
+      "RDD, DataFrame, and Dataset",
+      "Lazy evaluation",
+      "DataFrame lineage and fault tolerance",
+      "Catalyst Optimizer",
+      "DataFrame operations and joins",
+      "Caching and persistence",
+      "Skewed data and broadcast joins",
+      "Spark SQL and temporary views",
+      "Window functions",
+      "Null handling and duplicate removal",
+      "Local mode and cluster mode",
+      "Parquet and partitioning",
+      "User-defined functions",
+      "Hadoop/HDFS, Hive, and Kafka integration",
+      "Narrow and wide transformations",
+      "Schema management"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the differences between RDD, DataFrame, and Dataset in PySpark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer clearly distinguishes RDD, DataFrame, and Dataset."
+    },
+    {
+      "question": "How is lazy evaluation implemented in PySpark?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer explains PySpark's implementation of lazy evaluation rather than only describing its purpose."
+    },
+    {
+      "question": "How does DataFrame lineage support fault tolerance in Spark?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer explains both DataFrame lineage and how Spark uses it when handling failures."
+    },
+    {
+      "question": "What is the role of the Catalyst Optimizer in PySpark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the optimizer's role in PySpark execution."
+    },
+    {
+      "question": "How do you read CSV, JSON, and Parquet files in PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates the PySpark approach for each of the three named file formats."
+    },
+    {
+      "question": "How do you perform groupBy and aggregate operations in PySpark?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer shows how DataFrames are grouped and aggregated with PySpark operations."
+    },
+    {
+      "question": "How do you join multiple DataFrames, and what types of joins are available?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates a DataFrame join and identifies the relevant join types."
+    },
+    {
+      "question": "What is the difference between persist() and cache() in PySpark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer accurately compares the two methods and explains when each would be selected."
+    },
+    {
+      "question": "How do you handle skewed data in Spark, and when would you use a broadcast join?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses data-skew handling separately from the use case and application of a broadcast join."
+    },
+    {
+      "question": "How do you register a DataFrame as a temporary view and run SQL queries against it in PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer covers temporary-view registration and execution of a Spark SQL query in PySpark."
+    },
+    {
+      "question": "Explain a Spark SQL window function with an example.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the window function and includes a concrete PySpark example."
+    },
+    {
+      "question": "How would you extract the 10 most frequent IP addresses from a log file?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer covers IP extraction, frequency aggregation, and selection of the top 10 results."
+    },
+    {
+      "question": "How do you handle missing values and detect and remove duplicates in a PySpark DataFrame?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides separate handling for null values and duplicate detection and removal."
+    },
+    {
+      "question": "What is the difference between local mode and cluster mode in Spark?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer compares Spark's local and cluster execution environments."
+    },
+    {
+      "question": "What are the advantages of Parquet over CSV and JSON?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies advantages of Parquet and contrasts them with CSV and JSON."
+    },
+    {
+      "question": "How do you repartition or coalesce data, and when would you use each?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes repartitioning from coalescing and explains the appropriate use case for each."
+    },
+    {
+      "question": "How do you write and use a UDF in PySpark, and what performance considerations apply?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates UDF definition and use while addressing the stated performance considerations."
+    },
+    {
+      "question": "How have you integrated PySpark with Hadoop/HDFS, Hive, or Kafka?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer describes a concrete integration involving one or more of the named systems."
+    },
+    {
+      "question": "How does PySpark handle schema evolution, schema-on-read, and schema-on-write?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer explains all three named schema-management concerns."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Spark SQL",
+      "DataFrame operations",
+      "PySpark performance tuning",
+      "Spark deployment",
+      "Parquet and partitioning",
+      "PySpark integrations",
+      "Schema management"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e3eff03e75317cc2",
+    "saved_date": "2026-10-01T23:28:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7319949257480843265",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7319949257480843265_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b0d57dec59ace062a3ed579b0b9bebc11362266cffe15bc9504ae7b40b177f1c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

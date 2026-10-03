@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-saved-89618bec41cc0024",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7426557975819083776",
+    "captured_at": "2026-10-02T00:15:48.991522Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:56Z"
+  },
+  "original_text": "Stop guessing your partition sizes. Let Spark do it for you. 🧠\n\nIn the \"old days\" of Apache Spark, we spent hours tuning spark.sql.shuffle.partitions. Set it too high? You get massive overhead. Too low? Hello, OutOfMemory errors.\n\nThat’s where Adaptive Query Execution (AQE) changed the game.\n\nWhy should you care as a Data Engineer?\n\n- Coalescing Post-shuffle Partitions: AQE merges small partitions at runtime, avoiding the \"small file problem\" without manual intervention.\n- Switching Join Strategies: It can convert a Sort-Merge Join to a Broadcast Hash Join on the fly if it sees that one relation is small enough.\n- Handling Data Skew: It detects skewed partitions and splits them into smaller chunks, so you don't have one executor working while 99 others are idling.\n\nMy take: In modern Lakehouse architectures, AQE is not just a feature; it's a cost-optimization necessity. If you aren't leveraging it in your Databricks jobs, you're likely overpaying for your compute.\n\nCurrently deep-diving into these internals for my Apache Spark Developer certification. It’s fascinating to see how the Catalyst Optimizer evolves with every version.\n\nDo you still tune your partitions manually, or do you fully trust AQE? Let’s discuss below! 👇\n#ApacheSpark #Databricks #DataEngineering #CloudOptimization #Azure",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7426557975819083776_slide_0.jpg",
+      "description": "JPEG image, 480x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains how Apache Spark Adaptive Query Execution reduces the need to manually tune spark.sql.shuffle.partitions. It describes runtime coalescing of small post-shuffle partitions, switching from a Sort-Merge Join to a Broadcast Hash Join when one relation is small enough, and splitting skewed partitions to distribute work more evenly. The author argues that AQE is a cost-optimization necessity in modern lakehouse architectures and Databricks jobs.",
+    "topics": [
+      "Apache Spark Adaptive Query Execution",
+      "Partition tuning",
+      "Data skew handling",
+      "Join optimization",
+      "Databricks cost optimization"
+    ],
+    "subtopics": [
+      "spark.sql.shuffle.partitions",
+      "Coalescing post-shuffle partitions",
+      "Sort-Merge Join",
+      "Broadcast Hash Join",
+      "The small file problem",
+      "Skewed partition splitting"
+    ],
+    "concepts": [
+      "Adaptive Query Execution",
+      "spark.sql.shuffle.partitions",
+      "Coalescing Post-shuffle Partitions",
+      "Adaptive join strategy switching",
+      "Data skew handling",
+      "AQE in Databricks jobs"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What problems can arise when spark.sql.shuffle.partitions is set too high or too low, and how does AQE address the need for manual partition tuning?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A setting that is too high can create massive overhead, while one that is too low can contribute to OutOfMemory errors.\nAQE can merge small post-shuffle partitions at runtime to avoid the small file problem."
+    },
+    {
+      "question": "How can Adaptive Query Execution change a join strategy during execution?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "AQE can convert a Sort-Merge Join into a Broadcast Hash Join at runtime when it detects that one relation is small enough."
+    },
+    {
+      "question": "How does AQE mitigate the effects of data skew during query execution?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "AQE detects skewed partitions and splits them into smaller chunks.\nThis adjustment helps avoid concentrating work on one executor while 99 other executors remain idle."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark Adaptive Query Execution",
+    "secondary_topics": [
+      "Partition tuning",
+      "Join optimization",
+      "Data skew handling",
+      "Databricks cost optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:89618bec41cc0024",
+    "saved_date": "2026-10-01T23:08:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7426557975819083776",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7426557975819083776_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2bca47dedff6aafc80f3b4464083009aad84bbd763fe14763ad4111c3a798a25",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

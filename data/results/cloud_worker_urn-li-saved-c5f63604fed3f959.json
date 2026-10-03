@@ -1,0 +1,153 @@
+{
+  "id": "urn-li-saved-c5f63604fed3f959",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346198489967509504",
+    "captured_at": "2026-10-02T00:15:51.420503Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:35Z"
+  },
+  "original_text": "Snowflake Data Superhero ❄️| Azure, Snowflake, Databricks & Fabric Expert | Data Engineering Mentor & Speaker | Building Next-Gen Data Platforms | Content Creator & Writer | 15x Cloud Certified | 76K+ Followers\n1yr •\nSQL CAN'T BE SKIPPED\nIf you’re in data — whether as a Data Engineer, Analyst, BI Developer, or even a Software Engineer — you can’t escape SQL.\nIt’s the universal language to talk to your data.\nI recently came across this excellent breakdown of SQL essentials, which covers everything you should know to become confident and effective at data querying and manipulation.\nHere’s a quick walkthrough of these topics and why each one matters\n✅ 1. Fundamentals of SQL\nGet crystal clear on SELECT, FROM, WHERE. This is where everything starts — fetching data from tables.\n✅ 2. Filtering Commands\nLearn how to use WHERE, IN, BETWEEN, LIKE, and logical operators to filter your data precisely.\n✅ 3. Ordering Commands\nSort your results using ORDER BY. Simple but critical when generating reports.\n✅ 4. Alias\nUse AS to rename columns or tables for readability and cleaner joins.\n✅ 5. Aggregate Commands\nFunctions like SUM, AVG, MIN, MAX, COUNT — vital for dashboards, summaries, and metrics.\n✅ 6. GROUP BY Commands\nBreak down data into groups to run aggregates on. Mastering GROUP BY + HAVING is a game changer.\n✅ 7. Conditional Statements\nUse CASE WHEN to build logic inside your queries. It replaces multiple queries with one smart statement.\n✅ 8. JOINS\nThe heart of relational databases. Understand INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and SELF JOIN.\n✅ 9. Subquery\nRun queries inside queries. Essential for breaking down complex logic.\n✅ 10. VIEW & INDEX\nVIEW: Save complex queries as virtual tables.\nINDEX: Speed up read performance dramatically — learn when and how to create them.\n✅ 11. String Functions\nCONCAT, SUBSTR, REPLACE, LENGTH help you clean and manipulate text data.\n✅ 12. Mathematical Functions\nFrom ROUND to MOD — small tools that make numerical data handling powerful.\n✅ 13. Date-Time Functions\nCalculate age, format dates, or compare timestamps — critical for almost every business analysis.\n✅ 14. Pattern Matching (Regex)\nFind complex patterns inside strings. Think of filtering emails, phone numbers, or specific text structures.\n✅ 15. Data Type Conversion Functions\nCAST and CONVERT are must-haves when your data is not in the type you need.\nPro Tip for Learners:\n✅ Practice with public datasets (Kaggle, Google BigQuery, or sample retail databases).\n✅ Start simple, then write queries combining JOINS, GROUP BY, subqueries, and window functions.\n✅ Use EXPLAIN PLAN to see how your queries execute and optimize them.\n📌𝐅𝐨𝐥𝐥𝐨𝐰 𝐦𝐲 𝐌𝐞𝐝𝐢𝐮𝐦 𝐇𝐚𝐧𝐝𝐥𝐞 𝐭𝐨 𝐬𝐭𝐚𝐲 𝐮𝐩𝐝𝐚𝐭𝐞𝐝 - https://lnkd.in/dHhPyud2\n📌 𝗝𝗼𝗶𝗻 𝗠𝘆 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 - https://lnkd.in/d3F93Y5u\n🔗𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝒘𝒊𝒕𝒉 𝑴𝒆\n📌 𝗙𝗼𝗿 𝗠𝗲𝗻𝘁𝗼𝗿𝘀𝗵𝗶𝗽 - https://lnkd.in/gYn8Q39u\n📌 𝗙𝗼𝗿 𝗖𝗮𝗿𝗲𝗲𝗿 𝗚𝘂𝗶𝗱𝗮𝗻𝗰𝗲 - https://lnkd.in/gfrPMQSj\nFollow Riya Khandelwal\n#SQL #DataEngineering #Database #Analytics #Learning #CareerInData #MySQL #PostgreSQL #BigData #DataScience\nSQL COMMAND",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346198489967509504_slide_0.jpg",
+      "description": "PNG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents SQL as essential knowledge across data engineering, analytics, business intelligence, and software engineering. It summarizes SQL fundamentals, filtering, ordering, aliases, aggregation, grouping, conditional logic, joins, subqueries, views, indexes, and several categories of functions. It also recommends practicing with public datasets, progressing to queries that combine multiple constructs, and using EXPLAIN PLAN to inspect execution and optimize queries. The post is a concise learning overview and does not provide query examples or detailed explanations of every mentioned construct.",
+    "topics": [
+      "SQL",
+      "Relational databases",
+      "Query filtering and reporting",
+      "Data aggregation and transformation"
+    ],
+    "subtopics": [
+      "SELECT, FROM, and WHERE",
+      "WHERE, IN, BETWEEN, LIKE, and logical operators",
+      "ORDER BY",
+      "Aliases with AS",
+      "SUM, AVG, MIN, MAX, and COUNT",
+      "GROUP BY and HAVING",
+      "CASE WHEN",
+      "INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and SELF JOIN",
+      "Subqueries",
+      "VIEW and INDEX",
+      "String functions",
+      "Mathematical functions",
+      "Date-time functions",
+      "Regular-expression pattern matching",
+      "CAST and CONVERT",
+      "EXPLAIN PLAN",
+      "Combining joins, grouping, subqueries, and window functions"
+    ],
+    "concepts": [
+      "SQL fundamentals",
+      "SQL filtering",
+      "Result ordering",
+      "Aliases",
+      "Aggregate functions",
+      "GROUP BY",
+      "CASE WHEN",
+      "SQL joins",
+      "Subqueries",
+      "VIEW",
+      "INDEX",
+      "String functions",
+      "Mathematical functions",
+      "Date-time functions",
+      "Regular-expression pattern matching",
+      "Data type conversion",
+      "EXPLAIN PLAN"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL clauses form the basic starting point for fetching data from tables?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The basic starting clauses are SELECT, FROM, and WHERE."
+    },
+    {
+      "question": "How can SQL filtering and ordering constructs be used when preparing report data?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "WHERE, IN, BETWEEN, LIKE, and logical operators can filter rows precisely.\nORDER BY can sort the resulting records for reporting."
+    },
+    {
+      "question": "What is the purpose of an alias, and when does the post say it is especially useful?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "AS renames columns or tables for readability.\nAliases are especially useful for making joins cleaner."
+    },
+    {
+      "question": "How do aggregate functions and GROUP BY support summaries, dashboards, and metrics?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "SUM, AVG, MIN, MAX, and COUNT perform common aggregate operations.\nGROUP BY breaks data into groups so aggregates can be calculated for each group."
+    },
+    {
+      "question": "How can CASE WHEN simplify conditional logic inside a query?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "CASE WHEN embeds conditional logic directly within a query.\nIt can consolidate logic that might otherwise be handled by multiple queries."
+    },
+    {
+      "question": "How do VIEW and INDEX serve different purposes in a relational database?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A VIEW saves a complex query as a virtual table.\nAn INDEX is used to improve read performance."
+    },
+    {
+      "question": "Which SQL function categories would apply when cleaning text, handling numbers, processing dates, and correcting data types?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "String functions such as CONCAT, SUBSTR, REPLACE, and LENGTH can clean and manipulate text.\nROUND and MOD can handle numerical data.\nDate-time functions can calculate age, format dates, and compare timestamps.\nCAST and CONVERT can change data into a required type."
+    },
+    {
+      "question": "What process does the post recommend for inspecting and improving query execution?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "EXPLAIN PLAN can show how a query executes.\nThe execution information can then be used to optimize the query."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Database querying",
+      "Data aggregation",
+      "Query optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c5f63604fed3f959",
+    "saved_date": "2026-10-01T23:13:35Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346198489967509504",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346198489967509504_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7346198489967509504_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "29778ae513ad9dc3b23896095dd4c15a032d89149e228145dfaa772b80e071da",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Query performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

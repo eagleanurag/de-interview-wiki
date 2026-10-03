@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-saved-06f7ead3cd6a4450",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337705010304036867",
+    "captured_at": "2026-10-02T00:15:44.568237Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:54Z"
+  },
+  "original_text": "#DataEngineer #InterviewQuestions #PySpark #SparkSQL \n#AzureDataEngineer #Databricks\nQ :: Find the origin and final destination details of a customer for the below given table :\n----DDL ::\nCREATE TABLE Flights (cust_id INT, flight_id VARCHAR(10), origin VARCHAR(50), destination VARCHAR(50));\n\n-- Insert data into the table\nINSERT INTO Flights (cust_id, flight_id, origin, destination)\nVALUES (1, 'SG1234', 'Delhi', 'Hyderabad'), (1, 'SG3476', 'Kochi', 'Mangalore'), (1, '69876', 'Hyderabad', 'Kochi'), (2, '68749', 'Mumbai', 'Varanasi'), (2, 'SG5723', 'Varanasi', 'Delhi');\n\nAnswer ::\ncust_id | origin | destination\n1 | Delhi | Mangalore\n2 | Mumbai | Delhi\n\ncomment down the answer. if you find it useful #repost\nTable ::",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337705010304036867_slide_0.jpg",
+      "description": "JPEG image, 308x120 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a Flights table and asks for each customer's origin and final destination. The supplied answer summarizes customer 1 as Delhi to Mangalore and customer 2 as Mumbai to Delhi, corresponding to the first origin and last destination in the displayed row sequence. The DDL contains no timestamp or sequence column, so the post does not specify a deterministic rule for defining the final destination.",
+    "topics": [
+      "Customer flight itinerary analysis"
+    ],
+    "subtopics": [
+      "Per-customer origin and destination selection",
+      "Ordering requirements for first and final flights"
+    ],
+    "concepts": [
+      "Flights table schema",
+      "Per-customer route summary",
+      "Displayed first-to-last interpretation",
+      "Final-flight ordering ambiguity"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given the supplied Flights rows, what origin and final destination are reported for customers 1 and 2?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Customer 1 is reported as traveling from Delhi to Mangalore.\nCustomer 2 is reported as traveling from Mumbai to Delhi."
+    },
+    {
+      "question": "Does the supplied Flights schema unambiguously define which destination is final?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The schema contains no timestamp or sequence column for ordering flights.\nThe displayed answer corresponds to the first and last rows shown, but the post does not provide a deterministic ordering rule."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Spark SQL",
+    "secondary_topics": [
+      "Data Transformation",
+      "Data Quality"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:06f7ead3cd6a4450",
+    "saved_date": "2026-10-01T23:17:54Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337705010304036867",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337705010304036867_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ea1cfaeb68e508f6d27a2e1b58dc57885e9e71e986279d3befdfc42d865bd3e0",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Spark SQL"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "id": "urn-li-archive-7187f84a5008fb32",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.350463Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:54Z"
+  },
+  "original_text": "Hey #DataEngineering fam! 👋 My journey has led me to conduct interviews, and I'm spotting questions that go beyond theory – they test real-world experience! (More on those 'not-so-normal' questions soon! 😉)\n\nTo kick things off, let's tackle 5 common, yet crucial, scenarios in ETL. These are the ones where practical know-how shines. What's your go-to solution for these? 👇\n\n1. Optimize an ETL job for 10 million records? 🚀\n* My Take: Don't just SELECT *!\n* Key Strategies:\n* Parallelize: Use Spark partitioning or file-based partitioning (ADLS).\n* Push Logic: Filter/aggregate at source DB (WHERE, GROUP BY).\n* Minimize In-Memory: Be smart with large lookups/joins.\n* Bulk Load: Efficiently write data in batches (ADF Copy Activity, Spark configs).\n\n2. Handle records rejected during transformation? 🚫\n* My Take: One bad record shouldn't break the pipeline!\n* Key Strategies:\n* Redirect: Send bad records to a reject file/table (DLQ in ADLS).\n* Capture Metadata: Log error, source ID, timestamp for debugging.\n* Fault Tolerance: Use ADF's settings or Spark's PERMISSIVE mode / try-except.\n\n3. Pass different file paths for DEV, QA, PROD? ⚙️\n* My Take: Avoid hardcoding at all costs!\n* Key Strategies:\n* Parameterization: Use pipeline parameters in ADF.\n* Environment Variables: Configure paths external to code.\n* Secure Secrets: Use Azure Key Vault for sensitive credentials.\n\n4. Implement Incremental Load (CDC)? 🔄\n* My Take: Efficiently process only new/changed data.\n* Key Strategies:\n* High-Water Mark: Track last_updated_timestamp or max_key.\n* Control Table: Store the last loaded mark for each job.\n* Filtered Query: Pull data using WHERE LastUpdatedTimestamp > :bookmark_value.\n* Delta Lake MERGE: Simplify CDC in Databricks.\n\n5. Load the most recent record per customer from a transaction table? 📊\n* My Take: A classic for getting the latest state of an entity.\n* Key Strategies:\n* Sort & Rank: Group by customer, then sort by date (DESC).\n* Window Functions: Use Spark SQL's ROW_NUMBER() over PARTITION BY CustomerID ORDER BY TransactionDate DESC.\n* Filter: Select WHERE rn = 1 for the latest record.\n\nWhich of these scenarios have you tackled recently? What are your preferred tools or techniques? Share your insights and let's discuss! 👇\n\n#DataEngineering #AzureDatabricks #Databricks #DataFactory #AzureDataFactory #ADF #ADB #AzureDataEngineer #ETL #InterviewQuestions #DataOps #CloudData #Azure #CareerTips #CommunityLearning",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents five practical ETL interview scenarios: optimizing a job that processes 10 million records, handling records rejected during transformation, supporting different file paths across DEV, QA, and PROD, incrementally loading new or changed data with CDC, and retrieving the most recent transaction for each customer. It recommends avoiding SELECT *, filtering and aggregating at the source database, using Spark or ADLS file-based partitioning, minimizing in-memory processing for large lookups and joins, writing data in batches, redirecting rejected records with diagnostic metadata, applying fault-tolerance settings, externalizing configuration, storing secrets in Azure Key Vault, tracking incremental-load state, using Delta Lake MERGE in Databricks, and applying the Spark SQL ROW_NUMBER pattern.",
+    "topics": [
+      "ETL",
+      "Rejected-record handling and fault tolerance",
+      "Pipeline configuration and secrets management",
+      "Incremental loading and CDC",
+      "Latest-record retrieval",
+      "Azure Data Factory",
+      "Spark",
+      "Delta Lake",
+      "Databricks",
+      "ADLS",
+      "Azure Key Vault"
+    ],
+    "subtopics": [
+      "Selective extraction instead of SELECT *",
+      "Source-side filtering and aggregation",
+      "Spark partitioning",
+      "ADLS file-based partitioning",
+      "Memory-conscious large lookups and joins",
+      "Batched loading with ADF Copy Activity or Spark configurations",
+      "Reject files, reject tables, and ADLS DLQs",
+      "Error, source ID, and timestamp capture",
+      "ADF settings, Spark PERMISSIVE mode, and try-except",
+      "ADF pipeline parameters",
+      "Environment variables external to code",
+      "Azure Key Vault credentials",
+      "High-water marks",
+      "Control tables",
+      "Filtered incremental queries",
+      "Delta Lake MERGE",
+      "Customer-level sorting and ranking",
+      "ROW_NUMBER partitioned by CustomerID"
+    ],
+    "concepts": [
+      "Large-volume ETL optimization",
+      "Partition-based parallelism",
+      "Source-side filtering and aggregation",
+      "Memory-conscious lookup and join processing",
+      "Batched ETL output",
+      "Rejected-record routing",
+      "Transformation error metadata",
+      "Transformation fault tolerance",
+      "Pipeline parameterization",
+      "External environment variables",
+      "Azure Key Vault secret management",
+      "High-water-mark incremental loading",
+      "Control table",
+      "Filtered incremental query",
+      "Delta Lake MERGE",
+      "Latest-record-per-customer pattern"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you optimize an ETL job that processes 10 million records?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The job should avoid SELECT *.\nFiltering and aggregation should be pushed to the source database by using WHERE and GROUP BY.\nProcessing should be parallelized with Spark partitioning or file-based partitioning in ADLS.\nLarge lookups and joins should be handled carefully to minimize in-memory processing.\nOutput should be written in batches with ADF Copy Activity or Spark configurations."
+    },
+    {
+      "question": "How should an ETL pipeline handle records rejected during transformation without allowing one bad record to break the job?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Rejected records should be redirected to a reject file or table, with a DLQ in ADLS presented as an option.\nThe pipeline should capture the error, source ID, and timestamp for debugging.\nADF settings, Spark PERMISSIVE mode, or try-except handling should be used to provide fault tolerance."
+    },
+    {
+      "question": "How can one ETL pipeline use different file paths in DEV, QA, and PROD while keeping sensitive credentials secure?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "ADF pipeline parameters should replace hardcoded environment-specific paths.\nEnvironment variables can configure paths external to the code.\nAzure Key Vault should store sensitive credentials."
+    },
+    {
+      "question": "How can an ETL job incrementally load only new or changed records using CDC?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A high-water mark can track a last_updated_timestamp or max_key.\nA control table can store the last loaded mark for each job.\nA filtered query can use WHERE LastUpdatedTimestamp > :bookmark_value.\nDelta Lake MERGE in Databricks can simplify CDC."
+    },
+    {
+      "question": "How would you use Spark SQL to retrieve the most recent transaction for each customer?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Use ROW_NUMBER() over PARTITION BY CustomerID ORDER BY TransactionDate DESC.\nFilter the ranked rows with WHERE rn = 1 to retain the latest transaction for each customer."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "ETL",
+    "secondary_topics": [
+      "ETL performance optimization",
+      "Rejected-record handling and fault tolerance",
+      "Pipeline configuration and secrets management",
+      "Incremental loading and CDC",
+      "Latest-record retrieval with window functions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7187f84a5008fb32",
+    "saved_date": "2026-10-01T23:20:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "97373703ef5fb4047514afcb60e1cb73da97643c2932dad70cf1f20243fb1d00",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "ETL performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "urn-li-saved-62217af1a19a39f5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341290345546067969",
+    "captured_at": "2026-10-02T00:15:48.032855Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:04Z"
+  },
+  "original_text": "Dear Data enthusiasts,\n\n🎯One of the SQL Question Asked in a hashtag\n#Deloitte Interview🎯\n\n💡Question:- Extract the Domain from the Email column in Employee Table.\n\n📊Here's the table structure and sample data:-\n\nCREATE TABLE Users (\n id INT PRIMARY KEY,\n name VARCHAR(50),\n email VARCHAR(50)\n);\n\nINSERT INTO Users (id, name, email) VALUES\n(1, 'John Doe', 'john.doe@example.com'),\n(2, 'Jane Smith', 'jane.smith@company.com'),\n(3, 'Alice Johnson', 'alice.johnson@business.org'),\n(4, 'Robert Brown', 'robert.brown@enterprise.net'),\n(5, 'Emily Davis', 'emily.davis@startup.io'),\n(6, 'Michael Wilson', 'michael.wilson@web.co'),\n(7, 'Sophia Taylor', 'sophia.taylor@tech.dev'),\n(8, 'David Anderson', 'david.anderson@service.us');\n\nConcepts Used :- \n1️⃣SELECT \n2️⃣String Function - SUBSTRING , CHARINDEX\n3️⃣Build-in-Function - LEN\n4️⃣Arithmetic Operation - Add +1\n \n👍 𝗟𝗶𝗸𝗲 for more such content.\n♻️𝗥𝗲𝗽𝗼𝘀𝘁 to grow your own network!\n\n👉Follow Navya sri Kurapati more insights and content on DS/ML.\n\n#Interview #SQL #SQLInterview #DeloitteCareers #DataAnalytics\n#SQLQueries #TechInterview #SQLForDataScience #Database #MySQL \n#PostgreSQL",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341290345546067969_slide_0.jpg",
+      "description": "JPEG image, 480x241 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a Deloitte interview-style SQL task to extract the domain from the email column of a Users table. It provides the table definition, eight sample records, and identifies SELECT, SUBSTRING, CHARINDEX, LEN, and adding 1 as relevant techniques. However, it does not provide a complete solution query.",
+    "topics": [
+      "SQL",
+      "Email domain extraction"
+    ],
+    "subtopics": [
+      "SQL string functions",
+      "Querying a Users table",
+      "SUBSTRING",
+      "CHARINDEX",
+      "LEN",
+      "String position arithmetic"
+    ],
+    "concepts": [
+      "Users.email",
+      "SELECT",
+      "SUBSTRING",
+      "CHARINDEX",
+      "LEN",
+      "Addition with +1"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write a SQL query to extract the domain from each email address in the Users table?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query selects email values from the Users table.\nThe answer uses the listed string-function approach to isolate the portion of the address after the @ symbol.\nThe answer accounts for the position adjustment required by adding 1."
+    },
+    {
+      "question": "Which SQL constructs does the post identify as useful for extracting a domain from an email address?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer identifies SELECT as the clause used to retrieve data.\nThe answer names SUBSTRING and CHARINDEX as the relevant string functions.\nThe answer names LEN as a relevant built-in function and addition with 1 as the relevant arithmetic operation."
+    },
+    {
+      "question": "For the email john.doe@example.com, what domain should the extraction return?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The answer returns example.com by retaining the portion after the @ symbol."
+    }
+  ],
+  "classification": {
+    "domain": "SQL and Data Analytics",
+    "primary_topic": "Extracting email domains with SQL",
+    "secondary_topics": [
+      "SQL string functions",
+      "Querying a Users table"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:62217af1a19a39f5",
+    "saved_date": "2026-10-01T23:17:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341290345546067969",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341290345546067969_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8eda28100d7be2193603735bcf5293cfc70cf8cacb0d480a9404f943af533610",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

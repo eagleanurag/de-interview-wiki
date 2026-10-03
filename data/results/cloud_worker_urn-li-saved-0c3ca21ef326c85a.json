@@ -1,0 +1,196 @@
+{
+  "id": "urn-li-saved-0c3ca21ef326c85a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315004917868359681",
+    "captured_at": "2026-10-02T00:15:44.702203Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:50Z"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\nData Engineering Most Frequently asked Real time Interview Questions.\nHey Fellow Data Engineer, You might have noticed these questions in your data engineering interview rounds every time, these are some of the real time questions in order to check whether you have really worked on any data engineering project or not .\nEnsure you prepare well before going for any interview.\n1. What cluster Manager you have used in your project ?\n2. What is your cluster Size ?\n3. How does your data comes to your storage location ?\n4. What are the other sources you have used in your project ?\n5. what is the sink for your project /\n6. What is the frequency of the data in your source ?\n7. What is the volume of your data ?\n8. Please explain your project in detail ?\n9. Lets say out of 100 task, 99 tasks completed however the last task is taking long hours to finish/complete, how to handle this issue ?1\n10. What all challenges you have faced and how did you overcome from it ?\n11. what optimization technique you have used in your project and what is the reason for it ?\n12. Have you done spark optimization tuning ? If yes, how you have done that ?\n13. Can you please walk me through the spark-submit command ?\n14. Lets say you are getting your data volume is 100 GB , In your spark you are doing 5 Actions and 3 transformations on the data, explain what goes behind the scene with respect to Stages ,tasks?\n15. how do you take your code to the higher environment ?\n16. How do you schedule your job in production ?\n17. How do you reprocess the data if it failed ?\n18. Tell me one scenario you have gone wrong with your decision making and what you have learnt from that mistake ?\n19. Lets say you have noticed duplicate records loaded in the table for the particular partition, how you resolved such issues ?\n20. What is the frequency of your jobs ?\n21. How do you notify your business/Stakeholders in case of any job failure?\nHope you find these questions useful for your preparation .\n📙 Also attaching an amazing document which explains 'How to Debug Slow Apache Spark Jobs? '\nDocument credits : LinkedIn (Respective owner)\n🔈 Join my Data Community : https://lnkd.in/gy4R55Tj\n♻️ Repost to help others grow\n🔔 Follow Abhisek Sahu for more\nHow to Debug Slow Spark Jobs",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315004917868359681_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a list of 21 questions that the author presents as frequently asked data engineering interview questions for checking whether candidates have really worked on a data engineering project. It covers cluster manager and size, data movement to storage, sources and sinks, source frequency and volume, project details and challenges, a long-running task in a 100-task workload, optimization and Spark tuning, spark-submit, Spark stages and tasks in a 100 GB scenario with five actions and three transformations, taking code to a higher environment, production scheduling, reprocessing after failure, decision mistakes, duplicate records in a table partition, job frequency, and stakeholder notifications. The author profile names Databricks, PySpark, ADF, Synapse, Python, SQL, and Power BI, but the body provides questions rather than answers or implementation details. It references a document about debugging slow Apache Spark jobs, but no content from that document is included in the supplied text.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Project details, challenges, and lessons learned",
+      "Cluster management",
+      "Data movement and storage",
+      "Data sources and sinks",
+      "Source frequency and data volume",
+      "Apache Spark",
+      "Spark actions, transformations, stages, and tasks",
+      "Spark optimization and tuning",
+      "spark-submit",
+      "Taking code to a higher environment and scheduling production jobs",
+      "Failure handling and data reprocessing",
+      "Job frequency and stakeholder notifications",
+      "Slow Apache Spark job debugging",
+      "Author-profile technologies: Databricks, PySpark, ADF, Synapse, Python, SQL, and Power BI"
+    ],
+    "subtopics": [
+      "Cluster manager used in a project",
+      "Cluster size",
+      "How data reaches storage",
+      "Other sources used in the project",
+      "Project sink",
+      "Frequency of source data",
+      "Data volume",
+      "Detailed project explanation",
+      "Challenges faced and how they were overcome",
+      "99 completed tasks and one long-running final task",
+      "Optimization techniques and reasons",
+      "Spark optimization tuning",
+      "spark-submit command walkthrough",
+      "100 GB Spark workload with five actions and three transformations",
+      "Stages and tasks behind Spark actions and transformations",
+      "Taking code to a higher environment",
+      "Scheduling a job in production",
+      "Reprocessing data after failure",
+      "Decision-making mistake and lesson learned",
+      "Duplicate records in a particular table partition",
+      "Frequency of jobs",
+      "Notifying business or stakeholders after job failure",
+      "Referenced document on debugging slow Apache Spark jobs"
+    ],
+    "concepts": [
+      "Cluster manager and cluster size",
+      "Data movement, sources, and sinks",
+      "Source frequency and data volume",
+      "Project details, challenges, and decision-making",
+      "Long-running final task",
+      "Optimization techniques and Spark tuning",
+      "Spark actions, transformations, stages, and tasks",
+      "spark-submit",
+      "Taking code to a higher environment and scheduling production jobs",
+      "Failure reprocessing and stakeholder notification",
+      "Duplicate records in a table partition",
+      "Job frequency",
+      "Slow Apache Spark job debugging"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which cluster manager and cluster size did you use in your data engineering project?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong response should identify the cluster manager used in the project.\nA strong response should state the cluster size used."
+    },
+    {
+      "question": "How did data reach the storage location in your project, and which sources and sink did you use?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong response should explain how data reaches the storage location.\nA strong response should identify the sources used and the sink used."
+    },
+    {
+      "question": "What were the frequency and volume of the data in your source?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong response should state the frequency of the source data.\nA strong response should state the data volume."
+    },
+    {
+      "question": "Please explain a data engineering project you worked on in detail, including the challenges you faced, how you overcame them, and a decision that went wrong.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong response should describe the project in detail.\nA strong response should explain the challenges faced and how they were overcome.\nA strong response should describe a decision-making mistake and the lesson learned."
+    },
+    {
+      "question": "If 99 of 100 tasks have completed but the last task has been running for hours, how would you handle the situation?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong response should give an approach for handling the unusually long-running final task."
+    },
+    {
+      "question": "Which optimization techniques did you use in your project, what was the reason for them, and did you perform Spark optimization tuning?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong response should name the optimization techniques used and explain their reasons.\nA strong response should explain whether Spark optimization tuning was performed and how."
+    },
+    {
+      "question": "Can you walk me through the spark-submit command?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong response should present and explain the spark-submit command."
+    },
+    {
+      "question": "For a Spark workload processing 100 GB with five actions and three transformations, what happens behind the scenes with respect to stages and tasks?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong response should explain the stages and tasks in the stated workload.\nA strong response should relate the five actions and three transformations to those stages and tasks."
+    },
+    {
+      "question": "How do you take code to a higher environment, and how do you schedule a job in production?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong response should explain how code is taken to a higher environment.\nA strong response should explain how a job is scheduled in production."
+    },
+    {
+      "question": "How do you reprocess data after a job fails?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong response should explain how failed data is reprocessed."
+    },
+    {
+      "question": "How do you resolve duplicate records loaded into a particular table partition?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong response should explain how duplicate records in the affected partition were resolved."
+    },
+    {
+      "question": "What is the frequency of your jobs, and how do you notify business stakeholders when a job fails?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong response should state how frequently the jobs run.\nA strong response should explain how business stakeholders are notified after a failure."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Apache Spark execution and optimization",
+      "Cluster management",
+      "Data movement, storage, sources, and sinks",
+      "Source frequency and data volume",
+      "Taking code to higher environments and scheduling production jobs",
+      "Failure recovery and data reprocessing",
+      "Data quality and duplicate handling",
+      "Job frequency and stakeholder notifications",
+      "Databricks, PySpark, ADF, Synapse, Python, SQL, and Power BI"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:0c3ca21ef326c85a",
+    "saved_date": "2026-10-01T23:30:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315004917868359681",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315004917868359681_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "bb7bfd5f128b70b44f3a2994305d80e1c34836e52c2f365362c43423f01c0539",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data quality and duplicate records"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

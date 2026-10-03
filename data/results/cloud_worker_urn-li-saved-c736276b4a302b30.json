@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-c736276b4a302b30",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7346429040959856640",
+    "captured_at": "2026-10-02T00:15:51.528899Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:13:37Z"
+  },
+  "original_text": "Sr. Data Engineer at Accenture Strategy|Ex-Deloitte, PwC | 3x Azure Certified | 2x DataBricks Certified |Transforming Data into Insights for Impact 💡\n1yr •\nUber Data Engineer #Interview Question\nIf you're prepping for an interview at Publicis Sapient, Tata Consultancy Services, Accenture, Deloitte, PwC and more, mastering SQL performance tuning is a game-changer.\n#sqlserver #sqldatabase #sqldeveloper #mysql #sqldba #sqlinjection #interview #dataenginnering #data #datajhiring #interview #jobs #hiring #Dataanalyst\nData Engineer Interview Question",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7346429040959856640_slide_0.jpg",
+      "description": "PNG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a brief promotional hiring post stating that SQL performance tuning is important for data engineering interview preparation. It mentions SQL-related hashtags but provides no interview question, technical explanation, examples, methods, or results, and it appears incomplete after the label \"Extracted media text:\".",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c736276b4a302b30",
+    "saved_date": "2026-10-01T23:13:37Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7346429040959856640",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7346429040959856640_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7346429040959856640_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ab9dbf49fa57ddc3b3e4e8a0827b43e15a96da18beada9a2882f19b09e9d717b",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

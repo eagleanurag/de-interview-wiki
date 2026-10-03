@@ -1,0 +1,96 @@
+{
+  "id": "urn-li-saved-83ec7ab5844b98dc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7292041091321671680",
+    "captured_at": "2026-10-02T00:15:48.863124Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:54Z"
+  },
+  "original_text": "🚀 𝐏𝐲𝐒𝐩𝐚𝐫𝐤 𝐏𝐫𝐨𝐛𝐥𝐞𝐦-𝐒𝐨𝐥𝐯𝐢𝐧𝐠 𝐂𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐞 🚀\nHere’s an exciting problem for #DataEngineers and #PySpark enthusiasts!\n---------------------------------\n🎯 #Problem_Statement: \n---------------------------------\nYour mission, should you choose to accept it, is to showcase your PYSPARK prowess with the following tasks:\n \n1️⃣ Get only Year part of \"JoiningDate\"\n2️⃣ Get only Month part of \"JoiningDate\".\n3️⃣ Get only date part of \"JoiningDate\".\n4️⃣Get the current system date using DataFrame API\n5️⃣Get the current UTC date and time using DataFrame API\n \n---------------------------------------------\n📊 #Schema_And_Data :\n---------------------------------------------\nDifficult Level : EASY\n \n#Input_Data :\ndata = [\n [1, \"Vikas\", \"Ahlawat\", 600000.0, \"2013-02-15 11:16:28.290\", \"IT\", \"Male\"],\n [2, \"nikita\", \"Jain\", 530000.0, \"2014-01-09 17:31:07.793\", \"HR\", \"Female\"],\n [3, \"Ashish\", \"Kumar\", 1000000.0, \"2014-01-09 10:05:07.793\", \"IT\", \"Male\"],\n [4, \"Nikhil\", \"Sharma\", 480000.0, \"2014-01-09 09:00:07.793\", \"HR\", \"Male\"],\n [5, \"anish\", \"kadian\", 500000.0, \"2014-01-09 09:31:07.793\", \"Payroll\", \"Male\"],\n]\n \n# Create a schema for the DataFrame\nschema = StructType([\n StructField(\"EmployeeID\", IntegerType(), True),\n StructField(\"First_Name\", StringType(), True),\n StructField(\"Last_Name\", StringType(), True),\n StructField(\"Salary\", DoubleType(), True),\n StructField(\"Joining_Date\", StringType(), True),\n StructField(\"Department\", StringType(), True),\n StructField(\"Gender\", StringType(), True)\n])\n \n \n🔑 #Learning_Highlights:\nDate Functions\nString Functions for Dates\nWorking with System Date\n \nWhether you're a data engineer or preparing for PySpark-related interviews, mastering this easy-level challenge will boost your confidence in handling real-world datasets.\n \nCheck out the detailed solution in my latest video 🎥 : #link_In_Comment_Section \n \n#DataEngineering #PySpark #BigData #ApacheSpark #Learning #DataFrames #JoinOperations #CodingChallenges\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7292041091321671680_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is an easy-level PySpark DataFrame coding challenge based on five employee records. It asks users to extract the year, month, and date portions of the employee joining timestamp and to retrieve both the current system date and the current UTC date and time through the DataFrame API. The post identifies date functions, string functions for dates, and system-date handling as learning topics. It provides an explicit schema but no detailed solution; a separate JoinOperations topic is only present as a hashtag and no join task is described.",
+    "topics": [
+      "PySpark",
+      "Apache Spark DataFrames",
+      "Date and time transformations",
+      "DataFrame schemas"
+    ],
+    "subtopics": [
+      "Extracting year, month, and date parts from a joining timestamp",
+      "Retrieving the current system date with the DataFrame API",
+      "Retrieving the current UTC date and time with the DataFrame API",
+      "Defining an explicit DataFrame schema"
+    ],
+    "concepts": [
+      "Joining-date component extraction",
+      "Current system date retrieval",
+      "Current UTC date and time retrieval",
+      "Explicit DataFrame schema",
+      "Date-related function categories"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which five transformations must a solution to the PySpark challenge produce?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The solution must extract the year, month, and date portions of the joining timestamp.\nThe solution must retrieve the current system date and the current UTC date and time through the DataFrame API."
+    },
+    {
+      "question": "How is the employee DataFrame schema defined in the challenge?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The schema contains EmployeeID, First_Name, Last_Name, Salary, Joining_Date, Department, and Gender.\nEmployeeID is an IntegerType, Salary is a DoubleType, and the remaining fields are StringType fields.\nAll seven schema fields are nullable."
+    },
+    {
+      "question": "Which knowledge areas does the post associate with this DataFrame challenge?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies date functions, string functions for dates, and working with the system date."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame date and time transformations",
+    "secondary_topics": [
+      "DataFrame schema definition",
+      "Employee data",
+      "Date-related functions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:83ec7ab5844b98dc",
+    "saved_date": "2026-10-01T23:36:54Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7292041091321671680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7292041091321671680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "71ae65a64d9a7fd5fbad7f37c890ce808355b96e4da19b4e1b95490f730b8fd0",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

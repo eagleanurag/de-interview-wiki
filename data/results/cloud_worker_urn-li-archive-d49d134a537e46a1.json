@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-d49d134a537e46a1",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.491854Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:35Z"
+  },
+  "original_text": "EPAM Systems 𝗥𝗲𝗰𝗲𝗻𝘁𝗹𝘆 𝗼𝗳𝗳𝗲𝗿𝗲𝗱 𝗺𝘆 𝗼𝗻𝗲 𝗳𝗿𝗶𝗲𝗻𝗱 𝗮 𝗽𝗮𝗰𝗸𝗮𝗴𝗲 𝗼𝗳 𝟯𝟮 𝗟𝗣𝗔\nPosition: Data Engineer\nApplication Method: Naukri\n\n𝗥𝗼𝘂𝗻𝗱 𝟭 - 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹\n1️⃣ How would you design a real-time data pipeline to process millions of financial transactions for fraud detection?\n2️⃣ What steps would you take to guarantee data consistency between a production OLTP database and an analytical data warehouse?\n3️⃣ You've discovered duplicate records in a critical production dataset. What is your immediate plan to handle them, and what long-term strategy would you implement to prevent recurrence?\n4️⃣ A producer team is pushing a schema change that will break your downstream pipeline. How do you manage this schema evolution without causing failure?\n5️⃣ How would you systematically debug a Spark job that is running significantly slower in production than in testing?\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀.\nIf you’re preparing for Data Engineering interviews or want to master such concepts…\n𝗚𝗲𝘁 𝗣𝗗𝗙 (𝗿𝗲𝗮𝗹 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝘂𝘀𝗲 𝗰𝗮𝘀𝗲𝘀 + 𝗮𝗻𝘀𝘄𝗲𝗿𝘀) 👉 https://lnkd.in/g9evVqb3\nDISCOUNT CODE: DATA10\n\n🔥 Save this post before your next interview\n👍 Like | 💾 Save | 🔁 Share with someone preparing for interviews\nFollow Shilpa Das For more such content.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is an EPAM Systems hiring announcement for a Data Engineer position applied for through Naukri. It lists five Data Engineering interview questions covering real-time financial transaction pipelines, OLTP-to-warehouse consistency, duplicate production data, schema evolution, and Spark performance debugging, but it does not provide answers, technical explanations, implementation details, or figures. The remainder promotes an interview guide and discount code.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering hiring",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d49d134a537e46a1",
+    "saved_date": "2026-10-01T23:07:35Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b3ecc363caab5893adc99df66aae88fc62d15ec8107bc0e15ceb1840d1cc074e",
+    "enricher_version": "3"
+  }
+}

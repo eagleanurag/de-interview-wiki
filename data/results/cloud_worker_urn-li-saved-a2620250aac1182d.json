@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-saved-a2620250aac1182d",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341661228617900033",
+    "captured_at": "2026-10-02T00:15:50.170029Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:05Z"
+  },
+  "original_text": "Writes to 12K+ | Data Engineer | Databricks | ADF | Python | Apache Spark | SQL | Synapse Analytics | Power BI | Snowflake\n1yr •\n🚀 Databricks Lakebase – A Game Changer for OLTP + Analytics! 🚀\nDatabricks just introduced Lakebase, a fully managed Postgres OLTP database designed for modern data-intensive apps and AI agents.\n🔍 Instead of the old model:\nOLTP → ETL → Data Lake → Analytics\n💡 Lakebase brings a unified platform:\n✅ No ETL pipelines\n✅ Real-time data access\n✅ Built-in AI-readiness\n✅ Seamless integration with the Lakehouse\n✅ Separation of compute & storage\n👨‍💻 Say goodbye to complex architectures, and hello to cost efficiency, speed, and unified governance!\nNote : “No ETL” doesn’t mean no transformation ever. It means no need to move/duplicate data across systems just to analyze it — the Lakehouse handles both.\n📌 Shared this in my #PySpark & #Databricks series to keep you updated with 2025 trends!\n🔗 Let’s connect & talk about data: https://lnkd.in/ewHaD63Y\n#Databricks #Lakebase #OLTP #AI #BigData #DataEngineering #PySpark\nDatabricks Lakebase",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341661228617900033_slide_0.jpg",
+      "description": "JPEG image, 387x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A brief promotional post claims that Databricks Lakebase is a fully managed Postgres OLTP database for data-intensive applications and AI agents. It contrasts a conventional OLTP-to-ETL-to-data-lake-to-analytics pipeline with a unified Lakehouse approach that provides real-time data access, AI readiness, Lakehouse integration, separated compute and storage, and unified governance. It clarifies that \"No ETL\" removes the need to move or duplicate data merely for analysis, not the possibility of transformations. The post presents these properties as improvements in cost and speed but supplies no implementation details or supporting evidence.",
+    "topics": [
+      "Databricks Lakebase",
+      "Unified OLTP and analytics architecture",
+      "Lakehouse integration",
+      "ETL and data movement",
+      "Real-time data access",
+      "Compute and storage separation",
+      "Unified governance",
+      "AI readiness"
+    ],
+    "subtopics": [
+      "Managed Postgres OLTP databases",
+      "Data-intensive applications",
+      "AI agents",
+      "Traditional OLTP-to-ETL-to-data-lake pipeline",
+      "Meaning of no ETL",
+      "Unified Lakehouse platform"
+    ],
+    "concepts": [
+      "Databricks Lakebase",
+      "Traditional OLTP-to-analytics pipeline",
+      "Unified Lakehouse platform",
+      "No ETL interpretation",
+      "Real-time data access",
+      "Lakehouse integration",
+      "Compute and storage separation",
+      "Unified governance",
+      "AI readiness"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the Lakebase architecture described in the post differ from the traditional OLTP-to-analytics pipeline?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The traditional flow is described as OLTP moving through ETL into a data lake and then into analytics.\nThe proposed approach places OLTP and analytics capabilities within a unified Lakehouse platform.\nThe post says this reduces the need to move or duplicate data across separate systems for analysis."
+    },
+    {
+      "question": "What does the post mean when it says that Lakebase requires \"No ETL\"?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "It means data does not need to be moved or duplicated across systems merely to be analyzed.\nIt does not mean that transformations never happen, because the Lakehouse can still perform them."
+    },
+    {
+      "question": "How does the post position Lakebase for a data-intensive application that uses AI agents and needs both transactional and analytical data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Lakebase is described as a fully managed Postgres OLTP database intended for data-intensive applications and AI agents.\nThe post attributes real-time data access, built-in AI readiness, and seamless Lakehouse integration to the unified platform.\nIt presents compute and storage separation, unified governance, cost efficiency, and speed as additional benefits."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Unified OLTP and analytics architecture with Databricks Lakebase",
+    "secondary_topics": [
+      "Managed Postgres databases",
+      "Lakehouse integration",
+      "ETL and data movement",
+      "Real-time data access",
+      "Compute and storage separation",
+      "Unified governance",
+      "AI applications and AI agents"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a2620250aac1182d",
+    "saved_date": "2026-10-01T23:17:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341661228617900033",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341661228617900033_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c3a6e08653023db219996e4fba46fddd14a36a9bc82f83696a3d96ac525d456f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

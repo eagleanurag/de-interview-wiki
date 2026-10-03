@@ -1,0 +1,95 @@
+{
+  "id": "urn-li-saved-3fca0890e9d2cf51",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7311391876236894208",
+    "captured_at": "2026-10-02T00:15:46.922709Z",
+    "author": "Kalyani V",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:51Z"
+  },
+  "original_text": "🚀 Transforming User Hobbies into Separate Rows in PySpark \n\n🔍 Problem Statement:\n Given a dataset containing users and their hobbies stored as a comma-separated string in a single column, transform the data so that each hobby is represented as a separate row for each user.\n\n💡 Input Data:\ndata = [(\"Alice\", \"Badminton,Tennis\"), (\"Bob\", \"Tennis,Cricket\"), (\"Julie\",\"Cricket,Carrom\")]\ncolumn = [\"Name\", \"Hobbies\"]\n\n🔧 Solution:\n✅ Step 1: Create a DataFrameCreate a DataFrame\n``` df = spark.createDataFrame(data, column) ```\n\n✅ Step 2: Import necessary functions\n \n```from pyspark.sql.functions import split, explode```\n\n\n✅ Step 3: Split the hobbies column by comma and explode the array\n\n```display(df.select(df.Name, explode(split(df.Hobbies,\",\"))\n.alias(\"Hobbies\")))```\n\n#pyspark #python #databricks #sparkTransformation #explode #split \n#spark #dataEngineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7311391876236894208_slide_0.jpg",
+      "description": "JPEG image, 480x434 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post demonstrates a PySpark transformation that creates a DataFrame from user records and converts each comma-separated hobbies value into a separate row while retaining the user's name. The transformation uses split to separate hobbies by commas and explode to produce one output row per hobby.",
+    "topics": [
+      "PySpark",
+      "DataFrame transformations",
+      "Array transformation"
+    ],
+    "subtopics": [
+      "Creating a DataFrame",
+      "Splitting comma-separated strings",
+      "Exploding arrays into rows",
+      "Selecting and renaming columns"
+    ],
+    "concepts": [
+      "createDataFrame",
+      "split",
+      "explode",
+      "select",
+      "alias"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can you transform a PySpark DataFrame so that each comma-separated hobby becomes a separate row while retaining the user's name?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Use split on the hobbies column with a comma delimiter.\nApply explode to the resulting collection to create one row per hobby.\nSelect the user's name and alias the exploded column as Hobbies."
+    },
+    {
+      "question": "What roles do split and explode play in the demonstrated PySpark transformation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "split separates the comma-separated hobbies string into individual values.\nexplode converts those values into separate rows."
+    },
+    {
+      "question": "How is the input DataFrame constructed in the post?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Pass the tuples containing names and comma-separated hobbies to spark.createDataFrame.\nProvide the column names Name and Hobbies."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark delimited-value transformation",
+    "secondary_topics": [
+      "DataFrame creation",
+      "String splitting",
+      "Exploding collections into rows"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3fca0890e9d2cf51",
+    "saved_date": "2026-10-01T23:26:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7311391876236894208",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7311391876236894208_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5d6aef5bd5a686dab9b12b9daddb1cb88520c1f7db0274609efeaa80142ab4e9",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

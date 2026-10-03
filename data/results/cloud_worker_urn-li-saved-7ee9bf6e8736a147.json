@@ -1,0 +1,108 @@
+{
+  "id": "urn-li-saved-7ee9bf6e8736a147",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327674189065113600",
+    "captured_at": "2026-10-02T00:15:48.634277Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:39Z"
+  },
+  "original_text": "📊 𝗗𝗲𝗹𝘁𝗮 𝗟𝗮𝗸𝗲 𝘃𝘀 𝗣𝗮𝗿𝗾𝘂𝗲𝘁 𝘃𝘀 𝗖𝗦𝗩 – 𝗙𝗼𝗿𝗺𝗮𝘁 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 & 𝗪𝗵𝗲𝗻 𝘁𝗼 𝗨𝘀𝗲 𝗪𝗵𝗮𝘁\n\nChoosing the right data format is crucial for performance, reliability, and downstream analytics. Here’s a quick cheat sheet based on our real-world experience working with all three in Azure Databricks.\n\n𝗖𝗦𝗩 – 𝗧𝗵𝗲 𝗟𝗲𝗴𝗮𝗰𝘆 𝗦𝘁𝗮𝗻𝗱𝗮𝗿𝗱\n\n✅ Easy to read and write\n✅ Supported everywhere\n❌ No schema enforcement\n❌ No compression\n❌ Poor performance on large datasets\n\n𝗨𝘀𝗲 𝘄𝗵𝗲𝗻 - You need quick compatibility, human readability, or initial ingestion from external systems.\n\n𝗣𝗮𝗿𝗾𝘂𝗲𝘁 – 𝗧𝗵𝗲 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 𝗣𝗼𝘄𝗲𝗿𝗵𝗼𝘂𝘀𝗲\n\n✅ Columnar storage = faster queries\n✅ Compressed & efficient\n✅ Schema support\n❌ No built-in versioning\n❌ Difficult updates (append-only)\n\n𝗨𝘀𝗲 𝘄𝗵𝗲𝗻 - You’re building a performant, read-heavy pipeline but don’t need ACID transactions.\n\n𝗗𝗲𝗹𝘁𝗮 𝗟𝗮𝗸𝗲 – 𝗧𝗵𝗲 𝗚𝗮𝗺𝗲 𝗖𝗵𝗮𝗻𝗴𝗲𝗿\n\n✅ Built on Parquet + ACID transactions\n✅ Schema evolution & enforcement\n✅ Time travel (versioning)\n✅ Supports updates, merges, deletes\n✅ Optimized for streaming & batch\n\n𝗨𝘀𝗲 𝘄𝗵𝗲𝗻 - You want reliability, data quality, auditability, and scalable pipelines. Ideal for lakehouse architectures.\n\n👉 Like to show your support.\n💬 Comment with your thoughts or questions.\n🔁 Repost to share with your network.\n👥 Follow Praveen Patel to get such more like this.\n\n#Databricks #DeltaLake #Parquet #CSV #DataEngineering #BigData #Azure #Lakehouse #ModernDataStack #ETL #DataOps\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327674189065113600_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post provides a cheat sheet comparing CSV, Parquet, and Delta Lake in Azure Databricks. It recommends CSV for quick compatibility, human readability, and initial ingestion; Parquet for performant, read-heavy pipelines that do not require ACID transactions; and Delta Lake for reliable, auditable lakehouse pipelines with schema management, ACID transactions, time travel, and support for updates, merges, and deletes.",
+    "topics": [
+      "Data formats",
+      "Azure Databricks",
+      "CSV",
+      "Parquet",
+      "Delta Lake"
+    ],
+    "subtopics": [
+      "Format selection",
+      "Columnar storage",
+      "Schema management",
+      "ACID transactions",
+      "Time travel",
+      "Lakehouse architectures"
+    ],
+    "concepts": [
+      "Data format selection",
+      "CSV",
+      "Parquet",
+      "Delta Lake",
+      "Time travel",
+      "Lakehouse architecture"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "When would you choose CSV over Parquet for a data pipeline?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "CSV is appropriate when quick compatibility, human readability, or initial ingestion from external systems is the priority.\nCSV is not presented as a good choice for large, performance-sensitive datasets because it lacks compression and performs poorly at scale."
+    },
+    {
+      "question": "Why is Parquet suitable for a read-heavy pipeline that does not require ACID transactions?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Parquet uses columnar storage and compression to support faster queries and efficient storage.\nParquet provides schema support but is described as append-only, without built-in versioning or convenient updates."
+    },
+    {
+      "question": "What capabilities does Delta Lake add on top of Parquet?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Delta Lake is built on Parquet and adds ACID transactions.\nIt provides schema evolution and enforcement, time travel, and support for updates, merges, and deletes.\nIt is optimized for both streaming and batch workloads."
+    },
+    {
+      "question": "Why would a team choose Delta Lake for a lakehouse pipeline?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Delta Lake supports reliability, data quality, and auditability through capabilities that include schema enforcement, ACID transactions, and time travel.\nIts support for updates, merges, and deletes makes it suitable for pipelines that are not limited to append-only data."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data format selection",
+    "secondary_topics": [
+      "Azure Databricks",
+      "CSV",
+      "Parquet",
+      "Delta Lake",
+      "Lakehouse architectures"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7ee9bf6e8736a147",
+    "saved_date": "2026-10-01T23:23:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327674189065113600",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327674189065113600_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "28d1231da773edd551426e1748a180ab67cdcc00d930c68f8c0033449d8815d1",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "urn-li-archive-1443eb38b950652d",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.033042Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:29Z"
+  },
+  "original_text": "Databricks pays around 30-40LPA for SDE-1 and 80-90LPA for SDE-2 role😱😱😱\nThis is the question they generally ask\n\nHow would you search blogs by category in a distributed DB when primary key is author_id?\n\n- Searching blogs for a specific user is easy — just partition shards by author_id.\n- But searching by category globally is a real pain. Why?\n\n- What if one shard takes forever to respond?\n- What if a shard is completely down?\n- Even if all shards are healthy, scanning every row is slow\n\n🔑 The answer? Global Secondary Indexes (GSIs)\n\n- You create new shards partitioned by category. \n- These shards can either:\n - Store a reference to the actual blog in the original shard, or\n - Contain a duplicate copy of the blog\n\nBut still 2-3 issues😞😞\n\n- How do you sync data between the main and GSI shards?\n\n- What if the query is: “Find blogs for category X authored by user Y” — can we optimize further?\n\nLet me know your thoughts in comments\n\n#SystemDesign #Databricks #InterviewPrep #SoftwareEngineering",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post claims that Databricks pays around 30-40 LPA for SDE-1 and 80-90 LPA for SDE-2 roles, then presents a distributed database design interview question. When blogs are partitioned by author_id, finding blogs for a specific user is easy, but searching globally by category requires dealing with multiple shards, potentially scanning every row, and handling slow or unavailable shards. The proposed solution is Global Secondary Indexes partitioned by category, containing either references to original blogs or duplicate blog data. The post leaves data synchronization between primary and GSI shards unresolved and does not provide an answer for queries that filter by both category and author.",
+    "topics": [
+      "Databricks interview preparation",
+      "Distributed database sharding",
+      "Global Secondary Indexes",
+      "Cross-shard category search"
+    ],
+    "subtopics": [
+      "Partitioning blogs by author_id",
+      "Searching by category across shards",
+      "Slow or unavailable shards",
+      "Category-partitioned GSI shards",
+      "Reference versus duplicate index entries",
+      "Synchronizing primary and GSI data",
+      "Filtering by category and author"
+    ],
+    "concepts": [
+      "Cross-shard category search",
+      "Shard performance and availability",
+      "Global Secondary Index",
+      "Reference-based GSI entry",
+      "Duplicated GSI data",
+      "Primary-to-GSI synchronization",
+      "Category-and-author query"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why is searching blogs globally by category difficult when the shards are partitioned by author_id?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Searching for blogs by a specific author aligns with the author_id partitioning scheme and is therefore easy.\nA category search does not align with the partitioning scheme and must deal with multiple shards.\nEven if every shard is healthy, the search may need to scan every row and can be slow.\nSlow or unavailable shards introduce additional performance and availability concerns."
+    },
+    {
+      "question": "How would Global Secondary Index shards support category searches in the described distributed database?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Additional shards can be created and partitioned by category.\nEach GSI shard can store either a reference to the blog in its original shard or a duplicate copy of the blog.\nThis adds partitioning aligned with category rather than relying only on the original author_id partitioning."
+    },
+    {
+      "question": "Which important design concerns remain unresolved after adding category-partitioned GSI shards?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The data in the original shards and the GSI shards must be kept synchronized.\nA query for category X authored by user Y may require further optimization.\nThe source does not provide a synchronization method or a solution for the combined category-and-author query."
+    }
+  ],
+  "classification": {
+    "domain": "Distributed Systems",
+    "primary_topic": "Global Secondary Indexes",
+    "secondary_topics": [
+      "Distributed database sharding",
+      "Cross-shard querying",
+      "Shard performance and availability",
+      "Index data synchronization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:1443eb38b950652d",
+    "saved_date": "2026-10-01T23:11:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "7d34f125ca22333a7abc3634b007c689befd268b44fc718fdf039f192a8e17f0",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Author-based shard partitioning"
+      ],
+      "questions": []
+    }
+  }
+}

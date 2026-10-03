@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-saved-314426cf2095c9ba",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344135454503399424",
+    "captured_at": "2026-10-02T00:15:46.229633Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:58Z"
+  },
+  "original_text": "🚀 Databricks just made “𝘁𝗮𝗯𝗹𝗲-𝘃𝗮𝗹𝘂𝗲𝗱 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀” (TVFs) as easy as any other DataFrame call.\n\nPreviously, if we wanted to use a TVF like 𝗲𝘅𝗽𝗹𝗼𝗱𝗲 or a custom UDTF, we often had to register a temporary view and then use 𝘀𝗽𝗮𝗿𝗸.𝘀𝗾𝗹() to write a SQL query. This worked, but it could make our Python code feel a bit clunky and less \"DataFrame-native.\"\n\nThe new API, available from DBR 16.1, lets us call these functions directly on our DataFrames. This means:\n • 𝗖𝗹𝗲𝗮𝗻𝗲𝗿 𝗖𝗼𝗱𝗲: Keep your logic entirely within the DataFrame API, making it easier to read and maintain.\n • 𝗕𝗲𝘁𝘁𝗲𝗿 𝗖𝗼𝗺𝗽𝗼𝘀𝗮𝗯𝗶𝗹𝗶𝘁𝘆: Chain TVF calls with other DataFrame transformations like .filter() and .select() seamlessly.\n • 𝗣𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗥𝗼𝘄-𝗹𝗲𝘃𝗲𝗹 𝗢𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀: With lateral joins (in DBR 17.0+), you can apply a TVF to each row of your DataFrame, which is amazing for tasks like generating series or expanding nested data.\n\n📖 𝗗𝗲𝗲𝗽-𝗱𝗶𝘃𝗲 𝗯𝗹𝗼𝗴: https://lnkd.in/dw_iVF8V\n\n𝗟𝗲𝘁'𝘀 𝘀𝗲𝗲 𝗶𝘁 𝗶𝗻 𝗮𝗰𝘁𝗶𝗼𝗻!\nImagine we have a dataset of online orders, where each order contains a list of products. Our goal is to create a new row for each product in each order.\n\n𝗦𝗽𝗮𝗿𝗸 𝗦𝗤𝗟 𝘃𝘀 𝗗𝗮𝘁𝗮𝗙𝗿𝗮𝗺𝗲𝗔𝗣𝗜 𝗮𝗽𝗽𝗿𝗼𝗮𝗰𝗵 𝗳𝗼𝗿 𝗲𝘅𝗽𝗹𝗼𝗱𝗲:\n\n#Databricks #DataEngineering #DiggibyteTechnologies #CuelebreAB",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7344135454503399424_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a Databricks DataFrame API, available from DBR 16.1, for calling table-valued functions such as explode and custom UDTFs directly on DataFrames instead of registering a temporary view and using spark.sql(). It says these calls can be chained with transformations such as filter and select. It also identifies lateral joins in DBR 17.0 and later as a way to apply a TVF to each DataFrame row for tasks such as generating series or expanding nested data. The post introduces an online-order example in which a product list is expanded into one row per product, but the supplied content ends before showing the example implementation.",
+    "topics": [
+      "Databricks table-valued functions",
+      "DataFrame API",
+      "Nested data expansion with explode",
+      "Lateral joins",
+      "Databricks Runtime versioning"
+    ],
+    "subtopics": [
+      "Direct TVF invocation on DataFrames",
+      "Temporary views and spark.sql()",
+      "Chaining TVF calls with DataFrame transformations",
+      "Row-wise TVF application with lateral joins",
+      "Expanding online-order product lists",
+      "Custom UDTFs"
+    ],
+    "concepts": [
+      "Direct DataFrame TVF calls",
+      "Composable DataFrame transformations",
+      "Row-wise TVF application",
+      "Order-product expansion",
+      "Databricks Runtime version requirements"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What workflow did the post describe for invoking a TVF before direct DataFrame calls were available, and what does the new API change?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The previous workflow often registered a temporary view and used spark.sql() to invoke the TVF.\nThe new API, available from DBR 16.1, lets DataFrame users invoke TVFs directly on DataFrames."
+    },
+    {
+      "question": "How do direct TVF calls improve composability within DataFrame-based code?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Direct TVF calls keep the logic within the DataFrame API.\nThe calls can be chained with transformations such as filter and select."
+    },
+    {
+      "question": "An online-orders DataFrame contains a list of products for each order, and each product must become a separate row. Which mentioned TVF and API capability fit this task?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The post identifies explode as the TVF for the product-list expansion example.\nThe direct DataFrame TVF API allows explode to be used without first creating a temporary view and calling spark.sql()."
+    },
+    {
+      "question": "When can a TVF be applied to each DataFrame row through a lateral join, and what kinds of tasks does the post associate with this capability?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The post associates row-wise TVF application through lateral joins with DBR 17.0 and later.\nIt gives generating series and expanding nested data as example use cases."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Direct table-valued function calls in Databricks DataFrames",
+    "secondary_topics": [
+      "Spark SQL interoperability",
+      "Nested data expansion with explode",
+      "Lateral joins for row-wise processing",
+      "Databricks Runtime version requirements"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:314426cf2095c9ba",
+    "saved_date": "2026-10-01T23:10:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7344135454503399424",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7344135454503399424_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2f9b0b25b06f81736089e2b78bbacb6ac053970dd0349aabaf3285c050bb576d",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Spark SQL"
+      ],
+      "concepts": [
+        "Temporary-view and Spark SQL workflow"
+      ],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "urn-li-archive-eff92791193ff9ad",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.053550Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:02Z"
+  },
+  "original_text": "Where to practice SQL problems for interviews?\n\nYou’ve probably heard of one or two platforms. But there’s more out there...a lot more.\n\nHere’s a solid list shared by someone in the SQL community:\n\n➡️ LeetCode\nStandard for coding interviews.\nGood mix of beginner to advanced SQL problems.\nSome are company-specific.\n\n➡️ HackerRank\nBeginner-friendly interface.\nCategorized questions.\nAlso includes a 30-day SQL challenge.\n\n➡️ StrataScratch\nReal-world interview questions.\nCompanies like Uber, Yelp, Amazon.\nAlso explains solutions in detail.\n\n➡️ Mode Analytics SQL Tutorial\nGreat for learning SQL + analytics workflows.\nNot just solving problems, but understanding data context.\n\n➡️ DataLemur\nFocused on SQL for data science interviews.\nStraight to the point.\nQuestions with explanations.\n\n➡️ 8-Week SQL Challenge (by Data with Danny)\nPerfect for case-study style practice.\nStructured learning + GitHub repo included.\n\n➡️ SQLBolt\nLearn-by-doing style.\nStep-by-step walkthroughs for SQL basics.\n\n➡️ Kaggle Datasets + Notebooks\nNo fixed questions — but plenty of data.\nGreat for exploratory SQL with BigQuery.\n\n➡️ W3Schools SQL\nNot the most exciting,\nbut good for quick syntax refresh.\n\n➡️ DB-Fiddle / SQL Fiddle / SQLite Online\nPlaygrounds to test queries.\nUseful when trying things out quickly.\n\nIf you're prepping for SQL interviews,\nthis is your go-to list.\n\nSave it.\nShare it.\nPractice daily.\n\n#SQL #InterviewPrep",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post recommends SQL practice resources for interview preparation. It compares LeetCode, HackerRank, StrataScratch, Mode Analytics SQL Tutorial, DataLemur, the 8-Week SQL Challenge by Data with Danny, SQLBolt, Kaggle Datasets and Notebooks, W3Schools SQL, and several SQL playgrounds. The resources cover beginner-friendly exercises, company-specific and real-world questions, analytics workflows, case studies, SQL fundamentals, exploratory practice with BigQuery, quick syntax review, and testing queries.",
+    "topics": [
+      "SQL interview preparation",
+      "SQL practice platforms",
+      "SQL learning tutorials",
+      "SQL case-study practice",
+      "Exploratory SQL practice",
+      "SQL query playgrounds"
+    ],
+    "subtopics": [
+      "LeetCode",
+      "HackerRank",
+      "StrataScratch",
+      "Mode Analytics SQL Tutorial",
+      "DataLemur",
+      "8-Week SQL Challenge",
+      "SQLBolt",
+      "Kaggle Datasets and Notebooks",
+      "W3Schools SQL",
+      "DB-Fiddle",
+      "SQL Fiddle",
+      "SQLite Online",
+      "BigQuery"
+    ],
+    "concepts": [
+      "SQL Coding Interview Practice",
+      "Beginner-Friendly SQL Practice",
+      "Real-World SQL Interview Questions",
+      "SQL and Analytics Workflow Learning",
+      "Data Science SQL Interview Practice",
+      "Case-Study SQL Practice",
+      "Learn-By-Doing SQL Fundamentals",
+      "Exploratory SQL with BigQuery",
+      "SQL Syntax Review",
+      "SQL Query Playgrounds"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which resources from the post are most suitable for a beginner who wants structured, step-by-step SQL practice?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "HackerRank is suitable because it has a beginner-friendly interface, categorized questions, and a 30-day SQL challenge.\nSQLBolt is suitable because it teaches SQL basics through step-by-step walkthroughs."
+    },
+    {
+      "question": "A candidate wants to practice real-world SQL interview questions associated with named companies and study detailed solutions. Which resource should they use?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "StrataScratch provides real-world interview questions associated with companies such as Uber, Yelp, and Amazon.\nStrataScratch also includes detailed explanations of solutions."
+    },
+    {
+      "question": "Which resource is most appropriate for structured, case-study-style SQL practice over an extended period?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The 8-Week SQL Challenge by Data with Danny is designed for case-study-style practice.\nIt provides structured learning and includes a GitHub repository."
+    },
+    {
+      "question": "A candidate needs to test SQL queries quickly without following a fixed course. Which options in the post support this need?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "DB-Fiddle, SQL Fiddle, and SQLite Online are query playgrounds for testing queries quickly.\nThese options support hands-on experimentation rather than fixed question sets."
+    },
+    {
+      "question": "How do LeetCode, HackerRank, and StrataScratch differ in their approach to SQL interview preparation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "LeetCode provides beginner-to-advanced SQL coding problems and includes some company-specific questions.\nHackerRank offers a beginner-friendly interface, categorized questions, and a 30-day challenge.\nStrataScratch focuses on real-world interview questions and provides detailed solution explanations."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Interview Preparation",
+    "secondary_topics": [
+      "SQL Practice Platforms",
+      "SQL Fundamentals",
+      "Analytics Workflows",
+      "Case-Study Practice",
+      "Exploratory SQL"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:eff92791193ff9ad",
+    "saved_date": "2026-10-01T23:17:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "3a31456abccd5acd1ae5da189aaa3542de9dd3556d97ccdd17db4a7e0f3465f2",
+    "enricher_version": "3"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "urn-li-saved-c60026f30f86c34f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7352906435711717378",
+    "captured_at": "2026-10-02T00:15:51.447873Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:23Z"
+  },
+  "original_text": "• 1st\nTop Data Engineering voice 2023,2024🎖️| Writes to 33K+ | Snr Data Engineer at Kimberly Clark | Python|Spark|PySpark|Genie|Azure data factory|ADLS Gen2|Databricks|Deltalake| Agentic AI | LLM | RAG | Axilon AI |\n1yr •\n🎯 𝐏𝐫𝐞𝐩𝐩𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰? 𝐒𝐭𝐚𝐫𝐭 𝐇𝐞𝐫𝐞.⁣\n⁣\nIf you're aiming to ace SQL interviews, you don’t need to memorize every function or decode database textbooks.⁣\nWhat you really need is a sharp understanding of the most commonly asked concepts - and the ability to explain them clearly.⁣\n⁣\nThat’s exactly what this cheat sheet delivers.⁣\nI’ve attached 50 essential SQL interview Q&As that cover real, practical topics - the kind interviewers actually ask.⁣\n⁣\n📌 What’s inside: ⁣\n• Joins, Aggregates & Subqueries⁣\n• Primary vs Foreign Keys⁣\n• GROUP BY vs HAVING, DELETE vs TRUNCATE⁣\n• Indexes, ACID properties, Transactions⁣\n• Views, Triggers, Stored Procedures & more⁣\n⁣\nIf you’ve got interviews coming up, download this PDF, review it well, and walk in with confidence. You've got this! 💪⁣\n⁣⁣\nFound this helpful? Repost it! 🔁⁣⁣⁣⁣⁣⁣⁣\nFollow Girish V for more Data Engineering insights! ⁣⁣⁣⁣⁣⁣⁣\nBetter reach: Shubham Wadekar Rajat Gajbhiye Abhisek Sahu Vaishnavi MURALIDHAR Sumit Mittal Deepak Goyal Karthik Kondpak Shashank Mishra 🇮🇳 Ankita Gulati Asheesh T. Ankur Bhattacharya Ankur Ranjan Sachin Chandrashekhar 🇮🇳 Lovee Kumar Allauddin Khan Pathan Sai Krishna Chivukula Priyam Jain Nimra Ayaz Anurag Sharma Abhishek Jha Gayatri G\n#SQL #SQLInterview #SQLPreparation #Database #DataEngineer #DataAnalytics #DataScience #BusinessIntelligence #InterviewTips #TechCareers #CareerGrowth\n⁣⁣\nsql",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7352906435711717378_slide_0.jpg",
+      "description": "JPEG image, 392x490 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post promotes an attached cheat sheet containing 50 SQL interview questions and answers. It says the material covers joins, aggregates, subqueries, keys, SQL clauses, indexes, ACID properties, transactions, views, triggers, and stored procedures. The post does not include the actual questions, answers, or technical explanations from the advertised PDF, so it cannot by itself support detailed interview answers.",
+    "topics": [
+      "SQL interview preparation",
+      "SQL query fundamentals",
+      "Relational database concepts"
+    ],
+    "subtopics": [
+      "Joins",
+      "Aggregates",
+      "Subqueries",
+      "Primary and foreign keys",
+      "GROUP BY and HAVING",
+      "DELETE and TRUNCATE",
+      "Indexes",
+      "ACID properties",
+      "Transactions",
+      "Views",
+      "Triggers",
+      "Stored procedures"
+    ],
+    "concepts": [
+      "Joins, aggregates, and subqueries",
+      "Primary and foreign keys",
+      "GROUP BY versus HAVING",
+      "DELETE versus TRUNCATE",
+      "Indexes",
+      "ACID properties and transactions",
+      "Views, triggers, and stored procedures"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "SQL and database fundamentals",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "Relational database concepts"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c60026f30f86c34f",
+    "saved_date": "2026-10-01T23:10:23Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7352906435711717378",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7352906435711717378_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d85fcc72b7219590acb9252586346a9731f2e0e3c9022f032559ae11d678a8b6",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

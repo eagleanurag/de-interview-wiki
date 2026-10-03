@@ -1,0 +1,124 @@
+{
+  "id": "urn-li-saved-af943c098ca83661",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339106266201411587",
+    "captured_at": "2026-10-02T00:15:50.673758Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:20Z"
+  },
+  "original_text": "Sr. Product Engineer @ The Timken Company | Co-Founder @Growthora | Marketer | 150M+ Impressions | 62K+ Community | AI • Career • Workplace | Brand Partnerships & Campaigns | DM to Collaborate\n1yr •\n🛠️ Data Engineering isn’t just ETL. It’s Engineering at Scale.\nEvery byte flowing through your pipeline has a cost — in compute, in time, and in business value.\nHere’s what makes a solid Data Engineer in 2025:\n✅ Understand data modeling: Star, Snowflake, and Lakehouse\n✅ Know when to use batch vs stream processing\n✅ Write efficient SQL, not just working SQL\n✅ Master orchestration tools like Airflow/Dagster\n✅ Optimize pipelines for cost, latency, and reliability\n✅ Treat your pipelines like software — with CI/CD, tests, and logging\n✅ Think in systems: What happens if Kafka goes down? Or a DAG fails?\n📌 Tools change. Principles stay.\nIf you're learning Data Engineering — don’t just learn “how” — learn why.\nDo follow Naresh Reddy Kotha for more!\n#DataEngineering #BigData #ETL #SQL #ApacheSpark #Airflow #Snowflake #DataPipelines #CloudData #TechCareers #SystemDesign #StreamingData #DataOps\n…see more\nETL pipelines!",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339106266201411587_slide_0.jpg",
+      "description": "JPEG image, 390x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post frames Data Engineering as engineering ETL and data pipelines at scale rather than merely performing extraction, transformation, and loading. It identifies data modeling, batch-versus-stream selection, efficient SQL, orchestration, pipeline optimization, software-engineering practices, and failure-oriented systems thinking as important capabilities. It specifically names Star, Snowflake, Lakehouse, Airflow, Dagster, Kafka, and DAGs. The content is a high-level career post and provides no implementation examples, detailed comparisons, decision criteria, or failure-recovery procedures. No extracted media text follows the post.",
+    "topics": [
+      "Data Engineering",
+      "Data Pipelines",
+      "Data Modeling",
+      "Batch and Stream Processing",
+      "SQL",
+      "Workflow Orchestration",
+      "DataOps",
+      "Pipeline Reliability"
+    ],
+    "subtopics": [
+      "Star, Snowflake, and Lakehouse Data Modeling",
+      "Batch vs. Stream Processing",
+      "Efficient SQL",
+      "Airflow and Dagster",
+      "Pipeline Cost and Latency",
+      "CI/CD, Testing, and Logging",
+      "Kafka and DAG Failure Scenarios",
+      "Learning Engineering Principles"
+    ],
+    "concepts": [
+      "Data Engineering at Scale",
+      "Data Modeling",
+      "Batch vs. Stream Processing",
+      "Efficient SQL",
+      "Pipeline Orchestration",
+      "Pipeline Optimization",
+      "Pipelines as Software",
+      "Failure-Oriented Systems Thinking",
+      "Principles Over Tools"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, what makes Data Engineering broader than ETL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post frames Data Engineering as engineering data flows at scale rather than only performing ETL.\nIt identifies compute, time, and business value as costs associated with data moving through a pipeline."
+    },
+    {
+      "question": "What technical capabilities does the post identify for a solid Data Engineer?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The capabilities include understanding Star, Snowflake, and Lakehouse data modeling and knowing when to use batch or stream processing.\nThe post also calls for efficient SQL, orchestration with Airflow or Dagster, and pipeline optimization for cost, latency, and reliability.\nIt additionally expects pipelines to receive CI/CD, tests, and logging and expects failure scenarios such as Kafka outages or DAG failures to be considered."
+    },
+    {
+      "question": "What objectives should guide data-pipeline optimization, and how should pipelines be treated as software?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Pipeline optimization should address cost, latency, and reliability.\nPipelines should be treated as software by applying CI/CD, tests, and logging."
+    },
+    {
+      "question": "Which pipeline failure scenarios does the post expect a data engineer to consider?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The post specifically asks what happens if Kafka goes down.\nIt also identifies the failure of a DAG as a scenario that requires systems-level thinking.\nThe post does not provide specific troubleshooting or recovery procedures for either scenario."
+    },
+    {
+      "question": "Which data-modeling approaches, processing modes, and orchestration tools are explicitly named in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The named data-modeling approaches are Star, Snowflake, and Lakehouse.\nThe post names batch and stream processing as modes a data engineer should know when to use.\nThe named orchestration tools are Airflow and Dagster."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering",
+    "secondary_topics": [
+      "Data Modeling",
+      "Data Pipelines",
+      "Batch and Stream Processing",
+      "SQL Optimization",
+      "Workflow Orchestration",
+      "DataOps",
+      "System Reliability"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:af943c098ca83661",
+    "saved_date": "2026-10-01T23:15:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339106266201411587",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339106266201411587_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c11bce6deba4735cd9a8363f429134d6377167513a12dfae02f1d6ecb8a140c7",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

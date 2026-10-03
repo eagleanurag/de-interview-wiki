@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-edc2c9c34a9df1ac",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341317812893700096",
+    "captured_at": "2026-10-02T00:15:53.122205Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:10Z"
+  },
+  "original_text": "• 1st\nDataEngineer | Bigdata Engineer | Bigdata Analyst | Bigdata Developer | Works at Capgemini| Hdfs| Hive|Mysql |Shellscripting|Python|Pyspark|SparkSQl\n1yr •\nSQL must try interview Queries\n#SQL Queries #Interview #Queries\nCredit - Author\n…see more\nSQL must try Queries",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341317812893700096_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A brief professional profile lists a Data Engineer, Big Data Engineer, Big Data Analyst, or Big Data Developer working at Capgemini with one year of experience. It mentions HDFS, Hive, MySQL, shell scripting, Python, PySpark, and Spark SQL, and refers to interview SQL queries, but it does not provide any queries, technical explanations, or other substantive knowledge. The extracted media text is empty.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering and big data",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:edc2c9c34a9df1ac",
+    "saved_date": "2026-10-01T23:17:10Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341317812893700096",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341317812893700096_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "76bb7266fcae3eb0fa7c46e28ca06fae4723c8b0208a4155fd7124d12b6e2f01",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "urn-li-archive-628fa59575128d09",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.251941Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:00Z"
+  },
+  "original_text": "PYSPARK On SUNDAY!\n\nHere are 25 most asked Pyspark questions to clear your next interview - \n\n➤ 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗗𝗮𝘁𝗮𝗙𝗿𝗮𝗺𝗲𝘀\n\n1. How do you create a PySpark DataFrame from a list or a dictionary?\n2. What are the different ways to filter records in a PySpark DataFrame?\n3. How do you perform pivot and unpivot operations in PySpark?\n4. Explain the difference between withColumn() and select() when modifying columns.\n5. What are the key differences between DataFrame and Pandas DataFrame in PySpark?\n\n➤ 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗥𝗗𝗗𝘀\n\n1. How do you create an RDD from an external file in PySpark?\n2. Explain the difference between map() and flatMap() in PySpark RDDs with examples.\n3. What are the advantages and disadvantages of using RDDs over DataFrames?\n4. How do you sort an RDD based on a specific column value?\n5. Describe how data is distributed across partitions in an RDD and how it impacts performance.\n\n➤ 𝗦𝗽𝗮𝗿𝗸 𝗦𝗤𝗟\n\n1. How do you perform a left anti join and left semi join in PySpark SQL?\n2. Explain the difference between explode() and posexplode() functions in PySpark SQL.\n3. What is the purpose of the broadcast() function in Spark SQL?\n4. How can you dynamically generate SQL queries in PySpark?\n5. What are the different file formats supported by PySpark SQL, and how do you read/write them?\n\n➤ 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗦𝘁𝗿𝗲𝗮𝗺𝗶𝗻𝗴\n\n1. What are the differences between DStream-based streaming and Structured Streaming in PySpark?\n2. How do you checkpoint stateful operations in PySpark streaming applications?\n3. Explain the concept of stateful aggregations in PySpark structured streaming.\n4. What are the key differences between append, update, and complete output modes in PySpark streaming?\n5. How do you integrate PySpark Structured Streaming with Apache Kafka?\n\n➤ 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 𝗢𝗽𝘁𝗶𝗺𝗶𝘇𝗮𝘁𝗶𝗼𝗻\n\n1. What is predicate pushdown, and how does it improve query performance in PySpark?\n2. How do you optimize Joins in PySpark to reduce shuffle operations?\n3. Explain the role of columnar storage formats like Parquet and ORC in PySpark performance.\n4. What is speculative execution in PySpark, and when should you enable it?\n5. How do you manage memory tuning and garbage collection in large-scale PySpark jobs?\n\n𝗕𝗲𝘀𝘁 𝗿𝗲𝘀𝗼𝘂𝗿𝗰𝗲𝘀 𝘁𝗼 𝗲𝗻𝗵𝗮𝗻𝗰𝗲 𝘆𝗼𝘂𝗿 𝗣𝘆𝘀𝗽𝗮𝗿𝗸 𝗸𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲.\n- https://lnkd.in/gn9FQ-fE\n- https://lnkd.in/gebJavNR\n- https://lnkd.in/gudWMTAp\n- https://lnkd.in/gvsn9yWW\n- https://lnkd.in/g8gyff9A\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE the post👍",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied text is a promotional list of 25 questions presented as commonly asked PySpark interview questions, grouped into DataFrames, RDDs, Spark SQL, streaming, and performance optimization. It names many technical subjects but provides no answers, definitions, examples, or implementation guidance. The remainder consists of promotional material, resource links, an interview-experience promotion, and a request to like the post.",
+    "topics": [
+      "PySpark",
+      "DataFrames",
+      "Pandas DataFrame",
+      "RDDs",
+      "Spark SQL",
+      "PySpark streaming",
+      "Apache Kafka",
+      "Parquet and ORC"
+    ],
+    "subtopics": [
+      "Creating and filtering PySpark DataFrames",
+      "Pivoting and unpivoting DataFrames",
+      "withColumn() versus select()",
+      "PySpark DataFrame versus Pandas DataFrame",
+      "Creating RDDs from external files",
+      "Sorting an RDD based on a specific column value",
+      "map() versus flatMap()",
+      "Advantages and disadvantages of RDDs over DataFrames",
+      "RDD partitioning and performance",
+      "Left anti joins and left semi joins",
+      "explode() versus posexplode()",
+      "broadcast() in Spark SQL",
+      "Dynamic SQL generation in PySpark",
+      "Spark SQL file formats and read/write operations",
+      "DStream-based streaming versus Structured Streaming",
+      "Checkpointing stateful streaming operations",
+      "Stateful aggregations in PySpark Structured Streaming",
+      "Append, update, and complete output modes",
+      "PySpark Structured Streaming with Apache Kafka",
+      "Predicate pushdown",
+      "Join optimization and shuffle reduction",
+      "Parquet and ORC",
+      "Speculative execution",
+      "Memory tuning and garbage collection"
+    ],
+    "concepts": [
+      "PySpark DataFrame",
+      "withColumn() and select()",
+      "PySpark DataFrame versus Pandas DataFrame",
+      "RDD",
+      "RDD partitioning",
+      "map() and flatMap()",
+      "Left anti join and left semi join",
+      "explode() and posexplode()",
+      "broadcast()",
+      "Dynamic SQL generation",
+      "Spark SQL file formats",
+      "DStream-based streaming and Structured Streaming",
+      "Stateful streaming operations",
+      "Append, update, and complete output modes",
+      "Apache Kafka integration",
+      "Predicate pushdown",
+      "Join optimization and shuffle reduction",
+      "Parquet and ORC",
+      "Speculative execution",
+      "Memory tuning and garbage collection"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you create a PySpark DataFrame from a list or a dictionary?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer should show the PySpark DataFrame creation approach for both a list and a dictionary."
+    },
+    {
+      "question": "Explain the difference between withColumn() and select() when modifying columns.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should distinguish how withColumn() and select() handle column changes."
+    },
+    {
+      "question": "What are the key differences between DataFrame and Pandas DataFrame in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should identify and explain the key differences between PySpark DataFrames and Pandas DataFrames."
+    },
+    {
+      "question": "Explain the difference between map() and flatMap() in PySpark RDDs with examples.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should contrast map() and flatMap() and include an RDD example for each."
+    },
+    {
+      "question": "Describe how data is distributed across partitions in an RDD and how it impacts performance.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe partition distribution and explain its performance implications."
+    },
+    {
+      "question": "How do you perform a left anti join and left semi join in PySpark SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how left anti joins and left semi joins are performed in PySpark SQL."
+    },
+    {
+      "question": "What are the different file formats supported by PySpark SQL, and how do you read/write them?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should identify the supported file formats and explain how PySpark SQL reads and writes them."
+    },
+    {
+      "question": "What are the differences between DStream-based streaming and Structured Streaming in PySpark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should compare DStream-based streaming and Structured Streaming in PySpark."
+    },
+    {
+      "question": "What are the key differences between append, update, and complete output modes in PySpark streaming?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should compare append, update, and complete output modes in PySpark streaming."
+    },
+    {
+      "question": "How do you integrate PySpark Structured Streaming with Apache Kafka?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain the integration of PySpark Structured Streaming with Apache Kafka."
+    },
+    {
+      "question": "What is predicate pushdown, and how does it improve query performance in PySpark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should define predicate pushdown and explain its effect on PySpark query performance."
+    },
+    {
+      "question": "How do you optimize Joins in PySpark to reduce shuffle operations?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe join optimization measures that reduce shuffle operations."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "DataFrames",
+      "Pandas DataFrame",
+      "RDDs",
+      "Spark SQL",
+      "PySpark Structured Streaming",
+      "Apache Kafka",
+      "performance optimization",
+      "Parquet and ORC"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:628fa59575128d09",
+    "saved_date": "2026-10-01T23:30:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "6169f08d31764a282bcb08967e57d932a83d79e6c744198bad91b86ea94c0e11",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "urn-li-saved-cf26ecefe425c79b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7330193015812083712",
+    "captured_at": "2026-10-02T00:15:51.823080Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:37Z"
+  },
+  "original_text": "Data engineering will be 𝟭𝟬𝘅 𝗲𝗮𝘀𝗶𝗲𝗿 if you do these Projects!\n\n1. Awesome Open-Source Data Engineering Projects: https://lnkd.in/gCQU9j4T\n\n2. 7 End to End Data Engineering Projects: https://lnkd.in/gtsWVdXn\n\n3. 5 End-To-End Data Engineering Projects : https://lnkd.in/gWWnEbPQ\n\n4. End to End Azure Data Engineering Real Time Project: https://lnkd.in/g-V7VZJQ\n\n𝐍𝐞𝐞𝐝 1:1 𝐠𝐮𝐢𝐝𝐚𝐧𝐜𝐞? Let's connect -> https://lnkd.in/gA_B7vxW\n\n\n#dataengineering #dataengineer #spark #python #linkedin #project #data\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7330193015812083712_slide_0.jpg",
+      "description": "JPEG image, 480x558 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional list linking to data engineering project resources, including open-source projects, multiple end-to-end project collections, and a real-time Azure Data Engineering project. It does not describe any implementations, architectures, techniques, or project details. Spark and Python appear only as hashtags, and the contents of the linked resources are not available in the supplied content.",
+    "topics": [
+      "Data engineering projects"
+    ],
+    "subtopics": [
+      "Open-source data engineering projects",
+      "End-to-end data engineering projects",
+      "Real-time Azure Data Engineering projects"
+    ],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering projects",
+    "secondary_topics": [
+      "Open-source projects",
+      "End-to-end projects",
+      "Real-time Azure Data Engineering projects"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:cf26ecefe425c79b",
+    "saved_date": "2026-10-01T23:22:37Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7330193015812083712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7330193015812083712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d5019f960ee2d3aafb1b74b719ec47a04477d98035ebc80b68d547eb2c368f82",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

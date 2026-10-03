@@ -1,0 +1,170 @@
+{
+  "id": "urn-li-archive-4ebab9f1008a3988",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.881478Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:42Z"
+  },
+  "original_text": "My Data engineer Role Interview Experience with Techmahindra (Round -1)\n\n 1. Explain your current project and your specific role in it.\n 2. What is the difference between ROW_NUMBER, RANK, DENSE_RANK, LAG, and LEAD functions in SQL?\n 3. What is the difference between repartition and coalesce in Spark?\n 4. What is the difference between caching and persisting in Spark?\n 5. What is Unity Catalog in Databricks and how does it help in data governance?\n 6. What is AQT (Advanced Query Tool), and how is it used?\n 7. What is normalization and denormalization in databases?\n 8. Explain Spark optimization techniques. (broadcasting)\n 9. What is the difference between wide and narrow transformations in Spark?\n 10. What is the difference between partitioning and bucketing in Spark?\n 11. How would you decide the cluster configuration if you are processing 100 GB of data?\n 12. Write code to reverse a string without using a built-in function.\n 13. Explain the Parquet file format and its advantages.\n 14. Write a SQL query to find the second highest salary from the employee table.\n\nDuration - 40 mins\nLevel - Easy&Moderate\n\nI hope this will help someone👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied excerpt presents a 40-minute, easy-to-moderate Round 1 data engineer interview experience at Techmahindra, but it contains only a list of 14 visible questions and no answers. It asks about a current project, SQL, Spark, Unity Catalog in Databricks, AQT, database design, Parquet, cluster configuration, and coding. The excerpt ends with a \"see more\" marker, so any omitted material is not available.",
+    "topics": [
+      "Data engineering interview preparation",
+      "SQL functions and queries",
+      "Spark",
+      "Databricks Unity Catalog",
+      "Advanced Query Tool (AQT)",
+      "Database normalization and denormalization",
+      "Parquet file format",
+      "Coding exercises",
+      "Cluster configuration"
+    ],
+    "subtopics": [
+      "ROW_NUMBER, RANK, DENSE_RANK, LAG, and LEAD",
+      "Repartition and coalesce",
+      "Caching and persisting",
+      "Unity Catalog and data governance",
+      "Advanced Query Tool usage",
+      "Normalization and denormalization",
+      "Broadcasting for Spark optimization",
+      "Wide and narrow transformations",
+      "Partitioning and bucketing",
+      "Cluster configuration for 100 GB",
+      "String reversal without built-in functions",
+      "Parquet format and advantages",
+      "Second-highest salary query"
+    ],
+    "concepts": [
+      "ROW_NUMBER, RANK, DENSE_RANK, LAG, and LEAD",
+      "Repartition and coalesce",
+      "Caching and persisting",
+      "Unity Catalog",
+      "Advanced Query Tool (AQT)",
+      "Normalization and denormalization",
+      "Broadcasting",
+      "Wide and narrow transformations",
+      "Partitioning and bucketing",
+      "Cluster configuration for 100 GB",
+      "String reversal without built-in functions",
+      "Parquet",
+      "Second-highest salary query"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the differences among ROW_NUMBER, RANK, DENSE_RANK, LAG, and LEAD in SQL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should explain what each function does and how its result differs from the others."
+    },
+    {
+      "question": "What is the difference between repartition and coalesce in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should define both Spark terms and clearly state their difference."
+    },
+    {
+      "question": "What is the difference between caching and persisting in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should define both terms and explain how they differ in Spark."
+    },
+    {
+      "question": "What is Unity Catalog in Databricks, and how does it help with data governance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should define Unity Catalog in Databricks and explain its role in data governance."
+    },
+    {
+      "question": "What is AQT (Advanced Query Tool), and how is it used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should define AQT and describe how it is used."
+    },
+    {
+      "question": "What are normalization and denormalization in databases?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should define both database design approaches and state how they differ."
+    },
+    {
+      "question": "What role does broadcasting play in Spark optimization?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should explain broadcasting as a Spark optimization technique."
+    },
+    {
+      "question": "What is the difference between wide and narrow transformations in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should distinguish wide transformations from narrow transformations in Spark."
+    },
+    {
+      "question": "What is the difference between partitioning and bucketing in Spark?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should explain both Spark concepts and state how they differ."
+    },
+    {
+      "question": "How would you decide the cluster configuration if you are processing 100 GB of data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should present a decision process for selecting a cluster configuration for a 100 GB processing workload."
+    },
+    {
+      "question": "Write code to reverse a string without using a built-in function.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The code should produce the input string in reverse order without calling a built-in function."
+    },
+    {
+      "question": "What is the Parquet file format, and what advantages does it have?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should explain what the Parquet file format is and identify its advantages."
+    },
+    {
+      "question": "Write a SQL query to find the second-highest salary from the employee table.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query should use the salary data in the employee table and return the second-highest salary."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL",
+      "Spark",
+      "Databricks",
+      "Unity Catalog",
+      "Advanced Query Tool (AQT)",
+      "Database design",
+      "Parquet",
+      "Coding exercises",
+      "Cluster configuration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4ebab9f1008a3988",
+    "saved_date": "2026-10-01T23:27:42Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "7e6d947df666f1141b5fd2a9751cbbafd5be77b2d936a80566a024ce598a7684",
+    "enricher_version": "3"
+  }
+}

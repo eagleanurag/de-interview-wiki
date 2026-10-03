@@ -1,0 +1,201 @@
+{
+  "id": "urn-li-archive-4a258fbbd327894f",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.805433Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:28Z"
+  },
+  "original_text": "I recently appeared for a Data Engineer interview at Wipro and sharing my experience to help others preparing for similar opportunities.\n📅 Experience: 4 Years\n Here’s a quick summary of the questions I was asked:\n\n✅L1 Technical Interview (Duration: 35 mins)\n\n1. Introduction – Brief about myself and total experience in data engineering.\n2. Python Coding – Flatten a nested list into a single list.\n 📝 list = [4, 7, [6, 3, 2, [7, 9, 2], 4], 1, 3]\n3. SQL – Return counts of all types of joins: INNER, LEFT, RIGHT, FULL OUTER using tables like:\nA B \n1 0 \n1 1 \n2 2 \n3 4 \n2 1 \n3 5\n4. PySpark – write a query to find the average sales per product category.\n5. Project Discussion – Walkthrough of my recent/most confident project.\n6. Follow-up Questions on Project:\n a. Types of data sources used\n b. Number of pipelines handled\n c. Team structure and roles\n d. Cluster configuration used\n7. SQL – Difference between RANK() and DENSE_RANK()\n\n✅ L2 Technical Interview (Duration 45 mins)\n\n1. Introduction – Brief about myself and total experience in data engineering.\n2. Write a SQL query that reports most experience employees in each project. If there is tie, report all employees with most experience.\nProject Table Employee Table\nproj_id emp_id emp_id name year_exp\n3. SQL query to find out employees who earn more than their managers.\n4. PySpark – Read a CSV file with pipe '|' delimiter and filter records by date (column: DOJ, DOL)\n5. Project Discussion – walk me through your most recent project—what was the goal, tools used, and your responsibilities?\n6. What kind of performance optimizations have you implemented in your project?\n7. Azure Data Factory (ADF) - which integration runtime you use for on-prem source to cloud copy?\n8. How do you debug ADF pipeline taking longer time to copy from on-prem SQL server to cloud?\n9. Difference between parquet and delta format? follow-up: features of delta lake?\n10. How do you push your code from one environment to other?\n11. How to debug/fix stored procedure taking too long to execute?\n12. Types of clusters in Databricks and their use cases.\n\n🤝 Feel free to share your experience or connect if you're on the same journey!\n\n#DataEngineering #DataEngineer #Interview #InterviewExperience #BigData #PySpark #SQL #Azure #ADF #DeltaLake #Databricks #InterviewPreparation #CareerGrowth #TechInterviews #LinkedInShare\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a personal interview-experience post about a Data Engineer interview at Wipro written by an author with four years of experience. It records a 35-minute L1 technical interview and a 45-minute L2 technical interview covering Python, SQL, PySpark, project walkthroughs, Azure Data Factory, on-premises SQL Server, Databricks, Parquet, Delta Lake, performance optimization, stored procedures, and code promotion. The post provides prompts and context but no worked answers, query implementations, code, or results. The supplied excerpt ends with an ellipsis and see more, so additional content is unavailable.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Python coding",
+      "SQL",
+      "PySpark",
+      "CSV ingestion",
+      "Azure Data Factory",
+      "SQL Server",
+      "Databricks",
+      "Parquet",
+      "Delta Lake",
+      "Data engineering projects",
+      "Cross-environment code promotion"
+    ],
+    "subtopics": [
+      "Flattening a nested Python list",
+      "Counting INNER, LEFT, RIGHT, and FULL OUTER join results",
+      "Calculating average sales by product category with PySpark",
+      "Comparing RANK() and DENSE_RANK()",
+      "Finding the most experienced employees in each project while retaining ties",
+      "Finding employees who earn more than their managers",
+      "Reading a pipe-delimited CSV and filtering by DOJ and DOL dates",
+      "Describing data sources, pipeline counts, team structure, roles, and cluster configuration",
+      "Selecting an Azure Data Factory integration runtime for on-premises-to-cloud copy",
+      "Debugging a slow Azure Data Factory copy from on-premises SQL Server to the cloud",
+      "Comparing Parquet and Delta format and discussing Delta Lake features",
+      "Databricks cluster types and use cases",
+      "Implementing performance optimizations",
+      "Debugging and fixing slow stored procedures",
+      "Promoting code from one environment to another"
+    ],
+    "concepts": [
+      "L1 and L2 technical interview rounds",
+      "Nested-list flattening",
+      "SQL join result counts",
+      "PySpark sales aggregation",
+      "RANK() and DENSE_RANK()",
+      "Per-project experience selection with ties",
+      "Employee and manager earnings comparison",
+      "Pipe-delimited CSV date filtering",
+      "Data engineering project walkthrough",
+      "ADF integration runtime selection",
+      "ADF copy performance troubleshooting",
+      "Parquet and Delta format comparison",
+      "Delta Lake features",
+      "Databricks cluster types and use cases",
+      "Stored-procedure performance troubleshooting",
+      "Cross-environment code promotion"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you flatten the supplied nested Python list into a single list?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The solution should handle the provided nested values and return them as one flat list.\nThe post supplies the input list but not the implementation or output."
+    },
+    {
+      "question": "For the SQL exercise, which join types must be counted and what should the query return?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer should cover INNER, LEFT, RIGHT, and FULL OUTER joins.\nIt should return counts based on the supplied sample A and B tables."
+    },
+    {
+      "question": "How would you calculate average sales per product category in PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer should compute an average sales value for each product category.\nThe post does not provide a schema, dataset, or PySpark implementation."
+    },
+    {
+      "question": "What is the difference between RANK() and DENSE_RANK() in SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should define both SQL ranking functions and explain the distinction between them.\nThe post asks for the comparison but supplies no definitions or examples."
+    },
+    {
+      "question": "How do you write a SQL query to report the most experienced employees in each project, including all employees when there is a tie?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query must operate per project and identify the employees with the most experience.\nEvery employee tied for the most experience must be included."
+    },
+    {
+      "question": "How would you find employees who earn more than their managers using SQL?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query must compare each employee's earnings with the earnings of the corresponding manager.\nIt must return employees whose earnings are higher."
+    },
+    {
+      "question": "How would you use PySpark to read a pipe-delimited CSV and filter records by the DOJ and DOL date columns?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution should read the file using the pipe character as the delimiter.\nIt should use the DOJ and DOL columns for the requested date filtering.\nThe post does not specify the date condition."
+    },
+    {
+      "question": "Which Azure Data Factory integration runtime would you use for copying data from an on-premises source to the cloud?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer should identify the integration runtime choice appropriate for an on-premises-to-cloud copy.\nThe post does not name the specific integration runtime option."
+    },
+    {
+      "question": "How would you troubleshoot an Azure Data Factory pipeline that takes too long to copy from on-premises SQL Server to the cloud?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer should investigate the slow ADF copy path between on-premises SQL Server and the cloud.\nIt should propose a way to address the excessive pipeline duration.\nThe post does not identify a specific cause or fix."
+    },
+    {
+      "question": "How do Parquet and Delta format differ, and what features of Delta Lake would you discuss?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should compare Parquet with Delta format.\nIt should also describe the Delta Lake features requested in the post.\nThe post does not enumerate those features."
+    },
+    {
+      "question": "What Databricks cluster types are there, and which use cases apply to them?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer should name the Databricks cluster types.\nIt should match those types to relevant use cases.\nThe post does not list the types or use cases."
+    },
+    {
+      "question": "What performance optimizations have you implemented in a data engineering project?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should describe concrete optimizations implemented in the candidate's project.\nThe post does not identify any particular optimization."
+    },
+    {
+      "question": "How would you debug and fix a stored procedure that takes too long to execute?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer should describe how to investigate slow stored-procedure execution and determine a fix.\nThe post does not provide a procedure, diagnosis, or remedy."
+    },
+    {
+      "question": "How do you promote code from one environment to another?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should explain the process used to move code between environments.\nThe post does not specify the promotion method."
+    },
+    {
+      "question": "What should a data engineering project walkthrough include in the interview?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The walkthrough should cover the project's goal, tools, and the candidate's responsibilities.\nIt should also address data sources, number of pipelines, team structure and roles, and cluster configuration."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Python programming",
+      "SQL queries and joins",
+      "PySpark data processing",
+      "Delimited-file ingestion",
+      "Azure Data Factory data integration",
+      "ADF pipeline troubleshooting",
+      "Parquet and Delta Lake",
+      "Databricks clusters",
+      "Data engineering project walkthroughs",
+      "Performance optimization",
+      "Code promotion"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4a258fbbd327894f",
+    "saved_date": "2026-10-01T23:10:28Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "710ecd022ecfa72170700a91ac1f817977319f3d86838b5e585c41fa27575516",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Performance optimization and troubleshooting"
+      ],
+      "concepts": [
+        "Project performance optimization"
+      ],
+      "questions": []
+    }
+  }
+}

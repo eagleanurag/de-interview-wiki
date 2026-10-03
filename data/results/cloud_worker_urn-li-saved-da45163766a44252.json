@@ -1,0 +1,98 @@
+{
+  "id": "urn-li-saved-da45163766a44252",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7329752411470778368",
+    "captured_at": "2026-10-02T00:15:52.331203Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:31Z"
+  },
+  "original_text": "🔍 PySpark Interview Question Asked in Accenture 🔍\n📌 Scenario: Identify accounts that should be banned based on logins from different IP addresses at the same time.\n✅ This is a common real-world data integrity challenge tackled during big data interviews!\n\n📊 Tools Used:\n✔️ PySpark\n✔️ Window Functions\n✔️ DataFrame filtering\n✔️ Column operations\n\n🧠 Key Insight: An account logging in from multiple IPs simultaneously is suspicious and may indicate account compromise. The logic cleverly uses window functions and time overlaps to detect such cases.\n\n📤 Check the image for full PySpark code, sample data, intermediate steps, and the final output.\n\n📣 Interview Tip: Always break down the problem and leverage window functions when dealing with time-based patterns or ordering.\n\n🔁 Feel free to share or comment if you’ve encountered similar questions in your interviews!\n\n#PySpark #BigData #DataEngineering #InterviewQuestions #Accenture #ApacheSpark #WindowFunctions #DataFrame #TechCareers #CodingChallenge #Python #SparkSQL #LinkedInLearning",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7329752411470778368_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a PySpark interview scenario for identifying suspicious accounts that log in from different IP addresses at the same time. It identifies window functions, DataFrame filtering, and column operations as relevant tools, and explains that time-overlap logic can detect potentially compromised accounts. The referenced image is said to contain the code, sample data, intermediate steps, and output, but none of that material is included in the supplied content.",
+    "topics": [
+      "PySpark",
+      "Window Functions",
+      "DataFrame Filtering",
+      "Column Operations",
+      "Concurrent Login Detection"
+    ],
+    "subtopics": [
+      "Identifying simultaneous logins from different IP addresses",
+      "Time-overlap detection",
+      "Suspicious account activity",
+      "Data integrity"
+    ],
+    "concepts": [
+      "Simultaneous Multi-IP Login Detection",
+      "Window Functions",
+      "Time Overlap",
+      "DataFrame Filtering",
+      "Column Operations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How could PySpark be used to identify accounts that log in from different IP addresses at the same time?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Analyze login events associated with the same account for overlapping times.\nIdentify cases where the overlapping logins come from different IP addresses.\nUse window functions for the time-based analysis and DataFrame filtering to retain suspicious accounts."
+    },
+    {
+      "question": "Why is a simultaneous login from multiple IP addresses considered a data integrity concern?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The behavior may indicate that an account has been compromised.\nThe relevant signal is overlapping login activity from different IP addresses for the same account."
+    },
+    {
+      "question": "Which PySpark capabilities are relevant to detecting time-based suspicious login patterns, and what role does each play?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": ""
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Window Functions",
+      "Time-Based Pattern Detection",
+      "Data Integrity",
+      "Account Compromise Detection"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:da45163766a44252",
+    "saved_date": "2026-10-01T23:23:31Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7329752411470778368",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7329752411470778368_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "175a9a7300d2ce3f4d9dfa7aee957747480ff422d5a2c055575b7bc5c3bfc116",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

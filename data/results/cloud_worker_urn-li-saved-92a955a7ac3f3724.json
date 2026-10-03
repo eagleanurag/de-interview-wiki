@@ -1,0 +1,113 @@
+{
+  "id": "urn-li-saved-92a955a7ac3f3724",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327458889296232450",
+    "captured_at": "2026-10-02T00:15:49.515308Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:39Z"
+  },
+  "original_text": "🧠 “Do Data engineers still need to master SQL in 2025?”\nYes. Absolutely.\n\nIn one of my recent projects, I was working with Azure Data Factory + Snowflake + dbt.\n The pipelines looked modern, the tools were shiny — but what was at the heart of every transformation?\n → SQL.\n\nWhether it was:\nWriting incremental models in dbt\nBuilding CTEs for layered logic\nCreating views with optimized joins\nOr debugging slow queries in Snowflake\n\nSQL was everywhere.\n And it wasn’t just about writing queries — it was about thinking in sets, designing for performance, and building clean logic that scales.\n\n💡 What I’ve learned:\n You don’t have to know every modern tool — but if you can write good SQL, you can work with almost any data platform.\n\n📌 If you’re just starting in data engineering, make SQL your foundation. Everything else will build on top of it.\n👉 Curious: What’s the most challenging SQL logic you've written in production?\n#DataEngineering #SQL #BigData #ETL #dbt #Snowflake #AzureDataFactory #LinkedInTopVoiceJourney #DataEngineeringTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327458889296232450_slide_0.jpg",
+      "description": "JPEG image, 480x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post argues that SQL remains a foundational skill for data engineers in 2025, even within a modern Azure Data Factory, Snowflake, and dbt stack. It supports this argument with one project in which SQL was used for incremental dbt models, CTEs, optimized views, and Snowflake query debugging. The author emphasizes set-based thinking, performance, and clean, scalable logic over knowledge of every modern tool.",
+    "topics": [
+      "SQL",
+      "Data engineering",
+      "ETL",
+      "Modern data platforms",
+      "Azure Data Factory",
+      "Snowflake",
+      "dbt"
+    ],
+    "subtopics": [
+      "Incremental models",
+      "Common table expressions",
+      "Layered transformation logic",
+      "View optimization",
+      "Join optimization",
+      "Slow query debugging",
+      "Set-based thinking",
+      "Scalable data transformation logic"
+    ],
+    "concepts": [
+      "SQL as a transformation foundation",
+      "Set-based thinking",
+      "Incremental dbt models",
+      "Common table expressions",
+      "Optimized views and joins",
+      "Slow query debugging",
+      "Clean and scalable logic"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why does the author argue that data engineers still need SQL when using a modern data platform stack?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The described Azure Data Factory, Snowflake, and dbt project used SQL at the center of its transformations.\nModern tools do not remove the need to design set-based, performant, clean, and scalable transformation logic."
+    },
+    {
+      "question": "Which SQL-related activities were performed in the project described by the post?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The activities included writing incremental dbt models and building CTEs for layered logic.\nThe work also included creating views with optimized joins and debugging slow Snowflake queries."
+    },
+    {
+      "question": "What SQL skills does the post emphasize beyond writing queries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The post emphasizes thinking in sets rather than treating SQL as only query syntax.\nIt also emphasizes performance, clean logic, and building transformations that scale."
+    },
+    {
+      "question": "How do CTEs and optimized joins illustrate the post's argument about SQL engineering?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "CTEs are used in the project to organize transformations into layered logic.\nOptimized joins in views demonstrate the post's emphasis on performance-conscious SQL design."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Data engineering foundations",
+      "ETL",
+      "dbt",
+      "Snowflake",
+      "Azure Data Factory"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:92a955a7ac3f3724",
+    "saved_date": "2026-10-01T23:24:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327458889296232450",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327458889296232450_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c9fb98e78a9f7a67f9f81db965c63b6aacde3d1f8ed5e15c31c2a3cc718e2c45",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

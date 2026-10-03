@@ -1,0 +1,89 @@
+{
+  "id": "urn-li-archive-f883e7bdaa45a22e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.277589Z",
+    "author": "Kalyani V",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:52Z"
+  },
+  "original_text": "***Inteview Question***\nToday, I explored how different SQL join operations behave using a small dataset, and how they handle duplicates and NULLs. Here's what I discovered:\n\nDatasets\nTable A (Left) Table B (Right)\nId Id\n1 1\n2 2\n2 2\n3 2\n4 4\n6 5\nNULL NULL\n\n1️⃣ INNER JOIN (A.Id = B.Id)\n1 → 1×1 = 1\n2 → 2×3 = 6\n4 → 1×1 = 1\nNULLs won’t match\n✅ Total = 1 + 6 + 1 = 8 rows\n-----------------------------------------\n2️⃣ LEFT JOIN\nFrom A:\n1 → match = 1 row\n2 → 2×3 = 6 rows\n3 → no match = 1 row (NULLs on B side)\n4 → match = 1 row\n6 → no match = 1 row\nNULL → no match = 1 row (even though B has NULL too)\n✅ Total = 1 + 6 + 1 + 1 + 1 + 1 = 11 rows\n----------------------------------------------\n3️⃣ RIGHT JOIN\nFrom B:\n1 → match = 1\n2 → 3×2 = 6\n4 → match = 1\n5 → no match = 1\nNULL → no match = 1\n✅ Total = 1 + 6 + 1 + 1 + 1 = 10 rows\n\n-----------------------------------------------------\n4️⃣ FULL OUTER JOIN\n= LEFT + RIGHT − INNER\n = 11 + 10 − 8 = 13 rows\n✅ NULLs on both sides still do not match, so they count as unmatched on both.\n\n-------------------------------------------------\n5️⃣ CROSS JOIN\n= 7 rows in A × 7 rows in B\n✅ 7 × 7 = 49 rows\n\n#dataEngineer #spark #sqljoins #sql #mysql #azureDataEngineer Coditas #Pyspark #databricks #azuredataengineer",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post uses two seven-row tables to demonstrate how SQL joins handle duplicate keys, unmatched rows, and NULL values. With A.Id equal to B.Id, the INNER JOIN returns 8 rows because duplicate matches multiply: one match for Id 1, six for Id 2, and one for Id 4. The LEFT JOIN returns 11 rows, the RIGHT JOIN returns 10, and the FULL OUTER JOIN returns 13. NULL values do not match each other. The CROSS JOIN pairs every row in one seven-row table with every row in the other, producing 49 rows.",
+    "topics": [
+      "SQL joins",
+      "Join cardinality",
+      "Duplicate-key handling",
+      "NULL handling",
+      "Cartesian products"
+    ],
+    "subtopics": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "CROSS JOIN",
+      "Duplicate-key multiplication",
+      "Unmatched NULL values"
+    ],
+    "concepts": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "CROSS JOIN",
+      "Duplicate-key multiplication",
+      "NULL equality behavior"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "For the supplied tables, why does an INNER JOIN on A.Id = B.Id return eight rows?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Id 1 produces one row because it occurs once in each table.\nId 2 produces six rows because its two occurrences in A are each paired with its three occurrences in B.\nId 4 produces one row, and NULL does not produce a match."
+    },
+    {
+      "question": "How do LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN differ on the supplied tables when unmatched rows and NULL values are present?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The LEFT JOIN retains all rows from A and returns 11 rows for the example.\nThe RIGHT JOIN retains all rows from B and returns 10 rows for the example.\nThe FULL OUTER JOIN retains unmatched rows from both sides and returns 13 rows, calculated as 11 + 10 - 8.\nA NULL on one side does not match a NULL on the other side."
+    },
+    {
+      "question": "What row count does the demonstrated CROSS JOIN produce, and how is that count obtained?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Each table contains seven rows.\nEvery row from A is paired with every row from B, so the result contains 7 × 7 = 49 rows."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL joins",
+    "secondary_topics": [
+      "Join result cardinality",
+      "Duplicate-key handling",
+      "NULL matching behavior",
+      "CROSS JOIN"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f883e7bdaa45a22e",
+    "saved_date": "2026-10-01T23:26:52Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a6a66812a4be38b66fe76d98783ec12b6b677df55de21a2ce5e6d36a2d4434d3",
+    "enricher_version": "3"
+  }
+}

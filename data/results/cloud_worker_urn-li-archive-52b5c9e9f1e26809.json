@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-52b5c9e9f1e26809",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.079702Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:53Z"
+  },
+  "original_text": "🚀 Publicis Sapient is Hiring! 🚀\n\nAre you a #DataEngineer or #DataScience professional looking for new opportunities? \n\nPublicis Sapient is seeking #SeniorDataEngineers with expertise in cloud platforms like GCP/Azure, proficient in languages such as Java/Scala/Python, and with a strong SQL background.\n\n💼 What We’re Looking For:\n- Experience range: 5-14 years\n- Proficiency in SQL, Spark, and MPP data platforms\n- Deep understanding of cloud-based data services\n\nJoin our team in Gurgaon or Bangalore and be part of shaping the future of data!\n\nFor #DataScience #MachineLearningEngineers #LLM we seek individuals with solid experience in Python, Machine Learning, Machine Learning Ops, and Gen AI/LLM.\n\n💼 What We’re Looking For:\n- Experience range: 5-14 years\n- Proficiency in Python, Machine Learning, and related fields\n\nExplore opportunities in Gurgaon, Bangalore, Pune, and Hyderabad with us.\n\nIf you are interested or know someone who might be, please send resumes to anchal.sharma@publicissapient.com.\n\n#Hiring #DataJobs #CloudTechnologies #BigData #PublicisSapient #MachineLearning #opentowork #immediatejoiner #lookingforjobchange #hybrid \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a Publicis Sapient hiring announcement for experienced data engineering and data science-related professionals. It lists desired skills, experience ranges, locations, and application information but provides no technical explanations or interview-preparation content.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Hiring announcement",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:52b5c9e9f1e26809",
+    "saved_date": "2026-10-01T23:28:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "edb4b42e5cfbb09269b3afbf782e020e173316fe8e003abb202eccedaebeb6f1",
+    "enricher_version": "3"
+  }
+}

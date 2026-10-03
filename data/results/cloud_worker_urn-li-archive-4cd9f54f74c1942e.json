@@ -1,0 +1,136 @@
+{
+  "id": "urn-li-archive-4cd9f54f74c1942e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.849140Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:53Z"
+  },
+  "original_text": "Give me 2 minutes, I will explain you\n\n25 data terminologies that you need to know as a Data Engineer!\n\n⇥ Data Ingestion – Collecting and importing data from various sources into a storage system (e.g., databases, data lakes)\n\n⇥ ETL (Extract, Transform, Load) – Extracting raw data, transforming it into a usable format, and loading it into a destination system\n\n⇥ ELT (Extract, Load, Transform) – Unlike ETL, data is first loaded into a storage system (like a data lake) before transformation\n\n⇥ Data Pipeline – A series of steps that automate data movement and transformation from one system to another\n\n⇥ Batch Processing – Processing large volumes of data at scheduled intervals rather than in real-time\n\n⇥ Stream Processing – Processing data in real-time as it arrives, often used for live analytics\n\n⇥ Data Lake – A centralized repository that stores raw, structured, and unstructured data for later use\n\n⇥ Data Warehouse – A structured repository optimized for querying and analytics, storing processed data\n\n⇥ Data Mart – A subset of a data warehouse, focused on a specific business domain or department\n\n⇥ OLTP (Online Transaction Processing) – A system designed for handling real-time transactional data, like banking systems\n\n⇥ OLAP (Online Analytical Processing) – A system designed for complex queries and analytical workloads, often used in reporting\n\n⇥ Indexing – A technique to improve database query performance by creating a structured way to access data quickly\n\n⇥ Sharding – Splitting large datasets into smaller, manageable chunks across multiple servers to improve performance\n\n⇥ Partitioning – Dividing a large dataset into smaller parts within a single database to improve query efficiency\n\n⇥ Caching – Temporarily storing frequently accessed data in memory to boost system performance\n\n⇥ Data Governance – Policies ensuring data quality, security, and compliance across an organization\n\n⇥ Data Lineage – Tracking where data originates, how it moves, and how it is transformed\n\n⇥ Schema Evolution – The ability to modify a database or data warehouse structure without affecting existing data\n\n⇥ Big Data – Large and complex datasets requiring specialized tools (e.g., Hadoop, Spark) for processing\n\n⇥ Data Mesh – A decentralized architecture treating data as a product, allowing domain-oriented data ownership\n\n⇥ Data Lakehouse – A hybrid architecture combining the features of data lakes and data warehouses for better flexibility and performance\n\n⇥ Metadata – Data about data, providing information such as structure, source, and usage details\n\n⇥ Data Modeling – Designing a structured format for storing and managing data efficiently\n\n⇥ Data Orchestration – Coordinating various data workflows, often using tools like Apache Airflow\n\n⇥ Lambda Architecture – A data processing architecture handling both real-time and batch data\n\nGet the Interview Call: https://lnkd.in/ges-e-7J\nJoin me: https://lnkd.in/giE3e9yH\nFollow for more 👋\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is an introductory glossary of 25 data engineering terms covering data ingestion, ETL and ELT, pipelines, batch and stream processing, storage systems, analytical workloads, performance techniques, governance, metadata, data modeling, orchestration, and modern data architectures.",
+    "topics": [
+      "Data ingestion and integration",
+      "Data processing",
+      "Data storage and analytics",
+      "Database performance",
+      "Data governance and evolution",
+      "Big data and modern data architectures",
+      "Metadata and data modeling",
+      "Data orchestration"
+    ],
+    "subtopics": [
+      "ETL and ELT",
+      "Data pipelines",
+      "Batch and stream processing",
+      "Data lakes, warehouses, marts, and lakehouses",
+      "OLTP and OLAP",
+      "Indexing, sharding, partitioning, and caching",
+      "Data governance and lineage",
+      "Schema evolution",
+      "Data Mesh",
+      "Big data",
+      "Metadata and data modeling",
+      "Lambda Architecture"
+    ],
+    "concepts": [
+      "Data Ingestion",
+      "ETL",
+      "ELT",
+      "Data Pipeline",
+      "Batch Processing",
+      "Stream Processing",
+      "Data Lake",
+      "Data Warehouse",
+      "Data Mart",
+      "OLTP",
+      "OLAP",
+      "Indexing",
+      "Sharding",
+      "Partitioning",
+      "Caching",
+      "Data Governance",
+      "Data Lineage",
+      "Schema Evolution",
+      "Big Data",
+      "Data Mesh",
+      "Data Lakehouse",
+      "Metadata",
+      "Data Modeling",
+      "Data Orchestration",
+      "Lambda Architecture"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are ETL and ELT, and how do their processing orders differ?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "ETL extracts raw data, transforms it into a usable format, and loads it into a destination system.\nELT extracts data, loads it into a storage system such as a data lake, and then transforms it."
+    },
+    {
+      "question": "How do batch processing, stream processing, and Lambda Architecture differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Batch processing handles large data volumes at scheduled intervals rather than in real time.\nStream processing handles data in real time as it arrives and is often used for live analytics.\nLambda Architecture is designed to handle both real-time and batch data."
+    },
+    {
+      "question": "How do a data lake, data warehouse, data mart, and data lakehouse differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A data lake centrally stores raw, structured, and unstructured data for later use.\nA data warehouse stores processed data in a structured repository optimized for querying and analytics.\nA data mart is a subset of a data warehouse focused on a business domain or department.\nA data lakehouse combines data lake and data warehouse features to provide greater flexibility and performance."
+    },
+    {
+      "question": "What distinguishes OLTP from OLAP?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "OLTP handles real-time transactional data, such as banking transactions.\nOLAP supports complex analytical queries and workloads, often for reporting."
+    },
+    {
+      "question": "How do indexing, sharding, partitioning, and caching improve performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Indexing creates a structured way to access database data quickly.\nSharding splits large datasets into manageable chunks across multiple servers.\nPartitioning divides a large dataset into smaller parts within one database to improve query efficiency.\nCaching temporarily keeps frequently accessed data in memory to improve performance."
+    },
+    {
+      "question": "What roles do data governance, data lineage, and metadata play in data management?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Data governance establishes policies for data quality, security, and compliance.\nData lineage tracks a data asset's origin, movement, and transformations.\nMetadata describes data and provides details about its structure, source, and usage."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Core data engineering terminology",
+    "secondary_topics": [
+      "Data integration",
+      "Data processing",
+      "Data storage",
+      "Database performance",
+      "Data governance",
+      "Data architecture",
+      "Data orchestration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4cd9f54f74c1942e",
+    "saved_date": "2026-10-01T23:30:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4187f3241ef371dac0aee40b009e6f42c487a03c522f3c4472a8f4ada6ffd133",
+    "enricher_version": "3"
+  }
+}

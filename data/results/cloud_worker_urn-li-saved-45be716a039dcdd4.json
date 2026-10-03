@@ -1,0 +1,132 @@
+{
+  "id": "urn-li-saved-45be716a039dcdd4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327237430086959105",
+    "captured_at": "2026-10-02T00:15:47.172652Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:46Z"
+  },
+  "original_text": "Production-grade project structure for data engineering projects today! 📁\n\n📁 𝗰𝗼𝗻𝗳𝗶𝗴/: Contains configuration files for your project, such as database connection details, API keys, or other project-specific settings. Keeps configurations separate from the code for easy updates.\n\n📁 𝗱𝗮𝘁𝗮/: Stores raw and processed data files. Has two subfolders: 📁 raw/ for unprocessed data and 📁 processed/ for transformed data. Ensures access to original data files and tracks changes made during processing.\n\n📁 𝗱𝗼𝗰𝘀/: Contains project documentation, such as README files, user guides, and technical documentation. Maintains thorough documentation for project understandability and maintainability.\n\n📁 𝗲𝘁𝗹/: Holds Extract, Transform, and Load (ETL) scripts. Contains three subfolders: 📁 𝗲𝘅𝘁𝗿𝗮𝗰𝘁/, 📁 𝘁𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺/, and 📁 𝗹𝗼𝗮𝗱/, each with respective scripts for data extraction, transformation, and loading.\n\n📁 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲𝘀/: Contains data pipeline orchestration scripts. These scripts define the order in which different ETL processes or other data processing steps should be executed.\n\n📁 𝘀𝗿𝗰/: Stores the source code for the project, including data processing and transformation scripts, utility functions, and data validation scripts. Organized into subfolders: 📁 𝗱𝗮𝘁𝗮/, 📁 𝘂𝘁𝗶𝗹𝘀/, and 📁 𝘃𝗮𝗹𝗶𝗱𝗮𝘁𝗶𝗼𝗻/.\n\n📁 𝘁𝗲𝘀𝘁𝘀/: Contains unit and integration tests for the project. Writing tests ensures the code works as expected and helps catch potential issues before they become major problems.\n\n📄 .𝗴𝗶𝘁𝗶𝗴𝗻𝗼𝗿𝗲: Specifies files and folders ignored by Git version control. Prevents accidental commits of certain files, like data files or configuration files containing sensitive information.\n\n📄 𝗲𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁.𝘆𝗺𝗹: Defines the Conda environment for the project, listing required packages and their versions. Manages dependencies for easy setup and consistent package versions across team members.\n\n📄 𝗥𝗘𝗔𝗗𝗠𝗘.𝗺𝗱: Provides an overview of the project, including its purpose, instructions for setup, and usage information. A well-written README file helps team members and users understand and utilize the project effectively.\n\nRemember, this is a starting point; tailor it to your project's specific needs.\n\nFollow me here for more content: Akhil Rachuri \n\nPC: Brij kishore Pandey\n\nBetter reach: Sumit Mittal Darshil Parmar Abhishek Jha Abhisek Sahu Shubham Wadekar Asheesh T. Vaishnavi MURALIDHAR Nimra Ayaz Karthik K. Prashant Kumar Pandey \n\n#data \n#dataengineering\nActivate to view larger image,\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327237430086959105_slide_0.jpg",
+      "description": "JPEG image, 480x678 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post proposes a starting project structure for data engineering work that separates configuration, raw and processed data, documentation, ETL scripts, pipeline orchestration, source code, and tests. It also recommends a Git ignore file, a Conda environment definition with package versions, and a README containing setup and usage information. The post explicitly presents this structure as a starting point that should be tailored to project needs rather than as a universal standard.",
+    "topics": [
+      "Data engineering project structure",
+      "ETL organization",
+      "Data pipeline orchestration",
+      "Software testing",
+      "Dependency management with Conda",
+      "Version control with Git",
+      "Project documentation"
+    ],
+    "subtopics": [
+      "Configuration separation",
+      "Raw and processed data separation",
+      "Documentation organization",
+      "Extract, Transform, and Load script organization",
+      "Processing-step ordering",
+      "Source-code organization",
+      "Unit and integration testing",
+      "Ignoring data and sensitive configuration files",
+      "Versioned dependency management",
+      "README-based setup and usage guidance"
+    ],
+    "concepts": [
+      "config/ directory",
+      "data/raw/ directory",
+      "data/processed/ directory",
+      "docs/ directory",
+      "etl/ directory",
+      "pipeline/ directory",
+      "src/ directory",
+      "Unit and integration tests",
+      ".gitignore file",
+      "environment.yml",
+      "README.md"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What purposes do the config/, data/, and docs/ directories serve in the proposed project structure?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The config/ directory separates project settings and sensitive connection information from code.\nThe data/ directory separates unprocessed raw files from transformed processed files.\nThe docs/ directory centralizes project, user, and technical documentation."
+    },
+    {
+      "question": "How do the etl/ and pipeline/ directories differ in their responsibilities?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The etl/ directory separates extraction, transformation, and loading scripts by ETL stage.\nThe pipeline/ directory defines the order in which ETL processes and other processing steps execute."
+    },
+    {
+      "question": "Why is separating raw data from processed data useful in a data engineering project?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Keeping raw files in data/raw/ preserves access to the original unprocessed data.\nKeeping transformed outputs in data/processed/ makes changes made during processing easier to track."
+    },
+    {
+      "question": "How do the src/ and tests/ directories support project quality?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The src/ directory organizes processing code, transformation code, utility functions, and validation scripts.\nThe tests/ directory contains unit and integration tests that verify expected behavior and help catch problems early."
+    },
+    {
+      "question": "How do environment.yml and .gitignore support consistent setup and safer version control?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "environment.yml records required Conda packages and their versions so team members can use consistent dependency versions.\n.gitignore excludes specified data and configuration files from Git to help prevent accidental commits of sensitive information."
+    },
+    {
+      "question": "What information should a README.md contain according to the proposed structure?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The README should explain the project's purpose and provide setup and usage instructions.\nThe README should help users and team members understand how to use the project effectively."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "Data engineering project structure",
+    "secondary_topics": [
+      "ETL organization",
+      "Pipeline orchestration",
+      "Testing",
+      "Dependency management",
+      "Version control",
+      "Documentation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:45be716a039dcdd4",
+    "saved_date": "2026-10-01T23:24:46Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327237430086959105",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327237430086959105_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "25490fc2a2cbeb05bafa222bfb2013ad7b396a0dd1c0cf5d557eefd994953338",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

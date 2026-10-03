@@ -1,0 +1,120 @@
+{
+  "id": "urn-li-saved-408381d21a798c90",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339690591162716161",
+    "captured_at": "2026-10-02T00:15:46.945732Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:55Z"
+  },
+  "original_text": "1yr •\n𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 - 𝟲 𝗦𝘁𝗲𝗽𝘀 𝘁𝗼 𝗜𝗺𝗽𝗿𝗲𝘀𝘀 𝗬𝗼𝘂𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝗲𝗿\n(Link for putting this into action at the end of the post)\n😬 Most candidates aren't even sure where to begin when faced with a System Design problem.\n🤔 What steps should you take to ensure maximum success?\nHere is a step-by-step roadmap guaranteed to impress your interviewer 💪\n𝟭) 𝗜𝗱𝗲𝗻𝘁𝗶𝗳𝘆 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝗮𝗹 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁𝘀\nThis part should last only take a few minutes.\n🔶 Which features are already covered by the existing services\nor APIs?\n🔶 Which features need to be built?\n🔶 Cover only the core, not every requirement.\nWhen designing Twitter, we need to be able to view feed, post tweets, like tweets etc.\n𝟮) 𝗡𝗼𝗻-𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝗮𝗹 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁𝘀\n🔶 Again, this part should take a few minutes.\n🔶 Think about what the system should do to support the functional requirements.\nDiscuss the following:\n🔶 Scalability\n🔶 Availability\n🔶 Reliability\n🔶 Latency\n🔶 Efficiency\n🔶 Consistency\n♦️ Privacy (Special)\n𝟯) 𝗥𝗲𝘀𝗼𝘂𝗿𝗰𝗲 𝗘𝘀𝘁𝗶𝗺𝗮𝘁𝗶𝗼𝗻 (𝗢𝗽𝘁𝗶𝗼𝗻𝗮𝗹)\nMore common in product design questions like ride-sharing apps or a social media platform.\nThink about:\n🔶 How many daily active users do you need to support?\n🔶 How long should the data be stored (i.e. data retention)?\n🔶 Queries per second, ongoing connections, throughput, storage requirements.\n🔶 Database and Queries per second limitations.\n𝟰) 𝗖𝗼𝗿𝗲 𝗘𝗻𝘁𝗶𝘁𝗶𝗲𝘀 𝗮𝗻𝗱 𝗔𝗣𝗜 𝗗𝗲𝘀𝗶𝗴𝗻\n🔶 Core entities = nouns in the functional requirements, e.g. likes, posts, comments, and users\n🔶 API = contract between service and the end users. These are verbs in the requirements like GET /books or POST /books.\n✅ Keep the API related to functional requirements.\n✅ Keep it simple - one endpoint per functional requirement.\n✅ If there is bidirectional communication, discuss the technologies\nthat facilitate this.\n❌ Do not introduce irrelevant APIs.\n𝟱) 𝗛𝗶𝗴𝗵-𝗟𝗲𝘃𝗲𝗹 𝗗𝗲𝘀𝗶𝗴𝗻\n🔶 Bulk of the interview, it should take 15-20 minutes. Translate functional and non-functional requirements into a diagram.\n✅ Main components interacting with one another.\n✅ Data flow - how does the data move through the system?\n✅ Traffic pattern - how does the system handle varying levels of patterns?\n❌ Do not dive into specific technologies.\n❌ Do not overemphasize buzzwords.\n❌ Avoid adding elements like authentication in this diagram.\n𝟲) 𝗗𝗲𝘁𝗮𝗶𝗹𝗲𝗱 𝗗𝗲𝘀𝗶𝗴𝗻\n✅ Open-ended and relies on interaction with the interviewer.\n✅ Identify parts of the components that could lead to scalability problems and how to handle them.\n✅ Non-functional requirements play a key role in making design decisions here.\n✅ Focus on trade-offs like scalability, latency and consistency.\n---\nStart crushing your System Design Interviews today -> https://lnkd.in/eh2Rqvmf\n6 Steps to Impress Your System Design Interviewer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339690591162716161_slide_0.jpg",
+      "description": "JPEG image, 390x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a six-step system design interview roadmap: identify core functional requirements and distinguish features already covered by existing services or APIs from features that need to be built; assess non-functional requirements; optionally estimate resources; identify core entities and APIs; draw a high-level design; and discuss detailed design, scalability problems, and trade-offs. It uses Twitter, book endpoints, ride-sharing, and social-media examples, and recommends keeping APIs tied to functional requirements while avoiding irrelevant APIs and specific technology detail in the high-level diagram.",
+    "topics": [
+      "System Design Interview Preparation",
+      "Functional Requirements",
+      "Non-Functional Requirements",
+      "Resource Estimation",
+      "Core Entities",
+      "API Design",
+      "High-Level Design",
+      "Detailed Design",
+      "Scalability and Trade-offs"
+    ],
+    "subtopics": [
+      "Existing service and API coverage versus features to build",
+      "Core features versus every requirement",
+      "Scalability, availability, reliability, latency, efficiency, consistency, and privacy",
+      "Daily active users and data retention",
+      "Queries per second, ongoing connections, throughput, and storage requirements",
+      "Core entities as nouns",
+      "APIs as verbs and one endpoint per functional requirement",
+      "Bidirectional communication",
+      "Main components, interactions, data flow, and traffic patterns",
+      "Scalability problems and how to handle them"
+    ],
+    "concepts": [
+      "Functional requirements",
+      "Non-functional requirements",
+      "Resource estimation",
+      "Core entities",
+      "API design",
+      "Bidirectional communication",
+      "High-level design",
+      "Detailed design",
+      "Design trade-offs",
+      "Interview phase timing"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What should a candidate identify during the functional- and non-functional-requirement phases of a system design interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The candidate distinguishes features already covered by existing services or APIs from features that need to be built.\nThe candidate limits the initial scope to the core features instead of every requirement.\nThe candidate discusses scalability, availability, reliability, latency, efficiency, consistency, and privacy as non-functional considerations."
+    },
+    {
+      "question": "How are core entities and APIs derived from functional requirements?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The candidate identifies core entities as nouns in the functional requirements, such as likes, posts, comments, and users.\nThe candidate treats an API as a contract between a service and end users and relates it to verbs such as GET /books or POST /books.\nThe candidate follows the post's recommendation to keep the API simple, related to functional requirements, and limited to one endpoint per functional requirement while avoiding irrelevant APIs.\nWhen bidirectional communication is present, the candidate discusses technologies that facilitate it."
+    },
+    {
+      "question": "Which inputs does the post recommend for optional resource estimation?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate treats resource estimation as optional and associates it with product-design questions such as ride-sharing apps or social-media platforms.\nThe candidate considers daily active users, data retention, queries per second, ongoing connections, throughput, and storage requirements.\nThe candidate also considers database and queries-per-second limitations."
+    },
+    {
+      "question": "How should the high-level design and detailed-design phases be handled?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The candidate translates functional and non-functional requirements into a diagram of main components, interactions, data flow, and traffic patterns.\nThe candidate avoids diving into specific technologies, overemphasizing buzzwords, or adding authentication to the high-level diagram.\nIn detailed design, the candidate uses open-ended interaction to identify component areas that could cause scalability problems and discuss how to handle them.\nThe candidate lets non-functional requirements guide decisions and focuses on trade-offs among scalability, latency, and consistency."
+    }
+  ],
+  "classification": {
+    "domain": "System Design",
+    "primary_topic": "System Design Interview Preparation",
+    "secondary_topics": [
+      "Requirements Analysis",
+      "Resource Estimation",
+      "Entity and API Design",
+      "High-Level and Detailed Design",
+      "Scalability, Latency, and Consistency Trade-offs"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:408381d21a798c90",
+    "saved_date": "2026-10-01T23:11:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339690591162716161",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339690591162716161_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7339690591162716161_slide_0.jpg is listed more than once in this record and was counted once; the archive marked this as multi-slide but supplied 1 distinct file(s), so the remaining slides were not collected; the archive counted 2 media item(s) and 1 were usable",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "15c172bcaa5c543cec2a11fc23a27a8ef9a43afab89dd16b9cd81a079efc9e24",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

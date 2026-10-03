@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-archive-fdcaac76cec75bc2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.328107Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:39Z"
+  },
+  "original_text": "Writing SQL for 1K rows is easy. Writing it for 100M+ rows? That's where the real challenge begins.\n\nWriting SQL that scales — that’s a different skill entirely.\nWhen I started working with production datasets (think 100M+ records), I quickly learned how some of my queries were quietly blowing up compute costs or dragging pipelines down.\n🔽 Here are 3 hard-learned lessons from writing SQL at scale:\n1️⃣ Avoid SELECT * in joins\n Even if it runs locally, wide joins with SELECT * can lead to expensive shuffles, unnecessary I/O, and memory issues. Always project only what you need.\n2️⃣ Use CTEs wisely\n Common Table Expressions (WITH clauses) are great for readability, but in many engines they don't cache — they re-execute. In places like Snowflake or BigQuery, that can double or triple cost.\n3️⃣ Watch for implicit casting\n Joining user_id (INT) with user_id (STRING)? You may not even notice until your join suddenly takes 10x longer — and still returns fewer rows.\nThese little things matter a lot more when you're dealing with terabytes, not tables.\n\n🔄 I’m curious — what's one subtle SQL mistake you’ve made that caused big trouble later?\n\n#DataEngineering #SQLTips #BigData #Snowflake #BigQuery #DataPerformance #ScalableSystems #ModernDataStack #LearnInPublic\n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains three SQL practices for working with production-scale datasets: avoid SELECT * in joins, use Common Table Expressions cautiously because many engines may re-execute them rather than cache their results, and watch for implicit casting when join keys have different types. It connects these practices to compute costs, pipeline performance, expensive shuffles, unnecessary I/O, memory issues, slower queries, and fewer returned rows.",
+    "topics": [
+      "Scalable SQL",
+      "Data engineering performance",
+      "JOIN optimization",
+      "Common Table Expressions",
+      "Implicit type casting",
+      "Snowflake",
+      "BigQuery"
+    ],
+    "subtopics": [
+      "Projecting only required columns",
+      "CTE readability versus re-execution",
+      "Mixed-type JOIN keys",
+      "Compute cost at large data volumes"
+    ],
+    "concepts": [
+      "SELECT * in joins",
+      "Common Table Expressions",
+      "Implicit casting",
+      "Scalable SQL"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why can SELECT * be problematic in a JOIN over a production-scale dataset, and what should be done instead?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "Wide joins that select every column can cause expensive shuffles, unnecessary I/O, and memory problems.\nOnly the columns required by the query should be projected."
+    },
+    {
+      "question": "What performance consideration should an engineer keep in mind when using Common Table Expressions in engines such as Snowflake or BigQuery?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Common Table Expressions can make SQL more readable, but many engines do not cache them and may re-execute them.\nRepeated CTE execution can increase compute cost, so CTEs should be used wisely."
+    },
+    {
+      "question": "What can happen when a JOIN combines an INT user_id with a STRING user_id?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The JOIN can trigger implicit casting between the differently typed keys.\nThe query may become dramatically slower and may return fewer rows than expected."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Scalable SQL",
+    "secondary_topics": [
+      "JOIN performance",
+      "Common Table Expressions",
+      "Implicit type casting",
+      "Compute cost optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:fdcaac76cec75bc2",
+    "saved_date": "2026-10-01T23:22:39Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b9fec881933945f36bc484d762db3e3ff83cd1bdb8a2ebdc5d6f83d9f7e6d7e2",
+    "enricher_version": "3"
+  }
+}

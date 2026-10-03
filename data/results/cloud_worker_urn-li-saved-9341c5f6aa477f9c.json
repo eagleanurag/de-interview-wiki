@@ -1,0 +1,144 @@
+{
+  "id": "urn-li-saved-9341c5f6aa477f9c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7306216334671937536",
+    "captured_at": "2026-10-02T00:15:49.587545Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:33:05Z"
+  },
+  "original_text": "𝐇𝐨𝐰 𝐭𝐨 𝐢𝐦𝐩𝐫𝐨𝐯𝐞 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐩𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞?\n\nHere are some of the top ways to improve database performance:\n\n1. Indexing\nCreate the right indexes based on query patterns to speed up data retrieval.\n\n2. Materialized Views\nStore pre-computed query results for quick access, reducing the need to process complex queries repeatedly.\n\n3. Vertical Scaling\nIncrease the capacity of the hashtag#database server by adding more CPU, RAM, or storage.\n\n4. Denormalization\nReduce complex joins by restructuring data, which can improve query performance.\n\n5. Database Caching\nStore frequently accessed data in a faster storage layer to reduce load on the database.\n\n6. Replication\nCreate copies of the primary database on different servers to distribute read load and enhance availability.\n\n7. Sharding\nDivide the database into smaller, manageable pieces, or shards, to distribute load and improve performance.\n\n8. Partitioning\nSplit large tables into smaller, more manageable pieces to improve query performance and maintenance.\n\n9. Query Optimization\nRewrite and fine-tune queries to execute more efficiently.\n\n10. Use of Appropriate Data Types\nSelect the most efficient data types for each column to save space and speed up processing.\n\n11. Limiting Indexes\nAvoid excessive indexing, which can slow down write operations; use indexes judiciously.\n\n12. Archiving Old Data\nMove infrequently accessed data to an archive to keep the active database smaller and faster.\n\nPost credit: Arslan Ahmad",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7306216334671937536_slide_0.jpg",
+      "description": "GIF image, 480x596 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post lists 12 ways to improve database performance: indexing, materialized views, vertical scaling, denormalization, database caching, replication, sharding, partitioning, query optimization, appropriate data types, limiting indexes, and archiving old data. It explains that these techniques can speed data retrieval and processing, reduce repeated work and database load, distribute load, improve availability, reduce complex joins, and make the active database smaller and faster. It also notes that excessive indexing can slow write operations.",
+    "topics": [
+      "Database performance optimization",
+      "Data retrieval",
+      "Query processing",
+      "Server capacity",
+      "Data modeling",
+      "Read load distribution",
+      "Availability",
+      "Table and database organization",
+      "Storage efficiency",
+      "Write performance"
+    ],
+    "subtopics": [
+      "Indexing",
+      "Materialized views",
+      "Vertical scaling",
+      "Denormalization",
+      "Database caching",
+      "Replication",
+      "Sharding",
+      "Partitioning",
+      "Query optimization",
+      "Appropriate data types",
+      "Limiting indexes",
+      "Archiving old data"
+    ],
+    "concepts": [
+      "Indexing",
+      "Materialized Views",
+      "Vertical Scaling",
+      "Denormalization",
+      "Database Caching",
+      "Replication",
+      "Sharding",
+      "Partitioning",
+      "Query Optimization",
+      "Appropriate Data Types",
+      "Limiting Indexes",
+      "Archiving Old Data"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which techniques does the post identify for improving database performance?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies indexing, materialized views, vertical scaling, denormalization, database caching, replication, sharding, partitioning, query optimization, appropriate data types, limiting indexes, and archiving old data."
+    },
+    {
+      "question": "What roles do indexing and limiting indexes play in read and write performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The right indexes, selected based on query patterns, speed up data retrieval.\nExcessive indexing can slow down write operations, so indexes should be used judiciously."
+    },
+    {
+      "question": "How do materialized views and database caching reduce repeated work or database load?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Materialized views store pre-computed query results so complex queries do not have to be processed repeatedly.\nDatabase caching stores frequently accessed data in a faster storage layer to reduce load on the database."
+    },
+    {
+      "question": "What is vertical scaling, and which resources does the post say can be added to the database server?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Vertical scaling increases the capacity of the database server.\nThe post specifically mentions adding more CPU, RAM, or storage."
+    },
+    {
+      "question": "How do replication, sharding, and partitioning organize or distribute data?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Replication creates copies of the primary database on different servers to distribute read load and enhance availability.\nSharding divides the database into smaller shards to distribute load and improve performance.\nPartitioning splits large tables into smaller pieces to improve query performance and maintenance."
+    },
+    {
+      "question": "How do denormalization, appropriate data types, and archiving old data improve performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Denormalization reduces complex joins by restructuring data and can improve query performance.\nEfficient data types save space and speed up processing.\nArchiving infrequently accessed data keeps the active database smaller and faster."
+    },
+    {
+      "question": "What does query optimization involve according to the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Query optimization involves rewriting and fine-tuning queries so they execute more efficiently."
+    }
+  ],
+  "classification": {
+    "domain": "Database performance optimization",
+    "primary_topic": "Improving database performance",
+    "secondary_topics": [
+      "Indexing and limiting indexes",
+      "Materialized views and database caching",
+      "Vertical scaling",
+      "Denormalization",
+      "Replication, sharding, and partitioning",
+      "Query optimization, data types, and archiving"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9341c5f6aa477f9c",
+    "saved_date": "2026-10-01T23:33:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7306216334671937536",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7306216334671937536_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7306216334671937536_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "3c254af14bcf2f3e0f9e225a828634f9cd207bb9241dd167452c2a5bc32a3333",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

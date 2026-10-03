@@ -1,0 +1,79 @@
+{
+  "id": "urn-li-saved-b77df1913cec613b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7325085602222112769",
+    "captured_at": "2026-10-02T00:15:50.971361Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:47Z"
+  },
+  "original_text": "• 1st\nData Engineer |Bigdata Engineer |Bigdata Developer| Hadoop| HDFS| SQL| Shell Scripting| Scala |Python |Scala Spark |PySpark |Spark SQL |AWS S3 |AWS Redshift| AWS EMR |AWS Glue|AWS Lambda\n1yr •\n🚀 Cracking the Tech Mahindra SQL Interview for Data Engineers (3–5 Yrs)\nJust dropped a power-packed PDF 📄 that covers real-world SQL interview questions asked by Tech Mahindra for mid-level Data Engineer roles!\n🎯 What's inside:\n✅ Complex GROUP BY and JOIN scenarios\n✅ Window functions & subqueries\n✅ Query optimization logic\n✅ Real interview-style case questions\n✅ Bonus: Output tables & diagrams\nThis guide is ideal for anyone preparing for interviews in the 3–5 year experience range — whether you're actively interviewing or brushing up your SQL game!\n📌 Attachments:\n1️⃣ PDF with questions + solutions\n💬 Drop a 💻 in the comments if you’d like the Big Data + PySpark round next!\n#DataEngineer #SQLInterview #TechMahindra #CareerInTech #AIwithFreedom #InterviewPreparation #LinkedInLearning #dataengineering #sql #pyspark\n…see more\nData Engineer (3-5 years of experience.).pdf",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7325085602222112769_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post for a Tech Mahindra SQL interview guide aimed at Data Engineers with 3–5 years of experience. It says the attached PDF covers complex GROUP BY and JOIN scenarios, window functions, subqueries, query optimization logic, and case-style questions, with output tables and diagrams. The actual questions and solutions are not included in the supplied content, so the post provides only a topic outline rather than substantive SQL instruction.",
+    "topics": [
+      "SQL",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "GROUP BY",
+      "JOINs",
+      "Window functions",
+      "Subqueries",
+      "Query optimization",
+      "SQL case questions"
+    ],
+    "concepts": [
+      "Complex GROUP BY and JOIN scenarios",
+      "Window functions",
+      "Subqueries",
+      "Query optimization logic",
+      "Case-style SQL interview questions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "Query optimization",
+      "GROUP BY",
+      "JOINs",
+      "Window functions",
+      "Subqueries"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b77df1913cec613b",
+    "saved_date": "2026-10-01T23:27:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7325085602222112769",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7325085602222112769_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "52ada009187ec76f3e3c3dafc4b9f6ea8e3b403bfa35b06c1ec93ce92b4aaf48",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

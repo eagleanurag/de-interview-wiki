@@ -1,0 +1,121 @@
+{
+  "id": "urn-li-saved-bb7abed63cceeadc",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7300054526030450688",
+    "captured_at": "2026-10-02T00:15:51.028247Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:24Z"
+  },
+  "original_text": "A Redditor Who Landed a FAANG Job Spills the Ultimate Interview Hacks!\n\nStep 1: Dodging the Application Black Hole\n \nSkip the portals! ATS systems filter out most resumes. \nInstead, I reached out directly to engineers and hiring managers on LinkedIn for referrals. \nMy message was short & sharp: \n\"Hey [Name], I'm really interested in [Team/Company] and would love to apply. I have [X years] of experience in [Relevant Skill], and I believe I'd be a great fit. Would you be open to referring me?\" \nResult? Multiple referrals in a week — straight to recruiter screens, no more waiting in the void.\n\nStep 2: Studying Only What Matters \n\nForget solving 500 random LeetCode problems. \nI reverse-engineered interview patterns using Glassdoor, Blind, and LeetCode forums. \nMost companies repeat 10-15 core problems — so I focused on: \n- Top 30 questions per company (sorted by frequency) \n- Recognizing patterns, not just solutions (\"Oh, this is just a sliding window problem with a twist.\") \n- Practiced mock interviews on Pramp and with friends for real-time feedback \n\nResult? Solving questions in under 10 minutes, no brute-forcing needed.\n\nStep 3: Mastering the Behavioral Interview \n\nFAANG behavioral rounds aren’t about \"personality\" — they want structured answers. \nI prepped 5 strong stories using the STAR method (Situation, Task, Action, Result) and adapted them as needed. \nPro Tip: Always highlight impact with metrics. \n- Instead of: \"I helped optimize a backend service.\" \n- Say: \"I optimized the backend, reduced latency by 40%, and saved $500K in cloud costs.\" \n\nHack: When asked about failure, spin it into a win — \"I learned X, which led to Y success later.\"\n\n\nStep 4: Using Hiring Process Loopholes \n\nI timed my interviews so companies knew I had other offers — they moved faster. \nTargeted hiring events and systems like Amazon’s bar-raisers (they can override bad interviewers). \nBuilt a solid relationship with my recruiter — they can fast-track borderline candidates and help with negotiations.\n\n\nStep 5: Crushing Offers & Negotiations \n\nGot my first offer and used it as leverage to speed up other companies. \nPlayed it cool — companies love candidates who seem in demand. \nNegotiated hard: \n- \"I’m excited about this role, but my other offer is at $X — can you match or improve it?\" \n- \"I was hoping for a higher base/signing bonus to align with market rates.\" \n\nResult? An extra +$40K in total comp.\n\n\nThe Final Outcome \n- FAANG offer with $300K+ total comp \n- Less time wasted on pointless prep \n- Lower stress, more control over the process \n\nWork smarter, not harder. You’ve got this!\n\n#faang #google #amazon #netflix",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7300054526030450688_slide_0.jpg",
+      "description": "JPEG image, 480x886 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This post presents an anecdotal five-step FAANG interview strategy: obtain referrals through LinkedIn instead of relying only on applicant tracking systems; focus coding preparation on frequent company-specific problems and recognizable patterns; practice with mock interviews; prepare five adaptable STAR stories with quantified impact; use recruiters, hiring events, knowledge of Amazon bar-raisers, and existing offers as leverage; and negotiate compensation against another offer. The poster reports receiving a FAANG offer worth more than $300K in total compensation and gaining $40K through negotiation, but these are personal claims rather than independently supported results.",
+    "topics": [
+      "FAANG interview preparation",
+      "Job application strategy",
+      "Coding interview preparation",
+      "Behavioral interview preparation",
+      "Recruiter relationships",
+      "Offer negotiation"
+    ],
+    "subtopics": [
+      "LinkedIn referral outreach",
+      "Applicant tracking system filtering",
+      "Company-specific coding question frequency",
+      "Coding pattern recognition",
+      "Mock interview practice",
+      "STAR storytelling method",
+      "Quantifying professional impact",
+      "Amazon bar-raisers",
+      "Total compensation negotiation"
+    ],
+    "concepts": [
+      "Applicant Tracking System Filtering",
+      "LinkedIn Referral Outreach",
+      "Frequency-Based Coding Preparation",
+      "Coding Pattern Recognition",
+      "Mock Interview Feedback",
+      "STAR Behavioral Method",
+      "Quantified Impact",
+      "Failure-Oriented Storytelling",
+      "Hiring Process Leverage",
+      "Compensation Negotiation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the post recommend obtaining referrals while avoiding reliance on job portals?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The candidate should contact engineers or hiring managers directly on LinkedIn rather than submitting only through portals filtered by applicant tracking systems.\nThe outreach should briefly state the candidate's interest, relevant experience, and request for a referral."
+    },
+    {
+      "question": "What approach does the post recommend for efficiently preparing for company-specific coding interviews?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The candidate should research recurring interview questions using Glassdoor, Blind, and LeetCode forums.\nPreparation should focus on the most frequent questions for each company and recognizing recurring patterns such as sliding-window variations.\nThe candidate should supplement study with mock interviews on Pramp or with friends for real-time feedback."
+    },
+    {
+      "question": "How should a candidate prepare behavioral answers according to the post?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The candidate should prepare five stories that can be adapted to different questions.\nEach story should follow the STAR sequence of Situation, Task, Action, and Result.\nAnswers should quantify impact, and questions about failure should connect the experience to a later lesson and success."
+    },
+    {
+      "question": "How does the post recommend using recruiters, hiring events, and Amazon bar-raisers during the hiring process?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong relationship with a recruiter may help accelerate consideration of a candidate.\nTargeted hiring events can be used to engage companies actively.\nThe post describes Amazon bar-raisers as people who can override other interviewers' assessments."
+    },
+    {
+      "question": "How can a candidate use an existing offer when negotiating a new compensation package?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The candidate can explicitly cite the compensation of another offer and ask the employer to match or improve it.\nThe negotiation can address the base salary or signing bonus.\nThe candidate should appear in demand without making unsupported claims, although the post advocates playing it cool."
+    }
+  ],
+  "classification": {
+    "domain": "Technology Interview and Career Preparation",
+    "primary_topic": "FAANG interview preparation",
+    "secondary_topics": [
+      "Referral-based job applications",
+      "Coding interview preparation",
+      "Behavioral interviews",
+      "Compensation negotiation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:bb7abed63cceeadc",
+    "saved_date": "2026-10-01T23:34:24Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7300054526030450688",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7300054526030450688_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f5ef85c8b929c97afab992f3b5d26d9e9f15651ba3820ecb223ccfd66507a295",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

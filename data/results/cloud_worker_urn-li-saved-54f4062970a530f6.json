@@ -1,0 +1,79 @@
+{
+  "id": "urn-li-saved-54f4062970a530f6",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326198382610337793",
+    "captured_at": "2026-10-02T00:15:47.622276Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:52Z"
+  },
+  "original_text": "PySpark Interview Question :\n\nQuestion:\nFind the top N most frequent words in a large text file \n\nSample Data :\nHello world\nHello from PySpark\nPySpark is awesome\nHello PySpark world\n\nOutput :\n+--------+-----+\n| word|count|\n+--------+-----+\n| Hello| 3|\n|PySpark| 3|\n| world| 2|\n+--------+-----+\n\n\n\n𝐍𝐨𝐭𝐞 : \"S𝐡𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐚𝐧𝐬𝐰𝐞𝐫 𝐢𝐧 𝐭𝐡𝐞 𝐜𝐨𝐦𝐦𝐞𝐧𝐭𝐬 𝐬𝐞𝐜𝐭𝐢𝐨𝐧.\"\n\n\"Looking to learn more about Data Engineering? Join our WhatsApp group for valuable resources and content. Click below comment link to join!\"\nFollow Karthik K. Seekho Bigdata Institute\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326198382610337793_slide_0.jpg",
+      "description": "JPEG image, 480x363 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a PySpark coding interview question asking how to find the top N most frequent words in a large text file. It provides sample input and an expected output in which Hello and PySpark each occur 3 times and world occurs 2 times, but it does not provide a solution or specify details such as case handling or how N is supplied.",
+    "topics": [
+      "PySpark",
+      "Large text file processing",
+      "Word frequency analysis"
+    ],
+    "subtopics": [
+      "Counting word occurrences",
+      "Selecting the top N results",
+      "Interpreting expected sample output"
+    ],
+    "concepts": [
+      "Top N most frequent words",
+      "Word frequency counting",
+      "Expected result selection"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you use PySpark to find the top N most frequent words in a large text file?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The solution counts word occurrences across the text file and returns the requested top N words.\nFor the supplied sample, the result includes Hello with a count of 3, PySpark with a count of 3, and world with a count of 2."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Word frequency analysis",
+      "Large text file processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:54f4062970a530f6",
+    "saved_date": "2026-10-01T23:25:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326198382610337793",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326198382610337793_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5760e75a497f42b2ee6b48546e643e0e22906daf630dbefd9b0be86cc551b9e9",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

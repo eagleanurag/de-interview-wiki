@@ -1,0 +1,202 @@
+{
+  "id": "urn-li-archive-ff46b78d7e254245",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.336189Z",
+    "author": "Siva Nelluri",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:51Z"
+  },
+  "original_text": "Wipro L1 Technical Discussion Interview Questions Python, Snowflake, Azure Databricks, and SQL\n================================================= \nPython\n======\n1.Explain deepcopy vs shallow copy in Python. \n2.Write a decorator to log function execution time. \n3.Describe list comprehension vs map()/filter(). \n4.How do you handle errors or exceptions in Python? \nSnowflake\n========\n1.Explain Snowflake architecture and micro-partitions. \n2.How would you stage and load data into Snowflake using Python?\n3.What are Snowflake’s key features—scaling, data sharing? \n4.Describe time travel and fail-safe in Snowflake\nAzure Databricks (ADB)\n===============\n1.When to use Databricks vs Spark vs ADF?\n2.Explain partitioning strategies and optimizations in ADF. \n3.How do you schedule/monitor Spark jobs in Databricks? \n4.Write SQL to find the 2nd highest salary. \n5.Explain difference between clustered and non-clustered index. \n6.What is SCD Type 2? How do you implement it in ADF or Databricks?\n7.How would you migrate data using partitioned reads from Source to Databricks/Snowflake?\n8.How to Handling concurrency and locking in SQL explain concepts like deadlocks, isolation levels.\n9.Describe an ETL pipeline using ADF/Databricks and Snowflake (source and transform and sink).\n10.How do you automate Python-based Snowflake loads use connector,files,or APIs?\n11.Explain how you'd implement quality checks and logging in an Azure/Snowflake pipeline.\n12.How to use ADF triggers and monitoring vs Databricks jobs?",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The content is a Wipro L1 technical-discussion question list rather than an explanatory knowledge post. It covers Python, Snowflake, Azure Databricks, Spark, ADF, and SQL, including Python copying, decorators, transformations, and exception handling; Snowflake architecture, loading, features, time travel, and fail-safe; and Databricks, Spark, and ADF selection, partitioning, jobs, migration, SCD Type 2, SQL querying and indexing, concurrency, ETL, load automation, quality checks, logging, triggers, and monitoring. No answers or implementations are provided, and the extracted media text is empty.",
+    "topics": [
+      "Python",
+      "Snowflake",
+      "Azure Databricks",
+      "Spark",
+      "ADF",
+      "SQL"
+    ],
+    "subtopics": [
+      "deepcopy versus shallow copy",
+      "execution-time logging decorators",
+      "list comprehension versus map() and filter()",
+      "Python error and exception handling",
+      "Snowflake architecture and micro-partitions",
+      "staging and loading data into Snowflake with Python",
+      "Snowflake scaling and data sharing",
+      "Snowflake time travel and fail-safe",
+      "Databricks versus Spark versus ADF",
+      "partitioning strategies and optimizations in ADF",
+      "Spark job scheduling and monitoring in Databricks",
+      "finding the second-highest salary with SQL",
+      "clustered versus non-clustered indexes",
+      "SCD Type 2",
+      "partitioned reads for data migration",
+      "SQL concurrency, locking, deadlocks, and isolation levels",
+      "ETL source-transform-sink pipelines",
+      "Python-based Snowflake load automation",
+      "quality checks and pipeline logging",
+      "ADF triggers and monitoring versus Databricks jobs"
+    ],
+    "concepts": [
+      "Deepcopy versus shallow copy",
+      "Execution-time logging decorator",
+      "List comprehensions versus map() and filter()",
+      "Python exception handling",
+      "Snowflake architecture and micro-partitions",
+      "Snowflake data staging and loading",
+      "Snowflake scaling and data sharing",
+      "Snowflake time travel and fail-safe",
+      "Databricks, Spark, and ADF selection",
+      "ADF partitioning and optimization",
+      "Partitioned data migration",
+      "Spark jobs, ADF triggers, and monitoring",
+      "Second-highest salary query",
+      "Clustered and non-clustered indexes",
+      "SCD Type 2",
+      "SQL concurrency and locking",
+      "ETL source-transform-sink pipelines",
+      "Pipeline quality checks and logging"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Explain the difference between deepcopy and shallow copy in Python.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer distinguishes deepcopy from shallow copy in Python.\nThe answer explains the behavioral difference between the two copying approaches."
+    },
+    {
+      "question": "Write a Python decorator that logs function execution time.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response provides a Python decorator that logs function execution time."
+    },
+    {
+      "question": "Describe the differences between list comprehensions and map()/filter() in Python.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer contrasts list comprehensions with map() and filter().\nThe answer describes the purpose of each Python construct."
+    },
+    {
+      "question": "How do you handle errors or exceptions in Python?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains an approach for handling errors and exceptions in Python."
+    },
+    {
+      "question": "Explain Snowflake architecture, micro-partitions, scaling, and data sharing.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains Snowflake architecture and the role of micro-partitions.\nThe answer covers scaling and data sharing as Snowflake features."
+    },
+    {
+      "question": "How would you stage and load data into Snowflake using Python, and how would you automate those loads with a connector, files, or APIs?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer outlines staging and loading data into Snowflake through Python.\nThe answer addresses load automation through a connector, files, or APIs."
+    },
+    {
+      "question": "Describe time travel and fail-safe in Snowflake.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains both Snowflake time travel and Snowflake fail-safe."
+    },
+    {
+      "question": "When should Databricks, Spark, or ADF be used?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains the circumstances for choosing Databricks, Spark, or ADF."
+    },
+    {
+      "question": "Explain partitioning strategies and optimizations in ADF.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer describes partitioning strategies for ADF.\nThe answer explains the optimizations associated with those strategies."
+    },
+    {
+      "question": "How would you migrate source data to Databricks or Snowflake using partitioned reads?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer explains how partitioned reads support migration into Databricks or Snowflake."
+    },
+    {
+      "question": "How do you schedule and monitor Spark jobs in Databricks, and how do ADF triggers and monitoring compare with Databricks jobs?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains scheduling and monitoring for Spark jobs in Databricks.\nThe answer compares ADF triggers and monitoring with Databricks jobs."
+    },
+    {
+      "question": "Write SQL to find the second-highest salary.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response includes valid SQL that returns the second-highest salary."
+    },
+    {
+      "question": "Explain the difference between clustered and non-clustered indexes.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes clustered indexes from non-clustered indexes."
+    },
+    {
+      "question": "What is SCD Type 2, and how would you implement it in ADF or Databricks?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains SCD Type 2.\nThe answer describes implementing SCD Type 2 in ADF or Databricks."
+    },
+    {
+      "question": "Explain SQL concurrency and locking, including deadlocks and isolation levels.",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer explains concurrency and locking in SQL.\nThe answer defines deadlocks and isolation levels."
+    },
+    {
+      "question": "Describe an ETL pipeline using ADF or Databricks and Snowflake, including its source, transformation, and sink stages.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer identifies the source, transformation, and sink stages.\nThe answer explains how ADF or Databricks works with Snowflake in the ETL pipeline."
+    },
+    {
+      "question": "How would you implement quality checks and logging in an Azure or Snowflake pipeline?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains where quality checks and logging fit in an Azure or Snowflake pipeline.\nThe response describes how those checks and logs would be implemented."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering technical interview preparation",
+    "secondary_topics": [
+      "Python",
+      "Snowflake",
+      "Azure Databricks",
+      "Spark",
+      "ADF",
+      "SQL",
+      "ETL pipelines",
+      "SCD Type 2"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ff46b78d7e254245",
+    "saved_date": "2026-10-01T23:20:51Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f9bb6c1d6c69d33f27cd5db076cda7f46615a64ff7199bf84335b393e54a756c",
+    "enricher_version": "3"
+  }
+}

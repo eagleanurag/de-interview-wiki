@@ -1,0 +1,95 @@
+{
+  "id": "urn-li-archive-37c727aea532db0b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.499679Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:13Z"
+  },
+  "original_text": "Spark optimization: 90 minutes → 28 minutes 🚀\n\nRecently, I worked on optimizing a Spark job that was taking around 90 minutes.\n\nAQE initially brought it down to ~55–60 minutes, but the real bottleneck was discovered through the Spark UI.\n\nA window function using:Window.partitionBy(\"period\")\n\nwas causing a large shuffle to effectively collapse into a single partition, resulting in heavy data skew, spilling, and one executor doing most of the work.\n\nInstead of using the window to find the latest load timestamp, I changed the approach to:\ngroupBy(period) + max(load_time) + broadcast join\n\nAfter validating that the new logic produced the same results:\n90 min → 55–60 min → 28 min\n\nThe biggest takeaway:\nDon’t just look at how many partitions Spark creates. Look at how the data is actually distributed across those partitions.\nSometimes the best Spark optimization isn’t adding more resources — it’s changing the way the data is processed.\n#ApacheSpark #DataEngineering #BigData #SparkOptimization #PerformanceEngineering #AQE",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post describes reducing an Apache Spark job from about 90 minutes to 28 minutes. AQE initially reduced the runtime to roughly 55–60 minutes, while Spark UI analysis identified a window using Window.partitionBy(\"period\") that effectively collapsed a large shuffle into a single partition, causing data skew, spilling, and one executor to perform most of the work. Replacing the window-based latest-load-timestamp lookup with groupBy(period), max(load_time), and a broadcast join produced the same results and reduced the runtime to 28 minutes. The main lesson is to inspect how data is distributed across partitions rather than only counting partitions, and to consider changing processing logic before adding resources.",
+    "topics": [
+      "Data skew",
+      "Shuffle and spilling",
+      "Partition data distribution"
+    ],
+    "subtopics": [
+      "AQE",
+      "Spark UI diagnosis",
+      "Window partitioning",
+      "Grouped maximum aggregation",
+      "Broadcast joins",
+      "Result validation"
+    ],
+    "concepts": [
+      "AQE",
+      "Spark UI",
+      "Window.partitionBy(\"period\")",
+      "Data skew",
+      "Spilling",
+      "groupBy(period) and max(load_time)",
+      "Broadcast join",
+      "Partition data distribution",
+      "Result validation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A Spark job uses Window.partitionBy(\"period\"), and Spark UI shows that a large shuffle is effectively concentrated in one partition. How would you diagnose and address the bottleneck?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The concentrated partition indicates uneven data distribution, which caused data skew, spilling, and one executor to perform most of the work.\nThe window-based latest-load-timestamp lookup can be replaced with groupBy(period), max(load_time), and a broadcast join.\nThe replacement logic should be validated as producing the same results before it is adopted."
+    },
+    {
+      "question": "Why should a Spark engineer examine data distribution across partitions instead of focusing only on the partition count?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A partition count does not show whether data and processing work are unevenly distributed.\nThe described job appeared highly partitioned but still concentrated enough work in one partition to cause skew, spilling, and executor imbalance."
+    },
+    {
+      "question": "What processing change reduced the described Spark job from 55–60 minutes to 28 minutes, and how was the change verified?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The window used to find the latest load timestamp was replaced with groupBy(period), max(load_time), and a broadcast join.\nThe new logic was validated as producing the same results before the 28-minute runtime was accepted as the improved outcome."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark optimization",
+    "secondary_topics": [
+      "Data skew",
+      "AQE",
+      "Window partitioning",
+      "Broadcast joins"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:37c727aea532db0b",
+    "saved_date": "2026-10-01T23:07:13Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2f46332b70b2e78ac29636c4df927576819df3bd8f9e7898b086e86fc6e5e3cc",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Apache Spark performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

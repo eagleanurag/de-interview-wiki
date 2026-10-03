@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-8aa5701399531210",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338607955723878402",
+    "captured_at": "2026-10-02T00:15:49.102934Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:58Z"
+  },
+  "original_text": "We are super excited about Databricks Free Edition, no credit card or business email required. Get a small slice of Databricks forever. Best way to learn DATA + AI! Try it out here:\nhttps://lnkd.in/gBGPiKDR",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338607955723878402_slide_0.jpg",
+      "description": "JPEG image, 480x360 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional announcement for Databricks Free Edition. It states that no credit card or business email is required, offers a small free slice of Databricks, and presents it as a way to learn data and AI.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data and AI education",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8aa5701399531210",
+    "saved_date": "2026-10-01T23:19:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338607955723878402",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338607955723878402_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2a613cfd3ef3c9e600c38b8fd760a9f9675efe3272666a55129049d53ac17326",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

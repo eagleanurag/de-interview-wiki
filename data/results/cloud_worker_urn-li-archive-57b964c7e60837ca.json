@@ -1,0 +1,97 @@
+{
+  "id": "urn-li-archive-57b964c7e60837ca",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.098716Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:06Z"
+  },
+  "original_text": "Let's talk about some recently added options in autoloader in databricks\n\n1) Enabling File events instead of legacy notification queue method: \n\nPreviously, you had to create a separate queue for each autoloader stream. Now you just have to provide a permission to external location to create a single queue and databricks will handle it for you based on the file arrival trigger.\n\n2) Clean source files\nYou can delete or archive the files based on the retention period provided. \n\n3) Connecting directly to SFTP location:\nJust define SFTP connection and connect to SFTP similar to how you'd connect to S3, Azure lake.\n\n4) Two new data formats: XML and excel\n\n5) Schema Evolution: addNewcolumnswithTypeWidening\n\nIf your column data type is changes from into to long; it wouldn't go into rescue column, it'd automatically handle the type widening.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post lists five recently added Databricks Auto Loader options: File events with a single externally located queue, source-file deletion or archiving based on a retention period, direct SFTP connectivity, XML and Excel formats, and schema evolution through addNewcolumnswithTypeWidening. It explains that an int-to-long type change can be handled automatically without placing the data in a rescue column. The post is brief and appears truncated after an ellipsis, with no configuration syntax or further implementation details provided.",
+    "topics": [
+      "Databricks Auto Loader",
+      "File ingestion",
+      "Data format ingestion",
+      "Schema evolution"
+    ],
+    "subtopics": [
+      "File events and queue management",
+      "Source-file cleanup",
+      "SFTP connectivity",
+      "XML and Excel formats",
+      "Type widening"
+    ],
+    "concepts": [
+      "File events",
+      "Source-file cleanup",
+      "Direct SFTP connectivity",
+      "XML and Excel data formats",
+      "addNewcolumnswithTypeWidening"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What changes when File events are enabled instead of using the legacy notification queue method in Databricks Auto Loader?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The legacy method required a separate queue for each Auto Loader stream.\nWith File events, permission to the external location enables Databricks to handle a single queue based on file arrivals."
+    },
+    {
+      "question": "What source-file cleanup actions can be performed after using Databricks Auto Loader?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Source files can be deleted or archived based on a provided retention period."
+    },
+    {
+      "question": "How does the post describe connecting Auto Loader directly to SFTP?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "An SFTP connection is defined directly and used similarly to an S3 or Azure lake connection."
+    },
+    {
+      "question": "Which two additional data formats does the post identify for Databricks Auto Loader?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The two additional formats are XML and Excel."
+    },
+    {
+      "question": "Under addNewcolumnswithTypeWidening, what happens when a column changes from int to long?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Auto Loader handles the type widening automatically.\nThe data does not go into the rescue column for this int-to-long change."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks Auto Loader",
+    "secondary_topics": [
+      "File event ingestion",
+      "Source-file lifecycle management",
+      "SFTP connectivity",
+      "XML and Excel data formats",
+      "Schema evolution and type widening"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:57b964c7e60837ca",
+    "saved_date": "2026-10-01T23:11:06Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4dc6c380161bf14942666b1f414a755408b59a43dded032a8abb052ebccbe6bf",
+    "enricher_version": "3"
+  }
+}

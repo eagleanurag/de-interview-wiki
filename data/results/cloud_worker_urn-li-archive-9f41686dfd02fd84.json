@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-archive-9f41686dfd02fd84",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.950986Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:32Z"
+  },
+  "original_text": "𝗪𝗼𝗿𝗸𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗗𝗮𝘁𝗲𝘀 𝗮𝗻𝗱 𝗧𝗶𝗺𝗲𝘀𝘁𝗮𝗺𝗽𝘀 𝗶𝗻 𝗣𝘆𝗦𝗽𝗮𝗿𝗸\n\nDealing with date and time in big data pipelines? PySpark makes it easier with built-in functions to transform and compare date/time values.\n\nHere are some commonly used functions:\n\n-> current_date() – returns the current system date\n\ndf.withColumn(\"today\", current_date())\n\n->current_timestamp() – gives the exact timestamp at the moment.\n\ndf.withColumn(\"now\", current_timestamp())\n\n->to_date() – converts a string column to a date format.\n\ndf.withColumn(\"join_date\", to_date(col(\"join_date_str\"), \"yyyy-MM-dd\"))\n\n->datediff() – gives the number of days between two dates.\n\ndf.withColumn(\"days_diff\", datediff(current_date(), col(\"join_date\")))\n\nadd_months(), months_between(), date_add(), date_sub() – handy for adding/subtracting days or months.\n\nyear(), month(), dayofweek(), weekofyear() – for extracting parts of a date.\n\nThese functions help you filter, transform, or calculate based on date/time values – super helpful in analytics, reporting, and event-based pipelines.\n\n#PySpark #ApacheSpark #DatesAndTimestamps #BigData #DataEngineering #SparkTips #DataWrangling #ETL #DataProcessing #TimeSeries",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains that PySpark provides built-in functions for transforming and comparing date and time values in big data pipelines. It demonstrates adding the current system date with current_date(), adding the exact current timestamp with current_timestamp(), converting a date string with to_date(), and calculating the number of days between two dates with datediff(). It also presents functions for date arithmetic and extracting date components, noting their use in analytics, reporting, filtering, transformation, calculations, and event-based pipelines.",
+    "topics": [
+      "PySpark date and time processing",
+      "Big data pipelines",
+      "DataFrame date and timestamp transformation"
+    ],
+    "subtopics": [
+      "Current date and timestamp retrieval",
+      "String-to-date conversion",
+      "Date difference calculation",
+      "Date arithmetic",
+      "Date component extraction"
+    ],
+    "concepts": [
+      "PySpark date and time functions",
+      "current_date()",
+      "current_timestamp()",
+      "to_date()",
+      "datediff()",
+      "Date arithmetic functions",
+      "Date component extraction",
+      "Date and time operations in pipelines"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between current_date() and current_timestamp() in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "current_date() returns the current system date.\ncurrent_timestamp() gives the exact timestamp at the current moment."
+    },
+    {
+      "question": "How would you convert a join_date_str column containing dates in yyyy-MM-dd format and calculate the number of days from that date to the current date?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Use to_date(col(\"join_date_str\"), \"yyyy-MM-dd\") to convert the string column to a date.\nUse datediff(current_date(), col(\"join_date\")) to calculate the number of days between the current date and the converted join date.\nUse withColumn() to add the converted date and calculated day difference to the DataFrame."
+    },
+    {
+      "question": "Which PySpark functions does the post identify for date arithmetic and extracting date components?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The date arithmetic functions listed are add_months(), months_between(), date_add(), and date_sub().\nThe date extraction functions listed are year(), month(), dayofweek(), and weekofyear().\nThese operations can support filtering, transformation, and calculation in analytics, reporting, and event-based pipelines."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark date and time processing",
+    "secondary_topics": [
+      "Big data pipelines",
+      "DataFrame transformation",
+      "Date arithmetic",
+      "Analytics and reporting",
+      "Event-based pipelines"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:9f41686dfd02fd84",
+    "saved_date": "2026-10-01T23:23:32Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "36e553de10027cc3ea11ae0f8227861e072b55545f5fb69053d85a4d0721b50a",
+    "enricher_version": "3"
+  }
+}

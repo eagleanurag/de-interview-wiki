@@ -1,0 +1,119 @@
+{
+  "id": "urn-li-saved-27874ba20b713665",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7294675971599712256",
+    "captured_at": "2026-10-02T00:15:45.858081Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:25Z"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n1yr •\n🚀 Master Delta Live Tables (DLT) – The Future of ETL!\nBuilding scalable, reliable, and maintainable ETL pipelines is now easier than ever with Delta Live Tables (DLT) in Databricks! This powerful framework automates data ingestion, transformation, and governance on Delta Lake, helping you streamline your Data Lakehouse workflows.\n💡 Key Concepts You Should Know:\n🔹 Medallion Architecture – Bronze, Silver, and Gold layers\n🔹 Multi-Hop in the Lakehouse – Structuring efficient data flows\n🔹 Live Tables & Streaming Live Tables – Real-time & batch processing\n🔹 Spark Structured Streaming – Handling streaming data seamlessly\n🔹 Data Quality & Change Data Capture (CDC) – Ensuring accuracy & consistency\n🔹 Automated Data Management – Reducing manual effort\n📘 Want to deep dive into DLT? Grab this detailed guide covering all the essentials!\n🔖 Save this post for future reference!\n🔁 Repost to help your network learn!\n👉 Follow Aishwarya Pani for expert insights on Data Engineering & Cloud!\n#DataEngineering #Azure #Databricks #AWS #GCP #CloudComputing #BigData #ETL #DeltaLake #Streaming #MachineLearning #AI #TechCareers #DataScience #Python #SQL #CareerGrowth #DataPipelines #BusinessIntelligence #DataAnalytics #TechJobs #Consulting #MLOps #DeepLearning #AzureDataEngineer #DataQuality #TechCommunity 🚀\n…see more\nDelta_Live_Tables",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7294675971599712256_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post provides a high-level overview of Delta Live Tables (DLT) in Databricks, describing it as a framework for automating data ingestion, transformation, and governance on Delta Lake and for building scalable, reliable, and maintainable ETL pipelines. It introduces Medallion Architecture, Multi-Hop Lakehouse design, Live Tables, Streaming Live Tables, Spark Structured Streaming, data quality, Change Data Capture, and automated data management. The supplied content is truncated and does not include implementation guidance, code, configurations, detailed layer definitions, or an explanation of the exact distinctions between its processing modes; it only references a separate detailed guide that is not included.",
+    "topics": [
+      "Delta Live Tables",
+      "ETL pipelines",
+      "Delta Lake",
+      "Lakehouse architecture",
+      "Data quality",
+      "Change Data Capture",
+      "Batch and streaming processing"
+    ],
+    "subtopics": [
+      "Bronze, Silver, and Gold layers",
+      "Multi-Hop Lakehouse data flows",
+      "Live Tables and Streaming Live Tables",
+      "Spark Structured Streaming",
+      "Automated data management",
+      "Data ingestion, transformation, and governance"
+    ],
+    "concepts": [
+      "Delta Live Tables",
+      "Delta Lake",
+      "Medallion Architecture",
+      "Multi-Hop in the Lakehouse",
+      "Live Tables and Streaming Live Tables",
+      "Spark Structured Streaming",
+      "Data Quality",
+      "Change Data Capture",
+      "Automated Data Management"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What capabilities does the post attribute to Delta Live Tables?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post attributes ingestion, transformation, and governance automation to Delta Live Tables on Delta Lake.\nThe post describes Delta Live Tables as supporting ETL pipelines that are scalable, reliable, and maintainable."
+    },
+    {
+      "question": "Which Lakehouse design concepts does the post identify for organizing data and structuring data flows?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "Medallion Architecture consists of Bronze, Silver, and Gold layers, according to the post.\nMulti-Hop in the Lakehouse is described as a way to structure efficient data flows."
+    },
+    {
+      "question": "Which processing approaches and streaming technology does the post identify for real-time and batch workloads?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Live Tables and Streaming Live Tables are listed in connection with real-time and batch processing.\nSpark Structured Streaming is named as a technology for handling streaming data.\nThe source does not explain the implementation details or exact processing-mode distinctions."
+    },
+    {
+      "question": "Which concerns does the post associate with data accuracy and consistency?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Data quality is associated with ensuring accuracy.\nChange Data Capture, or CDC, is associated with ensuring consistency."
+    },
+    {
+      "question": "A Lakehouse team wants to streamline ETL while reducing manual effort. How does the post frame Delta Live Tables as a fit for that need?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Delta Live Tables is described as automating ingestion, transformation, and governance on Delta Lake.\nAutomated data management is described as reducing manual effort.\nThe post presents Delta Live Tables as supporting streamlined Lakehouse workflows."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Delta Live Tables",
+    "secondary_topics": [
+      "ETL pipelines",
+      "Delta Lake",
+      "Lakehouse architecture",
+      "Data quality and Change Data Capture",
+      "Batch and streaming processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:27874ba20b713665",
+    "saved_date": "2026-10-01T23:35:25Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7294675971599712256",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7294675971599712256_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ce141f040380aba279711eb80ab90f0e625b1215a1b59339d75196e434fe2904",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

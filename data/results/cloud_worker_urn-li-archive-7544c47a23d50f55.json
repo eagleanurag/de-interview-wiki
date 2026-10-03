@@ -1,0 +1,88 @@
+{
+  "id": "urn-li-archive-7544c47a23d50f55",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.444710Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:58Z"
+  },
+  "original_text": "EPAM Systems Pyspark interview questions for Data Engineer 2025.\n\n1. How do you deploy PySpark applications in a production environment?\n2. What are some best practices for monitoring and logging PySpark jobs?\n3. How do you manage resources and scheduling in a PySpark application?\n4. Write a PySpark job to perform a specific data processing task (e.g., filtering data, aggregating results).\n5. You have a dataset containing user activity logs with missing values and inconsistent data types. Describe how you would clean and standardize this dataset using PySpark.\n6. Given a dataset with nested JSON structures, how would you flatten it into a tabular format using PySpark?\n8. Your PySpark job is running slower than expected due to data skew. Explain how you would identify and address this issue.\n9. You need to join two large datasets, but the join operation is causing out-of-memory errors. What strategies would you use to optimize this join?\n10. Describe how you would set up a real-time data pipeline using PySpark and Kafka to process streaming data.\n11. You are tasked with processing real-time sensor data to detect anomalies. Explain the steps you would take to implement this using PySpark.\n12. Describe how you would design and implement an ETL pipeline in PySpark to extract data from an RDBMS, transform it, and load it into a data warehouse.\n13. Given a requirement to process and transform data from multiple sources (e.g., CSV, JSON, and Parquet files), how would you handle this in a PySpark job?\n14. You need to integrate data from an external API into your PySpark pipeline. Explain how you would achieve this.\n15. Describe how you would use PySpark to join data from a Hive table and a Kafka stream.\n16. You need to integrate data from an external API into your PySpark pipeline. Explain how you would achieve this.\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a list of 15 visible EPAM Systems PySpark interview questions for a 2025 Data Engineer role. It covers deployment, operations, data transformation, data quality, performance problems, streaming, ETL, and integration, but provides no answers, code, or implementation details. Item 7 is absent, the external API question is repeated as items 14 and 16, and the post ends with promotional text, a LinkedIn link, and a truncated \"see more\" marker.",
+    "topics": [
+      "PySpark",
+      "Data engineering interview preparation",
+      "Production PySpark operations",
+      "Data cleaning and transformation",
+      "Data format processing",
+      "Data skew and join performance",
+      "Real-time data processing",
+      "ETL pipeline design",
+      "Data integration"
+    ],
+    "subtopics": [
+      "Deploying PySpark applications",
+      "Monitoring and logging PySpark jobs",
+      "Resource management and scheduling",
+      "Filtering and aggregation",
+      "Handling missing values and inconsistent data types",
+      "Flattening nested JSON",
+      "Diagnosing and addressing data skew",
+      "Optimizing large dataset joins",
+      "Processing Kafka streams with PySpark",
+      "Detecting anomalies in sensor data",
+      "Building an RDBMS-to-data-warehouse ETL pipeline",
+      "Processing CSV, JSON, and Parquet files",
+      "Integrating external APIs",
+      "Joining Hive tables and Kafka streams"
+    ],
+    "concepts": [
+      "PySpark production deployment and operations",
+      "PySpark filtering and aggregation",
+      "Data cleaning and standardization",
+      "Nested JSON flattening",
+      "Data skew diagnosis and mitigation",
+      "Large dataset join optimization",
+      "PySpark and Kafka stream processing",
+      "Sensor anomaly detection",
+      "RDBMS-to-data-warehouse ETL",
+      "Multi-format data processing",
+      "External API integration"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Production deployment and operations",
+      "Data cleaning and transformation",
+      "Data format processing",
+      "Data skew and join optimization",
+      "Real-time processing with Kafka",
+      "ETL pipeline design",
+      "External data integration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:7544c47a23d50f55",
+    "saved_date": "2026-10-01T23:24:58Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5fb6824d53a4d7609a3a787a59e08fae09117495ab9c71ccb427afb8472c6898",
+    "enricher_version": "3"
+  }
+}

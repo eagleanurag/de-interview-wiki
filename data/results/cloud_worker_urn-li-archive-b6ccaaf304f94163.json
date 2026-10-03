@@ -1,0 +1,222 @@
+{
+  "id": "urn-li-archive-b6ccaaf304f94163",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:42.967064Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:27Z"
+  },
+  "original_text": "If you’re preparing for a Data Engineering role using PySpark,\nthese are the kinds of questions that actually get asked.\n\n\n💻 The Questions:\n 1. What’s the difference between select() and selectExpr()?\n 2. How do you repartition a DataFrame by multiple columns?\n 3. Write a PySpark function to extract domain from an email column.\n 4. How to explode a map column and flatten it?\n 5. What’s the most efficient way to drop columns dynamically?\n 6. Can a DataFrame be sorted without triggering an action?\n 7. How to handle mixed data types in a single column while writing to Parquet?\n 8. Use groupBy() to get the most recent record per group.\n 9. What’s the role of monotonically_increasing_id()? Where does it fail?\n 10. Read a multi-line JSON from S3 and flatten nested fields.\n 11. Difference between alias() and renaming a column directly.\n 12. How to apply different transformations conditionally to different columns?\n 13. Read only last 7 days of data from S3 using partition folder structure.\n 14. When does Spark not push down filters? How to fix that?\n 15. How to get number of partitions in a DataFrame and why does it matter?\n 16. Difference between count() and .rdd.count() in terms of performance?\n 17. What’s better for skew: salting the key or using broadcast joins?\n 18. Create a new column that ranks rows within group using dense_rank()\n 19. Why is collect() dangerous and when is it acceptable?\n 20. Convert a column of strings into timestamp — handle malformed inputs gracefully.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A question-only checklist of 20 PySpark Data Engineering interview questions. It covers DataFrame operations, partitioning and execution behavior, grouping and ranking, data skew, S3 data access, JSON and Parquet, mixed and malformed data handling, and collect(). The post provides no answers, code, explanations, examples, or performance figures.",
+    "topics": [
+      "PySpark DataFrame operations",
+      "S3, JSON, and Parquet",
+      "Grouping, latest records, and ranking",
+      "Data skew and join strategies",
+      "Mixed and malformed data handling",
+      "Map and nested data transformations",
+      "Collect and result retrieval"
+    ],
+    "subtopics": [
+      "select() and selectExpr()",
+      "Multi-column repartitioning",
+      "Email domain extraction",
+      "Map explosion and flattening",
+      "Dynamic column dropping",
+      "Sorting without triggering an action",
+      "Mixed data types in Parquet",
+      "Most recent records with groupBy()",
+      "monotonically_increasing_id() and its limitations",
+      "Multiline JSON from S3",
+      "Nested-field flattening",
+      "alias() and direct column renaming",
+      "Conditional column transformations",
+      "Reading seven days from S3 partition folders",
+      "Filter pushdown",
+      "DataFrame partition counts",
+      "count() and .rdd.count() performance",
+      "Salting and broadcast joins for skew",
+      "dense_rank() within groups",
+      "collect() risks and acceptable use",
+      "Graceful string-to-timestamp conversion"
+    ],
+    "concepts": [
+      "select() versus selectExpr()",
+      "Dynamic column operations",
+      "DataFrame repartitioning and partition count",
+      "Execution behavior and actions",
+      "Map and nested-data transformations",
+      "S3 partition-folder filtering and filter pushdown",
+      "Mixed types and malformed values",
+      "Grouped latest records and ranking",
+      "monotonically_increasing_id()",
+      "Data-skew strategies",
+      "Email-domain extraction",
+      "collect() risk and acceptable use"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between select() and selectExpr() in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer clearly explains the behavioral difference between select() and selectExpr()."
+    },
+    {
+      "question": "How do you repartition a PySpark DataFrame by multiple columns?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer shows how to specify multiple columns when repartitioning a DataFrame."
+    },
+    {
+      "question": "Write a PySpark function to extract the domain from an email column.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer provides a PySpark function that derives a domain value from an email string."
+    },
+    {
+      "question": "How can a map column be exploded and flattened in PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates how to explode a map column and flatten the resulting data."
+    },
+    {
+      "question": "What is the most efficient way to drop columns dynamically from a PySpark DataFrame?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies an efficient dynamic approach to dropping DataFrame columns."
+    },
+    {
+      "question": "Can a PySpark DataFrame be sorted without triggering an action?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains whether sorting a DataFrame triggers an action."
+    },
+    {
+      "question": "How should mixed data types in one column be handled when writing a DataFrame to Parquet?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how to handle mixed values in a column during a Parquet write."
+    },
+    {
+      "question": "How can groupBy() be used to obtain the most recent record in each group?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer uses groupBy() to produce the most recent record for every group."
+    },
+    {
+      "question": "What is the role of monotonically_increasing_id(), and where does it fail?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer explains both the intended role of monotonically_increasing_id() and its failure conditions."
+    },
+    {
+      "question": "How can multiline JSON be read from S3 and its nested fields flattened?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer shows how to read multiline JSON from S3 and flatten its nested fields."
+    },
+    {
+      "question": "What is the difference between alias() and renaming a PySpark column directly?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains the distinction between aliasing a column and renaming it directly."
+    },
+    {
+      "question": "How can different transformations be applied conditionally to different columns in PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer demonstrates applying column-specific transformations only when their conditions are met."
+    },
+    {
+      "question": "How can only the last seven days of data be read from S3 when the data uses partition folders?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer shows how to restrict an S3 read to the most recent seven days using the partition-folder structure."
+    },
+    {
+      "question": "When does Spark fail to push down filters, and how can that be addressed?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer identifies conditions that prevent filter pushdown and describes a way to address them."
+    },
+    {
+      "question": "How can the number of partitions in a PySpark DataFrame be obtained, and why does it matter?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how to obtain the DataFrame partition count and why that count matters."
+    },
+    {
+      "question": "How do count() and .rdd.count() differ in PySpark performance?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer compares the performance behavior of DataFrame count() with .rdd.count()."
+    },
+    {
+      "question": "For data skew, is salting the key or using a broadcast join better?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer compares salting the key with using broadcast joins as responses to skew."
+    },
+    {
+      "question": "How can a new column rank rows within each group using dense_rank()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer creates a ranking column with dense_rank() within each group."
+    },
+    {
+      "question": "Why is collect() dangerous in PySpark, and when is it acceptable to use?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the risks of collect() and identifies circumstances in which its use is acceptable."
+    },
+    {
+      "question": "How can a PySpark string column be converted to timestamps while handling malformed inputs gracefully?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer implements string-to-timestamp conversion that handles malformed values gracefully."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Spark DataFrame operations",
+      "Partitioning and execution",
+      "S3 data access",
+      "JSON and Parquet",
+      "Grouping and ranking",
+      "Data skew",
+      "Data type handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b6ccaaf304f94163",
+    "saved_date": "2026-10-01T23:10:27Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "31d0c5355a9ff60e2488241f73eea0e5ac506b94c2cb75d18571b7c3fc57edca",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Partitioning and execution behavior"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

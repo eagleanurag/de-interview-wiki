@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-6a4604ec671be964",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.284968Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:55Z"
+  },
+  "original_text": "Reach out Templates,\n\nTo the Hiring Manager\n\nHi (First Name), \nI saw your profile while looking up (Industry Name) recruiters on LinkedIn in (Name of Place). \nI am a (Insert Job Title), (Add relevant information about your experience).\nMy main skills encompass (add skills). \nDoes that fit the type of roles you generally recruit for? \nI would love to work for (add company name) as their vision and mission are in line with mine. \nLet me know what you think, I’d love to talk. \nBest, \n(Your Name)\n\n\nThe Job Seeker \n\nGreetings, (First Name)\nMy name is (Name), and I am a (Insert Role). \nI have been following your organization's work for a while now. (Add notable achievements of company)\nI am very interested in working at (Insert something unique to the company). \n(Insert some information about your experience)\nIf you have a second, I would love to discuss how my experience and skills can benefit your organization for the position of (Insert name of role). \n(If there is no job posting, and you want to inquire about an opening then add the line mentioned below.)\nI know you must be flooded with messages; but if there are any job openings for (Insert Role), I would be more than delighted to share why I might be a good fit. \nThank you and have an amazing day!\nBest, \n(Your Name)\n\nNext up I will be sharing the Email and LinkedIn InMail templates.\n\n\nStay curious, keep learning, keep sharing !\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This non-technical post provides two job outreach templates: one from a job seeker to a hiring manager and one from a candidate expressing interest in an organization and potential role. It uses placeholders for personal details, experience, skills, company information, and role names. The author also states that email and LinkedIn InMail templates will be shared later.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Career and job search",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:6a4604ec671be964",
+    "saved_date": "2026-10-01T23:30:55Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2f7fe990b5d70fd17af7c168a4af3667c5d74e4020d6ac474576cf3df21e4e86",
+    "enricher_version": "3"
+  }
+}

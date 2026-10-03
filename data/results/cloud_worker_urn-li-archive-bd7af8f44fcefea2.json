@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-archive-bd7af8f44fcefea2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.091346Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:17Z"
+  },
+  "original_text": "Data Partitioning in Big Data Systems – Why It’s More Than Just Performance\n\n📦 Most engineers think partitioning is just about speed.\n\nBut in reality, partitioning impacts:\n • Cost (e.g., unnecessary file scans in Spark = $$$)\n • Pipeline reliability\n • Your future troubleshooting life 😅\n\nLet’s break it down.\n\n⸻\n\n🔹 What is Partitioning?\nPartitioning splits large datasets into manageable “folders” or “chunks” based on a column (e.g., date, region).\nInstead of scanning an entire 10 TB dataset, you scan only the relevant partitions.\n\n⸻\n\n🔹 Good Partitioning Choices\n✅ High-read-frequency columns (like event_date, region)\n✅ Columns with moderate cardinality (not too few, not too many)\n✅ Leverage predicate pushdown — filters on partitioned columns avoid full scans\n\n⸻\n\n🔹 Bad Partitioning Choices\n❌ Over-partitioning: Too many small files hurt performance\n❌ Low-cardinality columns (e.g., gender: M/F) lead to poor parallelism\n❌ Relying only on default behavior\n\n⸻\n\n🔧 In PySpark/Databricks:\nUse partitionBy() when writing tables\nUse repartition() or coalesce() for reshaping data at runtime\n\n⸻\n\n💡 Pro Tip: Partitioning is invisible to most consumers — but makes your pipelines dramatically faster and cheaper behind the scenes.\n\n#DataEngineering #Partitioning #BigData #PySpark #Databricks #Azure #PerformanceTuning",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains that data partitioning divides large datasets by a column, such as date or region, so processing can scan only relevant partitions instead of an entire dataset. It argues that partitioning affects cost, pipeline reliability, and troubleshooting in addition to performance. The recommended choices are high-read-frequency columns with moderate cardinality and filters that enable predicate pushdown, while over-partitioning, very low-cardinality columns, and reliance on defaults are discouraged. For PySpark and Databricks, it identifies partitionBy() for writing tables and repartition() or coalesce() for runtime reshaping.",
+    "topics": [
+      "Data partitioning",
+      "Spark file scanning",
+      "PySpark and Databricks data reshaping"
+    ],
+    "subtopics": [
+      "Partition-column selection",
+      "Predicate pushdown",
+      "Partition cardinality",
+      "Over-partitioning and small files",
+      "partitionBy(), repartition(), and coalesce()"
+    ],
+    "concepts": [
+      "Data partitioning",
+      "Operational impact of partitioning",
+      "Partition-column selection",
+      "Moderate cardinality",
+      "Predicate pushdown",
+      "Over-partitioning",
+      "Low-cardinality partitioning",
+      "PySpark and Databricks partitioning operations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is data partitioning, and why can it matter beyond performance?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Partitioning splits a large dataset into manageable folders or chunks based on a column.\nScanning only relevant partitions can avoid scanning the entire dataset.\nThe post identifies cost, pipeline reliability, and troubleshooting as additional concerns affected by partitioning."
+    },
+    {
+      "question": "A Spark dataset is partitioned on gender, and many users filter by event_date. Based on the post, what partition design would be preferable and why?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A high-read-frequency column such as event_date is a better choice than a low-cardinality column such as gender.\nGender with M and F values can lead to poor parallelism.\nFiltering on the partitioned event_date column can avoid a full scan through predicate pushdown."
+    },
+    {
+      "question": "Which PySpark or Databricks operations would you use to persist partitioned tables and reshape data at runtime?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "partitionBy() should be used when writing tables.\nrepartition() or coalesce() should be used for reshaping data at runtime."
+    },
+    {
+      "question": "What partition-design mistakes can degrade a Spark workload, and what evidence would suggest over-partitioning?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Over-partitioning can create too many small files and hurt performance.\nA low-cardinality partition column can lead to poor parallelism.\nRelying only on default behavior is discouraged, and partition filters should be supported by predicate pushdown."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data partitioning",
+    "secondary_topics": [
+      "Performance optimization",
+      "Predicate pushdown",
+      "Partition cardinality",
+      "PySpark",
+      "Databricks"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:bd7af8f44fcefea2",
+    "saved_date": "2026-10-01T23:15:17Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d685b45ef045ea1e5462afe11e1240ecc053edcae964bc0b6ca8bb3e86c28bb6",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Big Data performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

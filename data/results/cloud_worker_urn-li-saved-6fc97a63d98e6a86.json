@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-6fc97a63d98e6a86",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343824255513464832",
+    "captured_at": "2026-10-02T00:15:48.433858Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:01Z"
+  },
+  "original_text": "Working as an Azure Data Engineer, 🚀| LinkedIn Top Voice|58K+ @LinkedIn| 10M+ Impressions| 300+ Solutions Leetcode| Topmate Top 1%, Driving Data-Driven Solutions for Business Excellence...\n1yr •\n🌟 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 2025-26: The Next Frontier 🌟\nIs your infrastructure ready for the exponential growth in data? As organizations race toward real-time insights and AI-driven decision-making, data engineering must evolve faster than ever.\nThink beyond the pipelines—embrace automation, scalable architectures, and ethical data practices. The future demands engineers who innovate with precision and purpose.\nAre you prepared to shape the data landscape of 2025-26? Let’s discuss. #DataEngineering #FutureOfData #TechInnovation\nDE 2025-26",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343824255513464832_slide_0.jpg",
+      "description": "JPEG image, 465x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional LinkedIn post encouraging discussion about the future of data engineering in 2025-26. It broadly mentions automation, scalable architectures, ethical data practices, real-time insights, and AI-driven decision-making, but provides no technical details, implementation guidance, or evidence.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6fc97a63d98e6a86",
+    "saved_date": "2026-10-01T23:16:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343824255513464832",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343824255513464832_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "98c1ca12d5c86758e81359a42f10fdf6597be7459712dd14d10fe243e51cd86d",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

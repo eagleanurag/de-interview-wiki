@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-saved-ffccf4f7771b97bd",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326889752870170625",
+    "captured_at": "2026-10-02T00:15:53.702076Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:50Z"
+  },
+  "original_text": "Data Analyst | SQL | POWER BI | Actively Seeking opportunities in Data Analytics\n1yr •\n🚀 Diving Deep into Hotel Booking Data with SQL!\nJust wrapped up an exciting project where I explored hotel booking data to uncover customer behaviors, occupancy trends, and booking patterns across India. 📊\n💡 Key Insights:\n✔️ Found the top 5 customers who book the most in their home cities\n✔️ Analyzed how much revenue and bookings come from female customers\n✔️ Identified customers who book hotels in different states\n✔️ Calculated how full each hotel gets each month to understand their performance\nBig thanks to Ankit Bansal for providing this project in the bootcamp – it’s been a fantastic learning experience and a great opportunity to sharpen my SQL skills. 🙏\n💬 Open to any suggestions or improvements on the SQL queries – always looking to learn and grow!\nStay tuned for Part 2, where I’ll be diving even deeper into customer segmentation and advanced analytics. Can’t wait to share more!\n#SQL #DataAnalysis #HotelIndustry #CareerGrowth #LearningJourney #BootcampProject\n…see more\nHotel Booking analysis",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326889752870170625_slide_0.jpg",
+      "description": "PNG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A data analyst summarizes a completed SQL bootcamp project that explored hotel booking data across India to understand customer behavior, occupancy trends, and booking patterns. The reported analyses identified the top five customers by home-city booking frequency, measured revenue and bookings from female customers, identified customers booking hotels in different states, and calculated a monthly fullness measure for each hotel. The post does not provide SQL queries, schemas, formulas, or result figures. Power BI appears only in the profile headline, and customer segmentation is mentioned as a future Part 2 topic without further explanation.",
+    "topics": [
+      "SQL data analysis",
+      "Hotel booking analytics",
+      "Customer behavior analytics",
+      "Revenue contribution analysis",
+      "Hotel occupancy analysis"
+    ],
+    "subtopics": [
+      "Top customers by home-city booking frequency",
+      "Female-customer revenue and booking contribution",
+      "Customers booking hotels across different states",
+      "Monthly hotel fullness and performance"
+    ],
+    "concepts": [
+      "SQL-based hotel booking analysis",
+      "Home-city booking frequency",
+      "Female-customer contribution",
+      "Cross-state booking behavior",
+      "Monthly hotel fullness"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you reproduce the project's result identifying the top five customers by bookings in their home cities?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should rank customers by their booking frequency specifically for bookings in their home cities and retain the five highest results."
+    },
+    {
+      "question": "Which measures should be compared to quantify the contribution of female customers to hotel bookings?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The answer should identify both the revenue and the number of bookings associated with female customers."
+    },
+    {
+      "question": "How would you identify customers whose hotel bookings span multiple states?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should examine the states associated with each customer's hotel bookings and identify customers associated with more than one state."
+    },
+    {
+      "question": "What should a monthly hotel-performance analysis calculate in this project?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should state that a fullness measure is calculated for each hotel in each month, while acknowledging that the post does not provide the exact formula."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Hotel booking analysis with SQL",
+    "secondary_topics": [
+      "Customer behavior analytics",
+      "Revenue contribution analysis",
+      "Hotel occupancy analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ffccf4f7771b97bd",
+    "saved_date": "2026-10-01T23:25:50Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326889752870170625",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326889752870170625_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7326889752870170625_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "cd803c9a62448b6ffef250c259821232c79df8e9240ec6c8f4ef94a8441c26ba",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

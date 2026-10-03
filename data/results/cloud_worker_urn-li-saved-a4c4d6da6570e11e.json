@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-a4c4d6da6570e11e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7311444447941005315",
+    "captured_at": "2026-10-02T00:15:50.229696Z",
+    "author": "Kalyani V",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:52Z"
+  },
+  "original_text": "🚀 Extracting First Non-Empty City Name from Multiple Columns in PySpark\n\n🔍 Problem Statement:\n Given a dataset containing city names distributed across three columns (city1, city2, city3), each row may contain empty strings or null (None) values. The objective is to extract the first non-empty and non-null city name from these columns and create a new column called newdata to store the result.\n💡 Input Data:\ndata= [(\"Goa\",\"\",\"AP\"),(\"\",\"AP\",None),(None,\"\",\"bglr\")]\ncolumn =[\"city1\",\"city2\",\"city3\"]\n\n🔧 Solution:\n✅ Step 1: Create a DataFrame\n``` df1 = spark.createDataFrame(data,column) ```\n\n✅ Step 2: Import necessary functions\n```from pyspark.sql.functions import coalesce, when, trim```\n\n✅ Step 3: Creating the new column by selecting the first non-empty and non-null city\n\n``` from pyspark.sql.functions import *\ndisplay(df1.withColumn(\"newdata\", coalesce(\n when(df1.city1 == \"\", None).otherwise(df1.city1),\n when (df1.city2 == \"\", None).otherwise(df1.city2),\n when(df1.city3 == \"\", None).otherwise(df1.city3)\n \n))) ```\n\n#pyspark #python #databricks #dataEgineer #AzureDatabricks #spark #bigData #dataCleaning#",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7311444447941005315_slide_0.jpg",
+      "description": "JPEG image, 480x527 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post demonstrates a PySpark DataFrame transformation that creates a new column named newdata containing the first non-null, non-empty value from city1, city2, and city3. Empty strings are converted to null with when and otherwise before coalesce selects the first remaining non-null value. For the supplied rows, newdata contains Goa, AP, and bglr. Although trim is imported, it is not used in the displayed transformation.",
+    "topics": [
+      "PySpark DataFrame transformations",
+      "Data cleaning",
+      "Null and empty-string handling"
+    ],
+    "subtopics": [
+      "Creating a DataFrame from tuples",
+      "Creating a column with withColumn",
+      "Selecting the first non-null value with coalesce",
+      "Converting empty strings to null with when and otherwise"
+    ],
+    "concepts": [
+      "PySpark DataFrame",
+      "createDataFrame",
+      "coalesce",
+      "when and otherwise",
+      "Null and empty-string normalization",
+      "withColumn",
+      "Unused trim import"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the shown expression select the value stored in newdata?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The when expressions convert exact empty strings to null while preserving other values.\ncoalesce returns the first non-null result in the order city1, city2, and city3."
+    },
+    {
+      "question": "How would you add a newdata column that selects the first non-empty and non-null city from city1, city2, and city3?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The solution uses withColumn to create newdata.\nEach empty city value is mapped to null with when and otherwise.\ncoalesce evaluates the city columns in their specified order."
+    },
+    {
+      "question": "What values does the transformation produce for the three supplied input rows, and why?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The first row produces Goa because city1 contains a usable value.\nThe second row produces AP because city1 is empty and city2 is non-empty.\nThe third row produces bglr because city1 and city2 contain only null or empty values before city3."
+    },
+    {
+      "question": "Does importing the trim function change the behavior of the displayed transformation?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The displayed expression imports trim but does not invoke it.\nThe transformation only converts values equal to the empty string into null and does not perform trimming."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark data cleaning and DataFrame transformation",
+    "secondary_topics": [
+      "First non-null value selection",
+      "Empty-string normalization",
+      "Column creation",
+      "Databricks"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a4c4d6da6570e11e",
+    "saved_date": "2026-10-01T23:26:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7311444447941005315",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7311444447941005315_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "dc07948a1bd34ee89238bd12bca426e31e6316340fa2b7025ffe73106885d167",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Azure Databricks"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

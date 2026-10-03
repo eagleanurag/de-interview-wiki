@@ -1,0 +1,79 @@
+{
+  "id": "urn-li-saved-41c67feb2185c4a2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347663347707744256",
+    "captured_at": "2026-10-02T00:15:46.987485Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:51Z"
+  },
+  "original_text": "SQL Challenge for the Data Enthusiasts! 💻\nSuppose you are a manager of a data analytics company. You are tasked to build a new team consists of senior and junior data analysts. The total budget for the salaries is 70000. You need to use the below criterion for hiring:\n\n1- Keep hiring the seniors with the smallest salaries until you cannot hire anymore seniors.\n2- Use the remaining budget to hire the juniors with the smallest salaries until you cannot hire anymore juniors.\n\nI solved it using CTE's\n\n#Data engineering ForumDE Arun Kumar\n\n\nPS: found this Question on Namaste SQL by Ankit Bansal",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347663347707744256_slide_0.jpg",
+      "description": "JPEG image, 321x247 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a SQL challenge for forming senior and junior data analyst teams with a total salary budget of 70000. Seniors must be hired in ascending salary order until the next one cannot be afforded, after which juniors are hired in ascending salary order using the remaining budget. The author states that the solution used CTEs, but no SQL query, schema, sample data, or implementation explanation is provided.",
+    "topics": [
+      "SQL",
+      "Common Table Expressions",
+      "budget-constrained hiring"
+    ],
+    "subtopics": [
+      "senior-first hiring",
+      "ascending salary selection",
+      "allocation of remaining budget"
+    ],
+    "concepts": [
+      "Sequential salary-based hiring",
+      "Common Table Expressions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you implement the two-stage hiring selection in SQL using CTEs?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "Senior candidates must be considered first in ascending salary order, with hiring stopping when the remaining budget cannot accommodate another senior.\nJunior candidates must then be considered in ascending salary order using only the budget remaining after senior hiring.\nThe solution must use CTEs, although the source does not prescribe a specific query or schema."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL budget-constrained hiring challenge",
+    "secondary_topics": [
+      "Common Table Expressions",
+      "senior-first hiring",
+      "salary-based candidate selection"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:41c67feb2185c4a2",
+    "saved_date": "2026-10-01T23:12:51Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347663347707744256",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347663347707744256_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "e4d86490d0c1059934d196e3334357db125443518700056c62c8bc01e3695f06",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "id": "urn-li-archive-defb6879b6a4227b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.702775Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:47Z"
+  },
+  "original_text": "\"I thought I knew SQL... until my interviewer asked me these!\"\nSQL interviews can be tricky! Here are some thought-provoking questions that tested my knowledge:\n1️⃣ How do you pivot rows into columns and vice versa in SQL?\n 2️⃣ What is a correlated subquery and how is it different from a regular subquery?\n 3️⃣ How do you rank records within groups in SQL?\n 4️⃣ What is the purpose of the COALESCE function?\n 5️⃣ How do you write a query to get the second most recent record per user?\n 6️⃣ How do you detect and remove duplicate rows from a table?\n 7️⃣ What is the impact of indexing on query performance?\n 8️⃣ How do you optimize a slow-performing SQL query?\n 9️⃣ What are the different types of joins in SQL, and when would you use each?\n 🔟 How would you design a table schema for storing hierarchical data?\n 1️⃣1️⃣ How do you safely update large tables without locking issues?\n 1️⃣2️⃣ What’s the difference between DELETE, TRUNCATE, and DROP?\n 1️⃣3️⃣ How do you write a recursive CTE to navigate parent-child relationships?\n 1️⃣4️⃣ What is the difference between UNION and UNION ALL?\n 1️⃣5️⃣ How do you perform time-based partitioning in a SQL database?\n 1️⃣6️⃣ How do you implement data auditing or change tracking using SQL?\n 1️⃣7️⃣ What is the difference between a materialized view and a regular view?\n 1️⃣8️⃣ How do you calculate running totals in SQL?\n 1️⃣9️⃣ How do you prevent SQL injection attacks in your queries?\n 2️⃣0️⃣ How would you design a transaction-safe update across multiple tables?\nSQL is powerful, but the right questions make you think beyond the basics. Which of these do you find the trickiest? Let’s discuss!\n #SQL #DataEngineering #InterviewQuestions #CareerGrowth #SQLQueries",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied post lists 20 SQL interview questions covering query construction, data transformation, database design, performance, operations, and security. It provides no answers, explanations, examples, or implementation details, and the extracted media text is empty.",
+    "topics": [
+      "SQL",
+      "Data Engineering",
+      "SQL interview preparation",
+      "Query transformation",
+      "Subqueries",
+      "SQL functions",
+      "Ranking and running totals",
+      "Duplicate row handling",
+      "Indexing and query performance",
+      "Joins",
+      "Hierarchical schema design",
+      "Large-table updates and locking",
+      "Database operations",
+      "Recursive CTEs",
+      "Set operations",
+      "Time-based partitioning",
+      "Data auditing and change tracking",
+      "Views",
+      "SQL security",
+      "Transaction-safe updates across multiple tables"
+    ],
+    "subtopics": [
+      "Pivoting rows into columns and vice versa",
+      "Correlated subqueries versus regular subqueries",
+      "Ranking records within groups",
+      "COALESCE purpose",
+      "Selecting the second most recent record per user",
+      "Detecting and removing duplicate rows",
+      "Indexing and query performance",
+      "Optimizing a slow-performing SQL query",
+      "SQL join types and when to use them",
+      "Designing a table schema for hierarchical data",
+      "Updating large tables without locking issues",
+      "DELETE versus TRUNCATE versus DROP",
+      "Recursive CTEs for parent-child relationships",
+      "UNION versus UNION ALL",
+      "Time-based partitioning",
+      "Data auditing and change tracking using SQL",
+      "Materialized views versus regular views",
+      "Calculating running totals",
+      "Preventing SQL injection",
+      "Transaction-safe updates across multiple tables"
+    ],
+    "concepts": [
+      "Pivoting rows into columns and vice versa",
+      "Correlated and regular subqueries",
+      "Ranking records within groups",
+      "COALESCE",
+      "Second-most-recent record per user",
+      "Duplicate row detection and removal",
+      "Indexing and query performance",
+      "SQL join types and use cases",
+      "Table schema design for hierarchical data",
+      "Safe updates of large tables without locking issues",
+      "DELETE, TRUNCATE, and DROP",
+      "Recursive CTE for parent-child relationships",
+      "UNION and UNION ALL",
+      "Time-based partitioning",
+      "Data auditing and change tracking with SQL",
+      "Materialized and regular views",
+      "Running totals",
+      "SQL injection prevention",
+      "Transaction-safe updates across multiple tables"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you pivot rows into columns and vice versa in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to transform rows into columns and columns back into rows in SQL."
+    },
+    {
+      "question": "What is a correlated subquery and how is it different from a regular subquery?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should define a correlated subquery and explain how it differs from a regular subquery."
+    },
+    {
+      "question": "How do you rank records within groups in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to rank records within groups in SQL."
+    },
+    {
+      "question": "What is the purpose of the COALESCE function?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should explain the purpose of the COALESCE function."
+    },
+    {
+      "question": "How do you write a query to get the second most recent record per user?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer should present a SQL query for retrieving the second most recent record for each user."
+    },
+    {
+      "question": "How do you detect and remove duplicate rows from a table?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to detect and remove duplicate rows from a table."
+    },
+    {
+      "question": "What is the impact of indexing on query performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain the impact of indexing on query performance."
+    },
+    {
+      "question": "How do you optimize a slow-performing SQL query?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe an approach to optimizing a slow-performing SQL query."
+    },
+    {
+      "question": "What are the different types of joins in SQL, and when would you use each?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should identify SQL join types and explain when each type should be used."
+    },
+    {
+      "question": "How would you design a table schema for storing hierarchical data?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe a table schema for storing hierarchical data."
+    },
+    {
+      "question": "How do you safely update large tables without locking issues?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe how to update large tables safely without locking issues."
+    },
+    {
+      "question": "What is the difference between DELETE, TRUNCATE, and DROP?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should compare DELETE, TRUNCATE, and DROP."
+    },
+    {
+      "question": "How do you write a recursive CTE to navigate parent-child relationships?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer should show how to write a recursive CTE for navigating parent-child relationships."
+    },
+    {
+      "question": "What is the difference between UNION and UNION ALL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer should explain the difference between UNION and UNION ALL."
+    },
+    {
+      "question": "How do you perform time-based partitioning in a SQL database?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should explain how to perform time-based partitioning in a SQL database."
+    },
+    {
+      "question": "How do you implement data auditing or change tracking using SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should describe how to implement data auditing or change tracking using SQL."
+    },
+    {
+      "question": "What is the difference between a materialized view and a regular view?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain the distinction between a materialized view and a regular view."
+    },
+    {
+      "question": "How do you calculate running totals in SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to calculate running totals in SQL."
+    },
+    {
+      "question": "How do you prevent SQL injection attacks in your queries?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer should explain how to prevent SQL injection attacks in queries."
+    },
+    {
+      "question": "How would you design a transaction-safe update across multiple tables?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer should describe how to design a transaction-safe update across multiple tables."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "SQL interview questions",
+      "Query transformation, ranking, and running totals",
+      "Subqueries and set operations",
+      "Duplicate row handling",
+      "Indexing and slow-query optimization",
+      "Joins",
+      "Hierarchical schema design",
+      "Large-table updates, locking, and transaction safety",
+      "Time-based partitioning",
+      "Data auditing and change tracking",
+      "Views",
+      "SQL injection prevention"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:defb6879b6a4227b",
+    "saved_date": "2026-10-01T23:30:47Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "99dd97827ef6e2a1d8194ab214fd02fdcac02cd172d214f1c0941aedfa72b206",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Slow-query optimization"
+      ],
+      "concepts": [
+        "Slow-performing query optimization"
+      ],
+      "questions": []
+    }
+  }
+}

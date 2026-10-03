@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-saved-2a383564462d84ae",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7329760385434025984",
+    "captured_at": "2026-10-02T00:15:46.000587Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:32Z"
+  },
+  "original_text": "#Pyspark #Sql #AzureDataEngineer #InterviewQuestions \n#PalTech : Write a Pyspark and SQL code to count the number of certificates to be paid from a Certificates table, where each candidate (Name) can have at most two active certificates at any time. A certificate is active from DateofCertification to DateOfExpiry (inclusive of start month, exclusive of end month). If a third certificate is active concurrently, it is not paid.\n\nTable has schema like:\n CertificateId int,\n Name string, \n DateofCertification string, \n DateOfExpiry string\n\nDate like:\nINSERT INTO Certificates (CertificateId, Name, DateofCertification, DateOfExpiry) VALUES\n(1, 'a', 'Nov 2024', 'Mar 2025'), -- Active Nov - Mar 2024\n(2, 'a', 'Dec 2024', 'Feb 2025'), -- Active Dec 2024\n(3, 'a', 'Jan 2025', 'Mar 2025'), -- Inactive\n(3, 'a', 'Feb 2025', 'Mar 2025'), -- Inactive\n(4, 'a', 'Apr 2025', 'May 2025'), -- Active Apr 2025\n(5, 'b', 'May 2024', 'Dec 2024'), -- Active May-Dec 2024\n(6, 'b', 'Oct 2024', 'Feb 2025'), -- Active Oct2024 - Feb 2025\n(7, 'b', 'Nov 2024', 'Mar 2025'), -- Inactive\n(8, 'c', 'Jan 2024', 'Apr 2024'), -- Active Jan-Apr 2024\n(9, 'c', 'Mar 2024', 'Jun 2024'); -- Active Mar-Jun 2024\n\nwill be posting both the solutions in comments.\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7329760385434025984_slide_0.jpg",
+      "description": "JPEG image, 480x218 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "An incomplete interview prompt asks for PySpark and SQL code to count paid certificates per candidate when each candidate may have at most two concurrently active certificates. A certificate is active from its certification month inclusively to its expiry month exclusively. The post provides a schema and sample records, but it does not include the promised solutions, specify which certificates to pay when more than two overlap, or explain why CertificateId 3 appears twice. One comment also appears inconsistent with the stored dates by describing certificate 1 as ending in Mar 2024 rather than Mar 2025.",
+    "topics": [
+      "PySpark",
+      "SQL",
+      "Certificate payment eligibility",
+      "Concurrent date intervals"
+    ],
+    "subtopics": [
+      "Candidate-level certificate counting",
+      "Start-inclusive and end-exclusive date ranges",
+      "Concurrent active-certificate limits",
+      "Ambiguous selection when more than two certificates overlap",
+      "Duplicate certificate identifiers"
+    ],
+    "concepts": [
+      "Certificate Active Interval",
+      "Concurrent Certificates",
+      "Two-Certificate Payment Limit",
+      "Candidate-Level Evaluation",
+      "Month-Year String Fields",
+      "Missing Overlap Tie-Breaker",
+      "Duplicate Certificate Identifier"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write PySpark and SQL logic to count the certificates that should be paid for each candidate under the two-active-certificate limit?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The logic treats DateofCertification as inclusive and DateOfExpiry as exclusive.\nThe logic evaluates overlapping certificates separately for each candidate name.\nThe logic handles the month-year values stored as strings consistently.\nThe answer recognizes that the post does not define which certificates to select when more than two overlap."
+    },
+    {
+      "question": "Under the stated date rule, when are two certificates for the same candidate considered concurrent?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A certificate is active in its certification month but not in its expiry month.\nTwo certificates for the same candidate are concurrent when their half-open active intervals overlap.\nFor example, the January-to-April and March-to-June intervals for candidate c overlap during March."
+    },
+    {
+      "question": "What ambiguities in the supplied statement must be resolved before claiming that the paid-certificate result is uniquely correct?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "No rule identifies which two certificates to pay when a candidate has more than two active certificates.\nCertificateId 3 is repeated without an explanation of whether the rows are distinct certificates or duplicate data.\nThe comment for certificate 1 gives Mar 2024 as its end, while its DateOfExpiry value is Mar 2025."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Implementing certificate payment eligibility with PySpark and SQL",
+    "secondary_topics": [
+      "Half-open date intervals",
+      "Candidate-level aggregation",
+      "Concurrent-record processing",
+      "Input-data ambiguity"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2a383564462d84ae",
+    "saved_date": "2026-10-01T23:22:32Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7329760385434025984",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7329760385434025984_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c456b7032c8c14e35007d8f4c6e1d46553c2b67d949b01f5f22db0078875ab28",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-28a231de9ddd2e09",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343314200565280768",
+    "captured_at": "2026-10-02T00:15:45.905028Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:58Z"
+  },
+  "original_text": "6 Data Structures to Save Storage\n\n1 - Bloom Filter\nA probabilistic data structure used to test whether an element is a member of a set.\n\n2 - HyperLogLog\nAn algorithm that approximates the number of unique elements in a multi-set using minimal memory.\n\n3 - Cuckoo Filter\nA space-efficient alternative to Bloom filters that supports deletion and has better lookup performance.\n\n4 - Minhash\nA technique for quickly estimating the similarity between large sets using compressed hash signatures.\n\n5 - SkipList\nA layered linked list structure that allows fast search, insert, and delete operations.\n\n6 - Count-Min Sketch\nA probabilistic data structure that approximates the frequency of items in a large data stream\n\nOver to you: Which other data structure will you add to the list?\n\n– \nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n\n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343314200565280768_slide_0.jpg",
+      "description": "GIF image, 480x563 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post lists six data structures and algorithms for storage-efficient or approximate processing: Bloom Filter, HyperLogLog, Cuckoo Filter, Minhash, SkipList, and Count-Min Sketch. It briefly describes their purposes and concludes by asking readers to suggest another data structure.",
+    "topics": [
+      "Data structures",
+      "Probabilistic data structures",
+      "Approximate algorithms",
+      "Storage-efficient computation"
+    ],
+    "subtopics": [
+      "Set membership testing",
+      "Unique element counting",
+      "Space-efficient filtering",
+      "Set similarity estimation",
+      "Layered linked-list structures",
+      "Data stream frequency estimation"
+    ],
+    "concepts": [
+      "Bloom Filter",
+      "HyperLogLog",
+      "Cuckoo Filter",
+      "Minhash",
+      "SkipList",
+      "Count-Min Sketch"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do Bloom filters and cuckoo filters differ according to the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A Bloom filter is a probabilistic structure for testing whether an element belongs to a set.\nA cuckoo filter is presented as a space-efficient Bloom filter alternative that supports deletion and has better lookup performance."
+    },
+    {
+      "question": "Which structure or algorithm can approximate the number of unique elements in a multiset with minimal memory, and what problem does it solve?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "HyperLogLog performs the estimation.\nIt approximates the number of unique elements in a multiset while using minimal memory."
+    },
+    {
+      "question": "How do Minhash and Count-Min Sketch serve different estimation purposes?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Minhash estimates similarity between large sets using compressed hash signatures.\nCount-Min Sketch approximates the frequencies of items in a large data stream."
+    },
+    {
+      "question": "What operations does a SkipList support, and why is its layered structure useful?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A SkipList supports search, insertion, and deletion.\nIt is a layered linked-list structure designed to perform those operations quickly."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Storage-efficient and approximate data structures",
+    "secondary_topics": [
+      "Set membership testing",
+      "Distinct element counting",
+      "Set similarity estimation",
+      "Data stream frequency estimation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:28a231de9ddd2e09",
+    "saved_date": "2026-10-01T23:15:58Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343314200565280768",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343314200565280768_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7343314200565280768_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "689368ae721ac294d87a276f5d1470a12c57a278e63c022b062dfd5fc0bf8fd8",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

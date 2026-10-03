@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-5b4144722ba71111",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7429013274874023936",
+    "captured_at": "2026-10-02T00:15:47.896328Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:49Z"
+  },
+  "original_text": "🔍 #Partitioning vs #Bucketing vs #Clustering – Explained Clearly\nUnderstanding the difference between Partitioning, Bucketing, and Clustering is very important for optimizing performance in Big Data systems like Spark, Hive, and BigQuery.\n✅ Partitioning\nData is divided based on column values (e.g., date, region).\nReduces data scan\nSaves cost\nImproves query performance\n👉 Best for filtering large datasets\n✅ Bucketing\nData is split into a fixed number of files using a hash function.\nFaster joins\nLess shuffle\nEfficient large-table joins\n👉 Useful in Spark & Hive environments\n✅ Clustering\nData is sorted within partitions based on selected columns.\nFaster filtering\nReduced block scanning\nOptimized storage\n👉 Powerful in BigQuery for query optimization\n💡 Key Takeaway:\nUse Partitioning for filtering.\nUse Bucketing for better joins.\nUse Clustering for faster scans inside partitions.\n\n#BigData #DataEngineering #Spark #Hive #BigQuery #Partitioning #Bucketing #Clustering #GCP\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7429013274874023936_slide_0.jpg",
+      "description": "JPEG image, 480x325 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post gives a concise, high-level comparison of partitioning, bucketing, and clustering in big-data systems. It presents partitioning as column-value-based filtering, bucketing as hash-based splitting that reduces shuffle and improves joins, and clustering as sorting within partitions to improve filtering and block scanning. The supplied content appears truncated after the key takeaway and does not include implementation details.",
+    "topics": [
+      "Big Data performance optimization",
+      "Partitioning",
+      "Bucketing",
+      "Clustering"
+    ],
+    "subtopics": [
+      "Filter-based data pruning",
+      "Hash-based data distribution",
+      "Join and shuffle optimization",
+      "Sorting within partitions",
+      "Block scanning",
+      "Storage optimization"
+    ],
+    "concepts": [
+      "Partitioning",
+      "Bucketing",
+      "Clustering",
+      "Optimization strategy selection"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do partitioning, bucketing, and clustering organize data differently?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Partitioning divides data by column values, bucketing uses a hash function to produce a fixed number of files, and clustering sorts data within partitions by selected columns."
+    },
+    {
+      "question": "Which optimization would the post recommend for filtering a large dataset, and why?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "Partitioning is recommended because dividing data by values such as date or region can reduce scanned data and improve filtering performance."
+    },
+    {
+      "question": "When would bucketing be a more suitable optimization than partitioning in a Spark or Hive workload?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Bucketing is presented as the better choice when the main goal is to improve large-table joins, reduce shuffle, or make joins more efficient."
+    },
+    {
+      "question": "How does clustering support query optimization in BigQuery?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Clustering sorts data within partitions by selected columns, which the post associates with faster filtering, reduced block scanning, and optimized storage."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Big Data performance optimization",
+    "secondary_topics": [
+      "Partitioning",
+      "Bucketing",
+      "Clustering",
+      "Query optimization",
+      "Join optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:5b4144722ba71111",
+    "saved_date": "2026-10-01T23:08:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7429013274874023936",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7429013274874023936_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "556d5110415063462d57ff0db5c09f1c7ece0d46264a3d64b847dd2826d8a354",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

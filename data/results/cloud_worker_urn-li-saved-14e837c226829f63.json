@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-14e837c226829f63",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340234194553327619",
+    "captured_at": "2026-10-02T00:15:44.940979Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:08Z"
+  },
+  "original_text": "• 1st\nSenior Data Engineer at Epsilon\n1yr •\n⤵️ Myntra Data Engineer Interview Questions💻.\n1️⃣ Python + PySpark Coding –\n🔹 Efficiently reading large CSVs using spark.read options\n🔹 Dealing with missing data using fillna, dropna, na.replace\n🔹 Using Python decorators in UDFs (User Defined Functions) – with examples!\n2️⃣ Key Spark Performance Optimization Strategies.\n3️⃣ Real-time Product Recommendation Pipeline Architecture.\n📘 Whether you're actively interviewing or brushing up on your concepts, this will give you a realistic view of the technical depth expected at top-tier firms like Myntra.\n🔁 Feel free to like, save, or share this post with anyone preparing for a Data Engineering role.\n💬 Grab the PDF and start learning.\n#DataEngineering #Myntra #InterviewPreparation #SQL #Python\n#BigData #ApacheSpark #DataWarehouse #LinkedInLearning #TechCareers #JobSearch #PythonTips\n…see more\nmyntra",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340234194553327619_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional Myntra Data Engineer interview-preparation post lists several technical subjects: reading large CSV files with Spark read options, handling missing data with fillna, dropna, and na.replace, using Python decorators in UDFs, Spark performance optimization, and real-time product recommendation pipeline architecture. It is only a topic list and provides no code, named read options, optimization strategies, decorator examples, or architecture components.",
+    "topics": [
+      "Apache Spark",
+      "PySpark",
+      "Python",
+      "Large CSV ingestion",
+      "Missing-data handling",
+      "User Defined Functions",
+      "Spark performance optimization",
+      "Real-time recommendation pipelines"
+    ],
+    "subtopics": [
+      "spark.read options",
+      "fillna",
+      "dropna",
+      "na.replace",
+      "Python decorators in UDFs",
+      "Real-time product recommendation pipeline architecture"
+    ],
+    "concepts": [
+      "Reading large CSV files with spark.read options",
+      "Missing-data handling",
+      "Python decorators in UDFs",
+      "Spark performance optimization",
+      "Real-time product recommendation pipeline architecture"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which PySpark feature does the post identify for efficiently reading large CSV files?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies spark.read options as the relevant feature, although it does not name any specific options or provide code."
+    },
+    {
+      "question": "Which functions does the post explicitly identify for handling missing data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post names fillna, dropna, and na.replace."
+    },
+    {
+      "question": "What does the post state about using Python decorators in Spark UDFs?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post lists using Python decorators in UDFs and refers to examples, but it does not include an implementation or explain the decorator usage."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark",
+    "secondary_topics": [
+      "PySpark programming",
+      "Large CSV ingestion",
+      "Missing-data handling",
+      "Python decorators in UDFs",
+      "Spark performance optimization",
+      "Real-time recommendation pipeline architecture"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:14e837c226829f63",
+    "saved_date": "2026-10-01T23:19:08Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340234194553327619",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340234194553327619_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b03232c0b3396a16fce95d73613a85dbdf92db2f8ccc166d9123b8a6a13ca013",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

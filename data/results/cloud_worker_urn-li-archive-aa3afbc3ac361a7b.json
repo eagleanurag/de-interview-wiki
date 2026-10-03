@@ -1,0 +1,137 @@
+{
+  "id": "urn-li-archive-aa3afbc3ac361a7b",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.122823Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:58Z"
+  },
+  "original_text": "My friend switched from SDE to Data Engineering and got placed at 20+ LPA.\n\nHere is the roadmap I told him to follow:\n\n𝗪𝗲𝗲𝗸 𝟭: 𝗦𝗤𝗟\n- Basic SQL Syntax\n- DDL, DML, DCL\n- Joins & Subqueries\n- Views & Indexes\n- CTEs & Window Functions\n\n𝗪𝗲𝗲𝗸 𝟮: 𝗣𝘆𝘁𝗵𝗼𝗻\n- Fundamentals\n- Numpy\n- Pandas\n\n𝗪𝗲𝗲𝗸 𝟯-𝟰: 𝗣𝘆𝘀𝗽𝗮𝗿𝗸\n- RDD's\n- Dataframes\n- Datasets\n- Spark Streaming\n- Optimization Techniques\n\n𝗪𝗲𝗲𝗸 𝟱: 𝗗𝗮𝘁𝗮 𝗪𝗮𝗿𝗲𝗵𝗼𝘀𝘂𝗶𝗻𝗴 & 𝗠𝗼𝗱𝗲𝗹𝗹𝗶𝗻𝗴\n- OLAP vs OLTP\n- Star & Snowflake Schema\n- Fact & Dimension Tables\n- Slowly Changing Dimensions (SCD)\n\n𝗪𝗲𝗲𝗸 𝟲: 𝗖𝗜/𝗖𝗗 𝗣𝗶𝗽𝗲𝗹𝗶𝗻𝗲𝘀\n- Merging and Pull Requests\n- Git Hooks\n- Pipeline Configuration\n- Infrastructure as Code\n\n𝗪𝗲𝗲𝗸 𝟳-𝟴: 𝗖𝗹𝗼𝘂𝗱 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀\n- NoSQL DB\n- Relational DB\n- Data Warehousing\n- Scheduling & Orchestration\n- Messaging\n- ETL Services\n- Storage Services\n- Data Processing Services\n\nFree resources to learn these skills.\n\nAzure Data Engineer Roadmap - https://lnkd.in/dCyr4aph\nSQL - https://lnkd.in/gJXw4XtK\nPython - https://lnkd.in/dt_-2-Uj\nPyspark - https://lnkd.in/gV_5EFtE\nAirflow - https://lnkd.in/guebuHJ7\nKafka - https://lnkd.in/gVZUT52s\nData Modeling - https://lnkd.in/gg6V98Ru\nAzure Cloud - https://lnkd.in/gwc3By9h\nGoogle Cloud - https://lnkd.in/gNwpp2RT\nAWS - https://lnkd.in/gJeUGfjS\nMock Interviews - https://lnkd.in/gV_5EFtE\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post opens with an anecdotal claim that a friend switched from SDE to Data Engineering and was placed at 20+ LPA. It then presents an eight-week learning roadmap: Week 1 covers SQL, Week 2 covers Python fundamentals, NumPy, and Pandas, Weeks 3-4 cover PySpark topics, and later weeks cover data warehousing, data modeling, CI/CD pipeline practices, and broad cloud-service categories. A separate resource list includes links labeled SQL, Python, PySpark, Airflow, Kafka, Data Modeling, Azure Cloud, Google Cloud, AWS, and Mock Interviews. The post names subjects but does not explain or compare them, and it ends with a truncated \"...see more\" marker with no extracted media text.",
+    "topics": [
+      "Data Engineering Learning Roadmap",
+      "SQL",
+      "Python",
+      "PySpark",
+      "Data Warehousing and Modeling",
+      "Cloud Data Services",
+      "Data Engineering Learning Resources"
+    ],
+    "subtopics": [
+      "SQL syntax, DDL, DML, and DCL",
+      "Joins and subqueries",
+      "Views and indexes",
+      "CTEs and window functions",
+      "Python fundamentals",
+      "NumPy and Pandas",
+      "RDDs, DataFrames, and Datasets",
+      "Spark Streaming and optimization techniques",
+      "OLAP and OLTP",
+      "Star and Snowflake schemas",
+      "Fact and dimension tables",
+      "Slowly Changing Dimensions",
+      "Merging, pull requests, and Git hooks",
+      "Pipeline configuration and Infrastructure as Code",
+      "NoSQL and relational databases",
+      "Scheduling and orchestration",
+      "Messaging",
+      "ETL, storage, and data processing services",
+      "Airflow and Kafka learning links",
+      "Azure Cloud, Google Cloud, and AWS learning links"
+    ],
+    "concepts": [
+      "SQL",
+      "Python",
+      "NumPy",
+      "Pandas",
+      "PySpark",
+      "RDDs",
+      "DataFrames",
+      "Datasets",
+      "Spark Streaming",
+      "Optimization Techniques",
+      "OLAP and OLTP",
+      "Star Schema and Snowflake Schema",
+      "Fact and Dimension Tables",
+      "Slowly Changing Dimensions",
+      "Merging, Pull Requests, and Git Hooks",
+      "Pipeline Configuration",
+      "Infrastructure as Code",
+      "NoSQL and Relational Databases",
+      "Data Warehousing",
+      "Scheduling and Orchestration",
+      "Messaging",
+      "ETL, Storage, and Data Processing Services",
+      "Airflow",
+      "Kafka",
+      "Azure Data Engineer Roadmap",
+      "Azure Cloud",
+      "Google Cloud",
+      "AWS"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL capabilities are prioritized in Week 1 of the roadmap?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A complete answer lists basic SQL syntax, DDL, DML, DCL, joins, subqueries, views, indexes, CTEs, and window functions."
+    },
+    {
+      "question": "Which Python and PySpark topics are assigned to Weeks 2 through 4?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A complete answer identifies Python fundamentals, NumPy, and Pandas in Week 2, followed by RDDs, DataFrames, Datasets, Spark Streaming, and optimization techniques in Weeks 3-4."
+    },
+    {
+      "question": "Which data warehousing and modeling subjects are explicitly included in the roadmap?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A complete answer includes OLAP versus OLTP, star and Snowflake schemas, fact and dimension tables, and Slowly Changing Dimensions."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Learning Roadmap",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "PySpark",
+      "Data Warehousing and Modeling",
+      "CI/CD Pipelines",
+      "Cloud Services",
+      "Data Engineering Learning Resources"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:aa3afbc3ac361a7b",
+    "saved_date": "2026-10-01T23:24:58Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "77e0214dc5f360328c8a5ef2dc2b94e7d524691a2e37ad48ab7ab413724c8179",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "CI/CD Pipelines"
+      ],
+      "concepts": [],
+      "questions": [
+        "What CI/CD pipeline practices and broad cloud-service categories are included in Weeks 6 through 8?"
+      ]
+    }
+  }
+}

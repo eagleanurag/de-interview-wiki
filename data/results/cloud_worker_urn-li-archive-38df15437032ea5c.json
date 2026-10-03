@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-archive-38df15437032ea5c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.509619Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:36Z"
+  },
+  "original_text": "SQL Interview question: \n\n15. Find customers who placed more than 2 orders within any 3-day window.\n\nSELECT DISTINCT o1.customer\nFROM orders o1\nJOIN orders o2 ON o1.customer = o2.customer \n AND o2.order_date BETWEEN o1.order_date AND DATE_ADD(o1.order_date, INTERVAL 2 DAY)\nGROUP BY o1.customer, o1.order_date\nHAVING COUNT(DISTINCT o2.order_id) > 2;\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied SQL interview excerpt asks for customers who placed more than two orders within a three-day window. It uses a self-join on customer and order date, counts distinct matching order IDs, filters grouped results with HAVING, and returns distinct customers. The excerpt ends with an ellipsis, so no additional explanation is provided.",
+    "topics": [
+      "SQL",
+      "Customer order analysis",
+      "Three-day order windows"
+    ],
+    "subtopics": [
+      "Self-joins",
+      "Date-range filtering",
+      "Grouped aggregation",
+      "Distinct counting",
+      "Result de-duplication"
+    ],
+    "concepts": [
+      "Orders table self-join",
+      "Three-day date window",
+      "Grouped order counts",
+      "Distinct order counting",
+      "HAVING threshold",
+      "Distinct customer output"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the provided query find customers with more than two orders in a three-day window?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query aliases the orders table as o1 and o2 and joins rows belonging to the same customer.\nIt limits o2.order_date to the range from o1.order_date through two days after that date.\nIt groups by customer and anchor order date, counts distinct matching order IDs, and keeps groups whose count is greater than two.\nIt selects each qualifying customer once with SELECT DISTINCT."
+    },
+    {
+      "question": "What parts of the join condition restrict o2 to the same customer and the intended date window?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The equality predicate o1.customer = o2.customer requires both orders to belong to the same customer.\nThe BETWEEN predicate requires o2.order_date to be at or after o1.order_date and no later than the date produced by DATE_ADD(o1.order_date, INTERVAL 2 DAY)."
+    },
+    {
+      "question": "Why does the query use COUNT(DISTINCT o2.order_id), HAVING, and SELECT DISTINCT?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "COUNT(DISTINCT o2.order_id) measures the number of unique matching orders in each customer-and-date group.\nHAVING filters the grouped results to groups containing more than two matching orders.\nSELECT DISTINCT prevents a qualifying customer from appearing multiple times when more than one anchor order date produces a qualifying group."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "Three-day order-window detection",
+    "secondary_topics": [
+      "Self-joins",
+      "Date arithmetic",
+      "Aggregation and filtering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:38df15437032ea5c",
+    "saved_date": "2026-10-01T23:23:36Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "bd3f077d1d6b6b1c5d49af5d76361139ab8c197aff876d967ce754526d9c19f6",
+    "enricher_version": "3"
+  }
+}

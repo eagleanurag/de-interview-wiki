@@ -1,0 +1,159 @@
+{
+  "id": "urn-li-saved-bb21360f76bc3412",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7457995150087299072",
+    "captured_at": "2026-10-02T00:15:51.007388Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:10Z"
+  },
+  "original_text": "🚀 Deloitte Data Engineer Interview Questions That Can Actually Help You Crack the Role\nA lot of people prepare for Data Engineer interviews by only focusing on coding.\nBut companies like Deloitte usually test something bigger:\n👉 Problem-solving\n👉 Real-world data scenarios\n👉 Cloud understanding\n👉 SQL optimization\n👉 Communication skills\nHere are some questions candidates are commonly asked in Deloitte Data Engineer interviews 👇\n🔹 Difference between ETL and ELT?\n🔹 How would you optimize a slow SQL query?\n🔹 Explain partitioning vs indexing.\n🔹 What challenges have you faced in data pipelines?\n🔹 Difference between Star Schema and Snowflake Schema?\n🔹 How does Spark handle big data processing?\n🔹 Explain joins with real-time examples.\n🔹 How would you design a scalable data pipeline?\n🔹 What happens when pipeline execution fails?\n🔹 Experience with Azure/AWS/GCP services?\nOne thing I’ve noticed:\nInterviewers care less about textbook definitions and more about how you THINK while solving problems.\nIf you’re preparing for Data Engineer roles in 2026:\n✅ Focus on SQL deeply\n✅ Practice scenario-based questions\n✅ Learn cloud + Spark fundamentals\n✅ Build at least 2 real-world projects\nThe competition is growing fast, but so are the opportunities.\nConsistency > Motivation.\n🔥 Preparation Resources \nTrusted by 2000+ Students who cracked MNCs like TCS, EY, Capgemini, Infosys, Deloitte etc.\n📘 Data Engineer Mega Interview Pack 2026 – 1300+ Real-Time Scenario Q&As\n(Azure | ADF | Databricks | Delta Lake | PySpark | SQL | Data Warehouse)\n👉 https://lnkd.in/g-p7SCEP\n📘 Top 100 Real Data Engineer Interview Q&A (2026) | 0–4 Years\n👉 https://lnkd.in/gJkhdWFE\n📘 100 Real Data Engineer Interview Q&A (2026) | 4–8 Years\n👉 https://lnkd.in/g7qW_sHM\n📘 600+ Real Data Engineer Interview Q&A (Top Companies)\n(EY, Infosys, TCS, Dell, Wipro & more)\n👉 https://lnkd.in/gfP68fVu\nWhat’s the toughest Data Engineering interview question you’ve faced recently? 👇\n#DataEngineer #Deloitte #SQL #BigData #Azure #AWS #Spark #DataEngineering #TechJobs #InterviewPreparation #ETL #CareerGrowth #LinkedInIndia",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7457995150087299072_slide_0.jpg",
+      "description": "JPEG image, 480x678 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional Data Engineer interview-preparation post rather than a technical explainer. It claims that Deloitte interviews emphasize problem-solving, real-world data scenarios, cloud understanding, SQL optimization, and communication. The post lists common questions about ETL and ELT, slow SQL queries, partitioning and indexing, pipeline challenges, Star Schema and Snowflake Schema, Spark, joins, scalable pipeline design, pipeline failures, and Azure, AWS, or GCP experience. It does not provide answers or technical details for these questions. It recommends deep SQL practice, scenario-based preparation, cloud and Spark fundamentals, and building at least two real-world projects, then advertises several interview-preparation resources.",
+    "topics": [
+      "Data Engineer Interview Preparation",
+      "ETL and ELT",
+      "Partitioning and Indexing",
+      "Data Warehouse Schema Modeling",
+      "Big Data Processing with Spark",
+      "Data Pipeline Design and Reliability",
+      "Cloud Data Engineering Platforms",
+      "Problem-Solving and Communication"
+    ],
+    "subtopics": [
+      "Difference between ETL and ELT",
+      "Optimizing slow SQL queries",
+      "Partitioning versus indexing",
+      "Star Schema versus Snowflake Schema",
+      "Data pipeline challenges",
+      "Behavior during pipeline execution failures",
+      "Designing a scalable data pipeline",
+      "SQL joins with real-time examples",
+      "Azure, AWS, and GCP service experience"
+    ],
+    "concepts": [
+      "ETL and ELT",
+      "Partitioning and Indexing",
+      "Star Schema and Snowflake Schema",
+      "Spark Big Data Processing",
+      "Data Pipeline Scalability",
+      "Data Pipeline Failures",
+      "SQL Joins",
+      "Cloud Data Engineering Services",
+      "Interview Problem-Solving"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between ETL and ELT?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer clearly distinguishes ETL from ELT rather than only reciting labels."
+    },
+    {
+      "question": "How would you optimize a slow SQL query?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer presents a practical approach to improving the performance of a slow SQL query.\nThe answer explains the reasoning behind the proposed optimization."
+    },
+    {
+      "question": "What is the difference between partitioning and indexing?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer clearly explains both partitioning and indexing and states how they differ."
+    },
+    {
+      "question": "What challenges have you faced in data pipelines?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer describes a specific data pipeline challenge.\nThe answer explains how the candidate approached and resolved the challenge."
+    },
+    {
+      "question": "What is the difference between Star Schema and Snowflake Schema?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer provides a direct comparison of Star Schema and Snowflake Schema."
+    },
+    {
+      "question": "How does Spark handle big-data processing?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains how Spark processes big data.\nThe answer demonstrates understanding of Spark fundamentals rather than only naming the technology."
+    },
+    {
+      "question": "Explain joins with real-time examples.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer explains joins clearly.\nThe answer uses real-time examples to demonstrate how joins apply in practice."
+    },
+    {
+      "question": "How would you design a scalable data pipeline?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer describes a complete data pipeline design and explains how its design supports scalability."
+    },
+    {
+      "question": "What happens when data pipeline execution fails?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer explains the consequences of pipeline execution failure.\nThe answer clearly describes how the failed execution should be handled."
+    },
+    {
+      "question": "What experience do you have with services from Azure, AWS, or GCP?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer provides relevant experience with at least one of Azure, AWS, or GCP.\nThe answer explains the candidate's role in the cloud-related work rather than only listing platforms."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineer Interview Preparation",
+    "secondary_topics": [
+      "SQL",
+      "ETL and ELT",
+      "Data Warehouse Schema Modeling",
+      "Apache Spark",
+      "Data Pipeline Architecture",
+      "Cloud Platforms",
+      "Problem-Solving and Communication"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:bb21360f76bc3412",
+    "saved_date": "2026-10-01T23:08:10Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7457995150087299072",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7457995150087299072_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7457995150087299072_slide_0.jpg is listed more than once in this record and was counted once; the archive marked this as multi-slide but supplied 1 distinct file(s), so the remaining slides were not collected; the archive counted 2 media item(s) and 1 were usable",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "684a13f81a9decedb0b2da1b0b1845d4e56292e25f3fbdaf07c14b25f1d7ce3f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "SQL Query Optimization"
+      ],
+      "concepts": [
+        "SQL Query Optimization"
+      ],
+      "questions": []
+    }
+  }
+}

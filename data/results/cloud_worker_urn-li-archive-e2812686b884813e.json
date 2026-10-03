@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-archive-e2812686b884813e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.810884Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:53Z"
+  },
+  "original_text": "Interviewer:\n\"You have a Spark job writing 200GB of Parquet data daily to S3. After 3 months, queries become painfully slow. Nothing in the code changed. What happened?\"\n\nCandidate:\n\"This sounds like the Small Files Problem.\"\n\nInterviewer:\n\"Explain.\"\n\nCandidate:\n\"If the job writes too many small Parquet files, over time we end up with millions of tiny files in S3.\n\nEach file adds:\nMetadata overhead\nTask scheduling overhead\nFile open/close costing\nS3 listing latency\nInstead of processing data, Spark spends time managing files.\"\n\nInterviewer:\n\"How would you fix it?\"\n\nCandidate:\n\"I’d focus on file size optimization:\n\n• Tune spark.sql.shuffle.partitions\n• Use repartition() or coalesce() carefully before writes\n• Target optimal file sizes (128MB–1GB depending on workload)\n• Enable optimized writes (Delta Lake)\n• Run periodic compaction jobs\n\nThe goal isn’t fewer partitions — it’s properly sized files.\"\n\nInterviewer:\n\"What if reducing partitions causes executor OOM?\"\n\nCandidate:\n\"Then we balance compute and storage. Instead of forcing large partitions, we rely on controlled compaction and adaptive execution.\"\n\nInterviewer:\n\"What’s the real lesson?\"\n\nCandidate:\n\"In Big Data, performance problems are often storage layout problems — not compute problems.\"\n\nInterviewer:\n\"You are hired.\"\n\n\n\n\n#data #analytics #bigdata #datamining #cloudcomputing #ai #datascience #python #sql #dataenginnering #spark #interview \n\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents an interview scenario in which a Spark job writes 200GB of Parquet data daily to S3, and queries become painfully slow after three months without a code change. It identifies the Small Files Problem: too many small Parquet files can produce millions of tiny files in S3, adding metadata, task scheduling, file open/close, and S3 listing overhead. Recommended remedies include tuning spark.sql.shuffle.partitions, using repartition() or coalesce() carefully before writes, targeting file sizes of 128MB–1GB depending on the workload, enabling optimized writes with Delta Lake, and running periodic compaction jobs. If reducing partitions causes executor OOM, the post recommends balancing compute and storage through controlled compaction and adaptive execution rather than forcing large partitions. Its central lesson is that Big Data performance problems are often storage-layout problems rather than compute problems.",
+    "topics": [
+      "Spark",
+      "Small Files Problem",
+      "Parquet",
+      "S3",
+      "Delta Lake",
+      "Big Data performance"
+    ],
+    "subtopics": [
+      "File size optimization",
+      "Partition tuning",
+      "S3 file-management overhead",
+      "Controlled compaction",
+      "Adaptive execution",
+      "Storage layout"
+    ],
+    "concepts": [
+      "Small Files Problem",
+      "Small-file overheads",
+      "File size optimization",
+      "Partition tuning",
+      "repartition() and coalesce()",
+      "Delta Lake optimized writes",
+      "Periodic compaction",
+      "Adaptive execution",
+      "Storage layout versus compute"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A Spark job writes 200GB of Parquet data daily to S3, and queries become painfully slow after three months without a code change. What problem does the post diagnose, and which overheads contribute to the slowdown?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The post diagnoses the Small Files Problem, with millions of tiny Parquet files accumulating in S3.\nThe slowdown is attributed to metadata overhead, task scheduling overhead, file open/close costs, and S3 listing latency."
+    },
+    {
+      "question": "What file-size optimization approach does the post recommend for this Spark-to-S3 workload?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Tune spark.sql.shuffle.partitions.\nUse repartition() or coalesce() carefully before writes.\nTarget file sizes of 128MB–1GB depending on the workload.\nEnable optimized writes using Delta Lake.\nRun periodic compaction jobs.\nThe goal is properly sized files, not simply fewer partitions."
+    },
+    {
+      "question": "If reducing partitions causes an executor OOM, what response does the post recommend?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Balance compute and storage instead of forcing large partitions.\nRely on controlled compaction and adaptive execution."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Small Files Problem in Spark",
+    "secondary_topics": [
+      "Parquet file sizing",
+      "S3 file-management overhead",
+      "Partition tuning",
+      "Delta Lake optimized writes",
+      "Controlled compaction and adaptive execution"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e2812686b884813e",
+    "saved_date": "2026-10-01T23:08:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "73763c73e6faf6ff4528f46b95e6f8ea5490c60284a3d80cc779dc3be1395e4e",
+    "enricher_version": "3"
+  }
+}

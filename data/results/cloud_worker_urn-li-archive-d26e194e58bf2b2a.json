@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-d26e194e58bf2b2a",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.393708Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:58Z"
+  },
+  "original_text": "Day 7: How to Copy 1TB of Data in 10 Seconds (Shallow Clones)\n\nOne of the biggest bottlenecks in Data Engineering? Setting up a proper Test Environment. 🚧\n\nWe’ve all been there: You need to debug a failure that only happens on \"Production Data,\" but copying the full 1TB production table to a Dev environment takes hours and doubles your storage bill.\n\nSo, you test on a tiny sample... and then the code breaks in Prod anyway. 🙃\n\nThe Databricks Solution: Shallow Clones.\n\nInstead of copying the physical data files, a Shallow Clone just copies the metadata (the transaction log). It points to the existing files but creates a new, independent table history.\n\nWhy is this a superpower?\n\n 1. Speed: You can clone a Petabyte-scale table in seconds.\n\n 2. Cost: It costs $0 in extra storage (until you start modifying the clone).\n\n 3. Safety: You can run destructive updates (DELETE, MERGE) on the clone. It will write new files for the changes, leaving the original Production table completely untouched.\n\nThe Magic Command: \n\nCREATE TABLE dev.sales_test \nSHALLOW CLONE prod.sales_gold;\n\nThat’s it. You now have a full-scale sandbox to break things in, without the wait or the bill.\n\nReflection: How does your team handle \"Prod vs. Dev\" data syncs? Do you clone, sample, or just pray? 🙏\n\n#Databricks #DeltaLake #DevOps #DataEngineering #Testing #SQL #BigData #Azure #Efficiency #Optimization #Spark #Pyspark",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents Databricks shallow clones as a way to create a full-scale development sandbox without physically copying a 1 TB production table. It states that a shallow clone copies transaction-log metadata, references the existing data files, and creates an independent table history. It claims that petabyte-scale tables can be cloned in seconds and that no extra storage is required until the clone is modified. Changes such as DELETE and MERGE create new files while leaving the production table untouched. Although the title claims 1 TB can be copied in 10 seconds, the post provides no benchmark methodology or supporting figures.",
+    "topics": [
+      "Databricks shallow clones",
+      "Delta Lake transaction logs",
+      "Development and production test environments",
+      "Storage-efficient data isolation",
+      "SQL table cloning"
+    ],
+    "subtopics": [
+      "Metadata-only cloning",
+      "Referencing existing data files",
+      "Independent table history",
+      "Running destructive operations on clones",
+      "Storage costs after modification",
+      "Shallow clone SQL syntax"
+    ],
+    "concepts": [
+      "Shallow Clone",
+      "Transaction Log",
+      "Independent Table History",
+      "Non-Destructive Clone Testing",
+      "Clone Storage Cost"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does a Databricks shallow clone differ from physically copying a full production table?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A shallow clone copies the transaction-log metadata and points to the existing data files instead of copying the physical files.\nThe cloned table receives an independent table history."
+    },
+    {
+      "question": "How would you create a development shallow clone named dev.sales_test from prod.sales_gold?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer uses the statement CREATE TABLE dev.sales_test SHALLOW CLONE prod.sales_gold.\nThe answer explains that the new development table initially references the production table's existing files."
+    },
+    {
+      "question": "Why is a shallow clone suitable for testing destructive operations such as DELETE and MERGE against full-scale data?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The clone can be modified without changing the original production table because changed data is written to new files.\nThe post claims that cloning is fast and adds no storage cost until modifications create additional files."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks shallow clones",
+    "secondary_topics": [
+      "Delta Lake transaction logs",
+      "Test environment provisioning",
+      "Non-destructive testing",
+      "Storage optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d26e194e58bf2b2a",
+    "saved_date": "2026-10-01T23:08:58Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c55c0c96bf881196f949ecac709cb72ed6d37a755c025069016cd804e592f95a",
+    "enricher_version": "3"
+  }
+}

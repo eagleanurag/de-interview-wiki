@@ -1,0 +1,129 @@
+{
+  "id": "urn-li-archive-4f7f0accf3efe5a2",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.898599Z",
+    "author": "Siva Nelluri",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:54Z"
+  },
+  "original_text": "Yesterday, I attended an L1 technical interview for a Data Engineer position at Eaton, which covered Snowflake, AWS S3, SQL, and ADF.\n========================≠======================\n\nSnowflake\n=========\n1.What are its three‑layer architecture components? \n2.Explain micro‑partitions and their impact on performance.?\n3.How do external stages work especially integration with AWS S3? \n4.What kind of SQL does Snowflake support?\n5.Difference between OLAP vs OLTP which one is Snowflake? \n6.How does data compression work in Snowflake? \n7.What are the Common performance‑tuning techniques?\n\nAWS S3\n======\n1.What are buckets and objects, and how do they form S3’s architecture? \n2.Explain storage classes Standard, Intelligent‑Tiering, Glacier?\n3.Describe consistency model read‑after‑write vs eventual consistency. \n4.How do you monitor access use CloudWatch, CloudTrail, S3 Inventory? \n5.What is S3 lifecycle policy and how to use it? \n6.How does S3 integrate with Lambda or Cloud front?\n\n\n SQL\n====\n\n1.Write a complex SQL query involving CTE and window functions find average monthly ratings, consecutive weekly events.\n2.Explain DML vs DDL vs DCL \n3.Discuss database design principles?\n4.how to convert row‑to‑comma‑separated aggregation\n using?\n\nAzure Data Factory \n≠==≠=====≠======\n1.What is Azure Data Factory and its primary use? \n2.Compare Snowflake vs ADF?\n3.Describe a scenario using ADF pipelines to move data from S3/Azure Blobs to Snowflake. \n4.How do you schedule, monitor, and manage pipelines in ADF?",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post reports an L1 Data Engineer interview at Eaton and lists questions covering Snowflake, AWS S3, SQL, and Azure Data Factory. It provides no answers, SQL examples, architecture definitions, tuning guidance, or completed scenario design, and the row-to-comma-separated aggregation prompt is incomplete, so it is an interview outline rather than a complete technical explanation.",
+    "topics": [
+      "Snowflake",
+      "AWS S3",
+      "SQL",
+      "Azure Data Factory"
+    ],
+    "subtopics": [
+      "Snowflake three-layer architecture",
+      "Snowflake micro-partitions and performance impact",
+      "Snowflake external stages and AWS S3 integration",
+      "Snowflake SQL support",
+      "OLAP versus OLTP",
+      "Snowflake compression and performance tuning",
+      "AWS S3 buckets and objects",
+      "AWS S3 Standard, Intelligent-Tiering, and Glacier storage classes",
+      "AWS S3 consistency models",
+      "AWS S3 monitoring with CloudWatch, CloudTrail, and S3 Inventory",
+      "AWS S3 lifecycle policies",
+      "AWS S3 integration with Lambda and Cloud front",
+      "CTEs and window functions for average monthly ratings and consecutive weekly events",
+      "DML, DDL, and DCL",
+      "database design principles",
+      "row-to-comma-separated aggregation",
+      "Azure Data Factory purpose and primary use",
+      "Snowflake versus Azure Data Factory",
+      "ADF pipelines from S3 or Azure Blobs to Snowflake",
+      "ADF pipeline scheduling, monitoring, and management"
+    ],
+    "concepts": [
+      "Snowflake three-layer architecture",
+      "Snowflake micro-partitions",
+      "Snowflake external stages",
+      "OLAP versus OLTP",
+      "Snowflake compression and performance tuning",
+      "AWS S3 buckets, objects, and storage classes",
+      "AWS S3 consistency models",
+      "AWS S3 monitoring and lifecycle management",
+      "CTEs and window functions",
+      "DML, DDL, and DCL",
+      "Azure Data Factory pipelines",
+      "ADF pipeline operations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the three-layer architecture components of Snowflake?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies and explains the three components requested by the post."
+    },
+    {
+      "question": "How do Snowflake external stages work, especially when integrating with AWS S3?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer describes the operation of external stages and their integration with AWS S3."
+    },
+    {
+      "question": "How do the AWS S3 Standard, Intelligent-Tiering, and Glacier storage classes differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the three storage classes named in the post."
+    },
+    {
+      "question": "What is the difference between read-after-write and eventual consistency in AWS S3?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer contrasts the two consistency models requested by the post."
+    },
+    {
+      "question": "Write a complex SQL query using a CTE and window functions to calculate average monthly ratings and handle consecutive weekly events.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer uses both a CTE and window functions while addressing average monthly ratings and consecutive weekly events."
+    },
+    {
+      "question": "What are the differences among DML, DDL, and DCL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer defines each SQL category and explains how they differ."
+    },
+    {
+      "question": "How would Azure Data Factory pipelines move data from S3 or Azure Blobs to Snowflake?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer describes an ADF pipeline with S3 or Azure Blobs as the source and Snowflake as the destination."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Snowflake",
+    "secondary_topics": [
+      "AWS S3",
+      "SQL",
+      "Azure Data Factory"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4f7f0accf3efe5a2",
+    "saved_date": "2026-10-01T23:11:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "df2a71bbf7f5b8990022e4166eed5467ac19d8b17e8a36449442ef0160c7dfdf",
+    "enricher_version": "3"
+  }
+}

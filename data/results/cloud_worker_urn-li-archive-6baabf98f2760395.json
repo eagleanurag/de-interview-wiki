@@ -1,0 +1,93 @@
+{
+  "id": "urn-li-archive-6baabf98f2760395",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.339689Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:44Z"
+  },
+  "original_text": "90% of junior data analysts write SLOW SQL code\n(here’s how to fix it)\n\nDifference 1: Column selection\nJunior: Grabs every field “just in case,” this dilutes the results and slows the load.\nSenior: Requests only the three columns the dashboard shows.\n\nDifference 2: Filter strategy\nJunior: Joins huge tables first, with a WHERE clause at the end.\nSenior: Applies time-window and business filters up front, shrinking the data before the heavy joins.\n\nDifference 3: Index\nJunior: Wonders why the query “just hangs.”\nSenior: Checks the execution plan, filters on indexed columns\n\nDifference 4: Query readability\nJunior: One 40-line monster—no comments, no aliases.\nSenior: Breaks logic into CTEs, names steps (“revenue_by_day”), and leaves annotations for future teammates (and future self).\n\n—\n Found this helpful? ♻️ Repost to help an analyst\n #SQL #DataAnalytics #QueryOptimization #CareerGrowth\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents four claimed differences between junior and senior SQL practices: selecting only the columns needed by a dashboard, applying time-window and business filters before heavy joins, checking the execution plan and filtering on indexed columns, and improving readability with named CTEs and annotations. It recommends these practices to reduce query and load times and make queries easier to maintain. The supplied content is brief, ends with an ellipsis, and provides no SQL examples, execution plans, benchmarks, or further explanation.",
+    "topics": [
+      "SQL",
+      "Data analytics"
+    ],
+    "subtopics": [
+      "Column selection",
+      "Filter strategy",
+      "Index-aware filtering",
+      "Query readability"
+    ],
+    "concepts": [
+      "Selective column selection",
+      "Early filtering",
+      "Execution plan review",
+      "Indexed-column filtering",
+      "Readable CTE structure"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should you optimize a SQL query that loads data for a dashboard with three required columns?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The query should select only the three columns displayed by the dashboard rather than retrieving every available field.\nThe answer should explain that unnecessary columns increase the amount of data processed and can slow the load."
+    },
+    {
+      "question": "When should time-window and business filters be applied relative to heavy joins, and why?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The filters should be applied before the heavy joins rather than through a late WHERE clause.\nApplying them first reduces the amount of data that enters the joins."
+    },
+    {
+      "question": "What steps should you take when a SQL query appears to hang?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The query's execution plan should be checked.\nThe query should filter on indexed columns."
+    },
+    {
+      "question": "How can a long SQL query be restructured to improve readability and maintainability?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The query logic can be divided into CTEs.\nEach CTE can have a descriptive name that communicates its purpose, such as \"revenue_by_day.\"\nAnnotations can be included for future teammates and maintainers."
+    }
+  ],
+  "classification": {
+    "domain": "Data analytics",
+    "primary_topic": "SQL query optimization",
+    "secondary_topics": [
+      "SQL performance",
+      "Query maintainability",
+      "Query troubleshooting"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:6baabf98f2760395",
+    "saved_date": "2026-10-01T23:27:44Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "1e2113057bcbd5ce376ebe5f804ba26a3c000994826c5fa9b35eed8a999d9a6b",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Query optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

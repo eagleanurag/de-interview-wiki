@@ -1,0 +1,124 @@
+{
+  "id": "urn-li-archive-148e7051eb89de30",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.052530Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:04Z"
+  },
+  "original_text": "Disappear till SEPTEMBER 2025 and..\n\nClear all System Design Rounds\n\nHere is HOW can you do in 5 steps. \n\n𝗦𝘁𝗲𝗽 𝟭: 𝗙𝘂𝗻𝗱𝗮𝗺𝗲𝗻𝘁𝗮𝗹𝘀\n - Networking Basics (HTTP, TCP/IP, Load Balancing)\n - API Design (REST vs GraphQL, Rate Limiting, Authentication)\n - Database Basics (SQL vs NoSQL, Indexing, Partitioning)\n - Caching Concepts (Strategies, In-Memory Caching, CDN)\n\n𝗦𝘁𝗲𝗽 𝟮: 𝗦𝗰𝗮𝗹𝗮𝗯𝗶𝗹𝗶𝘁𝘆 & 𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲\n - Vertical vs Horizontal Scaling\n - Load Balancing Techniques\n - Database Replication & Sharding\n - Asynchronous Processing & Messaging Queues\n\n𝗦𝘁𝗲𝗽 𝟯: 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗣𝗮𝘁𝘁𝗲𝗿𝗻𝘀\n - Monolithic vs Microservices Architecture\n - Event-Driven vs Request-Response Model\n - CQRS and Event Sourcing\n - Fault Tolerance & High Availability\n\n𝗦𝘁𝗲𝗽 𝟰: 𝗗𝗮𝘁𝗮 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁\n - CAP Theorem & Consistency Models\n - Storage Systems (Relational, NoSQL, Distributed)\n - Data Partitioning & Replication\n - Indexing & Query Optimization\n\n𝗦𝘁𝗲𝗽 𝟱: 𝗛𝗮𝗻𝗱𝘀-𝗼𝗻 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲\n - Design and document real-world systems \n - Explain trade-offs in your design decisions\n - Practice mock system design interviews\n - Get feedback and refine your approach\n\n➤ 𝗛𝗲𝗿𝗲 𝗮𝗿𝗲 𝘀𝗼𝗺𝗲 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀 𝘁𝗼 𝗳𝗼𝗹𝗹𝗼𝘄:\n 1. Rajat Gajbhiye: https://lnkd.in/dWJAXAzJ\n 2. Shrayansh Jain: https://lnkd.in/dUABhnbT\n 3. Hussein Nasser: https://lnkd.in/dubTqr22\n 4. Gaurav Sen: https://lnkd.in/dAPhQyBp\n 5. Arpit Bhayani: https://lnkd.in/du8RyS7R\n\n𝗜’𝘃𝗲 𝗰𝗼𝗺𝗽𝗶𝗹𝗲𝗱 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴 𝗶𝗻𝘁𝗼 𝗮 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗞𝗜𝗧 𝘁𝗼 𝗺𝗮𝗸𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗲𝗮𝘀𝗶𝗲𝗿.\n\n𝗚𝗲𝘁 𝗶𝘁 𝗵𝗲𝗿𝗲: https://lnkd.in/dte69Z5N\n\nStay curious, keep learning, and keep sharing!\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a five-step system design interview preparation roadmap covering fundamentals, scalability and networking, architecture patterns, data management, and hands-on practice. The listed material includes APIs, databases, caching, distributed systems, reliability, and system design trade-offs. It also provides links to four YouTube channels and a community, but it does not explain the concepts in depth or provide worked examples.",
+    "topics": [
+      "System design interview preparation",
+      "Networking and API fundamentals",
+      "Scalability and performance",
+      "Software architecture patterns",
+      "Data management",
+      "Distributed systems",
+      "System design practice"
+    ],
+    "subtopics": [
+      "HTTP, TCP/IP, and load balancing",
+      "REST, GraphQL, rate limiting, and authentication",
+      "SQL, NoSQL, indexing, and partitioning",
+      "Caching strategies, in-memory caching, and CDNs",
+      "Vertical and horizontal scaling",
+      "Database replication and sharding",
+      "Asynchronous processing and messaging queues",
+      "Monolithic and microservices architecture",
+      "Event-driven and request-response models",
+      "CQRS and event sourcing",
+      "Fault tolerance and high availability",
+      "CAP theorem and consistency models",
+      "Relational, NoSQL, and distributed storage systems",
+      "Data partitioning and replication",
+      "Query optimization",
+      "Mock system design interviews"
+    ],
+    "concepts": [
+      "Networking basics",
+      "API design",
+      "Database basics",
+      "Caching",
+      "Vertical and horizontal scaling",
+      "Load balancing",
+      "Database replication and sharding",
+      "Asynchronous processing and messaging queues",
+      "Monolithic and microservices architecture",
+      "Event-driven and request-response models",
+      "CQRS and event sourcing",
+      "Fault tolerance and high availability",
+      "CAP theorem and consistency models",
+      "Storage systems",
+      "Data partitioning and replication",
+      "Indexing and query optimization",
+      "Real-world system design practice",
+      "Mock interviews and feedback"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which technical fundamentals should a candidate review when preparing for a system design interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer covers networking basics, including HTTP, TCP/IP, and load balancing.\nIt also covers REST, GraphQL, rate limiting, authentication, SQL, NoSQL, indexing, partitioning, and caching."
+    },
+    {
+      "question": "How should a candidate prepare to discuss scalability and networking trade-offs in a system design interview?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer discusses vertical and horizontal scaling.\nIt includes load-balancing techniques, database replication, sharding, asynchronous processing, and messaging queues.\nIt also explains how design trade-offs should be documented."
+    },
+    {
+      "question": "Which architecture patterns and reliability concepts are included in the preparation roadmap?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer covers monolithic and microservices architecture and event-driven and request-response models.\nIt also covers CQRS, event sourcing, fault tolerance, and high availability."
+    },
+    {
+      "question": "Which data-management topics should a candidate be prepared to discuss during a system design interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer covers the CAP theorem and consistency models.\nIt includes relational, NoSQL, and distributed storage systems.\nIt also covers data partitioning, replication, indexing, and query optimization."
+    },
+    {
+      "question": "What practice does the post recommend for improving system design interview performance?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A strong answer recommends designing and documenting real-world systems.\nIt includes explaining design trade-offs and participating in mock system design interviews.\nIt also emphasizes obtaining feedback and refining the approach."
+    }
+  ],
+  "classification": {
+    "domain": "System Design",
+    "primary_topic": "System Design Interview Preparation",
+    "secondary_topics": [
+      "Networking and API Design",
+      "Scalability",
+      "Software Architecture",
+      "Data Management",
+      "Distributed Systems"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:148e7051eb89de30",
+    "saved_date": "2026-10-01T23:19:04Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "e9f45f54f70084b429cbb60027e2a19c394010adea967ed69b147300f91f4004",
+    "enricher_version": "3"
+  }
+}

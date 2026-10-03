@@ -1,0 +1,102 @@
+{
+  "id": "urn-li-saved-34fbfd01e66d0e98",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341756690179993602",
+    "captured_at": "2026-10-02T00:15:46.403798Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:07Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Expertise in Azure Data Factory | Azure Databricks | Big Data | PySpark | SQL | Microsoft Fabric | ETL | Data Lake | Linux | SCCM | VMware | MDE | Windows Admin |\n1yr •\n💥 SQL Server or Databricks? Choose wrong, and you could lose time, money, and momentum.\nData is exploding. Choosing the right engine isn’t just technical—it’s strategic. So I created a visual guide that breaks down the key differences between SQL Server and Databricks (Apache Spark)—so you can make the right call for your next project or interview. 🧠⚙️\n📊 What’s inside: • OLTP vs. Big Data use cases\n• Vertical vs. horizontal scaling\n• Cost models: license vs. usage-based\n• Real-world decision grid\n• When to use both together (yes, that’s a thing!)\n✅ Ideal for:\n• Data Engineers & Architects\n• Azure & Spark Practitioners\n• Interview Prep Warriors\n• Anyone migrating to modern data stacks\n📥 Swipe the carousel or download the full PDF.\nLet’s stop guessing and start architecting smarter.\n💬 Which engine do you use more—and why?\n#Databricks #ApacheSpark #SQLServer #DataEngineering #BigData #AzureDataEngineer #SparkClusters #DeltaLake #ETL #DataPipeline #CloudDataPlatform #InterviewPreparation #SachinShares #LinkedInCarousel\n🔹 SQL Server vs Databricks comparison\n🔹Databricks for big data\n🔹SQL Server for OLTP\n🔹Spark vs traditional RDBMS\n🔹Data engineering tools 2025\n🔹Choosing the right data platform\n🔹Databricks interview prep\n🔹Azure data architecture\n🔹Cost optimization in cloud data\n🔹Delta Lake vs SQL tables\n👆 👉 For more content, follow Sachin Patil ..... 👍\n…see more\nSQL SERVER OR DATABRICKS",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341756690179993602_slide_0.jpg",
+      "description": "JPEG image, 483x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The supplied content is a promotional post for a visual comparison between SQL Server and Databricks. It says the guide covers OLTP versus big-data use cases, vertical versus horizontal scaling, license versus usage-based costs, a decision grid, and possible use of both systems together. It associates SQL Server with OLTP and Databricks with big data and connects Databricks with Apache Spark. The carousel or PDF content is not included, and the extracted media text is empty, so the source provides no detailed comparison, recommendation, architecture, or cost figures.",
+    "topics": [
+      "SQL Server versus Databricks",
+      "OLTP and big-data workload selection",
+      "data platform scaling",
+      "data platform cost models",
+      "combined SQL Server and Databricks use"
+    ],
+    "subtopics": [
+      "SQL Server for OLTP",
+      "Databricks for big data",
+      "Apache Spark versus traditional RDBMS",
+      "vertical versus horizontal scaling",
+      "license versus usage-based costs",
+      "Delta Lake versus SQL tables",
+      "real-world platform decision grid"
+    ],
+    "concepts": [
+      "SQL Server",
+      "Databricks",
+      "Apache Spark",
+      "Vertical versus horizontal scaling",
+      "License versus usage-based cost models",
+      "Combined SQL Server and Databricks use"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which workload categories does the post use to frame the SQL Server–Databricks comparison?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post frames the comparison around OLTP and big-data use cases.\nIt associates SQL Server with OLTP and Databricks with big-data workloads."
+    },
+    {
+      "question": "Which scaling and cost dimensions does the post identify as relevant to choosing between SQL Server and Databricks?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Vertical scaling versus horizontal scaling is one stated comparison area.\nLicense costs versus usage-based costs is another stated comparison area.\nThe supplied text does not explain how these dimensions apply to either platform."
+    },
+    {
+      "question": "What does the post state about using SQL Server and Databricks together?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The post explicitly includes guidance about when both platforms can be used together.\nThe supplied text does not provide a specific combined-use scenario or architecture."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Server versus Databricks",
+    "secondary_topics": [
+      "OLTP versus big-data workloads",
+      "scaling model selection",
+      "platform cost models",
+      "combined data platform architectures"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:34fbfd01e66d0e98",
+    "saved_date": "2026-10-01T23:17:07Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341756690179993602",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341756690179993602_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f3db950cc1ab9c35e3bbb410b037edc878d126cfc05f76935aeeb9d657c80888",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

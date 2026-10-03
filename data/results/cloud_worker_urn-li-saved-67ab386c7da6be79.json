@@ -1,0 +1,129 @@
+{
+  "id": "urn-li-saved-67ab386c7da6be79",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7345000541866901504",
+    "captured_at": "2026-10-02T00:15:48.310306Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:18Z"
+  },
+  "original_text": "✅ Verdict: SELECTED\nNTT DATA Data Engineering Interview Experience \n\n\nThe best way to learn is to learn from someone else's experience. Sharing my interview experience for those who are preparing — hope it helps!👇\n\n🔹 𝐑𝐨𝐮𝐧𝐝 1: 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐑𝐨𝐮𝐧𝐝 \n\n• Cross-questioning on my past projects\n• Hands-on coding round primarily focused on SQL and Python\n• SQL queries and core concepts — primary/foreign keys, normalization, joins, indexing\n• Python core concepts (lists, dictionaries, sets etc)\n• Core concepts of Pandas: join vs merge, series vs dataframe etc\n• Linux basics\n\n🔹 𝐑𝐨𝐮𝐧𝐝 2: 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐚𝐧𝐝 𝐌𝐚𝐧𝐚𝐠𝐞𝐫𝐢𝐚𝐥 𝐑𝐨𝐮𝐧𝐝\n\n• Deep dive into databases\n• AWS concepts (S3, RDS, MYSQL, MWAA etc)\n• Pandas operations\n• Shell scripting\n• Airflow DAGs\n• Snowflake Questions\n\n • Why NTT DATA?\n • Reason for job switch\n • Personal interests & how they influence work\n • Client-facing role mindset\n • Scenario-based behavioral questions\n\n🔹 𝐑𝐨𝐮𝐧𝐝 3: 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐑𝐨𝐮𝐧𝐝\n\n• Scalable data pipeline design\n• Handling real-time & frequent data updates\n• Scenario-based questions on Snowflake\n• Python hands-on coding\n\n🔸 𝐅𝐢𝐧𝐚𝐥 𝐒𝐭𝐞𝐩: 𝐒𝐚𝐥𝐚𝐫𝐲 𝐝𝐢𝐬𝐜𝐮𝐬𝐬𝐢𝐨𝐧 & 𝐧𝐞𝐠𝐨𝐭𝐢𝐚𝐭𝐢𝐨𝐧\n\n📌 To those preparing — focus on fundamentals, real project experience, and hands-on practice. You've got this! 💪\n#NTTDATA #DataEngineer #InterviewExperience #SQL #Python #Airflow #Snowflake #CareerUpdate #JobSearch #DataEngineering #SuccessStory\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7345000541866901504_slide_0.jpg",
+      "description": "JPEG image, 480x392 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a brief, apparently truncated summary of a three-round NTT DATA data engineering interview experience. Round 1 covered project cross-questioning, hands-on SQL and Python, SQL keys, normalization, joins and indexing, Python collections, Pandas data structures and operations, and Linux basics. Round 2 covered databases, AWS concepts including S3, RDS, MySQL and MWAA, Pandas operations, shell scripting, Airflow DAGs, Snowflake, motivation and behavioral topics. Round 3 covered scalable data pipeline design, real-time and frequent data updates, Snowflake scenarios, and Python coding. The post closes with salary negotiation and advice to focus on fundamentals, real project experience, and hands-on practice. It does not provide detailed technical answers or implementation examples, and the supplied excerpt ends with a truncation indicator.",
+    "topics": [
+      "Data engineering interview experience",
+      "SQL",
+      "Python",
+      "Pandas",
+      "Databases",
+      "AWS",
+      "Linux and shell scripting",
+      "Airflow",
+      "Snowflake",
+      "Data pipeline design",
+      "Behavioral interviewing"
+    ],
+    "subtopics": [
+      "Primary keys, foreign keys, normalization, joins, and indexing",
+      "Python lists, dictionaries, and sets",
+      "Pandas join versus merge and Series versus DataFrame",
+      "AWS S3, RDS, MySQL, and MWAA",
+      "Airflow DAGs",
+      "Scalable data pipeline design",
+      "Real-time and frequent data updates",
+      "Past-project cross-questioning",
+      "Motivation, job-switch reasoning, and personal interests",
+      "Client-facing mindset and scenario-based behavioral questions",
+      "Salary discussion and negotiation"
+    ],
+    "concepts": [
+      "SQL query and database fundamentals",
+      "Python core concepts and hands-on coding",
+      "Pandas data structures and operations",
+      "Database fundamentals",
+      "AWS concepts",
+      "Linux and shell scripting",
+      "Airflow DAGs",
+      "Snowflake interview scenarios",
+      "Scalable data pipeline design",
+      "Real-time and frequent data updates",
+      "Project-based and behavioral preparation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL, Python, and Pandas topics were assessed during the first technical round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The round included hands-on SQL queries and assessed primary keys, foreign keys, normalization, joins, and indexing.\nIt assessed Python lists, dictionaries, and sets.\nIt covered the Pandas distinctions between join and merge and between Series and DataFrame."
+    },
+    {
+      "question": "Which technologies and behavioral topics were covered during the second technical and managerial round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The AWS-related topics named were S3, RDS, MySQL, and MWAA.\nThe technical topics included databases, Pandas operations, shell scripting, Airflow DAGs, and Snowflake.\nThe managerial topics included motivation, reasons for changing jobs, personal interests, client-facing mindset, and scenario-based behavioral questions."
+    },
+    {
+      "question": "What data engineering design, update, and coding areas were assessed during the third technical round?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The round focused on scalable data pipeline design.\nIt addressed handling real-time and frequent data updates.\nIt also included scenario-based Snowflake questions and hands-on Python coding."
+    },
+    {
+      "question": "What preparation approach does the post recommend for a data engineering interview?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post recommends focusing on fundamentals, real project experience, and hands-on practice.\nIt also highlights cross-questioning about past projects and scenario-based questioning as parts of the interview."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview experience",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "Pandas",
+      "Databases",
+      "AWS",
+      "Linux and shell scripting",
+      "Airflow",
+      "Snowflake",
+      "Data pipeline design",
+      "Behavioral interviewing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:67ab386c7da6be79",
+    "saved_date": "2026-10-01T23:15:18Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7345000541866901504",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7345000541866901504_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f5960e54932d18bd00250ddc351933a2f9a59cabbeded621afc83f3819a9952c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

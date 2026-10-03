@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-archive-17939c4523091d83",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.107958Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:55Z"
+  },
+  "original_text": "After wasting last 1 month for interview prep, I found only 20 videos you need to watch for Data Engineering.\n\n1. Azure Data Engineer roadmap\nhttps://lnkd.in/g2Z3gy3G\n\n2. RDDs Vs DataFrames Vs Datasets\nhttps://lnkd.in/gzrRtDFM\n\n3. Apache Spark Optimization techniques\nhttps://lnkd.in/gmdyB_2z\n\n4. Row based vs Column based file formats \nhttps://lnkd.in/g94V-qzn\n\n5. SQL vs NoSQL\nhttps://lnkd.in/gPP-wjgW\n\n6. Database vs Data Warehouse vs Data Lake\nhttps://lnkd.in/gE-yUVYW\n\n7. Namenode vs Datanode in Hadoop\nhttps://lnkd.in/gigEi8wz\n\n8. Fault Tolerance in Hadoop\nhttps://lnkd.in/ggYq2TVp\n\n9. Internal vs External table in Hive\nhttps://lnkd.in/g5TKz4ii\n\n10. Hive architecture\nhttps://lnkd.in/g8CrPaV3\n\n11. MapReduce architecture\nhttps://lnkd.in/g44av9JD\n\n12. Sqoop Import vs Export\nhttps://lnkd.in/gDAw5zJz\n\n13. Spark architecture\nhttps://lnkd.in/gJbumAq7\n\n14. Spark context vs Spark session\nhttps://lnkd.in/gJJqwmBP\n\n15. Normalization vs denormalization\nhttps://lnkd.in/g4VE3X-h\n\n16. Narrow Vs Wide Transformations\nhttps://lnkd.in/gKRtyhTw\n\n17. Partitioning Vs Bucketing\nhttps://lnkd.in/gHeSfXDz\n\n18. SCD types and use cases\nhttps://lnkd.in/gB-M5dEM\n\n19. Repartition and Coalesce\nhttps://lnkd.in/gng5NiMJ\n\n20. Group by key vs reduce by key\nhttps://lnkd.in/g_pFzKzg\n\n𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 𝗺𝘆 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗳𝗼𝗿 𝗙𝗥𝗘𝗘 𝗖𝗼𝗻𝘁𝗲𝗻𝘁 – \nhttps://lnkd.in/gV_5EFtE\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀\n\n𝗚𝗲𝘁 𝟭𝟬𝟬+ 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗵𝗲𝗿𝗲 -\nhttps://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE and RESHARE the post 👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post recommends 20 videos for data engineering interview preparation. The listed subjects include an Azure Data Engineer roadmap, Apache Spark, Hadoop, Hive, MapReduce, Sqoop, data storage and modeling comparisons, partitioning and bucketing, SCD types, repartitioning and coalescing, and group-by-key versus reduce-by-key. It provides links and titles only, without technical explanations, examples, or interview answers, and ends with promotion for a Data Engineering Instagram channel and a resource claiming more than 100 interview experiences.",
+    "topics": [
+      "Data Engineering Interview Preparation",
+      "Big Data Processing",
+      "Data Storage",
+      "Data Modeling",
+      "Data Integration"
+    ],
+    "subtopics": [
+      "Azure Data Engineer Roadmap",
+      "RDDs versus DataFrames versus Datasets",
+      "Apache Spark Optimization Techniques",
+      "Row-Based versus Column-Based File Formats",
+      "SQL versus NoSQL",
+      "Database versus Data Warehouse versus Data Lake",
+      "NameNode versus DataNode in Hadoop",
+      "Fault Tolerance in Hadoop",
+      "Internal versus External Tables in Hive",
+      "Hive Architecture",
+      "MapReduce Architecture",
+      "Sqoop Import versus Export",
+      "Spark Architecture",
+      "SparkContext versus SparkSession",
+      "Normalization versus Denormalization",
+      "Narrow versus Wide Transformations",
+      "Partitioning versus Bucketing",
+      "SCD Types and Use Cases",
+      "Repartition versus Coalesce",
+      "Group-by-Key versus Reduce-by-Key"
+    ],
+    "concepts": [
+      "Azure Data Engineer Roadmap",
+      "RDDs versus DataFrames versus Datasets",
+      "Apache Spark Optimization Techniques",
+      "Row-Based versus Column-Based File Formats",
+      "SQL versus NoSQL",
+      "Database versus Data Warehouse versus Data Lake",
+      "NameNode versus DataNode in Hadoop",
+      "Fault Tolerance in Hadoop",
+      "Internal versus External Tables in Hive",
+      "Hive Architecture",
+      "MapReduce Architecture",
+      "Sqoop Import versus Export",
+      "Spark Architecture",
+      "SparkContext versus SparkSession",
+      "Normalization versus Denormalization",
+      "Narrow versus Wide Transformations",
+      "Partitioning versus Bucketing",
+      "SCD Types and Use Cases",
+      "Repartition versus Coalesce",
+      "Group-by-Key versus Reduce-by-Key"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Azure Data Engineering",
+      "Apache Spark",
+      "Hadoop",
+      "Hive",
+      "MapReduce",
+      "Sqoop",
+      "Data Storage",
+      "Data Modeling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:17939c4523091d83",
+    "saved_date": "2026-10-01T23:28:55Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "517f4138e5bbe1a347f49889d7b9de7a2764f393f5fab82b583eaaf2f0d15f77",
+    "enricher_version": "3"
+  }
+}

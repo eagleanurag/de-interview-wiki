@@ -1,0 +1,192 @@
+{
+  "id": "urn-li-saved-4b09b479f28b3df7",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347878257846894596",
+    "captured_at": "2026-10-02T00:15:47.288223Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:06Z"
+  },
+  "original_text": "🔹 HR | Talent Acquisition | Training & Placement | Campus Recruitment | Career Services | Interview Preparation & Career Counseling\n1yr •\n🔹 Technical Interview Experience – Data Engineer at Deloitte (Databricks + Spark Focus)\n-------------------------------------------------------\n⚠️ Think writing PySpark code is enough to crack Deloitte? Think again.\n⛔Most candidates fail when asked about real production issues, cost optimization, and advanced Databricks features.\n🚀 One of our students recently faced these real Databricks interview questions at Deloitte in Round 1 👇\n💡 Fresh & Advanced Databricks + Spark Interview Questions – Deloitte Edition\n1️⃣ How do you design a fault-tolerant data pipeline using Databricks for ingesting data from multiple unreliable sources?\n2️⃣ What is a broadcast join in Spark? When does it backfire and how do you handle it?\n3️⃣ How would you handle schema mismatch in JSON files ingested via Autoloader in Databricks?\n4️⃣ How do you orchestrate a hybrid pipeline that includes both Databricks notebooks and Azure Data Factory triggers?\n5️⃣ What’s the impact of using Delta Lake MERGE INTO on large datasets, and how do you optimize it?\n6️⃣ How do you manage parallelism and partition tuning in Spark jobs to avoid shuffle overloads?\n7️⃣ How would you implement near real-time data validation in a Structured Streaming pipeline?\n8️⃣ How do you handle dependency conflicts between Python libraries when using custom wheels in Databricks clusters?\n9️⃣ What are the pros and cons of using Databricks SQL vs. Spark SQL in large reporting workflows?\n🔟 How do you implement role-based access control (RBAC) with Unity Catalog for multi-tenant data lake governance?\n1️⃣1️⃣ What are the best ways to enforce GDPR data retention rules inside a Delta Lake table with time travel enabled?\n1️⃣2️⃣ How do you use the Spark UI to identify and fix skew in a job that runs fine in dev but crashes in prod?\n1️⃣3️⃣ What’s your approach to optimize long-running batch jobs that load 100M+ records per run in Databricks?\n1️⃣4️⃣ How do you implement versioned data pipelines in Databricks notebooks using Git integration?\n1️⃣5️⃣ Describe a production issue you faced with a Spark streaming job and how you resolved it.\n🎯 These aren’t theory. These are real questions from Deloitte’s tech panel — focused on how you solve enterprise-scale data problems.\n🔁 Round 2 coming soon: Topics like Delta Live Tables, streaming recovery, Spark tuning, and Databricks job orchestration.\n📞 Contact: +91 98604 38743 | 📌Pay after Placement\n📩 DM us for mock interviews, real-time Databricks projects, and 1:1 mentoring for MNC interviews.\n#Databricks #ApacheSpark #Deloitte #DataEngineering #StructuredStreaming #DeltaLake #DatabricksInterview #UnityCatalog #SparkPerformance #AzureDataEngineer #CI_CD #MNCJobs #CloudCareers #InterviewPrep\n…see more\n🚫 Databricks interviews aren’t multiple choice",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347878257846894596_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional career-services post says a student encountered Databricks and Spark-focused technical interview questions during a Deloitte interview. It lists questions about production resilience, joins, Auto Loader, orchestration, Delta Lake, Structured Streaming, dependencies, SQL, governance, performance, and version control, but it provides no answers or implementation details. The post announces topics for a future second round and is incomplete: it contains a see-more marker, ends with an unfinished statement, and has no extracted media text.",
+    "topics": [
+      "Databricks and Apache Spark interview preparation",
+      "Production data pipeline design",
+      "Batch and streaming performance",
+      "Data engineering career services"
+    ],
+    "subtopics": [
+      "Fault-tolerant ingestion from unreliable sources",
+      "Spark broadcast joins and shuffle behavior",
+      "Auto Loader and JSON schema mismatches",
+      "Hybrid orchestration with Azure Data Factory and Databricks notebooks",
+      "Delta Lake MERGE INTO and time travel",
+      "Spark parallelism and partition tuning",
+      "Structured Streaming validation and recovery",
+      "Python custom wheels and dependency conflicts",
+      "Databricks SQL and Spark SQL reporting",
+      "Unity Catalog RBAC and multi-tenant governance",
+      "GDPR data retention",
+      "Spark UI skew diagnosis",
+      "Large-scale Databricks batch optimization",
+      "Git version control for Databricks notebooks",
+      "Announced future coverage of Delta Live Tables and Databricks job orchestration"
+    ],
+    "concepts": [
+      "Databricks production interview scope",
+      "Fault-tolerant multi-source ingestion",
+      "Spark broadcast joins",
+      "Auto Loader schema handling",
+      "Hybrid pipeline orchestration",
+      "Delta Lake MERGE INTO",
+      "Spark parallelism and partition tuning",
+      "Structured Streaming data validation",
+      "Custom wheel dependency conflicts",
+      "Databricks SQL and Spark SQL",
+      "Unity Catalog RBAC",
+      "Delta Lake time travel and retention",
+      "Spark UI skew diagnosis",
+      "Large-scale Databricks batch optimization",
+      "Git-versioned Databricks notebooks",
+      "Spark streaming incident resolution"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you design a fault-tolerant data pipeline using Databricks for ingesting data from multiple unreliable sources?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer presents a fault-tolerant Databricks ingestion architecture for multiple unreliable sources."
+    },
+    {
+      "question": "What is a broadcast join in Spark, when does it backfire, and how do you handle it?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines a broadcast join, explains when it can backfire, and describes how to respond to that failure mode."
+    },
+    {
+      "question": "How would you handle schema mismatches in JSON files ingested through Auto Loader in Databricks?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer describes an Auto Loader approach for handling mismatched schemas across JSON files."
+    },
+    {
+      "question": "How do you orchestrate a hybrid pipeline containing both Databricks notebooks and Azure Data Factory triggers?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how Azure Data Factory triggers coordinate with Databricks notebooks in a hybrid pipeline."
+    },
+    {
+      "question": "What is the impact of using Delta Lake MERGE INTO on large datasets, and how do you optimize it?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer explains the large-dataset impact of Delta Lake MERGE INTO and describes an optimization approach."
+    },
+    {
+      "question": "How do you manage parallelism and partition tuning in Spark jobs to avoid shuffle overloads?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer relates parallelism and partition settings to shuffle pressure and describes how to avoid overloads."
+    },
+    {
+      "question": "How would you implement near-real-time data validation in a Structured Streaming pipeline?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer places a near-real-time validation mechanism inside a Structured Streaming pipeline."
+    },
+    {
+      "question": "How do you handle dependency conflicts between Python libraries when using custom wheels in Databricks clusters?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer explains an approach to resolving Python dependency conflicts for custom wheels used by Databricks clusters."
+    },
+    {
+      "question": "What are the advantages and disadvantages of Databricks SQL versus Spark SQL in large reporting workflows?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer states the advantages and disadvantages of Databricks SQL and Spark SQL for large reporting workflows."
+    },
+    {
+      "question": "How do you implement role-based access control with Unity Catalog for multi-tenant data lake governance?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer describes an RBAC implementation using Unity Catalog for a multi-tenant data lake."
+    },
+    {
+      "question": "What ways can GDPR data retention rules be enforced in a Delta Lake table with time travel enabled?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how GDPR retention can be enforced in a Delta Lake table that has time travel enabled."
+    },
+    {
+      "question": "How do you use Spark UI to identify and fix skew in a job that works in development but fails in production?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer uses Spark UI evidence to diagnose skew and explains a correction for a production-only failure."
+    },
+    {
+      "question": "What is your approach to optimizing long-running Databricks batch jobs that load more than 100 million records per run?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer presents an optimization approach for Databricks batch jobs processing more than 100 million records per run."
+    },
+    {
+      "question": "How do you implement versioned data pipelines in Databricks notebooks using Git integration?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how Git integration can support versioned Databricks notebook pipelines."
+    },
+    {
+      "question": "Describe a production issue you faced with a Spark streaming job and how you resolved it.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer recounts a Spark streaming production issue and explains how the issue was resolved."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks and Apache Spark technical interviews",
+    "secondary_topics": [
+      "Delta Lake operations and governance",
+      "Structured Streaming",
+      "Azure Data Factory orchestration",
+      "Spark performance tuning",
+      "Data pipeline version control"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:4b09b479f28b3df7",
+    "saved_date": "2026-10-01T23:12:06Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347878257846894596",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347878257846894596_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "0bd384e30dee00ed7b780a41ceeb002b299f7745140e5f2d4845e0148ce84732",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

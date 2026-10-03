@@ -1,0 +1,98 @@
+{
+  "id": "urn-li-saved-1d836d55e2f56889",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7342431147378843648",
+    "captured_at": "2026-10-02T00:15:45.357458Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:03Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Python, SQL, PySpark, Azure Data Factory (ADF), Databricks, Delta Lake | Scalable Data Pipelines, ETL/ELT, Data Analytics Solutions\n1yr •\n🎯 SQL That Gets You Hired: The Power of CASE WHEN in Real-Time Analytics\n📄 Just released: My breakdown of a real interview question asked at Walmart and ZS Associates — with a deep dive into how CASE WHEN isn't just syntax... it's strategy.\nIn this PDF, you'll get:\n✅ A real-world SQL use case that powers customer segmentation for millions of users\n✅ Interview-grade explanation tailored for Data Engineers & Analysts\n✅ Pro-level optimization tips to boost performance and reduce pipeline complexity\n✅ Why pushing business logic to SQL saves 💸 compute and improves 📊 dashboard load times\n🛠 Use this to:\n• Ace SQL interviews\n• Build cleaner, audit-friendly pipelines\n• Centralize logic across ETL, BI & analytics\n🌍 Bonus: Telco example with 20M users + daily segmentation logic in SQL 🔥\n🔽 Grab the PDF below. It’s sharp, concise, and job-ready.\nIf you find this valuable:\n🔁 Repost for others\n💬 Drop a comment with your favorite use of CASE\n📩 DM me for the next one in the series: SQL Join Types, Demystified\n#DataEngineering #SQLMastery #InterviewReady #CaseWhen #SQLTips #Databricks #PowerBI #DataPipeline #ADF #Snowflake #SynapseAnalytics #DataAnalyst #WalmartTech #ZSAssociates #LinkedInPDF #ETLDesign #RealTimeData\ns3",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7342431147378843648_slide_0.jpg",
+      "description": "PNG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional post announces a PDF about using SQL CASE WHEN in real-time analytics, framed around a real interview question said to have been asked at Walmart and ZS Associates. It says the PDF covers customer segmentation for millions of users, SQL-based business logic, performance optimization, and cleaner, audit-friendly ETL, BI, and analytics pipelines, with a claimed telco example involving 20 million users and daily segmentation. The supplied content contains no PDF text, SQL code, segmentation rules, optimization techniques, or supporting measurements, so those details cannot be evaluated from this post.",
+    "topics": [
+      "SQL CASE WHEN",
+      "Customer segmentation",
+      "Real-time analytics",
+      "Centralized business logic",
+      "ETL and BI pipelines",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "Customer segmentation for millions of users",
+      "Daily segmentation in a claimed 20-million-user telco example",
+      "Reducing compute by pushing business logic into SQL",
+      "Improving dashboard load times",
+      "Centralizing logic across ETL, BI, and analytics",
+      "Audit-friendly pipeline design"
+    ],
+    "concepts": [
+      "SQL CASE WHEN",
+      "Customer segmentation with SQL",
+      "Centralized business logic",
+      "Compute and dashboard performance claims",
+      "Audit-friendly pipelines"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What role does the post say SQL CASE WHEN plays in large-scale customer segmentation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post presents CASE WHEN as a strategic SQL mechanism for implementing customer segmentation for millions of users.\nThe answer should acknowledge that the post does not provide the segmentation conditions, categories, or SQL implementation."
+    },
+    {
+      "question": "What pipeline-design benefits does the post associate with pushing business logic into SQL?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Centralizing business logic in SQL allows it to be shared across ETL, BI, and analytics workflows.\nThe post claims this approach can reduce pipeline complexity and compute use while improving dashboard load times.\nIt also associates the approach with cleaner, audit-friendly pipelines, but it does not provide implementation or measurement details."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering and Analytics",
+    "primary_topic": "SQL CASE WHEN for customer segmentation",
+    "secondary_topics": [
+      "Centralizing business logic in SQL",
+      "ETL and BI pipeline design",
+      "Real-time analytics",
+      "SQL performance",
+      "Data engineering interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1d836d55e2f56889",
+    "saved_date": "2026-10-01T23:17:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7342431147378843648",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7342431147378843648_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7342431147378843648_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "dae158a3068badbc456b30ad930296c781ee8c190e8830b2b13fa06c609590e3",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Performance optimization guidance"
+      ],
+      "questions": []
+    }
+  }
+}

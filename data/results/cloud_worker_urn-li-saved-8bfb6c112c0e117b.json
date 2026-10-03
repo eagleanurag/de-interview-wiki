@@ -1,0 +1,76 @@
+{
+  "id": "urn-li-saved-8bfb6c112c0e117b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7295266934294474752",
+    "captured_at": "2026-10-02T00:15:49.198278Z",
+    "author": "Sourav K.",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:20Z"
+  },
+  "original_text": "• 2nd\nAssociate Director @ PwC India | Data & AI Architect | 8X Microsoft Certified | 3X Databricks Certified\n1yr •\n🚀 Why Learn Python? 🐍\n✅ Python is a versatile, beginner-friendly programming language powering fields like AI, data analysis, web development and more.\n⏹️ Its simplicity and robust libraries make it a must-learn for anyone aiming to excel in tech.\n📝 The below notes in the form of a book by Suraj Netke🌟 covers all the important topics on Python along with code examples.\n#python #pythonprogramming #coding #development #interview #data #bigdata #algorithm\n…see more\nMaster Python with Codes",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7295266934294474752_slide_0.jpg",
+      "description": "JPEG image, 350x496 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post recommending a Python programming book and stating that Python is beginner-friendly, versatile, and supported by robust libraries. It identifies AI, data analysis, and web development as application areas, but it does not provide the advertised book's technical content or code examples.",
+    "topics": [
+      "Python"
+    ],
+    "subtopics": [
+      "Python applications",
+      "Python libraries"
+    ],
+    "concepts": [
+      "Python",
+      "Python libraries"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Why does the post consider Python a useful language for beginners and technology professionals?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post describes Python as beginner-friendly and versatile.\nThe post identifies its robust libraries as a reason to learn it.\nThe post mentions AI, data analysis, and web development as application areas for Python."
+    }
+  ],
+  "classification": {
+    "domain": "Programming",
+    "primary_topic": "Python",
+    "secondary_topics": [
+      "Artificial intelligence",
+      "Data analysis",
+      "Web development"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8bfb6c112c0e117b",
+    "saved_date": "2026-10-01T23:35:20Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7295266934294474752",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7295266934294474752_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "6abdda7ca57b385bd2286b5c36a71da40f9087f099bc6a299dda78471118aa38",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

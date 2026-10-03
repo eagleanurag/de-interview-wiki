@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-c50af6e8461811ee",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340220810126626817",
+    "captured_at": "2026-10-02T00:15:51.306429Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:55Z"
+  },
+  "original_text": "MTS-1 | PayPal | Ex- Walmart | Adobe CJA, AEP, AJO | Hadoop | Apache Spark| PySpark | Scala | Spark Streaming | Python | Azure | AWS | GCP | Data Quality |\n1yr •\n🚀 Crack Top Data Engineering Interviews in 2025 – Real-Time Scenarios Included!\nMost candidates prepare concepts.\nBut top companies hire based on how you apply them. 💡\nI compiled 150+ real-time questions asked in interviews at:\nGoogle | Microsoft | PayPal | Walmart | Amazon\n💻 Covered Topics:\n• Python + SQL\n• Spark + Scala\n• Kafka + Streaming\n• GCP | AWS | Azure\n• Data Lake + Warehousing\n• CI/CD + DevOps\n• System Design (with DE focus!)\n• DSA (only real case-based)\n🎁 Free Download\nHere’s the complete PDF guide with roadmap + categories 👇\n🔎 Want to stand out? Practice how you solve, not just what you know.\n#DataEngineering #InterviewPrep #Spark #Kafka #Python #Cloud #BigData #SystemDesign #LinkedInLearning #interviewpreperation\nReal-time Interview questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340220810126626817_slide_0.jpg",
+      "description": "JPEG image, 327x490 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post advertising a 2025 data engineering interview guide with a claimed 150 or more real-time questions from Google, Microsoft, PayPal, Walmart, and Amazon. It lists Python, SQL, Spark, Scala, Kafka, streaming, GCP, AWS, Azure, data lakes, warehousing, CI/CD, DevOps, system design, and DSA, but it does not provide any actual interview questions, explanations, or technical details.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c50af6e8461811ee",
+    "saved_date": "2026-10-01T23:17:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340220810126626817",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340220810126626817_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "785af802751cf05090556a0d425f0304555691a6242556e8c9a145397640b21b",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

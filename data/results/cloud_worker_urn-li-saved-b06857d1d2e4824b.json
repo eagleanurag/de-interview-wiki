@@ -1,0 +1,116 @@
+{
+  "id": "urn-li-saved-b06857d1d2e4824b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7294656361873756160",
+    "captured_at": "2026-10-02T00:15:50.691740Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:27Z"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nETL tools like Informatica, Abinitio, SSIS, Talend, Datastage, etc. are no longer in demand!\nthey are still being used and so are Mainframe based ETL jobs but.\ntheir days of shine and lustre are long gone!!\nLets look at Modern Data Pipelines:\nThe modern data landscape demands agility, scalability, and real-time insights.\nBut how do we tame the ever-growing data & transform it into valuable business intelligence?\nImagine:\n𝐑𝐞𝐚𝐥-𝐭𝐢𝐦𝐞 𝐚𝐧𝐚𝐥𝐲𝐭𝐢𝐜𝐬: No more waiting days for insights. Get notified of critical trends as they happen.\n𝐔𝐧𝐢𝐟𝐢𝐞𝐝 𝐝𝐚𝐭𝐚 𝐥𝐚𝐤𝐞𝐬: Ditch data silos and fragmented information. Access all your data in one, centralized location.\n𝐂𝐥𝐨𝐮𝐝-𝐧𝐚𝐭𝐢𝐯𝐞 𝐚𝐠𝐢𝐥𝐢𝐭𝐲: Spin up pipelines in minutes, not months. Scale seamlessly to meet demand.\nHere are some key ingredients for your modern data pipeline recipe:\n𝐂𝐥𝐨𝐮𝐝 𝐩𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐬: Leverage the power of AWS, Azure, or GCP for elastic, scalable infrastructure.\nChoose AWS - has highest market share.\n𝐒𝐭𝐫𝐞𝐚𝐦𝐢𝐧𝐠 𝐭𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬: Embrace Apache Kafka, #aws Kinesis, Apache Flink for real-time data ingestion.\n𝐌𝐢𝐜𝐫𝐨𝐬𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐚𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞: Break down monolithic pipelines into modular, manageable components.\n#aws lambda is a game changer here; Use #aws sns and sqs as well.\n𝐂𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫𝐢𝐳𝐚𝐭𝐢𝐨𝐧: Package your pipeline elements for portability and consistency.\n#aws ecs fargate is an amazing container based service.\n𝐎𝐫𝐜𝐡𝐞𝐬𝐭𝐫𝐚𝐭𝐢𝐨𝐧 𝐭𝐨𝐨𝐥𝐬: Use Airflow to automate and schedule tasks seamlessly.\n#aws MWAA shines here.\nWant to learn Modern Data Engineering on AWS?\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\nIf you've read so far, do LIKE the post 👍\n…see more\nData Pipelines Textbook",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7294656361873756160_slide_0.jpg",
+      "description": "JPEG image, 293x483 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The promotional post argues that traditional ETL tools and mainframe-based ETL remain in use but are losing prominence compared with modern data pipelines. It presents modern pipelines as cloud-oriented, scalable, modular, and capable of supporting real-time analytics and unified access to data. It recommends cloud platforms, streaming technologies, microservices, containerization, and orchestration, while highlighting several AWS services. The post also promotes an AWS data engineering course and does not provide evidence for its claims about ETL-tool demand or AWS market share.",
+    "topics": [
+      "Modern Data Pipelines",
+      "Cloud-Native Data Engineering",
+      "Real-Time Data Analytics",
+      "Stream Processing",
+      "Data Pipeline Architecture"
+    ],
+    "subtopics": [
+      "Traditional ETL Tools",
+      "Unified Data Lakes",
+      "Cloud Platforms",
+      "Real-Time Data Ingestion",
+      "Microservices Architecture",
+      "Containerization",
+      "Pipeline Orchestration"
+    ],
+    "concepts": [
+      "Modern Data Pipelines",
+      "Traditional ETL Tools",
+      "Real-Time Analytics",
+      "Cloud-Native Agility",
+      "Streaming Data Ingestion",
+      "Microservices Architecture",
+      "Containerized Pipeline Components"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What characteristics does the post associate with modern data pipelines?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer covers agility, scalability, and support for real-time insights.\nA strong answer also covers unified data access, cloud-native operation, modular components, containerization, and automated orchestration."
+    },
+    {
+      "question": "Which technologies presented in the post support real-time data ingestion?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer identifies Apache Kafka, AWS Kinesis, and Apache Flink.\nA strong answer explains that the post associates these technologies with real-time ingestion."
+    },
+    {
+      "question": "How can the technologies in the post be mapped to a modular, cloud-based pipeline architecture?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer uses AWS, Azure, or GCP for the cloud infrastructure.\nA strong answer associates Kafka, Kinesis, or Flink with ingestion and Lambda, SNS, or SQS with microservices-based pipeline components.\nA strong answer associates ECS Fargate with containerized components and Airflow or AWS MWAA with task orchestration."
+    },
+    {
+      "question": "What argument does the post make about traditional ETL tools, and what qualification does it include?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer states that the post claims traditional ETL tools are losing their earlier prominence.\nA strong answer also notes that the post acknowledges continued use of those tools and mainframe-based ETL jobs."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Modern Data Pipelines",
+    "secondary_topics": [
+      "Cloud-Native Data Engineering",
+      "Real-Time Analytics",
+      "Stream Processing",
+      "Microservices Architecture",
+      "Containerization",
+      "Workflow Orchestration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b06857d1d2e4824b",
+    "saved_date": "2026-10-01T23:35:27Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7294656361873756160",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7294656361873756160_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "63a547afa61cec08b4bcc72f3b3dd50d786b5f19b52e13fedc1f032743fa22be",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Unified Data Lake",
+        "Pipeline Orchestration"
+      ],
+      "questions": [
+        "Why are orchestration tools included in the post's modern data pipeline architecture?"
+      ]
+    }
+  }
+}

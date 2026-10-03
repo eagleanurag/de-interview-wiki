@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-archive-86dfaa8a931318b0",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.776488Z",
+    "author": "Status is online",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:18Z"
+  },
+  "original_text": "Things people need to stop doing in data immediately:\n\n- using Pandas for analysis -> use Polars it's 10 to 100 times faster\n- using streaming pipelines when it wasn't asked for -> build pipelines that meet but don't exceed latency expectations\n- putting CASE WHEN statements in Tableau dashboards -> solve that problem upstream and share it with everybody\n- using R or Matlab for anything -> use Python like a normal person\n- solving logging problems in the data pipeline -> have a logging conversation with software engineers \n- Using YEAR(date) = 2024 in their queries -> use a sargable query like date between '2024-01-01' AND '2024-12-31' (this actually will hit indexes)\n\nWhat else should people stop doing immediately?",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This opinion-style post recommends replacing several data engineering practices. It favors Polars over Pandas for analysis, claiming Polars is 10 to 100 times faster; avoiding streaming pipelines unless requested; moving CASE WHEN logic out of Tableau dashboards and solving it upstream; using Python instead of R or Matlab; discussing pipeline logging problems with software engineers; and replacing YEAR(date) = 2024 with a date-range predicate that the post says will hit indexes. The recommendations are brief and include no benchmark details for the Polars claim.",
+    "topics": [
+      "Data analysis with Pandas and Polars",
+      "Data pipeline latency design",
+      "Tableau dashboard data preparation",
+      "Pipeline logging and collaboration",
+      "Sargable date filtering",
+      "Use of Python, R, and Matlab"
+    ],
+    "subtopics": [
+      "Claimed Polars performance advantage",
+      "Avoiding unnecessary streaming pipelines",
+      "Moving CASE WHEN logic upstream",
+      "Software engineer involvement in pipeline logging",
+      "Replacing YEAR(date) = 2024 with a date range",
+      "General preference for Python"
+    ],
+    "concepts": [
+      "Pandas and Polars",
+      "Latency-aligned pipeline design",
+      "Upstream dashboard transformation",
+      "Python over R and Matlab",
+      "Collaborative pipeline logging",
+      "Sargable date filtering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, which library should be used for analysis instead of Pandas, and what performance claim supports that recommendation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The recommendation is to use Polars instead of Pandas.\nThe author claims that Polars is 10 to 100 times faster but provides no supporting benchmark details."
+    },
+    {
+      "question": "A data requirement does not ask for streaming. How should the pipeline be designed according to the post?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The pipeline should not use streaming unless streaming was requested.\nThe design should meet the stated latency expectations without exceeding them."
+    },
+    {
+      "question": "A Tableau dashboard contains CASE WHEN statements. Where should this logic be handled according to the post?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The logic should be solved upstream rather than embedded in the Tableau dashboard.\nThe resulting data should be shared with everyone."
+    },
+    {
+      "question": "What should a data engineer do when struggling with logging problems in a pipeline?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The engineer should discuss the logging problem with software engineers."
+    },
+    {
+      "question": "Rewrite the query condition YEAR(date) = 2024 using the sargable form recommended in the post and state the claimed benefit.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The recommended condition is date BETWEEN '2024-01-01' AND '2024-12-31'.\nThe post claims that the date-range condition will hit indexes."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering anti-patterns and replacement practices",
+    "secondary_topics": [
+      "Data analysis library performance",
+      "Pipeline latency and streaming",
+      "Upstream data preparation for Tableau",
+      "Pipeline logging collaboration",
+      "Sargable date filtering and indexes"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:86dfaa8a931318b0",
+    "saved_date": "2026-10-01T23:35:18Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a178d29675da2cc212290dd90c8428e042876e67753163f8ca46bd2755a6b2b0",
+    "enricher_version": "3"
+  }
+}

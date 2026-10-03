@@ -1,0 +1,140 @@
+{
+  "id": "urn-li-saved-1ee237c443879de0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343486257341112321",
+    "captured_at": "2026-10-02T00:15:45.434558Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:04Z"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\n💰12–15 LPA Package! | 𝐀𝐦𝐞𝐫𝐢𝐜𝐚𝐧 𝐄𝐱𝐩𝐫𝐞𝐬𝐬 - 𝐑𝐞𝐚𝐥 𝐒𝐐𝐋 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\n𝐑𝐨𝐥𝐞: Data Analyst (0–3 Years)\n𝐈𝐟 𝐲𝐨𝐮'𝐫𝐞 𝐩𝐫𝐞𝐩𝐚𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐚 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰, 𝐭𝐡𝐢𝐬 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐬𝐢𝐠𝐧 𝐭𝐨 𝐠𝐨 𝐛𝐞𝐲𝐨𝐧𝐝 𝐭𝐞𝐱𝐭𝐛𝐨𝐨𝐤 𝐒𝐐𝐋 𝐚𝐧𝐝 𝐟𝐨𝐜𝐮𝐬 𝐨𝐧 𝐫𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐬𝐨𝐥𝐯𝐢𝐧𝐠.\n📌 These are actual SQL questions asked by American Express — designed to test your logic, clarity, and business understanding:\n🔹 Find duplicate rows using GROUP BY and HAVING\n🔹 Difference between 𝐈𝐍𝐍𝐄𝐑 𝐉𝐎𝐈𝐍 𝐚𝐧𝐝 𝐎𝐔𝐓𝐄𝐑 𝐉𝐎𝐈𝐍 — real examples matter\n🔹 Fetch the 𝐬𝐞𝐜𝐨𝐧𝐝-𝐡𝐢𝐠𝐡𝐞𝐬𝐭 𝐬𝐚𝐥𝐚𝐫𝐲 — subquery vs ROW_NUMBER()\n🔹 Employees earning more than their managers — self-join logic\n🔹 Power of 𝐖𝐢𝐧𝐝𝐨𝐰 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐬 like RANK() and ROW_NUMBER()\n🔹 Cumulative Sum with SUM() OVER (PARTITION BY...)\n🔹 UNION vs UNION ALL — when performance matters\n🔹 SQL-based Fraud Detection with CTEs\n🔹 Pivoting rows to columns — transpose with SQL\n🔹 Year-over-Year Growth — real interview logic\n💡 𝐓𝐢𝐩: Focus on writing clean, optimized SQL. American Express interviews aren't about memorizing syntax — they want to see how you solve problems.\nCurious about the answers? Want me to break these down one by one?\nDrop a comment 👇\n…see more\nReal SQL Interview Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343486257341112321_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional post claims to list actual American Express SQL interview questions for a 0–3-year Data Analyst role and advertises a 12–15 LPA package. It names duplicate detection, SQL joins, second-highest salary queries, window functions, cumulative sums, UNION variants, fraud detection with CTEs, pivoting, and year-over-year growth. The post does not provide table schemas, sample data, complete questions, SQL solutions, or answers. It advises candidates to write clean, optimized SQL and demonstrate logic, clarity, business understanding, and problem-solving rather than merely memorizing syntax.",
+    "topics": [
+      "SQL interview preparation",
+      "Data Analyst interviews",
+      "SQL duplicate detection",
+      "SQL joins",
+      "SQL subqueries",
+      "SQL window functions",
+      "SQL set operations",
+      "CTEs",
+      "SQL-based fraud detection",
+      "SQL pivoting",
+      "Year-over-year growth",
+      "SQL problem-solving"
+    ],
+    "subtopics": [
+      "Finding duplicate rows with GROUP BY and HAVING",
+      "Comparing INNER JOIN and OUTER JOIN",
+      "Finding the second-highest salary with a subquery or ROW_NUMBER()",
+      "Comparing employee and manager salaries with a self-join",
+      "Using RANK() and ROW_NUMBER()",
+      "Calculating a cumulative sum with SUM() OVER (PARTITION BY...)",
+      "Choosing between UNION and UNION ALL",
+      "Structuring SQL fraud-detection logic with CTEs",
+      "Transposing rows into columns with SQL pivoting",
+      "Calculating year-over-year growth"
+    ],
+    "concepts": [
+      "GROUP BY and HAVING",
+      "INNER JOIN and OUTER JOIN",
+      "Subquery and ROW_NUMBER()",
+      "Self-join",
+      "RANK() and ROW_NUMBER()",
+      "Cumulative Sum with SUM() OVER",
+      "UNION and UNION ALL",
+      "CTEs",
+      "SQL Pivoting",
+      "Year-over-Year Growth",
+      "Clean, Optimized SQL"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write SQL to find duplicate rows using GROUP BY and HAVING?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The solution explicitly uses both GROUP BY and HAVING, which the post identifies as the duplicate-row technique."
+    },
+    {
+      "question": "What is the difference between INNER JOIN and OUTER JOIN, and how would you demonstrate it with a real example?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The response distinguishes INNER JOIN from OUTER JOIN and supports the comparison with a concrete example."
+    },
+    {
+      "question": "How can the second-highest salary be fetched using either a subquery or ROW_NUMBER()?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response addresses the second-highest-salary problem and compares the subquery and ROW_NUMBER() approaches named in the post."
+    },
+    {
+      "question": "How would you use self-join logic to find employees earning more than their managers?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The self-join compares employee salaries with manager salaries and identifies employees whose salaries are greater."
+    },
+    {
+      "question": "How would you calculate a cumulative sum using SUM() OVER (PARTITION BY...)?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The calculation uses SUM() as a window function with OVER and includes PARTITION BY as shown in the post."
+    },
+    {
+      "question": "When would you choose UNION instead of UNION ALL, and what performance consideration should be evaluated?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The response contrasts UNION with UNION ALL and directly addresses the performance dimension emphasized by the post."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL Interview Preparation",
+    "secondary_topics": [
+      "SQL Duplicate Detection",
+      "SQL Joins",
+      "Subqueries",
+      "Window Functions",
+      "Set Operations",
+      "CTEs",
+      "SQL Pivoting",
+      "Year-over-Year Growth",
+      "SQL Optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1ee237c443879de0",
+    "saved_date": "2026-10-01T23:16:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343486257341112321",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343486257341112321_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9aa45dd9a474f526a7df80aaf349c1ebdbfe3aeb61c6c4d9c0168de0c7e3f47e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

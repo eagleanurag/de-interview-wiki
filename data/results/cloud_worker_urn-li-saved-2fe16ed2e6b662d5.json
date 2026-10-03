@@ -1,0 +1,146 @@
+{
+  "id": "urn-li-saved-2fe16ed2e6b662d5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326448338617147392",
+    "captured_at": "2026-10-02T00:15:46.219144Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:40Z"
+  },
+  "original_text": "Data Engineer | 50K+ LinkedIn | NIT Trichy\n1yr •\nPySpark Interview Cheatsheet, I wish I had this while preparing for Data Engineering Interviews. 🔻\n1/ Optimizing Joins with Broadcast\nWhat it does: Broadcasts smaller DataFrame to all nodes to avoid shuffle in joins.\nHow to apply:\nfrom pyspark.sql.functions import broadcast\ndf_large.join(broadcast(df_small), \"id\")\nUse Case: Joining a large fact table with a small dimension table efficiently.\n2/ Handling Skewed Data in GroupBy\nWhat it does: Mitigates data skew by salting keys to balance partitions.\nHow to apply:\ndf.withColumn(\"salt\", (rand() * 10).cast(\"int\")).groupBy(\"key\", \"salt\").agg(...)\nUse Case: Reducing hotspot partitions in aggregations on skewed keys.\n3/ Dynamic Partition Overwrite\nWhat it does: Overwrites specific partitions without affecting others.\nHow to apply:\nspark.conf.set(\"spark.sql.sources.partitionOverwriteMode\", \"dynamic\")\ndf.write.partitionBy(\"date\").mode(\"overwrite\").parquet(\"path\")\nUse Case: Updating specific date partitions in a data lake.\n4/ Window Functions with Custom Frames\nWhat it does: Defines precise row ranges for window calculations.\nHow to apply:\nfrom pyspark.sql.window import Window\nw = Window.partitionBy(\"category\").orderBy(\"date\").rowsBetween(-6, 0)\ndf.withColumn(\"rolling_avg\", avg(\"sales\").over(w))\nUse Case: Calculating 7-day moving averages for sales trends.\n5/ Caching vs Persist with Storage Levels\nWhat it does: Persists DataFrame with specific storage levels for performance.\nHow to apply:\ndf.persist(pyspark.StorageLevel.MEMORY_AND_DISK)\nUse Case: Optimizing iterative ML pipelines with memory and disk spillover.\n6/ Handling Nulls in Complex Joins\nWhat it does: Manages nulls explicitly to avoid incorrect join results.\nHow to apply:\ndf1.join(df2, (df1.id == df2.id) & (df1.id.isNotNull()), \"left\")\nUse Case: Ensuring accurate results in joins with incomplete data.\n7/ Adaptive Query Execution (AQE)\nWhat it does: Dynamically optimizes query plans at runtime.\nHow to apply:\nspark.conf.set(\"spark.sql.adaptive.enabled\", \"true\")\nUse Case: Improving performance in skewed joins or aggregations automatically.\n8/ Incremental Processing with Delta Lake\nWhat it does: Enables upsert operations for incremental data updates.\nHow to apply:\nfrom delta.tables import DeltaTable\nDeltaTable.forPath(spark, \"path\").alias(\"t\").merge(df.alias(\"s\"), \"t.id = s.id\")...\nUse Case: Updating a data warehouse with streaming or batch data.\n9/ Repartition vs Coalesce Strategically\nWhat it does: Adjusts DataFrame partitions for optimal processing.\nHow to apply:\ndf.repartition(10, \"key\") or df.coalesce(5)\nUse Case: Repartition for parallelism, coalesce to reduce shuffle overhead.\n𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝐑𝐞𝐬𝐨𝐮𝐫𝐜𝐞𝐬\n1. https://lnkd.in/gV_nsADx\n2. https://lnkd.in/gJv-QK9z\n3. https://lnkd.in/gK8hcJHR\n𝐍𝐞𝐞𝐝 𝐇𝐞𝐥𝐩 𝐰𝐢𝐭𝐡 𝐲𝐨𝐮 𝐝𝐚𝐭𝐚 𝐜𝐚𝐫𝐞𝐞𝐫, 𝐂𝐨𝐧𝐧𝐞𝐜𝐭 1 𝐭𝐨 1 𝐡𝐞𝐫𝐞 :\nhttps://lnkd.in/gA_B7vxW\n♻️ If you found this useful, repost it !\n👋 Follow me for more daily data content\nPySpark on Databricks\ndocs.databricks.com",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a concise LinkedIn-style PySpark interview cheatsheet covering nine techniques for Spark DataFrame performance, join correctness, partitioned writes, window calculations, caching, and incremental updates. It gives each item a short purpose, code example, and use case: broadcast joins, salting for skewed GroupBy operations, dynamic partition overwrite, custom window frames, storage-level persistence, explicit null handling in joins, Adaptive Query Execution, Delta Lake merge upserts, and repartition versus coalesce. The body is a brief list rather than a complete tutorial, the Delta Lake merge is visibly abbreviated with an ellipsis, and the footer contains resource and promotional links plus a reference to PySpark on Databricks documentation.",
+    "topics": [
+      "PySpark",
+      "DataFrame joins",
+      "Data skew mitigation",
+      "Partitioned writes",
+      "Window functions",
+      "Caching and persistence",
+      "Join correctness",
+      "Adaptive Query Execution",
+      "Delta Lake incremental processing",
+      "DataFrame partitioning",
+      "Databricks"
+    ],
+    "subtopics": [
+      "Broadcast joins",
+      "Salting skewed GroupBy keys",
+      "Dynamic partition overwrite",
+      "Custom window frames",
+      "Storage-level persistence",
+      "Explicit null handling in complex joins",
+      "Adaptive Query Execution (AQE)",
+      "Delta Lake merge upserts",
+      "Repartition versus coalesce"
+    ],
+    "concepts": [
+      "Broadcast Join",
+      "Salting for Skewed GroupBy",
+      "Dynamic Partition Overwrite",
+      "Custom Window Frames",
+      "Storage-Level Persistence",
+      "Explicit Null Handling in Complex Joins",
+      "Adaptive Query Execution (AQE)",
+      "Delta Lake Incremental Upsert",
+      "Repartition versus Coalesce"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can broadcast join optimization be applied when joining a large fact table with a small dimension table?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The example imports `broadcast` from `pyspark.sql.functions` and passes the smaller DataFrame to it.\nThe post says this broadcasts the smaller DataFrame to all nodes so the join can avoid shuffle.\nThe shown pattern is `df_large.join(broadcast(df_small), \"id\")` for a large fact table and a small dimension table."
+    },
+    {
+      "question": "How can salting be used to balance partitions in a skewed GroupBy?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The example adds a salt column with `(rand() * 10).cast(\"int\")`.\nIt then groups by both `key` and `salt`.\nThe post says this balances partitions and reduces hotspot partitions for aggregations on skewed keys."
+    },
+    {
+      "question": "How would you configure and use dynamic partition overwrite for date-partitioned Parquet data?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The configuration sets `spark.sql.sources.partitionOverwriteMode` to `dynamic`.\nThe write uses `partitionBy(\"date\")`, overwrite mode, and the `parquet` format to the specified path.\nThe post says this overwrites specific partitions without affecting others and identifies date-partition updates in a data lake as the use case."
+    },
+    {
+      "question": "How does the custom frame in the post produce a 7-day rolling average for sales?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The window is partitioned by `category` and ordered by `date`.\nThe frame uses `rowsBetween(-6, 0)` to define the row range.\nApplying `avg(\"sales\").over(w)` produces the example's `rolling_avg` result, which the post presents as a 7-day moving average for sales trends."
+    },
+    {
+      "question": "What does the post demonstrate about persisting a DataFrame with a storage level?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The example calls `df.persist(pyspark.StorageLevel.MEMORY_AND_DISK)`.\nThe stated purpose is performance optimization with a specific storage level.\nThe post associates the technique with iterative ML pipelines and memory/disk spillover."
+    },
+    {
+      "question": "How does the shown complex join manage nulls?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The join condition combines `df1.id == df2.id` with `df1.id.isNotNull()`.\nThe join uses the `left` type.\nThe post says explicit null management helps avoid incorrect results with incomplete data."
+    },
+    {
+      "question": "What is the purpose of enabling Adaptive Query Execution in the example?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The configuration sets `spark.sql.adaptive.enabled` to `true`.\nThe post describes AQE as dynamically optimizing query plans at runtime.\nIt identifies automatic performance improvement for skewed joins and aggregations as the use case."
+    },
+    {
+      "question": "How does the post demonstrate an incremental upsert with Delta Lake?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The code references a Delta table with `DeltaTable.forPath(spark, \"path\")` and aliases it as `t`.\nIt calls `merge` with `df.alias(\"s\")` and the condition `t.id = s.id`.\nThe post associates this pattern with upserts for incremental updates to a data warehouse using streaming or batch data.\nThe merge snippet ends with an ellipsis, so it does not show the complete operation."
+    },
+    {
+      "question": "How does the post contrast `repartition` and `coalesce`?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "`df.repartition(10, \"key\")` is the repartitioning example.\nThe post associates repartitioning with parallelism.\n`df.coalesce(5)` is the coalescing example, associated with reducing shuffle overhead.\nBoth calls adjust DataFrame partitions for processing."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark performance optimization",
+    "secondary_topics": [
+      "Data skew mitigation",
+      "Partitioned writes",
+      "Window functions",
+      "Caching and persistence",
+      "Join correctness",
+      "Delta Lake incremental processing",
+      "DataFrame partitioning",
+      "Databricks"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:2fe16ed2e6b662d5",
+    "saved_date": "2026-10-01T23:27:40Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326448338617147392",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "991730615757974f7c9b44e592a393553ab7bd2ea15821bf4f9ca48799b427fe",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Spark performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

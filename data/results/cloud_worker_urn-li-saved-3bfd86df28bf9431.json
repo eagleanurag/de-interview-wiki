@@ -1,0 +1,104 @@
+{
+  "id": "urn-li-saved-3bfd86df28bf9431",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327540020444049411",
+    "captured_at": "2026-10-02T00:15:46.679143Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:37Z"
+  },
+  "original_text": "AI/ML @ Under Armour | ex-Tesco | ML • Backend • LLMs • RAG • AI Agents • Cloud\n1yr •\nSolving a Classic PySpark Bottleneck: Data Skew in Action\nA few days ago, we ran into a familiar Spark issue: a newly built PySpark job was taking unusually long to complete—and then failed altogether.\nAt first, the logic looked fine. But a closer look at the Spark UI and logs revealed the real culprit: data skew.\nOne partition was carrying a disproportionately large chunk of data, leading to uneven task distribution and slow-running stragglers. A classic “80/20” problem—where a small percentage of data causes a large percentage of processing time.\nHere’s how I fixed it:\n→ Identified the skewed key using the Spark UI’s stage and task metrics\n→ Applied salting to distribute the load more evenly across partitions during joins\n→ Used broadcast joins where possible to reduce shuffles\n→ Tuned spark.sql.shuffle.partitions and enabled adaptive query execution (AQE)\nAfter these changes, the job completed in a fraction of the original time—with much more consistent performance.\nHere is a doc of how to debug spark jobs slow spark jobs.\nDoc Credit- LinkedIn\n#PySpark #DataEngineering #SparkJobs #DataSkew #BigData #PerformanceTuning #SparkUI Databricks #DebuggingTips\n…see more\nSpark optimisation",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327540020444049411_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This brief post describes a PySpark job that ran unusually slowly and failed because one partition held a disproportionately large amount of data. The author diagnosed data skew through Spark UI stage and task metrics and logs, then applied salting to skewed joins, used broadcast joins where possible, tuned spark.sql.shuffle.partitions, and enabled adaptive query execution (AQE). The author reports that the job then completed in a fraction of its original time with more consistent performance. The referenced debugging document, configuration values, and detailed benchmark results are not included.",
+    "topics": [
+      "Spark data skew",
+      "Spark job debugging",
+      "Join optimization"
+    ],
+    "subtopics": [
+      "Identifying skewed partitions with Spark UI metrics",
+      "Using salting during skewed joins",
+      "Using broadcast joins to reduce shuffles",
+      "Tuning spark.sql.shuffle.partitions",
+      "Enabling adaptive query execution"
+    ],
+    "concepts": [
+      "Data skew",
+      "Spark UI stage and task metrics",
+      "Salting",
+      "Broadcast joins",
+      "spark.sql.shuffle.partitions",
+      "Adaptive query execution"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What symptoms and diagnostic evidence can indicate data skew in a slow or failing PySpark job?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The job may take unusually long to complete and may eventually fail.\nSpark UI stage and task metrics and logs can reveal that one partition contains a disproportionately large share of the data.\nUneven task distribution and slow stragglers are characteristic symptoms of the skew described in the post."
+    },
+    {
+      "question": "How would you mitigate data skew in a PySpark job based on the approach described in the post?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Identify the affected key by examining Spark UI stage and task metrics and the job logs.\nApply salting during joins to distribute the load more evenly across partitions.\nUse broadcast joins where possible to reduce shuffles.\nTune spark.sql.shuffle.partitions and enable adaptive query execution."
+    },
+    {
+      "question": "Why can a small percentage of data cause a large percentage of processing time in a Spark job?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A disproportionately large amount of data can be concentrated in one partition.\nThat concentration creates uneven task distribution and slow-running stragglers.\nThe post characterizes this as a classic 80/20-style problem."
+    },
+    {
+      "question": "How do salting and broadcast joins serve different optimization purposes in the case described?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Salting is used to distribute skewed join load more evenly across partitions.\nBroadcast joins are used where possible to reduce shuffles."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark performance tuning",
+    "secondary_topics": [
+      "Data skew troubleshooting",
+      "Join optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3bfd86df28bf9431",
+    "saved_date": "2026-10-01T23:23:37Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327540020444049411",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327540020444049411_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8f8fbe9f6e9fc21494eb0535f4c8754c2c27c37a0f0e4e801a7983c3c85ca017",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "PySpark performance tuning"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

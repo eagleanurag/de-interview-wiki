@@ -142,8 +142,52 @@ def is_detector_source(path: Path) -> bool:
     }
 
 
+#: Directories that hold other people's or temporary code.
+#:
+#: The audit's subject is this project. A recursive glob over the
+#: repository root reached 1,231 modules inside ``.venv`` and every
+#: throwaway script in ``.agent``, which meant a scratch file could fail
+#: a security audit and a dependency's style could be reported as ours.
+#: Neither is a finding about this codebase, and both make the audit
+#: harder to trust rather than easier.
+NOT_OURS = frozenset(
+    {
+        ".git",
+        ".venv",
+        ".agent",
+        ".opencode",
+        ".pytest_cache",
+        "__pycache__",
+        "build",
+        "site",
+        "node_modules",
+    }
+)
+
+
 def python_sources() -> list[Path]:
-    return sorted(REPO_ROOT.rglob("*.py"))
+    """
+    Every Python file this project owns.
+
+    Skipped directories are excluded at the walk rather than filtered
+    afterwards, so a nested virtual environment or a generated tree does
+    not have to be traversed to be discarded.
+    """
+
+    found: list[Path] = []
+
+    for path in REPO_ROOT.rglob("*.py"):
+        relative = path.relative_to(REPO_ROOT)
+
+        # Skipped when any component of the path is a directory that
+        # holds other people's or temporary code. isdisjoint is True
+        # when there is no overlap, so it reads as "nothing to skip".
+        if not NOT_OURS.isdisjoint(relative.parts):
+            continue
+
+        found.append(path)
+
+    return sorted(found)
 
 
 def text_sources() -> list[Path]:
@@ -154,6 +198,31 @@ def text_sources() -> list[Path]:
         for path in tracked
         if (REPO_ROOT / path).is_file()
     ]
+
+
+def test_the_audit_reads_only_this_projects_code() -> None:
+    """
+    Its subject is this project, and nothing else.
+
+    Worth asserting because the audit used to walk the whole working
+    tree: it read 1,231 modules inside ``.venv`` and every throwaway
+    script under ``.agent``. A dependency's style was then reportable as
+    ours, and one scratch file with a byte-order mark failed the run.
+
+    Guarded here so removing the scoping shows up as a failure about the
+    audit rather than as a confusing failure somewhere else.
+    """
+
+    roots = {
+        relative.parts[0]
+        for relative in (
+            path.relative_to(REPO_ROOT)
+            for path in python_sources()
+        )
+        if relative.parts
+    }
+
+    assert roots <= {"src", "tests", "config"}, sorted(roots)
 
 
 def test_no_real_credential_is_committed() -> None:

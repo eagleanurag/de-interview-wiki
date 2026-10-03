@@ -1,0 +1,128 @@
+{
+  "id": "urn-li-saved-833b9010385a31b9",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7343254116598542337",
+    "captured_at": "2026-10-02T00:15:48.847147Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:16:03Z"
+  },
+  "original_text": "SQL is a lot more than “𝗦𝗘𝗟𝗘𝗖𝗧 * 𝗙𝗥𝗢𝗠” in the Real Projects!\n\n“Real SQL isn't written to impress. It's written to run every day at 2am without fail.”\nYou get it right?\n\nWith bootcamps and beginner courses, All you know is -\nSELECT, INSERT, UPDATE, DELETE\nThen you feel you’re ready to go.\n\nWhereas, it’s more about -\n✅ 𝗗𝗮𝘁𝗮 𝗜𝗻𝗴𝗲𝘀𝘁𝗶𝗼𝗻 & 𝗖𝗹𝗲𝗮𝗻𝗶𝗻𝗴: SQL isn't just SELECTing. \nIt's joining logs, cleaning messy real-world data with CASE WHEN this, JOIN that, handling NULLs, and writing robust WHERE conditions to filter and shape incoming data.\n✅ 𝗗𝗮𝘁𝗮 𝗧𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗟𝗼𝗴𝗶𝗰: It’s the core logic! \nWriting efficient GROUP BY clauses, using window functions to rank, rank, and transform data before it even gets to the warehouse.\n✅ 𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 & 𝗥𝗲𝗽𝗼𝗿𝘁𝗶𝗻𝗴: Building complex reports with nested WITH common table expressions (CTEs) to break down complex logic, using window functions to analyze trends.\n✅ 𝗗𝗮𝘁𝗮 𝗪𝗮𝗿𝗲𝗵𝗼𝘂𝘀𝗶𝗻𝗴: Structuring data with GROUP BY and PARTITION BY time, optimizing queries for reporting, maybe even using JOINing fact and dimension tables.\n✅ 𝗗𝗮𝘁𝗮 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 & 𝗟𝗼𝗴𝗶𝗰: Using WHERE clauses to filter and ensure data integrity, crafting JOIN statements to link different data sources, handling NULL values, using GROUP BY for aggregation.\n\nWhen you think you know SQL, think if you can really solve these performance hiccups -\n❌ SELECT * on large tables\n❌ No indexes on JOIN columns\n❌ Unnecessary subqueries\n❌ N+1 query patterns\n\nThink of SQL logic as the recipe in a kitchen—master the recipe, and you can cook up solutions with any tool in any kitchen.\n\nWilling to level up? Then take up your SQL Challenge This Week 👇\nFind a real business problem and solve it with SQL:\n\n𝗖𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗮𝗻𝗮𝗹𝘆𝘀𝗶𝘀: Who are your most valuable customers?\n𝗦𝗮𝗹𝗲𝘀 𝘁𝗿𝗲𝗻𝗱𝘀: What patterns exist in your transaction data?\n𝗗𝗮𝘁𝗮 𝗾𝘂𝗮𝗹𝗶𝘁𝘆: What inconsistencies exist in your datasets?\n𝗣𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 𝗼𝗽𝘁𝗶𝗺𝗶𝘇𝗮𝘁𝗶𝗼𝗻: Can you make a slow query 10x faster?\n\nShare your results! Post your most complex SQL query and explain what business problem you solved. Tag us(Pooja Jain & Ankita Gulati) - we love seeing real SQL in action.🔥\n\nImage Credits: Brij kishore Pandey\n\nNeed some resources for reference? Refer the comments section 👇\n#data #engineering #reeltorealdata #python #sql #analytics \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7343254116598542337_slide_0.jpg",
+      "description": "GIF image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents practical SQL as more than basic SELECT, INSERT, UPDATE, and DELETE operations. It highlights SQL for ingesting and cleaning logs, transforming data with GROUP BY and window functions, building reports with nested common table expressions, joining fact and dimension tables, handling NULL values, and enforcing data quality with WHERE conditions. It also identifies SELECT * on large tables, missing indexes on JOIN columns, unnecessary subqueries, and N+1 query patterns as performance concerns. The post closes with challenge ideas involving customer value, transaction patterns, data inconsistencies, and query speed, but it does not provide concrete queries, implementations, or performance results.",
+    "topics": [
+      "SQL",
+      "Data ingestion and cleaning",
+      "SQL data transformation",
+      "Data analysis and reporting",
+      "Query performance"
+    ],
+    "subtopics": [
+      "Cleaning logs with CASE WHEN",
+      "Joining data from different sources",
+      "Handling NULL values",
+      "Filtering and shaping data with WHERE",
+      "Aggregating data with GROUP BY",
+      "Ranking and analyzing data with window functions",
+      "Breaking down logic with common table expressions",
+      "Time-based PARTITION BY",
+      "Joining fact and dimension tables",
+      "SELECT * on large tables",
+      "Indexes on JOIN columns",
+      "Unnecessary subqueries",
+      "N+1 query patterns"
+    ],
+    "concepts": [
+      "SQL data ingestion and cleaning",
+      "CASE WHEN expressions",
+      "JOIN statements",
+      "NULL handling",
+      "WHERE conditions",
+      "GROUP BY aggregation",
+      "Window functions",
+      "Common table expressions",
+      "PARTITION BY time",
+      "SELECT * on large tables",
+      "Indexes on JOIN columns",
+      "Unnecessary subqueries",
+      "N+1 query patterns"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you use SQL to clean and shape incoming log data?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer uses JOIN to combine relevant logs or records and CASE WHEN to clean messy values.\nA strong answer includes explicit NULL handling and robust WHERE conditions to filter and shape the incoming data."
+    },
+    {
+      "question": "How do GROUP BY and window functions serve different purposes in SQL transformation and reporting?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains that GROUP BY aggregates data by groups.\nA strong answer explains that window functions can rank records, transform data before it reaches the warehouse, and support trend analysis."
+    },
+    {
+      "question": "How can nested CTEs and joins between fact and dimension tables support a complex report?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer explains that nested common table expressions break complex report logic into smaller steps.\nA strong answer explains that joins between fact and dimension tables combine the records needed to structure the report."
+    },
+    {
+      "question": "What query anti-patterns should you investigate when a SQL report performs poorly?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer checks for SELECT * usage on large tables.\nA strong answer checks whether JOIN columns have indexes and whether queries contain unnecessary subqueries.\nA strong answer also checks for an N+1 query pattern."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Data ingestion and cleaning",
+      "Data transformation",
+      "Data analysis and reporting",
+      "Data quality",
+      "Query performance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:833b9010385a31b9",
+    "saved_date": "2026-10-01T23:16:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7343254116598542337",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7343254116598542337_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7343254116598542337_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "89983a237caf19de30a7737992948387e853a72233153dfc55a11cd027c3bca1",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data quality"
+      ],
+      "concepts": [
+        "Fact and dimension table joins"
+      ],
+      "questions": [
+        "What SQL techniques can protect data quality when working with data from different sources?"
+      ]
+    }
+  }
+}

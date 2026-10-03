@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-3b629cc59fdd1ee1",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7295651187985395712",
+    "captured_at": "2026-10-02T00:15:46.664969Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:22Z"
+  },
+  "original_text": "• 1st\nSWE-ML@ Google | Microsoft | IIT KGP • Kaggle & Codeforces Expert\n1yr •\n𝗟𝗲𝗲𝘁𝗖𝗼𝗱𝗲 𝗶𝘀𝗻’𝘁 𝗷𝘂𝘀𝘁 𝗮𝗯𝗼𝘂𝘁 𝘀𝗼𝗹𝘃𝗶𝗻𝗴 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀.\nIt’s about learning how to think.\n𝗗𝗼𝗻’𝘁 𝗷𝘂𝘀𝘁 𝗿𝗲𝗮𝗱 𝘀𝗼𝗹𝘂𝘁𝗶𝗼𝗻𝘀-𝘂𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱 𝘁𝗵𝗲𝗺.\n→ Why does this approach work?\n→ What patterns can I recognize?\n→ How can I apply this thinking elsewhere?\nThe real value isn’t in getting the right answer.\nIt’s in building the problem-solving intuition that makes future challenges easier.\n𝗪𝗮𝗻𝘁 𝘁𝗼 𝗹𝗲𝘃𝗲𝗹 𝘂𝗽?\n📌 Study different approaches, even if you got the answer right.\n📌 Re-solve problems in new ways-recursive vs. iterative, brute force vs. optimized.\n📌 Push yourself with harder problems.\n𝗧𝗵𝗲 𝗯𝗲𝘀𝘁 𝗿𝗲𝘀𝗼𝘂𝗿𝗰𝗲𝘀?\n🚀 Platforms: LeetCode, Codeforces, AtCoder.\n📚 Books: “Introduction to Algorithms” (Cormen) never gets old.\n🤝 Communities: Learn with others—it speeds up growth.\n𝗖𝗼𝗱𝗶𝗻𝗴 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝘀 𝗮𝗿𝗲 𝗮 𝘀𝗸𝗶𝗹𝗹.\nBut problem-solving? That’s a superpower.\nRepost this PDF if you find this helpful!\n#leetcode #solutions #shiv314\n…see more\nLeetcode solutions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7295651187985395712_slide_0.jpg",
+      "description": "PNG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is motivational guidance about improving problem-solving ability rather than merely obtaining correct answers. It recommends studying different approaches, re-solving problems using alternatives such as recursive versus iterative methods or brute force versus optimized methods, tackling harder problems, and learning with others. It names LeetCode, Codeforces, and AtCoder as platforms and references Introduction to Algorithms by Cormen, but provides no technical explanations, algorithms, solutions, or figures.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "general problem solving",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3b629cc59fdd1ee1",
+    "saved_date": "2026-10-01T23:35:22Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7295651187985395712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7295651187985395712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7295651187985395712_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "74200ea3a293cf248487aedf43e010b74be61e4a0b04548bead847b537708199",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

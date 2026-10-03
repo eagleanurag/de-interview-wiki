@@ -1,0 +1,136 @@
+{
+  "id": "urn-li-archive-ade1209269197651",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.168384Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:01Z"
+  },
+  "original_text": "SQL Must Know Differences:\n\n🔰 RANK vs DENSE_RANK:\nRANK: Provides a ranking with gaps if there are ties.\nDENSE_RANK: Provides a ranking without gaps, even in the case of ties.\n\n🔰 HAVING vs WHERE Clause:\nWHERE: Filters rows before grouping.\nHAVING: Filters groups after the GROUP BY clause.\n\n🔰 UNION vs UNION ALL:\nUNION: Removes duplicates and combines results.\nUNION ALL: Combines results without removing duplicates.\n\n🔰 JOIN vs UNION:\nJOIN: Combines columns from multiple tables.\nUNION: Combines rows from multiple tables with similar structure.\n\n🔰 DELETE vs DROP vs TRUNCATE:\nDELETE: Removes rows, with the option to filter.\nDROP: Removes the entire table or database.\nTRUNCATE: Deletes all rows but keeps the table structure.\n\n🔰 CTE vs TEMP TABLE:\nCTE: Temporary result set used within a single query.\nTEMP TABLE: Physical temporary table that persists for the session.\n\n🔰 SUBQUERIES vs CTE:\nSUBQUERIES: Nested queries inside the main query.\nCTE: Can be more readable and used multiple times in a query.\n\n🔰 ISNULL vs COALESCE:\nISNULL: Replaces NULL with a specified value, accepts two parameters.\nCOALESCE: Returns the first non-NULL value from a list of expressions, accepting multiple parameters.\n\n🔰 INTERSECT vs INNER JOIN:\nINTERSECT: Returns common rows from two queries.\nINNER JOIN: Combines matching rows from two tables based on a condition.\n\n🔰 EXCEPT vs NOT IN:\nEXCEPT: Returns rows in the first query but not in the second.\nNOT IN: Filters rows where a column's value is not in a given list.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post provides a concise reference for ten SQL distinctions involving ranking functions, filtering clauses, result combination, data removal, temporary query structures, subqueries, NULL handling, and set operations. It describes the behavior of each option but provides no SQL examples, syntax, performance comparisons, or additional media content.",
+    "topics": [
+      "SQL",
+      "Ranking functions",
+      "Filtering clauses",
+      "Set operations",
+      "Joins",
+      "Data removal commands",
+      "Temporary query structures",
+      "Subqueries",
+      "NULL handling"
+    ],
+    "subtopics": [
+      "RANK",
+      "DENSE_RANK",
+      "WHERE",
+      "HAVING",
+      "UNION",
+      "UNION ALL",
+      "JOIN",
+      "DELETE",
+      "DROP",
+      "TRUNCATE",
+      "CTE",
+      "TEMP TABLE",
+      "SUBQUERIES",
+      "ISNULL",
+      "COALESCE",
+      "INTERSECT",
+      "INNER JOIN",
+      "EXCEPT",
+      "NOT IN"
+    ],
+    "concepts": [
+      "RANK vs DENSE_RANK",
+      "WHERE vs HAVING",
+      "UNION vs UNION ALL",
+      "JOIN vs UNION",
+      "DELETE vs DROP vs TRUNCATE",
+      "CTE vs TEMP TABLE",
+      "SUBQUERIES vs CTE",
+      "ISNULL vs COALESCE",
+      "INTERSECT vs INNER JOIN",
+      "EXCEPT vs NOT IN"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do RANK and DENSE_RANK differ when ranking tied values?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "RANK produces rankings with gaps when there are ties.\nDENSE_RANK produces rankings without gaps even when there are ties."
+    },
+    {
+      "question": "How do the WHERE and HAVING clauses differ in a grouped query?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "WHERE filters rows before grouping.\nHAVING filters groups after the GROUP BY clause."
+    },
+    {
+      "question": "How do UNION, UNION ALL, and JOIN differ when combining data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "UNION combines results and removes duplicates.\nUNION ALL combines results without removing duplicates.\nJOIN combines columns from multiple tables, while UNION combines rows from multiple tables with a similar structure."
+    },
+    {
+      "question": "What happens to rows and table structure when using DELETE, DROP, and TRUNCATE?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "DELETE removes rows and provides the option to filter.\nDROP removes an entire table or database.\nTRUNCATE deletes all rows but keeps the table structure."
+    },
+    {
+      "question": "What are the stated differences among CTEs, temporary tables, and subqueries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A CTE is a temporary result set used within a single query.\nA TEMP TABLE is a physical temporary table that persists for the session.\nSubqueries are nested queries inside a main query, while a CTE can be more readable and used multiple times within a query."
+    },
+    {
+      "question": "How do ISNULL and COALESCE handle NULL values and parameters?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "ISNULL replaces NULL with a specified value and accepts two parameters.\nCOALESCE returns the first non-NULL value from a list of expressions and accepts multiple parameters."
+    },
+    {
+      "question": "What distinctions exist between INTERSECT and INNER JOIN, and between EXCEPT and NOT IN?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "INTERSECT returns common rows from two queries, while INNER JOIN combines matching rows from two tables based on a condition.\nEXCEPT returns rows from the first query that are not in the second query.\nNOT IN filters rows where a column's value is not in a given list."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL language distinctions",
+    "secondary_topics": [
+      "Ranking functions",
+      "Filtering clauses",
+      "Set operations",
+      "Joins",
+      "Data removal",
+      "CTEs and temporary tables",
+      "Subqueries",
+      "NULL handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ade1209269197651",
+    "saved_date": "2026-10-01T23:20:01Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "de18908ff28ee3b61383be19af8ebda5a93277f1856e1bda63a9fd6b7214228b",
+    "enricher_version": "3"
+  }
+}

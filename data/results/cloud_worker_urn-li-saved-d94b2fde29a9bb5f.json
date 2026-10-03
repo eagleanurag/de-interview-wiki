@@ -1,0 +1,111 @@
+{
+  "id": "urn-li-saved-d94b2fde29a9bb5f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315590769430474753",
+    "captured_at": "2026-10-02T00:15:52.310729Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:01Z"
+  },
+  "original_text": "Your SQL just got superpowers !\n\nDatabricks just dropped a set of AI Functions that let you run powerful language and forecasting tasks directly in SQL — and it's a total game-changer.\nCheck out this quick demo I ran (screenshot below 👇)\n\nUsing just one line of SQL, I analyzed sentiment from customer reviews in real time.\nImagine doing this across millions of rows… IN SECONDS.\n\nAnother Example it can prioritize task- I took an example of platform support tickets queue, \nYou can now auto-prioritize messages using SQL with Databricks AI functions. For example:\n\nSELECT ai_classify(\"My password is leaked and I can't access the system.\", ARRAY(\"urgent\", \"not urgent\"));\n\n-- Returns: urgent\n\nSuper useful for flagging critical tickets without writing complex logic or building ML models.\n\nThere are many more functions you can try out — sentiment analysis, summarization, translation, grammar correction, and more.\n\nExplore here 👉 https://lnkd.in/dtyjgGCy",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315590769430474753_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post claims that Databricks added AI Functions that run language and forecasting tasks directly in SQL. It demonstrates the ai_classify function assigning a platform support ticket to the labels \"urgent\" and \"not urgent,\" returning \"urgent\" so critical tickets can be flagged without complex logic or custom ML models. It also claims that customer-review sentiment can be analyzed in real time across millions of rows within seconds and mentions summarization, translation, and grammar correction. The post provides limited implementation detail, and the referenced screenshot or demo is not included, so its performance claim cannot be evaluated from the supplied content.",
+    "topics": [
+      "Databricks AI Functions",
+      "SQL-based AI tasks",
+      "Text classification",
+      "Sentiment analysis",
+      "Support ticket prioritization",
+      "Text summarization",
+      "Text translation",
+      "Grammar correction",
+      "Forecasting tasks"
+    ],
+    "subtopics": [
+      "ai_classify SQL function",
+      "Customer review sentiment analysis",
+      "Urgent versus non-urgent ticket classification",
+      "Natural language processing with SQL",
+      "Real-time text analysis claim"
+    ],
+    "concepts": [
+      "Databricks AI Functions",
+      "SQL-based AI invocation",
+      "ai_classify",
+      "Support ticket prioritization",
+      "Sentiment analysis",
+      "Text processing functions",
+      "Forecasting tasks"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What AI capabilities does the post attribute to Databricks AI Functions when used from SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post says language and forecasting tasks can be performed directly through Databricks AI Functions in SQL.\nIt specifically mentions sentiment analysis, text classification, summarization, translation, and grammar correction."
+    },
+    {
+      "question": "How does the shown ai_classify query prioritize a platform support ticket?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query supplies the ticket message and the allowed labels \"urgent\" and \"not urgent\" to ai_classify.\nFor the leaked-password example, the returned classification is \"urgent,\" which can be used to flag the ticket as critical."
+    },
+    {
+      "question": "What support-ticket automation does this approach avoid building?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The approach invokes ai_classify directly from SQL to classify and prioritize ticket messages.\nAccording to the post, this can flag urgent messages without complex custom logic or building a separate ML model."
+    },
+    {
+      "question": "What customer-review use case and performance claim are presented for Databricks AI Functions?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The proposed use case is sentiment analysis of customer reviews directly in SQL.\nThe post claims real-time analysis across millions of rows within seconds, but the supplied content contains no benchmark or demo details with which to verify that claim."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks AI Functions",
+    "secondary_topics": [
+      "SQL-based text classification",
+      "Sentiment analysis",
+      "Support ticket prioritization",
+      "Natural language processing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d94b2fde29a9bb5f",
+    "saved_date": "2026-10-01T23:30:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315590769430474753",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315590769430474753_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "e2185f50745050fbc24b90ffcf11508355edd896454fb0bd5b983104835bd6fc",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

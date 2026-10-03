@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-8e23f103dfae4856",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7310146449428611072",
+    "captured_at": "2026-10-02T00:15:49.408178Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:32:14Z"
+  },
+  "original_text": "𝗦𝗤𝗟 𝗤𝘂𝗲𝗿𝘆 𝗘𝘅𝗲𝗰𝘂𝘁𝗶𝗼𝗻 𝗢𝗿𝗱𝗲𝗿\n\nIn SQL, queries are executed in a specific order, which can be quite different from the order in which the clauses are written. \n\nHere’s the logical order of SQL query execution:\n\n1. FROM\nSpecifies the tables from which to retrieve or manipulate data.\n\n2. WHERE\nFilters rows based on specified conditions.\nOnly rows that meet the conditions proceed to the next stage.\n\n3. GROUP BY\nGroups rows into sets based on column(s) specified.\nAny aggregate functions (like SUM, COUNT, etc.) will now apply to each group.\n\n4. HAVING\nApplies filters to groups created by GROUP BY.\nOnly groups meeting these conditions move forward.\n\n5. SELECT\nDetermines which columns and expressions to return.\nExecutes any functions or expressions listed in the SELECT clause.\nDeduplication of rows (DISTINCT) happens here if specified.\n\n6. ORDER BY\nSorts the result based on specified column(s) and sort direction (ASC or DESC).\nDoes not impact the final rows selected, only the display order.\n\n7. LIMIT \nRestricts the number of rows returned by the query.\nUseful for pagination or getting a specific subset of rows.\n\n𝗟𝗲𝘁𝘀 𝘂𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱 𝘄𝗶𝘁𝗵 𝗮𝗻 𝘁𝗵𝗶𝘀 𝘀𝗶𝗺𝗽𝗹𝗲 𝗦𝗤𝗟 𝗾𝘂𝗲𝗿𝘆 \n\nSELECT department, COUNT(employee_id) AS total_employees\nFROM employees\nWHERE status = 'active'\nGROUP BY department\nHAVING total_employees > 5\nORDER BY total_employees DESC\nLIMIT 10;\n\n𝗧𝗵𝗶𝘀 𝗾𝘂𝗲𝗿𝘆 𝘄𝗼𝘂𝗹𝗱 𝗲𝘅𝗲𝗰𝘂𝘁𝗲 𝗶𝗻 𝘁𝗵𝗲 𝗳𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 𝗼𝗿𝗱𝗲𝗿:\n\n1. FROM employees\n2. WHERE status = 'active'\n3. GROUP BY department\n4. HAVING total_employees > 5\n5. SELECT department, COUNT(employee_id) AS total_employees\n6. ORDER BY total_employees DESC\n7. LIMIT 10\n\n✅ This Ankit Bansal's YouTube video gives even more clarity on the SQL execution .\nSQL Order of Execution (Logical Explanation) | Namaste SQL | Ankit Bansal\nhttps://lnkd.in/gbdeWjFd \n\n📌 Follow for Data insights :\nhttps://lnkd.in/eviQ9fnj\n\n𝑹𝒆𝒑𝒐𝒔𝒕 ✅ 𝒊𝒇 𝒚𝒐𝒖 𝒇𝒊𝒏𝒅 𝒊𝒕 𝒖𝒔𝒆𝒇𝒖𝒍 \n\n🤝 Follow 👨‍💻 Abhisek Sahu for more\n\n#sql #dataengineering #dataanalyst #dataanalytics #dataengineer #bigdata #analytics #businessanalyst #interviewquestions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7310146449428611072_slide_0.jpg",
+      "description": "GIF image, 480x729 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that SQL queries are logically processed in the order FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, and LIMIT, which may differ from the order in which clauses are written. It describes each clause and demonstrates the sequence with a query that filters active employees, groups them by department, counts employees, retains departments with more than five employees, sorts the results in descending order, and returns ten rows.",
+    "topics": [
+      "SQL query execution order",
+      "SQL clause processing",
+      "SQL filtering and aggregation"
+    ],
+    "subtopics": [
+      "FROM and WHERE",
+      "GROUP BY and HAVING",
+      "SELECT and DISTINCT",
+      "ORDER BY and LIMIT",
+      "Filtering rows versus filtering groups"
+    ],
+    "concepts": [
+      "Logical SQL execution order",
+      "FROM",
+      "WHERE",
+      "GROUP BY",
+      "HAVING",
+      "SELECT",
+      "ORDER BY",
+      "LIMIT"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the logical execution order of the clauses in the SQL query described in the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The logical order is FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, and LIMIT.\nThe logical processing order can differ from the order in which clauses are written."
+    },
+    {
+      "question": "What is the difference between the WHERE and HAVING clauses?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "WHERE filters individual rows before grouping.\nHAVING filters groups after GROUP BY has created them."
+    },
+    {
+      "question": "How is the sample employee query processed from its data source through its final result?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The query first selects the employees table and keeps only rows whose status is active.\nIt groups the remaining rows by department and calculates the employee count for each group.\nIt retains groups with more than five employees, sorts them by employee count in descending order, and returns ten rows."
+    },
+    {
+      "question": "What roles do SELECT, ORDER BY, and LIMIT play in query results?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SELECT determines the returned columns and expressions and performs deduplication when DISTINCT is specified.\nORDER BY controls result ordering through specified columns and sort directions.\nLIMIT restricts the number of returned rows."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Query Execution Order",
+    "secondary_topics": [
+      "SQL Filtering",
+      "SQL Aggregation",
+      "Grouped Result Filtering",
+      "Sorting and Limiting Results"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8e23f103dfae4856",
+    "saved_date": "2026-10-01T23:32:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7310146449428611072",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7310146449428611072_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7310146449428611072_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2325ca5cebce9ab01eab78ef6b5ab4394ad439a55c60f492f27605d228a2a271",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

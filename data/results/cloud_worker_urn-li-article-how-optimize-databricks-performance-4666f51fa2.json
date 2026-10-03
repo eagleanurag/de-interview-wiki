@@ -1,0 +1,39 @@
+{
+  "id": "urn-li-article-how-optimize-databricks-performance-4666f51fa2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/pulse/how-optimize-databricks-performance-complete-guide-anurag-pandey-3tppf/",
+    "captured_at": "2026-10-01T10:29:38.061908Z",
+    "author": "eagleanurag",
+    "published_at": null
+  },
+  "original_text": "How to Optimize Databricks Performance: A Complete Guide\n\nOptimization of performance has come to play a central part in today's data-intensive world. It has especially grown significant in big data analytics applications like Databricks for various organiza",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is a truncated introduction stating that performance optimization is important in data-intensive environments, particularly for big data analytics applications such as Databricks. It ends mid-sentence and provides no optimization methods, configurations, examples, or technical guidance.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "Databricks performance optimization",
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "_enrichment": {
+    "source_digest": "bf9cab52c50ea87823a4ed1feabbd1ee86801dd6b71445199eeb86de1b662e4a",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Databricks performance optimization"
+      ],
+      "concepts": [
+        "Performance optimization"
+      ],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "urn-li-archive-775ef5a50826e2c6",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.527051Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:29Z"
+  },
+  "original_text": "𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐞𝐫 : What is the difference between WHERE and HAVING? \n\n𝐂𝐚𝐧𝐝𝐢𝐝𝐚𝐭𝐞: 𝐂𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐞 𝐚𝐜𝐜𝐞𝐩𝐭𝐞𝐝, 𝐥𝐞𝐭'𝐬 𝐠𝐨! \n\n1. WHERE Clause :\n - The `WHERE` clause is used to filter rows before any grouping is done.\n - It applies conditions to individual rows in a table.\n - If you want to filter data based on a column's value, you use `WHERE`.\n - Example: If you want to find all orders where the amount is greater than 100, you would use:\n\n SELECT * FROM orders\n WHERE amount > 100;\n\n2. HAVING Clause :\n - The `HAVING` clause is used to filter groups after the `GROUP BY` operation.\n - It applies conditions to groups of rows that result from the grouping.\n - If you want to filter based on an aggregated value (like the sum, average, etc.), you use `HAVING`.\n - Example: If you want to find customers who have made total purchases over 500, you would use:\n\n SELECT customer_id, SUM(amount) AS total_amount\n FROM orders\n GROUP BY customer_id\n HAVING SUM(amount) > 500;",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains that the SQL WHERE clause filters individual rows before grouping, while the HAVING clause filters groups after a GROUP BY operation. It demonstrates WHERE with an order amount condition and HAVING with a SUM(amount) condition applied to customers.",
+    "topics": [
+      "WHERE clause",
+      "HAVING clause"
+    ],
+    "subtopics": [
+      "Filtering rows before grouping",
+      "Filtering groups after GROUP BY",
+      "Filtering column values",
+      "Filtering aggregated values"
+    ],
+    "concepts": [
+      "WHERE clause",
+      "HAVING clause",
+      "GROUP BY operation",
+      "Aggregate filtering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between the WHERE and HAVING clauses?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "WHERE filters individual rows before grouping, whereas HAVING filters groups after a GROUP BY operation.\nWHERE can filter directly on a column value, while HAVING can filter on an aggregated value."
+    },
+    {
+      "question": "Write a query that finds all orders whose amount is greater than 100.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query selects all columns from orders and uses a WHERE clause with the condition amount > 100."
+    },
+    {
+      "question": "Write a query that finds customers whose total purchases exceed 500.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query groups orders by customer_id and calculates SUM(amount) as total_amount.\nThe query uses a HAVING clause with SUM(amount) > 500 to filter the customer groups."
+    }
+  ],
+  "classification": {
+    "domain": "SQL database querying",
+    "primary_topic": "Difference between WHERE and HAVING",
+    "secondary_topics": [
+      "Row-level filtering",
+      "Group-level filtering",
+      "Aggregation with SUM",
+      "Grouping with GROUP BY"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:775ef5a50826e2c6",
+    "saved_date": "2026-10-01T23:18:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b0c2c98f2967033d0596c935f1894cf63ff77e12e484c85b52f896c3edfc4811",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "SQL"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-01dadfd04e1fd072",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.703600Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:32Z"
+  },
+  "original_text": "✨ Interview Journey at Goldman Sachs – Offer Secured! ✨\nI'm thrilled to share that I’ve successfully received an offer from Goldman Sachs! 🙌\nThe interview process was one of the most intellectually stimulating experiences I’ve had so far, pushing me to think deeply about data structures, algorithms, and scalable systems.\nHere’s a quick overview of the process:\n🔹 Online Coding Round\n Tackled graph-based problems that tested both algorithmic depth and optimization.\n🔹 Round 1 – Core DSA\n Focused on hashmap-based logic and mathematical problem-solving.\n🔹 Round 2 – Advanced Algorithms\n Covered concepts like Dijkstra’s algorithm and complex dynamic programming.\n🔹 Round 3 – System Design (Core Concepts)\n Designed a caching system with expiry — a good mix of real-world applicability and complexity.\n🔹 Round 4 – Product-Level System Design\nDesigned a system similar to large-scale ticket booking platforms, focusing on handling high traffic, ensuring data accuracy, and preventing downtime.\n🔹 Round 5 – Hiring Manager Discussion\n Discussed designing a system to handle file uploads and enable metadata-based search. Explored indexing strategies, storage efficiency, and architecture trade-offs.\nThis entire journey has been a huge learning curve for me. I'm thankful to the interviewers for the engaging discussions and to everyone who supported me during the prep phase.\nExcited for what lies ahead! 🚀\n#InterviewExperience #SystemDesign #DSA #BackendEngineering #CareerMilestone #SoftwareEngineering",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a personal announcement about receiving an offer from Goldman Sachs. It briefly lists interview rounds involving graph-based coding, hashmap logic, mathematical problem-solving, Dijkstra's algorithm, dynamic programming, caching with expiry, large-scale ticket booking systems, and file-upload systems with metadata search, but it does not explain the technical solutions or provide data engineering knowledge.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Career and interview experience",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:01dadfd04e1fd072",
+    "saved_date": "2026-10-01T23:11:32Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "932e71c44c8d0678b20c918c0e474a40c13c16dcdf7ae9a055587f1d00ce5fea",
+    "enricher_version": "3"
+  }
+}

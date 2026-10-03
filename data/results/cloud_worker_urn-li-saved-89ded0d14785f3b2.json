@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-saved-89ded0d14785f3b2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7340936303015841792",
+    "captured_at": "2026-10-02T00:15:49.037018Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:18:28Z"
+  },
+  "original_text": "🚀 SQL interview questions for PwC\n\nQuestion:\nYou have a list of products and a purchase log with customer ratings (1–5 stars).\n👉 For each product category, find the lowest price among products that received at least one 4-star or 5-star rating.\nIf no such rating exists in a category, return 0 as the lowest price.\n✅ Output: One row per category, sorted alphabetically by category name.\n\n📊 Table: Product\n\n✅ Columns: \n 1️⃣ id :: INT\n 2️⃣ name :: STRING\n 3️⃣ category :: STRING\n 4️⃣ price :: INT\n\n📊 Table: review\n\n✅ Columns: \n 1️⃣ id :: INT\n 2️⃣ product_id :: INT\n 3️⃣ rating :: INT\n\n\n👇 Can you crack this?\nDrop your query in the comments — \n\nSolution: https://lnkd.in/ghaiWwDe\n\n#SQL \n#DataAnalytics \n#InterviewPrep \n#pwc\n#SQLInterview \n#DataAnalyst\n#businessanalyst",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7340936303015841792_slide_0.jpg",
+      "description": "JPEG image, 480x403 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a SQL interview exercise using Product and review tables. For each product category, the query must find the lowest price among products with at least one rating of 4 or 5 stars, return 0 when no qualifying rating exists, and sort the results alphabetically by category. The content does not include the actual SQL solution; it only provides a link to one.",
+    "topics": [
+      "SQL",
+      "Data analytics",
+      "SQL interview preparation",
+      "Aggregate queries",
+      "Relational table joins"
+    ],
+    "subtopics": [
+      "Finding the minimum price by product category",
+      "Filtering reviews to ratings of 4 or 5 stars",
+      "Relating reviews to products by product_id",
+      "Returning 0 for categories without qualifying ratings",
+      "Sorting categories alphabetically"
+    ],
+    "concepts": [
+      "Product table",
+      "Review table",
+      "Product-review relationship",
+      "Qualifying rating filter",
+      "Minimum price by category",
+      "Default result for no qualifying rating",
+      "Category output ordering"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query that returns the lowest price of products with a 4-star or 5-star rating for each product category, returns 0 when a category has no qualifying rating, and sorts the output by category name.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query relates the Product and review tables using Product.id and review.product_id.\nThe query considers only ratings equal to 4 or 5.\nThe query groups results by product category and calculates the minimum qualifying price.\nThe query returns 0 for each category without a qualifying rating.\nThe query returns one row per category ordered alphabetically by category name."
+    },
+    {
+      "question": "How should the query distinguish a category with no qualifying review from a category whose qualifying products have a minimum price of 0?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The query must first identify categories containing at least one product with a 4-star or 5-star review.\nCategories without any qualifying review must still appear in the output with a lowest price of 0.\nFor categories with qualifying reviews, the result must be calculated from those products' prices rather than always returning 0."
+    },
+    {
+      "question": "What query conditions are required to calculate the result correctly from the Product and review tables?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Reviews must be associated with products by matching review.product_id to Product.id.\nOnly products with a rating of 4 or 5 are eligible for the minimum-price calculation.\nResults must be grouped by Product.category and sorted alphabetically by that category."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Data aggregation",
+      "Relational table joins",
+      "Conditional filtering",
+      "Missing-result handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:89ded0d14785f3b2",
+    "saved_date": "2026-10-01T23:18:28Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7340936303015841792",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7340936303015841792_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a02562cd3292992395a8e5fa92c995a60f46fc88c930f4a753d5814bd8986c6a",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

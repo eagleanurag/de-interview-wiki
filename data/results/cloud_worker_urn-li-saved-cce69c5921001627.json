@@ -1,0 +1,156 @@
+{
+  "id": "urn-li-saved-cce69c5921001627",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501836433637261312",
+    "captured_at": "2026-10-02T00:15:51.688665Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:13Z"
+  },
+  "original_text": "• 2nd\nSenior Data+AI Engineer @ EY | Helping 100K+ Professionals Break Into Data Engineering 🚀 | Azure | Databricks | AI | 4x Microsoft Certified | 3x Databricks Certified | Career Coach | Paid Brand Collaborations\n3w •\nDeloitte 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 (𝟬–𝟯 𝗬𝗢𝗘): 𝗪𝗵𝗮𝘁 𝗖𝗮𝗻𝗱𝗶𝗱𝗮𝘁𝗲𝘀 𝗔𝗿𝗲 𝗕𝗲𝗶𝗻𝗴 𝗔𝘀𝗸𝗲𝗱\nData engineering interviews today are no longer limited to writing a few SQL queries.\nFor roles at companies like Deloitte, candidates are often evaluated on a mix of 𝗦𝗤𝗟 𝗹𝗼𝗴𝗶𝗰, 𝗱𝗮𝘁𝗮 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲 𝘁𝗵𝗶𝗻𝗸𝗶𝗻𝗴, 𝗮𝗻𝗱 𝗿𝗲𝗮𝗹-𝘄𝗼𝗿𝗹𝗱 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗰𝗼𝗻𝗰𝗲𝗽𝘁𝘀.\nI recently came across a detailed 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗯𝗿𝗲𝗮𝗸𝗱𝗼𝘄𝗻 that covers many of the questions candidates reported during the process.\nSome of the topics included:\n𝗦𝗤𝗟 & 𝗤𝘂𝗲𝗿𝘆 𝗖𝗼𝗻𝗰𝗲𝗽𝘁𝘀\n• Finding 𝗧𝗼𝗽 𝟯 𝘀𝗮𝗹𝗮𝗿𝗶𝗲𝘀 𝘂𝘀𝗶𝗻𝗴 `𝗗𝗘𝗡𝗦𝗘_𝗥𝗔𝗡𝗞()`\n• Understanding 𝗖𝗹𝘂𝘀𝘁𝗲𝗿𝗲𝗱 𝘃𝘀 𝗡𝗼𝗻-𝗖𝗹𝘂𝘀𝘁𝗲𝗿𝗲𝗱 𝗜𝗻𝗱𝗲𝘅𝗲𝘀\n• Applying 𝗪𝗶𝗻𝗱𝗼𝘄 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀 𝗹𝗶𝗸𝗲 `𝗥𝗔𝗡𝗞()`\n• Query optimization using 𝗘𝗫𝗣𝗟𝗔𝗜𝗡 𝗣𝗟𝗔𝗡\n𝗣𝘆𝘁𝗵𝗼𝗻 𝗶𝗻 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴\n• Building small 𝗘𝗧𝗟 𝘄𝗼𝗿𝗸𝗳𝗹𝗼𝘄𝘀\n• Data cleaning using 𝗣𝗮𝗻𝗱𝗮𝘀\n• Connecting Python pipelines with 𝗠𝘆𝗦𝗤𝗟\n𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗙𝘂𝗻𝗱𝗮𝗺𝗲𝗻𝘁𝗮𝗹𝘀\n• 𝗢𝗟𝗧𝗣 𝘃𝘀 𝗢𝗟𝗔𝗣 𝗮𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲𝘀\n• Data warehouse concepts\n• Handling large datasets efficiently\n𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗙𝗮𝗰𝘁𝗼𝗿𝘆 𝗦𝗰𝗲𝗻𝗮𝗿𝗶𝗼𝘀\n• Pipeline 𝘁𝗿𝗶𝗴𝗴𝗲𝗿𝘀 𝗮𝗻𝗱 𝘀𝗰𝗵𝗲𝗱𝘂𝗹𝗶𝗻𝗴\n• 𝗥𝗲𝘁𝗿𝘆 𝘀𝘁𝗿𝗮𝘁𝗲𝗴𝗶𝗲𝘀 for failures\n• Working with 𝗽𝗮𝗿𝘁𝗶𝘁𝗶𝗼𝗻𝗲𝗱 𝗱𝗮𝘁𝗮 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲𝘀\n𝗠𝗼𝗱𝗲𝗿𝗻 𝗗𝗮𝘁𝗮 𝗦𝘁𝗮𝗰𝗸 𝗧𝗼𝗽𝗶𝗰𝘀\n• 𝗦𝗻𝗼𝘄𝗳𝗹𝗮𝗸𝗲 / 𝗕𝗶𝗴𝗤𝘂𝗲𝗿𝘆 𝗮𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗯𝗮𝘀𝗶𝗰𝘀\n• Intro concepts around 𝗞𝗮𝗳𝗸𝗮 𝗮𝗻𝗱 𝘀𝘁𝗿𝗲𝗮𝗺𝗶𝗻𝗴 𝘀𝘆𝘀𝘁𝗲𝗺𝘀\nWhat stands out is that these interviews focus less on memorization and more on 𝗵𝗼𝘄 𝘆𝗼𝘂 𝗮𝗽𝗽𝗿𝗼𝗮𝗰𝗵 𝗿𝗲𝗮𝗹 𝗱𝗮𝘁𝗮 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀.\nUnderstanding how SQL, Python, and pipeline orchestration work together is often what differentiates strong candidates.\nIf you're preparing for 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗿𝗼𝗹𝗲𝘀 𝘄𝗶𝘁𝗵 𝟬–𝟯 𝘆𝗲𝗮𝗿𝘀 𝗼𝗳 𝗲𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲, reviewing questions like these can give you a good sense of what companies expect.\nCredit: Respected Owner\n📌 𝗦𝗮𝘃𝗲 this post\n♻️ 𝗥𝗲𝗽𝗼𝘀𝘁 𝗶𝗳 𝘁𝗵𝗶𝘀 𝘄𝗮𝘀 𝗵𝗲𝗹𝗽𝗳𝘂𝗹!\n🔔 𝗙𝗼𝗹𝗹𝗼𝘄 Aishwarya Pani 𝗳𝗼𝗿 𝗺𝗼𝗿𝗲 𝗶𝗻𝘀𝗶𝗴𝗵𝘁𝘀 𝗼𝗻 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴!\n#DataEngineer #Deloitte #InterviewPrep #SQL #DataEngineering #CareerGrowth\nDELOITTE DATA ENGINEER INTERVIEW EXPERIENCE",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7501836433637261312_slide_0.jpg",
+      "description": "PNG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The supplied post is an interview-preparation summary of a reported Deloitte data engineer profile for a 0-2 year role. It says candidates are often evaluated on SQL logic, data pipeline troubleshooting, and real-world interview questions. The listed topics include DENSE_RANK() for top-N salary records, clustered versus non-clustered indexes, RANK() window functions, EXPLAIN PLAN, small ETL workflows, Pandas data cleaning, Python pipelines with PySpark, OLTP versus OLAP, data warehouse concepts, efficient large-dataset handling, Azure Data Engineering trends involving pipeline troubleshooting, scalability, retry strategies, and partitioned data pipelines, Snowflake architecture basics, and introductory lake and streaming systems concepts. It says practical application matters more than memorization and that understanding how SQL, Python, and pipeline orchestration work together can differentiate strong candidates. The post references a detailed breakdown, but the supplied text contains only a topic list rather than full questions or worked answers, and the extraction ends with an empty 'Extracted media text:' field.",
+    "topics": [
+      "Deloitte data engineering interviews",
+      "Data engineering interview preparation",
+      "SQL logic and query optimization",
+      "Python data processing",
+      "Data warehousing",
+      "OLTP and OLAP",
+      "Azure Data Engineering",
+      "Pipeline troubleshooting and scalability",
+      "Partitioned data pipelines",
+      "Large dataset handling"
+    ],
+    "subtopics": [
+      "SQL logic",
+      "Top-N salary records",
+      "DENSE_RANK()",
+      "Clustered versus non-clustered indexes",
+      "Window functions such as RANK()",
+      "EXPLAIN PLAN",
+      "Small ETL workflows",
+      "Data cleaning using Pandas",
+      "Connecting Python pipelines with PySpark",
+      "OLTP versus OLAP fundamentals",
+      "Data warehouse concepts",
+      "Handling large datasets efficiently",
+      "Azure Data Engineering trends",
+      "Pipeline troubleshooting",
+      "Pipeline scalability",
+      "Retry strategies for failures",
+      "Partitioned data pipelines",
+      "Snowflake architecture basics",
+      "Introductory concepts around lake and streaming systems"
+    ],
+    "concepts": [
+      "SQL logic",
+      "Top-N salary records with DENSE_RANK()",
+      "Clustered versus non-clustered indexes",
+      "Window functions such as RANK()",
+      "Query optimization with EXPLAIN PLAN",
+      "Pandas data cleaning",
+      "OLTP versus OLAP",
+      "Data warehouse concepts",
+      "Handling large datasets efficiently",
+      "Pipeline troubleshooting and scalability",
+      "Azure Data Engineering trends",
+      "Retry strategies for failures",
+      "Partitioned data pipelines",
+      "SQL, Python, and pipeline orchestration integration",
+      "Practical application over memorization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "For the top-N salary-record task mentioned in the post, which SQL techniques should a candidate be prepared to discuss?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The post associates DENSE_RANK() with finding top-N salary records.\nIt also names clustered versus non-clustered indexes, window functions such as RANK(), and EXPLAIN PLAN for query optimization."
+    },
+    {
+      "question": "Which data architecture and warehouse fundamentals are named as interview topics?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The post lists OLTP versus OLAP fundamentals and data warehouse concepts.\nIt also names Snowflake architecture basics and introductory concepts around lake and streaming systems."
+    },
+    {
+      "question": "What pipeline troubleshooting and scalability topics are identified under Azure Data Engineering?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The post lists pipeline troubleshooting and scalability.\nIt also lists retry strategies for failures and working with partitioned data pipelines."
+    },
+    {
+      "question": "What does the post say about practical application versus memorization in these interviews?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post says interviews focus less on memorization and more on practical work on real data engineering problems.\nIt identifies understanding how SQL, Python, and pipeline orchestration work together as a way strong candidates can differentiate themselves."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "Pandas",
+      "PySpark",
+      "ETL workflows",
+      "Data warehousing",
+      "OLTP and OLAP",
+      "Azure Data Engineering",
+      "Pipeline troubleshooting and scalability",
+      "Partitioned data pipelines",
+      "Pipeline orchestration",
+      "Snowflake architecture",
+      "Lake and streaming systems",
+      "Large dataset handling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:cce69c5921001627",
+    "saved_date": "2026-10-01T23:07:13Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7501836433637261312",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7501836433637261312_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "activity_7501836433637261312_slide_0.jpg is named .jpg but its content is png",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "952ff3e8f27d5e981c7ea92f46e40a1b5f1e608c76d31509f773ad245b0d0ac8",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "ETL workflows",
+        "PySpark",
+        "Snowflake architecture",
+        "Lake and streaming systems"
+      ],
+      "concepts": [
+        "Small ETL workflows",
+        "Python pipelines with PySpark",
+        "Snowflake architecture basics",
+        "Lake and streaming systems"
+      ],
+      "questions": [
+        "Which Python and ETL capabilities should a candidate be prepared to demonstrate in a data engineering interview?"
+      ]
+    }
+  }
+}

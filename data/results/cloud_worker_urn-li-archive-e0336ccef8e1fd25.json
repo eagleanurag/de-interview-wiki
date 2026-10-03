@@ -1,0 +1,134 @@
+{
+  "id": "urn-li-archive-e0336ccef8e1fd25",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.766072Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:40Z"
+  },
+  "original_text": "Fractal Interview Experience.\nCompensation Range: 23LPA + 2L variable\nPosition: Data Engineer\nApplication Method: via referral\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n- SQL and Python assessment\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱\n- Medium-level SQL question\n- Pyspark code optimization\n- Discussion on Kafka architecture\n- Implement a custom function in PySpark\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱\n- Asked about project architecture\n- How to design a scalable ETL system from scratch\n- Followup on handling schema evolution in Delta Lake\n- Discussion about various azure services.\n\n𝟯𝗿𝗱 𝗥𝗼𝘂𝗻𝗱 (𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹)\n- Leadership and stakeholder management questions\n- Writing efficient test cases for ETL pipelines (Live coding)\n- Discussion on real-world project challenges and optimizations\n\nIf you are preparing for Data Engineering interviews then you should check my personally crafted Interview Experiences for 100+ Companies\n\n𝗟𝗶𝗻𝗸 𝘁𝗼 𝘁𝗵𝗲 𝗞𝗜𝗧 - https://lnkd.in/giY6RZu2\n𝗖𝗼𝘂𝗽𝗼𝗻 𝗖𝗼𝗱𝗲 - DATA10 to get 10% discount.\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post summarizes a Fractal Data Engineer interview process reached through referral, with compensation stated as 23 LPA plus 2 L variable. It says the screening assessment covered SQL and Python; the first round covered a medium-level SQL question, PySpark code optimization, Kafka architecture, and implementation of a custom PySpark function; the second round covered project architecture, scalable ETL design, Delta Lake schema evolution, and unspecified Azure services; and the manager round covered leadership, stakeholder management, live coding of efficient ETL pipeline tests, and real-world project challenges and optimizations. The post does not provide the actual assessment questions, code, architecture details, Azure service names, or sample answers, so it identifies interview subjects but does not teach specific technical methods.",
+    "topics": [
+      "Data Engineering Interview Experience",
+      "SQL and Python Assessments",
+      "PySpark Code Optimization",
+      "Kafka Architecture",
+      "Custom PySpark Functions",
+      "Scalable ETL Design",
+      "Delta Lake Schema Evolution",
+      "Azure Services",
+      "ETL Pipeline Testing",
+      "Leadership and Stakeholder Management"
+    ],
+    "subtopics": [
+      "Referral Application",
+      "Technical Screening",
+      "First-Round Technical Interview",
+      "Second-Round Architecture Interview",
+      "Manager Interview",
+      "Project Architecture",
+      "Live Coding",
+      "Real-World Project Challenges and Optimizations"
+    ],
+    "concepts": [
+      "SQL and Python Assessment",
+      "Medium-Level SQL Question",
+      "PySpark Code Optimization",
+      "Kafka Architecture",
+      "Custom PySpark Function",
+      "Project Architecture",
+      "Scalable ETL System Design",
+      "Delta Lake Schema Evolution",
+      "Azure Services Discussion",
+      "ETL Pipeline Test Cases",
+      "Real-World Project Challenges and Optimizations",
+      "Leadership and Stakeholder Management"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you formulate and verify a correct query for a medium-level SQL assessment?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response translates the assessment requirements into a SQL query.\nThe response describes how the query output would be verified."
+    },
+    {
+      "question": "How would you approach optimizing PySpark code for a data engineering workload?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The response identifies the PySpark code change being proposed.\nThe response explains why the proposed change improves efficiency."
+    },
+    {
+      "question": "How would you implement and explain a custom function in PySpark when processing requirements are provided?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response provides a PySpark implementation that satisfies the stated requirements.\nThe response explains what the function does and how it is used."
+    },
+    {
+      "question": "How would you explain the role and architecture of Kafka in a data engineering system?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The response explains the role Kafka plays in the data flow.\nThe response describes the relevant architectural components and design trade-offs."
+    },
+    {
+      "question": "How would you design a scalable ETL system from scratch?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The response presents an end-to-end ETL architecture.\nThe response explains which design choices allow the system to scale."
+    },
+    {
+      "question": "How would you handle schema evolution in Delta Lake?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The response describes how changing schemas are managed in Delta Lake.\nThe response explains how the ETL workflow accommodates those schema changes."
+    },
+    {
+      "question": "How would you write efficient test cases for an ETL pipeline during a live coding interview?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response provides test cases that exercise the expected behavior of the ETL pipeline.\nThe response explains why the test cases are efficient."
+    },
+    {
+      "question": "Describe a real-world data engineering project challenge and the optimization you applied to address it.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The response identifies the project challenge and the optimization used to address it.\nThe response explains why the optimization was appropriate for the challenge."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Process",
+    "secondary_topics": [
+      "SQL",
+      "Python",
+      "PySpark",
+      "Kafka Architecture",
+      "Delta Lake Schema Evolution",
+      "Scalable ETL Design",
+      "Azure Services",
+      "ETL Pipeline Testing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:e0336ccef8e1fd25",
+    "saved_date": "2026-10-01T23:21:40Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "eb3074d9ce87fa2d72dcb674f17493dc401b7380c59f23825e91a194043df691",
+    "enricher_version": "3"
+  }
+}

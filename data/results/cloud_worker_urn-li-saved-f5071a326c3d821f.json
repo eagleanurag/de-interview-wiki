@@ -1,0 +1,167 @@
+{
+  "id": "urn-li-saved-f5071a326c3d821f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7300738730540089344",
+    "captured_at": "2026-10-02T00:15:53.314244Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:34:21Z"
+  },
+  "original_text": "𝐌𝐨𝐫𝐠𝐚𝐧 𝐒𝐭𝐚𝐧𝐥𝐞𝐲 𝐏𝐲𝐬𝐩𝐚𝐫𝐤 𝐃𝐚𝐭𝐚𝐞𝐧𝐠𝐢𝐧𝐞𝐞𝐫 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 (𝟑-𝟓 𝐲𝐞𝐚𝐫𝐬)\n.\n.\n.\n1.What is PySpark? How is it different from Apache Spark?\n\n2.What are RDDs in PySpark? How do they differ from DataFrames and Datasets?\n\n3.What is a DataFrame in PySpark? Explain its advantages over RDDs.\n\n4.What are broadcast variables in PySpark? When would you use them?\n\n5.What is partitioning in PySpark? Why is it important for performance?\n\n6.Explain PySpark’s cache() and persist() methods. When should you use them?\n\n7.How would you handle skewed data in PySpark?\n\n8.How do you use UDFs (User Defined Functions) in PySpark? What are the pros and cons?\n\n9.What is the role of SparkSession in PySpark?\n\n10.Explain how you would deploy a PySpark job on a cluster.\n\n#Pyspark #Dataengineer #Interview #Questions",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7300738730540089344_slide_0.jpg",
+      "description": "JPEG image, 480x639 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a list of ten PySpark interview questions intended for candidates with 3-5 years of experience. It covers PySpark and Apache Spark, RDDs, DataFrames, Datasets, broadcast variables, partitioning, caching and persistence, skewed data, UDFs, SparkSession, and cluster deployment. It provides no answers, code, definitions, or technical explanations, and the extracted media text is empty.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "RDDs",
+      "DataFrames",
+      "Datasets",
+      "broadcast variables",
+      "partitioning",
+      "cache() and persist()",
+      "skewed data",
+      "User Defined Functions (UDFs)",
+      "SparkSession",
+      "PySpark job deployment"
+    ],
+    "subtopics": [
+      "PySpark versus Apache Spark",
+      "RDDs versus DataFrames and Datasets",
+      "DataFrame advantages over RDDs",
+      "broadcast variable use cases",
+      "partitioning and performance",
+      "caching and persistence",
+      "skewed data handling",
+      "UDF usage, advantages, and disadvantages",
+      "SparkSession's role",
+      "cluster deployment"
+    ],
+    "concepts": [
+      "PySpark",
+      "Apache Spark",
+      "RDDs",
+      "DataFrames",
+      "Datasets",
+      "broadcast variables",
+      "partitioning",
+      "cache() and persist()",
+      "skewed data handling",
+      "User Defined Functions (UDFs)",
+      "SparkSession",
+      "PySpark job deployment"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is PySpark, and how is it different from Apache Spark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer defines PySpark.\nThe answer explains the differences between PySpark and Apache Spark."
+    },
+    {
+      "question": "What are RDDs in PySpark, and how do they differ from DataFrames and Datasets?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines RDDs in PySpark.\nThe answer compares RDDs with DataFrames and Datasets."
+    },
+    {
+      "question": "What is a DataFrame in PySpark, and what are its advantages over RDDs?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer defines a PySpark DataFrame.\nThe answer explains the advantages of DataFrames over RDDs."
+    },
+    {
+      "question": "What are broadcast variables in PySpark, and when would you use them?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines broadcast variables.\nThe answer identifies situations in which broadcast variables should be used."
+    },
+    {
+      "question": "What is partitioning in PySpark, and why is it important for performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains partitioning in PySpark.\nThe answer explains why partitioning is important for performance."
+    },
+    {
+      "question": "Explain PySpark's cache() and persist() methods, and describe when they should be used.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer explains the cache() method.\nThe answer explains the persist() method.\nThe answer describes when the methods should be used."
+    },
+    {
+      "question": "How would you handle skewed data in PySpark?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer describes how it would handle skewed data in PySpark."
+    },
+    {
+      "question": "How do you use User Defined Functions in PySpark, and what are their advantages and disadvantages?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer explains how UDFs are used in PySpark.\nThe answer identifies the advantages of using UDFs.\nThe answer identifies the disadvantages of using UDFs."
+    },
+    {
+      "question": "What is the role of SparkSession in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer explains the role of SparkSession in PySpark."
+    },
+    {
+      "question": "How would you deploy a PySpark job on a cluster?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer explains how a PySpark job is deployed on a cluster."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Apache Spark",
+      "RDDs",
+      "DataFrames",
+      "Datasets",
+      "broadcast variables",
+      "partitioning",
+      "caching and persistence",
+      "skewed data",
+      "User Defined Functions",
+      "SparkSession",
+      "cluster deployment"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f5071a326c3d821f",
+    "saved_date": "2026-10-01T23:34:21Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7300738730540089344",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7300738730540089344_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "69c8d66d17a36429efca110463dc7084b6b66694b9121177287d2b8c81faf2d6",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

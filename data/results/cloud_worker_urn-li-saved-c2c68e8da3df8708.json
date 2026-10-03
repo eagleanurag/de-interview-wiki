@@ -1,0 +1,81 @@
+{
+  "id": "urn-li-saved-c2c68e8da3df8708",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341318414558294020",
+    "captured_at": "2026-10-02T00:15:51.194782Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:52Z"
+  },
+  "original_text": "🎬 Day 13 of 30 – SQL Interview Questions Series!\n\nToday’s Question:\nWhat does this query return?\n\nSELECT * FROM users \nWHERE 1=1 AND 1=0 OR 1=1 AND 1=1;\n\nIn this video, I explain:\n ✅ How SQL evaluates AND vs OR using operator precedence\n ✅ What this query actually returns\n\n🧠 If you're brushing up on SQL logic or want to avoid common mistakes in WHERE clauses, this video will sharpen your thinking!\n\n🎥 YouTube video link is in the comment 👇\n\nIf you find this video helpful, consider subscribing to my YouTube channel “Crack DE with Mradul” for more SQL and data engineering content.\n\nI’d love your support as I continue this 30-day SQL Interview Question series!\n\n#CrackDEwithMradul #SQL #SQLLogicaloperators #SQLInterview #DataEngineering #Analytics #SQLTips",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341318414558294020_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents an SQL interview query using Boolean conditions in a WHERE clause and states that it explains AND versus OR operator precedence and the query result. With AND evaluated before OR, the predicate is grouped as (1=1 AND 1=0) OR (1=1 AND 1=1), which evaluates to FALSE OR TRUE and therefore returns every row in the users table. No extracted video transcript or additional explanation is provided.",
+    "topics": [
+      "SQL",
+      "SQL logical operators",
+      "WHERE clauses"
+    ],
+    "subtopics": [
+      "AND and OR operator precedence",
+      "Boolean predicate evaluation"
+    ],
+    "concepts": [
+      "SQL WHERE clause",
+      "AND operator",
+      "OR operator",
+      "Operator precedence",
+      "Query result"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What does SELECT * FROM users WHERE 1=1 AND 1=0 OR 1=1 AND 1=1 return?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "SQL evaluates AND before OR, producing the grouping (1=1 AND 1=0) OR (1=1 AND 1=1).\nThe left side evaluates to FALSE and the right side evaluates to TRUE, so the overall predicate is TRUE.\nThe query returns every row from the users table."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL logical operators",
+    "secondary_topics": [
+      "WHERE clause filtering",
+      "SQL operator precedence",
+      "SQL interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c2c68e8da3df8708",
+    "saved_date": "2026-10-01T23:17:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341318414558294020",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341318414558294020_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "aaddbc6651d91db9503d9a27eed3a9b789bc6446e2182d94dd07a3d969957863",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

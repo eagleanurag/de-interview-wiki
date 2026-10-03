@@ -1,0 +1,122 @@
+{
+  "id": "urn-li-saved-c902c137f7857924",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338780871455318016",
+    "captured_at": "2026-10-02T00:15:51.596562Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:09Z"
+  },
+  "original_text": "🔍 Master PySpark Faster with This Visual Cheatsheet! 💡\n\nWorking with big data often means dealing with massive volumes of distributed data — and PySpark is one of the most powerful tools to get the job done efficiently. Whether you're transforming terabytes of logs, cleaning messy datasets, or running complex aggregations, PySpark’s DataFrame API is your go-to toolkit.\n\nBut let's be honest — keeping track of every function’s syntax isn't always easy. So, I created this visual cheatsheet highlighting some of the most frequently used PySpark functions 🚀\n\n📊 What's Inside the Cheatsheet:\n✔️ select() – Choose specific columns from a DataFrame\n ✔️ filter() – Filter rows based on conditions\n ✔️ groupBy().count() – Aggregate data efficiently\n ✔️ agg() – Perform advanced aggregations like avg, sum, max\n ✔️ join() – Combine multiple datasets based on keys\n ✔️ orderBy() – Sort data\n ✔️ distinct() – Remove duplicates\n ✔️ drop() – Remove columns\n ✔️ withColumn() – Create or modify columns\n ✔️ replace() – Handle missing or invalid values\n ✔️ isNull() – Identify missing values\n ✔️ sample() – Random sampling of your data\n\n🛠️ Why It’s Useful:\n✅ Speeds up development by giving you quick syntax references\n ✅ Helps you transition from Pandas or SQL into PySpark smoothly\n ✅ Ideal for interviews, notebooks, and project kickstarts\n ✅ Great for both beginners and seasoned Spark users\n\n\n🔄 Feel free to save, share, or repost this with your network. Let’s make big data work easier for everyone!\n#PySpark #ApacheSpark #BigData #DataEngineering #DataScience #Python #ETL #SparkSQL #CheatSheet #DataTransformation #MonuKumar #LinkedInLearning #SparkJobs #DataOps #CloudData\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338780871455318016_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a PySpark DataFrame cheat sheet intended as a quick reference for big-data transformations, dataset cleaning, and aggregations. It briefly explains functions for selecting columns, filtering rows, aggregating data, joining datasets, sorting, removing duplicates, changing columns, handling missing or invalid values, identifying nulls, and random sampling. It also claims the reference can help developers transition from Pandas or SQL and support interviews, notebooks, and project kickstarts. The supplied text does not include the visual examples or full syntax of the referenced cheatsheet.",
+    "topics": [
+      "PySpark",
+      "Apache Spark",
+      "Big data processing",
+      "Data transformation",
+      "ETL"
+    ],
+    "subtopics": [
+      "PySpark DataFrame API",
+      "Column selection and row filtering",
+      "Data aggregation",
+      "Dataset joins",
+      "Sorting and duplicate removal",
+      "Missing-value handling",
+      "Column creation and modification",
+      "Random sampling"
+    ],
+    "concepts": [
+      "select()",
+      "filter()",
+      "groupBy().count()",
+      "agg()",
+      "join()",
+      "orderBy()",
+      "distinct()",
+      "drop()",
+      "withColumn()",
+      "replace()",
+      "isNull()",
+      "sample()"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which PySpark DataFrame functions select columns and apply conditions to rows?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The select() function chooses specific columns from a DataFrame.\nThe filter() function filters rows based on conditions."
+    },
+    {
+      "question": "How do groupBy().count() and agg() differ in their aggregation use cases?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The groupBy().count() function aggregates data by grouping and counting.\nThe agg() function supports advanced aggregations such as average, sum, and maximum."
+    },
+    {
+      "question": "Which PySpark functions can combine, sort, and deduplicate data?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The join() function combines multiple datasets based on keys.\nThe orderBy() function sorts data, while distinct() removes duplicates."
+    },
+    {
+      "question": "How can missing values, invalid values, and DataFrame columns be handled with the listed functions?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The replace() function handles missing or invalid values, and isNull() identifies missing values.\nThe withColumn() function creates or modifies columns, while drop() removes columns."
+    },
+    {
+      "question": "Which listed PySpark DataFrame function performs random sampling?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The sample() function performs random sampling of data."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrame operations",
+    "secondary_topics": [
+      "Big-data data transformation",
+      "Dataset aggregation",
+      "Data quality",
+      "Dataset joins",
+      "ETL development"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c902c137f7857924",
+    "saved_date": "2026-10-01T23:20:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338780871455318016",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338780871455318016_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "76b9d5e801ca971f6374b1f9f7c934a8e8023a326d804d146730eed7fadaa7d8",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

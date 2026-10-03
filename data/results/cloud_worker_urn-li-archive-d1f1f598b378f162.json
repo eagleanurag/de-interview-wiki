@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-d1f1f598b378f162",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.371934Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:55Z"
+  },
+  "original_text": "🚀 We're Hiring: PowerApps/Power Automate Sr. Developer\n 🔹 Experience: 5–10 Years\n 🔹 Tech Stack: Power Automate (with RPA), UiPath, Microsoft Power Platform\n 🔹 Location: Remote Opportunity\n 🔹 Start Date: Immediate Joiners Preferred\nIf you have strong expertise in PowerApps, Power Automate, and RPA tools like UiPath, and are ready to build impactful solutions—we want to hear from you!\n📩 Share your resume at kangana.gupta@ibotix.in\n#Hiring #PowerPlatform #PowerAutomate #UiPath #RPA #RemoteJobs #PowerApps #Microsoft365 #JobOpening #ImmediateJoiners #Ibotix\n\nHarsh Vohra IBOTIX Technologies Aditi Chaturvedi",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a hiring announcement for a senior developer with 5–10 years of experience across Power Apps, Power Automate with RPA, UiPath, and the Microsoft Power Platform. It describes a remote opportunity and prefers immediate joiners, but it does not provide technical knowledge, implementation details, or job responsibilities beyond building solutions with the listed technologies.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Hiring",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d1f1f598b378f162",
+    "saved_date": "2026-10-01T23:17:55Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a1c4a9349cc4fd8c76593a9b7c2bb95edd2e079458d5d4ee83290648a0b400d1",
+    "enricher_version": "3"
+  }
+}

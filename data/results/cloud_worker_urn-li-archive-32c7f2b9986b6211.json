@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-archive-32c7f2b9986b6211",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.416952Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:59Z"
+  },
+  "original_text": "🚀 Boosting File Ingestion Performance in PySpark on Databricks! ⚡\n\nWhile working on one of our pipelines, I faced a performance bottleneck when reading files from cloud storage.\nInitially, I used:\n\nall_files = dbutils.fs.ls(path)\nfiltered_files = [f for f in all_files if f.modificationTime > last_refresh]\nThis approach was time-consuming, especially with large directories, since it required listing all files and filtering in Python.\nTime taken: 4+ hours\n\n🔧 Optimization:\n I replaced this with a more efficient method using Spark’s native binaryFile reader and metadata filters:\n\nnew_files_df = spark.read.format(\"binaryFile\") \\\n .option(\"recursiveFileLookup\", \"true\") \\\n .option(\"modifiedAfter\", f\"{last_refresh_date}\") \\\n .option(\"modifiedBefore\", f\"{pipeline_trigger_time_mod}\") \\\n .load(path)\n\nTime Taken: 40+ minutes\n\n📈 Result:\n ✅ Significant reduction in runtime\n ✅ Eliminated unnecessary metadata fetching\n ✅ Fully scalable with Spark's distributed engine\n\nSometimes, the key to performance lies in replacing Python loops with native Spark capabilities. 🚀\n#databricks #spark #dataengineering #performanceoptimization #clouddata #bigdata #pyspark #azure #binaryFile #engineeringwins",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post describes a Databricks PySpark pipeline performance bottleneck when discovering files in large cloud-storage directories. An initial implementation used dbutils.fs.ls to list every file and then filtered the files in Python by modification time, reportedly taking more than four hours. It was replaced with Spark's native binaryFile reader using recursive lookup and modification-time filters bounded by the last refresh and pipeline trigger time. The post reports that this reduced runtime to 40+ minutes, eliminated unnecessary metadata fetching, and scaled with Spark's distributed processing engine.",
+    "topics": [
+      "File ingestion performance",
+      "PySpark",
+      "Databricks",
+      "Spark binaryFile reader",
+      "Metadata filtering"
+    ],
+    "subtopics": [
+      "Incremental file discovery",
+      "Recursive file lookup",
+      "Modification-time filtering",
+      "Replacing Python loops with Spark-native operations"
+    ],
+    "concepts": [
+      "Python-side file listing and filtering",
+      "Spark binaryFile reader",
+      "Recursive file lookup",
+      "Modification-time metadata filters",
+      "Distributed file-discovery optimization",
+      "Observed ingestion runtime reduction"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What changed between the original and optimized file-discovery implementations, and which options configure the optimized approach?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The original implementation lists every file with dbutils.fs.ls and then filters the Python collection by modification time.\nThe optimized implementation uses Spark's binaryFile format with recursiveFileLookup set to true, modifiedAfter set from last_refresh_date, and modifiedBefore set from the pipeline trigger time."
+    },
+    {
+      "question": "A PySpark pipeline on Databricks takes more than four hours to discover new files in a large cloud-storage directory. How would the optimization shown in the post address the bottleneck?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "Replace the directory-wide dbutils.fs.ls call and Python filtering with Spark's native binaryFile reader.\nUse recursive lookup and modification-time filters to restrict discovery to the required refresh interval.\nThe post reports that the optimized implementation completed in 40+ minutes and eliminated unnecessary metadata fetching."
+    },
+    {
+      "question": "Why does the post favor native Spark file discovery over listing and filtering files in Python?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The original approach had to list all files and perform filtering in Python, which became costly for large directories.\nThe optimized approach delegates discovery to Spark's native binaryFile reader and uses Spark's distributed processing engine.\nThe post attributes the significant runtime reduction to avoiding Python loops and unnecessary metadata fetching."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "File ingestion performance optimization",
+    "secondary_topics": [
+      "PySpark file discovery",
+      "Databricks",
+      "Incremental file processing",
+      "Spark metadata filtering"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:32c7f2b9986b6211",
+    "saved_date": "2026-10-01T23:19:59Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9953cef86c3537720892418a3eca07f53608dd96b7c49298f5af714d800d2cda",
+    "enricher_version": "3"
+  }
+}

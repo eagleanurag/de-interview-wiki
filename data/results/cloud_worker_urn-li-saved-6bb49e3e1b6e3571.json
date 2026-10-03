@@ -1,0 +1,133 @@
+{
+  "id": "urn-li-saved-6bb49e3e1b6e3571",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339636481692487680",
+    "captured_at": "2026-10-02T00:15:48.358080Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:02Z"
+  },
+  "original_text": "𝟭𝟮 𝗠𝘂𝘀𝘁-𝗞𝗻𝗼𝘄 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗧𝗲𝗿𝗺𝘀 \n\nIn the world of data engineering, terminology isn't just jargon—it's architecture, logic, and impact. Whether you’re designing pipelines, building scalable systems, or preparing for your next interview—mastering these 12 terms is foundational.\n\nHere’s a breakdown of the key concepts from the infographic \n\n🔹 1. ETL (Extract, Transform, Load)\nThe core of traditional data workflows. Extract raw data → Transform it for business needs → Load into data warehouses for analytics. Still relevant in batch pipelines and slowly changing dimensions.\n\n🔹 2. Data Lake\nA centralized repository for raw, semi-structured, and unstructured data, often in formats like JSON, Avro, or Parquet. Ideal for scalable, schema-on-read workloads using tools like Spark or Databricks.\n\n🔹 3. Data Warehouse\nStructured, query-optimized storage (like Snowflake, Synapse, BigQuery) used for analytics, BI, and reporting. Supports ACID transactions, indexing, and star/snowflake schema designs.\n\n🔹 4. Streaming\nReal-time ingestion and processing of data (Kafka, Spark Structured Streaming, Flink). Enables low-latency use cases like fraud detection, live analytics, and IoT processing.\n\n🔹 5. Pipeline\nEnd-to-end orchestration of data flow—from ingestion to transformation to storage. Pipelines may be built using tools like Apache Airflow, Azure Data Factory, or custom PySpark code.\n\n🔹 6. Batch Processing\nClassic processing model that handles large data volumes in scheduled intervals. Tools: Hadoop MapReduce, Spark, or ADF pipelines with triggers. High throughput, less latency.\n\n🔹 7. Data Mart\nA subset of a data warehouse designed for a specific business domain—like sales or HR. Promotes performance and team-level autonomy while keeping data structured.\n\n🔹 8. MPP (Massively Parallel Processing)\nThe engine behind most modern warehouses. It splits queries across compute nodes and processes them in parallel—drastically reducing response time for huge datasets.\n\n🔹 9. Data Mesh\nA paradigm shift in architecture—treating data as a product and decentralizing ownership to domain teams. Encourages scalability and accountability in modern enterprises.\n\n🔹 10. Data Quality\nProcesses to ensure accuracy, completeness, and consistency across the pipeline. Tools like Great Expectations, Deequ, and pandera can automate validation.\n\n🔹 11. CDC (Change Data Capture)\nCaptures row-level changes in source systems to support real-time replication and incremental loading. Crucial for minimizing latency and avoiding full reloads.\n\n🔹 12. Data Lineage\nTracks data flow from source to consumption—crucial for compliance, debugging, and impact analysis. Tools like Unity Catalog, OpenLineage, or Azure Purview help visualize this.\n\nFollow Riya Khandelwal for more.\n\n\n#DataEngineering #BigData #ETL #DataPipeline #StreamingData #DataLake #DataWarehouse #DataQuality #CDC #DataLineage #MPP #Spark #Databricks #AzureDataFactory #InterviewPrep",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339636481692487680_slide_0.jpg",
+      "description": "JPEG image, 480x492 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post defines 12 foundational data engineering terms and explains their roles in data workflows, storage, processing, architecture, quality, change capture, and governance. It also connects several concepts to representative technologies, use cases, and operational benefits.",
+    "topics": [
+      "Data engineering terminology",
+      "Data storage architecture",
+      "Data pipelines and processing",
+      "Data architecture",
+      "Data quality and lineage"
+    ],
+    "subtopics": [
+      "ETL workflows",
+      "Data lakes",
+      "Data warehouses",
+      "Streaming and batch processing",
+      "Data marts",
+      "Massively parallel processing",
+      "Data mesh",
+      "Data quality",
+      "Change data capture",
+      "Data lineage"
+    ],
+    "concepts": [
+      "ETL",
+      "Data Lake",
+      "Data Warehouse",
+      "Streaming",
+      "Pipeline",
+      "Batch Processing",
+      "Data Mart",
+      "Massively Parallel Processing",
+      "Data Mesh",
+      "Data Quality",
+      "Change Data Capture",
+      "Data Lineage"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the three stages of ETL, and where is the transformed data loaded?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "ETL consists of extracting raw data, transforming it for business needs, and loading the result.\nThe transformed data is loaded into a data warehouse for analytics."
+    },
+    {
+      "question": "How do a data lake and a data warehouse differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A data lake centralizes raw, semi-structured, and unstructured data and supports schema-on-read workloads.\nA data warehouse holds structured, query-optimized data for analytics, business intelligence, and reporting."
+    },
+    {
+      "question": "What is the difference between streaming and batch processing?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Streaming performs real-time ingestion and processing to support low-latency use cases.\nBatch processing handles large data volumes at scheduled intervals with high throughput and less latency."
+    },
+    {
+      "question": "How does massively parallel processing improve query performance in a modern data warehouse?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Massively parallel processing splits a query across compute nodes and processes those portions in parallel.\nParallel execution reduces response time for queries over huge datasets."
+    },
+    {
+      "question": "What problem does change data capture solve, and how does it help incremental loading?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Change data capture records row-level changes made in source systems.\nIt supports real-time replication and incremental loading while reducing latency and avoiding full reloads."
+    },
+    {
+      "question": "How do data quality and data lineage complement each other in a data pipeline?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Data quality validation helps ensure that pipeline data is accurate, complete, and consistent.\nData lineage tracks where data comes from and where it is consumed, supporting debugging, compliance, and impact analysis."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Core data engineering terminology",
+    "secondary_topics": [
+      "Data storage architecture",
+      "Data pipelines",
+      "Batch and streaming processing",
+      "Massively parallel processing",
+      "Data mesh",
+      "Data quality",
+      "Change data capture",
+      "Data lineage"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:6bb49e3e1b6e3571",
+    "saved_date": "2026-10-01T23:19:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339636481692487680",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339636481692487680_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f92552e08bb3d8baa702474c75bd8cd9140025d9e5d20f23ba55157395c4f86e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

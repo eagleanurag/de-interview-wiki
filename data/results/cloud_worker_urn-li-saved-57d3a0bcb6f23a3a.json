@@ -1,0 +1,92 @@
+{
+  "id": "urn-li-saved-57d3a0bcb6f23a3a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347839111384182785",
+    "captured_at": "2026-10-02T00:15:47.712096Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:54Z"
+  },
+  "original_text": "• 1st\nAzure Data Engineer | Expertise in Azure Data Factory | Azure Databricks | Big Data | PySpark | SQL | Microsoft Fabric | ETL | Data Lake | Linux | SCCM | VMware | MDE | Windows Admin |\n1yr •\n📌 Top 12 Must-Know Data Engineer Interview Questions & Answers [2025 Edition] 🚀\nAre you preparing for your next Data Engineering interview?\nWhether you're aiming for FAANG or top product-based companies, these 12 expertly curated questions will help you stand out and think like a real engineer — not just memorize.\n🧠 Key Concepts Covered:\n✅ OLTP vs OLAP — when to use what?\n✅ Designing Real-Time ETL with Kafka, Flink, Spark\n✅ What to do when 10% data is missing?\n✅ SQL Query Optimization — EXPLAIN, LIMIT, JOIN tricks\n✅ Skewed Data, Outliers, P-values — and how they impact pipelines\n✅ Bonus: Understanding architecture questions (batch vs streaming, CDC, data lake vs warehouse)\n🎯 Ideal for roles in:\n🔹 Data Engineering\n🔹 ETL Development\n🔹 Big Data Engineering\n🔹 Analytics Engineering\n🔹 ML/Data Platform Engineering\n🏢 Top companies hiring for these roles:\nGoogle | Amazon | Microsoft | Snowflake | Databricks | TCS | Deloitte | Walmart | PayPal | Accenture\n📥 Whether you're a fresher or have 5+ years of experience — save, study, and stay ahead in 2025!\n💬 Comment “DE12” below to get the full PDF\n🔁 Tag a friend prepping for data roles\n👨‍💻 Follow Sachin Patil for more high-quality tech prep\n🔍 Viral Hashtags for Reach & Discovery:\n#DataEngineer #DataEngineeringJobs #InterviewQuestions2025\n#ETLDeveloper #BigDataEngineer #SparkJobs #KafkaStreaming\n#DataArchitecture #OLTPvsOLAP #DataPipeline #DataEngineerLife\n#SQLPerformance #MockInterview #LinkedInLearning #CareerInTech\n#TCSHiring #DeloitteCareers #FAANGPrep #FollowSachinPatil\n#GoogleCareers #SnowflakeHiring #DatabricksCommunity #TechInterviews\n#CodingInterviewPrep #AnalyticsEngineering #CloudDataEngineer\n#ModernDataStack #JobSearchTips #ResumeToOffer\nTop 12 important Data Engineer interview Q & A",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347839111384182785_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post advertises a 2025 PDF containing 12 data engineering interview questions and answers. It identifies topics including OLTP versus OLAP, real-time ETL with Kafka, Flink, and Spark, handling 10% missing data, SQL optimization, skewed data, outliers, P-values, and data architecture comparisons. However, the promised questions and answers are not included, and the extracted media text is empty.",
+    "topics": [
+      "Data engineering interview preparation",
+      "OLTP and OLAP",
+      "Real-time ETL",
+      "SQL query optimization",
+      "Data architecture"
+    ],
+    "subtopics": [
+      "OLTP versus OLAP",
+      "Real-time ETL with Kafka, Flink, and Spark",
+      "Handling scenarios with 10% missing data",
+      "SQL optimization with EXPLAIN, LIMIT, and JOIN",
+      "Skewed data and outliers",
+      "P-values in data pipelines",
+      "Batch versus streaming",
+      "CDC",
+      "Data lake versus data warehouse"
+    ],
+    "concepts": [
+      "OLTP versus OLAP",
+      "Real-time ETL",
+      "Missing data",
+      "SQL query optimization",
+      "Skewed data and outliers",
+      "P-values",
+      "Batch versus streaming",
+      "CDC",
+      "Data lake versus warehouse"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "OLTP and OLAP",
+      "Real-time ETL",
+      "SQL optimization",
+      "Data quality",
+      "Batch and streaming architectures",
+      "Data lake and warehouse architectures"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:57d3a0bcb6f23a3a",
+    "saved_date": "2026-10-01T23:11:54Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347839111384182785",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347839111384182785_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "0dd2f1de260ddd974a18b8adb588dcd052cf81c55946fde7d2a396421d11c8b7",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data quality"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

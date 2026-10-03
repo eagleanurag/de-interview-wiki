@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-saved-c572509d0aacb721",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7297983259890663426",
+    "captured_at": "2026-10-02T00:15:51.394869Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:16Z"
+  },
+  "original_text": "𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝗿𝗮𝗹 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗚𝘂𝗶𝗱𝗲 🚀\n\nPreparing for a 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 interview?\n\nMany candidates struggle with 𝗯𝗲𝗵𝗮𝘃𝗶𝗼𝗿𝗮𝗹 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 that go beyond technical skills and dive into:\n\n- How you handle data pipeline failures 🔄\n- Managing conflicting requirements from stakeholders 🤝\n- Optimizing slow ETL jobs for better performance ⚡\n- Ensuring data quality and integrity across sources ✅\n- Dealing with tight deadlines and high-pressure situations ⏳\n\nTo help you ace these tricky questions, I’ve created a detailed Behavioral Interview Guide tailored for Data Engineers. It covers 𝟮𝟬 𝗿𝗲𝗮𝗹-𝘄𝗼𝗿𝗹𝗱 𝗯𝗲𝗵𝗮𝘃𝗶𝗼𝗿𝗮𝗹 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 along with sample answers that will set you apart!\n\n📩 Want the guide?\n\nDrop \"𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄\" in the comments, and I’ll send it to you!\n\nFollow Deepak Goyal for more Data Engineering interview tips and career hacks! 🚀",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A promotional Data Engineering interview post inviting candidates to comment \"Interview\" to receive an advertised guide with 20 real-world behavioral questions and sample answers. It only lists broad themes—pipeline failures, conflicting stakeholder requirements, slow ETL jobs, data quality and integrity, and deadline pressure—and provides no technical explanations, actual questions, or sample answers.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering interview preparation",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c572509d0aacb721",
+    "saved_date": "2026-10-01T23:35:16Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7297983259890663426",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "c127921f765e2f7a4e2b645fb8c6a381307a9b8ce0ecae1364f9ee2cc2ecad02",
+    "enricher_version": "3"
+  }
+}

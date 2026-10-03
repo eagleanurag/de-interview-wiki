@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-f8648deed7f0645e",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.266511Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:56Z"
+  },
+  "original_text": "🎯 SQL + Data Engineering Interview Series (Aug 1)\nAnother day, another high-impact interview question — directly from real GCP Data Engineer interview rounds.\nLet’s keep sharpening our practical SQL skills! 💡\n\n🔶 Question 9: First and Last Purchase Date Per Customer\n\nYou're given a table of customer purchases:\n\n📥 Table: purchases\n\n| customer_id | purchase_date |\n|-------------|----------------|\n| 1 | 2024-01-01 |\n| 1 | 2024-03-15 |\n| 1 | 2024-05-02 |\n| 2 | 2024-02-10 |\n| 2 | 2024-02-18 |\n\n🧠 Task:\nWrite a SQL query to return the first and last purchase date for each customer.\n\n✅ Expected Output:\n\n| customer_id | first_purchase | last_purchase |\n|-------------|----------------|----------------|\n| 1 | 2024-01-01 | 2024-05-02 |\n| 2 | 2024-02-10 | 2024-02-18 |\n\n\n---\n\n🔶 Question 10: What is an SCD and Why Does It Matter?\n\nIn the world of data warehousing, especially in analytics projects, tracking changes over time is critical.\n\n📌 Your Challenge:\n\nWhat is an SCD (Slowly Changing Dimension)?\n\nExplain the purpose of SCD Type 1, Type 2, and Type 3.\n\nWhen and where would you apply them in a real project?\n\nBonus 💥: How would you implement SCD Type 2 in BigQuery?\n\n\n👀 Real-world use cases: tracking address changes, job titles, product category changes — without losing history.\n\n\n---\n\n💬 Stuck or want to compare answers? Drop your thoughts in the comments — I’m happy to help.\n👉 Follow me to keep getting real-world SQL & GCP Data Engineering questions — delivered daily from real interview rooms.\n\n#sql #dataengineering #bigquery #scd #slowlychangingdimensions #sqlinterview #gcpdataengineer #interviewprep #sqlchallenge #datamodeling #analyticsjobs\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents two data engineering interview challenges. The first asks for a SQL query that returns the first and last purchase date for each customer from a purchases table. The second asks what a Slowly Changing Dimension is, how SCD Types 1, 2, and 3 differ in purpose, and when they might be used to track changes such as addresses, job titles, and product categories without losing history. It also mentions implementing SCD Type 2 in BigQuery as a bonus, but it provides no query solution, SCD type definitions, or BigQuery implementation.",
+    "topics": [
+      "SQL",
+      "customer purchase history",
+      "data warehousing",
+      "Slowly Changing Dimensions",
+      "BigQuery"
+    ],
+    "subtopics": [
+      "First and last purchase date per customer",
+      "SCD Type 1",
+      "SCD Type 2",
+      "SCD Type 3",
+      "Tracking changes over time",
+      "SCD Type 2 implementation in BigQuery"
+    ],
+    "concepts": [
+      "Per-customer first and last purchase dates",
+      "Slowly Changing Dimension",
+      "SCD Types 1, 2, and 3",
+      "Historical change tracking",
+      "SCD Type 2 in BigQuery"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Write a SQL query that returns the first and last purchase date for each customer in the purchases table.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query returns one row for each customer_id.\nThe query identifies the earliest and latest purchase_date for each customer.\nThe result follows the customer IDs and first and last purchase dates shown in the expected output."
+    },
+    {
+      "question": "What is a Slowly Changing Dimension, and what purposes do SCD Types 1, 2, and 3 serve?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer defines an SCD as a data warehousing approach for tracking changes over time.\nThe answer explains the distinct purpose of each of the three SCD types.\nThe answer relates SCD usage to analytics projects that need to preserve historical information."
+    },
+    {
+      "question": "When and where could SCD Types 1, 2, and 3 be applied in a real analytics project?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer discusses appropriate data warehousing or analytics use cases for each SCD type.\nThe answer uses examples such as address changes, job title changes, or product category changes.\nThe answer explains how the selected approach tracks changes while retaining history."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Per-customer purchase date analysis with SQL",
+    "secondary_topics": [
+      "Slowly Changing Dimensions",
+      "Historical change tracking",
+      "Data warehousing",
+      "BigQuery"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:f8648deed7f0645e",
+    "saved_date": "2026-10-01T23:12:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "21f43318b80c5cf4ea5b7ec00f5c734d0f499ccafc9fa8966de627e13fc5d8e1",
+    "enricher_version": "3"
+  }
+}

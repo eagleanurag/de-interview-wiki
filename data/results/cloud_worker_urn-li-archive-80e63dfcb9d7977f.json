@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-80e63dfcb9d7977f",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.660936Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:02Z"
+  },
+  "original_text": "Dear Connections, \n\nWe, in Infosys, are looking for Power Platform developers/architects across India locations.If you are looking for a change or know anyone in your network who would be interested, please feel free to DM me to know more about the role and the opportunity.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a hiring announcement from Infosys for Power Platform developers and architects across multiple locations in India. It asks candidates who are seeking a change, or people in their network, to contact the poster for more information. It does not contain technical knowledge or details about the role.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Careers and hiring",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:80e63dfcb9d7977f",
+    "saved_date": "2026-10-01T23:19:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a4f7bba59c2eb3099206ecf5f85ddea89048cd0c3a67d85b39e1c9fcb8b1886e",
+    "enricher_version": "3"
+  }
+}

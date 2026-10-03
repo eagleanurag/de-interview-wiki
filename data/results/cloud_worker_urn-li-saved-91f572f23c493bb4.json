@@ -1,0 +1,106 @@
+{
+  "id": "urn-li-saved-91f572f23c493bb4",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7293569222478028800",
+    "captured_at": "2026-10-02T00:15:49.492555Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:36:49Z"
+  },
+  "original_text": "Founder & CEO - Data Engineering Hub | Lead Data Engineer @ World’s #1 Airline | Trained ~1000 IT Professionals | AWS Data Engineering Trainer & Mentor | Empowering Dreams, Transforming Lives\n1yr •\nSQL trick that many data professionals 𝐝𝐨𝐧'𝐭 𝐤𝐧𝐨𝐰:\nInstead of using CASE WHEN inside aggregate functions, you can simplify your queries using FILTER.\nExample:\nImagine you have a sales table:\nCREATE TABLE sales (\nregion VARCHAR(50),\nproduct VARCHAR(50),\nrevenue DECIMAL(10,2)\n);\nINSERT INTO sales (region, product, revenue) VALUES\n('North', 'Product A', 1000),\n('North', 'Product B', 1500),\n('South', 'Product A', 2000),\n('South', 'Product B', 2500);\n𝐓𝐫𝐚𝐝𝐢𝐭𝐢𝐨𝐧𝐚𝐥 𝐀𝐩𝐩𝐫𝐨𝐚𝐜𝐡 (𝐔𝐬𝐢𝐧𝐠 𝐂𝐀𝐒𝐄 𝐖𝐇𝐄𝐍):\nSELECT\nregion,\nSUM(𝐂𝐀𝐒𝐄 𝐖𝐇𝐄𝐍 product = 'Product A' THEN revenue ELSE 0 END) AS product_a_revenue,\nSUM(𝐂𝐀𝐒𝐄 𝐖𝐇𝐄𝐍 product = 'Product B' THEN revenue ELSE 0 END) AS product_b_revenue\nFROM sales\nGROUP BY region;\n𝐎𝐩𝐭𝐢𝐦𝐢𝐳𝐞𝐝 𝐀𝐩𝐩𝐫𝐨𝐚𝐜𝐡 (𝐔𝐬𝐢𝐧𝐠 𝐅𝐈𝐋𝐓𝐄𝐑):\nSELECT\nregion,\nSUM(revenue) 𝐅𝐈𝐋𝐓𝐄𝐑 (WHERE product = 'Product A') AS product_a_revenue,\nSUM(revenue) 𝐅𝐈𝐋𝐓𝐄𝐑 (WHERE product = 'Product B') AS product_b_revenue\nFROM sales\nGROUP BY region;\nSome SQL Engines such as PostgreSQL and #aws Redshift Optimize FILTER Better than CASE WHEN!\nIf you've read so far, do LIKE the post 👍\n𝐏.𝐒:\nLearn no-nonsense AWS Data Engineering with 275+ others:\nhttps://aws.sachin.cloud\n&\n𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐠𝐫𝐨𝐮𝐩 : https://w.sachin.cloud\nPostgreSQL",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7293569222478028800_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post demonstrates conditional revenue aggregation by region using a sales table. It contrasts CASE WHEN expressions inside SUM with the SQL aggregate FILTER clause and claims that some SQL engines, including PostgreSQL and AWS Redshift, may optimize FILTER better than CASE WHEN.",
+    "topics": [
+      "SQL conditional aggregation",
+      "Aggregate FILTER clause",
+      "CASE WHEN in aggregate functions",
+      "PostgreSQL",
+      "AWS Redshift"
+    ],
+    "subtopics": [
+      "SUM with FILTER",
+      "SUM with CASE WHEN",
+      "Conditional revenue totals by product",
+      "Regional aggregation with GROUP BY",
+      "Engine-specific optimization"
+    ],
+    "concepts": [
+      "Conditional aggregation",
+      "CASE WHEN inside SUM",
+      "Aggregate FILTER clause",
+      "GROUP BY region",
+      "Engine-specific optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between using CASE WHEN inside SUM and using FILTER after SUM for conditional revenue aggregation?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "CASE WHEN evaluates each row and explicitly returns revenue or zero before SUM processes it.\nFILTER applies a predicate to the aggregate so only matching rows contribute to that SUM."
+    },
+    {
+      "question": "Write a query that returns Product A and Product B revenue totals for each region using SUM with FILTER.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The query selects region and calculates Product A revenue with SUM(revenue) FILTER (WHERE product = 'Product A').\nThe query calculates Product B revenue with the corresponding Product B filter and groups the results by region."
+    },
+    {
+      "question": "How can the two conditional aggregation approaches be expressed against the sample sales table?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The CASE WHEN version uses SUM(CASE WHEN product = 'Product A' THEN revenue ELSE 0 END) and an equivalent expression for Product B.\nThe FILTER version uses SUM(revenue) FILTER (WHERE product = 'Product A') and SUM(revenue) FILTER (WHERE product = 'Product B'), with both queries grouped by region."
+    },
+    {
+      "question": "Which database engines does the post identify as potentially optimizing FILTER better than CASE WHEN?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post names PostgreSQL and AWS Redshift.\nThe claim is qualified as applying to some SQL engines rather than every SQL implementation."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL aggregate FILTER clause",
+    "secondary_topics": [
+      "Conditional aggregation",
+      "CASE WHEN expressions",
+      "PostgreSQL",
+      "AWS Redshift",
+      "Query optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:91f572f23c493bb4",
+    "saved_date": "2026-10-01T23:36:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7293569222478028800",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7293569222478028800_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4eab59ba95e6663d100e992a84bdc02440379676285e7d883fe8d2c945d95eb3",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

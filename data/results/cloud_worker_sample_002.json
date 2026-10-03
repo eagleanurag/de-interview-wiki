@@ -1,0 +1,65 @@
+{
+  "id": "sample_002",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://example.com/sample_002",
+    "captured_at": "2026-09-29T18:30:00+05:30",
+    "author": "Sample Author",
+    "published_at": null
+  },
+  "original_text": "Interview question: A SQL query on a large fact table is running slowly. How would you diagnose and optimize it? Consider joins, indexes, statistics, filtering, aggregation, and execution plans.",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The content is an interview question about diagnosing and optimizing a slow SQL query on a large fact table. It identifies joins, indexes, statistics, filtering, aggregation, and execution plans as factors to consider, but provides no detailed techniques or proposed solution.",
+    "topics": [
+      "Large fact table query troubleshooting"
+    ],
+    "subtopics": [
+      "Joins",
+      "Indexes",
+      "Statistics",
+      "Filtering",
+      "Aggregation",
+      "Execution plans"
+    ],
+    "concepts": [
+      "Large fact table",
+      "SQL query diagnosis",
+      "Joins",
+      "Indexes",
+      "Statistics",
+      "Filtering",
+      "Aggregation",
+      "Execution plan"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A SQL query on a large fact table is running slowly. How would you diagnose and optimize it while considering joins, indexes, statistics, filtering, aggregation, and execution plans?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The response addresses joins as an area requiring diagnosis and optimization.\nThe response addresses indexes and statistics as factors that may be relevant to query performance.\nThe response addresses filtering and aggregation as parts of the query that should be evaluated.\nThe response considers the execution plan as part of diagnosing the slow query."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL query performance optimization",
+    "secondary_topics": [
+      "Large fact table queries",
+      "Query execution analysis"
+    ],
+    "interview_relevant": true
+  },
+  "_enrichment": {
+    "source_digest": "c6519eaac400dc5cccda6c9a489b5eda2d05f418b6340e03e51b00e86ba1818f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "SQL query performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

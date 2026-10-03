@@ -1,0 +1,118 @@
+{
+  "id": "urn-li-saved-3dc7ec7573d2e285",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509918585671241729",
+    "captured_at": "2026-10-02T00:15:46.776023Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:56Z"
+  },
+  "original_text": "Senior Data Engineer @LTIMindtree | 125K+ Connections @Linkedin\n4d •\n📘 300 SQL Interview Questions – FREE PDF\n🎯 The collection covers questions across companies like:\n→ PwC\n→ Deloitte\n→ EY\n→ KPMG\n→ Tredence\n→ Persistent Systems\n→ Accenture\nAnd it's not just basic SQL.\nYou'll find questions around:\n🔹 Joins & Subqueries\n🔹 Aggregations & HAVING\n🔹 RANK / ROW_NUMBER / LAG\n🔹 Running & Moving Averages\n🔹 Gaps & Islands\n🔹 Recursive CTEs\n🔹 Hierarchies\n🔹 Date & Sales Analytics\n🔹 Real-world business scenarios\n💡 A few examples from the collection:\nFind the longest consecutive login streak for each user.\nFind the top 5 highest-paid employees per department.\nFind customers who purchased in every category.\nFind gaps in a sequence of numbers.\nThese are the kinds of problems where knowing SQL syntax isn't enough.\nYou have to actually think about the data.\nTopmate Link : https://lnkd.in/dRCNtEb5\n🎥 Watch more Power BI content on my YouTube Channel: https://lnkd.in/dH9Dn-3N\nSQL",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7509918585671241729_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post announces a free PDF containing 300 SQL interview questions associated with several named companies. It lists subjects including joins, subqueries, aggregations, HAVING, RANK, ROW_NUMBER, LAG, running and moving averages, gaps and islands, recursive CTEs, hierarchies, date analytics, sales analytics, and real-world business scenarios. Four example tasks are provided, but the post does not include answers, SQL examples, or detailed technical explanations. It emphasizes that solving these problems requires reasoning about data rather than only knowing SQL syntax.",
+    "topics": [
+      "SQL interview preparation",
+      "Joins and subqueries",
+      "Aggregations and HAVING",
+      "RANK, ROW_NUMBER, and LAG",
+      "Running and moving averages",
+      "Gaps-and-islands analysis",
+      "Recursive CTEs",
+      "Hierarchies",
+      "Date and sales analytics",
+      "Real-world SQL business scenarios",
+      "Power BI learning resources"
+    ],
+    "subtopics": [
+      "Consecutive login streak analysis",
+      "Departmental employee rankings",
+      "Customer purchase coverage",
+      "Numeric sequence gap detection",
+      "Company-associated SQL interview questions"
+    ],
+    "concepts": [
+      "SQL interview question collection",
+      "Joins and subqueries",
+      "Aggregations and HAVING",
+      "RANK, ROW_NUMBER, and LAG",
+      "Running and moving averages",
+      "Gaps and islands",
+      "Recursive CTEs",
+      "Hierarchies",
+      "Date and sales analytics",
+      "SQL problem-solving beyond syntax",
+      "Real-world business scenarios",
+      "Power BI learning resources"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What should a SQL query return when tasked with finding the longest consecutive login streak for each user?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query must operate on each user's login history and return the length of the longest consecutive run for that user."
+    },
+    {
+      "question": "How would you return the top five highest-paid employees for each department?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The ranking must be scoped by department rather than across the entire employee population.\nThe result must contain the five highest-paid employees from each department."
+    },
+    {
+      "question": "How would you identify customers who purchased in every category?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query must evaluate each customer's purchases across the complete category set.\nOnly customers with a recorded purchase in every category should qualify."
+    },
+    {
+      "question": "How would you find gaps in a sequence of numbers using SQL?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query must examine an ordered numeric sequence and identify numbers that are absent between its values."
+    }
+  ],
+  "classification": {
+    "domain": "Data engineering and analytics",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "Analytical SQL",
+      "SQL query patterns",
+      "Business analytics",
+      "Power BI learning resources"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3dc7ec7573d2e285",
+    "saved_date": "2026-10-01T23:06:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7509918585671241729",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7509918585671241729_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8f516c3d0fa0d724b85187f2a4b2c076752ba2860af05c21821b5d4af2d5313b",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

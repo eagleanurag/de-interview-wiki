@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-archive-b5481c9185707ac7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.241735Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:00Z"
+  },
+  "original_text": "🧠 𝗗𝗕𝗔 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲: 𝗧𝗵𝗲 𝗖𝘂𝗿𝗶𝗼𝘂𝘀 𝗖𝗮𝘀𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗖𝗿𝗮𝘄𝗹𝗶𝗻𝗴 𝗦𝗤𝗟 𝗦𝗲𝗿𝘃𝗲𝗿 🧠\n\n𝘐𝘮𝘢𝘨𝘪𝘯𝘦 𝘵𝘩𝘪𝘴:\n\nYou’re the lead DBA for a financial services company. It’s Monday morning. The business-critical MSSQL Server (2019 Enterprise) that powers real-time transaction processing starts slowing down dramatically—but only between 10:30 AM and 1:00 PM. After that, it mysteriously returns to normal.\n\n𝗧𝗵𝗲 𝘀𝗲𝗿𝘃𝗲𝗿 𝗶𝘀 𝗮 𝗯𝗲𝗮𝘀𝘁:\n✅ 32 vCPUs\n✅ 256 GB RAM\n✅ Ultra-fast SSDs\n✅ No recent deployments\n✅ No blocking, no deadlocks\n✅ Indexes and stats are fresh\n✅ TempDB is optimized\n✅ Query Store shows no obvious regressions\n\n𝗬𝗼𝘂 𝗱𝗶𝗴 𝗱𝗲𝗲𝗽𝗲𝗿:\nCPU usage spikes to 95%, but no single query stands out\nMemory usage is stable, no signs of pressure\nI/O latency is low, disk queues are clean\nNo scheduled jobs or backups during the slowdown window\nNo network bottlenecks reported by the infra team\nNo changes in execution plans for key procedures\n\n𝗬𝗼𝘂 𝗲𝘃𝗲𝗻 𝘁𝗿𝗶𝗲𝗱:\nCapturing live query stats\nComparing wait stats before/during/after\nRunning a profiler trace (carefully!)\nIsolating app traffic by module\nStill, the root cause remains elusive.\n\n🧩 𝗛𝗲𝗿𝗲’𝘀 𝘁𝗵𝗲 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 𝗳𝗼𝗿 𝘆𝗼𝘂, 𝗳𝗲𝗹𝗹𝗼𝘄 𝗗𝗕𝗔𝘀:\nWhat would be your next move?\nWhat non-obvious culprits would you investigate?\nHave you faced a similar ghost-in-the-machine scenario?\n\n🔍 𝗦𝗽𝗲𝗰𝗶𝗮𝗹 𝗡𝗼𝘁𝗲:\nThis is a purely imaginary scenario. I don’t have the answer or a solution. The goal is to spark discussion, test our collective knowledge, and think outside the box. Let’s challenge ourselves and learn from each other!\n\nDrop your thoughts, theories, and war stories below 👇\n\n#SQLServer #DBAChallenge #PerformanceTuning #DatabaseMystery #TechCommunity #SQLInsights",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a purely imaginary and intentionally unresolved DBA challenge involving a business-critical MSSQL Server 2019 Enterprise system. Performance drops every Monday from 10:30 AM to 1:00 PM, with CPU usage reaching 95% even though no individual query stands out. Memory, I/O, disk queues, blocking, deadlocks, indexes, statistics, TempDB, scheduled work, network capacity, execution plans, and Query Store show no obvious problems. The DBA has collected live query statistics, compared wait stats, run a Profiler trace, and isolated traffic by application module, but the root cause remains unknown. The post explicitly provides no answer or solution and aims to encourage further discussion.",
+    "topics": [
+      "MSSQL Server performance troubleshooting",
+      "Intermittent CPU saturation",
+      "Time-bounded database performance degradation"
+    ],
+    "subtopics": [
+      "Live query statistics",
+      "Wait-stat comparison",
+      "Profiler tracing",
+      "Application workload isolation",
+      "Query Store analysis",
+      "Execution-plan stability",
+      "Blocking and deadlock investigation",
+      "CPU, memory, I/O, and TempDB diagnostics"
+    ],
+    "concepts": [
+      "Intermittently time-bounded degradation",
+      "Aggregate CPU saturation",
+      "Stable non-CPU resource indicators",
+      "Explicitly absent contention and maintenance problems",
+      "Query workload stability",
+      "Live query-statistics collection",
+      "Temporal wait-stat comparison",
+      "Careful Profiler tracing",
+      "Application-module traffic isolation",
+      "Unresolved performance root cause"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which resource metric spikes during the MSSQL Server slowdown, and what detail prevents the post from attributing that spike to one query?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "CPU usage rises to 95% during the slowdown window.\nNo individual query stands out as the source of the elevated CPU usage."
+    },
+    {
+      "question": "What diagnostic actions has the DBA already attempted in this scenario?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The DBA captured live query statistics, compared wait statistics before and during the incident, ran a Profiler trace carefully, and isolated application traffic by module.\nDespite those actions, the root cause remains unresolved."
+    },
+    {
+      "question": "What conclusion can responsibly be drawn from the evidence provided in the post?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The slowdown has a recurring time window and is associated with CPU usage reaching 95%, while the other listed indicators remain normal or show no obvious problems.\nThe evidence does not establish a specific culprit, and the post explicitly supplies neither a root cause nor a solution."
+    }
+  ],
+  "classification": {
+    "domain": "Database performance engineering",
+    "primary_topic": "Intermittent MSSQL Server CPU performance degradation",
+    "secondary_topics": [
+      "SQL Server performance diagnostics",
+      "Wait-stat analysis",
+      "Query workload isolation",
+      "Unresolved performance incidents"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b5481c9185707ac7",
+    "saved_date": "2026-10-01T23:20:00Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "6015eca4bad7d01ff84b08515bb5633f1f15ac8ca2f83bb7711272817b917a98",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "SQL Server diagnostics"
+      ],
+      "concepts": [],
+      "questions": [
+        "Which common SQL Server bottlenecks or operational problems does the post explicitly report as absent or unobserved?"
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-500bc6988dd794c6",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.959287Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:31Z"
+  },
+  "original_text": "One of the interesting questions I encountered in Azure Data Factory (ADF). I’m sharing the approach I used to solve it. If you know of any other way to solve it, feel free to share it in the comments!\n\nyou have 5 folders with 5 files each how can you copy ?\n\nStep-by-Step ADF Pipeline Design:\n1. Get List of Folders\ni. Use Get Metadata activity with the container path (e.g., input/)\nii. Set field list to Child Items\niii. This gives you a list of folders under input/\n\n2. ForEach (Folder Level)\ni. Add a ForEach activity to loop through each folder returned from step 1\nii. Inside the loop:\n -Use a nested Get Metadata activity to get the list of files in that folder\n a. Pass dynamic folder path: @concat('input/', item().name)\n b. Again, use Child Items in field list\n\n3. Nested ForEach (File Level)\ni. Inside the folder-level ForEach:\n a. Add another ForEach to loop through files\n b. Inside this second ForEach, place the Copy Data activity\n\n4. Copy Data\ni.Source: Set dynamic file path using:\n@concat('input/', variables('currentFolder'), '/', item().name)\nii. Sink: Set your destination path similarly\n\nExample Folder Structure:\ninput/\n ├── folder1/\n │ ├── file1.csv\n │ ├── file2.csv\n ├── folder2/\n │ ├── file1.csv\n...\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post proposes an Azure Data Factory pipeline for copying files from five folders containing five files each. It uses Get Metadata with the Child Items field to discover folders, a folder-level ForEach to iterate over them, nested Get Metadata to discover files, a file-level ForEach, and Copy Data with dynamic source and sink paths. The supplied content ends with an incomplete folder-tree example and does not show how the currentFolder variable is populated.",
+    "topics": [
+      "Azure Data Factory pipeline design",
+      "Folder and file iteration",
+      "Dynamic path construction"
+    ],
+    "subtopics": [
+      "Get Metadata activity",
+      "Child Items metadata field",
+      "Folder-level ForEach",
+      "Nested file-level ForEach",
+      "Copy Data activity",
+      "ADF dynamic expressions"
+    ],
+    "concepts": [
+      "Get Metadata activity",
+      "Child Items metadata field",
+      "Folder-level ForEach",
+      "Nested file-level ForEach",
+      "Copy Data activity",
+      "Dynamic folder path expression",
+      "Dynamic file path expression"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the proposed ADF pipeline iterate over five folders and process the files in each folder?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "It uses Get Metadata on the input path with the Child Items field to obtain the folder list.\nIt uses a folder-level ForEach and a nested Get Metadata activity to obtain the files for each current folder.\nIt uses a nested file-level ForEach containing the Copy Data activity."
+    },
+    {
+      "question": "Which dynamic path expressions are used to access folders and files in the pipeline?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The nested folder lookup uses @concat('input/', item().name).\nThe Copy Data source uses @concat('input/', variables('currentFolder'), '/', item().name).\nThe destination path is set dynamically in a similar way, but the supplied post does not show the currentFolder variable assignment."
+    },
+    {
+      "question": "Why does the pipeline use two levels of ForEach activity?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The outer ForEach represents iteration over the folders discovered under the input path.\nThe inner ForEach represents iteration over the files discovered within the current folder.\nThe Copy Data activity is placed in the inner loop so it runs for each file."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Factory",
+    "secondary_topics": [
+      "Metadata discovery",
+      "Control-flow loops",
+      "Copy Data activity",
+      "Dynamic path expressions"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:500bc6988dd794c6",
+    "saved_date": "2026-10-01T23:10:31Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f025e586a006783eccace3b5c830dbb3fd3a85c60a6d383a240960aa06cf834b",
+    "enricher_version": "3"
+  }
+}

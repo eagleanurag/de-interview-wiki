@@ -1,0 +1,77 @@
+{
+  "id": "urn-li-archive-ceb756b6f5f53de1",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.322674Z",
+    "author": "Kalyani V",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:53Z"
+  },
+  "original_text": "*** Interview Question ***\nGot this interesting question in a recent interview — analyzing the Spark operations in this snippet Action & transformation:\n\n```\n df = spark.read.csv(\"data.csv\")\n filteredDF = df.filter($\"age\" > 25)\ngroupedDF = filteredDF.groupBy(\"country\").count() \ngroupedDF.show() \n\n```\n𝗔𝗰𝘁𝗶𝗼𝗻 \nread() \ncount()\nshow() \ncollect()\n\n𝗧𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻𝘀\n filter()\n groupBy().count() (groupby count is transformation)\n\n\n\n#ApacheSpark #InterviewTips #DataEngineering #BigData #PySpark #Scala #SparkTransformations #SparkActions #TechInterviews #LearningByDoing",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This brief Spark interview note shows a DataFrame pipeline that reads data.csv, filters rows where age is greater than 25, groups them by country, counts the grouped rows, and displays the result. It labels read(), count(), show(), and collect() as actions and filter() and groupBy().count() as transformations, but does not explain their execution semantics.",
+    "topics": [
+      "Apache Spark",
+      "Spark DataFrame operations",
+      "Spark actions and transformations"
+    ],
+    "subtopics": [
+      "Reading CSV data",
+      "Filtering DataFrames",
+      "Grouping and counting records",
+      "Displaying DataFrame results",
+      "Action and transformation classification"
+    ],
+    "concepts": [
+      "DataFrame filtering",
+      "Grouped counting",
+      "CSV loading and result display",
+      "Spark actions",
+      "Spark transformations"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "According to the post, which Spark operations are classified as actions?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post identifies read(), count(), show(), and collect() as actions."
+    },
+    {
+      "question": "What data-processing sequence is implemented by the DataFrame snippet?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "It reads data.csv, filters rows to those with age greater than 25, groups the filtered rows by country, counts them, and displays the resulting DataFrame."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark actions and transformations",
+    "secondary_topics": [
+      "DataFrame filtering",
+      "Grouped aggregation",
+      "PySpark",
+      "Scala"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:ceb756b6f5f53de1",
+    "saved_date": "2026-10-01T23:26:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9b6efd46447eccee64c309ffa48649c86001c18facdfef08555ae06307cbfbf2",
+    "enricher_version": "3"
+  }
+}

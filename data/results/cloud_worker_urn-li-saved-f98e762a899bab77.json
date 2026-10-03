@@ -1,0 +1,160 @@
+{
+  "id": "urn-li-saved-f98e762a899bab77",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339265863931301888",
+    "captured_at": "2026-10-02T00:15:53.443758Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:32Z"
+  },
+  "original_text": "𝐓𝐨𝐩 𝟏𝟎 𝐅𝐫𝐚𝐜𝐭𝐚𝐥 𝐃𝐚𝐭𝐚 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 (𝟐𝟎𝟐𝟓)\n\n.\n.\n.\n.\n\n1. Explain your experience with building scalable data pipelines.\n\n2. How would you optimize a slow SQL query on a large dataset?\n\n3. What’s the difference between partitioning and bucketing in Hive?\n\n4. How do you ensure data quality and integrity in pipelines?\n\n5. How would you implement Change Data Capture (CDC) in a system?\n\n6. What are the key differences between batch and stream processing?\n\n7. SQL Scenario: Find customers who purchased more than once in the same month across different years.\n\n8. How do you handle schema evolution in big data systems?\n\n9. Describe an end-to-end data pipeline you built and took to production.\n\n10. How do you monitor and debug failures in production data workflows?\n\n#DataEngineering #BigData #ApacheSpark #Hadoop #HDFS #ETL #DataPipeline #CloudDataEngineering #AWSDataEngineering #SQL #DataLake #CognizantInterview #ITInterview #DataEngineerInterview #InterviewPreparation #FractalInterview #TechInterviewTips #GCP #AWS #DistributedSystems #TechMCQ #DataPipeline #CloudDataEngineering #AWSDataEngineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339265863931301888_slide_0.jpg",
+      "description": "JPEG image, 800x170 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is a 2025 list of 10 Fractal Data Engineer interview questions covering scalable data pipelines, SQL optimization, Hive partitioning and bucketing, data quality, CDC, processing models, schema evolution, and production operations. It also includes a repeat-purchase SQL scenario. No answers, technical explanations, expected query, supporting schema, or extracted media text are provided.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Data pipelines",
+      "SQL",
+      "Hive",
+      "Data quality and integrity",
+      "Change Data Capture",
+      "Batch and stream processing",
+      "Big data schema evolution",
+      "Production workflow operations"
+    ],
+    "subtopics": [
+      "Building scalable data pipelines",
+      "Optimizing slow SQL queries on large datasets",
+      "Partitioning and bucketing in Hive",
+      "Ensuring data quality and integrity",
+      "Implementing Change Data Capture",
+      "Comparing batch and stream processing",
+      "Analyzing repeat purchases across years",
+      "Handling schema evolution",
+      "Building end-to-end production pipelines",
+      "Monitoring and debugging production failures"
+    ],
+    "concepts": [
+      "Scalable data pipelines",
+      "Partitioning and bucketing in Hive",
+      "Data quality and integrity",
+      "Change Data Capture",
+      "Batch and stream processing",
+      "Cross-year repeat-purchase analysis",
+      "Schema evolution",
+      "End-to-end production data pipelines",
+      "Production workflow monitoring and debugging"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Explain your experience with building scalable data pipelines.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should describe the candidate's experience building data pipelines and the approach used to achieve scalability."
+    },
+    {
+      "question": "How would you optimize a slow SQL query on a large dataset?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer should explain an approach to optimizing a slow SQL query over a large dataset."
+    },
+    {
+      "question": "What is the difference between partitioning and bucketing in Hive?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should distinguish partitioning from bucketing in the context of Hive."
+    },
+    {
+      "question": "How do you ensure data quality and integrity in pipelines?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should describe how data quality and integrity are maintained in data pipelines."
+    },
+    {
+      "question": "How would you implement Change Data Capture in a system?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer should explain how Change Data Capture would be implemented within a system."
+    },
+    {
+      "question": "What are the key differences between batch and stream processing?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The answer should identify and explain the key differences between batch and stream processing."
+    },
+    {
+      "question": "Write SQL to find customers who purchased more than once in the same month across different years.",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The answer should formulate SQL that identifies customers with more than one purchase in the same month across different years."
+    },
+    {
+      "question": "How do you handle schema evolution in big data systems?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer should describe how a big data system can accommodate schema changes."
+    },
+    {
+      "question": "Describe an end-to-end data pipeline you built and took to production.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer should identify the end-to-end pipeline the candidate built and explain how it was taken to production."
+    },
+    {
+      "question": "How do you monitor and debug failures in production data workflows?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer should describe how production data workflow failures are monitored and debugged."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Scalable data pipelines",
+      "SQL optimization",
+      "Hive partitioning and bucketing",
+      "Data quality and integrity",
+      "Change Data Capture",
+      "Batch and stream processing",
+      "Schema evolution",
+      "Production pipeline monitoring and debugging"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f98e762a899bab77",
+    "saved_date": "2026-10-01T23:11:32Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339265863931301888",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339265863931301888_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "037e44a69153c48e97e4b12dade02e782e71c8a806f025834ba6d34b9eedd38f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "Slow SQL query optimization"
+      ],
+      "questions": []
+    }
+  }
+}

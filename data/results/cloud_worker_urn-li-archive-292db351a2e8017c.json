@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-archive-292db351a2e8017c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.372403Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:24:40Z"
+  },
+  "original_text": "𝗣𝗪𝗖 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲 (𝗗𝗮𝘁𝗮 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫) ⭐→\n\nThe whole interview process had 3 rounds of 1 hour each.\n\n🔸 The first round was an extensive discussion about the projects I was handling and a few coding questions on SQL & Python. \n\nThere were questions like the following: \n→ Optimisation techniques used in projects; Issues faced in the project; Hadoop questions.\n\n🔸 After clearing this round, I moved on to the next round, which was a Case-Study based round. \n\nI was asked scenario-based questions & the interviewer asked multiple questions on Spark, like:\n→ Spark job process; Optimizations of spark; Sqoop interview questions.\n \nAfter this, I was asked a few Coding questions & SQL coding questions, which I successfully answered.\n\n🔸 Lastly, there was a Managerial Round where I was asked a lot of technical and advanced questions like:\n→ Architecture of spark, hive, Hadoop; Overview of MapReduce job process; Joins to use in spark; Broadcast join & lastly Different joins available.\n\n*React ❤️ for more Interview tips*",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a personal interview-experience post about a Data Engineer role. It states that the process consisted of three one-hour rounds: a discussion of projects plus SQL and Python coding, a case-study round covering scenarios, Spark, Sqoop, and coding, and a managerial round covering advanced topics such as Spark, Hive, Hadoop, MapReduce, and joins. The post lists the subjects asked about but does not provide technical answers, code, optimization techniques, or detailed explanations of the technologies.",
+    "topics": [
+      "Data engineering interview process",
+      "Project and issue discussion",
+      "SQL coding",
+      "Python coding",
+      "Hadoop",
+      "Spark",
+      "Sqoop",
+      "Hive",
+      "MapReduce",
+      "Spark joins and broadcast join",
+      "Optimization and architecture"
+    ],
+    "subtopics": [
+      "Three-round interview structure",
+      "Project optimization techniques",
+      "Project issues",
+      "SQL and Python coding questions",
+      "Case-study and scenario-based questions",
+      "Spark job process and optimization",
+      "Spark architecture",
+      "Hive architecture",
+      "Hadoop architecture",
+      "MapReduce job process",
+      "Broadcast join and other joins"
+    ],
+    "concepts": [
+      "Three-round Data Engineer interview",
+      "Project-based interview preparation",
+      "SQL and Python coding questions",
+      "Case-study and scenario-based assessment",
+      "Spark job process and optimization",
+      "Spark, Hive, and Hadoop architecture",
+      "MapReduce job process",
+      "Spark joins and broadcast join",
+      "Sqoop interview questions"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How was the Data Engineer interview process described in the post structured?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The process contained three rounds, each lasting one hour.\nThe first round covered projects and SQL and Python coding.\nThe second round was based on a case study and included scenarios, Spark, Sqoop, and coding.\nThe final round was managerial and focused on advanced technical topics."
+    },
+    {
+      "question": "What project-experience subjects and coding languages were covered in the first interview round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The interviewer discussed the candidate's projects extensively.\nThe questions addressed optimization techniques used in projects and issues faced during those projects.\nCoding questions covered SQL and Python."
+    },
+    {
+      "question": "Which technical subjects were associated with the case-study round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The round included scenario-based questions.\nThe Spark questions covered the Spark job process and Spark optimizations.\nThe interviewer also asked Sqoop questions and additional coding and SQL coding questions."
+    },
+    {
+      "question": "Which advanced topics were mentioned for the managerial round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The architectural topics were Spark, Hive, and Hadoop.\nThe interviewer asked for an overview of the MapReduce job process.\nThe Spark join topics included choosing joins, broadcast join, and other available joins."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Process",
+    "secondary_topics": [
+      "SQL and Python Coding",
+      "Project Optimization and Troubleshooting",
+      "Hadoop and MapReduce",
+      "Spark Architecture and Optimization",
+      "Sqoop",
+      "Hive Architecture",
+      "Spark Joins and Broadcast Join"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:292db351a2e8017c",
+    "saved_date": "2026-10-01T23:24:40Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "1061fca7760e0c1b2aefa425a709d81edb7004baa7dff99ff824e02ee02a7a7a",
+    "enricher_version": "3"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "urn-li-saved-420e5e31b4261c9e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7356167931715620865",
+    "captured_at": "2026-10-02T00:15:47.010070Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:47Z"
+  },
+  "original_text": "• 1st\nTop Data Engineering voice 2023,2024🎖️| Writes to 33K+ | Snr Data Engineer at Kimberly Clark | Python|Spark|PySpark|Genie|Azure data factory|ADLS Gen2|Databricks|Deltalake| Agentic AI | LLM | RAG | Axilon AI |\n1yr •\n𝐖𝐫𝐢𝐭𝐞 𝐛𝐞𝐭𝐭𝐞𝐫, 𝐟𝐚𝐬𝐭𝐞𝐫 𝐒𝐐𝐋 𝐪𝐮𝐞𝐫𝐢𝐞𝐬 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞𝐬𝐞 𝐞𝐬𝐬𝐞𝐧𝐭𝐢𝐚𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬! ⁣\n⁣\nMastering the right commands is the key! I’ve attached a PDF that covers essential SQL commands - from querying data efficiently to managing transactions like a database expert. Whether you're just starting or refining your skills, this guide will help you level up.⁣\n⁣\n🔖 𝐒𝐚𝐯𝐞 this for future reference!⁣\n♻️ 𝐑𝐞𝐩𝐨𝐬𝐭 to help others!⁣\nDoc credit: Vikram\n🔔 𝐅𝐨𝐥𝐥𝐨𝐰 Girish V for more SQL & Data Engineering insights!⁣\nBetter reach: Shubham Wadekar Rajat Gajbhiye Abhisek Sahu Vaishnavi MURALIDHAR Sumit Mittal Deepak Goyal Karthik Kondpak Shashank Mishra 🇮🇳 Ankita Gulati Asheesh T. Ankur Bhattacharya Ankur Ranjan Sachin Chandrashekhar 🇮🇳 Lovee Kumar Allauddin Khan Pathan Sai Krishna Chivukula Priyam Jain Nimra Ayaz Anurag Sharma Abhishek Jha Gayatri G⁣\n#SQL #SQLInterview #SQLPreparation #Database #DataEngineer #DataAnalytics #DataScience #BusinessIntelligence #InterviewTips #TechCareers #CareerGrowth\nsql",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7356167931715620865_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post says an attached PDF covers essential SQL commands for querying data efficiently and managing database transactions. The supplied content contains no PDF text, SQL commands, syntax, examples, or technical explanations, so it does not support detailed technical conclusions.",
+    "topics": [
+      "SQL",
+      "Database querying",
+      "Transaction management"
+    ],
+    "subtopics": [
+      "Essential SQL commands",
+      "Efficient data querying",
+      "Managing database transactions"
+    ],
+    "concepts": [
+      "SQL",
+      "Database transaction management"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Database querying",
+      "Transaction management"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:420e5e31b4261c9e",
+    "saved_date": "2026-10-01T23:09:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7356167931715620865",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7356167931715620865_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "25be0a675910a7867367695172d31e3b64b253608cc24d10d635bb540b75aa23",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

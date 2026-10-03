@@ -1,0 +1,172 @@
+{
+  "id": "urn-li-saved-eb4459ae6d32c01e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7309914421483450368",
+    "captured_at": "2026-10-02T00:15:53.064038Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:32:15Z"
+  },
+  "original_text": "!! Microsoft Data Engineer 2 Interview Experience !!\n\nInterview Experience for a Data Engineer 2 role at Microsoft, and it was a deep dive into Big Data, PySpark, Data Warehousing, System Design, and DSA. Sharing key takeaways for those preparing for similar roles!\n\n📌 Round 1: Big Data, PySpark & Data Warehousing\n✅ PySpark Coding & Optimization\nJobs, stages, and tasks - performance tuning techniques\nEfficient transformations (narrow vs. wide dependencies)\nBroadcast joins vs. shuffle joins\nCatalyst optimizer & Tungsten execution\n\n✅ Hadoop Ecosystem\nHDFS - block storage & replication\nYARN - resource allocation & container management\nMapReduce vs. Spark - when to use which\n\n✅ Dimensional Modeling\nFact vs. Dimension tables, partitioning & indexing\nStar vs. Snowflake Schema - trade-offs in query performance\nSCD Type 2 Handling - tracking historical changes efficiently\n\n📌 Round 2: Data Structures & Algorithms (DSA)\n✅ Two LeetCode Medium Questions\nDutch National Flag Algorithm - sorting in-place using two pointers\nInterval merging - optimizing from O(n log n) to O(n)\n\n💡 Key Focus Areas\nStart with brute-force, optimize iteratively\nDiscuss time & space complexity trade-offs\nUse efficient data structures like heaps, hashmaps, stacks\n\n📌 Round 3: System Design & Dimensional Modeling\n✅ Data Pipeline Design\nBatch vs. Streaming ingestion (Kafka/Spark Streaming)\nStorage - Delta Lake, Parquet vs. Avro\nCompute layer - Optimizing ETL with Spark\nQuery layer - Redshift/Snowflake tuning\n\n✅ Dimensional Modeling Challenges\nSCD Type 2, surrogate keys, and partitioning strategies\nMinimizing shuffle operations for optimized queries\n\n📌 Round 4: Managerial & Optimization Round\n✅ Technical Deep Dive on Projects\n✅ Query tuning, caching strategies, distributed processing\n✅ CI/CD for Data Pipelines - Automating ETL workflows, deployment strategies\n✅ Behavioral Questions - Adaptability, problem-solving, decision-making\n\n💡 Key Takeaways:\n🔹 PySpark performance tuning is crucial (jobs, stages, tasks)\n🔹 Dimensional modeling expertise is a must!\n🔹 Optimize code step by step, always move beyond brute-force\n🔹 System design isn’t just about architecture - scalability & performance matter\n🔹 CI/CD for data pipelines is becoming the industry standard\n\n#microsoftinterview #dataengineering #pyspark #bigdata #systemdesign #optimization #etl #dsa #microsoft",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7309914421483450368_slide_0.jpg",
+      "description": "JPEG image, 442x114 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This post is a topic-level summary of a four-round Microsoft Data Engineer 2 interview. It covers PySpark performance tuning, the Hadoop ecosystem, dimensional modeling, data structures and algorithms, data pipeline design, distributed processing, data pipeline CI/CD, and behavioral competencies. It emphasizes iterative optimization, complexity trade-offs, scalability, and performance, but it does not provide detailed solutions, implementation guidance, or the criteria behind the listed comparisons.",
+    "topics": [
+      "Big Data",
+      "PySpark",
+      "Hadoop Ecosystem",
+      "Data Warehousing and Dimensional Modeling",
+      "Data Structures and Algorithms",
+      "Data Pipeline Design",
+      "System Design",
+      "Data Pipeline Optimization",
+      "CI/CD for Data Pipelines"
+    ],
+    "subtopics": [
+      "PySpark jobs, stages, and tasks",
+      "Narrow and wide dependencies",
+      "Broadcast joins and shuffle joins",
+      "Catalyst optimizer and Tungsten execution",
+      "HDFS, YARN, MapReduce, and Spark",
+      "Fact and dimension tables",
+      "Star and Snowflake schemas",
+      "SCD Type 2 and surrogate keys",
+      "Partitioning, indexing, and shuffle minimization",
+      "Batch and streaming ingestion",
+      "Delta Lake, Parquet, and Avro",
+      "Spark ETL, Redshift, and Snowflake tuning",
+      "Query tuning, caching, and distributed processing",
+      "DSA complexity and data structures",
+      "ETL workflow automation and deployment strategies"
+    ],
+    "concepts": [
+      "PySpark execution and transformation optimization",
+      "Broadcast joins and shuffle joins",
+      "Catalyst optimizer and Tungsten execution",
+      "HDFS block storage and replication",
+      "YARN resource and container management",
+      "MapReduce versus Spark",
+      "Fact, dimension, partitioning, and indexing",
+      "Star schema versus Snowflake schema",
+      "SCD Type 2",
+      "Surrogate keys and partitioning strategies",
+      "Iterative DSA optimization",
+      "Dutch National Flag algorithm",
+      "Interval merging optimization",
+      "Batch and streaming ingestion",
+      "Data pipeline storage, compute, and query layers",
+      "Query tuning, caching, and distributed processing",
+      "Shuffle minimization",
+      "CI/CD for data pipelines"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What should be evaluated when optimizing PySpark performance?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Performance tuning should examine jobs, stages, and tasks.\nTransformation choices should account for narrow and wide dependencies.\nJoin choices should compare broadcast joins with shuffle joins.\nThe Catalyst optimizer and Tungsten execution are also named as optimization concerns."
+    },
+    {
+      "question": "How does the post distinguish the roles of HDFS and YARN in the Hadoop ecosystem?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "HDFS provides block storage and replication.\nYARN handles resource allocation and container management."
+    },
+    {
+      "question": "Which dimensional-modeling structures and techniques should be considered when designing a data warehouse?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The design should distinguish fact tables from dimension tables.\nPartitioning and indexing should be considered.\nStar and Snowflake schemas should be compared through their query-performance trade-offs.\nSCD Type 2 should be used to track historical changes efficiently.\nSurrogate keys are also listed as a dimensional-modeling concern."
+    },
+    {
+      "question": "What problem-solving process does the post recommend for data structures and algorithms questions?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Candidates should begin with a brute-force solution and then optimize it iteratively.\nAnswers should discuss time and space complexity trade-offs.\nThe post names heaps, hashmaps, and stacks as efficient data structures to consider."
+    },
+    {
+      "question": "Which technique does the post identify for the Dutch National Flag sorting problem?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The algorithm sorts the data in place.\nThe algorithm uses two pointers."
+    },
+    {
+      "question": "Which ingestion, storage, compute, and query technologies are covered in the data pipeline design discussion?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The ingestion layer compares batch and streaming, with Kafka and Spark Streaming named in the discussion.\nThe storage layer includes Delta Lake and a Parquet versus Avro comparison.\nETL optimization is assigned to Spark.\nQuery-layer tuning is discussed for Redshift and Snowflake."
+    },
+    {
+      "question": "A team is tuning queries and distributed processing. Which optimization areas from the post should the team discuss?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The investigation should include query tuning.\nThe team should discuss caching strategies.\nThe team should discuss distributed processing.\nThe optimization should minimize shuffle operations."
+    },
+    {
+      "question": "According to the post, what should CI/CD for data pipelines automate?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "CI/CD should automate ETL workflows.\nCI/CD should support deployment strategies."
+    },
+    {
+      "question": "What should a system-design answer address in addition to architecture?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "The answer should address scalability.\nThe answer should address performance."
+    },
+    {
+      "question": "Which behavioral competencies were explicitly covered in the managerial round?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The assessed competencies were adaptability, problem solving, and decision making."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Big Data and Hadoop",
+      "PySpark Optimization",
+      "Data Warehousing and Dimensional Modeling",
+      "Data Structures and Algorithms",
+      "Data Pipeline Architecture",
+      "Distributed Query Optimization",
+      "Data Engineering CI/CD",
+      "Behavioral Interviewing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:eb4459ae6d32c01e",
+    "saved_date": "2026-10-01T23:32:15Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7309914421483450368",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7309914421483450368_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "ea2bc885809445c910e848650cd8e3f8b7b0989087ef909b67a96804e9efdab5",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

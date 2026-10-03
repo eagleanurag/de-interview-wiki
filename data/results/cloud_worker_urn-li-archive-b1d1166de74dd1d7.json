@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-archive-b1d1166de74dd1d7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.223188Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:06:56Z"
+  },
+  "original_text": "Your Databricks job isn't slow. \n\nHere’s the checklist I use for every PySpark job in production:\n\n1. Stop using `cache()` everywhere\n`cache()` is lazy and un-reliable. It spills if memory is full.\nUse `df.persist(StorageLevel.MEMORY_AND_DISK)` and only when you reuse a DF 2+ times.\nAnd always `unpersist()` when done.\n\n2. Let AQE do its job\nIf you disabled Adaptive Query Execution, you’re fighting Spark.\nCheck this:\n`spark.conf.set(\"spark.databricks.adaptive.coalescePartitions.enabled\", \"true\")`\n`spark.conf.set(\"spark.sql.adaptive.enabled\", \"true\")`\nIt fixes skew and small file problems automatically.\n\n3. Broadcast the small table. Always.\nThat 50MB dimension table is shuffling 500GB of fact data.\n`from pyspark.sql.functions import broadcast`\n`fact_df.join(broadcast(dim_df), \"customer_id\")`\nNo shuffle. Instant speedup.\nMost performance issues aren’t about writing better code.\nThey’re about removing the bottlenecks you created.\n\n#Databricks #DataEngineering #PySpark #PerformanceTuning",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post presents a three-point Databricks and PySpark performance checklist: avoid using cache() indiscriminately and instead persist reused DataFrames with MEMORY_AND_DISK before unpersisting them, enable Adaptive Query Execution to address skew and small-file problems, and use broadcast() for a small dimension table joined to a much larger fact table to avoid shuffling. It argues that many performance problems come from avoidable bottlenecks rather than poorly written code.",
+    "topics": [
+      "Spark job execution"
+    ],
+    "subtopics": [
+      "DataFrame caching and persistence",
+      "Adaptive Query Execution",
+      "Partition coalescing",
+      "Data skew and small files",
+      "Broadcast joins",
+      "Shuffle reduction"
+    ],
+    "concepts": [
+      "DataFrame reuse",
+      "cache()",
+      "persist with MEMORY_AND_DISK",
+      "unpersist()",
+      "Adaptive Query Execution",
+      "Partition coalescing",
+      "Data skew",
+      "Broadcast join",
+      "Shuffle reduction"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "A PySpark DataFrame will be reused several times in a production job. How should it be stored and cleaned up according to the post?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The answer should recommend persisting the DataFrame because it will be reused at least twice.\nThe answer should specify df.persist(StorageLevel.MEMORY_AND_DISK).\nThe answer should explain that the post treats cache() as lazy and liable to spill when memory is full.\nThe answer should include unpersist() when processing is complete."
+    },
+    {
+      "question": "How would you enable the Adaptive Query Execution settings recommended in the post?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The answer should set spark.databricks.adaptive.coalescePartitions.enabled to true.\nThe answer should set spark.sql.adaptive.enabled to true.\nThe answer should associate these settings with the post's claimed automatic handling of skew and small-file problems."
+    },
+    {
+      "question": "How would you rewrite a join between a 50 MB customer dimension DataFrame and a 500 GB fact DataFrame to follow the post's recommendation?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer should import broadcast from pyspark.sql.functions.\nThe answer should wrap the dimension DataFrame with broadcast(dim_df).\nThe answer should join fact_df to the broadcast dimension on customer_id.\nThe answer should explain that the post presents this approach as avoiding a large shuffle and providing an immediate speedup."
+    },
+    {
+      "question": "A Databricks PySpark job is experiencing the skew and small-file problems discussed in the post. What optimization does the post recommend?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The answer should check whether Adaptive Query Execution has been disabled.\nThe answer should enable both recommended AQE configuration properties.\nThe answer should explain that the post claims AQE handles skew and small-file problems automatically."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark performance tuning",
+    "secondary_topics": [
+      "Databricks",
+      "DataFrame persistence",
+      "Adaptive Query Execution",
+      "Broadcast joins",
+      "Shuffle reduction"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b1d1166de74dd1d7",
+    "saved_date": "2026-10-01T23:06:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d0549bbb50d65ffe42fa71993d5643d0486b7a9ac0fc4dec59cba08d46aa293e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Databricks performance tuning",
+        "PySpark performance optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

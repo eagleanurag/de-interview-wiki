@@ -1,0 +1,99 @@
+{
+  "id": "urn-li-archive-5074c82ef7345b34",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.025801Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:10:29Z"
+  },
+  "original_text": "Recently, I got a 26 LPA Job Offer from Deloitte\nPosition: Data Engineer\nApplication Method: Got a call from Naukri.com\n\n𝗣𝗵𝗼𝗻𝗲 𝗦𝗰𝗿𝗲𝗲𝗻𝗶𝗻𝗴 𝗥𝗼𝘂𝗻𝗱\n- General discussion on profile and past experience\n- No theoretical questions, directly moved to hands-on SQL questions\n\n𝟭𝘀𝘁 𝗥𝗼𝘂𝗻𝗱 (𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗖𝗼𝗱𝗶𝗻𝗴)\n- Medium-level SQL query: Calculate total revenue per customer using Orders and Order_Items tables\n- Write SQL to get customers who spent the most in the last month (based on order_date)\n- PySpark scenario: Join two DataFrames with different schema using row numbers\n- Topics discussed:\nㆍ Writing CTEs and using aggregate functions\nㆍDate filtering using functions like DATE_SUB\nㆍ PySpark Window functions for row_number and joining logic\n\n𝟮𝗻𝗱 𝗥𝗼𝘂𝗻𝗱 (𝗧𝗲𝗰𝗵 𝗟𝗲𝗮𝗱 𝗗𝗶𝘀𝗰𝘂𝘀𝘀𝗶𝗼𝗻)\n- In-depth discussion on past project architecture\n- What technologies were used and how much data was handled\n- Challenges faced in Spark-based pipelines and how they were resolved\n- PySpark live coding:\nㆍ Write code to find customers who spent more than ₹1000 from store S1 in the last month\nㆍ Required working with three datasets: Customer, Store, and Sales\nㆍ Logic included DataFrame joins, date filtering using add_months(), and aggregation\n\n𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 𝗥𝗼𝘂𝗻𝗱\n- Focused on stakeholder and leadership discussions\n- Real-world project challenges and team collaboration\n- Discussion on how business requirements were translated into scalable pipelines\n\n𝗦𝗶𝗺𝗶𝗹𝗮𝗿𝗹𝘆, 𝗜 𝗵𝗮𝘃𝗲 𝗱𝗼𝗰𝘂𝗺𝗲𝗻𝘁𝗲𝗱 𝟭𝟬𝟬+ 𝗲𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗶𝗻 𝗺𝘆 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗞𝗜𝗧.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n\nIf you've read so far, do LIKE and RESHARE the post👍\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a personal account of a reported 26 LPA Data Engineer offer from Deloitte after a call from Naukri.com. It describes a screening discussion followed by two technical rounds and a managerial round. The technical outline covers SQL revenue aggregation, CTEs, aggregate functions, last-month filtering with DATE_SUB, PySpark row_number window functions, row-number-based joins for DataFrames with different schemas, and a Customer, Store, and Sales analysis using joins, add_months(), and aggregation. It also mentions Spark pipeline architecture and challenges, stakeholder discussions, and translating business requirements into scalable pipelines, but it does not provide table schemas, executable code, data-volume figures, or the specific challenge resolutions.",
+    "topics": [
+      "SQL",
+      "PySpark",
+      "Spark data pipelines",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "CTEs and aggregate functions",
+      "Total revenue per customer",
+      "Last-month filtering based on order_date",
+      "DATE_SUB date filtering",
+      "PySpark row_number window functions",
+      "Joining DataFrames with different schemas",
+      "add_months() date filtering",
+      "Customer, Store, and Sales dataset joins",
+      "Spark-based pipeline challenges and resolutions",
+      "Translating business requirements into scalable pipelines"
+    ],
+    "concepts": [
+      "Orders and Order_Items revenue calculation",
+      "CTEs",
+      "Aggregate functions",
+      "DATE_SUB date filtering",
+      "row_number window function",
+      "Joining DataFrames with different schemas using row numbers",
+      "add_months() date filtering",
+      "Customer, Store, and Sales aggregation",
+      "Business-requirement-driven scalable pipelines"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you calculate total revenue for each customer using the Orders and Order_Items tables?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query should combine the Orders and Order_Items tables.\nIt should aggregate revenue by customer so the result contains a total for each customer."
+    },
+    {
+      "question": "How would you write SQL to find the customer or customers who spent the most in the last month based on order_date?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query should filter order_date to the last month using a date function such as DATE_SUB.\nIt should aggregate spending by customer and select the customer or customers with the highest total."
+    },
+    {
+      "question": "How would you use PySpark's row_number window function to join two DataFrames that have different schemas?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution should apply row_number as a PySpark window function.\nIt should use the row numbers in the joining logic to align records from DataFrames with different schemas."
+    },
+    {
+      "question": "How would you use the Customer, Store, and Sales datasets in PySpark to find customers who spent more than ₹1000 at store S1 in the last month?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution should join the Customer, Store, and Sales datasets.\nIt should use add_months() for last-month date filtering, aggregate spending, and restrict the result to store S1.\nIt should retain customers whose spending is greater than ₹1000."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL and PySpark coding",
+    "secondary_topics": [
+      "Spark-based data pipelines",
+      "Data engineering project architecture",
+      "Stakeholder and leadership discussions",
+      "Scalable pipeline design"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:5074c82ef7345b34",
+    "saved_date": "2026-10-01T23:10:29Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b7181224e8f2e48e219374b3597a4ed55b5fb64b0c2be9a56d814942f138cf7f",
+    "enricher_version": "3"
+  }
+}

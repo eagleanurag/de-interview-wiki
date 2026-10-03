@@ -1,0 +1,189 @@
+{
+  "id": "urn-li-saved-39ce86531f5d5140",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7350426333870444544",
+    "captured_at": "2026-10-02T00:15:46.583373Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:52Z"
+  },
+  "original_text": "𝗗𝗲𝗹𝗼𝗶𝘁𝘁𝗲 asked these SQL questions in a Data Engineering interview \n\n\n\n\n\n\n\nCTC → 𝟯𝟬–𝟰𝟬 𝗟𝗣𝗔 (Difficulty level = Advanced)\n1.⁠ ⁠Calculate daily user retention for a 30-day cohort window.\n2.⁠ ⁠Retrieve the latest 3 events per user using window functions.\n3.⁠ ⁠Detect out-of-order events in time-series logs using timestamps.\n4.⁠ ⁠Backfill missing dates in a partitioned dataset using calendar table.\n5.⁠ ⁠Compute rolling 7-day distinct active users per platform.\n6.⁠ ⁠Identify users with no activity in the last 30 days (churn analysis).\n7.⁠ ⁠Perform multi-level aggregation (category → subcategory → product).\n8.⁠ ⁠Compare current vs previous month revenue per region.\n9.⁠ ⁠Join fact and dimension tables with SCD Type 2 handling.\n10.⁠ ⁠Detect schema drift between raw and curated layers via metadata.\n11.⁠ ⁠Calculate 95th percentile of transaction amounts by user.\n12.⁠ ⁠Fetch top 3 categories contributing to 80% of total revenue.\n13.⁠ ⁠Identify seasonal patterns in monthly product sales.\n14.⁠ ⁠Use broadcast join hints to optimize small dimension lookups.\n15.⁠ ⁠Flag revenue anomalies using z-score or standard deviation.\n16.⁠ ⁠Remove duplicates using ROW_NUMBER on ingestion timestamp.\n17.⁠ ⁠Calculate session time from login-logout events.\n18.⁠ ⁠Compare revenue growth across last 3 quarters per product line.\n19.⁠ ⁠Identify users who upgraded to premium but never used the features.\n20.⁠ ⁠Track update frequency on records in an SCD Type 2 table.\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7350426333870444544_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The supplied post is labeled as a set of advanced Data Engineering interview questions and lists 20 SQL tasks covering user activity, time-series analysis, revenue analysis, dimensional history, data quality, and query optimization. It contains no SQL solutions, schemas, data definitions, dialect-specific syntax, or expected outputs, and the trailing \"see more\" indicates that the provided excerpt may be incomplete.",
+    "topics": [
+      "SQL",
+      "Data Engineering interview preparation",
+      "User activity analytics",
+      "Time-series analysis",
+      "Revenue analytics",
+      "Dimensional modeling with SCD Type 2"
+    ],
+    "subtopics": [
+      "30-day cohort retention",
+      "Latest events per user",
+      "Out-of-order event detection",
+      "Calendar-based date backfill",
+      "Rolling distinct active users",
+      "Inactivity-based churn analysis",
+      "Hierarchical aggregation",
+      "Monthly revenue comparison",
+      "SCD Type 2 fact-dimension joins",
+      "Metadata-based schema drift detection",
+      "Transaction amount percentiles",
+      "Revenue concentration analysis",
+      "Monthly sales seasonality",
+      "Broadcast join optimization",
+      "Revenue anomaly detection",
+      "Ingestion-time deduplication",
+      "Session duration calculation",
+      "Quarterly revenue growth",
+      "Premium upgrade feature non-use",
+      "SCD Type 2 update frequency"
+    ],
+    "concepts": [
+      "30-day cohort retention",
+      "Latest three events per user",
+      "Out-of-order event detection",
+      "Calendar-based backfill",
+      "Rolling distinct active users",
+      "Inactivity-based churn analysis",
+      "Hierarchical aggregation",
+      "Period-over-period revenue comparison",
+      "SCD Type 2 fact-dimension joins",
+      "Metadata-based schema drift detection",
+      "User-level transaction percentiles",
+      "Revenue concentration analysis",
+      "Monthly sales seasonality",
+      "Broadcast join optimization",
+      "Revenue anomaly detection",
+      "Ingestion-time deduplication",
+      "Session duration calculation",
+      "Quarterly revenue growth",
+      "Premium upgrade feature non-use",
+      "SCD Type 2 update frequency"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write SQL to calculate daily user retention for a 30-day cohort window?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer states how cohort membership and retained users are defined and returns a daily retention result for each day of the 30-day window."
+    },
+    {
+      "question": "How would you retrieve the latest three events for every user with a window function?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer uses a window function to rank each user's events and retains the latest three."
+    },
+    {
+      "question": "How would you detect out-of-order events in time-series logs?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer uses event timestamps to identify records that violate the expected event order."
+    },
+    {
+      "question": "How would you backfill missing dates in a partitioned dataset with a calendar table?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer uses a calendar table to supply absent dates when backfilling the partitioned dataset."
+    },
+    {
+      "question": "How would you compute rolling seven-day distinct active users for each platform?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer counts distinct users over each rolling seven-day window separately for every platform."
+    },
+    {
+      "question": "How would you join fact and dimension tables while handling SCD Type 2 history?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer explains how fact rows are matched to dimension history while preserving the required SCD Type 2 behavior."
+    },
+    {
+      "question": "How would you detect schema drift between raw and curated layers using metadata?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer compares metadata from the raw and curated layers and reports differences between their schemas."
+    },
+    {
+      "question": "How would you calculate the 95th percentile of transaction amounts for each user?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer computes the transaction amount percentile independently for every user."
+    },
+    {
+      "question": "How would you flag revenue anomalies using z-score or standard deviation?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer applies z-score or standard deviation to revenue values and explains how anomalous values are flagged."
+    },
+    {
+      "question": "How would you remove duplicates with ROW_NUMBER and the ingestion timestamp?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer uses ROW_NUMBER with the ingestion timestamp to select records for deduplication."
+    },
+    {
+      "question": "When would a broadcast join hint be appropriate for a dimension lookup?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer connects the broadcast join hint to a small dimension lookup and explains the optimization choice in terms of lookup size."
+    },
+    {
+      "question": "How would you calculate session time from login and logout events?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer uses login and logout events to derive elapsed session time."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "User activity analytics",
+      "Time-series analysis",
+      "Revenue analytics",
+      "Data quality",
+      "SCD Type 2 dimensional modeling",
+      "Query optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:39ce86531f5d5140",
+    "saved_date": "2026-10-01T23:09:52Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7350426333870444544",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7350426333870444544_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4c9c37564bd28883ec206872d0624d8f30024af726c33a057f38435c55bf668e",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data quality",
+        "Query optimization"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

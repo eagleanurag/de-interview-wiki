@@ -1,0 +1,121 @@
+{
+  "id": "urn-li-saved-d4a612305abc8d1f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7462691074113880064",
+    "captured_at": "2026-10-02T00:15:52.171738Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:01Z"
+  },
+  "original_text": "• 1st\nLead Data Engineer @ PepsiCo | Databricks | PySpark | SQL | Azure | ADF | ADLS Gen2 | Unity Catalog | CI/CD | ETL/ELT | Performance Tuning | GenAI (LangChain | LangGraph | RAG) | Performance Tuning | DM for Collab\n4mo •\n𝗕𝗶𝗿𝗹𝗮𝘀𝗼𝗳𝘁 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 𝗳𝗼𝗿 𝟬–𝟱 𝗬𝗲𝗮𝗿 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲\nMost Data Engineer interviews are no longer focused only on SQL or PySpark syntax.\nHere are some important interview scenarios asked in Birlasoft 👇\n✅ One source arrives late in a multi-source pipeline\n✅ PySpark job failing due to data skew\n✅ ADF pipeline failed in the last step\n✅ SQL query running for 20 minutes\n✅ Designing CDC pipeline for 10M+ daily records\n✅ Data quality issues in incoming files\n✅ Migrating on-prem database to Azure Synapse\nThe interesting part?\nThese questions test:\n• Problem-solving\n• Production debugging\n• Optimization thinking\n• Scalable architecture design\n• Recovery strategies\nNot just tool knowledge.\nIf you are preparing for Data Engineering interviews in 2026, focus more on:\n• Scenario-based questions\n• Failure handling\n• Pipeline optimization\n• Metadata-driven architecture\n• Real-time debugging approaches\nThat’s what companies expect from experienced candidates now.\n💙 Like 👍 & Save 🔖 for later.\n🔄 Share this post if it adds value to your interview prep.\nComment below 👇 Which scenario question looks toughest to you?\n𝗙𝗼𝗿 𝟭:𝟭 𝗴𝘂𝗶𝗱𝗮𝗻𝗰𝗲\nhttps://lnkd.in/gxjZT5P3\n🚀 𝗟𝗲𝘃𝗲𝗹 𝘂𝗽 𝘆𝗼𝘂𝗿 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗽𝗿𝗲𝗽:\n🔹 𝗦𝗤𝗟 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗠𝗮𝘀𝘁𝗲𝗿𝘆 – 𝟮𝟬𝟬+ 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dYJb42RH\n🔹 𝗣𝘆𝗦𝗽𝗮𝗿𝗸 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 – 𝟵𝟲 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwCEinvH\n🔹 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗣𝘆𝘁𝗵𝗼𝗻 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 – 𝟭𝟬𝟬 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀\nhttps://lnkd.in/dwKVeFf7\n👉 Follow Anuj Shrivastav for more Data Engineering interview content.\n#DataEngineering #PySpark #SQL #Databricks #Azure #ADF #CDC #BigData #InterviewPrep #DataEngineer\n𝗕𝗶𝗿𝗹𝗮𝘀𝗼𝗳𝘁 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7462691074113880064_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This 2026-focused post argues that data engineering interviews emphasize real-world scenarios and problem-solving rather than only SQL or PySpark syntax. It lists scenarios involving late-arriving pipeline sources, PySpark data skew, an ADF failure, a slow SQL query, high-volume CDC, incoming-file data quality, and migration from an on-premises database to Azure Synapse. It also identifies production debugging, optimization, scalable architecture, recovery strategies, metadata-driven architecture, and real-time debugging as important preparation areas, but it does not provide detailed solutions or implementation techniques.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Scenario-based data engineering interviews",
+      "Production debugging and failure handling",
+      "Pipeline optimization and performance tuning",
+      "Scalable data pipeline architecture",
+      "Data quality and CDC",
+      "Cloud data migration"
+    ],
+    "subtopics": [
+      "Late-arriving sources in multi-source pipelines",
+      "PySpark data skew",
+      "ADF pipeline failures",
+      "Long-running SQL queries",
+      "CDC pipelines for 10M+ daily records",
+      "Data quality issues in incoming files",
+      "On-premises database migration to Azure Synapse",
+      "Metadata-driven architecture",
+      "Real-time debugging approaches"
+    ],
+    "concepts": [
+      "Scenario-based interviewing",
+      "Production debugging",
+      "Multi-source pipeline failure handling",
+      "PySpark data skew",
+      "ADF pipeline failure",
+      "SQL query optimization",
+      "High-volume CDC design",
+      "Incoming-file data quality",
+      "Azure Synapse migration",
+      "Metadata-driven architecture",
+      "Real-time debugging"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What capabilities does the post say its listed data engineering interview scenarios test?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The scenarios test problem-solving and production debugging.\nThey also test optimization thinking, scalable architecture design, and recovery strategies.\nSyntax-only knowledge is presented as insufficient for the listed scenarios."
+    },
+    {
+      "question": "Which areas of preparation does the post recommend for experienced data engineering interviews in 2026?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Preparation should include scenario-based questions and failure handling.\nCandidates should focus on pipeline optimization and metadata-driven architecture.\nReal-time debugging approaches are also identified as an important focus."
+    },
+    {
+      "question": "A PySpark job fails because of data skew. What does this example indicate interviewers want beyond PySpark syntax?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The example requires recognizing a PySpark failure associated with data skew.\nIt calls for production debugging, optimization thinking, and problem-solving rather than syntax knowledge alone."
+    },
+    {
+      "question": "An SQL query has been running for 20 minutes. Why does the post treat this as an optimization-related interview scenario?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The query duration makes it a long-running SQL performance scenario.\nThe post associates this kind of problem with optimization thinking and practical problem-solving."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data Engineering Interview Preparation",
+    "secondary_topics": [
+      "Scenario-based problem solving",
+      "Production debugging",
+      "Pipeline optimization",
+      "Scalable architecture design",
+      "Failure handling and recovery",
+      "Data quality",
+      "CDC pipeline design",
+      "Azure Synapse migration"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d4a612305abc8d1f",
+    "saved_date": "2026-10-01T23:08:01Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7462691074113880064",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7462691074113880064_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4e5535c7bb58ba2f8618624ae58118e634cd1de323f50aa125e77893fb32748a",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

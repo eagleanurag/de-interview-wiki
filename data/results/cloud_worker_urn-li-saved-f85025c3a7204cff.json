@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-f85025c3a7204cff",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326983384889511936",
+    "captured_at": "2026-10-02T00:15:53.412314Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:47Z"
+  },
+  "original_text": "Sharing this real-world PySpark interview question to help fellow data engineers and spark enthusiasts prepare better.\nCheck out the image below — how would you approach this?\n\n#PySpark #DataEngineering #InterviewPrep #PersistentSystems #BigData #ApacheSpark #TechCareers #InterviewQuestion",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326983384889511936_slide_0.jpg",
+      "description": "JPEG image, 480x236 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is an incomplete interview-preparation teaser that mentions a real-world PySpark question and directs readers to an image. No image content or extracted media text is provided, so it contains no technical question, scenario, solution, or substantive knowledge to analyze.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f85025c3a7204cff",
+    "saved_date": "2026-10-01T23:25:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326983384889511936",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326983384889511936_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d382d64473246918a5ce64b842216b0dc0b5c18575609a3317edc25354d0fe28",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

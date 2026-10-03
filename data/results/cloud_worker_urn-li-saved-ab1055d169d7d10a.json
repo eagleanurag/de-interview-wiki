@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-saved-ab1055d169d7d10a",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7328696707439874048",
+    "captured_at": "2026-10-02T00:15:50.525796Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:33Z"
+  },
+  "original_text": "#pyspark\n#Question\nwrite a pyspark to find for each month and country, the number of transactions\nand their total amount , the number of approved transactions and their total amount.\n\nfrom datetime import time\nfrom pyspark.sql import *\nfrom pyspark.sql.functions import *\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.types import *\nfrom pyspark.sql.window import *\n\n\n# Create a SparkSession\nspark = SparkSession.builder.appName(\"Month and country calculation\").getOrCreate()\n\n# Create data\ndata = [\n (1, 'US', 'approved', 1000, '2023-12-18'),\n (2, 'US', 'declined', 2000, '2023-12-19'),\n (3, 'US', 'approved', 2000, '2024-01-01'),\n (4, 'India', 'approved', 2000, '2023-01-07')\n]\n\n# Define the schema\nschema = StructType([\n StructField(\"id\", IntegerType(), True),\n StructField(\"country\", StringType(), True),\n StructField(\"status\", StringType(), True),\n StructField(\"amount\", IntegerType(), True),\n StructField(\"date\", StringType(), True)\n])",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7328696707439874048_slide_0.jpg",
+      "description": "JPEG image, 480x247 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents an incomplete PySpark coding challenge asking for transaction count and total amount by month and country, along with approved transaction count and total amount. It creates a SparkSession, defines four sample transaction records, and specifies an explicit schema with id, country, status, amount, and date fields. It does not create a DataFrame from the data, derive the month, group records, calculate any metrics, or display output. The date field is defined as a string rather than a date type.",
+    "topics": [
+      "PySpark",
+      "Spark SQL",
+      "transaction aggregation"
+    ],
+    "subtopics": [
+      "SparkSession initialization",
+      "explicit schema definition",
+      "month and country grouping",
+      "approved transaction metrics",
+      "date stored as a string"
+    ],
+    "concepts": [
+      "SparkSession initialization",
+      "Explicit transaction schema",
+      "Transaction input model",
+      "Month-country analytical grain",
+      "Total and approved transaction metrics",
+      "String-based date representation",
+      "Incomplete PySpark implementation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What analytical grain and metrics are required by this PySpark problem?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Results must be produced for each month and country combination.\nThe output must include total transaction count and total transaction amount.\nThe output must separately include approved transaction count and approved transaction amount."
+    },
+    {
+      "question": "How should the calculation be structured to produce the requested transaction metrics in PySpark?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The transaction date must be used to identify the month before results are grouped.\nRecords must be grouped by month and country.\nThe calculation must produce both overall and approved-only counts and amount totals."
+    },
+    {
+      "question": "What schema does the provided code define for the transaction data?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The id and amount fields are defined as nullable IntegerType fields.\nThe country, status, and date fields are defined as nullable StringType fields.\nThe date is not represented as a dedicated date type in the provided schema."
+    },
+    {
+      "question": "Why does the provided PySpark snippet not yet produce the requested monthly and country-level results?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The snippet only defines a SparkSession, sample records, and a schema.\nIt does not show creation of a DataFrame from the records.\nIt does not derive a month, group the data, calculate counts or amount totals, or return output."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark",
+    "secondary_topics": [
+      "Spark SQL",
+      "Data aggregation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ab1055d169d7d10a",
+    "saved_date": "2026-10-01T23:23:33Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7328696707439874048",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7328696707439874048_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9a57f8e4079955bb7311c366dfa15585ccac99773345f99876f9b0a5a08558d9",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

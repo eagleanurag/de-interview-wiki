@@ -1,0 +1,101 @@
+{
+  "id": "urn-li-saved-fade9182122dec87",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349626062097571840",
+    "captured_at": "2026-10-02T00:15:53.536811Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:04Z"
+  },
+  "original_text": "🎯 Mastering Pivot and Unpivot Transformations in Azure Data Factory\n\nWhether you're reshaping flat files or preparing data for reporting, the Pivot and Unpivot transformations in Azure Data Factory can save you hours of manual effort and scripting. Here's a quick dive into what they do and when to use them. 🛠️\n\n🔄 Pivot Transformation\n📌 What it does: Converts rows into columns.\n 📊 Use Case: Transforming transactional data into summary reports or wide format tables.\n✅ Example:\n Transform a dataset like:\nYear Metric. Value\n2024. Revenue. 1000\n2024. Expenses. 400\n\n👉 Into:\nYear. Revenue. Expenses\n2024. 1000. 400\n\n🔁 Unpivot Transformation\n📌 What it does: Converts columns into rows.\n 📊 Use Case: Normalizing wide datasets for analytics or loading into star schemas.\n\n✅ Example:\n Transform a dataset like:\nYear. Revenue Expenses. \n2024. 1000. 400\n\n👉 Into:\nYear. Metric. Value\n2024. Revenue 1000\n2024. Expenses. 400\n\n💡 These transformations help:\nStandardize incoming data\nSimplify downstream data models\nReduce dependency on pre-transformed source data\n\nHave you used Pivot or Unpivot in your ADF pipelines? Would love to hear how you applied it in real-world scenarios! 🔽\n#AzureDataFactory #DataTransformation #DataEngineering #Pivot #Unpivot #Azure #ADF #ETL #DataModeling #MicrosoftAzure\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349626062097571840_slide_0.jpg",
+      "description": "JPEG image, 480x480 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains that Pivot and Unpivot are data transformations in Azure Data Factory. Pivot converts rows into columns to create summary reports or wide-format tables, while Unpivot converts columns into rows to normalize wide datasets for analytics or loading them into star schemas. It presents Year, Metric, and Value examples for both transformations and states that they can standardize incoming data, simplify downstream data models, and reduce dependence on pre-transformed source data.",
+    "topics": [
+      "Pivot and Unpivot transformations in Azure Data Factory",
+      "Data reshaping",
+      "ETL",
+      "Data modeling"
+    ],
+    "subtopics": [
+      "Converting rows into columns",
+      "Converting columns into rows",
+      "Creating wide-format summary tables",
+      "Normalizing wide datasets for analytics",
+      "Loading normalized data into star schemas"
+    ],
+    "concepts": [
+      "Pivot Transformation",
+      "Unpivot Transformation",
+      "Wide-Format Summary Table",
+      "Normalized Metric-Value Structure",
+      "Transformation Benefits"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is the difference between Pivot and Unpivot transformations in Azure Data Factory?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer states that Pivot converts rows into columns.\nA strong answer states that Unpivot converts columns into rows."
+    },
+    {
+      "question": "How could the Pivot transformation reshape transactional data containing Year, Metric, and Value fields into a summary report?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains that Revenue and Expenses values can become separate columns associated with the year.\nA strong answer identifies the resulting structure as a wide-format summary table."
+    },
+    {
+      "question": "What benefits do Pivot and Unpivot transformations provide according to the post?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer states that the transformations can standardize incoming data.\nA strong answer states that they can simplify downstream data models.\nA strong answer states that they can reduce dependency on pre-transformed source data."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Pivot and Unpivot transformations in Azure Data Factory",
+    "secondary_topics": [
+      "Data reshaping",
+      "Summary reporting",
+      "Data normalization",
+      "Star schema loading",
+      "Data modeling"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:fade9182122dec87",
+    "saved_date": "2026-10-01T23:11:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349626062097571840",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349626062097571840_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "5d9b919020ddca451fb54122090dac70ace1e6ef1937da50f4d50f787511e5f6",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": [
+        "When would the Unpivot transformation be useful when preparing data for analytics or a star schema?"
+      ]
+    }
+  }
+}

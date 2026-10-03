@@ -1,0 +1,157 @@
+{
+  "id": "urn-li-archive-13e7401fc3bbeba4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.023250Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:56Z"
+  },
+  "original_text": "*****𝗞𝗣𝗠𝗚 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀****\n\n\n AWS & Redshift Related:\n\n1. What are the S3 storage types and how does it work?\n\n2. How can you write data into Redshift from other sources?\n\n3. How do you create external tables using Redshift Spectrum?\n\n4. How do you grant schema-level permissions to specific users in Redshift?\n\n5. What’s the best approach for incremental loads in ETL — MERGE or UPSERT in Redshift?\n\n6. What are AWS Glue Classifiers and Crawlers and how do they work together?\n\n7. What are CRR (Cross-Region Replication) and SRR (Same-Region Replication) in S3? How do you enable them?\n\n\n\nCoding & SQL Questions:\n\n1. Python String Reversal:\nGiven a string like \"A, B, C, D, A\", how would you reverse it?\n\n2. SQL - Nth Highest Salary:\nWrite a query to find the nth highest salary from the Employee table without using LIMIT.\n\n3. SQL - Department Average Salary:\nWrite a query to find the average salary per department.\n\n4. SQL - Slowly Changing Dimension (SCD) Type 2:\nHow would you implement SCD Type 2 logic in SQL?\n\n5. GC in pyspark? how to check it?\n\n6. input:3b1a4j. output: bbbajjjj in python \n\n\nResult: Converted \n\nIf you’re a D𝗮𝘁𝗮 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿, 𝗱𝗮𝘁𝗮 𝗮𝗻𝗮𝗹𝘆𝘀𝘁, 𝗼𝗿 𝗱𝗮𝘁𝗮 𝘀𝗰𝗶𝗲𝗻𝘁𝗶𝘀𝘁 in Bengaluru, let’s connect and grow together! Join the 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗴𝗿𝗼𝘂𝗽. https://lnkd.in/gwFfV-jV\n\n\n#interview #questions #kpmg #dataengineering #aws #python #sql\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is an unanswered data engineering interview question list. Its AWS and Redshift section asks about S3 storage types, writing data into Redshift, Redshift Spectrum external tables, schema-level permissions, incremental ETL with MERGE or UPSERT, AWS Glue classifiers and crawlers, and CRR and SRR in S3. Its coding section lists Python string reversal, SQL queries for the nth-highest salary and department salary averages, SQL implementation of SCD Type 2, a brief PySpark \"GC\" check, and an underspecified Python input/output example. No solutions or technical explanations are provided, and the post ends with a networking-group promotion.",
+    "topics": [
+      "AWS and Redshift",
+      "S3 storage and replication",
+      "Redshift data loading",
+      "Redshift Spectrum",
+      "Redshift access control",
+      "Incremental ETL",
+      "AWS Glue",
+      "Python",
+      "SQL",
+      "PySpark",
+      "Slowly Changing Dimension Type 2"
+    ],
+    "subtopics": [
+      "S3 storage types and operation",
+      "Writing data into Redshift from other sources",
+      "Creating external tables with Redshift Spectrum",
+      "Granting schema-level Redshift permissions",
+      "MERGE and UPSERT for incremental Redshift loads",
+      "AWS Glue classifiers and crawlers",
+      "CRR and SRR in S3",
+      "Python string reversal",
+      "Finding the nth-highest salary without LIMIT",
+      "Calculating average salary by department",
+      "Implementing SCD Type 2 in SQL",
+      "GC checks in PySpark",
+      "Python input/output conversion"
+    ],
+    "concepts": [
+      "S3 storage types",
+      "Writing data into Redshift",
+      "Redshift Spectrum external tables",
+      "Schema-level Redshift permissions",
+      "Incremental ETL with MERGE and UPSERT",
+      "AWS Glue classifiers and crawlers",
+      "S3 replication",
+      "Python string reversal",
+      "Nth-highest salary",
+      "Department salary averages",
+      "SCD Type 2 in SQL",
+      "GC in PySpark",
+      "Python input/output conversion"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the S3 storage types, and how does each one work?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer names the S3 storage types and explains how each one works."
+    },
+    {
+      "question": "How can data be written into Redshift from other sources?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer describes how to write data into Redshift from at least one other source."
+    },
+    {
+      "question": "How do you create external tables using Redshift Spectrum?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer provides the Redshift Spectrum steps for creating an external table and explains the setup involved."
+    },
+    {
+      "question": "How do you grant schema-level permissions to a specific user in Redshift?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer explains how to grant schema-level permissions to a specific Redshift user."
+    },
+    {
+      "question": "For incremental ETL loads into Redshift, which is the better approach: MERGE or UPSERT?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer compares MERGE and UPSERT for incremental Redshift loads and states which approach it considers best."
+    },
+    {
+      "question": "What are AWS Glue classifiers and crawlers, and how do they work together?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains what classifiers and crawlers do and how they work together."
+    },
+    {
+      "question": "What are CRR and SRR in S3, and how do you enable them?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes Cross-Region Replication from Same-Region Replication and describes how to enable each in S3."
+    },
+    {
+      "question": "Write a Python solution to reverse a string such as \"A, B, C, D, A\".",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer provides a Python implementation for the stated string-reversal task and states its result for the example."
+    },
+    {
+      "question": "Write a SQL query that finds the nth-highest salary from an Employee table without using LIMIT.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer writes a SQL query against the Employee table that returns the requested nth-highest salary without using LIMIT."
+    },
+    {
+      "question": "Write a SQL query that finds the average salary for each department.",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A strong answer writes a SQL query that groups employees by department and calculates the average salary for each group."
+    },
+    {
+      "question": "How would you implement SCD Type 2 logic in SQL?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "A strong answer provides SQL logic that implements the requested SCD Type 2 behavior."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "AWS and Redshift",
+    "secondary_topics": [
+      "S3 storage and replication",
+      "AWS Glue",
+      "Python programming",
+      "SQL querying",
+      "SCD Type 2",
+      "PySpark"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:13e7401fc3bbeba4",
+    "saved_date": "2026-10-01T23:28:56Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2ab88973fa650173e7d3575aa0d6fec2f499fa86a4e934e9c341c69f0d7ee70c",
+    "enricher_version": "3"
+  }
+}

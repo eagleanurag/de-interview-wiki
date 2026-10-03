@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-4b28e97be6b62549",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.828779Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:21Z"
+  },
+  "original_text": "🎯 Interview Experience at Infovision\n\nOne of my friends recently attended an interview for the Azure Data Engineer position at Infovision. Here are the highlights of the process:\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The content is incomplete. It states that a friend recently interviewed for an Azure Data Engineer position at Infovision, but the promised highlights are missing and the extracted media text is empty. No technical details, interview topics, questions, or outcomes are provided.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:4b28e97be6b62549",
+    "saved_date": "2026-10-01T23:15:21Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "edafc69f9958587e944ba1dd84a567617e1e6f87ed3dad6482bc3055807a1b60",
+    "enricher_version": "3"
+  }
+}

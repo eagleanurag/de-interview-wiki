@@ -1,0 +1,107 @@
+{
+  "id": "urn-li-saved-140700989e3ee35f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7475193500167372800",
+    "captured_at": "2026-10-02T00:15:44.920053Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:31Z"
+  },
+  "original_text": "𝗦𝗽𝗮𝗿𝗸 𝘃𝘀 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀 𝗶𝘀𝗻'𝘁 𝗮𝗻 𝗲𝗻𝗴𝗶𝗻𝗲 𝗰𝗼𝗺𝗽𝗮𝗿𝗶𝘀𝗼𝗻. 𝗜𝘁'𝘀 𝗮𝗻 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗻𝗴 𝗺𝗼𝗱𝗲𝗹 𝗱𝗲𝗰𝗶𝘀𝗶𝗼𝗻.\n\nApache Spark gives you complete control over cluster management, runtime configuration, security integration, monitoring, and cost optimization.\n\nDatabricks abstracts much of that operational burden through managed compute, optimized runtimes, Delta Lake, governance, and platform services.\n\nThe tradeoff isn't performance versus performance.\n\nIt's 𝗶𝗻𝗳𝗿𝗮𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲 𝗼𝘄𝗻𝗲𝗿𝘀𝗵𝗶𝗽 𝘃𝗲𝗿𝘀𝘂𝘀 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝘃𝗲𝗹𝗼𝗰𝗶𝘁𝘆.\n\nThe best choice depends on whether your team wants to build data platforms or build on top of them.\n\nWhat's your biggest reason for choosing Databricks (or not choosing it)?\n\n#DataEngineering #ApacheSpark #Databricks #BigData #DataArchitecture #Lakehouse #DataPlatform #PySpark #CloudComputing #DataEngineeringCommunity #DataLakehouse #AnalyticsEngineering",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7475193500167372800_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post frames Apache Spark and Databricks as having different operational models rather than different levels of performance. Apache Spark gives teams direct control over cluster management, runtime configuration, security integration, monitoring, and cost optimization, while Databricks reduces operational burden through managed compute, optimized runtimes, Delta Lake, governance, and platform services. The recommended choice depends on whether a team wants to build data platforms or build applications and analytics on top of them.",
+    "topics": [
+      "Apache Spark",
+      "Databricks",
+      "Delta Lake",
+      "operational ownership",
+      "managed data platforms",
+      "data platform strategy"
+    ],
+    "subtopics": [
+      "cluster management",
+      "runtime configuration",
+      "security integration",
+      "monitoring",
+      "cost optimization",
+      "managed compute",
+      "optimized runtimes",
+      "governance",
+      "infrastructure ownership",
+      "operational overhead"
+    ],
+    "concepts": [
+      "Apache Spark",
+      "Databricks",
+      "Delta Lake",
+      "Infrastructure ownership",
+      "Managed operational services",
+      "Build versus build-on-top strategy"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How does the post contrast the operational responsibilities associated with Apache Spark and Databricks?",
+      "type": "architecture",
+      "difficulty": "easy",
+      "answer": "Apache Spark is described as providing control over cluster management, runtime configuration, security integration, monitoring, and cost optimization.\nDatabricks is described as reducing operational burden through managed compute, optimized runtimes, Delta Lake, governance, and platform services."
+    },
+    {
+      "question": "A team is choosing between Apache Spark and Databricks. What decision criterion does the post recommend?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The team should determine whether it wants to build and operate a data platform or build on top of an existing platform.\nThe decision should balance infrastructure control and ownership against the operational burden the team is willing to accept."
+    },
+    {
+      "question": "Why does the post characterize the Apache Spark versus Databricks decision as a tradeoff in infrastructure ownership rather than a performance comparison?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The central tradeoff is the control and ownership of infrastructure versus operational overhead.\nThe post does not make a comparative performance claim between Apache Spark and Databricks."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark and Databricks operational tradeoffs",
+    "secondary_topics": [
+      "managed compute",
+      "Delta Lake",
+      "infrastructure ownership",
+      "operational overhead",
+      "data platform strategy"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:140700989e3ee35f",
+    "saved_date": "2026-10-01T23:07:31Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7475193500167372800",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7475193500167372800_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f9944377681f4fceebbaedfb8ffbb5587d12f5a59ec137b06907379419d49b8c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

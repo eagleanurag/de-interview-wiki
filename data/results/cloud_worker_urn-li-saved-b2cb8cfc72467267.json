@@ -1,0 +1,111 @@
+{
+  "id": "urn-li-saved-b2cb8cfc72467267",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7327179336220860417",
+    "captured_at": "2026-10-02T00:15:50.867680Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:49Z"
+  },
+  "original_text": "• 1st\nMicrosoft Fabric Data Architect | Freelance Data Consultant | Azure Data Architect | Azure Data Engineer | Databricks Architect | Power BI\n1yr •\nReady to Crack Your Next Azure Data Engineer Interview??🌟\nIf you're aiming for success in Azure Data Engineer interviews, it's all about mastering real-world scenarios and practical challenges. To help you out, here are a few must-know questions to test your knowledge:\n🔑 Sample Questions\n1️⃣ How would you design a scalable ETL pipeline using Azure Data Factory to process terabytes of data daily?\n2️⃣ Explain how you would handle schema drift in Azure Data Factory for dynamic datasets.\n3️⃣ What are the best practices for optimizing Spark jobs in Azure Databricks for large-scale data processing??\n💡 These are just a glimpse of the 25 most important questions that cover:\n- Azure Data Factory\n- Azure Databricks\n- Azure Synapse Analytics\n- PySpark and More\n📄 Want the complete list with detailed answers to ace your interview?\n👉 Check out the PDF now and take a step closer to success!\nLet me know your thoughts or which topic you'd like to deep dive into next!!\n🚀 Want to ace this and more??\n📥 Grab the PDF with all the steps and insights here:\n👉 [Attach your PDF link via Tompate with 25% discount code: Nitya21]\nhttps://lnkd.in/d9gaEB_H\n✨ What’s inside:\n✅ Step-by-step guidance for this and other must-know Azure scenarios.\n✅ Structured insights to help you tackle even the toughest interview questions.\nProven Success: Hundreds of professionals have cracked their interviews using this guide. Don’t miss out—this could be your key to success!\n✅ Repost if you found this useful\n🚀 Follow Aditya Chandak\n#Azure #DataEngineering #DataFactory #Databricks #Synapse #PySpark #CareerGrowth\n…see more\nData Engineer",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7327179336220860417_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The visible content is a promotional Azure Data Engineer interview-preparation post rather than a complete technical explanation. It lists three sample questions about scalable ETL in Azure Data Factory for terabytes of data daily, schema drift in dynamic datasets, and Spark job optimization in Azure Databricks for large-scale processing. It advertises a PDF with 25 questions and detailed answers covering Azure Data Factory, Azure Databricks, Azure Synapse Analytics, and PySpark, but those answers, steps, and insights are not included in the supplied content.",
+    "topics": [
+      "Azure Data Engineer interviews",
+      "Data Engineering interview preparation",
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Synapse Analytics",
+      "PySpark",
+      "ETL pipelines",
+      "Schema drift",
+      "Spark job optimization"
+    ],
+    "subtopics": [
+      "Scalable ETL design",
+      "Terabytes of data processed daily",
+      "Dynamic datasets",
+      "Schema drift handling",
+      "Large-scale data processing",
+      "Azure data engineering interview scenarios"
+    ],
+    "concepts": [
+      "Scalable ETL pipeline",
+      "Terabytes of data daily",
+      "Schema drift",
+      "Dynamic datasets",
+      "Spark job optimization",
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Synapse Analytics",
+      "PySpark"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you design a scalable ETL pipeline using Azure Data Factory to process terabytes of data daily?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer would describe an ETL pipeline design in Azure Data Factory.\nA strong answer would address how the pipeline processes terabytes of data daily.\nThe supplied post does not provide the pipeline architecture or implementation steps."
+    },
+    {
+      "question": "Explain how you would handle schema drift in Azure Data Factory for dynamic datasets.",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how schema drift is handled in Azure Data Factory.\nA strong answer would address dynamic datasets.\nThe supplied post does not provide a specific handling method."
+    },
+    {
+      "question": "What are the best practices for optimizing Spark jobs in Azure Databricks for large-scale data processing?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer would identify best practices for optimizing Spark jobs.\nA strong answer would connect those practices to large-scale data processing in Azure Databricks.\nThe supplied post does not enumerate the best practices."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Azure Data Engineer interview preparation",
+    "secondary_topics": [
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Synapse Analytics",
+      "PySpark",
+      "ETL pipeline design",
+      "Schema drift",
+      "Spark job optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:b2cb8cfc72467267",
+    "saved_date": "2026-10-01T23:25:49Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7327179336220860417",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7327179336220860417_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "29903cd98a74df849af872a6570a7be3e80162e16b4df659cd714e5cb55a97dd",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

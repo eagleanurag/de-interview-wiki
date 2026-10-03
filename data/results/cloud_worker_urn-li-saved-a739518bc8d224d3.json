@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-a739518bc8d224d3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7344598534345715712",
+    "captured_at": "2026-10-02T00:15:50.341747Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:21Z"
+  },
+  "original_text": "🎬 Day 16 of 30 – SQL Interview Questions Series!\n\nToday’s question:\n How do you find numbers that repeat with exactly ONE different row in between?\n\nThis is a tricky self join problem that many people get wrong in interviews!\n\nIn this video/post, I walk you through:\n ✅ How to detect repeating values using self join\n ✅ Why the middle row matters\n ✅ A clean SQL query that solves it\n \n📺 YouTube video link in the comment.\n\nIf you find this video helpful, consider subscribing to my YouTube channel “Crack DE with Mradul” for more SQL and data engineering content.\n\nI’d love your support as I continue this 30-day SQL Interview Question series!\n\n#CrackDEwithMradul #SQL #SelfJoin #SQLInterview #DataEngineering #Analytics #SQLTips\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7344598534345715712_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post introduces an SQL interview problem about finding numbers that repeat with exactly one different row between them. It identifies a self join as the technique for detecting the repeating values, emphasizes that the middle row matters, and promises a clean SQL query and video walkthrough. However, the supplied content does not include the query, sample data, or an explanation of the middle-row condition.",
+    "topics": [
+      "SQL",
+      "Self joins",
+      "Repeated-value detection"
+    ],
+    "subtopics": [
+      "Finding values separated by exactly one row",
+      "SQL interview problem solving"
+    ],
+    "concepts": [
+      "Self join for repeated values",
+      "Exactly-one-intervening-row pattern",
+      "Middle-row constraint"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you use a self join to find numbers that repeat with exactly one different row between them?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The solution uses a self join to match occurrences of the same number.\nThe match condition enforces exactly one intervening row between the repeated occurrences.\nThe solution distinguishes the required separated pattern from values that simply repeat."
+    },
+    {
+      "question": "Why must the middle row be considered when finding numbers that repeat with exactly one different row between them?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The required pattern includes one row between the two matching occurrences rather than requiring them to be adjacent.\nIgnoring the middle row would fail to enforce the spacing stated in the problem."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL self joins for repeated-value detection",
+    "secondary_topics": [
+      "SQL interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a739518bc8d224d3",
+    "saved_date": "2026-10-01T23:15:21Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7344598534345715712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7344598534345715712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "0fd3bc6128ef47832073d679cfdf74778f7d9db812beb2df0fd33ae6233dbb5b",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "id": "urn-li-archive-b1058ad388d4c4d9",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:21.186181Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:09:54Z"
+  },
+  "original_text": "Recently interviewed at American Express for Data Engineer role(4-5yrs exp)\n\nBelow are the few sample questions I remember from my interview.Hope it give idea what type of questions to expect for someone giving interview for similar role.\n\nInterview Process\n\nThis is an offline interview you need to go to company \n\nThere will be one assignment round which consisits of sql, python basic questions.\n\nThen there will be one sql round, then one python round after that managerial round.\n\n1)How do you manage and monitor pipeline failures in Azure Data Factory?\n\n2)What is the role of Azure Key Vault in securing data pipelines?\n\n3)Explain the concept of Delta Lake. How is it different from traditional data lakes?\n\n4)How do you orchestrate workflows across multiple Azure services?\n\n5)Describe your experience with Azure Event Hub or Azure Stream Analytics for real-time data processing.\n\n6)Write a SQL query to find the second highest salary from a table without using TOP or LIMIT.\n\n7)Explain different types of joins with examples.\n\n8)What are CTEs (Common Table Expressions)? How are they different from temp tables or subqueries?\n\n9)How do you optimize queries in a large data warehouse (Synapse or SQL Server)?\n\n10)How would you handle deduplication in a SQL table with billions of rows?\n\n11)Explain fact tables and dimension tables with real-life examples.\n\n12)How do you handle late arriving dimensions in a warehouse?\n\n13)Describe a scenario where you implemented an incremental load strategy.\n\n14)Have you worked with pyspark on Azure Databricks? Explain a use case.\n\n15)How would you implement error handling and logging in a Python-based data pipeline?\n\n16)Write a function in Python to remove duplicates from a list of dictionaries based on a key.\n\n#DataEngineer #AzureDataEngineer #SQL #Python #ADF #Synapse #Databricks #DataWarehousing #CloudEngineering #InterviewPreparation #AmericanExpress #DataEngineeringCareers #LinkedInLearning #BigData #ETL #CareerGrowth\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The supplied excerpt is a personal account of a recent offline Data Engineer interview at American Express. The post identifies a 4-5-year experience level and describes an assignment round with basic SQL and Python questions, followed by separate SQL, Python, and managerial rounds. It lists 16 remembered questions about Azure Data Factory, Azure Key Vault, Delta Lake, orchestration across multiple Azure services, Azure Event Hub, Azure Stream Analytics, SQL, Synapse, SQL Server, data warehouse modeling, incremental loading, PySpark on Azure Databricks, and Python pipeline error handling and logging. The supplied content is incomplete and contains no substantive answers, code, or implementation details; aside from expanding CTE as Common Table Expressions, it is an interview-topic outline rather than a complete technical guide.",
+    "topics": [
+      "Data engineering interview process",
+      "Azure Data Factory",
+      "Azure Key Vault",
+      "Delta Lake",
+      "Data lakes",
+      "Real-time data processing",
+      "Azure Event Hub",
+      "Azure Stream Analytics",
+      "SQL",
+      "Python",
+      "Data warehousing",
+      "Incremental loading",
+      "PySpark on Azure Databricks",
+      "Synapse",
+      "SQL Server",
+      "Large-scale SQL deduplication"
+    ],
+    "subtopics": [
+      "Pipeline failure management and monitoring",
+      "Data pipeline security with Azure Key Vault",
+      "Delta Lake compared with traditional data lakes",
+      "Workflow orchestration across multiple Azure services",
+      "Real-time processing with Azure Event Hub or Azure Stream Analytics",
+      "Finding the second-highest salary without TOP or LIMIT",
+      "SQL join types and examples",
+      "CTEs compared with temp tables and subqueries",
+      "Query optimization in a large data warehouse in Synapse or SQL Server",
+      "Deduplication in a SQL table with billions of rows",
+      "Fact tables and dimension tables with real-life examples",
+      "Late-arriving dimensions in a warehouse",
+      "Incremental load strategy",
+      "PySpark use cases on Azure Databricks",
+      "Error handling and logging in a Python-based data pipeline",
+      "Removing duplicates from a list of dictionaries by key"
+    ],
+    "concepts": [
+      "Pipeline failure management in Azure Data Factory",
+      "Azure Key Vault",
+      "Delta Lake",
+      "Azure Event Hub and Azure Stream Analytics",
+      "Second-highest salary query",
+      "SQL joins",
+      "CTEs, temp tables, and subqueries",
+      "Large-scale SQL deduplication",
+      "Fact tables and dimension tables",
+      "Late-arriving dimensions",
+      "Incremental load strategy",
+      "PySpark on Azure Databricks",
+      "Python pipeline error handling and logging",
+      "Deduplicating a list of dictionaries by key"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do you manage and monitor pipeline failures in Azure Data Factory?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how pipeline failures are managed and monitored in Azure Data Factory."
+    },
+    {
+      "question": "What is the role of Azure Key Vault in securing data pipelines?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain the role of Azure Key Vault in securing data pipelines."
+    },
+    {
+      "question": "Explain the concept of Delta Lake. How is it different from traditional data lakes?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain Delta Lake.\nIt would compare Delta Lake with traditional data lakes."
+    },
+    {
+      "question": "How do you orchestrate workflows across multiple Azure services?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer would describe how workflows are orchestrated across multiple Azure services."
+    },
+    {
+      "question": "Describe your experience with Azure Event Hub or Azure Stream Analytics for real-time data processing.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer would describe experience with Azure Event Hub or Azure Stream Analytics for real-time data processing."
+    },
+    {
+      "question": "Write a SQL query to find the second highest salary from a table without using TOP or LIMIT.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would provide a SQL query that finds the second-highest salary without TOP or LIMIT."
+    },
+    {
+      "question": "Explain different types of joins with examples.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer would explain different types of SQL joins.\nIt would provide examples of those joins."
+    },
+    {
+      "question": "What are CTEs (Common Table Expressions)? How are they different from temp tables or subqueries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer would define CTEs.\nIt would distinguish CTEs from temp tables and subqueries."
+    },
+    {
+      "question": "How do you optimize queries in a large data warehouse (Synapse or SQL Server)?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to optimize queries in a large data warehouse in Synapse or SQL Server."
+    },
+    {
+      "question": "How would you handle deduplication in a SQL table with billions of rows?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to deduplicate a SQL table containing billions of rows."
+    },
+    {
+      "question": "Explain fact tables and dimension tables with real-life examples.",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer would explain fact tables and dimension tables.\nIt would provide real-life examples."
+    },
+    {
+      "question": "How do you handle late arriving dimensions in a warehouse?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer would explain how to handle late-arriving dimensions in a warehouse."
+    },
+    {
+      "question": "Describe a scenario where you implemented an incremental load strategy.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer would describe a scenario in which an incremental load strategy was implemented."
+    },
+    {
+      "question": "Have you worked with PySpark on Azure Databricks? Explain a use case.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer would address experience with PySpark on Azure Databricks.\nIt would explain a PySpark use case."
+    },
+    {
+      "question": "How would you implement error handling and logging in a Python-based data pipeline?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would explain how to implement error handling and logging in a Python-based data pipeline."
+    },
+    {
+      "question": "Write a function in Python to remove duplicates from a list of dictionaries based on a key.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "A strong answer would write a Python function that removes duplicates from a list of dictionaries based on a key."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Azure Data Factory",
+      "Azure Key Vault",
+      "Delta Lake",
+      "SQL",
+      "Python",
+      "Synapse",
+      "SQL Server",
+      "Azure Event Hub",
+      "Azure Stream Analytics",
+      "PySpark on Azure Databricks",
+      "Data warehousing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:b1058ad388d4c4d9",
+    "saved_date": "2026-10-01T23:09:54Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d418dc5164273308dc556014a737cdb40526729ede70d557ffafbf57656b0449",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Azure workflow orchestration"
+      ],
+      "concepts": [
+        "Workflow orchestration across Azure services",
+        "Query optimization in Synapse or SQL Server"
+      ],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": "urn-li-archive-c4434d3005942ac3",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.212075Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:53Z"
+  },
+  "original_text": "If you are appearing for your Spark interview, you can't miss these 15 questions.\n\n\n1. What are the key differences between RDDs, DataFrames, and Datasets in Spark, and when should you use each?\n\n\n2. How does Spark handle lazy evaluation and what are its advantages?\n\n\n3. What is the role of the DAG in Spark, and how does it impact job execution?\n\n\n4. Explain the concept of lineage in Spark. Why is it important for fault tolerance?\n\n\n5. What are transformations and actions in Spark? Give examples.\n\n\n6. What are wide vs. narrow transformations, and how do they impact performance?\n\n\n7. How does Spark handle memory management and what are common memory-related pitfalls?\n\n\n8. What is a shuffle in Spark, why does it occur, and how can it be optimized?\n\n\n9. What is the difference between cache() and persist() in Spark? When should each be used?\n\n\n10. How does Spark's Catalyst Optimizer work and what role does it play in query optimization?\n\n\n11. What are broadcast variables and when should you use them in Spark?\n\n\n12. How do you handle skewed data in Spark jobs?\n\n\n13. What are different join strategies in Spark and how do you choose between them?\n\n\n14. What is the default partitioning strategy in Spark, and how can you change it?\n\n\n15. How can you monitor and debug Spark jobs? Which tools do you use for performance tuning?\n\n\n\n💡 Bookmark this list. Whether you're a fresher or a pro, these are must-know concepts for cracking Spark interviews!\n\n🔁 Feel free to save & share this with someone prepping for their next data engineering role!\n\nFollow Riya Khandelwal for more.\n\n#ApacheSpark #DataEngineer #SparkInterview #BigData #DataEngineering #InterviewPrep #RDD #DataFrames #CatalystOptimizer #Shuffling #SparkOptimization #TechCareers",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post is a promotional checklist of 15 Apache Spark interview questions rather than an explanatory knowledge article. It identifies Spark data abstractions, execution concepts, performance concerns, and troubleshooting areas, but it provides no answers, examples, implementation details, tool names, or optimization methods.",
+    "topics": [
+      "Apache Spark",
+      "Spark interview preparation",
+      "Spark data abstractions",
+      "Spark execution model",
+      "Spark performance optimization"
+    ],
+    "subtopics": [
+      "RDDs, DataFrames, and Datasets",
+      "Lazy evaluation",
+      "DAG execution",
+      "Lineage and fault tolerance",
+      "Transformations and actions",
+      "Narrow and wide transformations",
+      "Memory management",
+      "Shuffle optimization",
+      "cache() and persist()",
+      "Catalyst Optimizer",
+      "Broadcast variables",
+      "Skewed data",
+      "Join strategies",
+      "Partitioning",
+      "Job monitoring, debugging, and performance tuning"
+    ],
+    "concepts": [
+      "RDDs, DataFrames, and Datasets",
+      "Lazy evaluation",
+      "DAG",
+      "Lineage",
+      "Transformations and actions",
+      "Narrow and wide transformations",
+      "Spark memory management",
+      "Shuffle",
+      "cache() and persist()",
+      "Catalyst Optimizer",
+      "Broadcast variables",
+      "Skewed data",
+      "Join strategies",
+      "Partitioning",
+      "Spark job monitoring and debugging"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the key differences between RDDs, DataFrames, and Datasets in Spark, and when should each be used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the three Spark data abstractions and explains the circumstances in which each should be used."
+    },
+    {
+      "question": "How does Spark handle lazy evaluation, and what advantages does it provide?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer explains Spark's lazy-evaluation behavior and identifies the advantages associated with that behavior."
+    },
+    {
+      "question": "What is the role of the DAG in Spark, and how does it affect job execution?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the DAG's role in Spark and describes its impact on job execution."
+    },
+    {
+      "question": "What is lineage in Spark, and why is it important for fault tolerance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer defines Spark lineage and explains its relationship to fault tolerance."
+    },
+    {
+      "question": "What are transformations and actions in Spark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A strong answer distinguishes transformations from actions and provides examples, although the post itself supplies no examples."
+    },
+    {
+      "question": "What are wide and narrow transformations in Spark, and how do they affect performance?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes wide transformations from narrow transformations and explains their performance implications."
+    },
+    {
+      "question": "How does Spark handle memory management, and what are common memory-related pitfalls?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer explains Spark's memory-management behavior and identifies common memory-related pitfalls, but the post provides no specific details."
+    },
+    {
+      "question": "What is a shuffle in Spark, why does it occur, and how can it be optimized?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer defines shuffle, explains why it occurs, and describes optimization methods, although the post names no methods."
+    },
+    {
+      "question": "What is the difference between cache() and persist() in Spark, and when should each be used?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer compares cache() with persist() and explains the appropriate use case for each."
+    },
+    {
+      "question": "How does Spark's Catalyst Optimizer work, and what role does it play in query optimization?",
+      "type": "theory",
+      "difficulty": "hard",
+      "answer": "A strong answer explains Catalyst Optimizer's operation and its role in Spark query optimization, but the post describes no mechanisms."
+    },
+    {
+      "question": "What are broadcast variables in Spark, and when should they be used?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "A strong answer defines broadcast variables and explains when they are appropriate to use in Spark."
+    },
+    {
+      "question": "How should skewed data be handled in Spark jobs?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer describes an approach for handling skewed data in Spark jobs, although the post provides no techniques."
+    },
+    {
+      "question": "What join strategies are available in Spark, and how should a strategy be selected?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer identifies relevant Spark join strategies and explains the factors used to choose among them, but the post names no strategies."
+    },
+    {
+      "question": "What is Spark's default partitioning strategy, and how can it be changed?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer states Spark's default partitioning approach and explains how partitioning can be changed, but the post provides no partition details."
+    },
+    {
+      "question": "How can Spark jobs be monitored and debugged for performance tuning?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "A strong answer explains a Spark job monitoring and debugging approach and identifies tools for performance tuning, but the post names no tools."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Apache Spark",
+    "secondary_topics": [
+      "Big data",
+      "Spark performance optimization",
+      "Spark interview preparation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:c4434d3005942ac3",
+    "saved_date": "2026-10-01T23:17:53Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "e702ef9637346d21868415d01456650130d97111dd323e24082dcf91cbb8075b",
+    "enricher_version": "3"
+  }
+}

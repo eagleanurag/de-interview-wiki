@@ -1,0 +1,114 @@
+{
+  "id": "urn-li-saved-15bcd6a5429a8df2",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339347237044404225",
+    "captured_at": "2026-10-02T00:15:44.970028Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:04Z"
+  },
+  "original_text": "Databricks vs. Snowflake: The Performance Edge They Hide\n\nSpeed grabs headlines, but 2025 performance is about effort, architecture, and cost. Let’s explore what drives value for data teams. \n\nEffort: Manual vs. Automated\n\nDatabricks demands hands-on work—partitioning data, vacuuming Delta Lake, and optimizing Spark—especially tricky with <1TB datasets where Z-ordering can falter. Snowflake’s micro-partitioned, multi-cluster design auto-tunes queries, pruning data blocks to ease the load on teams. \n\nOptimization: Smarts Over Power\n\nSnowflake’s query engine, with cost-based optimization and vectorization, outpaces Databricks’ Photon. A test showed 64 Snowflake cores beating 224 Databricks cores by 20% on a skewed join. Photon boosts speed, but lags in BI planning, needing more compute.\n\nCost & Scalability: Value Meets Budget\n\nTweak a CSV setting in Snowflake, and ingestion drops from 67 to 12 seconds, outpacing Databricks’ single-threaded approach. Snowflake’s serverless model charges per use, while Databricks’ DBU pricing climbs with large clusters. Snowflake’s 512-node warehouses auto-suspend; Databricks needs oversized configs for SLAs, hiking costs.\n \nFit: Workload Matters\n\nSnowflake excels in SQL analytics, compliance (e.g., finance encryption), and data sharing. Its VARIANT type handles JSON/Avro. Databricks shines in streaming, ML with MLflow, and unstructured data, but tuning can overcomplicate warehousing. \n\nKey Questions \n\n• Can your team handle Databricks’ tuning, or does Snowflake save time? \n• Does your budget fit Databricks’ sprawl or Snowflake’s clarity? \n• SQL or Spark—which fits your need?\n\nThe 2025 Take\n\nPerformance is smart scaling and ROI, not just speed. Snowflake offers a low-maintenance, analyst-friendly solution. Databricks powers AI and streaming but shifts work to users. \n\nYour Input\nWhich platform drives your data wins? Share your story below! \n\n#Snowflake #Databricks #ModernDataStack #CloudData #DataEngineering #FinOps #Analytics #AI #Lakehouse #DataPlatform \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339347237044404225_slide_0.jpg",
+      "description": "JPEG image, 480x497 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post argues that data-platform value in 2025 should be evaluated by operational effort, architecture, and cost rather than speed alone. It portrays Snowflake as a low-maintenance platform with automated tuning, micro-partitioned and multi-cluster architecture, data-block pruning, cost-based optimization, vectorization, per-use serverless billing, and auto-suspend. It portrays Databricks as requiring more manual partitioning, Delta Lake maintenance, Spark tuning, and configuration for scalability, while identifying it as stronger for streaming, ML with MLflow, and unstructured data. The post reports that 64 Snowflake cores outperformed 224 Databricks cores by 20% on a skewed join and that an unspecified CSV setting reduced ingestion from 67 to 12 seconds. Because it provides no benchmark methodology, configurations, or details about the CSV setting, the reported figures do not by themselves establish general platform superiority.",
+    "topics": [
+      "Snowflake versus Databricks",
+      "Data-platform performance and operational effort",
+      "Ingestion, scalability, and cost",
+      "Analytics, streaming, ML, and unstructured-data workload fit"
+    ],
+    "subtopics": [
+      "Delta Lake maintenance, Spark tuning, and Z-ordering",
+      "Micro-partitioning, multi-cluster scaling, and data-block pruning",
+      "Cost-based optimization, vectorization, and Photon",
+      "CSV ingestion and single-threaded processing",
+      "Serverless consumption, DBU pricing, and auto-suspend",
+      "SQL analytics, compliance, data sharing, and semi-structured data",
+      "Streaming, MLflow, and unstructured data"
+    ],
+    "concepts": [
+      "Manual Databricks optimization",
+      "Snowflake automated optimization",
+      "Cost-based optimization and vectorization",
+      "Databricks Photon",
+      "Skewed-join performance claim",
+      "CSV ingestion optimization",
+      "Consumption and scaling economics",
+      "Platform workload fit"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do the query-processing characteristics described for Snowflake and Databricks Photon differ?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer should describe Snowflake's cost-based optimization and vectorization.\nIt should explain that the post claims Snowflake's query engine outperforms Photon in the cited comparison.\nIt should note the post's view that Photon improves speed but has weaker BI planning and requires more compute."
+    },
+    {
+      "question": "How should a data team evaluate the ingestion and cost trade-offs between Snowflake and Databricks?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The answer should include the reported CSV-ingestion reduction from 67 seconds to 12 seconds while noting that the setting is not identified.\nIt should contrast Snowflake's per-use serverless billing with DBU costs that rise for large Databricks clusters.\nIt should mention Snowflake's auto-suspending 512-node warehouses and the post's claim that Databricks may require oversized configurations for SLAs."
+    },
+    {
+      "question": "Which workload characteristics would lead a team to prefer Snowflake or Databricks based on this post?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Snowflake is associated with SQL analytics, finance encryption, data sharing, and JSON or Avro handling through VARIANT.\nDatabricks is associated with streaming, ML with MLflow, and unstructured data.\nThe answer should include the post's warning that Databricks tuning can complicate warehousing workloads."
+    },
+    {
+      "question": "Does the reported skewed-join result establish that Snowflake generally performs better than Databricks?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The result is limited to the post's claim that 64 Snowflake cores beat 224 Databricks cores by 20% on a skewed join.\nThe post does not provide the benchmark method, workload details, configurations, or reproducibility information.\nA strong answer should therefore avoid generalizing the result to every workload or platform configuration."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Snowflake versus Databricks performance and cost",
+    "secondary_topics": [
+      "Query and ingestion optimization",
+      "Platform scalability and consumption models",
+      "Automated versus manual tuning",
+      "Workload-specific platform selection",
+      "Structured, semi-structured, and unstructured data"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:15bcd6a5429a8df2",
+    "saved_date": "2026-10-01T23:20:04Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339347237044404225",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339347237044404225_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "aa2af8917e70d796f69d8eafc916a39d232b7886b73d3025c688a68458259b4c",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Query optimization and data layout"
+      ],
+      "concepts": [],
+      "questions": [
+        "According to the post, how do Databricks and Snowflake divide query-optimization work?"
+      ]
+    }
+  }
+}

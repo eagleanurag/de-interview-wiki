@@ -1,0 +1,94 @@
+{
+  "id": "urn-li-saved-8d9955eb5bc66338",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7295691255940792320",
+    "captured_at": "2026-10-02T00:15:49.377538Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:21Z"
+  },
+  "original_text": "Scenario based SQL Question Taken from Ankit Bansal YouTube Channel\n\nProblem Statement :\nWrite a Query to find PersonID, name, No. of Friends, sum of marks of person who have friends with total score greater than 100.\n\nScripts :\nCreate table friend (pid int, fid int)\ninsert into friend (pid , fid ) values ('1','2');\ninsert into friend (pid , fid ) values ('1','3');\ninsert into friend (pid , fid ) values ('2','1');\ninsert into friend (pid , fid ) values ('2','3');\ninsert into friend (pid , fid ) values ('3','5');\ninsert into friend (pid , fid ) values ('4','2');\ninsert into friend (pid , fid ) values ('4','3');\ninsert into friend (pid , fid ) values ('4','5');\n\n\ncreate table person (PersonID int, Name varchar(50), Score int)\ninsert into person(PersonID,Name ,Score) values('1','Alice','88')\ninsert into person(PersonID,Name ,Score) values('2','Bob','11')\ninsert into person(PersonID,Name ,Score) values('3','Devis','27')\ninsert into person(PersonID,Name ,Score) values('4','Tara','45')\ninsert into person(PersonID,Name ,Score) values('5','John','63')\nselect * from person\nselect * from friend\n\nFeel free to share your thoughts in comment section 📝 \n\nStay Connected !\n\nLeetCode HackerRank DataLemur 🐵 (Ace the SQL & Data Interview) Ankit Bansal Shashank Singh 🇮🇳 Dhaval Patel Hemanand Vadivel SQL Codebasics NamasteSQL\n\n#DataAnalyst #InterviewReady #InterviewPrep #SQL #OpentoWork #dataanalysis #mysql #practice \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7295691255940792320_slide_0.jpg",
+      "description": "JPEG image, 480x205 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a scenario-based SQL exercise using two tables: person, which stores PersonID, Name, and Score, and friend, which stores pid-to-fid relationships. It supplies schema definitions and sample data, then asks for a query returning PersonID, name, number of friends, and a score sum for qualifying people whose total score is greater than 100. It does not provide a completed solution or fully clarify whether the total is the sum of each person's friends' scores or another score aggregation.",
+    "topics": [
+      "SQL",
+      "Relational Tables",
+      "Scenario-Based Querying"
+    ],
+    "subtopics": [
+      "Mapping people to friends",
+      "Counting friend records",
+      "Aggregating scores",
+      "Applying a score threshold"
+    ],
+    "concepts": [
+      "Person Table",
+      "Friend Relationship",
+      "Friend Count",
+      "Score Sum",
+      "Greater-Than-100 Threshold"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Given person(PersonID, Name, Score) and friend(pid, fid), what do these tables represent, and how should the supplied friendship rows be interpreted?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The person table stores each person's identifier, name, and score.\nThe friend table links a person identified by pid to a person identified by fid.\nThe sample relationships should be treated as directed unless the query requirement explicitly says to assume reciprocal friendships."
+    },
+    {
+      "question": "What clarification is needed before implementing the requirement that returns a person's ID, name, friend count, score sum, and only totals greater than 100?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The output is intended to contain one result per qualifying person with PersonID, Name, number of friends, and a score sum.\nThe most natural interpretation is that the sum and threshold apply to the scores of the friends linked through each pid.\nA strong answer recognizes that the post does not explicitly state the complete aggregation scope and makes its interpretation explicit."
+    },
+    {
+      "question": "Write a SQL query that treats pid as the person and fid as that person's friend, then returns each person whose linked friend scores total more than 100, including PersonID, Name, friend count, and friend-score sum.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query connects each pid to its friend records and retrieves the person data associated with each fid.\nIt counts the friend rows and sums the corresponding friend Score values for each person.\nIt produces a person-level result and applies the greater-than-100 condition to the summed friend scores.\nIt selects PersonID, Name, friend count, and score sum for qualifying people only."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL",
+    "secondary_topics": [
+      "Relational Data Modeling",
+      "Data Aggregation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8d9955eb5bc66338",
+    "saved_date": "2026-10-01T23:35:21Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7295691255940792320",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7295691255940792320_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "cc846e9a0c684c11e1641caa342d81c0052a53f67a59c88c6115b8b22a232d56",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

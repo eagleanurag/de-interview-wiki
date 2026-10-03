@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-8aa52b20f5f60952",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7337765415269363712",
+    "captured_at": "2026-10-02T00:15:49.085776Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:20:00Z"
+  },
+  "original_text": "🚀 Excited to share my latest project: an End-to-End Data Pipeline for Twitter Airline Sentiment Analysis! 📊\nI've built a system that takes raw tweets and transforms them into clear, actionable insights about airline sentiment. It's all about understanding what customers really think!\nHere's the core flow:\nReal-time Data Flow: I used Kafka to ingest tweets continuously.\nBig Data Processing: Spark Streaming processes the data and stores it efficiently on Hadoop (HDFS).\nData Warehousing: Hive lets us query and prepare this data with SQL.\nInteractive Insights: Finally, Power BI brings it all to life with a dynamic dashboard.\nThis project showcases skills in building full data pipelines, from raw data to interactive dashboards, all managed easily with Docker.\nIf you're interested in data engineering, analytics, or just curious about customer sentiment, check out the project on GitHub!\n🔗 GitHub Repo: https://lnkd.in/dBBtNn2R\n#DataEngineering #DataAnalytics #SentimentAnalysis #BigData #Kafka #Spark #Hadoop #Hive #PowerBI #Docker #DataPipeline #Python",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7337765415269363712_slide_0.jpg",
+      "description": "JPEG image, 480x245 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a high-level end-to-end pipeline for airline sentiment analysis using Twitter data. Kafka continuously ingests tweets, Spark Streaming processes them, Hadoop HDFS stores the data, Hive supports SQL-based querying and preparation, and Power BI presents interactive insights in a dynamic dashboard. The author says the pipeline is managed with Docker. No code, architecture diagrams, implementation details, results, or sentiment-analysis methodology are provided.",
+    "topics": [
+      "End-to-end data pipelines",
+      "Airline sentiment analysis",
+      "Real-time data ingestion",
+      "Big data processing",
+      "Data warehousing",
+      "Interactive analytics dashboards",
+      "Docker-based pipeline management"
+    ],
+    "subtopics": [
+      "Continuous tweet ingestion with Kafka",
+      "Stream processing with Spark Streaming",
+      "Big data storage with Hadoop HDFS",
+      "SQL-based querying and preparation with Hive",
+      "Interactive visualization with Power BI"
+    ],
+    "concepts": [
+      "End-to-end data pipeline",
+      "Kafka",
+      "Spark Streaming",
+      "Hadoop HDFS",
+      "Hive",
+      "Power BI",
+      "Docker",
+      "Airline sentiment analysis"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which technologies form the project's end-to-end pipeline, and what role does each technology play?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "Kafka continuously ingests tweets, Spark Streaming processes them, and Hadoop HDFS stores the data.\nHive provides SQL-based querying and data preparation, while Power BI presents the results through an interactive dashboard.\nDocker is described as the tool used to manage the pipeline."
+    },
+    {
+      "question": "How does the project separate real-time processing from downstream data preparation and visualization?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "Kafka and Spark Streaming handle the real-time ingestion and processing stages.\nHive is used after storage to query and prepare the data with SQL.\nPower BI consumes the prepared results to provide interactive insights."
+    },
+    {
+      "question": "Where is SQL used in the airline sentiment pipeline?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SQL is used with Hive to query and prepare the tweet data before visualization."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "End-to-End Data Pipelines",
+    "secondary_topics": [
+      "Real-Time Data Ingestion",
+      "Big Data Processing",
+      "Data Warehousing",
+      "Interactive Analytics Dashboards",
+      "Customer Sentiment Analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:8aa52b20f5f60952",
+    "saved_date": "2026-10-01T23:20:00Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7337765415269363712",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7337765415269363712_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9107dc08bc46e46db46bdb502914a79fd4b8acf88f38423629c56332f0e7e3b4",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

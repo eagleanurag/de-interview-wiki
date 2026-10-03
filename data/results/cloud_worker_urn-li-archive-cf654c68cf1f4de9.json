@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-cf654c68cf1f4de9",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.334807Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:02Z"
+  },
+  "original_text": "When I interviewed for Facebook, I had a SQL interview.\nWhen I interviewed for Amazon, I had a SQL interview.\nWhen I interviewed for Google, I had a SQL interview.\nWhen I interviewed for Spotify, I had a SQL interview.\nWhen I interviewed for Airbnb, I had a SQL interview.\n\nI have interviewed for Data jobs at 20+ companies.\n\n95% of them involved one (or multiple!) SQL interviews\n\nSQL is the most important skill in the Data industry.\n\nI 𝘰𝘯𝘭𝘺 landed Data Analyst and Data Scientist offers because I had 𝘮𝘢𝘴𝘵𝘦𝘳𝘦𝘥 SQL.\n\n———\n\nThis is why I built a SQL interview prep platform!\n\nInterview Master was built based on my experience interviewing at 𝘢𝘯𝘥 𝘨𝘦𝘵𝘵𝘪𝘯𝘨 𝘰𝘧𝘧𝘦𝘳𝘴 𝘧𝘳𝘰𝘮: Google, Meta, Amazon, Airbnb, Spotify etc.\n\nOn InterviewMaster, you'll find\n↳ 200+ SQL questions from real companies & products\n↳ Real-time & customized feedback on your queries\n↳ AI coach to unblock you & help you learn faster\n\nThe best part? You can use Interview Master for FREE.\n\n𝗙𝗶𝗻𝗱 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 𝘁𝗮𝗶𝗹𝗼𝗿𝗲𝗱 𝘁𝗼 𝗮𝗻𝘆 𝗦𝗤𝗟 𝗹𝗲𝘃𝗲𝗹:\n🐣 Beginner questions: https://lnkd.in/gR5JpR9e\n🐓 Intermediate questions: https://lnkd.in/gXmAwh2S\n🦅 Advanced SQL questions: https://lnkd.in/git2jbQF\n\n———\n\nPS: If you’re excited about this, I would appreciate if you hit the “repost” button. This way others in your network can see this too. ❤️",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a promotional post based on the author's personal experience rather than a technical SQL lesson. The author reports that data-role interviews at more than 20 companies involved SQL in 95% of cases and attributes their Data Analyst and Data Scientist offers to mastering SQL. The author promotes Interview Master as a free platform with more than 200 SQL questions, customized query feedback, and an AI coach. The post does not explain SQL syntax, query techniques, interview procedures, or data engineering practices.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data career commentary and product promotion",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:cf654c68cf1f4de9",
+    "saved_date": "2026-10-01T23:30:02Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "30756ebaa966f3ff355c17c75cfd07dee5a3b6d71eb18148fb3e13a97fbdfcb7",
+    "enricher_version": "3"
+  }
+}

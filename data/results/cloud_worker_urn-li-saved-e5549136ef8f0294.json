@@ -1,0 +1,155 @@
+{
+  "id": "urn-li-saved-e5549136ef8f0294",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315596015292579840",
+    "captured_at": "2026-10-02T00:15:52.865530Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:03Z"
+  },
+  "original_text": "Founder | AI Engineer @NTT Data | IIT Jodhpur | Talks about AI and Marketing | 155K+ Linkedin | Talks about AI and Tech | 80+ Million Impressions | Gate 2023\n1yr •\nGoogle, Amazon, American Express, Flipkart, PwC – Most Companies Ask the 𝐒𝐚𝐦𝐞 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 (𝐈𝐧𝐭𝐞𝐫𝐦𝐞𝐝𝐢𝐚𝐭𝐞 𝐭𝐨 𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝)\nIf you're preparing for\n𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 | 𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 | 𝗗𝗮𝘁𝗮 𝗦𝗰𝗶𝗲𝗻𝘁𝗶𝘀𝘁 | 𝗣𝗿𝗼𝗱𝘂𝗰𝘁 𝗔𝗻𝗮𝗹𝘆𝘀𝘁 𝗿𝗼𝗹𝗲𝘀 — these are the Data Analyst questions that frequently come up in startups, unicorns, and FAANG:\n📊 𝐓𝐎𝐏 20 𝐌𝐎𝐒𝐓 𝐀𝐒𝐊𝐄𝐃 𝐈𝐍𝐓𝐄𝐑𝐕𝐈𝐄𝐖 𝐐𝐔𝐄𝐒𝐓𝐈𝐎𝐍𝐒:\n1. How do you handle missing values? Compare mean, median, KNN, and interpolation methods.\n2. What are the types of joins in SQL? Real-world scenario where you'd use each.\n3. Explain the difference between correlation and causation with an example.\n4. You’re given 3 tables: Users, Orders, Products. Write a query to get top 5 products per user by revenue.\n5. What are the limitations of Excel when working with large datasets?\n6. How do you handle outliers in a dataset? When would you not remove them?\n7. Difference between UNION and UNION ALL — use case in an analytics project?\n8. What is cohort analysis? Where have you applied it in real life?\n9. How would you A/B test a new product feature? Key metrics and statistical tests involved?\n10. How do you calculate Customer Lifetime Value (CLTV)?\n11. What’s the purpose of using a Window function in SQL?\n12. How to explain a sudden drop in sales in a dashboard? What steps would you take?\n13. Describe the difference between OLAP and OLTP databases in analytics context.\n14. How do you optimize slow SQL queries on large datasets?\n15. What are surrogate keys vs natural keys in data warehousing?\n16. What’s the best way to communicate data insights to non-technical stakeholders?\n17. In an Excel dashboard, how do you build dynamic filters using slicers or pivot tables?\n18. What’s the most complex Excel formula you’ve used? Explain the logic.\n19. How do you identify seasonality and trend in time series data using Python?\n20. What KPIs would you track for an e-commerce business? How would you derive them?\n🎯 𝟭𝟮4𝟬𝟬 + 𝐇𝐑 𝐄𝐦𝐚𝐢𝐥𝐬 𝐚𝐭 𝐉𝐮𝐬𝐭 ₹𝟖𝟗: https://lnkd.in/gGa7zm9g\n📌 𝐏𝐫𝐚𝐜𝐭𝐢𝐜𝐢𝐧𝐠 𝐭𝐡𝐞𝐬𝐞 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐜𝐚𝐧 𝐥𝐞𝐯𝐞𝐥 𝐮𝐩 𝐲𝐨𝐮𝐫 𝐫𝐞𝐚𝐝𝐢𝐧𝐞𝐬𝐬 𝐟𝐨𝐫 𝐡𝐢𝐠𝐡-𝐢𝐦𝐩𝐚𝐜𝐭 𝐝𝐚𝐭𝐚 𝐫𝐨𝐥𝐞𝐬 𝐚𝐜𝐫𝐨𝐬𝐬 𝐝𝐨𝐦𝐚𝐢𝐧𝐬 — 𝐞𝐬𝐩𝐞𝐜𝐢𝐚𝐥𝐥𝐲 𝐰𝐡𝐞𝐧 𝐜𝐨𝐦𝐛𝐢𝐧𝐞𝐝 𝐰𝐢𝐭𝐡 𝐒𝐐𝐋, 𝐏𝐲𝐭𝐡𝐨𝐧, 𝐜𝐚𝐬𝐞 𝐬𝐭𝐮𝐝𝐢𝐞𝐬, 𝐚𝐧𝐝 𝐩𝐫𝐨𝐝𝐮𝐜𝐭 𝐭𝐡𝐢𝐧𝐤𝐢𝐧𝐠.\n💡 𝐁𝐎𝐍𝐔𝐒: Attaching a PDF packed with Real Data Analyst Case Studies, SQL queries, charts, KPI metrics, and problem-solving frameworks — designed to mirror real interview settings.\n💬 𝐖𝐡𝐚𝐭’𝐬 𝐭𝐡𝐞 𝐦𝐨𝐬𝐭 𝐜𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐢𝐧𝐠 𝐃𝐚𝐭𝐚 𝐀𝐧𝐚𝐥𝐲𝐬𝐭 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐲𝐨𝐮’𝐯𝐞 𝐟𝐚𝐜𝐞𝐝? 𝐋𝐞𝐭’𝐬 𝐝𝐢𝐬𝐜𝐮𝐬𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐜𝐨𝐦𝐦𝐞𝐧𝐭𝐬.\nFollow Bhavesh Arora\n#DataAnalytics #SQLInterview #CaseStudies #ExcelTips #DataScience #AnalyticsJobs #FAANG #ProductAnalytics\nCrack Any Data Related Interview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315596015292579840_slide_0.jpg",
+      "description": "JPEG image, 347x491 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post lists 20 questions advertised as common Data Analyst interview topics for startups, unicorns, and FAANG roles. The scope includes missing values, outliers, SQL joins, UNION and UNION ALL, window functions, query optimization, OLAP and OLTP, data warehousing keys, correlation and causation, A/B testing, cohort analysis, Customer Lifetime Value, Python time-series analysis, Excel dashboards, e-commerce KPIs, sales-drop investigation, and stakeholder communication. It does not provide answers, examples, SQL, Python code, methods, or case studies, and the promoted PDF is not included in the supplied content.",
+    "topics": [
+      "Data Analyst Interview Preparation",
+      "SQL",
+      "Statistical Analysis",
+      "Product Analytics",
+      "Excel",
+      "Python",
+      "Data Warehousing",
+      "E-commerce Analytics",
+      "Data Communication"
+    ],
+    "subtopics": [
+      "Missing Values and Outliers",
+      "SQL Joins",
+      "Multi-Table Revenue Queries",
+      "UNION and UNION ALL",
+      "SQL Window Functions",
+      "SQL Performance Optimization",
+      "OLAP and OLTP",
+      "Surrogate and Natural Keys",
+      "Correlation and Causation",
+      "A/B Testing",
+      "Cohort Analysis",
+      "Customer Lifetime Value",
+      "Time-Series Seasonality and Trend",
+      "Excel Dashboards and Formulas",
+      "E-commerce KPI Definition",
+      "Dashboard Anomaly Investigation",
+      "Data Insight Communication"
+    ],
+    "concepts": [
+      "Missing-Value Handling",
+      "Outlier Treatment",
+      "SQL Joins",
+      "Top Products per User by Revenue",
+      "Correlation and Causation",
+      "UNION and UNION ALL",
+      "Cohort Analysis",
+      "A/B Testing",
+      "Customer Lifetime Value",
+      "SQL Window Functions",
+      "Sales-Drop Investigation",
+      "OLAP and OLTP",
+      "Large-Dataset SQL Optimization",
+      "Surrogate and Natural Keys",
+      "Data Insight Communication",
+      "Excel with Large Datasets",
+      "Excel Dynamic Filters",
+      "Complex Excel Formulas",
+      "Time-Series Seasonality and Trend",
+      "E-commerce KPI Definition"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How should missing values be handled, and how do the mean, median, KNN, and interpolation methods compare?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "The response explains an approach to handling missing values and compares the four named methods."
+    },
+    {
+      "question": "Given Users, Orders, and Products tables, how would you write a SQL query to return the top five products per user by revenue?",
+      "type": "coding",
+      "difficulty": "hard",
+      "answer": "The query uses the three named tables, calculates revenue, and returns the top five products for each user."
+    },
+    {
+      "question": "How would you A/B test a new product feature, and which metrics and statistical tests would you use?",
+      "type": "scenario",
+      "difficulty": "hard",
+      "answer": "The response describes how to test the feature, identifies key metrics, and explains the use of relevant statistical tests."
+    },
+    {
+      "question": "How would you investigate a sudden drop in sales shown on a dashboard?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The response provides a step-by-step method for investigating the dashboard anomaly."
+    },
+    {
+      "question": "How would you optimize slow SQL queries operating on large datasets?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The response explains optimization techniques for slow SQL queries over large datasets."
+    },
+    {
+      "question": "How would you use Python to identify seasonality and trend in time-series data?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The response explains how Python is used to identify both seasonality and trend in time-series data."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Data Analyst Interview Preparation",
+    "secondary_topics": [
+      "SQL",
+      "Data Quality and Outliers",
+      "Statistics and Experimentation",
+      "Product and Customer Analytics",
+      "Excel Dashboards",
+      "Python Time-Series Analysis",
+      "Data Warehousing",
+      "E-commerce KPIs",
+      "Data Communication"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:e5549136ef8f0294",
+    "saved_date": "2026-10-01T23:30:03Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315596015292579840",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315596015292579840_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "bbb62d87471f3081f33523504bd911dba885150e0f1b8fba0d34a320d13a99e7",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Data Quality"
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

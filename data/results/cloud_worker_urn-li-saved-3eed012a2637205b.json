@@ -1,0 +1,91 @@
+{
+  "id": "urn-li-saved-3eed012a2637205b",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7347921644906082306",
+    "captured_at": "2026-10-02T00:15:46.908581Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:08Z"
+  },
+  "original_text": "• 1st\nGen AI Databricks Engineer\n1yr •\nBefore your next Snowflake Interview,Make sure you have watched these videos.\n1- Virtual warehouse & How multi cluster works?\nhttps://lnkd.in/dxmVJcXJ\n2- Stages in Snowflake and their usages.\nhttps://lnkd.in/gaUkAQFH\n3- Bata Data ingestion with key parameters.\nhttps://lnkd.in/dCwjqcdN\n4-Load Data from S3 to Snowflake.\nhttps://lnkd.in/dGx28Cjh\n5- Continuous batch load using Snowpipe\nhttps://lnkd.in/dtwuVhXS\n6- How to perform Data recovery using Snowflake Time travel?\nhttps://lnkd.in/g9eeZ5-4\n7- Zero copy clone\nhttps://lnkd.in/gsVfxYxR\n8- How data get stored in Storage layer and optimize by Clustering?\nhttps://lnkd.in/gmcMZFZw\n9-Mastering Role Base access control\nhttps://lnkd.in/gWXHSQJ7\n10- SCD type 2 implementation using Task & Streams\nhttps://lnkd.in/gUSWBemz\nCredits to Vishal Kaushal sir for such an amazing collection\n…see more\n#5 Snowflake Virtual warehouse\nyoutube.com",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7347921644906082306_slide_0.jpg",
+      "description": "JPEG image, 800x450 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a Snowflake interview-preparation post listing ten linked videos. The video titles cover virtual warehouses and multi-cluster operation, stages, data ingestion, loading data from S3, continuous batch loading with Snowpipe, recovery with Snowflake Time Travel, zero-copy cloning, storage and clustering, role-based access control, and SCD Type 2 implementation with Tasks and Streams. The post does not provide technical explanations, implementation steps, or extracted media content beyond the titles.",
+    "topics": [
+      "Snowflake interview preparation",
+      "Snowflake data loading",
+      "Snowflake data recovery",
+      "Snowflake storage optimization",
+      "Snowflake access control",
+      "SCD Type 2 implementation"
+    ],
+    "subtopics": [
+      "Virtual warehouses and multi-cluster operation",
+      "Stages and their usages",
+      "Data ingestion with key parameters",
+      "Loading data from S3 to Snowflake",
+      "Continuous batch loading with Snowpipe",
+      "Data recovery with Snowflake Time Travel",
+      "Zero-copy cloning",
+      "Storage layers and clustering",
+      "Role-based access control",
+      "SCD Type 2 with Tasks and Streams"
+    ],
+    "concepts": [
+      "Snowflake virtual warehouses",
+      "Stages",
+      "S3-to-Snowflake data loading",
+      "Snowpipe continuous batch loading",
+      "Snowflake Time Travel",
+      "Zero-copy cloning",
+      "Storage-layer clustering",
+      "Role-based access control",
+      "SCD Type 2"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Snowflake data engineering",
+    "secondary_topics": [
+      "Data ingestion and loading",
+      "Data recovery",
+      "Storage optimization",
+      "Access control",
+      "Slowly Changing Dimensions"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:3eed012a2637205b",
+    "saved_date": "2026-10-01T23:12:08Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7347921644906082306",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7347921644906082306_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "8ab1966142d83217d4ec3f54ffb2218e3e8db94b686ffa8eb03ece3769890fe4",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

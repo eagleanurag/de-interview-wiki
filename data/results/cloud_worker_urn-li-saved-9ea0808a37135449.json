@@ -1,0 +1,104 @@
+{
+  "id": "urn-li-saved-9ea0808a37135449",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7457647884533121025",
+    "captured_at": "2026-10-02T00:15:50.087501Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:08:47Z"
+  },
+  "original_text": "🚨 If you have 3–5 years of experience and still preparing basics… you’re already behind.\nI went through advanced Data Engineer interview questions…\n and the level is NOT what most people expect.\n👉 It’s not about tools.\n 👉 It’s about how you think.\n📌 (These are exactly the expectations mentioned in the guide — page 1)\n🔥 REAL questions asked at top companies:\n💥 1. “Your SQL query is slow in production. What do you do?”\n✔️ Check execution plan (EXPLAIN)\n ✔️ Identify full scans / bad joins\n ✔️ Add indexes + partitioning\n ✔️ Reduce data scanned\n👉 Not just SQL… performance mindset\n💥 2. “How do you handle data skew in joins?”\n✔️ Detect skewed keys\n ✔️ Use salting technique\n ✔️ Pre-aggregate data\n ✔️ Broadcast smaller tables\n👉 This is where most candidates fail.\n🔥 Reality Check:\nIf your answers sound like:\n ❌ “I used Spark, Airflow, SQL…”\n--------------***************-----------------\n📘 100 Real Data Engineer Interview Questions & Answers (4–8 YOE)\n👉 https://lnkd.in/gFuBy7EV\n--------------***************-----------------\n💼 600 Real Data Engineer Interview Questions & Answers (Top Tech Companies – EY, Infosys, TCS, Dell, Wipro & More)\n👉 https://lnkd.in/gvX-we8v\n--------------***************-----------------\n🔥 Data Engineer Mega Interview Pack 2026 (1300+ Real Scenario-Based Q&As – Azure, ADF, Databricks, PySpark, SQL, Data Warehouse)\n👉 https://lnkd.in/gEushWwU\n--------------***************-----------------\n🎓 Top 100 Real Data Engineer Interview Questions (1–4 YOE)\n👉 https://lnkd.in/gau5s8h7\n--------------***************-----------------\nYou will NOT clear interviews.\n👉 They expect:\n ✔️ Trade-offs\n ✔️ Architecture thinking\n ✔️ Real-world scenarios\n💣 Golden Rule:\n 👉 Junior → knows tools\n 👉 Mid-level → solves problems\n 👉 Senior → designs systems\n💬 Want more real 3–5 yrs interview questions + answers?\n Comment “DE” — I’ll share the next set 🔥\n#DataEngineering #BigData #Spark #SQL #Airflow #Databricks #InterviewPreparation #TechCareers #CareerGrowth #LinkedInGrowth",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7457647884533121025_slide_0.jpg",
+      "description": "JPEG image, 480x678 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional Data Engineering interview post argues that candidates should demonstrate problem-solving and systems thinking rather than simply list tools. It provides two limited technical examples: troubleshooting a slow production SQL query with EXPLAIN, identification of full scans or poor joins, and consideration of indexes, partitioning, and reduced data volume; and handling join data skew through skewed-key detection, salting, pre-aggregation, or broadcasting a smaller table. It also claims that junior, mid-level, and senior candidates are evaluated differently. The post does not explain the mechanics, limitations, or trade-offs of the listed techniques, and the advertised interview packs are not included.",
+    "topics": [
+      "SQL query performance troubleshooting",
+      "Data skew in joins",
+      "Data engineering interview preparation"
+    ],
+    "subtopics": [
+      "Execution plan analysis with EXPLAIN",
+      "Full scans and inefficient joins",
+      "Indexes and partitioning",
+      "Reducing data scanned",
+      "Skewed key detection",
+      "Salting",
+      "Pre-aggregation",
+      "Broadcasting smaller tables",
+      "Trade-offs and architecture thinking",
+      "Junior, mid-level, and senior interview expectations"
+    ],
+    "concepts": [
+      "Production SQL performance troubleshooting",
+      "Execution plan analysis with EXPLAIN",
+      "Scan and join optimization",
+      "Indexes and partitioning",
+      "Join data skew",
+      "Salting",
+      "Pre-aggregation",
+      "Broadcasting smaller tables",
+      "Data engineering interview progression"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What steps should you take when a SQL query is slow in production?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "They begin by inspecting the execution plan with EXPLAIN.\nThey identify full scans or poor joins as possible causes.\nThey consider indexes, partitioning, and ways to reduce the amount of data scanned.\nThey explain performance trade-offs rather than merely naming SQL tools."
+    },
+    {
+      "question": "How would you detect and address data skew in a join?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "They begin by detecting skewed keys.\nThey identify salting, pre-aggregation, and broadcasting a smaller table as mitigation techniques.\nThey stay within the scope of the post rather than inventing unsupported implementation details."
+    },
+    {
+      "question": "How do the post's interview expectations differ for junior, mid-level, and senior Data Engineering candidates?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "They characterize junior candidates as tool-focused, mid-level candidates as problem solvers, and senior candidates as system designers.\nThey connect interview readiness with trade-offs, architecture thinking, and real-world scenarios rather than tool lists."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL query performance troubleshooting",
+    "secondary_topics": [
+      "Data skew mitigation",
+      "Data engineering interview expectations"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:9ea0808a37135449",
+    "saved_date": "2026-10-01T23:08:47Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7457647884533121025",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7457647884533121025_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "0cc11bd700f5ced9b4bc87175979bd371065ba92ce056f5399658be4f4580af1",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

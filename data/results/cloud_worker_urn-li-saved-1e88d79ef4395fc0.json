@@ -1,0 +1,171 @@
+{
+  "id": "urn-li-saved-1e88d79ef4395fc0",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7338071173940813825",
+    "captured_at": "2026-10-02T00:15:45.400780Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:34Z"
+  },
+  "original_text": "Deloitte – Technical Interview (Round 1) | Azure Data Engineer\nInterview Duration: 40 mins\n\nI recently appeared for the first round of the technical interview at Deloitte for Azure Data Engineer role. The round focused on hands-on problem-solving, cloud architecture, SQL logic, and PySpark-based data processing.\nI’m sharing my experience to help others preparing for similar opportunities.\n\nHere’s a quick summary of the questions I was asked:\n\n1. Project Architecture & Challenges\n • Explained the end-to-end architecture of my project\n • Discussed challenges faced and how I handled them\n2. SQL Joins – Output Rows\n • Explained expected number of rows for INNER, LEFT, RIGHT, and FULL OUTER joins\n3. Removing Duplicates in SQL\n • Shared different approaches to remove duplicate records (using ROW_NUMBER, CTEs, DISTINCT, etc.)\n4. SQL Query – 7th Highest Salary\n • Write a query to fetch the 7th highest salary from a table\n5. PySpark – Gender Percentage Calculation\n • Write a PySpark program to calculate male and female percentage from employee data\n6. ADF + ADLS + SQL Server – SCD Type 2 Implementation\n • Explained how to implement SCD Type 2 using Azure Data Factory with ADLS as source and SQL Server as target\n • Discussed how to handle failures during pipeline execution\n7. Spark Caching – Real Use Case\n • Shared a real project use case where Spark caching improved performance\n8. Optimization Techniques\n • Discussed project-level (not theoretical) optimizations applied for better performance\n9. Problem Solving in Projects\n • Talked about a real issue encountered during the project and how I resolved it\n10. Data Security & Governance\n • Explained how I ensured data security and governance in my pipeline and architecture\nKey Takeaway:\nThe round emphasized practical experience and real-world problem-solving. Highly recommend being confident with:\n • SQL logic and edge cases\n • PySpark transformations\n • Azure Data Factory pipeline design\n • Data security & project-level optimizations\n\nAll the best to everyone preparing for interviews!\n\n#Deloitte #InterviewExperience #DataEngineering #Azure #ADF #SQL #PySpark #BigData #TechCareers #LinkedInTech #DataPipeline",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7338071173940813825_slide_0.jpg",
+      "description": "JPEG image, 480x320 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post reports a 40-minute Deloitte first-round technical interview for an Azure Data Engineer role. It says the round focused on hands-on problem solving, cloud architecture, SQL logic, and PySpark-based data processing. It lists project architecture and challenges; expected output rows for INNER, LEFT, RIGHT, and FULL OUTER joins; duplicate removal; a query for the 7th highest salary; a PySpark calculation of male and female percentages; an Azure Data Factory SCD Type 2 implementation using ADLS as source and SQL Server as target; pipeline failure handling; Spark caching; project-level optimization; a real project issue; and data security and governance. The post is a high-level interview summary rather than a complete technical explanation and does not provide the actual answers, code, architecture details, specific security controls, or performance figures.",
+    "topics": [
+      "Azure Data Engineering",
+      "Cloud architecture",
+      "SQL",
+      "SQL joins",
+      "SQL duplicate removal",
+      "7th highest salary query",
+      "PySpark",
+      "Azure Data Factory (ADF)",
+      "ADLS",
+      "SQL Server",
+      "SCD Type 2",
+      "Spark caching",
+      "Pipeline failure handling",
+      "Data pipeline optimization",
+      "Data security and governance",
+      "Project problem solving"
+    ],
+    "subtopics": [
+      "End-to-end project architecture and challenge handling",
+      "Expected output rows for INNER, LEFT, RIGHT, and FULL OUTER joins",
+      "Duplicate removal with ROW_NUMBER, CTEs, and DISTINCT",
+      "Writing a 7th-highest-salary query in SQL",
+      "Calculating male and female percentages from employee data with PySpark",
+      "Azure Data Factory pipeline design for SCD Type 2",
+      "ADLS as source and SQL Server as target",
+      "Handling failures during pipeline execution",
+      "Real project use case for Spark caching",
+      "Project-level rather than theoretical optimization",
+      "Resolving a real project issue",
+      "Data security and governance in the pipeline and architecture"
+    ],
+    "concepts": [
+      "End-to-end project architecture",
+      "SQL join output rows",
+      "SQL duplicate removal",
+      "7th highest salary query",
+      "PySpark gender percentage calculation",
+      "ADF-ADLS-SQL Server SCD Type 2 pipeline",
+      "Pipeline failure handling",
+      "Spark caching for performance",
+      "Project-level optimization",
+      "Data security and governance",
+      "Real-world project problem solving"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Explain the end-to-end architecture of your project, a challenge you faced, and how you handled it.",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer describes the end-to-end project architecture.\nThe answer identifies a challenge and explains the action taken to handle it."
+    },
+    {
+      "question": "How do INNER, LEFT, RIGHT, and FULL OUTER joins affect the expected number of output rows?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The answer gives the expected row-count behavior for each of the four join types.\nThe answer explains why different join choices can produce different output counts."
+    },
+    {
+      "question": "What SQL approaches can you use to remove duplicate records with ROW_NUMBER, CTEs, or DISTINCT?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer demonstrates a duplicate-removal approach using ROW_NUMBER.\nThe answer explains the role of CTEs and DISTINCT in duplicate-removal approaches."
+    },
+    {
+      "question": "Write a SQL query to fetch the 7th highest salary from a table.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer expresses the salary ranking and selection of the seventh-highest result in SQL.\nThe answer explains the ordering needed to identify the requested salary."
+    },
+    {
+      "question": "Write a PySpark program to calculate male and female percentages from employee data.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The answer uses PySpark transformations on employee data to calculate male and female percentages.\nThe answer shows how the calculated percentages are returned."
+    },
+    {
+      "question": "How would you implement SCD Type 2 using Azure Data Factory, with ADLS as the source and SQL Server as the target?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "The answer describes an ADF pipeline with ADLS as the source and SQL Server as the target.\nThe answer explains how SCD Type 2 is incorporated into the pipeline."
+    },
+    {
+      "question": "How did you handle failures during execution of the ADF pipeline?",
+      "type": "troubleshooting",
+      "difficulty": "hard",
+      "answer": "The answer identifies a pipeline failure scenario and the handling steps used.\nThe answer explains how the ADF pipeline execution was addressed after a failure."
+    },
+    {
+      "question": "Describe a real project use case in which Spark caching improved performance.",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer presents a real project use case for Spark caching.\nThe answer explains what was cached and how caching improved performance."
+    },
+    {
+      "question": "Which project-level optimizations did you apply to improve performance?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The answer names specific optimizations applied in a project.\nThe answer connects those optimizations to better performance."
+    },
+    {
+      "question": "How did you ensure data security and governance in the pipeline and architecture?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "The answer identifies security and governance measures used in the pipeline.\nThe answer explains how those measures were incorporated into the architecture."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Practical Azure data engineering interview preparation",
+    "secondary_topics": [
+      "Cloud architecture",
+      "SQL logic and joins",
+      "SQL duplicate removal and ranking",
+      "PySpark transformations",
+      "Azure Data Factory pipeline design",
+      "ADLS and SQL Server",
+      "SCD Type 2",
+      "Pipeline failure handling",
+      "Spark caching and project-level optimization",
+      "Data security and governance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:1e88d79ef4395fc0",
+    "saved_date": "2026-10-01T23:21:34Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7338071173940813825",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7338071173940813825_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "7fc65afcc7efa299861f904c1728ce04571cfdaf10f441a8dad7a7c2d2566f17",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

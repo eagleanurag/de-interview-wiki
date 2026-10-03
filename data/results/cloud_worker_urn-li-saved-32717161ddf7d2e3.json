@@ -1,0 +1,103 @@
+{
+  "id": "urn-li-saved-32717161ddf7d2e3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7342036204650909697",
+    "captured_at": "2026-10-02T00:15:46.320772Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:12:55Z"
+  },
+  "original_text": "• 1st\nBrand partnership • Lead Data Engineer | Databricks & Azure Data Platform | Team of 7 | $100M Revenue Impact | 7-Eleven | Ex-Maersk | 45K+ Community\n1yr •\n𝐒𝐐𝐋 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭: The Ultimate Guide That Saved My Time and Effort\nSQL used to feel like a headache to me\nI would spend hours stuck on queries, not knowing what slowed them down or where I went wrong. But after learning the right way to write and use SQL, I saw everything change.\nNow, what took me hours gets done in minutes. (Big relief!)\nHere’s my SQL cheatsheet that saved my time and effort:\n𝗕𝗔𝗦𝗜𝗖 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 → 𝐓𝐡𝐞 𝐦𝐮𝐬𝐭-𝐤𝐧𝐨𝐰𝐬:\n- SELECT → Get data from tables\nExample: SELECT name FROM employees\n- WHERE → Filter your results\nExample: SELECT * FROM employees WHERE department = 'Sales'\n- INSERT → Add new data\nExample: INSERT INTO employees (name, age) VALUES ('John', 30)\n- UPDATE → Change existing data\nExample: UPDATE employees SET age = 31 WHERE name = 'John'\n- DELETE → Remove unwanted data\nExample: DELETE FROM employees WHERE name = 'John'\n𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 → 𝐅𝐨𝐫 𝐦𝐨𝐫𝐞 𝐩𝐨𝐰𝐞𝐫:\n- JOIN → Combine tables for deeper insights\nExample: SELECT orders.id, customers.name FROM orders INNER JOIN customers ON orders.customer_id = customers.id\n- GROUP BY → Group data and count\nExample: SELECT department, COUNT(*) FROM employees GROUP BY department\n- ORDER BY → Sort results easily\nExample: SELECT name, salary FROM employees ORDER BY salary DESC\n- HAVING → Filter after grouping\nExample: SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 5\n- CTEs & Window Functions → Break down complex queries and do calculations across rows (game changer for big data!)\n𝐊𝐞𝐲 𝐓𝐚𝐤𝐞𝐚𝐰𝐚𝐲:\nLearning the SQL order of execution made a huge difference for me. Once I saw how SQL runs commands step by step, my queries got faster and cleaner.\nIf you are looking for a platform to help you prepare for Data Engineering roles in top tech companies, then I’d suggest checking Bosscoder Academy.\n👉🏻 Check them here: https://bit.ly/3HNuLGY\nThey have helped over 800+ tech professionals to switch to their dream companies, and you too can switch your career with their help through:\n💡A structured curriculum covering ETL, Big Data, Cloud, and Advanced Data Ops.\n💡Mentorship from experts at Google, Samsung, and more.\n💡Hands-on projects to build a portfolio in Big Data and data processing.\n💡Resume building, mock interviews & 100% job switch assistance.\n#dataengineering #brandpartnership #interviewprep #Sql #data\n…see more\nSql cheat sheet",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7342036204650909697_slide_0.jpg",
+      "description": "JPEG image, 390x487 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The supplied excerpt is a promotional Data Engineering career post centered on a basic SQL cheatsheet. It briefly explains SELECT, WHERE, INSERT, UPDATE, DELETE, JOIN, GROUP BY with COUNT, ORDER BY, HAVING, CTEs, window functions, and the author's reported benefit from understanding SQL execution order. The CTE and window-function entry has no syntax example, the execution order is not enumerated, and the supplied content ends with \"…see more\" without any extracted media text before the Bosscoder Academy promotion.",
+    "topics": [
+      "SQL",
+      "Data engineering career preparation"
+    ],
+    "subtopics": [
+      "Data retrieval and filtering",
+      "Data manipulation",
+      "Table joins",
+      "Aggregation and grouped filtering",
+      "Result sorting",
+      "Common table expressions",
+      "Window functions",
+      "SQL command execution order"
+    ],
+    "concepts": [
+      "SELECT",
+      "WHERE",
+      "INSERT, UPDATE, and DELETE",
+      "JOIN",
+      "GROUP BY and COUNT(*)",
+      "ORDER BY",
+      "HAVING",
+      "CTEs and Window Functions",
+      "SQL Command Execution Order"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What are the purposes of SELECT, WHERE, INSERT, UPDATE, and DELETE in SQL?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "SELECT retrieves data from a table, such as employee names.\nWHERE filters returned rows, such as limiting employees to the Sales department.\nINSERT adds a row, UPDATE changes an existing row, and DELETE removes a matching row."
+    },
+    {
+      "question": "What do JOIN, GROUP BY, COUNT(*), HAVING, and ORDER BY do in SQL?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "JOIN combines related tables, such as matching orders to customers.\nGROUP BY with COUNT(*) groups employees by department and counts each group.\nHAVING filters grouped results, while ORDER BY sorts output such as salaries in descending order."
+    },
+    {
+      "question": "How can CTEs and window functions help with complex SQL queries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "The post presents CTEs as a way to break down complex queries.\nThe post presents window functions as a way to perform calculations across rows.\nThe supplied content does not include syntax or a worked example for either feature."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL Querying",
+    "secondary_topics": [
+      "Data Manipulation",
+      "Joins and Aggregation",
+      "Query Composition",
+      "SQL Execution Order"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:32717161ddf7d2e3",
+    "saved_date": "2026-10-01T23:12:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7342036204650909697",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7342036204650909697_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "234b5abf7c30d05ad4b4bebe5152a541cb129594f3f3316efe5c7c6d78a3c284",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

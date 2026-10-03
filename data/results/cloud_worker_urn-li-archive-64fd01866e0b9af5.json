@@ -1,0 +1,98 @@
+{
+  "id": "urn-li-archive-64fd01866e0b9af5",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:20.264958Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:33Z"
+  },
+  "original_text": "⚡️ Tired of slow queries on your Delta Lake tables in Databricks?\n\nHere’s a simple optimization that can make a big difference: Delta Cache 💥\n\n🔍 Real-time example:\nWe had a BI dashboard running on a Delta table with ~500M records. Analysts were frustrated—queries filtering by region, month, and category took 20–30 seconds to return results.\n\nWe enabled Delta Cache in Databricks. Result?\n⏱️ Query times dropped to under 5 seconds — consistently.\n📉 Load on the cluster dropped, and user experience skyrocketed.\n\n💡 What is Delta Cache?\nIt’s an intelligent, disk-based cache that Databricks uses to store hot data on worker nodes. Unlike Spark caching (which stores in RAM), it’s persistent across jobs, making it ideal for repeated queries on large, slowly changing datasets.\n\n🧪 Enabling it is effortless:\n\nsql\n\n-- Cache a frequently queried Delta table\nCACHE SELECT * FROM sales_data WHERE region = 'US';\n\nOr automatically cache with:\n\nsql\n\nspark.conf.set(\"spark.databricks.io.cache.enabled\", \"true\")\n✅ Works great for:\n\nBI dashboards (Power BI, Tableau, etc.)\n\nRepeated ad-hoc analysis\n\nStar schema querying in Databricks SQL\n\n🚫 Not recommended for:\n\nHighly dynamic or streaming tables\n\nWorkloads with low data reuse\n\nIf you're not using Delta Cache yet, you're leaving performance on the table.\n\n#DeltaLake #Databricks #DeltaCache #DataEngineering #BigData #PerformanceTuning #Azure #Lakehouse #BIOptimization #SparkSQL\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains Delta Cache as a disk-based Databricks cache that stores hot data on worker nodes and remains persistent across jobs, unlike Spark caching in RAM. It reports that enabling Delta Cache for a 500-million-record Delta table reduced BI query times from 20–30 seconds to under 5 seconds while reducing cluster load. It provides SQL for caching a filtered table or enabling caching automatically, recommends Delta Cache for repeated BI and analytical workloads, and advises against it for highly dynamic or streaming tables and workloads with little data reuse.",
+    "topics": [
+      "Delta Cache",
+      "Disk-based caching",
+      "Business intelligence workloads"
+    ],
+    "subtopics": [
+      "Caching hot data on worker nodes",
+      "Persistence across jobs",
+      "Comparison with Spark caching",
+      "Manual and automatic cache enablement",
+      "Suitable and unsuitable workloads"
+    ],
+    "concepts": [
+      "Delta Cache",
+      "Cross-job persistence",
+      "Selective table caching",
+      "Automatic Delta Cache",
+      "Workload suitability"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What is Delta Cache, and how does it differ from Spark caching?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Delta Cache is a disk-based Databricks cache that stores hot data on worker nodes.\nDelta Cache remains persistent across jobs, whereas Spark caching stores data in RAM."
+    },
+    {
+      "question": "A Databricks BI dashboard repeatedly filters a large Delta table by region, month, and category. Why would Delta Cache be a suitable optimization, and what result does the post report?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The workload has substantial data reuse because analysts repeatedly query the same Delta table with similar filters.\nThe post reports that query times fell from 20–30 seconds to under 5 seconds for a 500-million-record table after Delta Cache was enabled.\nThe post also reports that cluster load decreased."
+    },
+    {
+      "question": "How can Delta Cache be enabled for a frequently queried Delta table in the examples given by the post?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "A filtered table can be cached with CACHE SELECT * FROM sales_data WHERE region = 'US'.\nAutomatic caching can be enabled with spark.conf.set(\"spark.databricks.io.cache.enabled\", \"true\")."
+    },
+    {
+      "question": "When does the post advise against using Delta Cache?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The post advises against Delta Cache for highly dynamic or streaming tables.\nIt also advises against Delta Cache for workloads with low data reuse."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Query performance optimization",
+    "secondary_topics": [
+      "Delta Cache",
+      "Databricks",
+      "Caching",
+      "BI workloads"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:64fd01866e0b9af5",
+    "saved_date": "2026-10-01T23:22:33Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "02320cb4be54412a00a3d9bfe6ae9ee39842f09d68b13f6a50e1d478084563af",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "Databricks query performance optimization"
+      ],
+      "concepts": [
+        "Repeated-query optimization"
+      ],
+      "questions": []
+    }
+  }
+}

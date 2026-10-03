@@ -1,0 +1,83 @@
+{
+  "id": "urn-li-saved-a631abe465c20d77",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7349769179731738624",
+    "captured_at": "2026-10-02T00:15:50.298512Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:11:02Z"
+  },
+  "original_text": "🧠 Solved this SQL problem on a quiet Saturday afternoon.\n\nIn my first try, I used:\nDATE_FORMAT(delivery_time, '%Y-%m-%d 00:00:00')\n\nMy query got the desired output, but I was still keen to see if there was a better way to approach it.\n\n📽️ Thats when I learnt from the solution video that just using DATE(delivery_time) automatically resets the time to 00:00:00 — no formatting needed. Cleaner and simpler.\n\nThanks to NamasteSQL and Ankit Bansal for helping me improve not just the answer, but the approach.\n\nExploring opportunities, one small improvement at a time.\n\n#SQL #NamasteSQL #LearningByDoing #ExploringOpportunities #SaturdayWellSpent\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7349769179731738624_slide_0.jpg",
+      "description": "JPEG image, 480x208 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post compares two SQL approaches for producing a delivery date with its time set to 00:00:00. The author initially used DATE_FORMAT with the pattern '%Y-%m-%d 00:00:00', then learned that DATE(delivery_time) resets the time to midnight without requiring explicit formatting.",
+    "topics": [
+      "SQL",
+      "Date and time handling"
+    ],
+    "subtopics": [
+      "Converting a date-time value to a date",
+      "Formatting date-time values",
+      "Simplifying SQL expressions"
+    ],
+    "concepts": [
+      "DATE(delivery_time)",
+      "DATE_FORMAT(delivery_time, '%Y-%m-%d 00:00:00')",
+      "Simpler date conversion"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How can delivery_time be converted directly to a value with its time set to 00:00:00 without an explicit format string?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "Use DATE(delivery_time).\nThe post states that DATE(delivery_time) automatically resets the time to 00:00:00."
+    },
+    {
+      "question": "What two approaches does the post compare for producing a delivery date at midnight?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The first approach uses DATE_FORMAT(delivery_time, '%Y-%m-%d 00:00:00').\nThe simpler alternative uses DATE(delivery_time), which automatically sets the time to midnight."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL date and time handling",
+    "secondary_topics": [
+      "Query simplification"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:a631abe465c20d77",
+    "saved_date": "2026-10-01T23:11:02Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7349769179731738624",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7349769179731738624_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "141f0d6b15e9c6e960f2862b66622350ac079fa1af32c42afc2a2fc8707e7ae2",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "urn-li-saved-61cef75d08e1f2fa",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491436624975671296",
+    "captured_at": "2026-10-02T00:15:48.009485Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:15Z"
+  },
+  "original_text": "Databricks Data Engineering Interview will be 10X easier with these questions.\nEXP - 5+ Years\n\n1️⃣ How would you design a multi-hop Medallion architecture for a large-scale data platform?\n2️⃣ A streaming job starts processing duplicate events. How would you identify and fix the issue?\n3️⃣ How do you optimize a Delta Lake table with billions of records?\n4️⃣ How would you process late-arriving data in a Structured Streaming pipeline? \n\n5️⃣ What factors do you consider before enabling Photon for a workload?\n6️⃣ How would you handle schema evolution without breaking downstream pipelines?\n7️⃣ How do you choose between broadcast, shuffle hash, and sort merge joins in Spark?\n8️⃣ A Spark job frequently runs out of memory. How would you troubleshoot it?\n\n9️⃣ How would you design an idempotent ETL pipeline in Databricks?\n🔟 When would you use Auto Loader instead of a traditional batch ingestion process?\n1️⃣1️⃣ How would you isolate workloads for multiple teams in a shared Databricks workspace?\n1️⃣2️⃣ How do you optimize Spark partitioning for large-scale joins?\n\n𝗜’𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗮 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗞𝗶𝘁 𝗳𝗼𝗿 𝗳𝗼𝗰𝘂𝘀𝗲𝗱 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗽𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻.\n\n👉 𝗚𝗿𝗮𝗯 𝗶𝘁 𝗵𝗲𝗿𝗲: https://lnkd.in/gTAHtzH9\n\nFound this helpful? 𝗦𝗮𝘃𝗲 📌 and 𝗥𝗲𝗽𝗼𝘀𝘁 🔄 it!\n🔔 𝗙𝗼𝗹𝗹𝗼𝘄 DHANASEKARAN D for more insights on Data Engineering!",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7491436624975671296_slide_0.jpg",
+      "description": "JPEG image, 480x278 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A promotional Databricks Data Engineering interview post for candidates with 5+ years of experience. It lists 12 questions about architecture, streaming, Delta Lake, Photon, schema evolution, Spark, ETL, Auto Loader, partitioning, and workspace isolation, but provides no answers, definitions, implementation guidance, or technical claims. The remainder is a LinkedIn call to action and a request for engagement.",
+    "topics": [
+      "Databricks data engineering interview preparation",
+      "Medallion architecture",
+      "streaming data processing",
+      "Delta Lake optimization",
+      "Photon workload evaluation",
+      "schema evolution",
+      "Spark join and memory optimization",
+      "idempotent ETL",
+      "Auto Loader",
+      "shared Databricks workspace isolation"
+    ],
+    "subtopics": [
+      "large-scale data platform design",
+      "duplicate event diagnosis",
+      "late-arriving data",
+      "optimization of tables with billions of records",
+      "Spark join strategies",
+      "Spark out-of-memory troubleshooting",
+      "large-scale join partitioning",
+      "multi-team workload isolation"
+    ],
+    "concepts": [
+      "Medallion architecture",
+      "Duplicate event handling",
+      "Delta Lake table optimization",
+      "Late-arriving data",
+      "Photon workload evaluation",
+      "Schema evolution",
+      "Spark join strategies",
+      "Spark out-of-memory troubleshooting",
+      "Idempotent ETL",
+      "Auto Loader",
+      "Shared workspace workload isolation",
+      "Spark partitioning"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Databricks",
+    "secondary_topics": [
+      "Medallion architecture",
+      "streaming data processing",
+      "Delta Lake",
+      "Photon",
+      "schema evolution",
+      "Spark optimization",
+      "idempotent ETL",
+      "Auto Loader",
+      "workload isolation"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:61cef75d08e1f2fa",
+    "saved_date": "2026-10-01T23:07:15Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7491436624975671296",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7491436624975671296_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "83e895690ded9bf27e2ad68cd6fdbfeb32c8cef48e077a74f4b8ce55a63e5c60",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

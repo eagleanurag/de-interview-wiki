@@ -1,0 +1,67 @@
+{
+  "id": "urn-li-saved-02391a7ac96b4fc5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7335500334980628481",
+    "captured_at": "2026-10-02T00:15:44.420401Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:21:38Z"
+  },
+  "original_text": "🚀 Mastering PySpark Just Got Easier!\n\nWhether you're prepping for a Data Engineering interview or working on big data projects — having a solid grip on PySpark functions is a game-changer! 💡\n\nHere's a handy cheat sheet that covers: 📊 Aggregation Functions\n🔁 Window Functions\n🔡 String Functions\n✅ Conditional Logic\n📦 Array & Map Utilities\n🔄 Type Conversion\n🧩 Miscellaneous Functions\n\nEach function has a purpose — from simplifying data transformations to optimizing distributed processing at scale.\n\n💬 Save it. Share it. Bookmark it for later.\n\n🔗 #PySpark #DataEngineering #BigData #ApacheSpark #SparkSQL #ETL #CheatSheet #DataScience #LinkedInLearning",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7335500334980628481_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This promotional post announces a PySpark cheat sheet intended for data engineering interview preparation and big-data projects. It lists broad categories of functions, including aggregation, window, string, conditional, array and map utilities, type conversion, and miscellaneous functions, but provides no function names, definitions, syntax, examples, or technical explanations. The extracted media text is empty, so the post does not contain enough technical detail to support interview questions.",
+    "topics": [
+      "PySpark"
+    ],
+    "subtopics": [
+      "Aggregation functions",
+      "Window functions",
+      "String functions",
+      "Conditional logic",
+      "Array and map utilities",
+      "Type conversion",
+      "Miscellaneous functions"
+    ],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark functions",
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:02391a7ac96b4fc5",
+    "saved_date": "2026-10-01T23:21:38Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7335500334980628481",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7335500334980628481_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "a2d323e65e633e841f720c2cbfa30e754291a0ee191fb1d250dd610b8be25bfc",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-65b33920172eb086",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505829570575785984",
+    "captured_at": "2026-10-02T00:15:48.135066Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:10Z"
+  },
+  "original_text": "Dear Data enthusiasts,\n\n🔵One of the SQL question asked in a Swiggy Interview 🔵\n\n💡𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧:- \n/*\nWrite a SQL query to determine the count of delayed orders for each delivery partner.\n*/\n\n-- 𝐓𝐚𝐛𝐥𝐞 \nCREATE TABLE order_details (orderid INT PRIMARY KEY,custid INT,\ncity VARCHAR(50),order_date DATE,del_partner VARCHAR(50),\n order_time TIME,deliver_time TIME,predicted_time INT,\naov DECIMAL(10, 2)\n);\n\n-- 𝐈𝐧𝐬𝐞𝐫𝐭 𝐭𝐡𝐞 𝐝𝐚𝐭𝐚 \nINSERT INTO order_details \nVALUES\n(1, 101, 'Bangalore', '2024-01-01', 'PartnerA', '10:00:00', '11:30:00', 60, 100.00),\n(2, 102, 'Chennai', '2024-01-02', 'PartnerB', '12:00:00', '13:15:00', 45, 200.00),\n(3, 103, 'Bangalore', '2024-01-03', 'PartnerA', '14:00:00', '15:45:00', 60, 300.00),\n(4, 104, 'Chennai', '2024-01-04', 'PartnerB', '16:00:00', '17:30:00', 90, 400.00);\n\n🧠 This question looks simple but tests 𝐥𝐨𝐠𝐢𝐜𝐚𝐥 𝐭𝐡𝐢𝐧𝐤𝐢𝐧𝐠, 𝐝𝐚𝐭𝐚 𝐚𝐠𝐠𝐫𝐞𝐠𝐚𝐭𝐢𝐨𝐧, 𝐚𝐧𝐝 𝐫𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐬𝐨𝐥𝐯𝐢𝐧𝐠 — exactly what most SQL interviews focus on.\n\n🚀 𝐖𝐚𝐧𝐭 𝐭𝐨 𝐦𝐚𝐬𝐭𝐞𝐫 𝟐𝟎𝟎+ 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐥𝐢𝐤𝐞 𝐭𝐡𝐢𝐬 𝐟𝐫𝐨𝐦 𝐫𝐞𝐚𝐥 𝐜𝐨𝐦𝐩𝐚𝐧𝐲 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐬?I’ve got you covered 👇Introducing 💥\"𝟐𝟎𝟎+ 𝐫𝐞𝐚𝐥 𝐒𝐐𝐋 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\" — your all-in-one guide to ace SQL interviews like a pro!\n\n💡 𝐖𝐡𝐚𝐭’𝐬 𝐈𝐧𝐬𝐢𝐝𝐞: \n✔ 200+ real-world SQL interview questions (from companies like PayPal, Uber, Amazon, Microsoft, Google, Deloitte, Swiggy & More..) \n✔ Sample data + expected outputs \n✔ SQL Cheat Sheet for quick revision \n✔ Theoretical Q&A to strengthen your core concepts \n✔ Hands-on practice to boost real interview confidence\n\n📌 𝟐𝟎𝟎+ 𝐑𝐞𝐚𝐥 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐒𝐐𝐋 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 in 𝐏𝐫𝐨𝐝𝐮𝐜𝐭-𝐁𝐚𝐬𝐞𝐝 𝐂𝐨𝐦𝐩𝐚𝐧𝐢𝐞𝐬, 𝐌𝐍𝐂𝐬, 𝐒𝐞𝐫𝐯𝐢𝐜𝐞-𝐁𝐚𝐬𝐞𝐝 𝐅𝐢𝐫𝐦𝐬 & 𝐒𝐭𝐚𝐫𝐭𝐮𝐩𝐬, 𝐆𝐫𝐚𝐛 𝐲𝐨𝐮𝐫 𝐜𝐨𝐩𝐲 𝐧𝐨𝐰 𝐚𝐧𝐝 𝐬𝐭𝐚𝐫𝐭 𝐩𝐫𝐚𝐜𝐭𝐢𝐜𝐢𝐧𝐠 𝐥𝐢𝐤𝐞 𝐚 𝐩𝐫𝐨!\n👉 [ https://lnkd.in/dNDm2EJC ]\n\n📌𝐜𝐫𝐚𝐜𝐤 𝐫𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝 𝐩𝐫𝐨𝐛𝐥𝐞𝐦𝐬 asked in top companies like 𝐒𝐰𝐢𝐠𝐠𝐲, 𝐙𝐨𝐦𝐚𝐭𝐨, 𝐁𝐥𝐢𝐧𝐤𝐢𝐭, 𝐙𝐞𝐩𝐭𝐨.\n👉[ https://lnkd.in/g7HC6TDi ]\n\n👍 𝗟𝗶𝗸𝗲 for more such content.\n♻️𝗥𝗲𝗽𝗼𝘀𝘁 to grow your own network!\n\n👉Follow Korrapati Jaswanth 🇮🇳 more insights and content on DS/DA\n\n#SQL #SQLInterview #SQLQuestions #SQLPractice #DataAnalytics #DataAnalyst #DataScience #DataEngineering #SQLServer #TSQL #Database #Analytics #DataJobs #TechJobs #InterviewPreparation #CodingInterview #TechInterview #BusinessIntelligence #PowerBI #Swiggy #Zomato #Amazon #Microsoft #Google #Deloitte #Uber #DataCareer #LearnSQL #SQLTips #KorrapatiJaswanth",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7505829570575785984_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a SQL interview exercise attributed to Swiggy: write a query that counts delayed orders for each delivery partner. It provides an order_details schema and four sample rows for PartnerA and PartnerB, but it does not define what makes an order delayed, explain the unit or role of predicted_time, provide a solution, or show expected output. The remainder of the post promotes a SQL interview-question product and related links.",
+    "topics": [
+      "SQL",
+      "Data aggregation",
+      "Order-delivery delay analysis",
+      "Delivery-partner grouping",
+      "SQL interview preparation"
+    ],
+    "subtopics": [
+      "order_details table schema",
+      "Counting orders by delivery partner",
+      "order_time, deliver_time, and predicted_time fields",
+      "Defining a delayed-order condition",
+      "Interpreting sample order data"
+    ],
+    "concepts": [
+      "Delayed-order aggregation",
+      "Delivery-partner grouping",
+      "Order timing fields",
+      "Undefined delay criterion"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How would you write a SQL query to determine the number of delayed orders for each delivery partner in order_details?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The query must count only orders that satisfy a clearly defined delayed-order condition.\nThe query must group by del_partner so that the result is associated with each delivery partner.\nThe answer must clarify how order_time, deliver_time, and predicted_time are compared because the post does not define their relationship."
+    },
+    {
+      "question": "What information is missing from the prompt before the delayed-order query can have a defensible implementation?",
+      "type": "troubleshooting",
+      "difficulty": "easy",
+      "answer": "The prompt does not state the rule that classifies an order as delayed.\npredicted_time is an integer, but its unit and exact role in deciding whether an order is delayed are not documented.\nA correct explanation should identify these missing semantics rather than assigning behavior that is not present in the source."
+    },
+    {
+      "question": "Which columns in order_details directly identify the delivery partner and contain timing information?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "del_partner identifies the delivery partner and is the relevant grouping field.\norder_time and deliver_time are TIME columns, while predicted_time is an INT column.\nThe post names these timing-related fields but does not explain how they determine a delay."
+    },
+    {
+      "question": "What can be concluded about PartnerA and PartnerB from the four sample rows before applying a delay definition?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "PartnerA has two sample orders and PartnerB has two sample orders.\nThe number of delayed orders cannot be determined conclusively because the prompt supplies no delay rule or explanation of predicted_time."
+    }
+  ],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "Counting delayed orders by delivery partner",
+    "secondary_topics": [
+      "Data aggregation",
+      "Order-delivery time fields",
+      "SQL problem specification"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:65b33920172eb086",
+    "saved_date": "2026-10-01T23:07:10Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7505829570575785984",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7505829570575785984_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "71d993daa9cec9c158a5ca3153904bfdfb2e163d2b13a7727e5c207c0d870a33",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [
+        "order_details data model"
+      ],
+      "questions": []
+    }
+  }
+}

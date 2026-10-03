@@ -1,0 +1,110 @@
+{
+  "id": "urn-li-archive-03701daee06628b7",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:18.786476Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:22:30Z"
+  },
+  "original_text": "I am a Senior Analyst at Accenture with more than 5+ years of experience.\nHere are 5 pieces of advice I’d give to aspiring data analysts in 2025 who want to break into and grow in this field:\n\n◄ Master Excel before anything else\n-Excel isn’t outdated, it's foundational.\n\n-Pivot tables, VLOOKUP/XLOOKUP, conditional formatting, \n\n-Power Query, these are non-negotiables.\n\n-Many companies still rely heavily on Excel; knowing it well gives you a strong edge, especially in interviews.\n\n\n◄ Master SQL before chasing dashboards\n-Nail the fundamentals—joins, window functions, CTEs, and subqueries.\n\n-Learn to write clean, optimized queries that scale.\n\n-Understand the why behind each query, don’t just copy from Stack Overflow/Chatgpt.\n\n◄ Think like a business stakeholder, not a data operator\n-Every chart or metric you build should answer a business question.\n\n-Translate insights into actions—don’t just say “Sales dropped,” explain why and what to do next.\n \n-Learn basic business lingo: CAC, CLTV, MRR—this sets you apart instantly.\n\n◄ Communicate with clarity and impact\n-A simple, clear insight always beats a flashy dashboard.\n\n-Summarize in bullet points, highlight “so what?” in every report.\n\n-Practice storytelling, take your audience from problem → data → insight → action.\n\n◄ Your career = projects + proof + presence\n-Document your projects. Share your thought process online.\n\n-Build a strong LinkedIn presence, engage with the data community.\n\n-Opportunities come to those who show their work, not just those who do the work.\n–\nP.S. I’m Mukesh, a Senior Analyst at Accenture.\nFollow me for more insights on data analysis.\n\nRepost if you learned something new today!",
+  "media": [],
+  "ai_analysis": {
+    "summary": "A Senior Analyst at Accenture advises aspiring data analysts to master Excel and SQL, analyze information from a business perspective, communicate clear and actionable insights, and build professional visibility. The post identifies specific Excel and SQL skills, introduces the business terms CAC, CLTV, and MRR, and recommends a problem-to-data-to-insight-to-action storytelling approach.",
+    "topics": [
+      "Data analysis",
+      "Excel",
+      "SQL",
+      "Business-oriented analysis",
+      "Data communication",
+      "Data analyst career development"
+    ],
+    "subtopics": [
+      "Pivot tables",
+      "VLOOKUP",
+      "XLOOKUP",
+      "Conditional formatting",
+      "Power Query",
+      "SQL joins",
+      "Window functions",
+      "CTEs",
+      "Subqueries",
+      "CAC",
+      "CLTV",
+      "MRR",
+      "Data storytelling",
+      "Project documentation",
+      "LinkedIn presence"
+    ],
+    "concepts": [
+      "Excel as a foundational data analysis skill",
+      "SQL fundamentals",
+      "Business-oriented analysis",
+      "Business metric literacy",
+      "Clear and actionable communication",
+      "Projects, proof, and professional presence"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which Excel capabilities does the post identify as foundational for aspiring data analysts?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The post names pivot tables, VLOOKUP, XLOOKUP, conditional formatting, and Power Query.\nIt argues that Excel remains foundational because many companies still rely heavily on it."
+    },
+    {
+      "question": "What SQL knowledge should a data analyst prioritize before focusing on dashboards?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The analyst should master joins, window functions, CTEs, and subqueries.\nThe analyst should learn to write clean, optimized queries that scale.\nThe analyst should understand the reasoning behind queries instead of merely copying them."
+    },
+    {
+      "question": "A dashboard shows that sales have dropped. How should a data analyst communicate this result according to the post?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The analyst should not merely state that sales have dropped.\nThe analyst should explain why sales dropped and what should be done next.\nThe chart or metric should be tied to a business question."
+    },
+    {
+      "question": "How should a data analyst structure and communicate an insight?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The analysis should move from the problem to the data, then to the insight, and finally to the action.\nReports should summarize information in bullet points and make the \"so what?\" clear.\nClear, simple communication should take priority over dashboard flashiness."
+    },
+    {
+      "question": "How can an aspiring data analyst make their skills and opportunities visible?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The analyst should document projects and share their thought process online.\nThe analyst should build a strong LinkedIn presence and engage with the data community.\nThe analyst should show their work rather than relying only on having done the work."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analysis",
+    "primary_topic": "Data analyst skill development",
+    "secondary_topics": [
+      "Excel",
+      "SQL",
+      "Business-oriented analysis",
+      "Data communication",
+      "Professional visibility"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:03701daee06628b7",
+    "saved_date": "2026-10-01T23:22:30Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "34e02d6b16be76f757a41be9662e79d577c5c93c3f9a13225238d5751a8ccb18",
+    "enricher_version": "3"
+  }
+}

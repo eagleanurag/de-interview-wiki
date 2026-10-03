@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-775eac7fb2827c6f",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7313046585775439872",
+    "captured_at": "2026-10-02T00:15:48.474046Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:55Z"
+  },
+  "original_text": "Atlassian.\nRole: Data Engineer.\nExperience: 3Years.\nLocation: Bangalore.\nLink: https://lnkd.in/gM5esuHC\n\nAmazon.\nRole: Data Engineer.\nExperience: 1Years.\nLocation: Bangalore.\nLink: https://lnkd.in/gUt5BAk5\n\nGSK.\nRole: Data Engineer.\nExperience: 3Years.\nLocation: Bangalore.\nLink: https://lnkd.in/g7Dy-P6t\n\nMicrosoft.\nRole: Data Engineer.\nExperience: 2Years.\nLocation: Bangalore.\nLink: https://lnkd.in/gFJSngpp\n\nGoogle.\nRole: Data Engineer.\nExperience: 3Years.\nLocation: Bangalore.\nLink: https://lnkd.in/gE_tRX-J \n\nFollow Abhishek Jha for more. \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7313046585775439872_slide_0.jpg",
+      "description": "JPEG image, 480x633 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The content lists Data Engineer roles at Atlassian, Amazon, GSK, Microsoft, and Google in Bangalore, requiring respectively 3, 1, 3, 2, and 3 years of experience. It includes LinkedIn links and promotes following Abhishek Jha, but provides no technical or job-description details.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering employment",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:775eac7fb2827c6f",
+    "saved_date": "2026-10-01T23:30:55Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7313046585775439872",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7313046585775439872_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "2baa67c6172cf4b2bde605fd55b422dd40494a418010915fc631e4f436e547be",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

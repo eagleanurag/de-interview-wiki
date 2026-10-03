@@ -1,0 +1,162 @@
+{
+  "id": "urn-li-saved-ae1b87e1b32bc67e",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341675487993249793",
+    "captured_at": "2026-10-02T00:15:50.609143Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:09Z"
+  },
+  "original_text": "After giving 50+ interviews, I have taken note of these top Data Engineering questions:\n\n\n📌 Save this post for your next interview prep!\n\n1. Explain design approach difference in database and data warehouse\n2. What are different ways to optimize SQL queries\n3. Compare transactional vs analytical processing systems (OLTP vs OLAP)\n4. How to handle slow database queries\n5. Why is Columnar Storage Faster for Analytics\n6. How to architect an ETL pipeline for large, complex datasets with multiple sources and frequent updates\n7. What are ways to handle incremental data processing\n8. What is the purpose of normalization and what are its types\n9. What are different types of indexing \n10. How to improve query performance\n\n📘 Interviewers love to go deep on these areas — make sure you understand both the concepts and real-world applications.\n\n#DataEngineering #InterviewPrep #SQL #ETL #DataEngineer #TechInterviews #CareerGrowth #LinkedInLearning\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341675487993249793_slide_0.jpg",
+      "description": "JPEG image, 480x640 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post claims to summarize frequently asked Data Engineering interview questions after the author conducted more than 50 interviews. It lists ten questions covering database and data warehouse design, SQL optimization, OLTP and OLAP, slow queries, columnar storage, ETL architecture, incremental processing, normalization, indexing, and query performance. It does not provide answers, detailed techniques, real-world examples, or definitions, and the visible content appears truncated after a see-more marker.",
+    "topics": [
+      "Data engineering interview preparation",
+      "Database and data warehouse design",
+      "Transactional and analytical processing",
+      "Columnar storage",
+      "ETL pipeline architecture",
+      "Incremental data processing",
+      "Normalization",
+      "Indexing"
+    ],
+    "subtopics": [
+      "Database and data warehouse design approaches",
+      "SQL query optimization methods",
+      "OLTP versus OLAP",
+      "Slow database query handling",
+      "Columnar storage for analytics",
+      "ETL for large and complex datasets",
+      "ETL with multiple sources and frequent updates",
+      "Incremental data processing methods",
+      "Purpose and types of normalization",
+      "Types of indexing",
+      "Query performance improvement"
+    ],
+    "concepts": [
+      "Database and data warehouse design approaches",
+      "OLTP and analytical processing systems",
+      "Slow database query handling",
+      "Columnar storage",
+      "ETL pipeline architecture",
+      "Incremental data processing",
+      "Normalization",
+      "Indexing",
+      "Query performance improvement"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Explain the difference in design approach between a database and a data warehouse.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer distinguishes the design approaches of a database and a data warehouse, although the post does not provide that distinction."
+    },
+    {
+      "question": "What are different ways to optimize SQL queries?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies distinct SQL query optimization methods, but the post does not specify any methods."
+    },
+    {
+      "question": "Compare transactional processing systems with analytical processing systems, or OLTP with OLAP.",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer compares OLTP and analytical processing systems, but the post does not supply the comparison."
+    },
+    {
+      "question": "How should slow database queries be handled?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer provides a way to handle slow database queries, but the post gives no procedure."
+    },
+    {
+      "question": "Why is columnar storage faster for analytics?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the reason columnar storage is faster for analytics, but the post does not state the reason."
+    },
+    {
+      "question": "How would you architect an ETL pipeline for large, complex datasets with multiple sources and frequent updates?",
+      "type": "architecture",
+      "difficulty": "hard",
+      "answer": "A strong answer addresses large and complex datasets, multiple data sources, and frequent updates in the ETL architecture."
+    },
+    {
+      "question": "What are ways to handle incremental data processing?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies methods for incremental data processing, but the post does not name any methods."
+    },
+    {
+      "question": "What is the purpose of normalization, and what are its types?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer explains the purpose of normalization and identifies its types, but the post provides neither the purpose nor the types."
+    },
+    {
+      "question": "What are the different types of indexing?",
+      "type": "theory",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies different indexing types, but the post does not list them."
+    },
+    {
+      "question": "How can query performance be improved?",
+      "type": "troubleshooting",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies ways to improve query performance, but the post does not provide specific techniques."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview preparation",
+    "secondary_topics": [
+      "Database and data warehouse design",
+      "SQL query optimization",
+      "OLTP and OLAP",
+      "Columnar storage",
+      "ETL pipeline architecture",
+      "Incremental data processing",
+      "Normalization",
+      "Indexing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:ae1b87e1b32bc67e",
+    "saved_date": "2026-10-01T23:17:09Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341675487993249793",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341675487993249793_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "45932ede0925b4bd8188118249474745dc84f2e3653c33377216a9cefcf83a4b",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [
+        "SQL query optimization"
+      ],
+      "concepts": [
+        "SQL query optimization"
+      ],
+      "questions": []
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-c7a2142925d189d3",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491389243899101184",
+    "captured_at": "2026-10-02T00:15:51.548851Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:07:14Z"
+  },
+  "original_text": "KPMG 𝗼𝗳𝗳𝗲𝗿𝗲𝗱 𝗺𝘆 𝗳𝗿𝗶𝗲𝗻𝗱 𝗮 𝗽𝗮𝗰𝗸𝗮𝗴𝗲 𝗼𝗳 𝟮𝟬–𝟮𝟯 𝗟𝗣𝗔\nPosition: 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿\nExperience: 𝟯–𝟱 𝘆𝗲𝗮𝗿𝘀\nApplication Process: 𝗥𝗲𝗳𝗲𝗿𝗿𝗮𝗹 \n\n🟡 𝗥𝗼𝘂𝗻𝗱 𝟭 - 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝟭 (𝗦𝗤𝗟 | 𝗣𝘆𝘁𝗵𝗼𝗻 | 𝗘𝗧𝗟)\n1️⃣ Write a SQL query to find top 3 highest salary per department.\n2️⃣ Difference between CTE vs Subquery with use cases.\n3️⃣ How do you handle NULL values and data cleansing in ETL pipelines?\n4️⃣ Python question: Write a script to read, transform, and load data into a database.\n5️⃣ Explain normalization vs denormalization with real-world scenarios.\n6️⃣ How do you optimize a complex SQL query?\n\n🔵 𝗥𝗼𝘂𝗻𝗱 𝟮 - 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝟮 (𝗔𝗗𝗙 | 𝗔𝘇𝘂𝗿𝗲 | 𝗗𝗮𝘁𝗮𝗯𝗿𝗶𝗰𝗸𝘀)\n1️⃣ How do you design a data ingestion pipeline from multiple sources?\n2️⃣ Explain incremental vs full load with examples.\n3️⃣ What is partitioning and bucketing in Spark?\n4️⃣ How does Delta Lake handle data versioning (time travel)?\n5️⃣ How do you handle pipeline failures and retries in ADF?\n6️⃣ What are best practices for performance tuning in Databricks?\n\n🔴 𝗥𝗼𝘂𝗻𝗱 𝟯 - 𝗠𝗮𝗻𝗮𝗴𝗲𝗿𝗶𝗮𝗹 / 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝗿𝗮𝗹\n1️⃣ Tell me about a project where you handled end-to-end data pipeline development.\n2️⃣ How do you manage multiple stakeholder requirements?\n3️⃣ Describe a situation where you debugged a critical production issue.\n4️⃣ How do you ensure data accuracy and consistency in your pipelines?\n5️⃣ How do you handle tight deadlines and pressure situations?\n6️⃣ Why KPMG?\n\n📘 𝗜 𝗵𝗮𝘃𝗲 𝗰𝗿𝗲𝗮𝘁𝗲𝗱 𝗮 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗣𝗿𝗲𝗽𝗮𝗿𝗮𝘁𝗶𝗼𝗻 𝗚𝘂𝗶𝗱𝗲 𝗳𝗼𝗿 𝗔𝘇𝘂𝗿𝗲 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗚𝘂𝗶𝗱𝗲 𝗵𝗲𝗿𝗲 👉 https://lnkd.in/eQRtDTRq\n\nIf you've read so far, do LIKE and RESHARE the post 👍",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7491389243899101184_slide_0.jpg",
+      "description": "JPEG image, 480x270 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a KPMG hiring announcement for a Data Engineer role offering 20–24 LPA and requiring 5–8 years of experience. It lists SQL, Python, ETL, Azure Data Factory, Databricks, Delta Lake, and technical and behavioral interview rounds, but it does not provide technical answers, explanations, or implementation details.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering hiring",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:c7a2142925d189d3",
+    "saved_date": "2026-10-01T23:07:14Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7491389243899101184",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7491389243899101184_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f7dcbdd4f31260c962c8a7fdde4482e49948ee5ea5849d46fa47cfb7c3da08bb",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

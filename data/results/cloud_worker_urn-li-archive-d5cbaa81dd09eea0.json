@@ -1,0 +1,89 @@
+{
+  "id": "urn-li-archive-d5cbaa81dd09eea0",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:43.518422Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:23:35Z"
+  },
+  "original_text": "Lazy Evaluation in PySpark\n\n💡 Lazy Evaluation — One of the key principles of Spark is that transformations are lazy. This means they are not executed until an action is called. The transformations build a logical plan, but the actual computation doesn’t happen until you invoke an action like .show() or .write(). This enables Spark to optimize the execution plan.\nExample:\ndf = spark.read.json(\"/path/to/data\")\n\n# Apply transformations\ndf = df.filter(\"age > 25\").select(\"name\")\n\n# Lazy evaluation: The transformations are not executed until the action is called\ndf.show() # This triggers the execution\n\n📊 Real-life Example: In an analytics pipeline, we had four transformations chained together. Thanks to lazy evaluation, Spark didn’t execute them until we triggered the .show() action. This meant that Spark optimized the transformations into one stage, avoiding redundant computation and saving processing time. The Directed Acyclic Graph (DAG) confirmed that Spark merged the stages for efficiency.\n\n🔍 Interview Tip: When discussing lazy evaluation in an interview, emphasize how Spark tracks the lineage of operations and builds a DAG (Directed Acyclic Graph) of the transformations. Spark only executes the DAG when an action (like .show(), .collect(), or .write()) is invoked. This optimization is key for both performance and fault tolerance.\n\n #DataEngineering\n #PySpark\n #ApacheSpark\n #BigData\n #ETL\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post explains lazy evaluation in PySpark: transformations such as filtering and selecting are not executed immediately, but build a logical plan. Actual computation begins when an action such as .show(), .collect(), or .write() is invoked. Spark tracks operation lineage in a Directed Acyclic Graph (DAG), which allows it to optimize chained transformations, merge stages, avoid redundant computation, and save processing time. The post identifies this optimization as important for performance and fault tolerance.",
+    "topics": [
+      "Lazy evaluation",
+      "PySpark",
+      "Apache Spark",
+      "ETL transformations",
+      "Execution planning"
+    ],
+    "subtopics": [
+      "Lazy transformations",
+      "Action-triggered execution",
+      "Operation lineage",
+      "Directed Acyclic Graphs (DAGs)",
+      "Stage optimization",
+      "Performance and fault tolerance"
+    ],
+    "concepts": [
+      "Lazy transformations",
+      "Actions",
+      "Logical plan",
+      "Operation lineage",
+      "Directed Acyclic Graph (DAG)",
+      "Stage optimization",
+      "Performance and fault tolerance"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What does lazy evaluation mean in PySpark?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Transformations are not executed immediately and instead build a logical plan.\nActual computation begins only when an action is invoked."
+    },
+    {
+      "question": "In a PySpark sequence that reads JSON, filters rows, selects a column, and calls .show(), which operation triggers execution?",
+      "type": "coding",
+      "difficulty": "easy",
+      "answer": "The filter and select transformations are lazy and build the logical plan.\nThe .show() call is an action that triggers execution."
+    },
+    {
+      "question": "How does lazy evaluation help an analytics pipeline with several chained transformations?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "Spark waits until an action is invoked before executing the transformations.\nSpark tracks operation lineage in a DAG and can optimize the chained work.\nIn the example, Spark merged the transformations into one stage, avoided redundant computation, and saved processing time."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Lazy evaluation in PySpark",
+    "secondary_topics": [
+      "Apache Spark execution planning",
+      "ETL transformations",
+      "DAG-based optimization",
+      "Performance optimization",
+      "Fault tolerance"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:d5cbaa81dd09eea0",
+    "saved_date": "2026-10-01T23:23:35Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9f0131ab454e19a4862e5b51c78587f54530d294af58553ccbf8ef09bfa4b947",
+    "enricher_version": "3"
+  }
+}

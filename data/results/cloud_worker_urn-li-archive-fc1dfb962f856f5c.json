@@ -1,0 +1,85 @@
+{
+  "id": "urn-li-archive-fc1dfb962f856f5c",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:44.315008Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:15:19Z"
+  },
+  "original_text": "If you want to master system design (in 1 month or less), learn these case studies:\n\n\n1 How Meta Achieves 99.99999999% Cache Consistency\n↳ https://lnkd.in/e88kUZAm\n\n2 How to Scale an App to 10 Million Users on AWS\n↳ https://lnkd.in/eU736g9Q\n\n3 How Amazon S3 Achieves 99.999999999% Durability\n↳ https://lnkd.in/eutGiK35\n\n4 Real-Time Gaming Leaderboard Architecture\n↳ https://lnkd.in/edfTDq5R\n\n5 How Uber Finds Nearby Drivers at 1 Million Requests per Second\n↳ https://lnkd.in/eeqH9Hjh\n\n6 Bsky Architecture\n↳ https://lnkd.in/eEhB8V_k\n\n7 Slack Architecture\n↳ https://lnkd.in/eATMDjrK\n\n8 How Uber Computes ETA at Half a Million Requests per Second\n↳ https://lnkd.in/eVKV2ePC\n\n9 Distributed Counter Architecture\n↳ https://lnkd.in/eGwaA62J\n\n10 How YouTube Was Able to Support 2.49 Billion Users With MySQL\n↳ https://lnkd.in/efmJw4Dx\n\n11 Pastebin Architecture\n↳ https://lnkd.in/eZpfaVjc\n\n12 How Stripe Prevents Double Payment Using Idempotent API\n↳ https://lnkd.in/erMkqwq4\n\n13 How Tinder Scaled to 1.6 Billion Swipes per Day\n↳ https://lnkd.in/en65fv-W\n\n14 How Facebook Was Able to Support a Billion Users Via Software Load Balancer\n↳ https://lnkd.in/egxWtYHT\n\n15 How Apple AirTags Work\n↳ https://lnkd.in/ec75eiCH\n\n♻️ Repost to get a wider reach\n\nFollow Shubham Sharma for more such articles.\n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post recommends 15 linked case studies as a way to learn system design in one month or less. The titles cover scalability, cache consistency, storage durability, real-time leaderboards, driver discovery, ETA computation, distributed counters, database scale, API idempotency, load balancing, and application architectures. Except for headline figures in some titles, the post does not explain the designs or provide enough information to evaluate their implementations.",
+    "topics": [
+      "System Design",
+      "Scalability",
+      "Distributed Systems",
+      "Reliability"
+    ],
+    "subtopics": [
+      "Cache Consistency",
+      "Amazon S3 Durability",
+      "Real-Time Gaming Leaderboards",
+      "Nearby-Driver Discovery",
+      "ETA Computation",
+      "Distributed Counters",
+      "MySQL Scalability",
+      "Idempotent Payment APIs",
+      "Software Load Balancing",
+      "Large-Scale Application Architectures",
+      "Apple AirTag Operation"
+    ],
+    "concepts": [
+      "Case-study-based system design learning",
+      "Cache consistency",
+      "Application scalability on AWS",
+      "Amazon S3 durability",
+      "Real-time gaming leaderboards",
+      "Nearby-driver discovery",
+      "ETA computation",
+      "Distributed counters",
+      "MySQL at large scale",
+      "Idempotent payment APIs",
+      "High-volume interaction processing",
+      "Software load balancing",
+      "Large-scale application architecture",
+      "Apple AirTag operation"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "System Design",
+    "primary_topic": "System Design Case Studies",
+    "secondary_topics": [
+      "Scalability",
+      "Distributed Systems",
+      "Caching and Consistency",
+      "Data Durability",
+      "Real-Time Systems",
+      "Database Scalability",
+      "API Idempotency",
+      "Load Balancing",
+      "Application Architecture"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:fc1dfb962f856f5c",
+    "saved_date": "2026-10-01T23:15:19Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "6e6e2ea74e6faeb3d4fdbbc840cc9ca33491005c169ace2a446df0b5ec53ee94",
+    "enricher_version": "3"
+  }
+}

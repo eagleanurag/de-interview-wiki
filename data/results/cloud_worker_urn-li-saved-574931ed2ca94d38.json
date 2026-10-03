@@ -1,0 +1,94 @@
+{
+  "id": "urn-li-saved-574931ed2ca94d38",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7325908563225108481",
+    "captured_at": "2026-10-02T00:15:47.642299Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:27:39Z"
+  },
+  "original_text": "The 4 Types of SQL Joins\n\nEdit: The right join output should be 4. Updated diagram in the comment\n\nSQL joins combine rows from two or more tables based on a related column. Here are the different types of joins you can use:\n\n1 - Inner Join\nReturns only the matching rows between both tables. It keeps common data only.\n\n2 - Left Join\nReturns all rows from the left table and matching rows from the right table. If a row in the left table doesn’t have a match in the right table, the right table’s columns will contain NULL values in that row.\n\n3 - Right Join\nReturns all rows from the right table and matching rows from the left table. If no matching record exists in the left table for a record in the right table, the columns from the left table in the result will contain NULL values. \n\n4 - FULL OUTER JOIN\nReturns all rows from both tables, filling in NULL for missing matches. \n\nOver to you: Which SQL Join have you used the most?\n\n-- \nSubscribe to our weekly newsletter to get a Free System Design PDF (158 pages): https://bit.ly/bbg-social\n\n#systemdesign #coding #interviewtips \n.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7325908563225108481_slide_0.jpg",
+      "description": "GIF image, 480x563 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post explains four SQL join types: INNER JOIN returns only matching rows, LEFT JOIN preserves all left-table rows, RIGHT JOIN preserves all right-table rows, and FULL OUTER JOIN preserves rows from both tables. Missing matches are represented with NULL values where applicable.",
+    "topics": [
+      "SQL",
+      "SQL joins"
+    ],
+    "subtopics": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN",
+      "NULL handling in join results"
+    ],
+    "concepts": [
+      "SQL Join",
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL OUTER JOIN"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "What rows does an INNER JOIN return?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "An INNER JOIN returns only rows with matching records in both tables."
+    },
+    {
+      "question": "How do LEFT JOIN and RIGHT JOIN differ in the rows they preserve?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "A LEFT JOIN preserves every row from the left table, while a RIGHT JOIN preserves every row from the right table.\nColumns from the opposite table contain NULL values when no matching record exists."
+    },
+    {
+      "question": "Which SQL join type returns all rows from both tables, and how are missing matches represented?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "A FULL OUTER JOIN returns all rows from both tables.\nMissing matches are represented by NULL values."
+    }
+  ],
+  "classification": {
+    "domain": "Databases",
+    "primary_topic": "SQL Joins",
+    "secondary_topics": [
+      "Combining table records",
+      "Handling unmatched rows with NULL"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:574931ed2ca94d38",
+    "saved_date": "2026-10-01T23:27:39Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7325908563225108481",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7325908563225108481_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post; activity_7325908563225108481_slide_0.jpg is named .jpg but its content is gif",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "f8f6afc76f822b6a5f5e68ef486fb93372d4afa49e8427459e836da6e2edab12",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

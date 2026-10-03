@@ -1,0 +1,86 @@
+{
+  "id": "urn-li-archive-3f578a0212f7d2c1",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.651802Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:28:50Z"
+  },
+  "original_text": "I regret solving 300+ Leetocde problems when 20 were enough to crack any SQL Interview.\n\n1. Combine two tables: https://lnkd.in/dumdCXC7\n2. Employees earning > managers: https://Inkd.in/dKqcFmzY\n3. Duplicate emails: https://lnkd.in/dJSYfs89\n4. Customers who never order : https://lnkd.in/dPZPAKFf\n5. Delete duplicate emails: https://lnkd.in/dEKnD9s3\n6. Rising temperature: https://lnkd.in/dyZvVYvP\n7. Employee bonus: https://Inkd.in/d9iTXt-V\n8. Find customer referee : https://lnkd.in/d5cXjXdb\n10. Big countries: https://lnkd.in/dAnS54qK\n11. Classes more than 5 students : https://lnkd.in/dfrUiutd\n12. Sales person: https://lnkd.in/dwRnf5Df\n13. Triangle judgement: https://lnkd.in/dwzD-hFn\n14. Biggest single number: https://lnkd.in/d4F5zHDs\n15. Not boring movies: https://lnkd.in/d5w8_z65\n16. Swap salary: https://lnkd.in/dnbCtecM\n18. Product sales analysis 1: https://lnkd.in/dRj3EBuK\n19. Project employees 1: https://lnkd.in/dvGHsbKQ\n20. Sales analysis III : https://lnkd.in/d_y_rxPh\n\n𝗦𝗤𝗟 𝗲𝘅𝗽𝗲𝗿𝘁𝘀 𝘆𝗼𝘂 𝗰𝗮𝗻 𝗳𝗼𝗹𝗹𝗼𝘄:\n- Ankit Bansal \n- Deepak Goyal\n- Zach Wilson\n- Brij kishore Pandey \n\nDid I miss someone?\n\n𝗜 𝗵𝗮𝘃𝗲 𝗽𝗿𝗲𝗽𝗮𝗿𝗲𝗱 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗳𝗼𝗿 𝟭𝟬𝟬+ 𝗖𝗼𝗺𝗽𝗮𝗻𝗶𝗲𝘀.\n\n𝗚𝗲𝘁 𝘁𝗵𝗲 𝗘𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲𝘀 𝗛𝗲𝗿𝗲 - https://lnkd.in/giY6RZu2\n𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 𝘁𝗼 𝗺𝘆 𝘆𝗼𝘂𝘁𝘂𝗯𝗲 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 𝗵𝗲𝗿𝗲 - https://lnkd.in/dCyr4aph \n…see more",
+  "media": [],
+  "ai_analysis": {
+    "summary": "The post claims that solving 20 SQL interview problems was enough to crack a SQL interview, compared with solving 300+ LeetCode problems. The supplied text shows 18 numbered titles, with entries 9 and 17 not shown, covering table combination, employee-versus-manager earnings, duplicate-email handling, customers with no orders, temperature, bonuses, referees, countries, classes, movies, salaries, projects, and sales analysis. It provides titles and links rather than problem statements, schemas, SQL, solutions, or expected outputs; it also names four SQL experts and promotes a Delta Data Engineering interview-experience resource before ending with an ellipsis and 'see more'.",
+    "topics": [
+      "SQL interview preparation",
+      "LeetCode problem solving",
+      "Table combination",
+      "Employee and manager earnings",
+      "Duplicate email identification and deletion",
+      "Customer-order analysis",
+      "Employee bonus, salary, and project problems",
+      "Product and sales analysis",
+      "Temperature-related problem"
+    ],
+    "subtopics": [
+      "Combine two tables",
+      "Employees earning > managers",
+      "Duplicate emails",
+      "Customers who never order",
+      "Delete duplicate emails",
+      "Rising temperature",
+      "Employee bonus",
+      "Find customer referee",
+      "Big countries",
+      "Classes more than 5 students",
+      "Sales person",
+      "Triangle judgement",
+      "Biggest single number",
+      "Not boring movies",
+      "Swap salary",
+      "Product sales analysis 1",
+      "Project employees 1",
+      "Sales analysis III"
+    ],
+    "concepts": [
+      "SQL interview problem curation",
+      "Combining two tables",
+      "Employee-manager earnings comparison",
+      "Duplicate email handling",
+      "Customers without orders",
+      "Employee bonus, salary, and project problems",
+      "Product and sales analysis",
+      "Miscellaneous SQL problem types"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "SQL problem solving",
+      "Duplicate email handling",
+      "Customer-order analysis",
+      "Sales analysis"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:3f578a0212f7d2c1",
+    "saved_date": "2026-10-01T23:28:50Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "022c1fdb51d2f3874f63de179c458db7dc46ec0e5458f5d749ef8243a715a683",
+    "enricher_version": "3"
+  }
+}

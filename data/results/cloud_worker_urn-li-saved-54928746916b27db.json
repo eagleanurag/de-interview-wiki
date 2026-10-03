@@ -1,0 +1,59 @@
+{
+  "id": "urn-li-saved-54928746916b27db",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7341346474229731329",
+    "captured_at": "2026-10-02T00:15:47.565713Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:17:12Z"
+  },
+  "original_text": "Recently a friend of mine appeared for EPAM Senior data engineer interview\n, he was asked to read the below data in a pyspark dataframe \nPlease add solutions in comments . Will add the Solution tomorrow\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7341346474229731329_slide_0.jpg",
+      "description": "JPEG image, 480x535 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post is an incomplete interview-related teaser stating that a candidate was asked to read data in a PySpark DataFrame during an EPAM Senior Data Engineer interview. It provides no dataset, exact task, code, or solution.",
+    "topics": [
+      "PySpark DataFrames"
+    ],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "PySpark DataFrames",
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:54928746916b27db",
+    "saved_date": "2026-10-01T23:17:12Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7341346474229731329",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7341346474229731329_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "501df05aea848b6c2da0542cd4f2977b0509684896eeaa6db96f6d60f0b928ea",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

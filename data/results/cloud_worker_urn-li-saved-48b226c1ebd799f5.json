@@ -1,0 +1,57 @@
+{
+  "id": "urn-li-saved-48b226c1ebd799f5",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326454546765885441",
+    "captured_at": "2026-10-02T00:15:47.272322Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:25:56Z"
+  },
+  "original_text": "All the DSA resources I used to crack Google (2025) -\n\n📺 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹𝘀\n\n1. Striver A2Z DSA Playlist\nhttps://lnkd.in/gJXB9cnY\nCovers everything from basics to advanced DSA with pseudocode clarity. Builds real problem-solving intuition.\n\n2. Vivek Gupta’s Dynamic Programming Workshop\nhttps://lnkd.in/g62GukQS\nLaser-focused on advanced DP patterns and transitions. Great for mastering optimization-heavy problems.\n\n3. Aditya Verma’s DP Playlist\nhttps://lnkd.in/gaF9JE92\nBreaks down how recursion evolves into DP. Best suited for those starting their DP journey.\n\n📚 𝗪𝗲𝗯𝘀𝗶𝘁𝗲𝘀 𝗳𝗼𝗿 𝗿𝗲𝗮𝗱𝗶𝗻𝗴 𝗮𝗯𝗼𝘂𝘁 𝗮𝗹𝗴𝗼𝗿𝗶𝘁𝗵𝗺𝘀\n\n1. CP-Algorithms\nhttps://cp-algorithms.com\nEncyclopedia of high-level algorithms - from suffix arrays to heavy-light decomposition. Perfect for deep dives.\n\n2. USACO Guide\nhttps://usaco.guide\nA curated roadmap with problem sets, concepts, and video explanations. Helps you rise from beginner to elite.\n\n\n🏆 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺𝘀\n\n1. LeetCode\nhttps://leetcode.com\nMost popular interview platform. Weekly contests emulate the exact pace and pressure of real FAANG rounds.\n\n2. AtCoder Educational DP Contest\nhttps://lnkd.in/g4WYiA4p\n26 hand-crafted problems to learn DP the right way - with clean, editorial-backed insights.\n\n3. CSES Problem Set\nhttps://cses.fi/problemset\nGraph algorithms. Trees. 100+ well-thought-out problems to master core concepts.\n\n4. Codeforces\nhttps://codeforces.com\nLegendary contests that challenge your mathematical and logical reasoning under tight time pressure.\n\nThere’s no secret formula. Just the right resources, ruthless consistency, and clear fundamentals.\n\nSave this. \n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326454546765885441_slide_0.jpg",
+      "description": "JPEG image, 480x352 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "A resource-recommendation post claiming to list materials used to prepare for Google interviews in 2025. It recommends DSA channels, algorithm references, and programming practice platforms, with emphasis on dynamic programming, graph algorithms, trees, consistency, and fundamentals. It does not teach or explain those subjects, and the content appears truncated after “Save this.” No extracted media text is provided.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Data Structures and Algorithms interview preparation",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:48b226c1ebd799f5",
+    "saved_date": "2026-10-01T23:25:56Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326454546765885441",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326454546765885441_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "4566d8677c74d1ad2eadeadfc9b1f3e4a4dd1effae00231240417a3567a08387",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

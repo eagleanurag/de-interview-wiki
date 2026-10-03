@@ -1,0 +1,82 @@
+{
+  "id": "urn-li-saved-7d03b9f9d8175dc8",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7339514243995619328",
+    "captured_at": "2026-10-02T00:15:48.582790Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:19:05Z"
+  },
+  "original_text": "📊 Preparing for a SQL Interview? Here's a Visual Shortcut to Your Success! 🔍💼\n\nSQL continues to be one of the most in-demand skills across Data Engineering, Data Science, Analytics, and Backend Development roles. But what if you had a clean, clear visual to help you review the most frequently asked questions before your next big interview?\n\nThat's exactly why I created this SQL Interview Cheatsheet — a visual summary of the 20 most commonly asked SQL questions, split across:\n\n🔹 Basic Concepts – From JOINs, UNION, subqueries, aggregate functions, to primary keys\n 🔹 Intermediate to Advanced Topics – Like window functions, CTEs, RANK(), indexing, and query optimization\n\n🎯 Why This Cheatsheet Helps:\n✅ Fast recall of important interview concepts\n ✅ Perfect for last-minute revision or daily practice\n ✅ Great tool for both beginners and seasoned professionals\n\nWhether you're actively interviewing or just want to sharpen your SQL chops — this guide will help you focus on what really matters.\n\nLet’s keep building, learning, and landing those dream roles 🚀\n#SQL #InterviewPrep #DataEngineering #DataScience #AnalyticsJobs #SQLInterview #LearningSQL #TechInterviews #100DaysOfSQL #MonuKumar #LinkedInLearning #BigData #BackendDevelopment #SQLCheatSheet\n…see more",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7339514243995619328_slide_0.jpg",
+      "description": "JPEG image, 480x720 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post promotes a visual SQL interview cheatsheet described as summarizing 20 commonly asked SQL questions. It identifies basic topics such as JOINs, UNION, subqueries, aggregate functions, and primary keys, as well as intermediate and advanced topics such as window functions, CTEs, RANK(), indexing, and query optimization. The supplied content is promotional and does not include the actual interview questions, technical explanations, examples, or visible cheatsheet media.",
+    "topics": [
+      "SQL interview preparation",
+      "Basic SQL concepts",
+      "Intermediate and advanced SQL topics",
+      "SQL query optimization"
+    ],
+    "subtopics": [
+      "JOINs",
+      "UNION",
+      "Subqueries",
+      "Aggregate functions",
+      "Primary keys",
+      "Window functions",
+      "Common table expressions",
+      "RANK()",
+      "Indexing",
+      "Query optimization"
+    ],
+    "concepts": [
+      "JOINs, UNION, and subqueries",
+      "Aggregate functions and primary keys",
+      "Window functions, CTEs, and RANK()",
+      "Indexing and query optimization"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "SQL",
+    "primary_topic": "SQL interview preparation",
+    "secondary_topics": [
+      "SQL fundamentals",
+      "Advanced SQL",
+      "Query optimization"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:7d03b9f9d8175dc8",
+    "saved_date": "2026-10-01T23:19:05Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7339514243995619328",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7339514243995619328_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "b714f7bc426a2eec9ac89d4095bd173bb52f476ea315afd2525c877c07a22102",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

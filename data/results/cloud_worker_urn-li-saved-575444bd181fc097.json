@@ -1,0 +1,77 @@
+{
+  "id": "urn-li-saved-575444bd181fc097",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7315221613656887296",
+    "captured_at": "2026-10-02T00:15:47.662890Z",
+    "author": "Unknown",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:30:45Z"
+  },
+  "original_text": "Cloud, Data & AI Creator | 400K+ Data Community | Senior Azure Data & DevOps Engineer | Databricks • PySpark • ADF • Synapse • Python • SQL • Power BI\n1yr •\n𝐔𝐧𝐥𝐨𝐜𝐤 𝐘𝐨𝐮𝐫 𝐒𝐐𝐋 𝐌𝐚𝐬𝐭𝐞𝐫𝐲: 𝐄𝐬𝐬𝐞𝐧𝐭𝐢𝐚𝐥 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 :\nThis SQL Resource will help you to perform well in your SQL Interviews, practice these questions to get more hands on.\n𝐓𝐨𝐩𝐢𝐜𝐬 𝐂𝐨𝐯𝐞𝐫𝐞𝐝 𝐢𝐧 𝐭𝐡𝐢𝐬 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 :\n👉 Complex Query(for 2-5+ year exp)\n👉 Data type Interview Q.(for 2-5+ year exp)\n👉 TCS Tricky Interview Q.(for 2-5+ year exp)\n👉 HCL SQL Interview Q.(for 3-5+ year exp)\n👉 View Interview Questions(for 2-5+ year exp)\n👉 Index Interview Questions(for 2-5+ year exp)\n👉 Stored Proc. Interview Q.(for 2-5+ year exp)\n👉 Temp Table Interview Q.(for 2-5+ year exp)\n👉 Sql S. 2016 Interview Q (for 2-5+ year exp)\n👉 Constraints Interview Q. (for 2-5+ year exp)\n👉 Storage Related Interview Q. (for 2-5+ year exp)\n👉 Basic Sql Server Interview Q.(for 2-5+ year exp)\n👉 Sql Server 2017 Interview Q.(for 0-5+ year exp)\n👉 300 SQL Interview Question(for 0-5+ year exp)\n👉 Basic SQL Interview Q.(for 0-1 year exp)\n👉 String Related Basic Queries(for 0-1 year exp)\n👉 Date Time related Queries(for 0-1 year exp)\n👉 Salary Related Queries (for 0-2 year exp)\n👉 Group By Related Queries(for 0-2 year exp)\n👉 Join Related Queries(for 0-2 year exp)\n👉 Tricky Join Queries(for 0-2 year exp)\n👉 DDL Queries(for 0-2 year exp)\n👉 Very Interesting set(for 2-5+ year exp)\n👉 Very Much Tricky Q.(for 2-5+ year exp)\nCredits: Vikas Ahlawat (interviewquestionspdf)\nSharing this 800+ 𝐒𝐐𝐋 𝐒𝐄𝐑𝐕𝐄𝐑 𝐈𝐍𝐓𝐄𝐑𝐕𝐈𝐄𝐖 𝐐𝐔𝐄𝐒𝐓𝐈𝐎𝐍 𝐀𝐍𝐒𝐖𝐄𝐑𝐒 Document for your reference.\n🔈 Join my Data Community : https://lnkd.in/gy4R55Tj\n♻️ Like, Repost to help others grow\n🔔 Follow Abhisek Sahu for more\n800+ SQL Server Interview Questions.",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7315221613656887296_slide_0.jpg",
+      "description": "JPEG image, 374x484 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "This is a promotional post sharing an 800-plus-question SQL Server interview question-and-answer resource and recommending hands-on practice. It lists subject areas such as complex queries, data types, views, indexes, stored procedures, temporary tables, constraints, joins, GROUP BY, and DDL, but it does not include any actual questions, answers, SQL examples, or technical explanations.",
+    "topics": [
+      "SQL interview preparation",
+      "SQL Server interview questions"
+    ],
+    "subtopics": [
+      "Complex SQL queries",
+      "SQL data types",
+      "Views",
+      "Indexes",
+      "Stored procedures",
+      "Temporary tables",
+      "Constraints",
+      "Storage-related questions",
+      "Joins",
+      "GROUP BY",
+      "DDL",
+      "String queries",
+      "Date-time queries"
+    ],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "Database interview preparation",
+    "primary_topic": "SQL Server interview preparation",
+    "secondary_topics": [
+      "SQL query practice",
+      "SQL Server database features"
+    ],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:575444bd181fc097",
+    "saved_date": "2026-10-01T23:30:45Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7315221613656887296",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7315221613656887296_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": "the archive recorded no usable author name for this post",
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "749d135045b7a2874ca5835fe36f689c2ee914a3daae06552394531ef0a4e361",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

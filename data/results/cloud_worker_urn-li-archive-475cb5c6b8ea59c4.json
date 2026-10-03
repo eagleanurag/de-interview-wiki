@@ -1,0 +1,43 @@
+{
+  "id": "urn-li-archive-475cb5c6b8ea59c4",
+  "source": {
+    "platform": "linkedin",
+    "url": null,
+    "captured_at": "2026-10-02T00:15:19.688248Z",
+    "author": "Status is online",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:35:15Z"
+  },
+  "original_text": "Software that I will never seriously use again because I get to pick as an entrepreneur:\n\n- Microsoft Teams or Slack - after the Salesforce acquisition they've become a shell of the company they had potential to become. Just like what happened to Tableau and Heroku. Pick Discord like someone under the age of 55\n- Heroku / DigitalOcean - use Vercel like a normal person \n- Zoom - Discord stage and Riverside.fm dunk on Zoom in every possible way\n- Microsoft Outlooks - why would you ever pick this when there's Gmail or ProtonMail or 5 other things that are better than Outlook? \n- Anything built by Atlassian, no Bitbucket (GitHub is better), no Confluence (Notion is better), no JIRA (Linear is better)\n- No Google Slides or god-forbid Powerpoint (Canva is better)\n- No Microsoft word (Notion is better)\n\nMy guiding light when picking tech is: \"does this technology make me feel like a lifeless piece of corporate trash?\" If the answer is yes, then don't pick it and find an option with more soul in it!",
+  "media": [],
+  "ai_analysis": {
+    "summary": "This is a non-technical personal opinion about software choices. The author rejects several named products and platforms in favor of alternatives, based on subjective judgments about corporate culture and usability. It contains no data engineering concepts, technical methods, or interviewable knowledge.",
+    "topics": [],
+    "subtopics": [],
+    "concepts": [],
+    "image_descriptions": []
+  },
+  "interview_questions": [],
+  "classification": {
+    "domain": "General software opinions",
+    "primary_topic": null,
+    "secondary_topics": [],
+    "interview_relevant": false
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:archive:475cb5c6b8ea59c4",
+    "saved_date": "2026-10-01T23:35:15Z",
+    "canonical_url": null,
+    "url_kind": "identified_by_id",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text",
+    "capture_notes": [],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "d4ab832b148b88cdbbf0ca01856a01e5cd1cc6ef24b303a86421dcb486ab9654",
+    "enricher_version": "3"
+  }
+}

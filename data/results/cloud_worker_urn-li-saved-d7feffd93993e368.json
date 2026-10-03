@@ -1,0 +1,105 @@
+{
+  "id": "urn-li-saved-d7feffd93993e368",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7316977518450790400",
+    "captured_at": "2026-10-02T00:15:52.239367Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:29:59Z"
+  },
+  "original_text": "🚀 𝐑𝐞𝐜𝐮𝐫𝐬𝐢𝐯𝐞 𝐂𝐓𝐄 – 𝐄𝐱𝐩𝐥𝐨𝐫𝐢𝐧𝐠 𝐏𝐚𝐫𝐞𝐧𝐭-𝐂𝐡𝐢𝐥𝐝 𝐇𝐢𝐞𝐫𝐚𝐫𝐜𝐡𝐢𝐞𝐬\n========================================\nRecently solved a fascinating SQL challenge that deepened my understanding of recursive CTEs and how they help in navigating hierarchical relationships like subsidiary chains.\nBig thanks to Ankit Bansal for posting this insightful question really enjoyed working through it! 🙌\n\nProblem Link : https://lnkd.in/euXKE-Kx\n𝘎𝘪𝘷𝘦𝘯 𝘵𝘸𝘰 𝘵𝘢𝘣𝘭𝘦𝘴:\n𝘚𝘶𝘣𝘴𝘪𝘥𝘪𝘢𝘳𝘺(𝘱𝘢𝘳𝘦𝘯𝘵, 𝘤𝘩𝘪𝘭𝘥)\n𝘐𝘯𝘷𝘦𝘴𝘵𝘦𝘥(𝘤𝘯𝘢𝘮𝘦, 𝘱𝘯𝘢𝘮𝘦)\n👉 𝘎𝘰𝘢𝘭: 𝘍𝘪𝘯𝘥 𝘢𝘭𝘭 𝘤𝘰-𝘪𝘯𝘷𝘦𝘴𝘵𝘰𝘳 𝘱𝘢𝘪𝘳𝘴 𝘣𝘺 𝘵𝘳𝘢𝘤𝘪𝘯𝘨 𝘪𝘯𝘥𝘪𝘳𝘦𝘤𝘵 𝘳𝘦𝘭𝘢𝘵𝘪𝘰𝘯𝘴𝘩𝘪𝘱𝘴 𝘢𝘤𝘳𝘰𝘴𝘴 𝘱𝘢𝘳𝘦𝘯𝘵-𝘤𝘩𝘪𝘭𝘥 𝘴𝘶𝘣𝘴𝘪𝘥𝘪𝘢𝘳𝘪𝘦𝘴.\n\n𝐐𝐮𝐞𝐫𝐲 (𝐔𝐬𝐢𝐧𝐠 𝐒𝐄𝐋𝐅 𝐉𝐎𝐈𝐍) - (𝘓𝘪𝘮𝘪𝘵𝘦𝘥 𝘵𝘰 1-𝘭𝘦𝘷𝘦𝘭 𝘏𝘪𝘦𝘳𝘢𝘳𝘤𝘩𝘺)\n======================================\n\nwith cte_pc as(\nselect s1.parent as parent,s1.child as child, s2.parent as child_as_parent, s2.child as small_child from Subsidiary s1 \nLEFT JOIN Subsidiary s2 ON s1.child = s2.parent)\n, cte_level_1 as(\nselect * from Invested I LEFT JOIN cte_pc cp ON I.cname =cp.parent)\n,cte_level_2 as(\nselect CONCAT(cl1.pname,',',cl2.pname) as pairs from cte_level_1 cl1 LEFT JOIN cte_level_1 cl2 ON cl1.small_child = cl2.cname where cl2.pname is NOT NULL)\n\nselect * from cte_level_2;\n\n𝐐𝐮𝐞𝐫𝐲 (𝐔𝐬𝐢𝐧𝐠 𝐑𝐞𝐜𝐮𝐫𝐬𝐢𝐯𝐞 𝐂𝐓𝐄) :\n=====================\n-- Step 1: Build full parent-child hierarchy using recursive CTE\nWITH PC_Hierarchy AS (\n SELECT parent, child FROM Subsidiary\n\n UNION ALL\n\n SELECT pc.parent, s.child\n FROM PC_Hierarchy pc\n INNER JOIN Subsidiary s ON pc.child = s.parent\n)\n\n-- Step 2: Find all co-investor pairs\nSELECT CONCAT(I.pname, ',', I1.pname) AS co_investor_pairs\nFROM Invested I\nINNER JOIN PC_Hierarchy pc ON I.cname = pc.parent\nINNER JOIN Invested I1 ON I1.cname = pc.child;\n\n📸 Shared some images below clearly demonstrating:\n-----------------------------------------------------------\n✅ When a self join is sufficient (single-level hierarchy)\n🔄 When you need a recursive CTE (multi-level hierarchy) and how recursive cte executes step - by -step\n\nI'm excited to hear your thoughts and feedback at the end of this post. Let's continue learning and growing together!\n\n#SQL #RecursiveCTE #DataAnalytics",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7316977518450790400_slide_0.jpg",
+      "description": "JPEG image, 480x205 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post presents a SQL challenge involving Subsidiary(parent, child) and Invested(cname, pname) tables. Its goal is to identify all co-investor pairs connected by direct or indirect parent-child relationships. It contrasts a self-join solution that is limited to a single hierarchy level with a recursive CTE that builds a multi-level parent-child hierarchy and then joins both endpoints to Invested to produce the pairs.",
+    "topics": [
+      "SQL",
+      "Recursive common table expressions",
+      "Self joins",
+      "Hierarchical parent-child relationships",
+      "Co-investor pair analysis"
+    ],
+    "subtopics": [
+      "Recursive hierarchy traversal",
+      "Single-level versus multi-level relationships",
+      "Anchor and recursive CTE members",
+      "Indirect relationship matching",
+      "Mapping hierarchy endpoints to investor names"
+    ],
+    "concepts": [
+      "Recursive CTE",
+      "Anchor member",
+      "Recursive member",
+      "Self-join for a single-level hierarchy",
+      "Indirect subsidiary relationships",
+      "Co-investor pair derivation",
+      "UNION ALL"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "How do the self-join and recursive CTE approaches differ in the hierarchy levels they traverse?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The self-join matches one Subsidiary child to another Subsidiary parent and is presented as sufficient for a single hierarchy level.\nThe recursive CTE repeatedly extends parent-child relationships and is used when indirect relationships span multiple levels."
+    },
+    {
+      "question": "Walk through how the recursive query turns the Subsidiary hierarchy into co-investor pairs.",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The anchor member selects all parent-child rows from Subsidiary.\nThe recursive member matches PC_Hierarchy.child to Subsidiary.parent to extend the hierarchy while retaining the original root parent.\nThe query joins the root and resulting child to Invested on their cname values.\nThe two investor names are formatted with CONCAT to produce each co-investor pair."
+    },
+    {
+      "question": "A required relationship passes through more than one intermediate subsidiary. Why would the self-join solution be insufficient, and which query structure addresses it?",
+      "type": "scenario",
+      "difficulty": "medium",
+      "answer": "The self-join solution only extends Subsidiary once by matching a child to a parent, so it is limited to a single-level hierarchy.\nThe recursive CTE repeatedly applies the child-to-parent relationship, allowing the root parent to reach indirect descendants.\nBoth hierarchy endpoints can then be joined to Invested to identify the associated co-investor pair."
+    },
+    {
+      "question": "What roles do the Subsidiary and Invested tables play in the query?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "Subsidiary supplies the parent and child relationships that define the hierarchy.\nInvested maps a company name to an investor name that can be joined to hierarchy endpoints.\nThe final query uses Invested twice to obtain investor names for the parent and child sides of each relationship."
+    }
+  ],
+  "classification": {
+    "domain": "Data Analytics",
+    "primary_topic": "Recursive CTEs for hierarchical relationship traversal",
+    "secondary_topics": [
+      "Self joins for single-level hierarchies",
+      "Co-investor pair identification"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:d7feffd93993e368",
+    "saved_date": "2026-10-01T23:29:59Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7316977518450790400",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7316977518450790400_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "9d0772e753a15ce8e8a5d8a8e90d64a6e230cd96d5f5bf8816fc4022c018831f",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}

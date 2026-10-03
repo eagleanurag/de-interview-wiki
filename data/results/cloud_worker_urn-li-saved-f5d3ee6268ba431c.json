@@ -1,0 +1,123 @@
+{
+  "id": "urn-li-saved-f5d3ee6268ba431c",
+  "source": {
+    "platform": "linkedin",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7326584275074449408",
+    "captured_at": "2026-10-02T00:15:53.349318Z",
+    "author": "Status is reachable",
+    "capture_method": "user_provided",
+    "published_at": "2026-10-01T23:26:54Z"
+  },
+  "original_text": "!! Interview Experience PayPal: Data Engineer Role – 4 Rounds !!\n\n📌 Round 1: Technical – DSA + SQL (45 mins)\nData Structures & Algorithms:\n• Rainwater Trapping – optimized for space and time\n• Priority Queue-based problem for task scheduling\n• Array traversal using prefix sums and sliding window patterns\n\nSQL:\n• Extensive use of window functions – ROW_NUMBER, RANK, LAG, LEAD\n• Aggregations, partitions, and advanced joins\n• Query optimization and performance tuning techniques\n\n📌 Round 2: Technical Design + PySpark (45–60 mins)\nProject-Based Discussion:\n• Shared architecture of prior data pipelines\n• Justified choices of tools like Airflow, Glue, Kafka, Snowflake\n• Discussed strategies for data validation, monitoring, and scalability\n\nSystem Design Scenario:\n• Data migration from Hadoop, Oracle DB, and S3 → unified S3 data lake\n• Focused on scalability, error handling, schema management, and fault tolerance\n\nSpark Coding Task:\n• DataFrame joins and transformations in PySpark\n• Handled edge cases like null values, schema mismatches, and skewed data\n• Output written in partitioned Parquet format\n\n📌 Round 3: Managerial + Scenario-Based (60 mins)\n• In-depth discussion on project ownership and collaboration with cross-functional teams\n• Real-time problem scenarios like pipeline delays, replication lags, and Spark job failures\n• Behavioral focus: adaptability, leadership under pressure, and communication\n\n📌 Round 4: HR Discussion\n• Offer structure, benefits, and company policies\n• Discussion on organizational values and career progression opportunities\n• Cultural alignment and long-term vision\n\nKey Takeaways:\n• The interview process was balanced across technical, design, and behavioral areas\n• Strong emphasis on SQL, PySpark, and scalable data pipeline design\n• Communication, clarity in thought, and structured problem-solving played a key role\n\nIf you're preparing for Data Engineering roles, focus on core fundamentals, hands-on tool experience, and articulating the why behind your decisions.\n\n#dataengineering #interviewexperience #sql #pyspark #etl #bigdata #systemdesign #careergrowth #techinterview",
+  "media": [
+    {
+      "type": "image",
+      "path": "media/activity_7326584275074449408_slide_0.jpg",
+      "description": "JPEG image, 299x168 pixels",
+      "extracted_text": null
+    }
+  ],
+  "ai_analysis": {
+    "summary": "The post describes a four-round PayPal Data Engineer interview. Round 1 covered data structures, algorithms, SQL window functions, advanced joins, aggregation, partitioning, query optimization, and performance tuning. Round 2 combined prior-project discussion, justification of pipeline tool choices, migration from Hadoop, Oracle DB, and S3 to a unified S3 data lake, and a PySpark task involving DataFrame joins, transformations, edge cases, and partitioned Parquet output. Round 3 addressed project ownership, cross-functional collaboration, pipeline delays, replication lags, Spark job failures, adaptability, leadership, and communication. Round 4 covered employment and organizational topics. The post outlines the interview areas but does not provide complete problem statements, code, architecture diagrams, or worked solutions.",
+    "topics": [
+      "Data engineering interview process",
+      "Data structures and algorithms",
+      "SQL",
+      "PySpark and Spark",
+      "Data pipeline and system design",
+      "Data migration",
+      "Operational troubleshooting",
+      "Behavioral and managerial interviewing"
+    ],
+    "subtopics": [
+      "Rainwater trapping with space and time optimization",
+      "Priority queue-based task scheduling",
+      "Array traversal using prefix sums and sliding-window patterns",
+      "Window functions including ROW_NUMBER, RANK, LAG, and LEAD",
+      "Aggregations, partitions, and advanced joins",
+      "Query optimization and performance tuning",
+      "PySpark DataFrame joins and transformations",
+      "Null values, schema mismatches, and skewed data",
+      "Partitioned Parquet output",
+      "Migration from Hadoop, Oracle DB, and S3 to a unified S3 data lake",
+      "Data validation, monitoring, scalability, error handling, schema management, and fault tolerance",
+      "Pipeline delays, replication lags, and Spark job failures"
+    ],
+    "concepts": [
+      "Data structures and algorithm patterns",
+      "Advanced SQL analysis",
+      "SQL query optimization and performance tuning",
+      "PySpark DataFrame processing",
+      "Partitioned Parquet output",
+      "Unified S3 data lake migration",
+      "Scalable and reliable pipeline design",
+      "Data pipeline tool-selection rationale",
+      "Operational failure scenarios",
+      "Project ownership and cross-functional collaboration"
+    ],
+    "image_descriptions": []
+  },
+  "interview_questions": [
+    {
+      "question": "Which SQL functions and query techniques were emphasized in the first technical round?",
+      "type": "theory",
+      "difficulty": "easy",
+      "answer": "The window functions named in the post are ROW_NUMBER, RANK, LAG, and LEAD.\nThe round also covered aggregations, partitions, advanced joins, query optimization, and performance tuning."
+    },
+    {
+      "question": "What operations, edge cases, and output format were involved in the PySpark coding task?",
+      "type": "coding",
+      "difficulty": "medium",
+      "answer": "The task involved PySpark DataFrame joins and transformations.\nThe stated edge cases were null values, schema mismatches, and skewed data.\nThe output was written in partitioned Parquet format."
+    },
+    {
+      "question": "What design concerns were emphasized for the migration from Hadoop, Oracle DB, and S3 to a unified S3 data lake?",
+      "type": "architecture",
+      "difficulty": "medium",
+      "answer": "A strong answer identifies scalability, error handling, schema management, and fault tolerance as the central design concerns.\nThe broader pipeline discussion also included data validation and monitoring."
+    },
+    {
+      "question": "Which operational failure scenarios and behavioral competencies were discussed in the managerial round?",
+      "type": "scenario",
+      "difficulty": "easy",
+      "answer": "The operational scenarios included pipeline delays, replication lags, and Spark job failures.\nThe behavioral focus included project ownership, cross-functional collaboration, adaptability, leadership under pressure, and communication."
+    }
+  ],
+  "classification": {
+    "domain": "Data Engineering",
+    "primary_topic": "Data engineering interview experience",
+    "secondary_topics": [
+      "SQL",
+      "PySpark",
+      "Data structures and algorithms",
+      "Data pipeline system design",
+      "Data migration",
+      "Operational troubleshooting",
+      "Behavioral interviewing"
+    ],
+    "interview_relevant": true
+  },
+  "saved_item": {
+    "saved_item_id": "urn:li:saved:f5d3ee6268ba431c",
+    "saved_date": "2026-10-01T23:26:54Z",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn:li:activity:7326584275074449408",
+    "url_kind": "post",
+    "capture_state": "captured",
+    "capture_match": "source id in capture.json",
+    "capture_quality": "text_and_media",
+    "capture_notes": [
+      "activity_7326584275074449408_slide_0.jpg: image kept as-is; no OCR is available, so it contributes no text"
+    ],
+    "saved_notes": null,
+    "metadata_only": false
+  },
+  "_enrichment": {
+    "source_digest": "1e30fb962fd9e57afad6a0efbcbcda558e294cee4b865a73b833c14f1169bf1d",
+    "enricher_version": "3",
+    "grounding": {
+      "topics": [],
+      "concepts": [],
+      "questions": []
+    }
+  }
+}
