@@ -188,6 +188,243 @@ python -m src.pipeline --only site
 
 CI does exactly this, then deploys to Pages.
 
+## Reading what is inside the pictures
+
+A post's images are source material, not attachments. A carousel of SQL
+can carry more of a post's knowledge than its caption does, and until
+this stage existed an image contributed its format and its pixel
+dimensions and nothing else -- a slide of SQL was a file described as
+`PNG image, 800x600 pixels`.
+
+### THE ARCHIVE IS READ-ONLY
+
+Nothing in this project writes to the archive. It is opened read-only,
+never renamed, moved or deleted, and the visual stage asserts that
+every file's modification time is unchanged after a run. Copy the
+archive somewhere else if you want a guarantee that outlives a test.
+
+### THE CHROME SESSION IS NOT USED
+
+The archive ships a browser profile beside the media. This pipeline does
+not read it, does not list it, and does not treat it as an input. A path
+naming it is refused at the point of use, and an archive pointed *at* it
+is rejected outright.
+
+### NO LINKEDIN ACCESS OCCURS
+
+There is no HTTP client in the visual package and no URL is ever
+fetched. The `original_urls` the archive records are read into the
+archive's own structure and never opened. Everything the stage sends
+anywhere goes through the local OpenCode CLI, and only the specific
+image being read.
+
+### Configure the archive
+
+```bash
+python -m src.pipeline --only visual-plan --archive "C:\path	orchive"
+# or
+set LINKEDIN_ARCHIVE_ROOT=C:\path\to\archive
+```
+
+`--archive` wins over the environment. With neither set the pipeline
+says so and enriches the corpus without visual enrichment rather than
+guessing a machine-specific path.
+
+### The plan comes first
+
+```bash
+python -m src.pipeline --only visual-plan --archive "C:\path\to\archive"
+```
+
+Reads the archive, describes every file, works out what is duplicated
+and what is already understood, and prints what the run would cost.
+Writes nothing at all -- not the results, not the knowledge base, not
+the site, and not the visual cache.
+
+Against this project's own archive it reports:
+
+```
+  Posts in the archive                   312
+  Media files referenced                3047
+    of which carousel slides            2738
+    of which previews                     65
+    exact duplicates                     104
+  Missing files                            0
+  Corrupt or unreadable                    0
+  Files on disk not referenced            65
+
+  Distinct image contents               2774
+  Repeats of a picture already seen      169
+
+  Posts needing visual work              305
+  Images to send to the model           2774
+  Model calls if all of them run         778
+```
+
+### Processing
+
+```bash
+# Fill the visual cache, without spending a text enrichment call.
+python -m src.pipeline --only visual --archive "C:\path\to\archive" --visual-jobs 3
+
+# Then enrich, which reuses it.
+python -m src.pipeline --jobs 3
+
+# Or everything at once, with a dry run first.
+python -m src.pipeline --dry-run --archive "C:\path\to\archive"
+python -m src.pipeline --jobs 3 --visual-jobs 3 --archive "C:\path\to\archive"
+```
+
+`--visual-jobs` bounds posts read at once. `--visual-batch` bounds slides
+per model call and defaults to five: five costs about what one costs, so
+it bounds what a single failure loses rather than making the run faster.
+`--visual-limit` reads only part of the corpus, for measuring a change
+without touching all of it.
+
+### What happens to a picture
+
+1. **Discovery.** The archive's metadata names the files; anything on
+   disk whose name matches the post is included too, which is how the 65
+   previews the metadata omits are still seen.
+2. **Containment.** Every path is resolved and confirmed to sit inside
+   the media root. `..`, absolute paths, drive letters, UNC paths and
+   symlinks are all refused by that one comparison.
+3. **Ordering.** The sequence comes from the digits in the filename
+   parsed as integers. This matters more than it sounds: the archive
+   numbers one post's slides both `_slide_0` and `_slide_01`, and pads
+   some to three digits and others to one. Sorted as text, `_slide_100`
+   lands before `_slide_20` and seven carousels are read backwards.
+4. **Format.** Read from the bytes. 536 of this archive's 3,047 files
+   are named `.jpg` and are PNG or GIF.
+5. **Deduplication.** Exact, by SHA-256 of the content. A preview is
+   marked redundant when a larger slide is present, and kept otherwise --
+   a post's only image is evidence however small it is.
+6. **Analysis.** Slides in bounded batches through the existing
+   OpenCode client, which already supports attaching a file.
+7. **Checkpointing.** One stored file per asset, keyed by its content
+   digest, the processor version and the processor configuration.
+8. **Fusion.** What a slide says is written into that post's media as
+   `extracted_text`, which the enricher and the grounding check already
+   read.
+
+### OCR, and why there is none installed
+
+Nothing in the environment provides an OCR engine: no `pytesseract`,
+`tesserocr`, `easyocr`, `paddleocr`, `rapidocr`, `onnxruntime`, `cv2`,
+`torch`, or even `numpy`. Tesseract itself is a native installer rather
+than a package.
+
+Installing one was rejected against the project's own criteria: heavy,
+OS-specific, and CI-hostile, for a result worse than what the vision
+path already produces. The vision path transcribed SQL and a
+six-thousand-character probability slide verbatim; OCR on a
+480x360 preview would have produced neither.
+
+So `OCRProcessor` exists as the extension point, reports itself
+unavailable, and says what it would need. It does not return empty text
+as if it had read a slide, because "the slide was blank" and "no engine
+is installed" must not be the same observation.
+
+### Deduplication, and what is deliberately not done
+
+Exact duplicates are content, not filename: two files with equal bytes
+are one slide, and this archive holds one image across 42 posts.
+
+Perceptual hashing is **not** used to merge. Two slides of a carousel
+are often near-identical in composition and differ in exactly the text
+that matters, so a heuristic that called them the same would silently
+delete one of them. `perceptual_hint()` reports the possibility and is
+never acted on. False merging is worse than processing a duplicate, and
+a redundant asset costs one stored file.
+
+### Provenance
+
+Every visual fact names the slide it came from. A `VisualAnalysis`
+carries the asset's content digest, its sequence and the processor that
+read it, and none of those come from the model -- they are facts about
+the file, so a model cannot invent its own provenance.
+
+An analysis that cannot name its asset is not stored. A slide that
+could not be read is recorded as unread, with the reason, and never
+filled in with a guess. A hundred-slide post with ninety-nine read and
+one corrupt is a different knowledge base from one with a hundred, and
+only an explicit record tells them apart.
+
+### What invalidates, and what does not
+
+| Change | Re-read? | Why |
+|---|---|---|
+| A slide's bytes differ | yes | the digest covers content |
+| A slide is added | yes | the asset list changed |
+| A slide is removed | yes | the asset list changed |
+| Slides are reordered | yes | the sequence is in the digest |
+| The processor version changes | yes | it would answer differently |
+| The processor configuration changes | yes | same reason |
+| A redundant preview is replaced | **no** | it carries no knowledge |
+| A file is renamed or re-encoded | **no** | it says the same thing |
+| An unrelated archive file changes | **no** | this post does not use it |
+
+### Retry
+
+CP11's behaviour, unchanged. A truncated response, a rate limit or a
+timeout is asked again with a growing wait; a missing API key or an
+unknown model is not, because asking three times cannot change the
+answer and only hides the cause behind a claim of recovery. The
+classifier judges the shape of a failure rather than naming a provider,
+so a new provider is a row in a table rather than new branches through
+the pipeline.
+
+### Failure isolation
+
+One unreadable slide does not cost the post. A corrupt file, a refused
+path or a batch the provider mangled produces a failure record naming
+the asset; the other slides are still read, stored and used.
+
+### Grounding
+
+Visual text enters the same source string as the post body, so the same
+grounding check applies. A technology is adopted only if the slide's
+own words contain it. An abbreviation does not license its expansion:
+a slide saying `ADF` does not put `Azure Data Factory` into the
+knowledge base, which is the rule that stops a plausible expansion
+becoming a fact.
+
+### Troubleshooting
+
+**The plan says every post needs work and the cache is empty.** The
+cache lives under `build/visual/`. It is git-ignored and disposable; a
+processor upgrade deliberately leaves the old entries in place rather
+than deleting them, so clear it yourself when you mean to.
+
+**A post reports `processor unavailable`.** The stage checks the client
+before starting. The reason is in the run's failure list.
+
+**A slide fails every attempt.** Look for its entry in
+`build/enrichment-state.json` and in the run summary. Repeated
+`truncated_response` means the provider is stopping mid-answer; raise
+`--attempts` before concluding the slide is unreadable.
+
+**The run is slow.** It is one model call per five slides. `--visual-jobs`
+is the only concurrency knob, and it is over posts. Raising it beyond
+three was not measured, so the README would rather say the ceiling is
+unknown than imply it was found.
+
+### Known limitations
+
+- **No OCR.** See above. Vision reads the text; a model is a reader, not
+  a scanner.
+- **Low-resolution previews.** 247 posts have a single image at a median
+  of 0.18 megapixels. That is all the archive holds, and reading it
+  produces less than reading a 3.70-megapixel slide would.
+- **Slide ordering is the archive's.** Where a carousel's numbering
+  starts at 0 and 1 in the same post, both are kept and ordered by
+  their digits. The archive does not say which is first in the author's
+  intent, and this does not guess.
+- **No vision on PDFs and SVGs.** A PDF's text is extracted as it always
+  was; its pages are not rasterised for vision. An SVG is recognised and
+  deliberately not rendered, because it can carry script.
+- **Concurrency above three is unmeasured.**
+
 ## Pipeline
 
 CI is defined in

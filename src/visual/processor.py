@@ -176,6 +176,28 @@ class VisionProcessor(VisualProcessor):
     Uses the CLI's own file attachment rather than encoding anything
     into a prompt, so the bytes go to the provider by the mechanism the
     tool already provides and not by a route invented here.
+
+    Talks to the CLI's shared background service rather than asking
+    for a private server per call, which is the opposite of the
+    client's default. ``--standalone`` starts a private server, and
+    that server is not reaped when a call is interrupted: a
+    timeout, a cancelled run or a restart leaves it running, and the
+    next call starts another.
+
+    Measured, not assumed. Reading this archive is 778 calls. Under
+    ``--standalone`` the first attempt accumulated nine orphaned
+    servers, took the machine from 8 GB free down to 526 MB, and
+    then produced nothing at all -- the calls were not failing, they
+    could not get the resources to start. One shared service serves
+    the whole run.
+
+    Declines an agent as well. ``--agent enricher`` installs the
+    enricher's system prompt, and a system prompt outranks the
+    request: asked for one object per image, that agent answered
+    with a single object in a schema of its own describing both
+    images together. It had read them correctly. Only the shape
+    came from the wrong prompt, and a picture deserves a prompt
+    about pictures.
     """
 
     name = "vision"
@@ -189,7 +211,11 @@ class VisionProcessor(VisualProcessor):
         if client is None:
             from src.ai.opencode import OpenCodeClient
 
-            client = OpenCodeClient(timeout_seconds=timeout_seconds)
+            client = OpenCodeClient(
+                timeout_seconds=timeout_seconds,
+                standalone=False,
+                agent=None,
+            )
 
         self.client = client
 

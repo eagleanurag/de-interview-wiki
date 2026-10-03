@@ -35,7 +35,7 @@ class OpenCodeClient:
         model: str = "opencode/space-bunny-free",
         timeout_seconds: int = 1800,
         standalone: bool = True,
-        agent: str = "enricher",
+        agent: str | None = "enricher",
     ) -> None:
         self.model = model
         self.timeout_seconds = timeout_seconds
@@ -65,12 +65,22 @@ class OpenCodeClient:
                 "--auto",
                 "--model",
                 self.model,
-                "--agent",
-                self.agent,
-                "--format",
-                "json",
             ]
         )
+
+        # Omitted when there is no agent, rather than passed empty.
+        #
+        # An agent installs a system prompt, and a system prompt wins
+        # over the instruction in the request: asked for a JSON array
+        # with one object per image, the enricher agent answered with a
+        # single object in a schema of its own, describing both images
+        # together. It had read them correctly -- only the shape came
+        # from the wrong prompt. A caller whose prompt is complete says
+        # so here.
+        if self.agent:
+            command.extend(["--agent", self.agent])
+
+        command.extend(["--format", "json"])
 
         for file_path in files or []:
             command.extend(
