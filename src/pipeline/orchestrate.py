@@ -56,10 +56,12 @@ from src.enrichment.state import RunState
 from src.ingestion.post_loader import load_post, source_digest
 from src.pipeline.freshness import (
     ENRICHER_VERSION,
+    VISUAL_PROCESSOR_VERSION,
     _refresh_provenance,
     _reusable,
 )
 from src.pipeline.paths import RESULTS_DIR, RUN_STATE, log
+from src.pipeline.visual import digest_for, inject
 from src.processing.media_processor import MediaReport, process_media
 
 #: How often the state is flushed. Every post would be a write per post
@@ -84,6 +86,7 @@ def enrich(
     attempts: int = DEFAULT_ATTEMPTS,
     state_path: Path | None = None,
     quiet: bool = False,
+    visual: dict | None = None,
 ) -> dict:
     """
     Enrich every post that needs it, into its own worker result.
@@ -107,6 +110,12 @@ def enrich(
     enough for the truncated responses that actually happened, and low
     enough that a genuinely broken provider fails the run rather than
     appearing to make progress.
+
+    ``visual`` carries the visual stage's results, keyed by post
+    identifier. Consulted twice: for freshness, so that slides which
+    changed re-enrich their post, and for the source text, so that what
+    a slide says is treated as source material by the same grounding
+    check the post body goes through.
     """
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -127,8 +136,10 @@ def enrich(
     if resume and not quiet:
         log(resume)
 
+    visual = visual or {}
+
     pending = _settle_cached(
-        identifiers, state, report, positions, force, quiet
+        identifiers, state, report, positions, force, quiet, visual
     )
 
     written: list[str] = []
@@ -144,7 +155,8 @@ def enrich(
         pool = _enricher_pool(attempts)
 
         written, media_failures = _run_pending(
-            pool, pending, jobs, state, report, positions, path, quiet
+            pool, pending, jobs, state, report, positions, path, quiet,
+            visual,
         )
 
     report.seconds = time.monotonic() - started
@@ -179,6 +191,7 @@ def _settle_cached(
     positions: dict[str, int],
     force: bool,
     quiet: bool,
+    visual: dict | None = None,
 ) -> list[tuple[str, Path]]:
     """
     Decide what needs the model, and settle what does not.
@@ -191,7 +204,14 @@ def _settle_cached(
     Also where a post that cannot even be loaded is written off: an
     unreadable post is a fact about this machine, not something a retry
     will change.
+
+    ``visual`` holds the visual stage's results. A post whose slides
+    were read, reordered or replaced is re-enriched even though its text
+    and its file bytes are untouched, because what the enricher would be
+    told about it has changed.
     """
+
+    visual = visual or {}
 
     pending: list[tuple[str, Path]] = []
 
@@ -223,8 +243,10 @@ def _settle_cached(
 
             continue
 
+        visual_digest = digest_for(post, visual.get(identifier))
+
         if target.is_file() and not force:
-            existing = _reusable(target, digest)
+            existing = _reusable(target, digest, visual_digest)
 
             if existing is not None:
                 # The analysis is still correct; the attribution around
@@ -267,6 +289,7 @@ def _run_pending(
     positions: dict[str, int],
     state_path: Path,
     quiet: bool,
+    visual: dict | None = None,
 ) -> tuple[list[str], dict[str, list[str]]]:
     """
     Run the posts, bounded, settling each as it finishes.
@@ -278,10 +301,14 @@ def _run_pending(
     though arrival is not.
     """
 
+    visual = visual or {}
+
     def work(item: tuple[str, Path]) -> Settled:
         identifier, directory = item
 
-        outcome, broken = _enrich_one(identifier, directory, pool)
+        outcome, broken = _enrich_one(
+            identifier, directory, pool, visual.get(identifier)
+        )
 
         return Settled(outcome=outcome, broken_media=broken)
 
@@ -375,6 +402,7 @@ def _enrich_one(
     identifier: str,
     directory: Path,
     pool,
+    visual=None,
 ) -> tuple[Outcome, list[str]]:
     """
     Enrich one post, re-asking what a re-ask can fix.
@@ -405,9 +433,20 @@ def _enrich_one(
 
     digest = source_digest(post, directory)
 
+    # Before the digest is taken, so that what the slides contribute to
+    # the prompt is already on the post the enricher will see.
+    if visual is not None:
+        inject(post, visual)
+
+    visual_digest = digest_for(post, visual)
+
     post.enrichment = type(post.enrichment)(
         source_digest=digest,
         enricher_version=ENRICHER_VERSION,
+        visual_digest=visual_digest,
+        visual_processor_version=(
+            VISUAL_PROCESSOR_VERSION if visual_digest else ""
+        ),
     )
 
     outcome = enricher.enrich(post)
@@ -424,6 +463,10 @@ def _enrich_one(
     fingerprint: dict = {
         "source_digest": digest,
         "enricher_version": ENRICHER_VERSION,
+        "visual_digest": visual_digest,
+        "visual_processor_version": (
+            VISUAL_PROCESSOR_VERSION if visual_digest else ""
+        ),
     }
 
     if outcome.grounding:

@@ -34,14 +34,38 @@ from pathlib import Path
 #: holds one, and a cached result would put it straight back.
 ENRICHER_VERSION = "3"
 
+#: The visual processor's version, imported rather than restated so that
+#: the two cannot drift apart. A result enriched from images read by a
+#: different processor is not the result the current processor would
+#: produce, which is the same argument as the one above.
+try:
+    from src.visual.models import PROCESSOR_VERSION as VISUAL_PROCESSOR_VERSION
 
-def _reusable(target: Path, digest: str) -> dict | None:
+except ImportError:  # pragma: no cover - visual package always present
+    VISUAL_PROCESSOR_VERSION = "1"
+
+
+def _reusable(
+    target: Path,
+    digest: str,
+    visual_digest: str = "",
+) -> dict | None:
     """
     An existing worker result that still matches the current content.
 
     Read from the file rather than trusted from a stamp, because the
     stamp lives in the post and the result lives here, and the two can
     disagree if a run was interrupted between them.
+
+    ``visual_digest`` is compared when given. A post whose images were
+    re-read, reordered or replaced has different visual content even
+    though its text and its file bytes are untouched, and reusing the
+    enrichment would publish knowledge derived from slides that are no
+    longer there.
+
+    Compared only when the caller supplies one. A post with no images
+    passes nothing and is decided on its source alone, which is the
+    behaviour every post had before visual enrichment existed.
     """
 
     try:
@@ -64,6 +88,13 @@ def _reusable(target: Path, digest: str) -> dict | None:
     if recorded.get("enricher_version") != ENRICHER_VERSION:
         return None
 
+    if visual_digest:
+        if recorded.get("visual_digest") != visual_digest:
+            return None
+
+        if recorded.get("visual_processor_version") != VISUAL_PROCESSOR_VERSION:
+            return None
+
     return payload
 
 
@@ -78,6 +109,13 @@ def _refresh_provenance(
     looks like are replaced. The analysis, the questions and the
     classification are left exactly as they were, because they are what
     the model was paid for and nothing about them has gone stale.
+
+    Media derived from reading a picture -- ``extracted_text`` read off a
+    slide, its sequence, its content digest, how it was read -- is
+    preserved rather than overwritten. The committed post carries the
+    file but never its interpretation, so copying the post's media
+    verbatim would strip the visual knowledge out of every reused result
+    and republish the post as though its images had never been read.
     """
 
     current = post.model_dump(mode="json")
@@ -85,8 +123,12 @@ def _refresh_provenance(
     for key in ("source", "media"):
         value = current.get(key)
 
-        if value is None:
+        if key == "media" and value is not None:
+            payload[key] = _merge_visual(value, payload.get(key) or [])
+
+        elif value is None:
             payload.pop(key, None)
+
         else:
             payload[key] = value
 
@@ -98,6 +140,64 @@ def _refresh_provenance(
     payload["original_text"] = current.get("original_text", "")
 
     return payload
+
+
+
+#: Media fields that come from reading a file rather than from the post
+#: describing it. Never overwritten by a refresh.
+_VISUAL_FIELDS = (
+    "extracted_text",
+    "sequence",
+    "role",
+    "sha256",
+    "extraction_method",
+)
+
+
+def _merge_visual(
+    current: list[dict],
+    stored: list[dict],
+) -> list[dict]:
+    """
+    Keep the stored reading of each picture while taking the post's own
+    attribution for it.
+
+    Keyed on the path, which is the one thing both sides agree on: the
+    post names the file it attached, and the result names the file the
+    text was read from. A file the post no longer references keeps
+    nothing, because a post that has stopped claiming a picture should
+    stop claiming what was read off it.
+    """
+
+    by_path = {
+        entry.get("path"): entry
+        for entry in stored
+        if isinstance(entry, dict)
+    }
+
+    merged: list[dict] = []
+
+    for entry in current:
+        if not isinstance(entry, dict):
+            continue
+
+        previous = by_path.get(entry.get("path"))
+
+        if not previous:
+            merged.append(entry)
+            continue
+
+        combined = dict(entry)
+
+        for name in _VISUAL_FIELDS:
+            value = previous.get(name)
+
+            if value:
+                combined[name] = value
+
+        merged.append(combined)
+
+    return merged
 
 
 __all__ = ["ENRICHER_VERSION", "_refresh_provenance", "_reusable"]

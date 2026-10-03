@@ -10,6 +10,30 @@ class MediaItem(BaseModel):
     description: str | None = None
     extracted_text: str | None = None
 
+    #: Position in the post's own sequence, zero-based.
+    #:
+    #: Added with visual enrichment. A post carrying a carousel needs to
+    #: say which image came first, and the filename cannot be trusted to
+    #: say it: this archive numbers one post's slides ``_slide_0`` and
+    #: ``_slide_01`` on the same post, and pads some to three digits and
+    #: others to one. Defaulted to zero so every existing post still
+    #: validates, which is what lets the field arrive without rewriting
+    #: 490 committed documents.
+    sequence: int = 0
+
+    #: What the asset is, when known: slide, thumbnail, document, image.
+    role: str | None = None
+
+    #: Digest of the file's bytes, when it has been read. Recorded so a
+    #: visual claim in ``extracted_text`` can be traced to the exact file
+    #: it came from, and so a changed file is detectable without
+    #: re-reading every other one.
+    sha256: str | None = None
+
+    #: How this asset's content was obtained: ``vision``, ``ocr``, or
+    #: unset for a file never read beyond its metadata.
+    extraction_method: str | None = None
+
 
 class SourceInfo(BaseModel):
     platform: str
@@ -73,11 +97,30 @@ class EnrichmentFingerprint(BaseModel):
     Excluded from the canonical knowledge base: it records how this
     pipeline processed a post, not what the post says, and publishing
     it would put build metadata into the reader-facing output.
+
+    ``source_digest`` covers the post's own material: its text and the
+    bytes of the files attached to it. ``visual_digest`` covers what was
+    read *out of* those files -- their sequence as well as their content
+    -- so that reordering a carousel invalidates the enrichment without
+    a changed text or a changed file, and so that upgrading the visual
+    processor re-derives the knowledge that depended on it.
+
+    Kept apart on purpose. Folding the visual stage into the source
+    digest would have made the enrichment depend on provider output,
+    and a provider that is not byte-identical between runs would then
+    invalidate every post on every run.
     """
 
     source_digest: str = ""
     enricher_version: str = ""
     enriched_at: str = ""
+
+    #: Digest of the post's visual assets, their content and their
+    #: order, plus the processor version and configuration that read
+    #: them. Empty for a post with no images, which is most of them.
+    visual_digest: str = ""
+
+    visual_processor_version: str = ""
 
 
 class SavedItemProvenance(BaseModel):

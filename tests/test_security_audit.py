@@ -927,27 +927,152 @@ def test_the_orchestrator_reaches_nothing_it_should_not() -> None:
     assert offenders == [], sorted(set(offenders))
 
 
-def test_the_orchestrator_reads_no_environment_variable() -> None:
-    """
-    Its inputs are a path and a model result.
+#: The one environment name the orchestrator may read.
+#:
+#: A path to the archive, so a pipeline written on one machine can be
+#: pointed at that machine's copy. Configuration, not a secret, and named
+#: rather than pattern-matched so a second variable cannot slip in beside
+#: it.
+ALLOWED_ENVIRONMENT_VARIABLES = frozenset({"LINKEDIN_ARCHIVE_ROOT"})
 
-    Reading the environment would give it a channel nobody chose, and
-    in particular a place a credential could arrive from.
+#: Anything shaped like a credential stays forbidden everywhere, whatever
+#: else a file is allowed to read.
+CREDENTIAL_VARIABLE_MARKERS = (
+    "KEY",
+    "TOKEN",
+    "SECRET",
+    "PASSWORD",
+    "PASSWD",
+    "CREDENTIAL",
+    "SESSION",
+    "COOKIE",
+    "AUTH",
+)
+
+
+def environment_names(path: Path) -> set[str]:
+    """
+    The environment variables a file reads, found in the tree.
+
+    Parsed rather than matched as text, because the file that *refuses*
+    a variable called LINKEDIN_PASSWORD necessarily contains the word,
+    and a text rule would flag the refusal as the use.
+    """
+
+    import ast
+
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+
+    names: set[str] = set()
+
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.Subscript):
+            continue
+
+        container = node.value
+
+        # os.environ["NAME"] or environ.get("NAME")
+        if (
+            isinstance(container, ast.Attribute)
+            and container.attr in {"environ", "getenv"}
+        ):
+            slice_node = node.slice
+
+            if isinstance(slice_node, ast.Constant) and isinstance(
+                slice_node.value, str
+            ):
+                names.add(slice_node.value)
+
+        elif (
+            isinstance(container, ast.Call)
+            and isinstance(container.func, ast.Attribute)
+            and container.func.attr in {"get", "getenv"}
+            and container.args
+            and isinstance(container.args[0], ast.Constant)
+            and isinstance(container.args[0].value, str)
+        ):
+            names.add(container.args[0].value)
+
+    return names
+
+
+def test_the_orchestrator_reads_no_credential_from_the_environment() -> None:
+    """
+    Its inputs are a path, a model result and one documented setting.
+
+    Reading the environment would give it a channel nobody chose, and in
+    particular a place a credential could arrive from. One variable is
+    allowed -- where the archive is -- and nothing credential-shaped is,
+    which is a narrower rule than "reads nothing" rather than a looser
+    one.
     """
 
     offenders: list[str] = []
 
     for path in orchestrator_sources():
-        source = path.read_text(encoding="utf-8")
+        for name in environment_names(path):
+            if name not in ALLOWED_ENVIRONMENT_VARIABLES:
+                offenders.append(f"{path.name}: {name}")
 
-        if "environ" in source or "getenv" in source:
-            offenders.append(f"{path.name}: reads the environment")
+            upper = name.upper()
+
+            if any(marker in upper for marker in CREDENTIAL_VARIABLE_MARKERS):
+                offenders.append(f"{path.name}: credential {name}")
 
         for name in imported_modules(path):
             if name.split(".")[0] in {"getpass", "dotenv"}:
                 offenders.append(f"{path.name}: {name}")
 
-    assert offenders == [], sorted(offenders)
+    assert offenders == [], sorted(set(offenders))
+
+
+def test_the_allowed_variable_is_a_path_not_a_secret() -> None:
+    """
+    The one permitted variable names a directory and holds nothing.
+
+    Asserted so the exception stays an exception: a future edit that
+    changed what it held would otherwise slip under a test that only
+    checks the name.
+    """
+
+    from src.pipeline.cli import _archive_root
+
+    class Args:
+        archive = None
+
+    import os
+
+    previous = os.environ.get("LINKEDIN_ARCHIVE_ROOT")
+
+    try:
+        # A string, because that is what it returns and what the stage
+        # is handed; the runner turns it into a Path itself.
+        os.environ["LINKEDIN_ARCHIVE_ROOT"] = "C:/example/archive"
+
+        assert _archive_root(Args()) == "C:/example/archive"
+
+        Args.archive = "D:/elsewhere/archive"
+
+        # An explicit flag wins over the environment, so a run can be
+        # pointed somewhere else without unsetting anything.
+        assert _archive_root(Args()) == "D:/elsewhere/archive"
+
+        # And with neither set, the pipeline says so rather than
+        # guessing a machine-specific default. A fresh class, because
+        # setting the flag on the first one was a class attribute.
+        del os.environ["LINKEDIN_ARCHIVE_ROOT"]
+
+        class NoFlag:
+            archive = None
+
+        assert _archive_root(NoFlag()) is None
+
+    finally:
+        if previous is None:
+            os.environ.pop("LINKEDIN_ARCHIVE_ROOT", None)
+
+        else:
+            os.environ["LINKEDIN_ARCHIVE_ROOT"] = previous
 
 
 def test_the_failure_classifier_only_reads_the_failure() -> None:
