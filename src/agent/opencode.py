@@ -94,10 +94,16 @@ class OpenCodeRunner:
 
         The prompt is passed as a single argv element, so untrusted
         task text is never re-interpreted by a shell.
+
+        This does not require OpenCode to be installed. Deciding what
+        the command would be is pure logic, and conflating it with
+        checking that the binary exists meant the argv contract could
+        only be verified on a machine that had Node installed -- which
+        is why CI could not check it at all.
         """
 
         command = [
-            self.executable,
+            self.executable_name,
             "run",
             "--standalone",
             "--auto",
@@ -117,7 +123,29 @@ class OpenCodeRunner:
         return command
 
     @property
+    def executable_name(self) -> str:
+        """
+        The command to invoke, whether or not it is installed.
+
+        The resolved path when OpenCode is on PATH, and the bare program
+        name when it is not. Used for building argv only, so that the
+        shape of a command can be inspected on a machine that has no
+        OpenCode in it.
+        """
+
+        return shutil.which("opencode") or "opencode"
+
+    @property
     def executable(self) -> str:
+        """
+        The resolved executable, or a failure that says how to fix it.
+
+        Raised only by the paths that actually run something. Deferring
+        the check to here keeps the install instruction attached to the
+        operation that needs the binary, instead of surfacing it while
+        merely describing what would be run.
+        """
+
         resolved = shutil.which("opencode")
 
         if not resolved:
@@ -137,6 +165,10 @@ class OpenCodeRunner:
         continue_session: bool = False,
     ) -> OpenCodeResult:
         """Execute one OpenCode run and capture everything."""
+
+        # Checked here rather than inside build_command, so that
+        # building the command and running it are separate questions.
+        self.executable
 
         command = self.build_command(
             prompt, continue_session=continue_session

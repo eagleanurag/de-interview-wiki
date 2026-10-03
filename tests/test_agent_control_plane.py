@@ -950,12 +950,25 @@ def test_agent_environment_disables_autoupdate():
 
 
 def test_missing_executable_is_a_clear_error(monkeypatch):
+    """
+    Running without OpenCode installed fails with an actionable message.
+
+    Building the command does not, and that is deliberate: deciding
+    what the command would be is pure logic, so it stays verifiable on a
+    machine with no OpenCode in it. The failure belongs to the operation
+    that actually needs the binary.
+    """
+
     monkeypatch.setattr(
         "src.agent.opencode.shutil.which", lambda name: None
     )
 
+    runner = OpenCodeRunner()
+
+    assert runner.build_command("task")[0] == "opencode"
+
     with pytest.raises(OpenCodeError) as error:
-        OpenCodeRunner().build_command("task")
+        runner.run("task")
 
     assert "Could not locate the opencode executable" in str(
         error.value

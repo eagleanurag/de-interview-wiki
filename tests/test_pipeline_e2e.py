@@ -46,35 +46,51 @@ def posts_root() -> Path:
 @pytest.fixture(scope="module")
 def worker_results(posts_root, tmp_path_factory):
     """
-    Stage the posts the way the worker does.
+    Stage the enriched results the way aggregation reads them.
 
-    Aggregation reads worker results matching a glob, so the posts are
-    copied in under that name. This keeps the test on the same input
-    path the workflow uses instead of testing a second code path.
+    Source order matters here, and getting it wrong is not cosmetic.
 
-    Enriched results are preferred when the local pipeline has already
-    produced them, because a knowledge base built from unenriched posts
-    has no topics, concepts or questions to check, and a test that
-    silently skips itself on every run is not a test.
+    ``data/results/`` comes first because that is where the repository
+    keeps its enrichment and where CI reads it. ``build/worker-results``
+    is a local artifact of a pipeline run, present on a developer's
+    machine and absent in CI -- preferring it made this fixture build a
+    knowledge base from whatever it found locally, so the same test
+    covered enriched posts on one machine and unenriched posts on
+    another. Given only unenriched posts it aggregated 490 of them with
+    no concepts and no questions, and the assertions below failed on a
+    knowledge base that was never going to have any.
+
+    The local directory is still consulted second, so a developer who
+    has just re-enriched sees their own results checked.
     """
 
     directory = tmp_path_factory.mktemp("worker-results")
 
-    enriched = Path("build") / "worker-results"
+    for source in (
+        REPO_ROOT / "data" / "results",
+        Path("build") / "worker-results",
+    ):
+        if not source.is_dir():
+            continue
 
-    if enriched.is_dir() and any(enriched.glob(WORKER_RESULT_GLOB)):
-        for path in sorted(enriched.glob(WORKER_RESULT_GLOB)):
+        found = sorted(source.glob(WORKER_RESULT_GLOB))
+
+        if not found:
+            continue
+
+        for path in found:
             shutil.copyfile(path, directory / path.name)
-    else:
-        for path in posts_root.glob("*/post.json"):
-            shutil.copyfile(
-                path, directory / f"cloud_worker_{path.parent.name}.json"
-            )
 
-    if not list(directory.glob(WORKER_RESULT_GLOB)):
-        pytest.skip("no posts available to aggregate")
+        return directory
 
-    return directory
+    # Nothing enriched anywhere. Aggregating raw posts would produce a
+    # knowledge base with no concepts, technologies or questions, and
+    # every assertion about those would fail for a reason that has
+    # nothing to do with what is being tested.
+    pytest.skip(
+        "no enriched results to aggregate; run "
+        "`python -m src.pipeline --only enrich` first"
+    )
 
 
 @pytest.fixture(scope="module")

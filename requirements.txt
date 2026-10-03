@@ -4,3 +4,10 @@ Pillow>=10.0
 python-dotenv>=1.0
 pytest>=8.0
 PyYAML>=6.0,<7.0
+
+# Imported by the LinkedIn sign-in path. The tests cover that path with
+# a faked page and never open a browser, so no browser binaries are
+# needed -- but the import has to resolve, and leaving it undeclared
+# meant the sign-in tests silently failed on any machine that had not
+# installed it by hand.
+playwright>=1.40

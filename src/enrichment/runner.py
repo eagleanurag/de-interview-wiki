@@ -13,11 +13,15 @@ rate-limited response gets a fresh sample, because the next sample is a
 different sample. A missing API key does not, because the third attempt
 fails identically to the first and reporting "recovered" would be a lie.
 
-Nothing here relaxes a schema. When an answer arrives whole but does
-not satisfy the model, the model is asked again and told what was wrong,
-because inventing the missing explanation to satisfy validation would
-put content in the knowledge base that no source and no model ever
-produced.
+Nothing here relaxes a schema, and nothing repairs an answer. When a
+response arrives whole but does not satisfy the model, the post is
+simply asked again and the second sample is judged on its own. Telling
+the model which field it got wrong was considered and left out: it is a
+plausible repair, but it has not been needed, and adding an untested
+prompt variation to a retry loop is how a retry starts producing
+plausible output rather than good output. What is refused outright is
+fabricating the missing field to satisfy validation, which would put
+content in the knowledge base that no source and no model ever produced.
 """
 
 from __future__ import annotations

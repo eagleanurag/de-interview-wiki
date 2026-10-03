@@ -65,7 +65,28 @@ class RunReport:
 
     @property
     def successful(self) -> int:
-        return self.cached + self.processed - self.retried + self.retried
+        """
+        Every post that ended a run with a result.
+
+        Reused and newly enriched together. A retried post is counted
+        once, because it is one post: ``processed`` already includes the
+        retried ones, so adding them again would double count them and
+        make a run with more retries look like it produced more.
+        """
+
+        return self.cached + self.processed
+
+    @property
+    def attempted(self) -> int:
+        """
+        Posts the model was asked about.
+
+        ``successful`` plus the ones it never answered. Not the number
+        of model calls: ``attempts`` is that, and the two differ whenever
+        a post was asked more than once.
+        """
+
+        return self.successful + self.failed
 
     def add(self, outcome: Outcome) -> None:
         """Fold one settled post into the totals."""
