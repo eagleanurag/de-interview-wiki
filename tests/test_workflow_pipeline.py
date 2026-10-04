@@ -383,6 +383,15 @@ def test_aggregation_fails_when_a_post_is_missing():
 
 
 def test_the_wiki_job_verifies_what_it_publishes():
+    """
+    The check has to name the pages the site actually has.
+
+    It named ``site/topics.html`` for two commits after that page was
+    removed, and nothing noticed: the test step above it failed first, so
+    the job stopped before the verify step ran. A check that is stale and
+    unexercised is worse than no check, because it reads as coverage.
+    """
+
     document = workflow()
 
     wiki = document["jobs"]["wiki"]
@@ -392,16 +401,76 @@ def test_the_wiki_job_verifies_what_it_publishes():
     assert "Verify the generated site" in names
     assert "Verify the site is reproducible" in names
 
+    body = body_of(wiki, "Verify the generated site")
+
     for page in (
         "site/index.html",
-        "site/search.html",
-        "site/topics.html",
         "site/questions.html",
+        "site/search.html",
+        "site/404.html",
+        "site/revision/index.html",
         "site/assets/search-index.json",
     ):
-        assert page in names or page in body_of(
-            wiki, "Verify the generated site"
-        ), page
+        assert page in names or page in body, page
+
+    # And no page that is no longer generated, because asserting one
+    # would fail the job on every run.
+    for gone in (
+        "site/topics.html",
+        "site/subjects.html",
+        "site/concepts.html",
+        "site/technologies.html",
+        "site/saved-items.html",
+    ):
+        assert gone not in body, gone
+
+
+def test_the_wiki_job_holds_the_page_count_in_a_band():
+    """
+    The scale is a requirement, so the workflow should enforce it.
+
+    The bound used to be ``-lt 2``, which was satisfied by 649 pages and
+    by 9,595. A band catches both failure modes: a generator that has
+    stopped producing units, and a granularity that has drifted back to
+    one page per post or per subtopic.
+    """
+
+    body = body_of(
+        workflow()["jobs"]["wiki"], "Verify the generated site"
+    )
+
+    assert "-lt 20" in body
+    assert "-gt 100" in body
+
+    # The retired page families are named, so a return of the archive
+    # layer is a failure rather than a surprise.
+    for retired in ("posts", "topics", "concepts", "technologies"):
+        assert retired in body, retired
+
+
+def test_the_wiki_job_checks_links_identifiers_and_the_index():
+    """
+    What the reader would actually hit.
+
+    Three properties the test suite checks against a fixture and this
+    step checks against the real generated output, where a leak from the
+    real corpus would show up: every relative link resolves, no machine
+    identifier is visible, and no search record points at a page nobody
+    generated.
+    """
+
+    body = body_of(
+        workflow()["jobs"]["wiki"], "Verify the generated site"
+    )
+
+    for check in (
+        "broken internal link",
+        "urn-li-",
+        "urn:li:",
+        "data-capture-method",
+        "indexed page(s) were not generated",
+    ):
+        assert check in body, check
 
 
 def test_the_site_is_checked_for_local_paths():

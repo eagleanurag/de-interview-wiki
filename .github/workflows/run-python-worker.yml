@@ -272,34 +272,159 @@ jobs:
 
       - name: Verify the generated site
         run: |
-          set -euo pipefail
+            set -euo pipefail
 
-          test -s site/index.html
-          test -s site/search.html
-          test -s site/topics.html
-          test -s site/questions.html
-          test -s site/assets/search-index.json
+            # The pages a reader navigates by. There is no topics.html:
+            # that was the archive's index of corpus groupings, and the
+            # tree a reader walks is the revision units, which live under
+            # revision/ beside the pages they list. This check was stale
+            # for two commits and only went unnoticed because the test
+            # step above it failed first, so the whole job stopped before
+            # reaching it.
+            test -s site/index.html
+            test -s site/questions.html
+            test -s site/search.html
+            test -s site/404.html
+            test -s site/revision/index.html
+            test -s site/assets/search-index.json
 
-          pages=$(find site -name '*.html' | wc -l)
+            # And no directory that used to hold a page per source
+            # record. One page per captured post is 490 pages, and that is
+            # the shape of the corpus rather than of the product.
+            for retired in posts topics concepts technologies; do
+              if [ -e "site/$retired" ]; then
+                echo "::error::site/$retired exists; the archive layer is back"
+                exit 1
+              fi
+            done
 
-          echo "pages generated: $pages"
+            pages=$(find site -name '*.html' | wc -l)
 
-          if [ "$pages" -lt 2 ]; then
-            echo "::error::the site has almost no pages"
-            exit 1
-          fi
+            echo "pages generated: $pages"
 
-          # The one thing that must never reach a published page: the
-          # path material was imported from.
-          if grep -rlE 'C:\\Users|/Users/|AppData|chrome_session|linkedin_saved_archive' \
-               site --include='*.html' --include='*.json' | head -5 | grep -q .; then
-            echo "::error::a local path reached the generated site"
-            grep -rlE 'C:\\Users|/Users/|AppData|chrome_session' \
-              site --include='*.html' | head -5
-            exit 1
-          fi
+            # A band rather than a floor. The old check was "-lt 2",
+            # which passed for 649 pages and for 9,595. The measured
+            # output is 64: four root pages, the revision tree, and 59
+            # pages of 22 revision units. Below 20 the generator has
+            # stopped producing units; above 100 the granularity has
+            # drifted back towards one page per post or per subtopic,
+            # which is what this architecture exists to prevent.
+            if [ "$pages" -lt 20 ] || [ "$pages" -gt 100 ]; then
+              echo "::error::$pages pages is outside 20-100; the revision unit is not holding"
+              find site -name '*.html' | head -20
+              exit 1
+            fi
 
-          echo "no local path in the generated site"
+            # The one thing that must never reach a published page: the
+            # path material was imported from.
+            if grep -rlE 'C:\\Users|/Users/|AppData|chrome_session|linkedin_saved_archive' \
+                 site --include='*.html' --include='*.json' | head -5 | grep -q .; then
+              echo "::error::a local path reached the generated site"
+              grep -rlE 'C:\\Users|/Users/|AppData|chrome_session' \
+                site --include='*.html' | head -5
+              exit 1
+            fi
+
+            echo "no local path in the generated site"
+
+            # And no machine identifier a reader can see. The posts keep
+            # their identifiers in the knowledge base; nothing published
+            # may show one, because a reader has no use for it and no way
+            # to interpret it.
+            if grep -rlE 'urn-li-|urn:li:|data-capture-method' \
+                 site --include='*.html' | head -5 | grep -q .; then
+              echo "::error::a post or saved-item identifier is visible on a page"
+              grep -rlE 'urn-li-|urn:li:|data-capture-method' \
+                site --include='*.html' | head -5
+              exit 1
+            fi
+
+            echo "no identifier is visible on any page"
+
+            # Every internal reference resolves. A relative link that
+            # points at nothing is the failure mode a relative-link
+            # design introduces, and it is not visible from the
+            # filesystem alone -- only from a page's own point of view.
+            python - <<'PY'
+            import re
+            from pathlib import Path
+
+            site = Path("site")
+
+            external = ("http://", "https://", "mailto:", "//", "data:")
+
+            broken = []
+            references = 0
+
+            for page in sorted(site.rglob("*.html")):
+                text = page.read_text(encoding="utf-8")
+
+                for ref in re.findall(r'(?:href|src)="([^"]+)"', text):
+                    if ref.startswith(external):
+                        continue
+
+                    target = ref.split("#")[0].split("?")[0]
+
+                    if not target:
+                        continue
+
+                    references += 1
+
+                    if not (page.parent / target).resolve().is_file():
+                        broken.append(
+                            f"{page.relative_to(site)} -> {ref}"
+                        )
+
+            print(f"internal references: {references}")
+
+            if broken:
+                for line in broken[:10]:
+                    print(f"  {line}")
+
+                raise SystemExit(f"{len(broken)} broken internal link(s)")
+
+            print("every internal reference resolves")
+            PY
+
+            # Every search record leads to a file. An index entry that
+            # points at a page nobody generated is a dead result in the
+            # result list, which is worse than a missing entry because it
+            # looks like an answer.
+            python - <<'PY'
+            import json
+            from pathlib import Path
+
+            site = Path("site")
+
+            index = json.loads(
+                (site / "assets" / "search-index.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+
+            records = index["records"]
+
+            if not records:
+                raise SystemExit("the search index is empty")
+
+            dead = [
+                record["u"]
+                for record in records
+                if not (site / record["u"]).is_file()
+            ]
+
+            if dead:
+                print(f"  {dead[0]} and {len(dead) - 1} more")
+                raise SystemExit(
+                    f"{len(dead)} indexed page(s) were not generated"
+                )
+
+            print(
+                f"search index: {len(records)} records, "
+                f"{index['units']} units, {index['questions']} questions, "
+                "all resolving"
+            )
+            PY
 
       - name: Verify the site is reproducible
         run: |
