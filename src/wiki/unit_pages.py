@@ -491,7 +491,7 @@ def render_home(units: Units) -> str:
             "<span class=\"muted\">every question and answer</span></li>"
             f'<li><a class="text-link" href="{esc(href("index.html", QUESTIONS_PAGE))}">'
             "All questions</a> "
-            "<span class=\"muted\">browse by subject and type</span></li>"
+            "<span class=\"muted\">every question, in one list</span></li>"
             "</ul>"
             "</div>",
             f'<p class="muted caveat">{esc(CAVEAT)}</p>',
