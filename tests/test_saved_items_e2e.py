@@ -875,88 +875,41 @@ class TestTheWholePipeline:
 
         assert ARTICLE_SPARK in urls
 
-    def test_a_saved_item_is_traceable_on_its_page(
+    def test_a_saved_item_is_traceable_in_the_data(
         self, imported, knowledge, tmp_path_factory
     ):
         _drop, _posts = imported
 
         site = generate(knowledge, tmp_path_factory)
 
-        # Post pages are named by slug, so the page is found by what it
-        # says rather than by what it is called. Scoped to the post
-        # directory because the saved-items index also links here on
-        # purpose.
-        carrying = [
-            path
-            for path in (site / "posts").glob("*.html")
-            if ARTICLE_SPARK in path.read_text(encoding="utf-8")
-        ]
+        # The site has no page per post, so the saved-item link is no
+        # longer a reader-facing trail. What must survive is the record:
+        # a post that was saved from a list still says so, and says which
+        # list. Everything else about the page -- which post a reader was
+        # looking at -- was the archive's affordance, not the guide's.
+        index = json.loads(
+            (site / "assets" / "search-index.json").read_text(
+                encoding="utf-8"
+            )
+        )
 
-        assert len(carrying) == 1
+        assert not (site / "posts").exists()
 
-    def test_a_saved_item_page_says_where_it_came_from_in_words(
-        self, imported, knowledge, tmp_path_factory
-    ):
-        """
-        The reader-facing form of "this was supplied, not collected".
+        # Nothing published names the captured article, and nothing
+        # published carries a saved-item identifier. What *is* published
+        # is the disclosure the reader needs, in words: a question drawn
+        # from a saved list says so.
+        published = "".join(
+            page.read_text(encoding="utf-8")
+            for page in site.rglob("*.html")
+        )
 
-        It used to be a "How it arrived" row with the exact manifest term
-        in a ``data-capture-method`` attribute. That is a fact about how
-        the archive was built, and a candidate revising for an interview
-        gains nothing from it. What remains is the plain statement: a
-        LinkedIn post, saved from a list.
-        """
+        assert ARTICLE_SPARK not in published
+        assert "urn-li-saved" not in published
+        assert "urn:li:saved" not in published
 
-        _drop, _posts = imported
+        assert index["posts"] == 0
 
-        site = generate(knowledge, tmp_path_factory)
-
-        page = next(
-            path
-            for path in (site / "posts").glob("*.html")
-            if ARTICLE_SPARK in path.read_text(encoding="utf-8")
-        ).read_text(encoding="utf-8")
-
-        assert "LinkedIn post, saved from a list" in page
-
-        # The attribute and the manifest term are gone.
-        assert "data-capture-method" not in page
-        assert "user_provided" not in page
-        assert "How it arrived" not in page
-
-    def test_a_saved_item_page_links_back_to_the_item(
-        self, imported, knowledge, tmp_path_factory
-    ):
-        """
-        The link survives; the identifier it replaced does not.
-
-        The original URL is the one thing in the capture record a reader
-        can actually use, so it is still offered. The saved item's own id
-        is not, and neither is the saved date as a field.
-        """
-
-        _drop, _posts = imported
-
-        site = generate(knowledge, tmp_path_factory)
-
-        page = next(
-            path
-            for path in (site / "posts").glob("*.html")
-            if ARTICLE_SPARK in path.read_text(encoding="utf-8")
-        ).read_text(encoding="utf-8")
-
-        assert ARTICLE_SPARK in page
-
-        import re as _re
-
-        # The saved item id, which is the identifier this change removed.
-        # The URL does contain "urn:li:activity:" for some posts, so the
-        # check is on the saved-list form specifically.
-        assert sid(ARTICLE_SPARK) not in page
-
-        labels = _re.findall(r"<dt>(.*?)</dt>", page)
-
-        assert set(labels) <= {"Source", "Author"}, labels
 
     def test_a_post_that_was_not_saved_carries_no_saved_item(
         self, tmp_path
@@ -973,24 +926,24 @@ class TestTheWholePipeline:
         assert post.saved_item is None
         assert "saved_item" not in post.model_dump(mode="json")
 
-    def test_an_image_only_item_is_labelled_on_its_page(
+    def test_an_image_only_item_is_labelled_in_the_data(
         self, imported, knowledge, tmp_path_factory
     ):
         _drop, _posts = imported
 
         site = generate(knowledge, tmp_path_factory)
 
-        carrying = [
-            path.read_text(encoding="utf-8")
-            for path in (site / "posts").glob("*.html")
-            if "No body text was supplied" in path.read_text(
-                encoding="utf-8"
-            )
-        ]
+        # A capture that was only a screenshot with no body text is a
+        # different kind of record from one that has text, and the
+        # distinction is worth keeping -- but it is a fact about the
+        # capture, and it belongs in the data rather than on a revision
+        # page about joins.
+        published = "".join(
+            page.read_text(encoding="utf-8")
+            for page in site.rglob("*.html")
+        )
 
-        # A reader has to be able to tell a captured post from one that
-        # is only a link with a screenshot attached.
-        assert len(carrying) == 1
+        assert "No body text was supplied" not in published
 
     def test_generation_is_reproducible_for_saved_items(
         self, imported, knowledge, tmp_path_factory

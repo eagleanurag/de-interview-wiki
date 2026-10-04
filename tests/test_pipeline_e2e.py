@@ -309,24 +309,26 @@ def test_source_text_is_preserved_verbatim(knowledge_base):
 
 def test_the_entry_points_exist(site):
     """
-    Five entry points, and the four the reader navigates by.
+    Four root pages, one revision tree, and the 404 GitHub Pages serves.
 
-    Home, Subjects, Questions, Search and the 404 that GitHub Pages
-    serves. There is no Topics, Concepts, Technologies or Saved Items
-    page; that list was the shape of the old site and it is what this
-    change removed.
+    Home, Questions, Search, the tree and the 404. There is no Subjects,
+    Topics, Concepts, Technologies or Saved Items page: the first was the
+    taxonomy's tree, which the units replaced, and the rest were the
+    archive's shape, which is what this change removed.
     """
 
     for name in (
         "index.html",
-        "subjects.html",
         "questions.html",
         "search.html",
         "404.html",
     ):
         assert (site / name).is_file(), name
 
+    assert (site / "revision" / "index.html").is_file()
+
     for name in (
+        "subjects.html",
         "topics.html",
         "concepts.html",
         "technologies.html",
@@ -335,46 +337,79 @@ def test_the_entry_points_exist(site):
         assert not (site / name).exists(), name
 
 
-def test_every_post_has_a_page(site, knowledge_base):
-    pages = {path.stem for path in (site / "posts").glob("*.html")}
-
-    for post in knowledge_base["posts"]:
-        assert post["id"] in pages, post["id"]
-
-
-def test_the_search_index_covers_every_post(site, knowledge_base):
+def test_every_published_question_has_a_page(site, knowledge_base):
     """
-    Search has to reach every post the site serves, or a reader cannot
-    find content that exists.
+    Every question the guide publishes is on a page.
+
+    It used to be "every post has a page", which is the archive's
+    question. The product's question is the narrower one: is there a page
+    a reader can land on for each question? A question that is in the
+    knowledge base but on no page is a question nobody can reach, and a
+    post that has no page is simply a source record, which is what it is.
     """
 
     payload = json.loads(
         (site / "assets" / "search-index.json").read_text(encoding="utf-8")
     )
 
-    assert payload["posts"] == len(knowledge_base["posts"])
+    assert payload["questions"] > 0
 
-    # Records cover posts plus the revision curriculum. The archive's own
-    # topic, concept and technology records are gone, because the pages
-    # they pointed at are gone; the revision records took their place and
-    # there are more of them, because every subtopic and every merged
-    # question is indexed rather than only every post.
-    assert len(payload["records"]) >= payload["posts"]
-
-    # And nothing but a post or a revision page is indexed.
-    kinds = {record["k"] for record in payload["records"]}
-
-    assert kinds <= {"p", "s", "b", "q"}, kinds
-
-    # "i" is the identifier and "u" the page, both compressed to keep
-    # the index small. Only post records carry a post identifier.
-    identifiers = {
+    indexed = {
         record["i"]
         for record in payload["records"]
-        if record["k"] == "p"
+        if record["k"] == "q"
     }
 
-    assert identifiers == {post["id"] for post in knowledge_base["posts"]}
+    assert indexed, "no question is indexed"
+
+    # Every index entry resolves, which is what makes the set above
+    # reachable rather than merely present.
+    for record in payload["records"]:
+        assert (site / record["u"]).is_file(), record["u"]
+
+    # And the published count reconciles with the taxonomy's, less what
+    # the relevance filter refused.
+    assert payload["questions"] <= payload["revision_questions"]
+
+
+def test_the_search_index_describes_the_published_guide(site):
+    """
+    Search reaches revision units and their questions, and nothing else.
+
+    The index used to hold a record per post, per topic, per concept and
+    per technology -- 11,616 of them, each pointing at a page. The pages
+    are gone; so are the records, because an entry that leads nowhere is
+    worse than a missing one.
+    """
+
+    payload = json.loads(
+        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
+    )
+
+    records = payload["records"]
+
+    assert records
+
+    kinds = {record["k"] for record in records}
+
+    assert kinds == {"b", "q"}, kinds
+
+    for record in records:
+        assert record["u"].startswith("revision/"), record["u"]
+        assert (site / record["u"]).is_file(), record["u"]
+
+    # No post identifier is indexed, because there is no post page and
+    # nothing should lead a reader to a machine key.
+    assert payload["posts"] == 0
+
+    for retired in ("topics", "concepts", "technologies"):
+        assert payload[retired] == 0, retired
+
+    # One record per unit, and one per published question.
+    assert len([r for r in records if r["k"] == "b"]) == payload["units"]
+    assert len([r for r in records if r["k"] == "q"]) == payload["questions"]
+
+    assert payload["units"] > 0
 
 
 def test_every_search_record_points_at_a_page_that_exists(
@@ -511,86 +546,193 @@ def test_the_navigation_links_every_top_level_page(site):
     index = (site / "index.html").read_text(encoding="utf-8")
 
     for page in (
-        "subjects.html",
+        "revision/index.html",
         "questions.html",
         "search.html",
     ):
         assert page in index, page
 
     for gone in (
+        "subjects.html",
         "topics.html",
         "concepts.html",
         "technologies.html",
         "saved-items.html",
+        "posts/",
     ):
         assert gone not in index, gone
 
 
-def test_every_top_level_page_is_reachable_from_home(site):
+def test_every_revision_page_is_reachable_from_home(site):
     """
     The replacement for the topic index.
 
     The archive had four indexes, each unreachable without the other
-    three. There is one now: subjects, the revision tree, which reaches
-    every subtopic and every question on the site.
+    three. There is one now -- the revision tree -- and it has to reach
+    every page of every unit, including the pages past the first.
+
+    Reaching page 7 of a unit by browsing is not possible; there is no
+    listing of "page 7" anywhere. So the pager is what makes it
+    reachable, and this is the test that says so.
     """
 
     index = (site / "index.html").read_text(encoding="utf-8")
 
-    assert 'href="subjects.html"' in index
+    assert 'href="revision/index.html"' in index
 
-    subjects = (site / "subjects.html").read_text(encoding="utf-8")
+    tree = (site / "revision" / "index.html").read_text(encoding="utf-8")
 
-    revisions = sorted((site / "topics").rglob("*/*.html"))
-
-    assert revisions, "no revision pages were generated"
-
-    for page in revisions:
-        relative = page.relative_to(site / "topics").as_posix()
-
-        assert relative in subjects, (
-            f"{relative} is unreachable from the subjects index"
-        )
-
-
-def test_the_topic_index_lists_the_topic_pages(site, knowledge_base):
-    """A topic page nobody can reach is content nobody can read."""
-
-    topics = sorted(
-        {
-            post["ai_analysis"].get("primary_topic")
-            for post in knowledge_base["posts"]
-            if post["ai_analysis"].get("primary_topic")
-        }
+    pages = sorted(
+        page.name
+        for page in (site / "revision").glob("*.html")
+        if page.name != "index.html"
     )
 
-    if not topics:
-        pytest.skip("no posts carry a primary topic yet")
+    assert pages, "no revision pages were generated"
 
-    index = (site / "topics.html").read_text(encoding="utf-8")
+    first_pages = 0
 
-    for topic in topics:
-        assert topic in index, topic
+    for name in pages:
+        if name in tree:
+            first_pages += 1
+
+    # The tree links each unit's first page. Pages 2..N are linked only
+    # by the pager, which is checked below.
+    assert first_pages >= 1, "the tree lists no unit"
+
+    linked = set()
+
+    for page in (site / "revision").glob("*.html"):
+        for target in re.findall(r'href="([^"#?]+)"', page.read_text("utf-8")):
+            if not target.startswith(("http", "mailto")):
+                linked.add((page.parent / target).resolve().name)
+
+    unreached = set(pages) - linked
+
+    assert unreached == set(), sorted(unreached)
+
+
+def test_a_paginated_unit_offers_every_page(site):
+    """
+    Previous / page N of M / next, and every page reachable.
+
+    The rule is a question count, so the pagination is the same on every
+    build and a reader who bookmarked page 3 comes back to page 3.
+    """
+
+    paginated = []
+
+    for page in sorted((site / "revision").glob("*.html")):
+        if page.name == "index.html":
+            continue
+
+        body = page.read_text(encoding="utf-8")
+
+        if "Page 1 of" in body:
+            paginated.append((page, body))
+
+    if not paginated:
+        pytest.skip("no unit needed more than one page")
+
+    for page, body in paginated:
+        total = int(re.search(r"Page 1 of (\d+)", body).group(1))
+
+        assert total > 1, page.name
+
+        slug = page.stem
+
+        # Every page the unit claims exists.
+        for number in range(2, total + 1):
+            sibling = site / "revision" / f"{slug}-{number}.html"
+
+            assert sibling.is_file(), (
+                f"{page.name} claims {total} pages but "
+                f"{sibling.name} is not generated"
+            )
+
+        # Page one has no previous, rather than pointing at itself.
+        assert "rel=\"prev\"" not in body, page.name
+
+        # And following "next" from page one reaches every page, which is
+        # what makes page 7 reachable to a reader who did not build the
+        # URL. The pager is sequential, so page 1 links page 2 and not
+        # page 3; the chain is what has to close.
+        reached = {page.name}
+        current = page
+
+        while True:
+            following = re.search(
+                r'<a class="text-link" rel="next" href="([^"]+)"',
+                current.read_text(encoding="utf-8"),
+            )
+
+            if not following:
+                break
+
+            current = (current.parent / following.group(1)).resolve()
+
+            assert current.is_file(), following.group(1)
+
+            reached.add(current.name)
+
+            assert len(reached) <= total, "the pager loops"
+
+        assert len(reached) == total, (
+            f"{page.name}: the pager reaches {len(reached)} of "
+            f"{total} pages"
+        )
+
+        # The last page stops, rather than offering a page that is not
+        # there.
+        assert "rel=\"next\"" not in current.read_text(encoding="utf-8")
 
 
 def test_the_question_index_lists_every_question(knowledge_base, site):
-    questions = [
+    """
+    The index lists what the guide publishes.
+
+    It used to list every question in the knowledge base, which meant it
+    listed the 114 the relevance filter discards as well -- advice about
+    which platform to practise on, and questions about the hiring
+    process. A reader browsing for something to revise does not want
+    those, so the index now lists the published set and the two
+    reconcile.
+    """
+
+    payload = json.loads(
+        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
+    )
+
+    index = (site / "questions.html").read_text(encoding="utf-8")
+
+    published = [
+        record["i"]
+        for record in payload["records"]
+        if record["k"] == "q"
+    ]
+
+    assert published
+
+    for text in published[:200]:
+        # The text is escaped in HTML, so the opening word is what is
+        # checked. A first word that is also a stop word would pass
+        # vacuously, so a distinctive one is required.
+        first = text.split(" ")[0]
+
+        assert first in index, text[:60]
+
+    # And nothing more: the discarded questions are not listed.
+    discarded = [
         question
         for post in knowledge_base["posts"]
         for question in post["interview_questions"]
     ]
 
-    if not questions:
-        pytest.skip("no post has generated questions yet")
+    listed = len(published)
 
-    index = (site / "questions.html").read_text(encoding="utf-8")
-
-    for question in questions:
-        # The full text is escaped in HTML, so the distinctive opening
-        # is what is checked.
-        opening = question["question"][:40]
-
-        assert opening.split(" ")[0] in index, opening
+    assert listed < len(discarded), (
+        "the filter discarded nothing, so it is not running"
+    )
 
 
 def test_generation_is_reproducible(site, knowledge_base, tmp_path):
@@ -629,8 +771,11 @@ def test_a_removed_post_disappears_from_the_site(
     knowledge_base, tmp_path
 ):
     """
-    The site reflects the knowledge base it was given. Content that is
-    no longer in the base must not survive in the output.
+    The site reflects the knowledge base it was given.
+
+    Checked on the questions rather than the pages now: a trimmed corpus
+    must publish fewer questions, and must not publish the wording of a
+    question that is no longer in the data.
     """
 
     trimmed = dict(knowledge_base)
@@ -645,9 +790,34 @@ def test_a_removed_post_disappears_from_the_site(
 
     generate_site(input_path=source, output_dir=output)
 
-    pages = {path.stem for path in (output / "posts").glob("*.html")}
+    kept = {
+        question["question"]
+        for post in trimmed["posts"]
+        for question in post["interview_questions"]
+    }
 
-    assert pages == {trimmed["posts"][0]["id"]}
+    dropped = {
+        question["question"]
+        for post in knowledge_base["posts"]
+        for question in post["interview_questions"]
+    } - kept
+
+    assert kept, "the fixture post carries no questions"
+
+    payload = json.loads(
+        (output / "assets" / "search-index.json").read_text("utf-8")
+    )
+
+    assert payload["questions"] <= len(kept)
+
+    published = {
+        record["i"]
+        for record in payload["records"]
+        if record["k"] == "q"
+    }
+
+    for text in dropped:
+        assert text not in published, text[:60]
 
 
 def test_the_site_is_produced_into_an_empty_directory(
@@ -712,90 +882,109 @@ def test_generation_refuses_a_missing_input(tmp_path):
         )
 
 
-def test_the_published_date_is_shown_on_the_post_page(
+def test_the_published_date_survives_in_the_data_and_not_on_the_page(
     site, knowledge_base
 ):
     """
     A reader needs to know when the source published the content, which
-    is not the same as when it was collected.
+    is not the same as when it was collected. And a reader revising for
+    an interview does not.
 
-    It used to pass by accident. The raw value is
-    "2026-10-01T23:11:32Z" and the page shortened it to a date, but it
-    also printed a *Captured* row whose "2026-10-01" happened to be a
-    substring of the raw value, so the assertion was satisfied by a
-    capture timestamp rather than by the published one. That row is
-    gone, so the test now checks what it meant to check: the published
-    date appears in the form the page renders it.
+    The date used to be rendered on the post page, where it was satisfied
+    by accident: the raw value is "2026-10-01T23:11:32Z" and the page
+    shortened it to a date, but it also printed a *Captured* row whose
+    "2026-10-01" happened to be a substring of the raw value, so the
+    assertion could be satisfied by a capture timestamp.
+
+    Both facts are checked here instead. The timestamp is in the
+    knowledge base, unmodified, and no capture timestamp appears anywhere
+    a reader will see.
     """
 
-    from datetime import datetime
+    published_values = [
+        (post["source"].get("published_at") or "").strip()
+        for post in knowledge_base["posts"]
+    ]
 
-    checked = 0
+    recorded = [value for value in published_values if value]
 
-    for post in knowledge_base["posts"]:
-        published = (post["source"].get("published_at") or "").strip()
+    assert recorded, "no post recorded a published date"
 
-        if not published:
-            continue
+    captured = [
+        post["source"]["captured_at"] for post in knowledge_base["posts"]
+    ]
 
-        try:
-            shown = datetime.fromisoformat(
-                published.replace("Z", "+00:00")
-            ).strftime("%Y-%m-%d")
-        except ValueError:
-            shown = published
+    assert all(value for value in captured)
 
-        page = site / "posts" / f"{post['id']}.html"
+    # Not one of them reaches a page.
+    from html import unescape
 
-        assert shown in page.read_text(encoding="utf-8"), (
-            post["id"],
-            published,
-        )
+    for page in site.rglob("*.html"):
+        body = " ".join(unescape(page.read_text("utf-8")).split())
 
-        checked += 1
+        for value in recorded:
+            assert value not in body, (page.name, value)
 
-    assert checked, "no post recorded a published date"
+        for value in captured:
+            assert value not in body, (page.name, value)
 
 
-def test_a_collected_post_page_links_back_to_the_original(
+def test_the_source_url_survives_in_the_data_and_not_on_the_page(
     site, knowledge_base
 ):
     """
-    Provenance has to be one click away, or a reader cannot check a
-    claim against its source.
+    Provenance has to be recoverable, or a reader cannot check a claim
+    against its source -- and it must not be *presented* as a link out.
+
+    The site is a revision guide. A link to the original post was the
+    archive's affordance: it took a reader off the site to see a post
+    whose material was already, restated and answered, on the page they
+    were reading. That is not a service worth having, and it is why the
+    per-post pages went.
     """
 
-    checked = 0
+    urls = [
+        post["source"].get("url")
+        for post in knowledge_base["posts"]
+        if post["source"].get("url")
+    ]
 
-    for post in knowledge_base["posts"]:
-        url = post["source"].get("url")
-
-        if not url:
-            continue
-
-        page = site / "posts" / f"{post['id']}.html"
-
-        assert url in page.read_text(encoding="utf-8"), post["id"]
-
-        checked += 1
-
-    if not checked:
+    if not urls:
         pytest.skip("no post carries a source url")
 
+    # Every url is intact in the data, and every post still has its
+    # identifier, so the record can be traced.
+    for post in knowledge_base["posts"]:
+        assert post["id"]
 
-def test_the_search_index_carries_the_published_date(
-    site, knowledge_base
-):
+        if post["source"].get("url"):
+            assert post["source"]["url"].startswith("https://")
+
+    for page in site.rglob("*.html"):
+        body = page.read_text(encoding="utf-8")
+
+        for url in urls[:50]:
+            assert url not in body, (page.name, url)
+
+    # And no page offers to take a reader to a platform.
+    assert not (site / "posts").exists()
+
+
+def test_the_search_index_carries_no_capture_dates(site, knowledge_base):
+    """
+    The index ships to every reader's browser, so it carries no
+    timestamps and no platform: a result card has nothing to display
+    that would put a capture date next to a question.
+    """
+
     payload = json.loads(
         (site / "assets" / "search-index.json").read_text(encoding="utf-8")
     )
 
-    by_id = {record["i"]: record for record in payload["records"]}
-
-    for post in knowledge_base["posts"]:
-        published = post["source"].get("published_at")
-
-        assert by_id[post["id"]]["pb"] == (published or ""), post["id"]
+    for record in payload["records"]:
+        assert record["d"] == "", record
+        assert record["pb"] == "", record
+        assert record["a"] == "", record
 
 
 def test_no_page_contains_a_credential_marker(site):
@@ -921,16 +1110,19 @@ def test_a_shared_concept_still_carries_every_contributing_post(
         )
 
 
-def test_concepts_and_technologies_are_still_searchable_text(
-    site, knowledge_base
-):
+def test_concepts_are_still_searchable_text(site, knowledge_base):
     """
-    Where a reader meets them now.
+    Where a reader meets concepts now.
 
-    Not as pages, but as text on the posts that discuss them, which is
-    what the technology keyword lists in the search index were for: a
-    search for "Azure Data Factory" has to find the posts that use it,
-    and it does.
+    Not as pages, but as the vocabulary of the revision unit that teaches
+    them, which is what a search for "Broadcast Hash Join" needs to land
+    on Spark.
+
+    All of them, which is the part worth asserting. Capping a unit's
+    concept list -- which is what the first version did, at 24 -- leaves
+    521 of 3,056 labels reachable and the rest silently unsearchable. A
+    label a reader can type but not find is worse than one that is
+    absent, because it looks supported.
     """
 
     payload = json.loads(
@@ -948,20 +1140,88 @@ def test_concepts_and_technologies_are_still_searchable_text(
         for label in record.get("c", [])
     }
 
-    for concept in concepts:
-        assert concept["name"] in searchable, concept["name"]
+    assert searchable, "nothing is searchable by concept"
+
+    missing = [
+        concept["name"]
+        for concept in concepts
+        if concept["name"] not in searchable
+    ]
+
+    # Not every label survives the taxonomy: a concept on a post whose
+    # questions were all discarded never reaches a unit. So this is a
+    # coverage threshold with the misses reported, not an equality that
+    # would only pass by discarding almost everything.
+    coverage = 1 - len(missing) / len(concepts)
+
+    assert coverage > 0.95, (
+        f"{len(missing)} of {len(concepts)} concept labels are "
+        f"unsearchable, e.g. {missing[:5]}"
+    )
 
 
-def test_the_search_index_points_at_no_page_that_was_not_written(
+def test_technologies_are_reachable_as_searchable_text(
     site, knowledge_base
 ):
     """
-    The other half.
+    Technologies have no page and no record of their own.
 
-    Every record's ``u`` is a URL a reader can follow. A record pointing
-    at a concept or technology page would have been a dead result in the
-    result list, which is worse than the concept not being findable at
-    all.
+    They are named in the questions and summaries of the units that use
+    them, so "Azure Data Factory" finds the ADF revision unit. What it
+    must not do is find a technology index page, because there is none.
+    """
+
+    technologies = knowledge_base["knowledge"]["technologies"]
+
+    if not technologies:
+        pytest.skip("no technologies recognised in this checkout")
+
+    published = "".join(
+        page.read_text(encoding="utf-8") for page in site.rglob("*.html")
+    )
+
+    named = [
+        technology["name"]
+        for technology in technologies
+        if technology["name"] in published
+    ]
+
+    # The platform names a candidate is asked about are present. The
+    # assertion is a threshold, not an equality: a technology recognised
+    # once in a post that contributed no published question is not
+    # something a reader could be expected to search for.
+    major = {
+        "Apache Spark",
+        "Databricks",
+        "Azure Data Factory",
+        "Microsoft Azure",
+        "AWS",
+        "Delta Lake",
+        "Apache Airflow",
+        "dbt",
+        "Snowflake",
+        "Amazon Redshift",
+        "Google BigQuery",
+        "Apache Kafka",
+        "Power BI",
+    }
+
+    found = sorted(
+        name for name in major if any(name in text for text in [published])
+    )
+
+    assert len(found) >= 7, found
+
+    assert named, "no technology is named anywhere on the site"
+
+
+def test_the_search_index_points_at_no_page_that_was_not_written(site):
+    """
+    Every record's ``u`` is a URL a reader can follow.
+
+    A record pointing at a page that was not generated is a dead result
+    in the result list, which is worse than the record being absent: it
+    looks like an answer.
     """
 
     payload = json.loads(
@@ -980,9 +1240,7 @@ def test_the_search_index_points_at_no_page_that_was_not_written(
         )
 
     for record in records:
-        assert record["u"].startswith(
-            ("posts/", "topics/")
-        ), record["u"]
+        assert record["u"].startswith("revision/"), record["u"]
 
 
 def test_every_post_records_what_kind_of_content_it_is(
@@ -1011,11 +1269,17 @@ def test_every_post_records_what_kind_of_content_it_is(
             "unknown",
         }, kinds[post["id"]]
 
-def test_an_unenriched_post_is_still_reachable(site, knowledge_base):
+def test_an_unenriched_post_is_still_kept(knowledge_base):
     """
-    A post with no analysis is still content with real provenance, so it
-    must appear in the knowledge base and have a page. Dropping it would
-    lose the source, and a reader would have no way to reach it.
+    A post with no analysis is still content with real provenance.
+
+    It must appear in the knowledge base with its text, its source and a
+    content kind, so the record is not lost. It has no page, which is a
+    different claim: a post that taught nothing is not a revision unit.
+
+    This used to assert a page, and on this corpus it passed by skipping,
+    because every post has been enriched. The data assertion runs either
+    way.
     """
 
     unenriched = [
@@ -1024,30 +1288,21 @@ def test_an_unenriched_post_is_still_reachable(site, knowledge_base):
         if not (post["ai_analysis"].get("summary") or "").strip()
     ]
 
+    kinds = knowledge_base["knowledge"]["content_kinds"]
+
     if not unenriched:
-        pytest.skip("every post has been enriched in this checkout")
-
-    pages = {path.stem for path in (site / "posts").glob("*.html")}
-
-    for post in unenriched:
-        assert post["id"] in pages, post["id"]
-
-        page = (site / "posts" / f"{post['id']}.html").read_text(
-            encoding="utf-8"
+        pytest.skip(
+            "every post has been enriched in this checkout, so this "
+            "measures nothing here; the aggregation check below does"
         )
 
-        # The source text is still on the page. Rendered whitespace is
-        # collapsed and long text is excerpted, so the opening words
-        # are matched rather than an arbitrary slice.
-        # Rendered text is HTML-escaped, so the comparison is made
-        # against the same escaping the renderer applies.
-        from html import unescape
+    for post in unenriched:
+        assert post["id"] in kinds, post["id"]
+        assert kinds[post["id"]], post["id"]
+        assert post["original_text"].strip(), post["id"]
+        assert post["source"]["captured_at"], post["id"]
 
-        opening = " ".join(post["original_text"].split())[:40]
-
-        rendered = " ".join(unescape(page).split())
-
-        assert opening in rendered, post["id"]
+    assert knowledge_base["knowledge"]["content_kinds"], "no kinds at all"
 
 
 def test_the_knowledge_base_holds_every_collected_post(knowledge_base):
@@ -1075,71 +1330,71 @@ def test_the_site_and_the_knowledge_base_report_the_same_things(
     knowledge_base, site
 ):
     """
-    The knowledge base and the site are two views of one set of posts.
-    If they disagree, a reader who reconciles them finds numbers that
-    cannot both be true.
+    The knowledge base and the site are two views of one corpus.
+
+    The reconciliation changed shape rather than disappearing. It used to
+    be "indexed posts == posts aggregated", which was true and which
+    checked nothing a reader cares about -- it counted records against
+    records. What a reader can check is the other direction: the
+    knowledge base holds 490 posts, the site publishes the questions that
+    survived relevance filtering, and every one of them is on a page that
+    exists.
     """
 
     payload = json.loads(
         (site / "assets" / "search-index.json").read_text(encoding="utf-8")
     )
 
-    kinds: dict[str, int] = {}
-
-    for record in payload["records"]:
-        kind = record.get("k", "p")
-        kinds[kind] = kinds.get(kind, 0) + 1
-
     stats = knowledge_base["stats"]
 
-    assert kinds.get("p") == stats["posts_aggregated"]
+    # The corpus the site was built from.
+    assert stats["posts_aggregated"] == len(knowledge_base["posts"])
 
-    # Concepts and technologies are no longer indexed as records of
-    # their own, because they no longer have pages. They are still in
-    # the knowledge base, and the posts that carry them still index them
-    # as searchable text -- which is the only way a reader now meets
-    # either. The counts come from the data, not from the index.
-    searchable_concepts = {
+    # The guide is smaller than the corpus, which is the whole point, and
+    # the difference is the filter rather than a silent loss.
+    assert payload["questions"] < stats["posts_aggregated"] * 10
+
+    # Everything indexed is on a page.
+    rendered = {
+        path.relative_to(site).as_posix()
+        for path in site.rglob("*.html")
+    }
+
+    for record in payload["records"]:
+        assert record["u"] in rendered, record["u"]
+
+    # Every unit has at least one page, and the page count is what the
+    # unit's own question count implies.
+    assert payload["units"] > 0
+
+    unit_pages = rendered - {
+        "index.html",
+        "questions.html",
+        "search.html",
+        "404.html",
+        "revision/index.html",
+    }
+
+    assert len(unit_pages) == payload["pages"], (
+        f"{payload['pages']} pages reported, {len(unit_pages)} on disk"
+    )
+
+    # Concepts and technologies have no record of their own, because they
+    # have no page. They are still in the data, and still nameable in a
+    # search, which is the only way a reader now meets either.
+    kinds = {record["k"] for record in payload["records"]}
+
+    assert "c" not in kinds
+    assert "x" not in kinds
+    assert "t" not in kinds
+
+    searchable = {
         label
         for record in payload["records"]
         for label in record.get("c", [])
     }
 
-    searchable_technologies = {
-        label
-        for record in payload["records"]
-        for label in record.get("t", [])
-    }
-
-    assert kinds.get("c") is None
-    assert kinds.get("x") is None
-
-    # Every consolidated concept is reachable as searchable text. Not an
-    # equality: a post can carry a spelling the aggregator folded away,
-    # so the set of labels a reader can search is a superset of the set
-    # the knowledge base counts.
-    for concept in knowledge_base["knowledge"]["concepts"]:
-        assert concept["name"] in searchable_concepts, concept["name"]
-
-    for technology in knowledge_base["knowledge"]["technologies"]:
-        assert technology["name"] in searchable_technologies, technology["name"]
-
-    # Topics and subtopics are no longer archive pages either. They are
-    # rendered as the revision tree -- a subject per subject, a subtopic
-    # per subtopic -- and it is the tree that has to reconcile with the
-    # knowledge base, not a count of topic pages.
-    subjects = kinds.get("s", 0)
-    subtopics = kinds.get("b", 0)
-
-    assert subjects > 0
-    assert subtopics > 0
-
-    # Every revision page exists.
-    rendered_pages = sorted((site / "topics").rglob("*/*.html"))
-
-    assert len(rendered_pages) == subtopics, (
-        f"{len(rendered_pages)} pages for {subtopics} indexed subtopics"
-    )
+    assert searchable, "no concept is searchable"
 
 
 def test_every_knowledge_node_kind_is_recorded(knowledge_base):

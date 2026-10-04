@@ -54,6 +54,7 @@ from src.wiki.naming import (
     QUESTIONS_PAGE,
     QUESTIONS_SCRIPT,
     SEARCH_INDEX_FILE,
+    REVISION_INDEX,
     SEARCH_PAGE,
     SEARCH_SCRIPT,
     SUBJECTS_PAGE,
@@ -211,7 +212,7 @@ def render_search(model: SiteModel) -> str:
             # corpus label; it is not generated. The subject index is
             # the revision tree a reader can actually walk, and it is
             # what "browse without search" should offer.
-            page_link("subjects index", SUBJECTS_PAGE, page),
+            page_link("revision index", REVISION_INDEX, page),
             esc(" or the "),
             page_link("questions browser", QUESTIONS_PAGE, page),
             esc(" instead."),
@@ -950,7 +951,7 @@ def render_not_found(model: SiteModel) -> str:
             # lost their place; the revision tree is where they can pick
             # it up again. Topics was the archive index and is not
             # generated.
-            _button_link(page, "Subjects", SUBJECTS_PAGE),
+            _button_link(page, "Subjects", REVISION_INDEX),
             _button_link(page, "Questions", QUESTIONS_PAGE),
             "</nav>",
             "</section>",

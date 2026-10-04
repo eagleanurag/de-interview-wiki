@@ -16,6 +16,7 @@ from src.wiki.naming import (
     CONCEPTS_PAGE,
     QUESTIONS_PAGE,
     SAVED_ITEMS_PAGE,
+    REVISION_INDEX,
     SEARCH_PAGE,
     STYLE_FILE,
     TECHNOLOGIES_PAGE,
@@ -43,7 +44,7 @@ from src.wiki.naming import (
 #: data layer.
 NAV_ITEMS = (
     ("Home", INDEX_PAGE),
-    ("Subjects", "subjects.html"),
+    ("Subjects", REVISION_INDEX),
     ("Questions", QUESTIONS_PAGE),
     ("Search", SEARCH_PAGE),
 )

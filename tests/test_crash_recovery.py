@@ -23,6 +23,7 @@ from src.aggregation.aggregator import (
 )
 from src.ingestion.checkpoints import (
     CP5_AUTHENTICATION_READY,
+    CP8_ENRICHMENT_COMPLETE,
     Checkpoint,
     current_file,
     read,
@@ -395,6 +396,82 @@ def test_writing_a_checkpoint_is_atomic(tmp_path):
 
     # No temporary file survives.
     assert list(current_file(tmp_path).parent.glob("*.tmp")) == []
+
+
+def test_concurrent_writers_do_not_collide_on_one_temporary(tmp_path):
+    """
+    Enrichment runs one worker per post in threads and every worker
+    writes the same checkpoint, so "atomic" has to mean atomic between
+    threads and not only between one writer and a reader.
+
+    It did not. The temporary name was derived from the target, so every
+    writer shared one temporary: a rename could be pulled out from under
+    another thread mid-flight, and on Windows a reader holding the
+    destination open made the rename fail outright -- reported as a
+    pipeline error with nothing to do with the pipeline. A full test run
+    failed this way on a shared machine.
+
+    Each write now gets a temporary of its own and the whole read/write
+    pair is serialised in-process, with the retry left for the case a
+    lock genuinely cannot cover: two pipeline runs on one machine.
+    """
+
+    import threading
+
+    errors: list[BaseException] = []
+    partial: list[str] = []
+
+    def hammer(index: int) -> None:
+        for _ in range(25):
+            try:
+                write(
+                    Checkpoint(
+                        checkpoint_id=CP8_ENRICHMENT_COMPLETE,
+                        phase=CP8_ENRICHMENT_COMPLETE,
+                        completed=[f"post-{index}"],
+                    ),
+                    tmp_path,
+                )
+
+                loaded = read(tmp_path)
+
+                assert loaded is not None
+                assert loaded.phase == CP8_ENRICHMENT_COMPLETE
+
+                # And the bytes on disk are a whole document, never the
+                # middle of one.
+                raw = current_file(tmp_path).read_text(encoding="utf-8")
+
+                json.loads(raw)
+
+                if not raw.rstrip().endswith("}"):
+                    partial.append(raw[-40:])
+
+            except BaseException as exc:  # noqa: BLE001
+                errors.append(exc)
+
+    threads = [
+        threading.Thread(target=hammer, args=(index,))
+        for index in range(8)
+    ]
+
+    for thread in threads:
+        thread.start()
+
+    for thread in threads:
+        thread.join()
+
+    assert errors == [], [repr(e) for e in errors[:3]]
+    assert partial == []
+
+    # No temporary survives a concurrent run either.
+    assert list(current_file(tmp_path).parent.glob("*.tmp")) == []
+
+    # And the surviving checkpoint is one of the ones written, not a
+    # blend of two: the completed list is per-writer.
+    loaded = read(tmp_path)
+
+    assert loaded.completed[0].startswith("post-")
 
 
 # ---------------------------------------------------------------------

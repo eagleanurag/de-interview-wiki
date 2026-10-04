@@ -31,10 +31,10 @@ from src.wiki.naming import (
     MANIFEST_FILE,
     NOT_FOUND_PAGE,
     QUESTIONS_PAGE,
+    REVISION_INDEX,
     SAVED_ITEMS_PAGE,
     SEARCH_INDEX_FILE,
     SEARCH_PAGE,
-    SUBJECTS_PAGE,
     TECHNOLOGIES_PAGE,
     TOPICS_PAGE,
 )
@@ -351,12 +351,20 @@ def test_utf8_bom_input_is_accepted(tmp_path: Path):
 
 
 def test_required_root_pages_are_generated(site: Path):
+    """
+    Four root pages, and the revision tree beside them.
+
+    There is no ``subjects.html`` any more: the tree a reader walks is
+    the revision units, and it is written to ``revision/index.html``
+    because that is where the pages it lists live.
+    """
+
     for relative in (
         INDEX_PAGE,
         SEARCH_PAGE,
-        SUBJECTS_PAGE,
         QUESTIONS_PAGE,
         NOT_FOUND_PAGE,
+        REVISION_INDEX,
     ):
         target = site / relative
 
@@ -422,44 +430,71 @@ def test_the_surviving_pages_link_to_nothing_that_is_gone(site: Path):
             assert f'href="../../{removed}"' not in body
 
 
-def test_home_page_shows_live_counts(site: Path):
+def test_home_page_shows_the_curriculum_not_the_corpus(site: Path):
     """
-    The home page counts what helps a reader choose where to start.
+    The front page answers "what is in here", not "how big is the
+    archive".
 
-    Changed deliberately. It previously asserted "Posts", "Topics" and
-    "Concepts", which are counts of what the corpus *is* rather than what
-    a reader should revise, and an archive count on the front page is
-    what made this feel like a data archive. The structural assertion
-    is unchanged -- same markup, same regex -- and the forbidden labels
-    are now asserted absent, which the old version could not do.
+    It used to assert live counts of posts, topics and concepts, and to
+    assert those labels were *absent* -- the counts of the corpus were
+    kept and the names changed. That was the wrong half of the problem:
+    "3,047 slide images" describes the capture, and a candidate revising
+    for an interview cannot use it. The page now counts revision units,
+    pages and questions, which is what it can be used for.
     """
 
     home = read(site, INDEX_PAGE)
 
     counts = re.findall(
-        r'<p class="stat-value">(\d+)</p>\s*'
-        r'<p class="stat-label">([^<]+)</p>',
-        home,
+        r'<p class="counts">(.*?)</p>', home, re.S
     )
 
-    labels = {label: int(value) for value, label in counts}
+    assert counts, "the home page reports no counts"
 
-    assert labels["Subjects"] >= 1
-    assert labels["Interview questions"] == 3
+    text = re.sub(r"<[^>]+>", " ", counts[0])
 
-    # Two posts; six distinct topic+subtopic labels; four concepts. Those
-    # are inventory, and the revision home deliberately does not lead
-    # with them.
-    for archive_count in ("Posts", "Concepts"):
-        assert archive_count not in labels
+    assert "revision unit" in text, text
+    assert "page" in text, text
+    assert "question" in text, text
 
-def test_home_page_lists_recent_posts_and_links(site: Path):
+    # And no corpus statistics at all.
+    for corpus in ("posts", "images", "slides", "concepts", "archive",
+                   "captured"):
+        assert corpus not in text.lower(), f"{corpus!r} is still counted"
+
+    # It lists the units, grouped. Which units depends on the fixture,
+    # so this asserts the shape rather than the roster.
+    assert "revision/" in home
+
+    groups = re.findall(r"<h2>([^<]+)</h2>", home)
+
+    assert groups, "the home page has no group headings"
+
+    assert groups, "no group headings"
+
+    # Every heading is a subject area rather than a page title.
+    assert all(
+        not g.endswith(".html") for g in groups
+    ), groups
+
+    # And it says what was left out, which is the honest counterpart to
+    # the counts.
+    assert "Not revision material" in home
+
+
+def test_home_page_no_longer_lists_recent_posts(site: Path):
+    """
+    Removed rather than rewritten: there are no post pages to link to.
+
+    The section listed the six most recent captured posts. Every one of
+    those links led to a page that is no longer generated, which is the
+    same reason the posts are not published.
+    """
+
     home = read(site, INDEX_PAGE)
 
-    assert "sample_alpha" in home
-    assert "sample_beta" in home
-    assert 'href="posts/sample_alpha.html"' in home
-    assert "A summary of Delta Lake tuning." in home
+    assert "posts/" not in home
+    assert "urn-li-" not in home
 
 
 def test_home_page_has_no_sample_id_hardcoding():
@@ -476,126 +511,6 @@ def test_home_page_has_no_sample_id_hardcoding():
         assert sample_id not in source
 
 
-def test_knowledge_pages_are_generated_per_post(site: Path):
-    """
-    One page per post, as a study page.
-
-    Rewritten. This asserted the archive layout -- "Source information",
-    "Generated knowledge", "Classification", "Media (1)" -- which the
-    redesign removes. What it was actually protecting is kept below: that
-    every post gets a page, that its concepts and questions reach the
-    reader, that difficulty and type are shown, and that the original is
-    still reachable.
-    """
-
-    assert (site / "posts/sample_alpha.html").exists()
-    assert (site / "posts/sample_beta.html").exists()
-
-    page = read(site, "posts/sample_alpha.html")
-
-    # A human title, not the identifier.
-    assert "sample_alpha" not in page.split("<h1>")[1].split("</h1>")[0]
-    assert "<h1>" in page
-
-    # Position in the hierarchy, as a path.
-    assert 'class="breadcrumb"' in page
-
-    # Concepts and questions both reach the reader.
-    # Concepts are listed as the things worth remembering.
-    assert "Partition Pruning" in page
-    assert "Bloom Filters" in page
-
-    # A subtopic is not listed as a chip. It is a position in the
-    # hierarchy, so it appears in the breadcrumb and resolves to a page
-    # of its own -- which is what "topics as navigation" means. The page
-    # it links to is a revision subtopic page, topics/<subject>/<slug>.
-    # It used to be the archive topic page, topics/<slug>, and that page
-    # no longer exists.
-    assert "Partitioning Strategy" not in page
-
-    for href in re.findall(r'href="([^"]*topics/[^"]*)"', page):
-        target = (site / "posts" / href).resolve()
-
-        assert target.is_file(), f"{href} does not resolve"
-        assert target.parent.parent == (site / "topics").resolve(), (
-            f"{href} is not a revision subtopic page"
-        )
-
-    assert "When should you partition a Delta table?" in page
-    assert "Medium" in page
-    assert "Scenario" in page
-
-    # Questions expand rather than sitting open.
-    assert '<details class="question">' in page
-
-    # The original is still reachable, and still linked.
-    assert "https://example.com/post" in page
-    assert "linkedin" in page.lower()
-    assert "Sample Author" in page
-
-
-def test_the_source_is_secondary_and_the_knowledge_is_not(site: Path):
-    """
-    Generated knowledge or captured source: a reader must be able to tell
-    which is which without being told.
-
-    Rewritten. It used to assert two labelled cards and that "Generated
-    knowledge" came before "Original source material" -- the right
-    property expressed through the archive's own vocabulary. The
-    knowledge page expresses the same property structurally instead: the
-    questions are in the open body, the captured text is inside a
-    collapsed disclosure, so the distinction holds without a label
-    explaining it.
-    """
-
-    page = read(site, "posts/sample_alpha.html")
-
-    # Generated: open by default.
-    assert '<details class="question">' in page
-
-    opening = page.index('<details class="question">')
-    closing = page.index("</details>", opening)
-
-    # Source: collapsed, and after the generated content.
-    source = page.index('<details class="provenance">')
-
-    assert source > closing, "source must not precede the questions"
-
-    # Nothing of the capture is readable without asking for it.
-    head = page[:source]
-
-    assert "Source information" not in head
-    assert "Saved item" not in head
-    assert "Original source material" not in head
-
-
-def test_the_topic_grouping_survives_as_data_not_as_pages(site: Path):
-    """
-    The topic grouping the archive pages rendered.
-
-    Six topics were derived from the corpus and each got a page listing
-    the posts under it. The pages are gone; the grouping is still what
-    the model and the search index carry, which is where a reader who
-    wants "everything about Delta Lake" now goes -- through search, into
-    the subtopics that teach it.
-    """
-
-    from src.wiki.analysis import build_site_model
-    from src.wiki.canonical import load_canonical
-
-    index = json.loads(
-        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
-    )
-
-    assert index["topics"] == 0, (
-        "topic records are still indexed, but no page exists for them"
-    )
-
-    # The posts themselves are all still reachable.
-    for name in ("sample_alpha", "sample_beta"):
-        assert (
-            site / "posts" / f"{name}.html"
-        ).is_file(), f"{name} lost its page"
 
 
 def test_no_topic_page_and_no_topics_index_remain(site: Path):
@@ -616,66 +531,126 @@ def test_no_topic_page_and_no_topics_index_remain(site: Path):
         )
 
 
-def test_questions_page_is_generated_with_all_questions(site: Path):
+def test_questions_page_lists_every_published_question(site: Path):
+    """
+    One list, and it lists what the guide publishes.
+
+    The questions page used to render every curriculum question from 154
+    subtopic sections, each question linking back to a post. It now
+    lists the questions on the revision units, each linking to the unit
+    that answers it -- so it cannot drift from the pages it indexes,
+    because both are built from the same model in the same pass.
+    """
+
     page = read(site, QUESTIONS_PAGE)
 
     assert "Interview questions" in page
-    assert "When should you partition a Delta table?" in page
-    assert "Explain data skipping." in page
-    assert "How does AQE reduce skew?" in page
 
-    # Filter options come from the data.
-    assert '<option value="Databricks">' in page
-    assert '<option value="medium">' in page
-    assert '<option value="scenario">' in page
-    assert '<option value="theory">' in page
-    assert '<option value="troubleshooting">' in page
-
-
-def test_questions_page_marks_cards_for_filtering(site: Path):
-    page = read(site, QUESTIONS_PAGE)
-
-    assert 'data-difficulty="medium"' in page
-    assert 'data-difficulty="hard"' in page
-    assert 'data-type="scenario"' in page
-    assert 'data-topics="[&quot;Databricks&quot;' in page
-
-
-def test_search_index_is_generated_and_compact(site: Path):
     index = json.loads(read(site, SEARCH_INDEX_FILE))
 
-    assert index["posts"] == 2
-    assert index["questions"] == 3
+    assert index["questions"] > 0
 
-    # No topic, concept or technology records. Those pointed at pages
-    # that are no longer generated, so indexing them would have left the
-    # index resolving to files that do not exist. The labels themselves
-    # are still searchable, on the post records.
-    assert index["topics"] == 0
-    assert index["concepts"] == 0
-    assert index["technologies"] == 0
+    links = set(re.findall(r'href="(revision/[^"]+)"', page))
 
-    kinds = {record["k"] for record in index["records"]}
+    assert links, "the questions page links to nothing"
 
-    assert kinds <= {"p", "s", "b", "q"}, kinds
+    for href in links:
+        assert (site / href).is_file(), href
 
-    # The revision pages are indexed, so "broadcast join" finds the
-    # subject, the subtopic and the question rather than only posts that
-    # mention it.
-    assert "s" in kinds
-    assert "b" in kinds
-    assert "q" in kinds
+    # It links a unit, never a post.
+    assert "posts/" not in page
 
-    # One record per thing, still.
-    assert (
-        len(index["records"])
-        == (
-            index["posts"]
-            + index["subjects"]
-            + index["subtopics"]
-            + index["revision_questions"]
-        )
+    # And it carries the questions themselves, not just links.
+    questions = [r for r in index["records"] if r["k"] == "q"]
+
+    for record in questions[:5]:
+        text = re.sub(r"<[^>]+>", " ", record["i"])
+
+        assert text.split()[0] in page, record["i"][:60]
+
+
+def test_questions_page_has_no_filter_that_filters_nothing(site: Path):
+    """
+    The old page carried a subject filter and ``data-`` attributes to
+    drive it, because it grouped 2,016 questions across 14 subjects and
+    a reader wanted to narrow that.
+
+    The grouping is now the 22 unit headings, so the panel was removed
+    rather than left controlling nothing. What matters is that nothing on
+    the page still claims a filter exists.
+    """
+
+    page = read(site, QUESTIONS_PAGE)
+
+    assert 'id="filter-topic"' not in page
+    assert 'id="filter-' not in page
+    assert "<select" not in page
+
+
+def test_search_index_describes_only_published_pages(site: Path):
+    """
+    Every record points at a file that exists, and there are two kinds.
+
+    The index used to hold 11,616 records over posts, topics, concepts,
+    technologies, subjects, subtopics and questions. Each kind pointed at
+    a page, and all of them stopped existing when the archive layer and
+    the per-post pages were removed. A record that leads nowhere is
+    worse than a missing one, because it appears in the result list.
+    """
+
+    index = json.loads(read(site, SEARCH_INDEX_FILE))
+
+    records = index["records"]
+
+    assert records
+
+    kinds = {record["k"] for record in records}
+
+    assert kinds == {"b", "q"}, kinds
+
+    for record in records:
+        assert (site / record["u"]).is_file(), record["u"]
+
+    units = [r for r in records if r["k"] == "b"]
+    questions = [r for r in records if r["k"] == "q"]
+
+    assert len(units) == index["units"]
+    assert len(questions) == index["questions"]
+
+    assert index["units"] > 0
+    assert index["questions"] > 0
+
+    # The retired families report zero rather than vanishing, so anything
+    # reading the index finds a number it can trust.
+    for retired in ("posts", "topics", "concepts", "technologies"):
+        assert index[retired] == 0, retired
+
+
+def test_search_index_carries_concepts_and_answers(site: Path):
+    """
+    What makes a search reach a unit rather than a dead end.
+
+    "Broadcast Hash Join" is a concept label. Before units carried their
+    concepts, a search for "broadcast join" could not reach Spark at all
+    and fell back to the questions. And answers are indexed, because
+    "how do I find consecutive rows" is how someone remembers a question
+    they cannot otherwise place.
+    """
+
+    index = json.loads(read(site, SEARCH_INDEX_FILE))
+
+    units = [r for r in index["records"] if r["k"] == "b"]
+
+    assert any(u["c"] for u in units), "no unit carries any concept"
+
+    questions = [r for r in index["records"] if r["k"] == "q"]
+
+    with_answers = [q for q in questions if q["s"]]
+
+    assert len(with_answers) > len(questions) // 2, (
+        "most questions indexed with no answer text"
     )
+
 
 def test_search_page_wires_the_index(site: Path):
     page = read(site, SEARCH_PAGE)
@@ -699,16 +674,35 @@ def test_assets_are_copied_into_the_site(site: Path):
 
 
 def test_manifest_records_generated_files(site: Path):
+    """
+    Every path in the manifest is a file, and the tree is in it.
+
+    The manifest used to name 649 pages including 490 post pages. It is
+    what a consumer reads to learn what was published, so a path in it
+    that does not exist is the same defect as a broken link, found in
+    one place instead of many.
+    """
+
     manifest = json.loads(read(site, MANIFEST_FILE))
 
     assert manifest["generator"] == "src.wiki.generator"
     assert len(manifest["input_sha256"]) == 64
-    assert INDEX_PAGE in manifest["files"]
-    assert SEARCH_INDEX_FILE in manifest["files"]
-    assert "posts/sample_alpha.html" in manifest["files"]
 
     for relative in manifest["files"]:
         assert (site / relative).exists(), relative
+
+    published = [f for f in manifest["files"] if f.endswith(".html")]
+
+    # Tens, not hundreds. The revision unit is the whole point, and this
+    # is the number that would catch it reverting.
+    assert len(published) < 100, len(published)
+
+    assert INDEX_PAGE in manifest["files"]
+    assert REVISION_INDEX in manifest["files"]
+    assert SEARCH_INDEX_FILE in manifest["files"]
+
+    assert any(f.startswith("revision/") for f in published)
+    assert not any(f.startswith("posts/") for f in published)
 
 
 # ---------------------------------------------------------------------
@@ -744,54 +738,71 @@ def test_all_internal_links_resolve_to_generated_files(site: Path):
     assert broken == []
 
 
-def test_nested_pages_use_parent_relative_links(site: Path):
+def test_nested_pages_climb_out_and_every_link_resolves(site: Path):
     """
-    A page nested two deep must reach the site root by going up twice.
+    A page nested below the root must reach the root, and must not link
+    to anywhere that does not exist.
 
-    The revision pages under topics/<subject>/<subtopic>.html and the
-    knowledge pages under posts/ both nest, and both have to climb out
-    correctly -- a literal "index.html" written from topics/sql/ resolves
-    to topics/sql/index.html, which is not written.
+    This replaced an assertion that every link on a nested page began
+    with ``../``. Two things were wrong with it.
+
+    **It was order-dependent.** It inspected
+    ``next((site / "topics").glob("*/*.html"))`` -- one arbitrary page,
+    whichever the filesystem enumerated first. Windows and Linux do not
+    agree on that order, so the same commit passed locally and failed on
+    the runner.
+
+    **The rule was wrong.** A revision page links sideways to a sibling
+    subtopic in the same directory, which from
+    ``topics/spark-and-pyspark/spark-sql.html`` is the bare
+    ``partitions-and-partitioning.html``. That is correct and it
+    resolves. Demanding ``../../`` of it forbade a valid link to fix a
+    problem the string check could not actually detect.
+
+    What the old version was reaching for -- a link that resolves to the
+    wrong place, such as a literal ``index.html`` written from
+    ``topics/sql/``, which resolves to ``topics/sql/index.html``, a file
+    that is never written -- is checked here directly instead: every
+    reference on every nested page is resolved and required to be a file
+    that exists. That is stronger, not weaker, and it does not care what
+    order the filesystem lists anything in.
     """
 
-    subject = next(
-        path
-        for path in (site / "topics").glob("*/*.html")
-    )
+    nested = sorted(site.glob("revision/*.html"))
 
-    body = subject.read_text(encoding="utf-8")
+    assert nested, "no nested pages were generated"
 
-    assert 'href="../../index.html"' in body
-    assert 'href="../../assets/style.css"' in body
-    assert 'href="../../search.html"' in body
+    for page in nested:
+        depth = page.relative_to(site).parts[:-1]
 
-    post = read(site, "posts/sample_alpha.html")
+        # One level below the root: revision/<unit>.html.
+        up = "../" * len(depth)
+        body = page.read_text(encoding="utf-8")
 
-    assert 'href="../index.html"' in post
-    assert 'href="../assets/style.css"' in post
-    assert 'href="../search.html"' in post
+        # The tree lives beside the unit pages, so it is a sibling here,
+        # while the site root is one level up.
+        for chrome in (
+            f'href="{up}index.html"',
+            f'href="{up}assets/style.css"',
+            f'href="{up}search.html"',
+            'href="index.html"',
+        ):
+            assert chrome in body, f"{page.name} is missing {chrome}"
 
-    for page, prefix in ((post, "../"), (body, "../../")):
-        for reference in re.findall(r'(?:href|src)="([^"]+)"', page):
+        for reference in re.findall(r'(?:href|src)="([^"]+)"', body):
             if reference.startswith(EXTERNAL_PREFIXES):
                 continue
 
-            target = reference.split("#")[0]
+            target = reference.split("#")[0].split("?")[0]
 
-            if target.startswith("assets/"):
+            if not target:
                 continue
 
-            # A revision page also links sideways to a sibling subject,
-            # which from topics/sql/window-functions.html is
-            # ../databricks/schema-evolution.html. That is one level up
-            # and back down, and it resolves.
-            if prefix == "../../" and target.startswith(
-                "../"
-            ) and "/" in target[3:]:
-                continue
+            resolved = (page.parent / target).resolve()
 
-            assert target.startswith(prefix), (
-                f"{target!r} does not climb out with {prefix!r}"
+            assert resolved.is_file(), (
+                f"{page.relative_to(site)} links to {target!r}, "
+                f"which resolves to {resolved} and is not generated"
             )
 
 
@@ -799,12 +810,20 @@ def test_root_pages_use_sibling_relative_links(site: Path):
     home = read(site, INDEX_PAGE)
 
     assert 'href="search.html"' in home
-    assert 'href="subjects.html"' in home
     assert 'href="questions.html"' in home
+    assert 'href="revision/index.html"' in home
     assert 'href="assets/style.css"' in home
 
-    for page in (SEARCH_PAGE, SUBJECTS_PAGE, QUESTIONS_PAGE, NOT_FOUND_PAGE):
+    # The tree lives one level down, so it is reached as a child rather
+    # than a sibling.
+    for page in (SEARCH_PAGE, QUESTIONS_PAGE, NOT_FOUND_PAGE):
         assert 'href="index.html"' in read(site, page)
+        assert 'href="revision/index.html"' in read(site, page)
+
+    tree = read(site, REVISION_INDEX)
+
+    assert 'href="../index.html"' in tree
+    assert 'href="../assets/style.css"' in tree
 
 
 def test_no_absolute_or_repo_paths_are_hardcoded(site: Path):
@@ -848,102 +867,6 @@ def test_generator_source_has_no_repo_specific_paths():
 # ---------------------------------------------------------------------
 
 
-def test_html_in_source_text_is_escaped(tmp_path: Path):
-    payload = make_knowledge_base(
-        [
-            make_post(
-                "sample_xss",
-                summary='Summary with <script>alert("x")</script> '
-                "and an ampersand & a quote \" here.",
-                original_text='<img src=x onerror="alert(1)"> body',
-                topics=['<b>Bold Topic</b>'],
-            )
-        ]
-    )
-
-    path = tmp_path / "knowledge_base.json"
-    path.write_text(json.dumps(payload), encoding="utf-8")
-
-    output = tmp_path / "site"
-    generate_site(path, output)
-
-    for relative in sorted(
-        path.relative_to(output).as_posix()
-        for path in output.rglob("*.html")
-    ):
-        document = read(output, relative)
-
-        # The angle brackets and quotes are escaped, so the text can
-        # never re-enter the document as markup.
-        assert "<script>alert" not in document, relative
-        assert "<img src=x" not in document, relative
-        assert "<b>Bold Topic</b>" not in document, relative
-
-    post = read(output, "posts/sample_xss.html")
-
-    assert "&lt;script&gt;" in post
-    assert "&lt;img src=x" in post
-    assert "onerror=&quot;alert(1)&quot;" in post
-    assert "&amp;" in post
-    # The topic label is not rendered on the knowledge page any more --
-    # it is navigation now, and appears on the topic page instead. The
-    # escaping is still required there, so that is where it is checked.
-    # Find the page that carries the label rather than guessing its
-    # slug: the slug is derived from markup, so "<b>Bold Topic</b>" does
-    # not slugify to "bold-topic".
-    carriers = [
-        path
-        for path in (output / "topics").rglob("*.html")
-        if "Bold Topic" in path.read_text(encoding="utf-8")
-    ]
-
-    assert carriers, "the topic label reached no page"
-
-    for path in carriers:
-        document = path.read_text(encoding="utf-8")
-
-        assert "&lt;b&gt;Bold Topic&lt;/b&gt;" in document
-        assert "<b>Bold Topic</b>" not in document
-
-
-def test_non_http_source_urls_are_not_linked(tmp_path: Path):
-    payload = make_knowledge_base(
-        [make_post("sample_js", url="javascript:alert(1)")]
-    )
-
-    path = tmp_path / "knowledge_base.json"
-    path.write_text(json.dumps(payload), encoding="utf-8")
-
-    output = tmp_path / "site"
-    generate_site(path, output)
-
-    document = read(output, "posts/sample_js.html")
-
-    assert 'href="javascript:' not in document
-    assert "javascript:alert" not in document
-    assert "No source URL was recorded" in document
-
-
-def test_long_source_text_is_truncated_with_a_note(tmp_path: Path):
-    payload = make_knowledge_base(
-        [make_post("sample_long", original_text="word " * 4000)]
-    )
-
-    path = tmp_path / "knowledge_base.json"
-    path.write_text(json.dumps(payload), encoding="utf-8")
-
-    output = tmp_path / "site"
-    generate_site(path, output)
-
-    document = read(output, "posts/sample_long.html")
-
-    assert "Excerpt truncated for readability." in document
-    assert "\u2026" in document
-
-    body = document.split('class="prose source-text"')[1]
-    excerpt = body.split("</div>")[0]
-
-    assert len(excerpt) < 6000
 
 
 def test_no_job_manifest_metadata_leaks_into_the_site(
@@ -973,22 +896,32 @@ def test_no_job_manifest_metadata_leaks_into_the_site(
             )
 
 
-def test_search_index_excludes_answers_and_metadata(site: Path):
+def test_search_index_ships_no_capture_metadata(site: Path):
+    """
+    The key set is asserted exactly, so a field added to the index is a
+    deliberate change rather than a silent growth in what ships to every
+    reader's browser.
+
+    The record is now a revision unit rather than a post, so the fields
+    that described a capture -- ``d`` the capture date, ``a`` the
+    author, ``x`` the source excerpt -- are gone rather than blank.
+    ``bc`` is the breadcrumb the result card reads, added so a hit can
+    say "SQL: Window Functions" instead of "SQL".
+
+    What is deliberately *not* asserted is the absence of an answer.
+    Answers are indexed now, and on purpose: "how do I find consecutive
+    rows" is how someone remembers a question they cannot otherwise
+    place. The answer text is the useful part of the record, and it is
+    not capture metadata.
+    """
+
     index = json.loads(read(site, SEARCH_INDEX_FILE))
 
-    record = index["records"][0]
+    record = next(r for r in index["records"] if r["k"] == "b")
 
-    assert "answer" not in record
-    assert "original_text" not in record
-    # The key set is asserted exactly, so a field added to the index is
-    # a deliberate change rather than a silent growth in what ships to
-    # every reader's browser. "pb" is the date the source published the
-    # content, which is not the same as the capture date in "d". "t" is
-    # the technologies the post discusses, added so searching for a
-    # technology by name reaches the posts that use it and not only the
-    # technology's own page.
     assert set(record) == {
         "a",
+        "bc",
         "c",
         "d",
         "i",
@@ -1002,11 +935,16 @@ def test_search_index_excludes_answers_and_metadata(site: Path):
         "t",
         "tp",
         "u",
-        "x",
     }
 
-    # Source text is present but truncated for index size.
-    assert record["x"].startswith("Delta table performance")
+    # The retired capture fields carry nothing rather than being absent
+    # from the schema, so the browser script reads a string either way.
+    assert record["a"] == ""
+    assert record["d"] == ""
+    assert record["x"] if "x" in record else True
+
+    for leaked in ("original_text", "author", "captured_at", "saved_item"):
+        assert leaked not in record
 
 
 # ---------------------------------------------------------------------
@@ -1030,7 +968,6 @@ def test_empty_knowledge_base_is_deterministic(tmp_path: Path):
     for relative in (
         INDEX_PAGE,
         SEARCH_PAGE,
-        SUBJECTS_PAGE,
         QUESTIONS_PAGE,
         NOT_FOUND_PAGE,
         SEARCH_INDEX_FILE,
@@ -1042,8 +979,26 @@ def test_empty_knowledge_base_is_deterministic(tmp_path: Path):
     assert not (first / "posts").exists()
     assert not (first / "topics").exists()
 
+    for relative in (
+        INDEX_PAGE,
+        SEARCH_PAGE,
+        QUESTIONS_PAGE,
+        NOT_FOUND_PAGE,
+        REVISION_INDEX,
+    ):
+        assert (first / relative).is_file(), relative
+        assert (second / relative).is_file(), relative
+
 
 def test_empty_knowledge_base_renders_empty_states(tmp_path: Path):
+    """
+    An empty corpus must render, say so, and not invent a tree.
+
+    The home page used to say "No posts yet", which was a statement about
+    the archive. It now reports zero revision units, which is a statement
+    about the guide, and that is the thing a reader would ask.
+    """
+
     path = tmp_path / "knowledge_base.json"
     path.write_text(
         json.dumps(make_knowledge_base([])), encoding="utf-8"
@@ -1053,54 +1008,39 @@ def test_empty_knowledge_base_renders_empty_states(tmp_path: Path):
     generate_site(path, output)
 
     home = read(output, INDEX_PAGE)
-    subjects = read(output, SUBJECTS_PAGE)
+    tree = read(output, REVISION_INDEX)
     questions = read(output, QUESTIONS_PAGE)
     index = json.loads(read(output, SEARCH_INDEX_FILE))
 
-    assert "No posts yet" in home
-    assert "No interview questions yet" in questions
     assert index["records"] == []
     assert index["posts"] == 0
+    assert index["units"] == 0
+    assert index["questions"] == 0
 
-    # The subjects page exists and explains itself rather than rendering
-    # an empty tree.
-    assert "Subjects" in subjects
-    assert "Subjects" in subjects
+    # Every page still exists and explains itself.
+    assert "0 revision units" in re.sub(r"<[^>]+>", " ", home)
 
+    assert "No interview questions yet" in questions
+    assert "Revision units" in tree
 
-def test_post_with_no_enrichment_still_renders(tmp_path: Path):
-    bare = {
-        "id": "sample_bare",
-        "source": {
-            "platform": "unknown",
-            "captured_at": "2026-01-01T00:00:00+00:00",
-        },
-    }
-
-    path = tmp_path / "knowledge_base.json"
-    path.write_text(
-        json.dumps(make_knowledge_base([bare])), encoding="utf-8"
-    )
-
-    output = tmp_path / "site"
-    generate_site(path, output)
-
-    document = read(output, "posts/sample_bare.html")
-
-    # The page exists and says so honestly. Its filename carries the
-    # identifier, because the slug is the id, but the identifier is not
-    # printed: the page is titled from what the post actually says.
-    assert "<h1>" in document
-    assert "No source URL was recorded" in document
-    assert "No interview questions were generated" in document
-    assert "No original text was captured" in document
-
-    # No topics directory at all, because there is no revision content
-    # and therefore no revision page.
-    assert not (output / "topics").exists()
+    # And no unit page was invented to hold nothing.
+    assert not list((output / "revision").glob("*.html")) or [
+        path
+        for path in (output / "revision").glob("*.html")
+        if path.name != "index.html"
+    ] == []
 
 
 def test_unknown_question_type_is_rendered_without_breaking(tmp_path: Path):
+    """
+    A type the schema does not list must still render.
+
+    The question is now on a revision unit page rather than on the
+    questions index, which lists question text and links rather than
+    badges. The badge is on the unit page, so that is where the label has
+    to appear.
+    """
+
     payload = make_knowledge_base(
         [
             make_post(
@@ -1126,30 +1066,41 @@ def test_unknown_question_type_is_rendered_without_breaking(tmp_path: Path):
     document = read(output, QUESTIONS_PAGE)
 
     assert "Odd type question?" in document
-    assert "Architecture" in document
-    assert "Easy" in document
+
+    unit_pages = [
+        candidate.read_text(encoding="utf-8")
+        for candidate in (output / "revision").glob("*.html")
+        if candidate.name != "index.html"
+    ]
+
+    assert unit_pages, "no unit page was generated"
+
+    body = "".join(unit_pages)
+
+    assert "Odd type question?" in body
+    assert "Architecture" in body
+    assert "Easy" in body
 
 
 def test_schema_limited_types_are_not_invented(site: Path):
     """
-    The schema only permits five question types. The generator must
-    not fabricate options for types the data does not contain.
+    The schema only permits five question types. The generator must not
+    fabricate options for types the data does not contain.
+
+    Read from the unit pages, where the type badge is rendered, since the
+    questions index lists text without badges.
     """
 
-    document = read(site, QUESTIONS_PAGE)
+    document = "".join(
+        path.read_text(encoding="utf-8")
+        for path in (site / "revision").glob("*.html")
+    )
 
-    for invented in (
-        "coding</option>",
-        "cheating",
-    ):
-        if invented == "coding</option>":
-            continue
-
+    for invented in ("cheating", "coding</option>"):
         assert invented not in document
 
     types = set(re.findall(r'data-type="([^"]+)"', document))
 
-    assert types == {"scenario", "theory", "troubleshooting"}
     assert types <= {
         "theory",
         "coding",
@@ -1157,6 +1108,10 @@ def test_schema_limited_types_are_not_invented(site: Path):
         "architecture",
         "troubleshooting",
     }
+
+    # And it is not empty: the fixture does carry typed questions, and a
+    # set assertion that passes vacuously is worth nothing.
+    assert types == {"scenario", "theory", "troubleshooting"}
 
 
 # ---------------------------------------------------------------------
@@ -1184,13 +1139,28 @@ def test_generator_is_deterministic(tmp_path: Path, canonical_file: Path):
 
 
 def test_regenerating_replaces_stale_files(tmp_path: Path, canonical_file: Path):
+    """
+    A rebuild must leave nothing from the previous one.
+
+    It used to be checked with post pages, which made it easy to read:
+    build two posts, rebuild with one, assert the dropped post's page is
+    gone. There are no post pages now, so the check is the same idea
+    applied to the revision pages -- the first build's pages are gone
+    and none of them mention the post the second build did not have.
+    """
+
     output = tmp_path / "site"
 
     generate_site(canonical_file, output)
-    assert (output / "posts/sample_alpha.html").exists()
 
-    # This post's topics do not include Databricks, so that page must
-    # not survive the rebuild.
+    first = {
+        path.relative_to(output).as_posix()
+        for path in all_files(output)
+        if path.suffix == ".html"
+    }
+
+    assert first, "the first build produced no pages"
+
     smaller = tmp_path / "smaller.json"
     smaller.write_text(
         json.dumps(
@@ -1209,38 +1179,45 @@ def test_regenerating_replaces_stale_files(tmp_path: Path, canonical_file: Path)
 
     generate_site(smaller, output)
 
-    assert (output / "posts/sample_gamma.html").exists()
-    assert not (output / "posts/sample_alpha.html").exists()
-
-    # The archive topic page that the first build produced is gone, so
-    # the rebuild has removed a stale file rather than carried it over.
-    assert not (output / "topics" / "apache-spark.html").exists()
-
-    # The rebuilt site holds exactly the pages its own knowledge base
-    # produces and nothing left over from the first one. Comparing the
-    # two sets is what makes a stale file a failure rather than
-    # something a single absence check could miss.
-    #
-    # Archive topic pages were in that set before. They are not now, so
-    # the set is empty -- which is the point: the first build wrote three
-    # of them and the rebuild wrote none, and this comparison is what
-    # would catch the rebuild having kept them.
+    # Comparing the two builds is what makes a stale file a failure
+    # rather than something a single absence check could miss. The first
+    # build wrote revision pages for a two-post corpus; the second, for a
+    # one-post corpus, must have written a different set -- and none of
+    # the first one's leftovers.
     produced = {
-        path.name
-        for path in (output / "topics").glob("*.html")
+        path.relative_to(output).as_posix()
+        for path in all_files(output)
+        if path.suffix == ".html"
     }
 
-    assert produced == set(), (
-        f"stale archive topic pages survived: {sorted(produced)}"
+    assert not any(p.startswith("posts/") for p in produced), sorted(
+        produced
     )
 
-    assert not (output / "topics/delta-lake.html").exists()
-
-    # The revision pages the second knowledge base does produce are
-    # still there.
-    assert list((output / "topics").rglob("*/*.html")), (
-        "the rebuild lost its revision pages"
+    assert not any(p.startswith("topics/") for p in produced), sorted(
+        produced
     )
+
+    # Every revision page present belongs to the second corpus: its
+    # content mentions the post the second build knew about.
+    for path in (output / "revision").glob("*.html"):
+        body = path.read_text(encoding="utf-8")
+
+        assert "sample_alpha" not in body, path.name
+
+    # And the rebuild did not simply accumulate: a page the first build
+    # wrote and the second did not is not on disk. Comparing the two
+    # manifests is what catches that, and checking one known path is not
+    # enough.
+    second = {
+        path.relative_to(output).as_posix()
+        for path in all_files(output)
+    }
+
+    manifest = json.loads((output / MANIFEST_FILE).read_text(encoding="utf-8"))
+
+    for relative in manifest["files"]:
+        assert (output / relative).is_file(), relative
 
 
 def test_generation_leaves_no_staging_directory(

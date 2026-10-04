@@ -37,11 +37,17 @@ SEARCH_PAGE = "search.html"
 QUESTIONS_PAGE = "questions.html"
 NOT_FOUND_PAGE = "404.html"
 
-#: The revision tree: Subject, then Subtopic. Named separately from
-#: :data:`TOPICS_PAGE` because the two are different things and used to be
-#: confused. "Topics" was the archive's grouping of posts by corpus
-#: label; "subjects" is what a candidate revises. Only the latter is
-#: generated.
+#: The revision tree: one page per revision unit, listed by group.
+#:
+#: This was ``subjects.html`` when the tree was the taxonomy's 14
+#: subjects and 154 subtopics. The taxonomy still does the placing; the
+#: tree a reader walks is now the 22 units, and it lives under
+#: ``revision/`` next to the pages it lists.
+REVISION_INDEX = "revision/index.html"
+
+#: Retained as a name because the taxonomy's own subject index still
+#: exists as a renderer and several tests exercise it. Nothing is
+#: written at this path.
 SUBJECTS_PAGE = "subjects.html"
 
 # Retained as names because the renderers and the model still describe

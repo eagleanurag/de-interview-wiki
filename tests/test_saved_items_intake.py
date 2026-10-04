@@ -1916,6 +1916,13 @@ class TestSavedItemsPage:
 
         return build_site_model(load_canonical(self._kb_path))
 
+    def _curriculum(self):
+        """The taxonomy, which is what the revision units are built on."""
+
+        from src.wiki.curriculum import build_curriculum
+
+        return build_curriculum(list(self._model().posts))
+
     def _knowledge_base(self, posts: list[dict]) -> dict:
         slugs = [f"posts/{post['id']}.html" for post in posts]
 
@@ -2064,55 +2071,6 @@ class TestSavedItemsPage:
                 encoding="utf-8"
             )
 
-    def test_the_saved_item_provenance_is_still_on_the_post(
-        self, tmp_path: Path
-    ):
-        """
-        The part that mattered.
-
-        A saved item still exists, still says which list it came from and
-        when, and still reaches the reader as one human-readable line --
-        "LinkedIn post, saved from a list" -- rather than as an index of
-        ids.
-        """
-
-        site = self._site(tmp_path, [self._saved_post()])
-
-        post = next(iter(self._model().posts))
-
-        assert post.saved_item is not None
-        assert post.saved_item.saved_item_id == "urn:li:saved:abc001"
-        assert str(post.saved_item.saved_date) == "2026-01-02"
-
-        body = (
-            site / "posts" / "urn-li-saved-abc001.html"
-        ).read_text(encoding="utf-8")
-
-        assert "saved from a list" in body
-
-        # But not the id, and not a "Saved on" field. The date that does
-        # appear is the post's own published date, which is provenance a
-        # reader can use; the saved date is metadata about the capture.
-        assert "urn:li:saved:abc001" not in body
-        assert "Saved on" not in body
-
-        import re as _re
-
-        labels = _re.findall(r"<dt>(.*?)</dt>", body)
-
-        assert set(labels) <= {"Source", "Author"}, labels
-
-    def test_every_saved_post_still_has_its_own_page(self, tmp_path: Path):
-        site = self._site(
-            tmp_path,
-            [self._saved_post(number=number) for number in range(1, 6)],
-        )
-
-        # Five items, five knowledge pages, and no index listing them.
-        # A saved list runs to hundreds of links and most have no
-        # capture, so an index of them was never worth the page it cost.
-        assert not (site / "saved-items.html").exists()
-        assert len(list((site / "posts").glob("*.html"))) == 5
 
     def test_generation_is_deterministic(self, tmp_path: Path):
         first = self._site(tmp_path / "a", [self._saved_post()])
@@ -2123,32 +2081,40 @@ class TestSavedItemsPage:
                 encoding="utf-8"
             ) == (second / name).read_text(encoding="utf-8")
 
-        posts = sorted((first / "posts").glob("*.html"))
+        # Revision pages, not post pages: one page per captured post is
+        # the archive's shape, and comparing two builds byte for byte is
+        # what proves the output is deterministic rather than merely
+        # similar.
+        for pattern in ("revision/*.html", "index.html", "questions.html"):
+            for page in sorted(first.glob(pattern)):
+                assert page.read_text(encoding="utf-8") == (
+                    second / page.relative_to(first)
+                ).read_text(encoding="utf-8"), page
 
-        assert posts, "no post pages were generated"
-
-        for page in posts:
-            assert page.read_text(
-                encoding="utf-8"
-            ) == (second / "posts" / page.name).read_text(encoding="utf-8")
-
-    def test_a_technology_search_reaches_the_post(self, tmp_path: Path):
-        from src.wiki.search_index import build_search_index
+    def test_a_search_reaches_the_unit_that_teaches_the_topic(
+        self, tmp_path: Path
+    ):
+        from src.wiki.search_index import build_index
+        from src.wiki.revision_model import build_units
 
         self._site(tmp_path, [self._saved_post()])
 
-        index = build_search_index(self._model())
+        index = build_index(build_units(self._curriculum()))
 
-        post_records = [
-            record for record in index["records"]
-            if record["k"] == "p"
+        unit_records = [
+            record for record in index["records"] if record["k"] == "b"
         ]
 
-        # Without this a search for "Delta Lake" finds the technology
-        # page and nothing else, so the post that discusses it stays
-        # unreachable by the name a reader would type.
-        assert post_records
-        assert "Delta Lake" in post_records[0]["t"]
+        assert unit_records
+
+        # Without this, a search for "Delta Lake" reaches nothing, because
+        # the technology label lives on the post and the post has no page.
+        # The unit carries its concepts, and concepts are what a reader
+        # actually types.
+        assert any(
+            "Delta Lake" in record["c"] or "Delta Lake" in record["s"]
+            for record in unit_records
+        ), [r["c"] for r in unit_records]
 
     def test_the_client_searches_technologies(self):
         script = Path("src/wiki/assets/search.js").read_text(

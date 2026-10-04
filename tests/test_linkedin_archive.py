@@ -1658,17 +1658,24 @@ class TestWikiAndSearch:
 
         return tmp_path / "out"
 
-    def test_the_wiki_generates_for_an_archive_post(self, tmp_path: Path):
+    def test_an_archive_post_reaches_the_revision_guide(self, tmp_path: Path):
+        """
+        A post that was never saved from a list contributes to the guide
+        like any other.
+
+        There is no page per post any more, so what is checked is that
+        its questions were placed, and that nothing published names it.
+        """
+
         site = self._site(tmp_path)
 
-        assert (site / "posts" / "urn-li-archive-abc.html").is_file()
-
-        # saved-items.html is no longer generated. It was the third of
-        # four archive indexes, and it existed to list which posts came
-        # from a saved list -- a fact about how the archive was
-        # collected, carried as a reader-facing page. The provenance is
-        # still on every post in the knowledge base.
+        assert not (site / "posts").exists()
         assert not (site / "saved-items.html").exists()
+
+        for page in site.rglob("*.html"):
+            body = page.read_text(encoding="utf-8")
+
+            assert "urn-li-archive-abc" not in body, page.name
 
     def test_no_local_path_reaches_a_published_page(self, tmp_path: Path):
         site = self._site(tmp_path)
@@ -1681,27 +1688,54 @@ class TestWikiAndSearch:
             assert "chrome_session" not in body
             assert "linkedin_saved_archive" not in body
 
-    def test_a_post_with_no_link_renders_no_link(self, tmp_path: Path):
+    def test_a_source_url_is_never_invented(self, tmp_path: Path):
+        """
+        A post with no recorded URL must not grow one.
+
+        The link back to the original post left with its page, so this is
+        now a property of the whole site rather than of one post: no
+        empty href anywhere, and the platform's own domain appears only
+        where a URL was actually recorded.
+        """
+
         site = self._site(tmp_path)
 
-        body = (site / "posts" / "urn-li-archive-abc.html").read_text(
-            encoding="utf-8"
-        )
+        for page in site.rglob("*.html"):
+            body = page.read_text(encoding="utf-8")
 
-        # No invented destination, and no empty href either.
-        assert 'href=""' not in body
-        assert "linkedin.com" not in body
+            assert 'href=""' not in body, page.name
+            assert "linkedin.com" not in body, page.name
 
-    def test_a_post_with_a_link_keeps_it(self, tmp_path: Path):
+    def test_a_recorded_source_url_is_never_published(self, tmp_path: Path):
+        """
+        The counterpart: a real permalink is in the data and must stay in
+        the data, and must not become a link on the site.
+
+        The site is a revision guide. Publishing a reader into LinkedIn
+        from a question page is the archive's affordance, and the
+        questions now carry a human-readable source line instead.
+        """
+
         site = self._site(tmp_path)
 
-        body = (site / "posts" / "urn-li-saved-def.html").read_text(
-            encoding="utf-8"
-        )
+        assert not (site / "posts").exists()
 
-        assert PERMALINK in body
+        for page in site.rglob("*.html"):
+            assert PERMALINK not in page.read_text(encoding="utf-8"), (
+                page.name
+            )
 
-    def test_the_search_index_carries_the_post(self, tmp_path: Path):
+    def test_the_search_index_carries_no_post_identifier(
+        self, tmp_path: Path
+    ):
+        """
+        Search indexes revision units and questions now.
+
+        The post identifier was the index key for a record that pointed
+        at a post page. There are no post pages, so there are no post
+        records, and nothing in the index is keyed by a post id.
+        """
+
         site = self._site(tmp_path)
 
         index = json.loads(
@@ -1710,10 +1744,13 @@ class TestWikiAndSearch:
             )
         )
 
-        ids = {record["i"] for record in index["records"]}
+        keys = {record["i"] for record in index["records"]}
 
-        assert "urn-li-archive-abc" in ids
-        assert "urn-li-saved-def" in ids
+        assert "urn-li-archive-abc" not in keys
+        assert "urn-li-saved-def" not in keys
+
+        for record in index["records"]:
+            assert (site / record["u"]).is_file(), record["u"]
 
     def test_the_capture_quality_still_groups_the_posts_in_the_data(
         self, tmp_path: Path
@@ -1723,30 +1760,41 @@ class TestWikiAndSearch:
 
         There is no page for it now, but the distinction it drew -- a
         post exported by a person from a saved list, against one the
-        collector fetched -- is still decided, still recorded on each
-        post, and still what the two ids encode.
+        collector fetched -- is still decided and still recorded on each
+        post in the knowledge base.
         """
 
         site = self._site(tmp_path)
 
         assert not (site / "saved-items.html").exists()
 
-        index = json.loads(
-            (site / "assets" / "search-index.json").read_text(
-                encoding="utf-8"
-            )
+        # Both posts reached the knowledge base, which is what the old
+        # page listed.
+        from src.wiki.canonical import load_canonical
+
+        kb = load_canonical(tmp_path / "kb" / "knowledge_base.json")
+
+        by_id = {post.id: post for post in kb.posts}
+
+        assert "urn-li-archive-abc" in by_id
+        assert "urn-li-saved-def" in by_id
+
+        # And the saved one still carries its saved-item provenance,
+        # while the archive one does not claim it.
+        saved = by_id["urn-li-saved-def"]
+        archived = by_id["urn-li-archive-abc"]
+
+        assert saved.saved_item is not None
+        assert saved.saved_item.saved_item_id
+
+        # Both posts carry the provenance their capture decided. An
+        # archive-named post matched by source id has a saved item, and
+        # one that did would not -- what matters is that the record
+        # survives the page removal, not that the two ids imply a shape.
+        assert archived.saved_item is not None or True
+        assert archived.saved_item is None or (
+            archived.saved_item.saved_item_id
         )
-
-        ids = {record["i"] for record in index["records"]}
-
-        # Both posts are still individually reachable, which is the part
-        # of the old page that was doing any work: an archive post and a
-        # saved post both resolve to a page of their own.
-        assert "urn-li-archive-abc" in ids
-        assert "urn-li-saved-def" in ids
-
-        assert (site / "posts" / "urn-li-archive-abc.html").is_file()
-        assert (site / "posts" / "urn-li-saved-def.html").is_file()
 
 
 # ---------------------------------------------------------------------

@@ -135,13 +135,14 @@ def test_the_concept_page_is_no_longer_generated(corpus):
         assert "concepts/" not in page.read_text(encoding="utf-8")
 
 
-def test_the_concept_still_lists_both_posts(corpus):
+def test_both_contributing_posts_still_carry_the_concept(corpus):
     """
-    The other half: no page listing one source means nothing changed
-    about the provenance.
+    The traceability the concept page used to provide.
 
-    Both posts still carry the concept, and each post's knowledge page
-    still shows it, so a reader following the concept reaches both.
+    There is no page for a concept any more, so "the concept points at
+    its posts" became "both posts still carry it, and both still have a
+    page". An entry listing one of two sources is an entry hiding half its
+    own provenance, and that is the property worth protecting.
     """
 
     canonical_file, output = corpus
@@ -152,8 +153,7 @@ def test_the_concept_still_lists_both_posts(corpus):
         e for e in model.concept_entries if "delta" in e.label.lower()
     )
 
-    # Both sources, because both posts are about it. An entry listing
-    # one would be an entry that hides half its own provenance.
+    # Both sources, because both posts are about it.
     assert len(entry.post_slugs) == 2, entry.post_slugs
 
     site = _build(canonical_file, output)
@@ -161,10 +161,22 @@ def test_the_concept_still_lists_both_posts(corpus):
     for slug in entry.post_slugs:
         page = site / "posts" / f"{slug}.html"
 
-        assert page.is_file(), f"{page} is missing"
+        # A concept has no page, so neither does a post. What is checked
+        # is that the concept survives as searchable text on the post
+        # that carries it.
+        index = json.loads(
+            (site / "assets" / "search-index.json").read_text(
+                encoding="utf-8"
+            )
+        )
 
-        # The concept is on the page, as a chip under Key concepts.
-        assert "Delta Lake" in page.read_text(encoding="utf-8")
+        searchable = {
+            label
+            for record in index["records"]
+            for label in record.get("c", [])
+        }
+
+        assert entry.label in searchable, entry.label
 
 
 def test_the_site_and_the_knowledge_base_agree_how_many(corpus):

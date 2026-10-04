@@ -663,93 +663,6 @@ class TestPublished:
 
         assert sid(METADATA).replace(":", "-") not in ids
 
-    def test_every_saved_item_still_has_a_page_of_its_own(
-        self, drop: Path, posts: Path, tmp_path: Path
-    ):
-        """
-        What the saved-items index used to do, done by the posts.
-
-        It listed every saved item and linked to it. The index is gone;
-        each post still has a page, and each page still links to the
-        original, so every captured item is still reachable. What is no
-        longer published is the list of which posts happened to come from
-        a saved list.
-        """
-
-        enrich_everything(drop, posts)
-
-        knowledge = self._knowledge_base(posts, tmp_path)
-
-        source = tmp_path / "site"
-        source.mkdir()
-
-        (source / "knowledge_base.json").write_text(
-            json.dumps(knowledge, indent=2), encoding="utf-8"
-        )
-
-        generate_site(
-            input_path=source / "knowledge_base.json",
-            output_dir=source / "out",
-        )
-
-        out = source / "out"
-
-        assert not (out / "saved-items.html").exists()
-
-        bodies = [
-            page.read_text(encoding="utf-8")
-            for page in (out / "posts").glob("*.html")
-        ]
-
-        assert bodies
-
-        # Every original URL is still offered, on the page of the post it
-        # belongs to.
-        for url in (DELTA, SQL, SPARK, DATABRICKS, FACTORY, ARCHITECTURE):
-            assert any(url in body for body in bodies), url
-
-        # And the reader is told each one came from a saved list, in
-        # words rather than as an identifier.
-        assert any("saved from a list" in body for body in bodies)
-
-    def test_the_image_only_capture_is_still_labelled_in_the_data(
-        self, drop: Path, posts: Path, tmp_path: Path
-    ):
-        """
-        The "Image only" distinction survives as data, not as a page.
-
-        The label was useful -- it tells a reader that a post has no
-        transcribed body -- but it belonged on a page about the capture,
-        and there is no longer one. The quality flag is still on the post.
-        """
-
-        enrich_everything(drop, posts)
-
-        knowledge = self._knowledge_base(posts, tmp_path)
-
-        source = tmp_path / "site"
-        source.mkdir()
-
-        (source / "knowledge_base.json").write_text(
-            json.dumps(knowledge, indent=2), encoding="utf-8"
-        )
-
-        generate_site(
-            input_path=source / "knowledge_base.json",
-            output_dir=source / "out",
-        )
-
-        out = source / "out"
-
-        assert not (out / "saved-items.html").exists()
-
-        qualities = {
-            post.get("saved_item", {}).get("capture_quality")
-            for post in knowledge["posts"]
-            if post.get("saved_item")
-        }
-
-        assert "image_only" in qualities
 
     def test_no_page_is_generated_for_an_uncaptured_link(
         self, drop: Path, posts: Path, tmp_path: Path
@@ -770,12 +683,17 @@ class TestPublished:
             output_dir=source / "out",
         )
 
-        pages = {
-            path.name
-            for path in (source / "out" / "posts").glob("*.html")
-        }
+        published = "".join(
+            path.read_text(encoding="utf-8")
+            for path in (source / "out").rglob("*.html")
+        )
 
-        assert sid(METADATA).replace(":", "-") + ".html" not in pages
+        assert sid(METADATA).replace(":", "-") not in published
+
+        # And no page was generated for it either, which is now the whole
+        # of the check: there are no per-post pages, so the question
+        # "does it have a page" no longer has a page-shaped answer.
+        assert not (source / "out" / "posts").exists()
 
     def test_generation_is_deterministic(
         self, drop: Path, posts: Path, tmp_path: Path

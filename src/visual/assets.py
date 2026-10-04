@@ -31,6 +31,7 @@ import hashlib
 import re
 from pathlib import Path
 
+from src.paths import candidate_path
 from src.visual.models import (
     AssetRole,
     ProcessingState,
@@ -76,11 +77,25 @@ def contained_media_path(media_root: Path, candidate: str | Path) -> Path:
     that catches all of the escapes at once. Rejecting ``..`` as a
     substring would miss a symlink, and checking the string starts with
     the root would miss both a symlink and a different drive.
+
+    Resolution alone is not enough across platforms, though. On Linux a
+    backslash is an ordinary filename character, so ``..\\outside.jpg``
+    resolves *inside* the root and ``C:/Windows/System32/cmd.exe`` is a
+    relative name rather than an absolute path; both were accepted on the
+    Linux runner and refused on the machine that wrote them. The
+    candidate is normalised by :mod:`src.paths` first, so a path written
+    on Windows is judged the same way wherever it is read.
     """
 
     root = Path(media_root).resolve()
 
-    raw = Path(candidate)
+    raw = candidate_path(candidate)
+
+    if raw is None:
+        raise UnsafePath(
+            f"{candidate!r} is a drive, UNC or namespace path, and "
+            f"cannot name a file inside the media root {root}"
+        )
 
     # An absolute path in the JSON is treated as relative to the root
     # first, because the archive records bare filenames and a future

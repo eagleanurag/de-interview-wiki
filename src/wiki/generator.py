@@ -46,7 +46,8 @@ from src.wiki.naming import (
 )
 from src.wiki.saved_items import render_saved_items
 from src.wiki.curriculum import build_curriculum
-from src.wiki.revision import curriculum_pages
+from src.wiki.revision_model import build_units
+from src.wiki.unit_pages import unit_pages
 from src.wiki.ocr_index import write_ocr_index
 from src.wiki.pages import (
     render_concept_detail,
@@ -54,7 +55,6 @@ from src.wiki.pages import (
     render_home,
     render_not_found,
     render_post_detail,
-    render_questions,
     render_search,
     render_technology_detail,
     render_technologies_index,
@@ -128,43 +128,38 @@ def _write_site(model, staging: Path) -> list[str]:
     """Write every page and asset. Returns relative POSIX paths."""
 
     written: list[str] = []
-    # Built once, up front, and attached to the model everything below
-    # renders from. It has to be up front: a knowledge page links to
-    # neighbouring subtopics and cannot know which subtopics have
-    # pages without it. Built after the post pages had already been
-    # rendered, it left every one of them with no Related section --
-    # which is the section a reader uses to decide where to go next.
+
+    # The revision model, built up front because every page below renders
+    # from it.
+    #
+    #   KnowledgePost -> Curriculum (14 subjects, 154 subtopics)
+    #                 -> Units     (22 revision units, paginated)
+    #
+    # Both middle steps exist. The curriculum places every question in
+    # exactly one of 154 buckets; the units say what a person revises,
+    # which is coarser. Only the units are published.
     curriculum = build_curriculum(list(model.posts))
 
     model = replace(model, curriculum=curriculum)
 
+    units = build_units(curriculum)
 
     # The reader-facing pages, and only those.
     #
-    # The evidence layer -- 5,786 archive topic pages, 3,112 concept
-    # pages, 44 technology pages, saved-items, and the four indexes that
-    # listed them -- used to be written here as well, which made 8,946 of
-    # the site's 9,595 pages a browsable archive of labels the corpus
-    # generated. The revision curriculum already represents all of it
-    # readably: a concept sits under the subtopic that teaches it, a
-    # technology under the subject that uses it.
-    #
-    # Nothing is lost. Every concept, technology, topic grouping and
-    # saved-item provenance record is still in the knowledge base, still
-    # reachable through the search index's data layer, and still counted
-    # by the manifest. What stops is the reader being sent there.
+    # There used to be 649: 490 knowledge pages, one per source post,
+    # plus 154 subtopic pages and five indexes. The posts were the
+    # archive showing through -- publishing a page per captured post is
+    # the shape of the corpus, not of the product. A revision guide has
+    # one page per thing a candidate revises, and the posts stay in the
+    # knowledge base.
     pages = {
-        INDEX_PAGE: render_home(model),
         SEARCH_PAGE: render_search(model),
-        QUESTIONS_PAGE: render_questions(model),
         NOT_FOUND_PAGE: render_not_found(model),
     }
 
-    for post, slug in zip(model.posts, model.post_slugs):
-        page = f"posts/{slug}.html"
-        pages[page] = render_post_detail(model, post, slug)
+    pages.update(unit_pages(units))
 
-    for relative, document in pages.items():
+    for relative, document in sorted(pages.items()):
         _write_text(staging, relative, document)
         written.append(relative)
 
@@ -175,13 +170,7 @@ def _write_site(model, staging: Path) -> list[str]:
         shutil.copyfile(asset, target)
         written.append(relative)
 
-    revision = curriculum_pages(curriculum, model)
-
-    for relative, document in sorted(revision.items()):
-        _write_text(staging, relative, document)
-        written.append(relative)
-
-    write_search_index(model, staging / SEARCH_INDEX_FILE)
+    write_search_index(units, staging / SEARCH_INDEX_FILE)
     written.append(SEARCH_INDEX_FILE)
 
     # Written unconditionally, even when empty. An absent file and an

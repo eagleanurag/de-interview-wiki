@@ -15,6 +15,8 @@ from __future__ import annotations
 import json
 import os
 import re
+import threading
+import time
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,6 +25,32 @@ from pathlib import Path
 CHECKPOINT_DIRECTORY = Path(".agent") / "checkpoints"
 CURRENT_FILE = CHECKPOINT_DIRECTORY / "current.json"
 README_FILE = CHECKPOINT_DIRECTORY / "README.md"
+
+#: How many times a rename onto the destination is retried, and how long
+#: to wait first.
+#:
+#: One attempt is the normal case. The retries exist because Windows
+#: refuses a rename while another handle has the destination open, and a
+#: reader opening the checkpoint is exactly that. Without a delay the
+#: retries all land inside the same window and every one fails: measured
+#: over 320 concurrent writes with 8 threads and a reader on each, five
+#: immediate attempts lost 197. The delay matters more than the count.
+_REPLACE_ATTEMPTS = 8
+_REPLACE_BACKOFF_SECONDS = 0.02
+
+#: Serialises read and write within one process.
+#:
+#: Enrichment runs one worker per post in threads and every worker writes
+#: the same checkpoint. On Windows a rename onto a file that any handle
+#: has open is refused outright, so a reader in one thread blocks a
+#: writer in another -- measured, five immediate retries lost 197 of 320
+#: concurrent writes, and eight of those failures moved to the reader
+#: itself, which could no longer open the file it was trying to read.
+#:
+#: The lock fixes the in-process case outright rather than narrowing the
+#: race. The retry stays, because two pipeline runs on one machine are
+#: genuinely separate processes and the lock cannot help there.
+_LOCK = threading.RLock()
 
 SCHEMA_VERSION = 1
 
@@ -207,15 +235,16 @@ def read(root: str | Path = ".") -> Checkpoint | None:
 
     path = current_file(root)
 
-    if not path.is_file():
-        return None
+    with _LOCK:
+        if not path.is_file():
+            return None
 
-    try:
-        payload = json.loads(
-            path.read_text(encoding="utf-8", errors="replace")
-        )
-    except json.JSONDecodeError:
-        return None
+        try:
+            payload = json.loads(
+                path.read_text(encoding="utf-8", errors="replace")
+            )
+        except json.JSONDecodeError:
+            return None
 
     if not isinstance(payload, dict):
         return None
@@ -235,7 +264,26 @@ def read(root: str | Path = ".") -> Checkpoint | None:
 
 
 def write(checkpoint: Checkpoint, root: str | Path = ".") -> Path:
-    """Persist a checkpoint after verifying it carries no credential."""
+    """
+    Persist a checkpoint after verifying it carries no credential.
+
+    Written atomically, which means: to a temporary file of its own, then
+    renamed over the target. The temporary name has to be unique per
+    write, and it was not.
+
+    Enrichment runs one worker per post in threads, and every worker
+    writes the same checkpoint in the same directory. With a fixed name
+    they shared one temporary file, so two workers could open it, one
+    could rename it out from under the other, and the second rename
+    failed with a ``PermissionError`` -- reported as a pipeline error
+    with nothing to do with the pipeline. A reader could equally have
+    seen a half-written file.
+
+    Last writer still wins, which is correct: the checkpoint records that
+    a phase was reached, not how many posts reached it. What has to hold
+    is that a reader never sees a partial file, and that two writers never
+    collide on the same temporary.
+    """
 
     checkpoint.touch()
 
@@ -254,15 +302,42 @@ def write(checkpoint: Checkpoint, root: str | Path = ".") -> Path:
     directory.mkdir(parents=True, exist_ok=True)
 
     path = current_file(root)
-    temporary = path.with_suffix(".json.tmp")
 
-    temporary.write_text(
-        json.dumps(payload, indent=2, sort_keys=True),
-        encoding="utf-8",
-    )
-    temporary.replace(path)
+    # Unique per write: the thread id, the process id and a counter, so
+    # two threads in one process and two processes on one machine both
+    # get a temporary of their own.
+    stamp = f"{os.getpid()}-{threading.get_ident()}"
 
-    _ensure_readme(directory)
+    body = json.dumps(payload, indent=2, sort_keys=True)
+
+    with _LOCK:
+        for attempt in range(_REPLACE_ATTEMPTS):
+            temporary = path.with_name(
+                f"{path.name}.{stamp}.{attempt}.tmp"
+            )
+
+            temporary.write_text(body, encoding="utf-8")
+
+            try:
+                os.replace(temporary, path)
+
+            except PermissionError:
+                # Another process is holding the destination. Removing
+                # our own temporary and waiting is safe: the target is
+                # still the last complete version, which is what the
+                # reader is being shown.
+                temporary.unlink(missing_ok=True)
+
+                if attempt == _REPLACE_ATTEMPTS - 1:
+                    raise
+
+                time.sleep(_REPLACE_BACKOFF_SECONDS)
+
+                continue
+
+            break
+
+        _ensure_readme(directory)
 
     return path
 

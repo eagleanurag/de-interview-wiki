@@ -38,6 +38,7 @@ from src.gemini.models import (
     GeminiImageRecord,
     MatchVerdict,
 )
+from src.paths import candidate_path
 
 
 #: The archive's own naming, reused rather than restated so that a change
@@ -68,11 +69,23 @@ def contained(media_root: Path, candidate: str | Path) -> Path:
     paths are data. Comparing two *resolved* paths is what defeats
     ``..``, absolute paths, drive letters, UNC paths and symlinks in one
     step, because resolution has already followed the last two.
+
+    What resolution alone does *not* defeat is a separator the local
+    platform does not recognise: on Linux ``..\\outside.jpg`` is one
+    filename, so it resolves inside the root and nothing raises. The
+    candidate is therefore normalised first, by :mod:`src.paths`, so a
+    path written on Windows is judged the same way wherever it is read.
     """
 
     root = Path(media_root).resolve()
 
-    raw = Path(candidate)
+    raw = candidate_path(candidate)
+
+    if raw is None:
+        raise ArchiveError(
+            f"{candidate!r} is a drive, UNC or namespace path, and "
+            f"cannot name a file inside {root}"
+        )
 
     joined = raw if raw.is_absolute() else root / raw
 
