@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-172",
+  "activity_id": "7340257429995077633",
+  "images": [
+    {
+      "post_id": "POST-172",
+      "activity_id": "7340257429995077633",
+      "filename": "activity_7340257429995077633_slide_0.jpg",
+      "path": "media/activity_7340257429995077633_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 21410,
+      "declared_sha256": "12f4d61abe0d323becb9971091f79c7858a3d181057d4ba538ac678f9b98bf2b",
+      "actual_sha256": "12f4d61abe0d323becb9971091f79c7858a3d181057d4ba538ac678f9b98bf2b",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SQL OPTIMIZATION\nINTERVIEW\nQUESTION\n\nSk snowflake aMazon\n—7",
+      "redactions": 0,
+      "search_text": "SQL OPTIMIZATION INTERVIEW QUESTION Sk snowflake aMazon —7",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "59 chars, 7 words, 83% letters, 3% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "f909550c24bed16eae1b500066703e207a4a4dbcdb6898cd1752aa6e315d5b90"
+    }
+  ]
+}

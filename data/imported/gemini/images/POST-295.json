@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-295",
+  "activity_id": "7463473804212842496",
+  "images": [
+    {
+      "post_id": "POST-295",
+      "activity_id": "7463473804212842496",
+      "filename": "activity_7463473804212842496_slide_0.jpg",
+      "path": "media/activity_7463473804212842496_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 320,
+      "height": 480,
+      "size_bytes": 16151,
+      "declared_sha256": "ed55ce572846ce5628214a5b9cead5f4d3b03c0bc5e209bd253b12d107b5e0a4",
+      "actual_sha256": "ed55ce572846ce5628214a5b9cead5f4d3b03c0bc5e209bd253b12d107b5e0a4",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "IBM Azure Data Engineer Interview Question\n- Top Revenue Routes Ranking Using\nPySpark\nPraveen Patel\n‘Azure Data Engineer",
+      "redactions": 0,
+      "search_text": "IBM Azure Data Engineer Interview Question - Top Revenue Routes Ranking Using PySpark Praveen Patel ‘Azure Data Engineer",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "120 chars, 17 words, 84% letters, 2% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "c8b76a803b6fcb8d2d429a6efafd921aa137e2ba371e50be2faaf4099f104d8f"
+    }
+  ]
+}

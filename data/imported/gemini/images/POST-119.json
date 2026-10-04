@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-119",
+  "activity_id": "7328745757790965760",
+  "images": [
+    {
+      "post_id": "POST-119",
+      "activity_id": "7328745757790965760",
+      "filename": "activity_7328745757790965760_slide_0.jpg",
+      "path": "media/activity_7328745757790965760_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 448,
+      "height": 217,
+      "size_bytes": 5382,
+      "declared_sha256": "f189bc43e497e4211a3c4e67c9cbd32b7136c2c02330dfade59e37b9aed2067a",
+      "actual_sha256": "f189bc43e497e4211a3c4e67c9cbd32b7136c2c02330dfade59e37b9aed2067a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Address Date\n\nabdfs://abbed/c/<page>/20202511/abc1.xml 20202511\nabdfs://abbed/c/<page>/20202512/abc2.xml 20202511\nabdfs://abbed/c/<page>/20202513/abc1.xml 20202513\nabdfs://abbed/c/<page>/20202514/abc2.xml 20202514\nabdfs://abbed/c/<page>/20202515/abc1.xml 20202513\nabdfs://abbed/c/<page>/20202516/abc2.xml 20202516\nabdfs://abbed/c/<page>/20202517/abc1.xml 20202517\nabdfs://abbcd/c/<page>/20202518/abc2.xml 20202518",
+      "redactions": 0,
+      "search_text": "Address Date abdfs://abbed/c/<page>/20202511/abc1.xml 20202511 abdfs://abbed/c/<page>/20202512/abc2.xml 20202511 abdfs://abbed/c/<page>/20202513/abc1.xml 20202513 abdfs://abbed/c/<page>/20202514/abc2.xml 20202514 abdfs://abbed/c/<page>/20202515/abc1.xml 20202513 abdfs://abbed/c/<page>/20202516/abc2.xml 20202516 abdfs://abbed/c/<page>/20202517/abc1.xml 20202517 abdfs://abbcd/c/<page>/20202518/abc2.xml 20202518",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "garbled",
+      "ocr_note": "413 chars, 50 words, 43% letters, 52% symbols, 3.9% sentence marks; overwhelmingly symbol rather than letters",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "e49df18edb33bf8386a6fbd1b26f7ade115bc109ac24d337d06ef1d7349b8832"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-260",
+  "activity_id": "7350116676970909696",
+  "images": [
+    {
+      "post_id": "POST-260",
+      "activity_id": "7350116676970909696",
+      "filename": "activity_7350116676970909696_slide_0.jpg",
+      "path": "media/activity_7350116676970909696_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 212,
+      "size_bytes": 18434,
+      "declared_sha256": "1d6cbf0d6a111ac0f25a49239b53ece1363d1ddc406c1dd299f79276e3071fee",
+      "actual_sha256": "1d6cbf0d6a111ac0f25a49239b53ece1363d1ddc406c1dd299f79276e3071fee",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "plore nana ‘et cto a i\n\nSe ee te ee apes\n\nSine semsarreappvanmvpeneserasmoreene |f\\ feeiidssi ni; tins sacral alias\n\nor ae, .",
+      "redactions": 0,
+      "search_text": "plore nana ‘et cto a i Se ee te ee apes Sine semsarreappvanmvpeneserasmoreene |f\\ feeiidssi ni; tins sacral alias or ae, .",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "125 chars, 21 words, 76% letters, 5% symbols, 1.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "346a8f7404a95ff13bf8ca963d3a4bf5e6c2dddc38d9146d3db2b6150e8c66c5"
+    }
+  ]
+}

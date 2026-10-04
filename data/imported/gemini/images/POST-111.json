@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-111",
+  "activity_id": "7327674189065113600",
+  "images": [
+    {
+      "post_id": "POST-111",
+      "activity_id": "7327674189065113600",
+      "filename": "activity_7327674189065113600_slide_0.jpg",
+      "path": "media/activity_7327674189065113600_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 60538,
+      "declared_sha256": "910dabc2b497837815be13d55f960426bb28352b7c48b271971e8734031c2d31",
+      "actual_sha256": "910dabc2b497837815be13d55f960426bb28352b7c48b271971e8734031c2d31",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "What's the Difference and When to Use Each?\nS\ncsv\ncsv PARQUET DELTA LAKE\n+ Basic and +Columnar storage «Built on Parquet\nwidely supported format for with ACID\nformat efficient querying _transactions\n+ No support for Supports schema, _« Schema\ncomplex data compression, enforcement,\ntypes or schema and colum pruning _ versioning, and\nenforcement “Apa 8 streaming support\n+ Not optimized Updates or deletes Enables merge,\nfor large-scale update, and\nquerying delete operations\nBest for: Best for: Best for:\nSimple data Scalable analytics Production-grade\ntransfers or and read- data pipelines\ninitial raw optimized and lakehouse\ndata loads storage architectures",
+      "redactions": 0,
+      "search_text": "What's the Difference and When to Use Each? S csv csv PARQUET DELTA LAKE + Basic and +Columnar storage «Built on Parquet widely supported format for with ACID format efficient querying _transactions + No support for Supports schema, _« Schema complex data compression, enforcement, types or schema and colum pruning _ versioning, and enforcement “Apa 8 streaming support + Not optimized Updates or deletes Enables merge, for large-scale update, and querying delete operations Best for: Best for: Best for: Simple data Scalable analytics Production-grade transfers or and read- data pipelines initial raw optimized and lakehouse data loads storage architectures",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "660 chars, 93 words, 81% letters, 4% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "58b2fb7061fc03287a7aa10b9b1685480086f59c73024af4da4d11abceb9e396"
+    }
+  ]
+}

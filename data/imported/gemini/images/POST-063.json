@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-063",
+  "activity_id": "7311391876236894208",
+  "images": [
+    {
+      "post_id": "POST-063",
+      "activity_id": "7311391876236894208",
+      "filename": "activity_7311391876236894208_slide_0.jpg",
+      "path": "media/activity_7311391876236894208_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 434,
+      "size_bytes": 19226,
+      "declared_sha256": "e2b7d2a41270082920e92b9d46e611ef6462060f53877b0a51fa7c28f39ee4ea",
+      "actual_sha256": "e2b7d2a41270082920e92b9d46e611ef6462060f53877b0a51fa7c28f39ee4ea",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "2 data = (nce Benot, Ten\") BA Tere that) Dada ekhaCaran\n2 ealom = Cae’ easle)\n5 aF Spork cfeateoatat rant, cotu)\n1 OF nn thane Ota a ge\n2 aston\ney syan ee\nnate] Crteket Carron)\n1 fron psn sa. teens tone st, ese\n2 dante etetie hare, eagle ato Hates, ,\")) ata tbte\")))\nestan nee\nTame A ets",
+      "redactions": 0,
+      "search_text": "2 data = (nce Benot, Ten\") BA Tere that) Dada ekhaCaran 2 ealom = Cae’ easle) 5 aF Spork cfeateoatat rant, cotu) 1 OF nn thane Ota a ge 2 aston ey syan ee nate] Crteket Carron) 1 fron psn sa. teens tone st, ese 2 dante etetie hare, eagle ato Hates, ,\")) ata tbte\"))) estan nee Tame A ets",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "287 chars, 50 words, 68% letters, 11% symbols, 0.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0c3532fcd73de955c8515c1b9c0eeadaabbdb375f7adc2836d03ce1c807c18ec"
+    }
+  ]
+}

@@ -2041,91 +2041,96 @@ class TestSavedItemsPage:
             },
         }
 
-    def test_the_page_exists(self, tmp_path: Path):
+    def test_the_page_is_not_generated(self, tmp_path: Path):
+        """
+        Saved Items was the fourth archive index, and the least
+        defensible of them: a page whose entire content was a list of
+        which posts happened to arrive via a saved list rather than the
+        collector. That is a fact about how the archive was built, and a
+        candidate revising for an interview has no use for it.
+        """
+
         site = self._site(tmp_path, [self._saved_post()])
 
-        assert (site / "saved-items.html").is_file()
+        assert not (site / "saved-items.html").exists()
 
-    def test_the_page_is_reachable_from_the_navigation(
+    def test_nothing_links_to_it(self, tmp_path: Path):
+        site = self._site(tmp_path, [self._saved_post()])
+
+        # The footer row that linked it from every page is gone too, so
+        # removing the page cannot have left a dead link behind.
+        for page in site.rglob("*.html"):
+            assert "saved-items.html" not in page.read_text(
+                encoding="utf-8"
+            )
+
+    def test_the_saved_item_provenance_is_still_on_the_post(
         self, tmp_path: Path
     ):
+        """
+        The part that mattered.
+
+        A saved item still exists, still says which list it came from and
+        when, and still reaches the reader as one human-readable line --
+        "LinkedIn post, saved from a list" -- rather than as an index of
+        ids.
+        """
+
         site = self._site(tmp_path, [self._saved_post()])
 
-        assert "saved-items.html" in (site / "index.html").read_text(
-            encoding="utf-8"
-        )
+        post = next(iter(self._model().posts))
 
-    def test_a_captured_item_is_listed(self, tmp_path: Path):
-        site = self._site(tmp_path, [self._saved_post()])
+        assert post.saved_item is not None
+        assert post.saved_item.saved_item_id == "urn:li:saved:abc001"
+        assert str(post.saved_item.saved_date) == "2026-01-02"
 
-        body = (site / "saved-items.html").read_text(encoding="utf-8")
+        body = (
+            site / "posts" / "urn-li-saved-abc001.html"
+        ).read_text(encoding="utf-8")
 
-        assert "urn-li-saved-abc001" in body
-        assert DELTA in body
-        assert "2026-01-02" in body
-        assert "Alice" in body
+        assert "saved from a list" in body
 
-    def test_the_capture_quality_is_shown(self, tmp_path: Path):
-        site = self._site(tmp_path, [self._saved_post("image_only")])
+        # But not the id, and not a "Saved on" field. The date that does
+        # appear is the post's own published date, which is provenance a
+        # reader can use; the saved date is metadata about the capture.
+        assert "urn:li:saved:abc001" not in body
+        assert "Saved on" not in body
 
-        body = (site / "saved-items.html").read_text(encoding="utf-8")
+        import re as _re
 
-        # A reader has to be able to tell a transcript from a screenshot.
-        assert "Image only" in body
+        labels = _re.findall(r"<dt>(.*?)</dt>", body)
 
-    def test_an_image_only_capture_says_so(self, tmp_path: Path):
-        site = self._site(tmp_path, [self._saved_post("image_only")])
+        assert set(labels) <= {"Source", "Author"}, labels
 
-        body = (site / "saved-items.html").read_text(encoding="utf-8")
-
-        assert "No text was read" in body
-
-    def test_an_ordinary_post_is_not_listed_as_saved(self, tmp_path: Path):
-        post = self._saved_post()
-        post.pop("saved_item")
-
-        site = self._site(tmp_path, [post])
-
-        body = (site / "saved-items.html").read_text(encoding="utf-8")
-
-        # A post collected by an authorized run is not a saved item, and
-        # listing it as one would say something untrue about it.
-        assert "urn-li-saved-abc123" not in body
-        assert "No saved items yet" in body
-
-    def test_the_page_is_empty_honestly(self, tmp_path: Path):
-        site = self._site(tmp_path, [])
-
-        body = (site / "saved-items.html").read_text(encoding="utf-8")
-
-        assert "No saved items yet" in body
-
-    def test_the_page_generates_no_page_per_item(self, tmp_path: Path):
+    def test_every_saved_post_still_has_its_own_page(self, tmp_path: Path):
         site = self._site(
             tmp_path,
             [self._saved_post(number=number) for number in range(1, 6)],
         )
 
-        # Five items, one saved-items page. A saved list runs to hundreds
-        # of links and most have no capture, so a page each would be
-        # hundreds of pages saying nothing.
-        assert (site / "saved-items.html").is_file()
+        # Five items, five knowledge pages, and no index listing them.
+        # A saved list runs to hundreds of links and most have no
+        # capture, so an index of them was never worth the page it cost.
+        assert not (site / "saved-items.html").exists()
         assert len(list((site / "posts").glob("*.html"))) == 5
-
-    def test_the_page_links_to_the_post(self, tmp_path: Path):
-        site = self._site(tmp_path, [self._saved_post()])
-
-        body = (site / "saved-items.html").read_text(encoding="utf-8")
-
-        assert "posts/urn-li-saved-abc001.html" in body
 
     def test_generation_is_deterministic(self, tmp_path: Path):
         first = self._site(tmp_path / "a", [self._saved_post()])
         second = self._site(tmp_path / "b", [self._saved_post()])
 
-        assert (first / "saved-items.html").read_text(
-            encoding="utf-8"
-        ) == (second / "saved-items.html").read_text(encoding="utf-8")
+        for name in ("index.html", "search.html"):
+            assert (first / name).read_text(
+                encoding="utf-8"
+            ) == (second / name).read_text(encoding="utf-8")
+
+        posts = sorted((first / "posts").glob("*.html"))
+
+        assert posts, "no post pages were generated"
+
+        for page in posts:
+            assert page.read_text(
+                encoding="utf-8"
+            ) == (second / "posts" / page.name).read_text(encoding="utf-8")
 
     def test_a_technology_search_reaches_the_post(self, tmp_path: Path):
         from src.wiki.search_index import build_search_index

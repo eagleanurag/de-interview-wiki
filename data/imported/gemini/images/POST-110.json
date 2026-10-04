@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-110",
+  "activity_id": "7327573736755286018",
+  "images": [
+    {
+      "post_id": "POST-110",
+      "activity_id": "7327573736755286018",
+      "filename": "activity_7327573736755286018_slide_0.jpg",
+      "path": "media/activity_7327573736755286018_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 307,
+      "size_bytes": 19688,
+      "declared_sha256": "e46d7a3a66e7ec33cd5f5eb08aa349e0271427c9cc16cfa3dbb791d9aab5377f",
+      "actual_sha256": "e46d7a3a66e7ec33cd5f5eb08aa349e0271427c9cc16cfa3dbb791d9aab5377f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "D\n_ 5\n\nRL\nPolicies Rewards\n(Generators) (Verifiers)",
+      "redactions": 0,
+      "search_text": "D _ 5 RL Policies Rewards (Generators) (Verifiers)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "51 chars, 6 words, 73% letters, 12% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "88bf7253d67a75ebfa40183869e75e93d848861fac648343dcb8d63799fb3dbe"
+    }
+  ]
+}

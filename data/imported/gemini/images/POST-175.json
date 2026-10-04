@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-175",
+  "activity_id": "7340400266862624771",
+  "images": [
+    {
+      "post_id": "POST-175",
+      "activity_id": "7340400266862624771",
+      "filename": "activity_7340400266862624771_slide_0.jpg",
+      "path": "media/activity_7340400266862624771_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 563,
+      "size_bytes": 336899,
+      "declared_sha256": "c791131d4a60b8a5b5ad2296c84b6ad665321915c027254d2fbc66e8bc148530",
+      "actual_sha256": "c791131d4a60b8a5b5ad2296c84b6ad665321915c027254d2fbc66e8bc148530",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "| How (SQUGUEry Executes) in a Database? DoyteByteo\n2 cerns eng mem |\nacy)\na (an) ==\n=) ©8 “EEE",
+      "redactions": 0,
+      "search_text": "| How (SQUGUEry Executes) in a Database? DoyteByteo 2 cerns eng mem | acy) a (an) == =) ©8 “EEE",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "95 chars, 14 words, 63% letters, 17% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2de00100c290515b95b1a270ed4f58424a0798c320bf4fa9b1a69345568ffaf8"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-304",
+  "activity_id": "7491389243899101184",
+  "images": [
+    {
+      "post_id": "POST-304",
+      "activity_id": "7491389243899101184",
+      "filename": "activity_7491389243899101184_slide_0.jpg",
+      "path": "media/activity_7491389243899101184_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 28577,
+      "declared_sha256": "59e156f3504bbf41415a1eb9153a26e51d20528160ffb1a28ff9b61dbd90a8c9",
+      "actual_sha256": "59e156f3504bbf41415a1eb9153a26e51d20528160ffb1a28ff9b61dbd90a8c9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ght Bay a\nAA gl WA",
+      "redactions": 0,
+      "search_text": "ght Bay a AA gl WA",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "18 chars, 6 words, 72% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "3150ef5ff7ca8e61314439eca02bb30fca4efb339a0ae75541140bcee4a989c1"
+    }
+  ]
+}

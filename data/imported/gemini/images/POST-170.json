@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-170",
+  "activity_id": "7340223573149560832",
+  "images": [
+    {
+      "post_id": "POST-170",
+      "activity_id": "7340223573149560832",
+      "filename": "activity_7340223573149560832_slide_0.jpg",
+      "path": "media/activity_7340223573149560832_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 17737,
+      "declared_sha256": "2a97f8e9d33695ae2a0e4b758874bbea281d1944c9e5c5287765e470fafd71c4",
+      "actual_sha256": "2a97f8e9d33695ae2a0e4b758874bbea281d1944c9e5c5287765e470fafd71c4",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "| 20 Secrets to\nOptimizing SOL\nQueries\n\nla<",
+      "redactions": 0,
+      "search_text": "| 20 Secrets to Optimizing SOL Queries la<",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "43 chars, 6 words, 72% letters, 9% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "dd495b29067bc6b60a66ef0a7d849ecd338fa9e612cef7995bee5eb9708e55ef"
+    }
+  ]
+}

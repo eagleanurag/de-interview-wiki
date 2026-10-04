@@ -187,7 +187,12 @@ def _slug(value: str) -> str:
     return slug_for(value, fallback="unknown")
 
 
-__all__ = ["MAX_SLUG_LENGTH", "normalise_label", "slug_for"]
+__all__ = [
+    "MAX_SLUG_LENGTH",
+    "DerivedClaim",
+    "normalise_label",
+    "slug_for",
+]
 
 
 def normalise_label(value: str) -> str:
@@ -310,6 +315,40 @@ class ConceptNode:
         }
 
 
+@dataclass(frozen=True)
+class DerivedClaim:
+    """
+    A technology named by something other than the post's own text.
+
+    The post body is the author's words and nothing else may be mixed
+    into it, so a technology that appears only inside an attached image
+    cannot reach the consolidation by being appended to the text. It
+    arrives here instead, carrying where it came from.
+
+    The provenance is not decoration. ``image_ocr`` means a machine read
+    the word off a picture, which is weaker evidence than an author
+    typing it, and a technology page that lists 128 groups for ``SQL``
+    without saying how many of those were read off a slide is
+    overstating its own coverage.
+    """
+
+    name: str
+
+    #: ``image_ocr`` for a technology read out of a transcribed slide.
+    source_kind: str = "image_ocr"
+
+    #: The package's own grouping identifier for the post.
+    group_id: str = ""
+
+    filename: str = ""
+    slide_number: int | None = None
+
+    #: The slide's own words, when they could be matched to a specific
+    #: transcription. Kept so the claim can be weighed rather than taken
+    #: on trust.
+    evidence: str = ""
+
+
 @dataclass
 class TechnologyNode:
     """One recognised technology and the posts that use it."""
@@ -320,6 +359,30 @@ class TechnologyNode:
     topics: list[str] = field(default_factory=list)
     question_count: int = 0
 
+    #: Technologies found only in an attached image, with the slide they
+    #: were read from. Empty for any technology the post's own text
+    #: mentions, which is most of them.
+    derived: list[DerivedClaim] = field(default_factory=list)
+
+    def add_derived(self, claim: DerivedClaim) -> None:
+        """
+        Record a claim, without repeating an identical one.
+
+        The same slide is offered once per post that carries it, and a
+        technology that appears in 40 posts would otherwise carry 40
+        copies of the same reading.
+        """
+
+        key = (claim.filename, claim.slide_number, claim.name)
+
+        for existing in self.derived:
+            other = (existing.filename, existing.slide_number, existing.name)
+
+            if other == key:
+                return
+
+        self.derived.append(claim)
+
     def as_dict(self) -> dict:
         return {
             "name": self.name,
@@ -327,6 +390,24 @@ class TechnologyNode:
             "post_ids": sorted(self.post_ids),
             "topics": sorted(self.topics),
             "question_count": self.question_count,
+            "derived": [
+                {
+                    "name": claim.name,
+                    "source_kind": claim.source_kind,
+                    "group_id": claim.group_id,
+                    "filename": claim.filename,
+                    "slide_number": claim.slide_number,
+                    "evidence": claim.evidence,
+                }
+                for claim in sorted(
+                    self.derived,
+                    key=lambda item: (
+                        item.name,
+                        item.filename,
+                        item.slide_number if item.slide_number is not None else -1,
+                    ),
+                )
+            ],
         }
 
 
@@ -545,15 +626,32 @@ def _merge_questions(nodes: list["QuestionNode"]) -> list["QuestionNode"]:
     return kept
 
 
-def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
+def consolidate(
+    posts: Iterable[KnowledgePost],
+    derived_technologies: dict[str, list[DerivedClaim]] | None = None,
+) -> KnowledgeIndex:
     """
     Build the consolidated knowledge index.
 
     Every node keeps the posts it came from, so a reader can always get
     from a topic back to the original text it summarises.
+
+    ``derived_technologies`` supplies the per-slide detail for
+    technologies that appear only inside an attached image, keyed by post
+    identifier. The *names* come from the post's own
+    ``ai_analysis.derived_technologies``, which both this function and the
+    site builder read, so the two cannot disagree about which posts cover
+    a technology. This parameter adds only the attribution: which slide,
+    and what that slide's own words were.
+
+    Detail without a name would be dropped and a name without detail
+    would still be recorded, so the two halves are usable independently
+    and neither is load-bearing for the other.
     """
 
     index = KnowledgeIndex()
+
+    derived_technologies = derived_technologies or {}
 
     topics: dict[str, TopicNode] = {}
     subtopics: dict[str, TopicNode] = {}
@@ -565,6 +663,18 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
 
         topics_of_post = post_topics(post)
         post_technologies = detect_technologies(post.original_text)
+
+        # A technology read off a slide is a real mention, and it counts
+        # toward the technology's post list -- but it is added after the
+        # text-derived ones so the node's own list keeps the author's
+        # words first.
+        for name in post.ai_analysis.derived_technologies:
+            if name not in post_technologies:
+                post_technologies.append(name)
+
+        for claim in derived_technologies.get(post.id, []):
+            if claim.name not in post_technologies:
+                post_technologies.append(claim.name)
 
         for label in topics_of_post:
             key = normalise_label(label)
@@ -648,6 +758,12 @@ def consolidate(posts: Iterable[KnowledgePost]) -> KnowledgeIndex:
             for label in topics_of_post:
                 if label not in node.topics:
                     node.topics.append(label)
+
+        for claim in derived_technologies.get(post.id, []):
+            node = technologies.get(claim.name)
+
+            if node is not None:
+                node.add_derived(claim)
 
         for position, question in enumerate(post.interview_questions):
             index.questions.append(

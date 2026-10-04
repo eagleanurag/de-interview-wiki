@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-133",
+  "activity_id": "7337705010304036867",
+  "images": [
+    {
+      "post_id": "POST-133",
+      "activity_id": "7337705010304036867",
+      "filename": "activity_7337705010304036867_slide_0.jpg",
+      "path": "media/activity_7337705010304036867_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 308,
+      "height": 120,
+      "size_bytes": 13041,
+      "declared_sha256": "f3f83540d60c4b0920c0a157b239255f9916453e7f3958aa8e4675c83caf2558",
+      "actual_sha256": "f3f83540d60c4b0920c0a157b239255f9916453e7f3958aa8e4675c83caf2558",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "| [eust_id | flight_id | origin _| destination\n[2 [1 [03076 [nosh | Mangos",
+      "redactions": 0,
+      "search_text": "| [eust_id | flight_id | origin _| destination [2 [1 [03076 [nosh | Mangos",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "74 chars, 8 words, 55% letters, 27% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a8d8ec5fdd8a08f3f22e8e939872d9c6a9cb4697b0ed3c20c793f6c694efb57f"
+    }
+  ]
+}

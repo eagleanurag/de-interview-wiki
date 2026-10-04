@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-065",
+  "activity_id": "7312423116813606912",
+  "images": [
+    {
+      "post_id": "POST-065",
+      "activity_id": "7312423116813606912",
+      "filename": "activity_7312423116813606912_slide_0.jpg",
+      "path": "media/activity_7312423116813606912_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 405,
+      "height": 304,
+      "size_bytes": 16468,
+      "declared_sha256": "e74579eb1fb9158796b526aff538923991d619d68a0b038aa02bafa053192783",
+      "actual_sha256": "e74579eb1fb9158796b526aff538923991d619d68a0b038aa02bafa053192783",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "customer_id name\n14 | Andrew\n2 2 Bob\n3 (3 Charlie\n4.4 David\norder_id customer_id order_amount\n1 f1 1 50\n2 2 ik 5\n3 (3 2 100\n4. 4 3 120",
+      "redactions": 0,
+      "search_text": "customer_id name 14 | Andrew 2 2 Bob 3 (3 Charlie 4.4 David order_id customer_id order_amount 1 f1 1 50 2 2 ik 5 3 (3 2 100 4. 4 3 120",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "134 chars, 15 words, 49% letters, 28% symbols, 1.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "20c57a710d30389df630ec8be536d8c061ca94556f20d5ae70d458be22ee8ed8"
+    }
+  ]
+}

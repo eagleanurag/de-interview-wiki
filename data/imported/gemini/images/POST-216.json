@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-216",
+  "activity_id": "7345350873159520256",
+  "images": [
+    {
+      "post_id": "POST-216",
+      "activity_id": "7345350873159520256",
+      "filename": "activity_7345350873159520256_slide_0.jpg",
+      "path": "media/activity_7345350873159520256_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 260,
+      "size_bytes": 19447,
+      "declared_sha256": "65d66e9db34819e556e4dd8af3bbec1ff8f6f704aaa951c66e8f9a337cbc54b7",
+      "actual_sha256": "65d66e9db34819e556e4dd8af3bbec1ff8f6f704aaa951c66e8f9a337cbc54b7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Ingestion Transformation —_ Loading Reporting\n\n—— al] @\n\nwe | r—\\\n\n‘Azure Azure Data Azure Power BI\nDataFactory Lake Gen2 Synapse\nAnalytics\n‘Azure Active ‘Azure Key\nDirectory Vault",
+      "redactions": 0,
+      "search_text": "Ingestion Transformation —_ Loading Reporting —— al] @ we | r—\\ ‘Azure Azure Data Azure Power BI DataFactory Lake Gen2 Synapse Analytics ‘Azure Active ‘Azure Key Directory Vault",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "180 chars, 24 words, 76% letters, 7% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "298089e37a8ceef952907fa213e14321850fdd49263a7599530ed999a217a775"
+    }
+  ]
+}

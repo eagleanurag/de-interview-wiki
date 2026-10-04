@@ -34,6 +34,61 @@ class MediaItem(BaseModel):
     #: unset for a file never read beyond its metadata.
     extraction_method: str | None = None
 
+    # -- Provenance of a machine transcription -----------------------
+    #
+    # A transcription of a slide and a sentence the author typed are
+    # different kinds of claim, and a reader who cannot tell them apart
+    # will quote a misread of a 480-pixel screenshot as though the
+    # author said it. These four fields are what let the wiki say which
+    # one this is.
+    #
+    # Optional and omitted when unset, so the 490 posts committed before
+    # any of this existed still validate and serialise byte-for-byte as
+    # they did.
+
+    #: What the transcription claims about the image: ``AVAILABLE``,
+    #: ``NO_TEXT``, ``PARTIAL``, ``UNRESOLVED``, or ``ABSENT`` for an
+    #: image a tool said nothing about. ``ABSENT`` is deliberately not
+    #: folded into ``NO_TEXT``: "there is no text here" and "nobody
+    #: looked" are different facts and only the first is a finding.
+    ocr_status: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    #: What is observably true of the transcription: ``readable``,
+    #: ``fragmentary``, ``garbled``, or ``empty``. A named state rather
+    #: than a score, because a number would need a threshold and the
+    #: threshold would be an invention.
+    ocr_quality: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    #: The evidence behind ``ocr_quality``, written out. Present so the
+    #: judgement can be argued with rather than merely accepted.
+    ocr_note: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    #: Which kind of source produced the text on this item:
+    #: ``author_source``, ``image_ocr``, ``visual_derived`` or
+    #: ``ai_enrichment``.
+    source_kind: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    #: How many images the post has in total, so a three-slide post can
+    #: be told from a truncated three-hundred-slide one. Per post rather
+    #: than per item, and recorded on every item so no reader has to
+    #: reconstruct it.
+    slide_count: int | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
 
 class SourceInfo(BaseModel):
     platform: str
@@ -69,6 +124,25 @@ class AIAnalysis(BaseModel):
     concepts: list[str] = Field(default_factory=list)
     image_descriptions: list[str] = Field(default_factory=list)
 
+    #: Technologies named only inside an attached image, each one present
+    #: in that image's own transcription.
+    #:
+    #: A separate list rather than an addition to ``concepts`` because
+    #: the evidence is weaker and must not look identical to a claim the
+    #: author made in the post body. ``detect_technologies`` reads the
+    #: post text only, and deliberately so -- a term appearing in a
+    #: post's *body* is the author saying it. This list says "a
+    #: machine read this off an attached picture", which is a different
+    #: claim and is kept apart.
+    #:
+    #: Both the knowledge base and the site read this, so the two cannot
+    #: disagree about which posts cover a technology. Excluded when
+    #: empty, which is every post with no images.
+    derived_technologies: list[str] = Field(
+        default_factory=list,
+        exclude_if=lambda value: not value,
+    )
+
 
 class InterviewQuestion(BaseModel):
     question: str
@@ -81,6 +155,39 @@ class InterviewQuestion(BaseModel):
     ]
     difficulty: Literal["easy", "medium", "hard"]
     answer: str | None = None
+
+    # -- Where a question and its answer came from -------------------
+    #
+    # A question read off a slide is not a question a person wrote, and
+    # a transcription is not an answer. Without these two fields the
+    # knowledge base would present both as though they were authored
+    # here, which is the specific misreading this whole layer is
+    # arranged to prevent.
+
+    #: ``ai_enriched`` for a question this project's enricher produced,
+    #: ``image_ocr`` for one read out of a slide's transcribed text.
+    source_kind: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    #: ``ai_enriched`` for an answer composed from the whole post, or
+    #: ``source_excerpt`` for a passage quoted out of the slide the
+    #: question was read from. The distinction is the difference between
+    #: something reasoned out and something copied, and a reader is
+    #: entitled to know which they have.
+    answer_source: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
+
+    #: Which slide, in prose: the file and its position. Kept as a
+    #: sentence rather than as separate fields because it is only ever
+    #: read as a sentence, on the card, under the question.
+    source_note: str | None = Field(
+        default=None,
+        exclude_if=lambda value: value is None,
+    )
 
 
 class Classification(BaseModel):
@@ -121,6 +228,25 @@ class EnrichmentFingerprint(BaseModel):
     visual_digest: str = ""
 
     visual_processor_version: str = ""
+
+    #: Digest of machine transcriptions contributed from outside the
+    #: post -- the imported image-knowledge package -- plus the
+    #: version that produced them.
+    #:
+    #: A third field rather than an extension of ``visual_digest``
+    #: because these are different sources with different authority. The
+    #: vision processor reads this project's own copy of an image on
+    #: demand; the imported package is a third party's transcription of
+    #: those same images, produced elsewhere and at another time. Folding
+    #: them together would mean a change to either silently
+    #: invalidate enrichment derived from the other, and would make the
+    #: recorded version claim both were used when only one was.
+    #:
+    #: Empty for every post the package says nothing about, which is
+    #: every post with no images and most of the rest.
+    ocr_digest: str = ""
+
+    ocr_processor_version: str = ""
 
 
 class SavedItemProvenance(BaseModel):

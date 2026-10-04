@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-195",
+  "activity_id": "7342036204650909697",
+  "images": [
+    {
+      "post_id": "POST-195",
+      "activity_id": "7342036204650909697",
+      "filename": "activity_7342036204650909697_slide_0.jpg",
+      "path": "media/activity_7342036204650909697_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 390,
+      "height": 487,
+      "size_bytes": 51805,
+      "declared_sha256": "143d009bc3e40fd1b1083339392cf8bb08b534ff66d9c42dd2b4da508d2a6cd7",
+      "actual_sha256": "143d009bc3e40fd1b1083339392cf8bb08b534ff66d9c42dd2b4da508d2a6cd7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "= STRUCTURED QUERY LANGUAGE\nCheat Sheet (SQL Basics)",
+      "redactions": 0,
+      "search_text": "= STRUCTURED QUERY LANGUAGE Cheat Sheet (SQL Basics)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "52 chars, 7 words, 81% letters, 6% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "4563ffc8456495a65acbbc8e4cb0bff9d530a4f70b33aa6200c8b00db3ac609e"
+    }
+  ]
+}

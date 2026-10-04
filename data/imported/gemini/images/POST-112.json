@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-112",
+  "activity_id": "7327875236828258304",
+  "images": [
+    {
+      "post_id": "POST-112",
+      "activity_id": "7327875236828258304",
+      "filename": "activity_7327875236828258304_slide_0.jpg",
+      "path": "media/activity_7327875236828258304_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 717,
+      "size_bytes": 78157,
+      "declared_sha256": "4730ef80c5dfd5c89bd2bd949ed933b9c2d9f0d95f5570861e12ba9e61a40fde",
+      "actual_sha256": "4730ef80c5dfd5c89bd2bd949ed933b9c2d9f0d95f5570861e12ba9e61a40fde",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "eo P e\n80% of Data Engineering\n-. Vani Suruvu\nLearn them and stand out re) pata Engl\nBatch vs Streaming Columnar Formats (Parquet.ORC)\nWhy: Butchi cast fier Steamig|s ‘Why: Caln uring &compreson= Des 0\nteat Pekwang ard ALAScotso ook Pr Ty es ety plorance\nDri Busts artchngenetsafectvair Dll. Compare 0 sca oer C37 oath\nat cpa OLA ANALIZE\nDill ads SparkBatehjb 00 fetal\nwith sarta Hi Compare reste. Partitioning & Clustering\nColumnar Formats (Parquet.ORC) Stoney .\nWy: Real word data hanes conta Pri oo man parton = tousand of ty fs\nIanO, “Hon doyoucteuesechmeino Dr: Loud os prtond et then cet by\nDY ee aro Conf stro eve\n2 schro Tve epee odes ‘Watarmarks & Late Data\n- iy ent re pects teed tor\nIdempotent Writes Interview 0. How 6 you hand forte vote\nWy: Retest peat reco. what hind?\nDri Dta Lao, writ with BERGE, Dri nF inal at dloed overs. oe\nfea aes ely ce Mowedateres Tackles st\nData Lineage & Metadata idempotent Writes\nWy: Yucar debugmerositougodontkrow Why: tins shold’ pte records\nwat caoged het Dia nbeta Late wre wih MERGE\nDri se Open or Mauer wth Aton epiy Kaa op-ey auts rant\nTrack nego ron one.\nData Skew\nOrchestration (Airflow) Why: One hot key can killa job\nWy Mara scp alany.DAGe bing & inode Saw Spark Obsel don know\nInterview 0: How co youtands hurler Wha chaedtbam\npees Dil: Use Ope Lineage or Maras wit Aw\nDit nin erate dled vets, Tacktneage toon KP pane.\nUpstlones fe Trt were saa\nBackpressure in Streaming\nData Skew ‘Why: Streams creah it source outhins processing.\nWy: avis suit Waleed, Dri Oenvoi-a Kft» pw Structured\nDri Data Lake wee ith MERGE. Replay Storage akarerseroger\naba pert coas renee eable",
+      "redactions": 0,
+      "search_text": "eo P e 80% of Data Engineering -. Vani Suruvu Learn them and stand out re) pata Engl Batch vs Streaming Columnar Formats (Parquet.ORC) Why: Butchi cast fier Steamig|s ‘Why: Caln uring &compreson= Des 0 teat Pekwang ard ALAScotso ook Pr Ty es ety plorance Dri Busts artchngenetsafectvair Dll. Compare 0 sca oer C37 oath at cpa OLA ANALIZE Dill ads SparkBatehjb 00 fetal with sarta Hi Compare reste. Partitioning & Clustering Columnar Formats (Parquet.ORC) Stoney . Wy: Real word data hanes conta Pri oo man parton = tousand of ty fs IanO, “Hon doyoucteuesechmeino Dr: Loud os prtond et then cet by DY ee aro Conf stro eve 2 schro Tve epee odes ‘Watarmarks & Late Data - iy ent re pects teed tor Idempotent Writes Interview 0. How 6 you hand forte vote Wy: Retest peat reco. what hind? Dri Dta Lao, writ with BERGE, Dri nF inal at dloed overs. oe fea aes ely ce Mowedateres Tackles st Data Lineage & Metadata idempotent Writes Wy: Yucar debugmerositougodontkrow Why: tins shold’ pte records wat caoged het Dia nbeta Late wre wih MERGE Dri se Open or Mauer wth Aton epiy Kaa op-ey auts rant Track nego ron one. Data Skew Orchestration (Airflow) Why: One hot key can killa job Wy Mara scp alany.DAGe bing & inode Saw Spark Obsel don know Interview 0: How co youtands hurler Wha chaedtbam pees Dil: Use Ope Lineage or Maras wit Aw Dit nin erate dled vets, Tacktneage toon KP pane. Upstlones fe Trt were saa Backpressure in Streaming Data Skew ‘Why: Streams creah it source outhins processing. Wy: avis suit Waleed, Dri Oenvoi-a Kft» pw Structured Dri Data Lake wee ith MERGE. Replay Storage akarerseroger aba pert coas renee eable",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "1625 chars, 277 words, 78% letters, 4% symbols, 1.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "f88d195761ec7cb08e42dc15bb1b4e680e9d3a3f99c3b1b2819e07e76684e355"
+    }
+  ]
+}

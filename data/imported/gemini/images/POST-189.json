@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-189",
+  "activity_id": "7341661228617900033",
+  "images": [
+    {
+      "post_id": "POST-189",
+      "activity_id": "7341661228617900033",
+      "filename": "activity_7341661228617900033_slide_0.jpg",
+      "path": "media/activity_7341661228617900033_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 387,
+      "height": 484,
+      "size_bytes": 35635,
+      "declared_sha256": "269caaaa4e2a00f6793e1939294d08f14a6576ff192725c67fae6952a7d669c7",
+      "actual_sha256": "269caaaa4e2a00f6793e1939294d08f14a6576ff192725c67fae6952a7d669c7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "# Mastering PySpark\nand Databricks #\nPart-24\nLakeBase\nDatabricks(2025 Update)\nDatabricks Looks To Disrupt Legacy Database\nSpace With New ‘Lakebase’ Offering\no——",
+      "redactions": 0,
+      "search_text": "# Mastering PySpark and Databricks # Part-24 LakeBase Databricks(2025 Update) Databricks Looks To Disrupt Legacy Database Space With New ‘Lakebase’ Offering o——",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "160 chars, 20 words, 78% letters, 9% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "291b3822c4315fa0f6bce8374c2db2c021dcd3dfa5d334cb549c27bdacbab6bb"
+    }
+  ]
+}

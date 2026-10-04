@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-283",
+  "activity_id": "7428910228877934592",
+  "images": [
+    {
+      "post_id": "POST-283",
+      "activity_id": "7428910228877934592",
+      "filename": "activity_7428910228877934592_slide_0.jpg",
+      "path": "media/activity_7428910228877934592_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 249,
+      "size_bytes": 13469,
+      "declared_sha256": "d3afd0bc52026ffeb0921fd745df1893be591f0dc8c762ccb91a7cb50454fbbc",
+      "actual_sha256": "d3afd0bc52026ffeb0921fd745df1893be591f0dc8c762ccb91a7cb50454fbbc",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "spark’",
+      "redactions": 0,
+      "search_text": "spark’",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "6 chars, 1 words, 83% letters, 17% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "c84e43bae6dd38f2e9c4bbc9993838fdab6c8a279afcb5f275d97e2ae44e1b99"
+    }
+  ]
+}

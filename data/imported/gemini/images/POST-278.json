@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-278",
+  "activity_id": "7421083202699677696",
+  "images": [
+    {
+      "post_id": "POST-278",
+      "activity_id": "7421083202699677696",
+      "filename": "activity_7421083202699677696_slide_0.jpg",
+      "path": "media/activity_7421083202699677696_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 800,
+      "height": 800,
+      "size_bytes": 53078,
+      "declared_sha256": "57cfb187ab72055eb309d3798223ad76f4b66d71dc73ff0cb8d7b1b86eaae769",
+      "actual_sha256": "57cfb187ab72055eb309d3798223ad76f4b66d71dc73ff0cb8d7b1b86eaae769",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "O'REILLY*\nTechnical Guide\n\nUnderstanding\n\nao Data Pipelines for be\nTas Modern Data Architectures\nlatabricks /— °\n~~ | Technical\nee Guide",
+      "redactions": 0,
+      "search_text": "O'REILLY* Technical Guide Understanding ao Data Pipelines for be Tas Modern Data Architectures latabricks /— ° ~~ | Technical ee Guide",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "136 chars, 17 words, 78% letters, 6% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "4c8542ba19567a831eae16ae245a095ddbdb44686bf2fd6e8d8766647b100abc"
+    }
+  ]
+}

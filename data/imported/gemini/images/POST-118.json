@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-118",
+  "activity_id": "7328696707439874048",
+  "images": [
+    {
+      "post_id": "POST-118",
+      "activity_id": "7328696707439874048",
+      "filename": "activity_7328696707439874048_slide_0.jpg",
+      "path": "media/activity_7328696707439874048_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 247,
+      "size_bytes": 24972,
+      "declared_sha256": "1ad27b5d290e5d4bd6f2d3c2917c26a454f2ed83b6d7aa98254bbf894cc21d8b",
+      "actual_sha256": "1ad27b5d290e5d4bd6f2d3c2917c26a454f2ed83b6d7aa98254bbf894cc21d8b",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "# Create DataFrame\naf ~ spark. createDetaFrane(date, schema)\ndate_df = df-uithColuen(“date”, ¢o_dete(col(“date”), “yyyy-Mt-da\"))\nsate_dfprintSchena()\ndate df ~ date_df.withColunn(\"'year_month”,date format (col(“date\"), yyyy-Mt\"))\nresult_df = date_df.groupdy(col(“year month\"), <ol(“eauntry”)).\\\nage(count(col(\"status\")) alias(\"n0_of transactions\"),\\\ncount (when(col (\"status”)=»\" approved”,1))-alias(\"n0_approved transaction\"), \\\nSum(c01(\"anount”))-alias(\"totel_amount\"))\nresult_éf-order8y(col(“country\"))-shon()\n|year_vonth|country no_of transactions jno_approved_transact ion total_anount |\n| 2023-01| india] i a 2000\n| 2023-22 Us| 2) | 3220)\n| 2024-01} us| Fl 4) 2009}",
+      "redactions": 0,
+      "search_text": "# Create DataFrame af ~ spark. createDetaFrane(date, schema) date_df = df-uithColuen(“date”, ¢o_dete(col(“date”), “yyyy-Mt-da\")) sate_dfprintSchena() date df ~ date_df.withColunn(\"'year_month”,date format (col(“date\"), yyyy-Mt\")) result_df = date_df.groupdy(col(“year month\"), <ol(“eauntry”)).\\ age(count(col(\"status\")) alias(\"n0_of transactions\"),\\ count (when(col (\"status”)=»\" approved”,1))-alias(\"n0_approved transaction\"), \\ Sum(c01(\"anount”))-alias(\"totel_amount\")) result_éf-order8y(col(“country\"))-shon() |year_vonth|country no_of transactions jno_approved_transact ion total_anount | | 2023-01| india] i a 2000 | 2023-22 Us| 2) | 3220) | 2024-01} us| Fl 4) 2009}",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "671 chars, 87 words, 63% letters, 28% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0816546a80f83b78857095410c44ef55262fce6a2d32acb0c006a30faa3dece4"
+    }
+  ]
+}

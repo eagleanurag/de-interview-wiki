@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-180",
+  "activity_id": "7341079772573089792",
+  "images": [
+    {
+      "post_id": "POST-180",
+      "activity_id": "7341079772573089792",
+      "filename": "activity_7341079772573089792_slide_0.jpg",
+      "path": "media/activity_7341079772573089792_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 33267,
+      "declared_sha256": "bc6876874efa54f6e41e2524d57239b4afb7c67ed4e101ea4b96fd1d0752aeb1",
+      "actual_sha256": "bc6876874efa54f6e41e2524d57239b4afb7c67ed4e101ea4b96fd1d0752aeb1",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ETL Pipeline Guide + Top 20 Interview Questions\n1. Whatis ETL?\n‘ening tows, ML\n2.ETL ELT —WhatetneDiterance?\nTeele” oman Samra eta Stake\n3. Real-World ETL Ppeline— End-to-End\n1 Sauncsat oe sar nore. Potyusan)",
+      "redactions": 0,
+      "search_text": "ETL Pipeline Guide + Top 20 Interview Questions 1. Whatis ETL? ‘ening tows, ML 2.ETL ELT —WhatetneDiterance? Teele” oman Samra eta Stake 3. Real-World ETL Ppeline— End-to-End 1 Sauncsat oe sar nore. Potyusan)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "208 chars, 28 words, 74% letters, 11% symbols, 2.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "4e9b8f913688d964f235cd01d07853c9bc6b5dd39a292bc0635924a80869f29d"
+    }
+  ]
+}

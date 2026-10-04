@@ -42,8 +42,18 @@ def make_visual(
     *,
     batch_size: int = 5,
     attempts: int = 3,
+    only: set[str] | None = None,
 ) -> VisualRunner:
-    """A runner over the archive, with its own processor and store."""
+    """
+    A runner over the archive, with its own processor and store.
+
+    ``only`` narrows the run to a named set of files. It is how the
+    fallback pass works: another tool has already transcribed most of
+    the corpus, so the vision processor is pointed at the slides that
+    transcription could not read rather than at all of them. Left unset
+    -- the normal case -- every asset is considered and nothing about
+    CP12's behaviour changes.
+    """
 
     return VisualRunner(
         archive_root,
@@ -51,6 +61,7 @@ def make_visual(
         processor=build_default_processor(),
         batch_size=batch_size,
         attempts=attempts,
+        only=only,
     )
 
 

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-302",
+  "activity_id": "7477244849528942592",
+  "images": [
+    {
+      "post_id": "POST-302",
+      "activity_id": "7477244849528942592",
+      "filename": "activity_7477244849528942592_slide_0.jpg",
+      "path": "media/activity_7477244849528942592_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 693,
+      "size_bytes": 33630,
+      "declared_sha256": "802074cacad62a88866a54fc20c5542d1da19f9c7dc742ead5d0920d8646d717",
+      "actual_sha256": "802074cacad62a88866a54fc20c5542d1da19f9c7dc742ead5d0920d8646d717",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "EXL Data Engineer Interview Question\nData Engineer\nRound: I\nInterview Questions with Answers\n1. How do you handle Slowly Changing Dimensions in ETL?\nSips eames SCD Type\nstep\n1 ag sa lg din,\n2 enya angen\n1 hous aves neg ta, at\n© lar new record wh updated ls\nLen Catone role, ployee, rofl ag\n2. SOL to delete duplicates and keep only the atest row\n3. Explain design of a daity incremental data pipeline,\nKeer\n1 ence ov ing meu modified column, Nigh ata",
+      "redactions": 0,
+      "search_text": "EXL Data Engineer Interview Question Data Engineer Round: I Interview Questions with Answers 1. How do you handle Slowly Changing Dimensions in ETL? Sips eames SCD Type step 1 ag sa lg din, 2 enya angen 1 hous aves neg ta, at © lar new record wh updated ls Len Catone role, ployee, rofl ag 2. SOL to delete duplicates and keep only the atest row 3. Explain design of a daity incremental data pipeline, Keer 1 ence ov ing meu modified column, Nigh ata",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "450 chars, 77 words, 77% letters, 4% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "7ec3a62e78e30e30481bc2de8f5987e29e2828e92d2282aeefa338e81a9cf930"
+    }
+  ]
+}

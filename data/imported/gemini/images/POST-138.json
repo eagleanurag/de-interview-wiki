@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-138",
+  "activity_id": "7338040534755618817",
+  "images": [
+    {
+      "post_id": "POST-138",
+      "activity_id": "7338040534755618817",
+      "filename": "activity_7338040534755618817_slide_0.jpg",
+      "path": "media/activity_7338040534755618817_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 465,
+      "size_bytes": 32664,
+      "declared_sha256": "2644738ef919bd16716dcc381478983b7f1ec5dd8d84b8ba7ffc479277e26bf1",
+      "actual_sha256": "2644738ef919bd16716dcc381478983b7f1ec5dd8d84b8ba7ffc479277e26bf1",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "| wD A.\nLet\ni oat i) sew | oars | {3} diame | Be\n11 2] tie | vere | 1 2) SiR | SS\ntat 1] “ie | Suseees | fo EL Aimescs |S)\nisi S| toe | nase | 1 Fl gimpece | ae\n\n{Yoana | toonoount | ooedote | fully paid fap | on tine flop |\n\n1a] S000 | 2ezsceras | “1 “1\n\n121 pone | 2a23-02-20 | 1 1\n\n131000 | 2028-02-30 | oy “\n\n14} “sone | bananas | a 1\n\n1S Fomm | aescescat | a “",
+      "redactions": 0,
+      "search_text": "| wD A. Let i oat i) sew | oars | {3} diame | Be 11 2] tie | vere | 1 2) SiR | SS tat 1] “ie | Suseees | fo EL Aimescs |S) isi S| toe | nase | 1 Fl gimpece | ae {Yoana | toonoount | ooedote | fully paid fap | on tine flop | 1a] S000 | 2ezsceras | “1 “1 121 pone | 2a23-02-20 | 1 1 131000 | 2028-02-30 | oy “ 14} “sone | bananas | a 1 1S Fomm | aescescat | a “",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "365 chars, 50 words, 47% letters, 26% symbols, 0.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "f238e2982a42e94a4819f2e47bd22217fcb86d79641fa420db79d78d90e45210"
+    }
+  ]
+}

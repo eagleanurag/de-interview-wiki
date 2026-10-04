@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-092",
+  "activity_id": "7326198382610337793",
+  "images": [
+    {
+      "post_id": "POST-092",
+      "activity_id": "7326198382610337793",
+      "filename": "activity_7326198382610337793_slide_0.jpg",
+      "path": "media/activity_7326198382610337793_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 363,
+      "size_bytes": 23440,
+      "declared_sha256": "ae27d2db79a6aa3e9bd92dc86890dd2f7fa291e5c48f00ea09c5fabc6113e1c6",
+      "actual_sha256": "ae27d2db79a6aa3e9bd92dc86890dd2f7fa291e5c48f00ea09c5fabc6113e1c6",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "me (-Topttior gs\") getarcreateQ)\nras = Comtade€sotittcotCvatue\"), * =)).aLiasC wore)\nsrted_counts = (cot (\"count\") -aese(0)",
+      "redactions": 0,
+      "search_text": "me (-Topttior gs\") getarcreateQ) ras = Comtade€sotittcotCvatue\"), * =)).aLiasC wore) srted_counts = (cot (\"count\") -aese(0)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "123 chars, 14 words, 67% letters, 22% symbols, 0.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a2e7511475d6f2af29691dc73e5bbd3fcc113234d6e7fa02be11fd7414f733a6"
+    }
+  ]
+}

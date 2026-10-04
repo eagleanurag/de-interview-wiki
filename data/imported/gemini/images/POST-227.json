@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-227",
+  "activity_id": "7346349465332609025",
+  "images": [
+    {
+      "post_id": "POST-227",
+      "activity_id": "7346349465332609025",
+      "filename": "activity_7346349465332609025_slide_0.jpg",
+      "path": "media/activity_7346349465332609025_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 590,
+      "size_bytes": 51557,
+      "declared_sha256": "d870c11359bde1c3cd454e9fbff2ad5e05289a077bfd931b2b776dff40eefc69",
+      "actual_sha256": "d870c11359bde1c3cd454e9fbff2ad5e05289a077bfd931b2b776dff40eefc69",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "2 ; input table\noutput table S\n==: : : Deloitte",
+      "redactions": 0,
+      "search_text": "2 ; input table output table S ==: : : Deloitte",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "47 chars, 6 words, 64% letters, 15% symbols, 8.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "4304e109119487bceecd2599e056144920f3e54cb296c3e2b0455599657d60f4"
+    }
+  ]
+}

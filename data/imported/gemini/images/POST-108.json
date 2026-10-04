@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-108",
+  "activity_id": "7327546343013396482",
+  "images": [
+    {
+      "post_id": "POST-108",
+      "activity_id": "7327546343013396482",
+      "filename": "activity_7327546343013396482_slide_0.jpg",
+      "path": "media/activity_7327546343013396482_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 74482,
+      "declared_sha256": "2901743638ecc5e29d593eb52a76fe9b84cc86d50540404f4425481dd0428b78",
+      "actual_sha256": "2901743638ecc5e29d593eb52a76fe9b84cc86d50540404f4425481dd0428b78",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Q Bengaluru, india & ajaykadi@exempelccom — & +91-XXXXXXXX\n*@ Professional Summary\nData Engineer with 7.2+ years of experier in building scalable data platforms\nand ETL pipelines using Azure (ADF, Synapse, Databricks), Spark, Hive, and\nSnowflake. Proven track ract cri optimiezs data workflows, enhancing processe\nacross BFSI, Retail, and Communication domains: NCID,\n@ Core Skills\n* Cioud: Azure (ADF, ADLS, Synapse, Databricks) + AWS (Basics)\n* Big Data: Spark, Hive, HDFS, Sqoop, PySpark * SQL/IC\n+ Languages: Python, Scala, SQL.\n+ Tools: Airflow, Github, Docker, Jira\n+ DBs: Oracle, MySQL, Snowflake Casandra\nfT Key Projects\n+ Data Engineer ~ Pepsico | Dec 2023 - Present\n+ Ledd Azure-based data modernization usingADF & Synapse, Build pipelines\nfrom SharePoint/Blob to Gold Layer in ADLS Gen2, Automating external\ntable creation using Dambricks & Synapse SQL\n+ Data Engineer ~ Trimble (Remote) | 2023\n+ Migrated legacy workloads to Azure-Synasp + Databricks, using PySpark &\nSpark SQL for modular data transformations. &\n+ Connected to Salesforce post-Synapse load for\n+ Big Data Consultant ~ PwC | 2021-2023\n+ Build Spark Streaming apps for Katka -+ Cassandra ingestion\n= Developed Hive jobs using (SMB Join; Bucketing) Ltegron Ingestiog\n= Led metasdata management and data lake governance on\n+ Data Engineer ~ Bank of America | 2021-2022\n* Managed risk data using Spark & Hive, creat HBase layer for reporting\n+ Build Sqoop ingestion with incremental logic\nB Certifications P Side Projects\n* Azure Data Engineer Associate (DP-203) GitHub: AjayO26\nDeveloper (AZ-204), Azure? sicnlist (DP-100)\n+ Snowflake Pro Core (COF-CO2)\n+ Power BI Associate (PL-300)",
+      "redactions": 0,
+      "search_text": "Q Bengaluru, india & ajaykadi@exempelccom — & +91-XXXXXXXX *@ Professional Summary Data Engineer with 7.2+ years of experier in building scalable data platforms and ETL pipelines using Azure (ADF, Synapse, Databricks), Spark, Hive, and Snowflake. Proven track ract cri optimiezs data workflows, enhancing processe across BFSI, Retail, and Communication domains: NCID, @ Core Skills * Cioud: Azure (ADF, ADLS, Synapse, Databricks) + AWS (Basics) * Big Data: Spark, Hive, HDFS, Sqoop, PySpark * SQL/IC + Languages: Python, Scala, SQL. + Tools: Airflow, Github, Docker, Jira + DBs: Oracle, MySQL, Snowflake Casandra fT Key Projects + Data Engineer ~ Pepsico | Dec 2023 - Present + Ledd Azure-based data modernization usingADF & Synapse, Build pipelines from SharePoint/Blob to Gold Layer in ADLS Gen2, Automating external table creation using Dambricks & Synapse SQL + Data Engineer ~ Trimble (Remote) | 2023 + Migrated legacy workloads to Azure-Synasp + Databricks, using PySpark & Spark SQL for modular data transformations. & + Connected to Salesforce post-Synapse load for + Big Data Consultant ~ PwC | 2021-2023 + Build Spark Streaming apps for Katka -+ Cassandra ingestion = Developed Hive jobs using (SMB Join; Bucketing) Ltegron Ingestiog = Led metasdata management and data lake governance on + Data Engineer ~ Bank of America | 2021-2022 * Managed risk data using Spark & Hive, creat HBase layer for reporting + Build Sqoop ingestion with incremental logic B Certifications P Side Projects * Azure Data Engineer Associate (DP-203) GitHub: AjayO26 Developer (AZ-204), Azure? sicnlist (DP-100) + Snowflake Pro Core (COF-CO2) + Power BI Associate (PL-300)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "1659 chars, 213 words, 74% letters, 10% symbols, 0.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ba1304b08792571f7affc9b9829289a4f3465ba0cf248177440d00a09ccb337d"
+    }
+  ]
+}

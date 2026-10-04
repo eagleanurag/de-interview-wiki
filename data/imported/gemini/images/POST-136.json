@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-136",
+  "activity_id": "7337803202441973760",
+  "images": [
+    {
+      "post_id": "POST-136",
+      "activity_id": "7337803202441973760",
+      "filename": "activity_7337803202441973760_slide_0.jpg",
+      "path": "media/activity_7337803202441973760_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 24826,
+      "declared_sha256": "4a740771c269526855a8cf749c81150a34c99d2dc209a9e13f47dc4fe6156c70",
+      "actual_sha256": "4a740771c269526855a8cf749c81150a34c99d2dc209a9e13f47dc4fe6156c70",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "activity_7339901286844096513_slide_01.jpg",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Data Engineering\nInterview Question",
+      "redactions": 0,
+      "search_text": "Data Engineering Interview Question",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "35 chars, 4 words, 91% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0445c9da8387be452b0d10170a6abc4a77674ea6a6961cf56a383c31c83f92a5"
+    }
+  ]
+}

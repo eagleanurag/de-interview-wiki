@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-129",
+  "activity_id": "7335895978253668353",
+  "images": [
+    {
+      "post_id": "POST-129",
+      "activity_id": "7335895978253668353",
+      "filename": "activity_7335895978253668353_slide_0.jpg",
+      "path": "media/activity_7335895978253668353_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 692,
+      "size_bytes": 58898,
+      "declared_sha256": "6d360507bb90abf88c9e0ce42283724dbe6cab8650feef5add8ec368b68eaf66",
+      "actual_sha256": "6d360507bb90abf88c9e0ce42283724dbe6cab8650feef5add8ec368b68eaf66",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "eee\nfrom pyspark.salnpor® sparksession\n‘ron bysharkstl-fonetions import col, current timestamp, to-date\n{oe apart sal-types opare stractiype, Strctrielay Integertype, Stringtype, Oatetype, Tieestanype\nSpark = sparksesstn.butlaer \\\nspptonel \"S Typel.Tenory_Operat.ons\") \\\n‘getorcretel)\n‘ustomer_schena = structType({\n‘StroctFtetd(‘castoner“te', InteperType), False), ¢ Primary hey ~ not oulable\nStroctFteta‘erit\", Seraagtypet)y Fale, se cxait pat rattle\nStroctFtelafirst sane\", stringhype), False), # Furst cape not malable\nStrwctFlatalast Aone, strungtypet); Faise),” ——# Last sone ~ eat atta,\nStroctFLetsignon dot, Oatelype) False), # Signup date \"sat uttaste\nStroctFteta-Tast-apdotes?, Tuertamypet)y irue)# Last updated — note for (atta lead\n»\n‘existing customers. sata = [\n(ne, john dSebeail con\", “Joi, “Boe, datetine date(2024, 2, 19)\nistetine-datetine( 2428, 1, 15, 18, @, @)”  catetine object,\nY\nana, =yanesntthgenatt con\", “Dae”, *Satthjdateting date226, 2, 28),\ndate ine tet nei 2024, 2,28, 13, 38, 8)\ni\nGnas, scnartte-devesenatt.con, “Curie, \"Davis\" datetie.date(2024, 1,2),\ndatetime datetne(2024, 1, 2, 9, 15, 8)\np\n1\n‘ristingof = sparkscreatenatafrane(exsting_custoners data, schem-custonerschema)\nprint(-extsting custoner Tbte:*)\n‘xisting of -shau truneatentsise)\natty-uptes data = f\nset, sjate doe tpdateagenatt com, abe\", \"Oe, “2024-01-18\"), coat pte\n(oa; =Jane-setihenatt-con\", “dng”, \"satih-Domson\", \"2ezee2-20\"), # Last nae change\n(ees “bobswitsonenatt con\", Ravert*, \"Wilson\", \"2eBe-43-I0\"), 4 er chstoner\nUe; “atice-tromeenatiscon!, \"Ace\", “Brom, “2524-08-17, Oven costener\n1\n‘create dnty feed oataframe with partial schema (no ast updated yet)\n‘oily feed schona = Stroctype\n‘SiroctFiela “customer. Intepertype(), False)\nStroctrteta ett\", Steungtypet)y False,\nStroctFteta-tcrst sane, strtagtypet), false),\nStroctFteta Last hone’, strumgtypet False),\n‘StructFletastgnon date, stringtypel), False) ¢ String initially, will convert to date\n»\n‘atty_feed.af = spark-creatoataFrane daily updates data, sthenandatly_fend schon)\n‘4 Convert signap date fram string to date and add last_vpdated timestamp\nnconing at = day. fewest’\n‘ethcatamn si dats”, ta date(eol(sgup date), “yyyr-MetD)\n‘theo as\" upsets\", curren. tinestan\nprtmt(“DaLty Feed dota (Arter schema Trastormatton):*)\nrconingat-show truncate-False)",
+      "redactions": 0,
+      "search_text": "eee from pyspark.salnpor® sparksession ‘ron bysharkstl-fonetions import col, current timestamp, to-date {oe apart sal-types opare stractiype, Strctrielay Integertype, Stringtype, Oatetype, Tieestanype Spark = sparksesstn.butlaer \\ spptonel \"S Typel.Tenory_Operat.ons\") \\ ‘getorcretel) ‘ustomer_schena = structType({ ‘StroctFtetd(‘castoner“te', InteperType), False), ¢ Primary hey ~ not oulable StroctFteta‘erit\", Seraagtypet)y Fale, se cxait pat rattle StroctFtelafirst sane\", stringhype), False), # Furst cape not malable StrwctFlatalast Aone, strungtypet); Faise),” ——# Last sone ~ eat atta, StroctFLetsignon dot, Oatelype) False), # Signup date \"sat uttaste StroctFteta-Tast-apdotes?, Tuertamypet)y irue)# Last updated — note for (atta lead » ‘existing customers. sata = [ (ne, john dSebeail con\", “Joi, “Boe, datetine date(2024, 2, 19) istetine-datetine( 2428, 1, 15, 18, @, @)” catetine object, Y ana, =yanesntthgenatt con\", “Dae”, *Satthjdateting date226, 2, 28), date ine tet nei 2024, 2,28, 13, 38, 8) i Gnas, scnartte-devesenatt.con, “Curie, \"Davis\" datetie.date(2024, 1,2), datetime datetne(2024, 1, 2, 9, 15, 8) p 1 ‘ristingof = sparkscreatenatafrane(exsting_custoners data, schem-custonerschema) print(-extsting custoner Tbte:*) ‘xisting of -shau truneatentsise) atty-uptes data = f set, sjate doe tpdateagenatt com, abe\", \"Oe, “2024-01-18\"), coat pte (oa; =Jane-setihenatt-con\", “dng”, \"satih-Domson\", \"2ezee2-20\"), # Last nae change (ees “bobswitsonenatt con\", Ravert*, \"Wilson\", \"2eBe-43-I0\"), 4 er chstoner Ue; “atice-tromeenatiscon!, \"Ace\", “Brom, “2524-08-17, Oven costener 1 ‘create dnty feed oataframe with partial schema (no ast updated yet) ‘oily feed schona = Stroctype ‘SiroctFiela “customer. Intepertype(), False) Stroctrteta ett\", Steungtypet)y False, StroctFteta-tcrst sane, strtagtypet), false), StroctFteta Last hone’, strumgtypet False), ‘StructFletastgnon date, stringtypel), False) ¢ String initially, will convert to date » ‘atty_feed.af = spark-creatoataFrane daily updates data, sthenandatly_fend schon) ‘4 Convert signap date fram string to date and add last_vpdated timestamp nconing at = day. fewest’ ‘ethcatamn si dats”, ta date(eol(sgup date), “yyyr-MetD) ‘theo as\" upsets\", curren. tinestan prtmt(“DaLty Feed dota (Arter schema Trastormatton):*) rconingat-show truncate-False)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "2318 chars, 264 words, 71% letters, 16% symbols, 0.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "d2fdc2d37fff7f75de050d882efd18b985832dcb1ebab838fd384dacf9eea96e"
+    }
+  ]
+}

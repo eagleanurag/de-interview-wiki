@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-277",
+  "activity_id": "7359647311267864578",
+  "images": [
+    {
+      "post_id": "POST-277",
+      "activity_id": "7359647311267864578",
+      "filename": "activity_7359647311267864578_slide_0.jpg",
+      "path": "media/activity_7359647311267864578_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 260,
+      "size_bytes": 16484,
+      "declared_sha256": "41ff150ded6436b530dba26586248fc25144c25c580728e884446bf8db01422a",
+      "actual_sha256": "41ff150ded6436b530dba26586248fc25144c25c580728e884446bf8db01422a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Serverless without try_cast (FAIL) Serverless with try_cast\nAll Purpose without try_cast (SUCCESS) All Purpose with try_cast_\n(IVTENDED BEHAVIOR)",
+      "redactions": 0,
+      "search_text": "Serverless without try_cast (FAIL) Serverless with try_cast All Purpose without try_cast (SUCCESS) All Purpose with try_cast_ (IVTENDED BEHAVIOR)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "145 chars, 22 words, 81% letters, 8% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "5c8e13ff55a2c70f227003f52d3fa1dfdc92000082f510c14cfbc64312064551"
+    }
+  ]
+}

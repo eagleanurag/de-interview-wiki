@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-122",
+  "activity_id": "7329760385434025984",
+  "images": [
+    {
+      "post_id": "POST-122",
+      "activity_id": "7329760385434025984",
+      "filename": "activity_7329760385434025984_slide_0.jpg",
+      "path": "media/activity_7329760385434025984_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 218,
+      "size_bytes": 15939,
+      "declared_sha256": "421de8009b171aa90b50b4b82ce72ce05724de1799a0973708045baf91749044",
+      "actual_sha256": "421de8009b171aa90b50b4b82ce72ce05724de1799a0973708045baf91749044",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "5 Certincateld wcName Ae DateofCertifeation e DateOfExpiry\n1 1a Nov 2004 Mar 2025,\n2 2 ec 2024 Feb 2025\na aa Jan 2025, Mar 2005,\n4 Ad Feb 2005 Mar 2025\n5 4a ‘aor 2025 May 2005,\n6 5b May 2024 Dec 2024\n7 6b ct 2008 Feb 2025\na To Now 2004 Mor 2025,\n9 ae Jan 2004 ‘pr 2024\n10 ale Mar 2024 un 2024",
+      "redactions": 0,
+      "search_text": "5 Certincateld wcName Ae DateofCertifeation e DateOfExpiry 1 1a Nov 2004 Mar 2025, 2 2 ec 2024 Feb 2025 a aa Jan 2025, Mar 2005, 4 Ad Feb 2005 Mar 2025 5 4a ‘aor 2025 May 2005, 6 5b May 2024 Dec 2024 7 6b ct 2008 Feb 2025 a To Now 2004 Mor 2025, 9 ae Jan 2004 ‘pr 2024 10 ale Mar 2024 un 2024",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "292 chars, 37 words, 42% letters, 35% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "e54100332a32e88d7b260643e950eb8945e3664b451835e36427c0cb5b99d8b2"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-139",
+  "activity_id": "7338057794547343360",
+  "images": [
+    {
+      "post_id": "POST-139",
+      "activity_id": "7338057794547343360",
+      "filename": "activity_7338057794547343360_slide_0.jpg",
+      "path": "media/activity_7338057794547343360_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 483,
+      "height": 483,
+      "size_bytes": 51978,
+      "declared_sha256": "ed20f7987facd7912edddf22bfbce9fc978a72717cdbb4c422d2ef2d6b4940a1",
+      "actual_sha256": "ed20f7987facd7912edddf22bfbce9fc978a72717cdbb4c422d2ef2d6b4940a1",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "15 Reasons Why Data\n:\nEngineers Should\nChoose Azure\n\nAs data engineers, selecting the right cloud platform is\n\ncrucial for building efficient, scalable, and secure data\n\npipelines. While AWS and GCP are powerful platforms,\n\nAzure offers several unique advantages.\n| ae ol\n\nAbhishek Agrawal",
+      "redactions": 0,
+      "search_text": "15 Reasons Why Data : Engineers Should Choose Azure As data engineers, selecting the right cloud platform is crucial for building efficient, scalable, and secure data pipelines. While AWS and GCP are powerful platforms, Azure offers several unique advantages. | ae ol Abhishek Agrawal",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "289 chars, 41 words, 80% letters, 3% symbols, 1.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "4db8f3bddba7270347facc2508b641c3b20a3debcc3b2f990f42a83f92d3fd3b"
+    }
+  ]
+}

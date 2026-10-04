@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-007",
+  "activity_id": "7289860868484300800",
+  "images": [
+    {
+      "post_id": "POST-007",
+      "activity_id": "7289860868484300800",
+      "filename": "activity_7289860868484300800_slide_0.jpg",
+      "path": "media/activity_7289860868484300800_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 40879,
+      "declared_sha256": "87ed5c36556ae5433094d22b1fdf430065037a82e5ec5df3016dcc350f64a518",
+      "actual_sha256": "87ed5c36556ae5433094d22b1fdf430065037a82e5ec5df3016dcc350f64a518",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "120 ADVANCED.\n\nPYTHON\n\nINTERVIEW\n\nQUESTIONS\n2g Cs aN\n\nBy Hernando Abella wr.",
+      "redactions": 0,
+      "search_text": "120 ADVANCED. PYTHON INTERVIEW QUESTIONS 2g Cs aN By Hernando Abella wr.",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "76 chars, 11 words, 72% letters, 8% symbols, 2.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a81672f9e1af7b5a52f22a33723c18cfcbf9a860a910b2155e44f86c854cfff0"
+    }
+  ]
+}

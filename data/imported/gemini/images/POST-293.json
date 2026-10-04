@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-293",
+  "activity_id": "7463423405413797888",
+  "images": [
+    {
+      "post_id": "POST-293",
+      "activity_id": "7463423405413797888",
+      "filename": "activity_7463423405413797888_slide_0.jpg",
+      "path": "media/activity_7463423405413797888_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 48414,
+      "declared_sha256": "f42ffb4a87120992c7b90759fc636500dc3151c19c151926d4330d2382307563",
+      "actual_sha256": "f42ffb4a87120992c7b90759fc636500dc3151c19c151926d4330d2382307563",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "PySpark Functions Cheatsheet\nColumn & Row Operations\n[—“fananon —[owenrnow [anne |\nfrou _foctceraccume fy went ner eT]\nq\nfd ur manccoums prsnateoar ror) |\nfoe wand —firasows ent ar>30) |\nfort owrrcoun prow) |\nsme) owautows osm |\nrrcounmmenao) Renae cous\nmourn fone\nee\nJoin & Combine\n[fonaiow | —isenrnon [Bane |\nfeat) ontwo Dwar risen\", \"wwe ) |\nKouser) lover rinmows —brconss) |",
+      "redactions": 0,
+      "search_text": "PySpark Functions Cheatsheet Column & Row Operations [—“fananon —[owenrnow [anne | frou _foctceraccume fy went ner eT] q fd ur manccoums prsnateoar ror) | foe wand —firasows ent ar>30) | fort owrrcoun prow) | sme) owautows osm | rrcounmmenao) Renae cous mourn fone ee Join & Combine [fonaiow | —isenrnon [Bane | feat) ontwo Dwar risen\", \"wwe ) | Kouser) lover rinmows —brconss) |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "379 chars, 52 words, 73% letters, 10% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "71fc3c544fb99b4d3d065a2e0aa05702cff9cdf30b937c5f11898ae317354419"
+    }
+  ]
+}

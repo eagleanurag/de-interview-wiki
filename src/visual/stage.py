@@ -33,6 +33,7 @@ import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from src.models import KnowledgePost, MediaItem
 from src.visual.assets import order_assets
 from src.visual.dedupe import (
     asset_digest,
@@ -71,6 +72,12 @@ class PostOutcome:
     retries: int = 0
     failures: int = 0
     seconds: float = 0.0
+    #: Assets the source described that the post does not carry, and
+    #: which were therefore not added. Non-zero is a fact about the
+    #: archive and the post disagreeing, not a failure, and it is
+    #: reported rather than dropped so the two cannot drift apart
+    #: unnoticed.
+    unmatched: int = 0
 
     @property
     def digest(self) -> str:
@@ -450,4 +457,139 @@ class VisualStage:
         return [], self.attempts
 
 
-__all__ = ["PostOutcome", "VisualStage", "usable_assets"]
+def inject(
+    post: KnowledgePost,
+    outcome: PostOutcome,
+    *,
+    add_missing: bool = True,
+) -> KnowledgePost:
+    """
+    Put what was read into the post's media, in memory.
+
+    ``extracted_text`` is what the existing enricher and grounding check
+    already read, so this is the whole integration. ``sequence``,
+    ``role``, ``sha256`` and ``extraction_method`` are recorded beside
+    it so a reader can walk a claim back to the file it came from.
+
+    Media already in the post that the archive did not contribute keeps
+    whatever it had: this stage adds to the post, it does not replace it.
+
+    Assets that failed keep their entry and gain a note. A gap is
+    visible, which is the point.
+
+    ``add_missing`` decides what happens to an asset the post does not
+    already carry. The archive-driven visual stage passes ``True``: it
+    read the archive, and what it read is the post's content. The
+    imported image-knowledge package passes ``False``, and the reason is
+    a measured failure rather than a preference. This project's own
+    archive holds 65 files that no post references -- a carousel the
+    post lists one slide of, say -- and the package transcribes all of
+    them. Adding the rest fabricated 2,735 media items that were never
+    the post's, and on the largest carousel it produced a 46,030
+    character prompt, past the 32,767 character limit Windows will
+    accept on a command line. That surfaces as ``FileNotFoundError``
+    from ``CreateProcess``, which is a deeply misleading way for a
+    prompt to be too long.
+
+    Skipped assets are counted on ``outcome.unmatched`` instead. They
+    are not lost -- the import still records every transcription -- they
+    simply are not this post's media, and saying so is better than
+    inventing an attachment for them.
+    """
+
+    by_filename = {
+        Path(item.path).name: item for item in post.media
+    }
+
+    analyses = {
+        Path(analysis.source_path).name: analysis
+        for analysis in outcome.visual.analyses
+    }
+
+    for asset in outcome.visual.assets:
+        filename = asset.filename
+
+        item = by_filename.get(filename)
+
+        if item is None and not add_missing:
+            outcome.unmatched += 1
+
+            continue
+
+        if item is None:
+            item = MediaItem(
+                type=(
+                    "pdf"
+                    if asset.media_type == "pdf"
+                    else "image"
+                    if asset.media_type == "image"
+                    else "other"
+                ),
+                path=asset.path,
+            )
+
+            post.media.append(item)
+            by_filename[filename] = item
+
+        item.sequence = asset.sequence
+        item.role = asset.role.value
+        item.sha256 = asset.sha256 or None
+
+        if asset.state is ProcessingState.FAILED:
+            item.extraction_method = None
+            item.description = (
+                f"{asset.format or 'unreadable'} image, "
+                f"{asset.width or '?'}x{asset.height or '?'} pixels. "
+                f"Could not be read: {asset.note}"
+            )
+
+            continue
+
+        analysis = analyses.get(filename)
+
+        if analysis is None:
+            item.extraction_method = None
+            item.description = (
+                f"{asset.format} image, "
+                f"{asset.width}x{asset.height} pixels"
+            )
+
+            continue
+
+        text = analysis.as_source_text()
+
+        item.extracted_text = text or None
+        item.extraction_method = analysis.processor
+
+        parts = [
+            f"{asset.format} image, {asset.width}x{asset.height} pixels"
+        ]
+
+        if asset.role is AssetRole.SLIDE:
+            parts.append(f"slide {asset.sequence + 1}")
+
+        if asset.role is AssetRole.THUMBNAIL:
+            parts.append("low-resolution preview, full slide also present")
+
+        if analysis.confidence:
+            parts.append(
+                f"read with confidence {analysis.confidence:.2f}"
+            )
+
+        item.description = ". ".join(parts)
+
+    # Ordered so a post's media reads in slide order, which is what the
+    # prompt and the wiki both assume.
+    post.media.sort(
+        key=lambda entry: (entry.sequence, Path(entry.path).name)
+    )
+
+    return post
+
+
+__all__ = [
+    "PostOutcome",
+    "VisualStage",
+    "inject",
+    "usable_assets",
+]

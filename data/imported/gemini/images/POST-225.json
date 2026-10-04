@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-225",
+  "activity_id": "7346070545882337280",
+  "images": [
+    {
+      "post_id": "POST-225",
+      "activity_id": "7346070545882337280",
+      "filename": "activity_7346070545882337280_slide_0.jpg",
+      "path": "media/activity_7346070545882337280_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 20274,
+      "declared_sha256": "1869cbb374e244081b5ef923d60dc1aded07dacf6418311b09cae475ce8a0bf9",
+      "actual_sha256": "1869cbb374e244081b5ef923d60dc1aded07dacf6418311b09cae475ce8a0bf9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "vide =e #49\n1 bah PySpark\nShe st Tea Interview Questions\narth Konda",
+      "redactions": 0,
+      "search_text": "vide =e #49 1 bah PySpark She st Tea Interview Questions arth Konda",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "67 chars, 11 words, 75% letters, 7% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "e400de4206d8f1ad6f641a15a5a4ac0da3edb47a381f047f9cb2f3dc44f31b6d"
+    }
+  ]
+}

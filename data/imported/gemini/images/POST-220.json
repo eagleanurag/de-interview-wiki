@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-220",
+  "activity_id": "7345654919057612801",
+  "images": [
+    {
+      "post_id": "POST-220",
+      "activity_id": "7345654919057612801",
+      "filename": "activity_7345654919057612801_slide_0.jpg",
+      "path": "media/activity_7345654919057612801_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 640,
+      "size_bytes": 51895,
+      "declared_sha256": "b8a27d5f5543dea424d60734775c01c595f40aed6c1d8f09984d35534ee97840",
+      "actual_sha256": "b8a27d5f5543dea424d60734775c01c595f40aed6c1d8f09984d35534ee97840",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "= Laak-",
+      "redactions": 0,
+      "search_text": "= Laak-",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "7 chars, 1 words, 57% letters, 29% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "99c8c36a78673dcc0a1c8bcb54df7b9ef394a1303646aab6bc7ada7b64dd6122"
+    }
+  ]
+}

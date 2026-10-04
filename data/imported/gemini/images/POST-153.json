@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-153",
+  "activity_id": "7339106266201411587",
+  "images": [
+    {
+      "post_id": "POST-153",
+      "activity_id": "7339106266201411587",
+      "filename": "activity_7339106266201411587_slide_0.jpg",
+      "path": "media/activity_7339106266201411587_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 390,
+      "height": 487,
+      "size_bytes": 42031,
+      "declared_sha256": "f4f11a365c38439abce9eec060cd23571be79e13c5569b781da107d536169fce",
+      "actual_sha256": "f4f11a365c38439abce9eec060cd23571be79e13c5569b781da107d536169fce",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Master\nETL PIPELINES\nin 30 Days!\n=o",
+      "redactions": 0,
+      "search_text": "Master ETL PIPELINES in 30 Days! =o",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "35 chars, 6 words, 71% letters, 11% symbols, 2.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "f275fc17a5da0ba26db4ee79d38f36164409f849cd0d1a4ed73b9dd025add665"
+    }
+  ]
+}

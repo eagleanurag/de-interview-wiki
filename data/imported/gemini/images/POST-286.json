@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-286",
+  "activity_id": "7457377547241144321",
+  "images": [
+    {
+      "post_id": "POST-286",
+      "activity_id": "7457377547241144321",
+      "filename": "activity_7457377547241144321_slide_0.jpg",
+      "path": "media/activity_7457377547241144321_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 704,
+      "size_bytes": 34427,
+      "declared_sha256": "8ae6f6a168b324dd19950d02ccb02e41bdf59b6e8ffe4b3ead2464232fd456ca",
+      "actual_sha256": "8ae6f6a168b324dd19950d02ccb02e41bdf59b6e8ffe4b3ead2464232fd456ca",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Round 2 (Scenario-Based)\nExperience range: 1-7 Yours\n1, Explain your end-to-end data pipeline in detail\nAmer (What interviewers ike)\nIn my project, data comes from multiple sources ke relations! dutahases and API\nFit, wget data oto a raw layer the Daa Lake exactly as recived, witha\ntransformations This helps for audit and reprocessing\nThen we move daa ta procewed/dean layer, where we\n\n+ Remove duplicates\n\n+ Handle alls\n\nApply busines le\n\n1 Stnandie formats\nFinally, we load curated data into Data Warehouse whee epsting nd analytics teams\n[ako handle\n\n+ crema ogic\n\n+ Enorhanding\n\n+ Monitonny and alers\nThis approuch hoops the pipeline salable and eile\n2, Scenario: Business says pipeline is slow, How do you debug?\nDetailed Anewer\nit, 1 dot assume the esue 1 mensure\n\nTech Interview Titans",
+      "redactions": 0,
+      "search_text": "Round 2 (Scenario-Based) Experience range: 1-7 Yours 1, Explain your end-to-end data pipeline in detail Amer (What interviewers ike) In my project, data comes from multiple sources ke relations! dutahases and API Fit, wget data oto a raw layer the Daa Lake exactly as recived, witha transformations This helps for audit and reprocessing Then we move daa ta procewed/dean layer, where we + Remove duplicates + Handle alls Apply busines le 1 Stnandie formats Finally, we load curated data into Data Warehouse whee epsting nd analytics teams [ako handle + crema ogic + Enorhanding + Monitonny and alers This approuch hoops the pipeline salable and eile 2, Scenario: Business says pipeline is slow, How do you debug? Detailed Anewer it, 1 dot assume the esue 1 mensure Tech Interview Titans",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "794 chars, 119 words, 78% letters, 5% symbols, 0.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a6430fc75953f04b06c2975f9dc1d1f3ec5c3475b18c22a566fa4aeb06ddc6b1"
+    }
+  ]
+}

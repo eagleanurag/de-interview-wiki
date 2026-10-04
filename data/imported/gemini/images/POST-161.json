@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-161",
+  "activity_id": "7339514243995619328",
+  "images": [
+    {
+      "post_id": "POST-161",
+      "activity_id": "7339514243995619328",
+      "filename": "activity_7339514243995619328_slide_0.jpg",
+      "path": "media/activity_7339514243995619328_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 55239,
+      "declared_sha256": "917c53f5095de9f024580db0bbd734bb2b28cf50afe5ca84f7c0905b1cc4cf80",
+      "actual_sha256": "917c53f5095de9f024580db0bbd734bb2b28cf50afe5ca84f7c0905b1cc4cf80",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Basic SQL Questions Intermerdiate to Advanced\nSQL Questions\n1. What is the difference 11. What is a window function?\nbetween WHERE and HVL3? How isit different from\naggregate functions?\n2. What isa primary key?\n12. Explain RANK\\), DENSE RANKI),\n3. What isthe difference and ROW_NUMBER).\nbetween INNER JOIN,\nLEFT JOIN, RIGHT JOIN AN 13. What is indexing? How does it\nFULLJOIN? impact performance?\n4. What is normalization? 14, How can you find duplicate\nExplain different normal forms. records in a table?\n5, What are constraints in SQL? 15. What is the difference\nbetween EXISTS, IN, and JOIN?\n6. What is the difference between\nDELETE, TRUNCATE, and DROP? 16. What is a Common Table\nExpression (CTE)?\n7. What isa subquery? Give\nanesamnple 17. Whatiis a stored procedure?\n8. Whatis the difference ‘18. What is the ACID property\nbetween UNION and (N)N ALL? in SQL databases?\n9, What is a NULL value in SQL? 19. What is the difference\nbetween clustered and\n10. What are aggregate functions non-clustered indexess?\ninsQL\n20. How do you optimize\na slow SQL query?",
+      "redactions": 0,
+      "search_text": "Basic SQL Questions Intermerdiate to Advanced SQL Questions 1. What is the difference 11. What is a window function? between WHERE and HVL3? How isit different from aggregate functions? 2. What isa primary key? 12. Explain RANK\\), DENSE RANKI), 3. What isthe difference and ROW_NUMBER). between INNER JOIN, LEFT JOIN, RIGHT JOIN AN 13. What is indexing? How does it FULLJOIN? impact performance? 4. What is normalization? 14, How can you find duplicate Explain different normal forms. records in a table? 5, What are constraints in SQL? 15. What is the difference between EXISTS, IN, and JOIN? 6. What is the difference between DELETE, TRUNCATE, and DROP? 16. What is a Common Table Expression (CTE)? 7. What isa subquery? Give anesamnple 17. Whatiis a stored procedure? 8. Whatis the difference ‘18. What is the ACID property between UNION and (N)N ALL? in SQL databases? 9, What is a NULL value in SQL? 19. What is the difference between clustered and 10. What are aggregate functions non-clustered indexess? insQL 20. How do you optimize a slow SQL query?",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "1058 chars, 159 words, 75% letters, 9% symbols, 3.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9cc4327bdfb0871d4a49229f211c02f3c80f333198660c6305e79b243973db91"
+    }
+  ]
+}

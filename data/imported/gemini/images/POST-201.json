@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-201",
+  "activity_id": "7343314200565280768",
+  "images": [
+    {
+      "post_id": "POST-201",
+      "activity_id": "7343314200565280768",
+      "filename": "activity_7343314200565280768_slide_0.jpg",
+      "path": "media/activity_7343314200565280768_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 563,
+      "size_bytes": 327904,
+      "declared_sha256": "c298d76701b23b09fb930e715ccc95473e8d9dc493cc2270b7333cbd3169cb0e",
+      "actual_sha256": "c298d76701b23b09fb930e715ccc95473e8d9dc493cc2270b7333cbd3169cb0e",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "| 6 Data structures to (BaVeDatabase Storage) — PBytebyteGo\nBloom Filter\n8\n| a\nMinhash\n[T=] T=] signature te\n‘FEET Phe]\nSkipList Count-Min Sketch\n| tio. || mmantens [I fe",
+      "redactions": 0,
+      "search_text": "| 6 Data structures to (BaVeDatabase Storage) — PBytebyteGo Bloom Filter 8 | a Minhash [T=] T=] signature te ‘FEET Phe] SkipList Count-Min Sketch | tio. || mmantens [I fe",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "170 chars, 23 words, 71% letters, 12% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0b0254332b3554e1bae3a52c1027b8cbae3b5087b2fb8d139843925e21379ae4"
+    }
+  ]
+}

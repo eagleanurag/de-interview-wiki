@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-256",
+  "activity_id": "7349626062097571840",
+  "images": [
+    {
+      "post_id": "POST-256",
+      "activity_id": "7349626062097571840",
+      "filename": "activity_7349626062097571840_slide_0.jpg",
+      "path": "media/activity_7349626062097571840_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 480,
+      "size_bytes": 34148,
+      "declared_sha256": "df22d0d10b02bde61f54f38e4f2311000b94e1a51bf483d91b6c1168932a8eb7",
+      "actual_sha256": "df22d0d10b02bde61f54f38e4f2311000b94e1a51bf483d91b6c1168932a8eb7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "iy, Azure\nPIVOT Ea Data Factory\nTRANSFORMATION\nConverts columns year (revenue\ninto rows.\nYear Metric\n==\nUNPIVOT\nTRANSFORMATION\nConverts columns\n<_——— into rows\nYear Metric Year Metric",
+      "redactions": 0,
+      "search_text": "iy, Azure PIVOT Ea Data Factory TRANSFORMATION Converts columns year (revenue into rows. Year Metric == UNPIVOT TRANSFORMATION Converts columns <_——— into rows Year Metric Year Metric",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "183 chars, 25 words, 80% letters, 5% symbols, 0.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "46ae172731bab36ff7809ea926c312b8e0b7ad8c80f3e94a0ff095ec3173878a"
+    }
+  ]
+}

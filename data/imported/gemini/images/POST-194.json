@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-194",
+  "activity_id": "7341756690179993602",
+  "images": [
+    {
+      "post_id": "POST-194",
+      "activity_id": "7341756690179993602",
+      "filename": "activity_7341756690179993602_slide_0.jpg",
+      "path": "media/activity_7341756690179993602_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 483,
+      "height": 483,
+      "size_bytes": 46759,
+      "declared_sha256": "ad9b88fad5eb2aace78f762957065332a6679e2a3caf4e6ce0a77fc0660f82b5",
+      "actual_sha256": "ad9b88fad5eb2aace78f762957065332a6679e2a3caf4e6ce0a77fc0660f82b5",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "& Databricks spon P94 sever\nSOL SERVER OR DATABRICKS?\nHow Pick the Right Tool for the Right Job?\nData is exploding\nChoosing the right engine can save hours, dollars, and career\nheadaches.\nSN\nVY, AGN wa",
+      "redactions": 0,
+      "search_text": "& Databricks spon P94 sever SOL SERVER OR DATABRICKS? How Pick the Right Tool for the Right Job? Data is exploding Choosing the right engine can save hours, dollars, and career headaches. SN VY, AGN wa",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "201 chars, 35 words, 78% letters, 4% symbols, 1.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "8062a91eb6c943bccf4487c4cf5ee35e83e8df631828d60cbb6ae675a53d36ff"
+    }
+  ]
+}

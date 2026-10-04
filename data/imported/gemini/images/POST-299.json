@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-299",
+  "activity_id": "7475193500167372800",
+  "images": [
+    {
+      "post_id": "POST-299",
+      "activity_id": "7475193500167372800",
+      "filename": "activity_7475193500167372800_slide_0.jpg",
+      "path": "media/activity_7475193500167372800_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 87674,
+      "declared_sha256": "95675e42bda0f9defe5f4b098c221cfaa6416221d819c84454a77d59bcd64e6f",
+      "actual_sha256": "95675e42bda0f9defe5f4b098c221cfaa6416221d819c84454a77d59bcd64e6f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "“ SPARK vs DATABRICKS\nDifferent abstractions. Same engine “.\n(Chrhene stank aRcnrecTore | ((DaTABRTCRS ATonm ARcurTecTURE |]\nGa sees Sore\n[a Se DER SE\nHoH + Grates Spkcotet [ Presi enor pame |\n‘as oo pater + tires Maret |\nset ete | : fred! 2 pads bl seas\narea Eee\n(erurce Maragement) irc OY ccs\n+ + + sree ower | ee\nea) (ms) (meas) ee, BE\n|eSiam| [Ein Sram] |S \"| ded\n| |B a a;\nTae es\n(= ss A | oh. | lB\n| ie ae 5d @ (Ge ermal) GBVALS/ GCS) (Gombe)\n=) eee | ie NITY eAALGG (Gera Le) cil\nQ OQ # Q\n[cl ret | toe Lae ae)\n(PD? “owas vou manne (SOAR) ) [wna DATABRICAS pumas = a ey\nCerne inny Geass | |S smcmantaaaity = Garcia CR\nSommer | | o tmmene Giant ote\nPeer Some | (Eee gett\nO Scere SpiHE Losers\nFaort gaara eet, eet",
+      "redactions": 0,
+      "search_text": "“ SPARK vs DATABRICKS Different abstractions. Same engine “. (Chrhene stank aRcnrecTore | ((DaTABRTCRS ATonm ARcurTecTURE |] Ga sees Sore [a Se DER SE HoH + Grates Spkcotet [ Presi enor pame | ‘as oo pater + tires Maret | set ete | : fred! 2 pads bl seas area Eee (erurce Maragement) irc OY ccs + + + sree ower | ee ea) (ms) (meas) ee, BE |eSiam| [Ein Sram] |S \"| ded | |B a a; Tae es (= ss A | oh. | lB | ie ae 5d @ (Ge ermal) GBVALS/ GCS) (Gombe) =) eee | ie NITY eAALGG (Gera Le) cil Q OQ # Q [cl ret | toe Lae ae) (PD? “owas vou manne (SOAR) ) [wna DATABRICAS pumas = a ey Cerne inny Geass | |S smcmantaaaity = Garcia CR Sommer | | o tmmene Giant ote Peer Some | (Eee gett O Scere SpiHE Losers Faort gaara eet, eet",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "718 chars, 123 words, 67% letters, 11% symbols, 1.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "37483d281035de495c35ab484599f8687dd14755a1052254e16ad856438696e2"
+    }
+  ]
+}

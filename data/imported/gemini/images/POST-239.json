@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-239",
+  "activity_id": "7347839111384182785",
+  "images": [
+    {
+      "post_id": "POST-239",
+      "activity_id": "7347839111384182785",
+      "filename": "activity_7347839111384182785_slide_0.jpg",
+      "path": "media/activity_7347839111384182785_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 28939,
+      "declared_sha256": "b3a4a38f3645f65b4117b55fdfdf60a2d3ab1d86f48d9cfb8862cc052e8f8ed9",
+      "actual_sha256": "b3a4a38f3645f65b4117b55fdfdf60a2d3ab1d86f48d9cfb8862cc052e8f8ed9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "TOP 12 IMPORTANT\nDATA ENGINEERING\nQUESTIONS AND ANSWERS",
+      "redactions": 0,
+      "search_text": "TOP 12 IMPORTANT DATA ENGINEERING QUESTIONS AND ANSWERS",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "55 chars, 7 words, 84% letters, 4% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "124ec2864cf7057d4ad50fc1bba6ec2ccc2be12b5df0b5bda53be7d0e76a7ac1"
+    }
+  ]
+}

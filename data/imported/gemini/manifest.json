@@ -1,0 +1,30 @@
+{
+  "manifest_version": 1,
+  "package": {
+    "package_name": "LINKEDIN_KNOWLEDGE_ARCHIVE_PACKAGE",
+    "source_path": "",
+    "claimed_total_images": 3047,
+    "claimed_groups": 312,
+    "claimed_ocr_available": 2668,
+    "claimed_ocr_no_text": 114,
+    "claimed_ocr_failed": 0,
+    "claimed_ocr_pending": 0,
+    "claimed_unique_after_duplicates": 2782,
+    "claimed_exact_duplicates": 265,
+    "declared_caveat": "The machine-readable OCR/transcription pass is complete, but a true human-style semantic visual review of every one of the unique images has not been performed individually.",
+    "imported_at": "2026-10-04T01:12:32.132777+00:00"
+  },
+  "package_digest": "54a8c45fd1ee2fec67a15c03343b9a7a0e0f6682448b7ca57a7209788a36298a",
+  "archive_digest": "5774f7cef1a3ab9d69893bdb72fe7931c032293828b0e5939f0f6f0dde173770",
+  "fingerprint": "6990dd1ac2123ea2c643eacb3ad18dfb393e5f218982e45d110169b1813ba819",
+  "records": 3047,
+  "groups": 312,
+  "candidate_questions": 180,
+  "ocr_available": 2668,
+  "ocr_no_text": 114,
+  "ocr_unresolved": 265,
+  "duplicates": 265,
+  "previews": 192,
+  "unreadable": 0,
+  "imported_at": "2026-10-04T01:12:44.423170+00:00"
+}

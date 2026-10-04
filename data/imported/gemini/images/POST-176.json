@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-176",
+  "activity_id": "7340581665108279299",
+  "images": [
+    {
+      "post_id": "POST-176",
+      "activity_id": "7340581665108279299",
+      "filename": "activity_7340581665108279299_slide_0.jpg",
+      "path": "media/activity_7340581665108279299_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 22365,
+      "declared_sha256": "bcf3c7213f437b13e458296c32e915fd2aa497b6ebe2d91a58541ddba4e6c550",
+      "actual_sha256": "bcf3c7213f437b13e458296c32e915fd2aa497b6ebe2d91a58541ddba4e6c550",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Most Asked\nSQL Queries\nIn Interviews",
+      "redactions": 0,
+      "search_text": "Most Asked SQL Queries In Interviews",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "36 chars, 6 words, 86% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9fec2f3a40bd7a2e2da888b838090ca0ba48b982041c5e6cb13686a9d97cf578"
+    }
+  ]
+}

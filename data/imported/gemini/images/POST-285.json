@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-285",
+  "activity_id": "7455813265567154177",
+  "images": [
+    {
+      "post_id": "POST-285",
+      "activity_id": "7455813265567154177",
+      "filename": "activity_7455813265567154177_slide_0.jpg",
+      "path": "media/activity_7455813265567154177_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 678,
+      "size_bytes": 43022,
+      "declared_sha256": "0c67f53cdc524b75555fcf575aea72bdd13903445b24662e52289411b32a0e8a",
+      "actual_sha256": "0c67f53cdc524b75555fcf575aea72bdd13903445b24662e52289411b32a0e8a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Data Engineer Interview Questions\n(0-5 Year Experience)\nData Engineer\nInterview Questions\nSQL\nPython\nPySpark\nETL pipelines\ndata architecture\nLow would you proce a ery Ire 20-50) hat enna nto\nemer",
+      "redactions": 0,
+      "search_text": "Data Engineer Interview Questions (0-5 Year Experience) Data Engineer Interview Questions SQL Python PySpark ETL pipelines data architecture Low would you proce a ery Ire 20-50) hat enna nto emer",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "195 chars, 28 words, 79% letters, 6% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0c1cd5004d9ad181428510531c8cd38452c761c1b6e45e7cbf3a292268814b6d"
+    }
+  ]
+}

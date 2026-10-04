@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-114",
+  "activity_id": "7328101059829084160",
+  "images": [
+    {
+      "post_id": "POST-114",
+      "activity_id": "7328101059829084160",
+      "filename": "activity_7328101059829084160_slide_0.jpg",
+      "path": "media/activity_7328101059829084160_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 360,
+      "size_bytes": 238772,
+      "declared_sha256": "8f85dac383cc58c35c9058b2b8b143065c30d943aed7be716ce3a6d267cafc30",
+      "actual_sha256": "8f85dac383cc58c35c9058b2b8b143065c30d943aed7be716ce3a6d267cafc30",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "—_ 25 :\naT tts Caney lll\nSTREAMING gsi a fa al\nE\nmone > a .\nROEM = tt",
+      "redactions": 0,
+      "search_text": "—_ 25 : aT tts Caney lll STREAMING gsi a fa al E mone > a . ROEM = tt",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "69 chars, 14 words, 61% letters, 12% symbols, 2.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ebcca3ac7cce9f8b89723095992fe409b65634f807979519b5871c8ec3bae927"
+    }
+  ]
+}

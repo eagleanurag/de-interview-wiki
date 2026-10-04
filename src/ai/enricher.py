@@ -23,8 +23,32 @@ from src.ai.schemas import (
 from src.models import InterviewQuestion, KnowledgePost
 
 
+#: The longest command line Windows will create a process from.
+#:
+#: The prompt is passed to OpenCode as an argument, so it is subject to
+#: this, and exceeding it fails process creation -- which Python reports
+#: as ``FileNotFoundError``. That is why it is checked here: the same
+#: error is what a missing executable raises, and a post whose prompt was
+#: too long was reported as "OpenCode executable could not be started"
+#: while the executable sat on disk working perfectly. The largest prompt
+#: in this checkout is 7,894 characters, so the headroom is large; the
+#: check exists so that a future source which does overflow says what is
+#: actually wrong.
+WINDOWS_COMMAND_LINE_LIMIT = 32767
+
+
 class EnrichmentError(RuntimeError):
     """Raised when a response cannot be turned into a knowledge record."""
+
+
+class PromptTooLongError(EnrichmentError):
+    """The prompt cannot be passed to the model on this platform.
+
+    A distinct type rather than a message on ``EnrichmentError``,
+    because the operator action is different. A schema mismatch is the
+    model's fault and a retry may fix it; this is the pipeline handing
+    over too much, and retrying it unchanged will fail identically.
+    """
 
 
 class AIEnricher:
@@ -51,6 +75,18 @@ class AIEnricher:
         """
 
         prompt = self._build_prompt(post)
+
+        # Checked before the call, so an over-long prompt is reported as
+        # what it is. See WINDOWS_COMMAND_LINE_LIMIT for why the default
+        # error would have been actively misleading.
+        if len(prompt) > WINDOWS_COMMAND_LINE_LIMIT:
+            raise PromptTooLongError(
+                f"The prompt for this post is {len(prompt):,} characters, "
+                f"past the {WINDOWS_COMMAND_LINE_LIMIT:,} that can be "
+                "passed as a command-line argument. Something is "
+                "attaching text that does not belong to this post -- "
+                "check image-transcription injection before retrying."
+            )
 
         result = self.client.run(prompt)
 

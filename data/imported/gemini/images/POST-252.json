@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-252",
+  "activity_id": "7349219212017483777",
+  "images": [
+    {
+      "post_id": "POST-252",
+      "activity_id": "7349219212017483777",
+      "filename": "activity_7349219212017483777_slide_0.jpg",
+      "path": "media/activity_7349219212017483777_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 178,
+      "size_bytes": 12432,
+      "declared_sha256": "ec7efbca8028a6bc7e56179adbf3b81ddd1fb3b7b0a115308043945c0544d6e4",
+      "actual_sha256": "ec7efbca8028a6bc7e56179adbf3b81ddd1fb3b7b0a115308043945c0544d6e4",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "CREATE MATERIALIZED VIEW revenue_by_region\nTRIGGER ON UPDATE\n\nAT MOST EVERY 3 HOURS\n\nAS SELECT date, region, sum(revenue)\n\nFROM sales",
+      "redactions": 0,
+      "search_text": "CREATE MATERIALIZED VIEW revenue_by_region TRIGGER ON UPDATE AT MOST EVERY 3 HOURS AS SELECT date, region, sum(revenue) FROM sales",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "133 chars, 21 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "434ab22e7ce5fd7748c286bf40f4b99de1a970692b0f9ef67c68f3616cbced3e"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-213",
+  "activity_id": "7345000541866901504",
+  "images": [
+    {
+      "post_id": "POST-213",
+      "activity_id": "7345000541866901504",
+      "filename": "activity_7345000541866901504_slide_0.jpg",
+      "path": "media/activity_7345000541866901504_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 392,
+      "size_bytes": 31953,
+      "declared_sha256": "2b268fd8dc33699afe19becf8a4a325bfaaba9f0fd7e04821178452fc0f22187",
+      "actual_sha256": "2b268fd8dc33699afe19becf8a4a325bfaaba9f0fd7e04821178452fc0f22187",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "NFTOAtAnlomationPacesing Seer ate ted ©wnttoata\nDate: Mareb 182025\nMansi Goal\n\n| eset\n\nLer1EH oF apvorvewes\n\nDear Man\nConraisions! We have pleasure king an feo you othe posto Stems Integration Senior\n‘Specs Gurgaon We ext Yu the onary on Bf MNES. You wl Bt\n‘sftbe N17 DATA Iona sung Serves Pte Los CNET DATA\") pl cy\nWe eve that or cployes frm he ais of or sce and a erefore ou mot vale ast\n‘Accordingly. we have stays belived in ing thm every best work ene and festa\nows theo dle rs othe il ent You ca look ora the same when you jo ws\nWeliot ornand ins long and mally sinng sition with you aap you find the tmephe\nellos a gti rc yur pot\ni he Sia Gi a i i ah pu cat hs",
+      "redactions": 0,
+      "search_text": "NFTOAtAnlomationPacesing Seer ate ted ©wnttoata Date: Mareb 182025 Mansi Goal | eset Ler1EH oF apvorvewes Dear Man Conraisions! We have pleasure king an feo you othe posto Stems Integration Senior ‘Specs Gurgaon We ext Yu the onary on Bf MNES. You wl Bt ‘sftbe N17 DATA Iona sung Serves Pte Los CNET DATA\") pl cy We eve that or cployes frm he ais of or sce and a erefore ou mot vale ast ‘Accordingly. we have stays belived in ing thm every best work ene and festa ows theo dle rs othe il ent You ca look ora the same when you jo ws Weliot ornand ins long and mally sinng sition with you aap you find the tmephe ellos a gti rc yur pot i he Sia Gi a i i ah pu cat hs",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "667 chars, 135 words, 76% letters, 3% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "c3c7d2c6814e4405783dabc4e45b86b2d92f79db38c2214df6b828db768dc313"
+    }
+  ]
+}

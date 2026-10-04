@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-269",
+  "activity_id": "7353272605207879680",
+  "images": [
+    {
+      "post_id": "POST-269",
+      "activity_id": "7353272605207879680",
+      "filename": "activity_7353272605207879680_slide_0.jpg",
+      "path": "media/activity_7353272605207879680_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 474,
+      "size_bytes": 30610,
+      "declared_sha256": "895414caa73bc3c516697f8cc6a9398781fae145fd1ed0b8fc9c28dc16ccd9e1",
+      "actual_sha256": "895414caa73bc3c516697f8cc6a9398781fae145fd1ed0b8fc9c28dc16ccd9e1",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "System Design Fundamentals\nH 1\nScalability — Load Balancers Object Storage\nMessage Queues - es\nicroservices aching\nDatabase CAP Theorem Rete Limiting\n=a = r\n= S&\nPartitioning oN Stream Processing",
+      "redactions": 0,
+      "search_text": "System Design Fundamentals H 1 Scalability — Load Balancers Object Storage Message Queues - es icroservices aching Database CAP Theorem Rete Limiting =a = r = S& Partitioning oN Stream Processing",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "195 chars, 26 words, 81% letters, 4% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "10f46ce1e96f192e2909bd0f2fc77f6bdf3af615503b1b07f7b7b7ab0f3d513e"
+    }
+  ]
+}

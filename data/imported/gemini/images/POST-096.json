@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-096",
+  "activity_id": "7326471405561106432",
+  "images": [
+    {
+      "post_id": "POST-096",
+      "activity_id": "7326471405561106432",
+      "filename": "activity_7326471405561106432_slide_0.jpg",
+      "path": "media/activity_7326471405561106432_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 397,
+      "size_bytes": 26499,
+      "declared_sha256": "0a7f2beb5e153c4ed18bf1562a9d7a3cb3c7cb57f828749cdd86e577c849281d",
+      "actual_sha256": "0a7f2beb5e153c4ed18bf1562a9d7a3cb3c7cb57f828749cdd86e577c849281d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "reparkesql.tunetions import 93,\n# create sparksession\nSpank'= Sparksession, builder. opplene(-DepartwentStats\").getorcreste()\nGata\" T\n\nCisatest, 5008, 0m\"),\n\nCesates\", 6028, -00e\"),\n\nCee, 7669, *Sane\"),\n\nCouns, 8000, \"sLice\"),\n\nGrr, 6509), \"B00\"),\n\nCort, 5509, \"chartie\"),\n1\nGf = spark: createDetaFrane(aate, [\"departuent”, \"salary\", “employee nane\"])\nresult_at = af. group6y department\") 099\n\navg(satary\") eLias(ava_ salary\"),\n\n(employee none\") atias(\"enployee_count*)\n\n>\nresult_at.show()",
+      "redactions": 0,
+      "search_text": "reparkesql.tunetions import 93, # create sparksession Spank'= Sparksession, builder. opplene(-DepartwentStats\").getorcreste() Gata\" T Cisatest, 5008, 0m\"), Cesates\", 6028, -00e\"), Cee, 7669, *Sane\"), Couns, 8000, \"sLice\"), Grr, 6509), \"B00\"), Cort, 5509, \"chartie\"), 1 Gf = spark: createDetaFrane(aate, [\"departuent”, \"salary\", “employee nane\"]) result_at = af. group6y department\") 099 avg(satary\") eLias(ava_ salary\"), (employee none\") atias(\"enployee_count*) > result_at.show()",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "489 chars, 52 words, 61% letters, 26% symbols, 1.2% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "641307ce1f44fd7fdd96c9e7f36900705df89555f3d18268211148dd0fc1dda2"
+    }
+  ]
+}

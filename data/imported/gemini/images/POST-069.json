@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-069",
+  "activity_id": "7314232844652814336",
+  "images": [
+    {
+      "post_id": "POST-069",
+      "activity_id": "7314232844652814336",
+      "filename": "activity_7314232844652814336_slide_0.jpg",
+      "path": "media/activity_7314232844652814336_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 13771,
+      "declared_sha256": "4cea0d01ba7540d79442b66146bd099993c5afe7bbdf94e2d8c24ac158b032ec",
+      "actual_sha256": "4cea0d01ba7540d79442b66146bd099993c5afe7bbdf94e2d8c24ac158b032ec",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Le at PySpark Interview Questions\nTOT ey ‘© cognizant",
+      "redactions": 0,
+      "search_text": "Le at PySpark Interview Questions TOT ey ‘© cognizant",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "53 chars, 8 words, 81% letters, 4% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9baf6eb1f5222289ae1e868d4962fe3a4023d2681a2874a742a89d85176975cb"
+    }
+  ]
+}

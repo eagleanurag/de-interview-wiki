@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-291",
+  "activity_id": "7458365066741006336",
+  "images": [
+    {
+      "post_id": "POST-291",
+      "activity_id": "7458365066741006336",
+      "filename": "activity_7458365066741006336_slide_0.jpg",
+      "path": "media/activity_7458365066741006336_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 37150,
+      "declared_sha256": "bbc86224fa51569e6af3d8ef01bc9f823c650cadf589fcef4f1129124075374d",
+      "actual_sha256": "bbc86224fa51569e6af3d8ef01bc9f823c650cadf589fcef4f1129124075374d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "300 Real SQL Interview Questions\nAsked at PwC, Deloitte, EY, KPMG,\nTredence, Persistent Systems and\nAccenture & More.\nMedium to Advanced SQL Questions (01-300)\n|. Find the second highest salary from the Employee\ntable\nSELECT MAX (salary) AS SecondtighestSalary\nFROM employees\nWHERE salary\nSELECT MAX(salary\nFROM employees\n2. Find duplicate records i a table\nSELECT name, COUNT(*)\nFROM employees\nGROUP BY name\nHAVING COUNT(*) > 1\n3. Retrieve employees who eam more than their\nmanager",
+      "redactions": 0,
+      "search_text": "300 Real SQL Interview Questions Asked at PwC, Deloitte, EY, KPMG, Tredence, Persistent Systems and Accenture & More. Medium to Advanced SQL Questions (01-300) |. Find the second highest salary from the Employee table SELECT MAX (salary) AS SecondtighestSalary FROM employees WHERE salary SELECT MAX(salary FROM employees 2. Find duplicate records i a table SELECT name, COUNT(*) FROM employees GROUP BY name HAVING COUNT(*) > 1 3. Retrieve employees who eam more than their manager",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "482 chars, 68 words, 77% letters, 7% symbols, 0.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "e8488a8c3f61524f624eda0445df677d09098f05fb6739a4a0ec58e68201a72f"
+    }
+  ]
+}

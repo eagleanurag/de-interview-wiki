@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-268",
+  "activity_id": "7353268809903824896",
+  "images": [
+    {
+      "post_id": "POST-268",
+      "activity_id": "7353268809903824896",
+      "filename": "activity_7353268809903824896_slide_0.jpg",
+      "path": "media/activity_7353268809903824896_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 42603,
+      "declared_sha256": "2c888c7f3250dc9b5d7939c55460d1d16bd15af534082677455d77e40b3f9537",
+      "actual_sha256": "2c888c7f3250dc9b5d7939c55460d1d16bd15af534082677455d77e40b3f9537",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "PySpark\nwhack\n+ Apache Spark: An perso: dhrtbated computing ten,\n+ Spark: Te Pion APL Sp ling pl opin is dt,\nMachine aring 1)\nSQLbndanattn\n+ Inti ein Gm PS nce Boas, thc an comet\nen Ue Spark\nypc when ning ig ata ht acc pe mci epacty\n+ ETLIELT pptin fe ste stn\nUNSparh caer cons of\n1 Workertoder: Eee: oping i pais par darted\npresi eset oe pao PSs poe\n+ nbs asso Spark tise SL, trem Man ta aang\n‘rom gk inp Sprsion\n‘park Spreson alerappSome Spr Ap etOrrete)",
+      "redactions": 0,
+      "search_text": "PySpark whack + Apache Spark: An perso: dhrtbated computing ten, + Spark: Te Pion APL Sp ling pl opin is dt, Machine aring 1) SQLbndanattn + Inti ein Gm PS nce Boas, thc an comet en Ue Spark ypc when ning ig ata ht acc pe mci epacty + ETLIELT pptin fe ste stn UNSparh caer cons of 1 Workertoder: Eee: oping i pais par darted presi eset oe pao PSs poe + nbs asso Spark tise SL, trem Man ta aang ‘rom gk inp Sprsion ‘park Spreson alerappSome Spr Ap etOrrete)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "456 chars, 85 words, 76% letters, 4% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ce3cd075c16f89f438f4b30c2f42bb26086533dd295c1fe541e0b162c272bbf3"
+    }
+  ]
+}

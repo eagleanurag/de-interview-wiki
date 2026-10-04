@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-238",
+  "activity_id": "7347836932237729792",
+  "images": [
+    {
+      "post_id": "POST-238",
+      "activity_id": "7347836932237729792",
+      "filename": "activity_7347836932237729792_slide_0.jpg",
+      "path": "media/activity_7347836932237729792_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 595,
+      "size_bytes": 2828119,
+      "declared_sha256": "717b338fa0ac9a0cbd406c419ca53ed9dc438d0818fe8ec482b27c1c44bd780f",
+      "actual_sha256": "717b338fa0ac9a0cbd406c419ca53ed9dc438d0818fe8ec482b27c1c44bd780f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "oD. a\nCo. Tes\noo\nCOs) zzz =|\noO\nOo k=\nOz",
+      "redactions": 0,
+      "search_text": "oD. a Co. Tes oo COs) zzz =| oO Oo k= Oz",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "40 chars, 11 words, 57% letters, 15% symbols, 5.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2bb7bb7ed621eb2b6fd649efd8bd3bf4628d3523f4cf80636b1d21de84d9af1b"
+    }
+  ]
+}

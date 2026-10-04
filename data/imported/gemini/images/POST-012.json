@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-012",
+  "activity_id": "7292041091321671680",
+  "images": [
+    {
+      "post_id": "POST-012",
+      "activity_id": "7292041091321671680",
+      "filename": "activity_7292041091321671680_slide_0.jpg",
+      "path": "media/activity_7292041091321671680_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 28772,
+      "declared_sha256": "5a43556c440cb1cc7f50758071c88f16875dd44c1d8179cefa41f6046c7b068c",
+      "actual_sha256": "5a43556c440cb1cc7f50758071c88f16875dd44c1d8179cefa41f6046c7b068c",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "C)\nG}\n#21 DATE PART_2\nBY- MBLAKASH MAHINDRAKARY",
+      "redactions": 0,
+      "search_text": "C) G} #21 DATE PART_2 BY- MBLAKASH MAHINDRAKARY",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "47 chars, 7 words, 68% letters, 17% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "7762c2bf2685f02b1c9a5a81d977a2cddd0984ac725e1a13ac20c4726e09c6b5"
+    }
+  ]
+}

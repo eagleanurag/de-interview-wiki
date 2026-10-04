@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-073",
+  "activity_id": "7315553891473838081",
+  "images": [
+    {
+      "post_id": "POST-073",
+      "activity_id": "7315553891473838081",
+      "filename": "activity_7315553891473838081_slide_0.jpg",
+      "path": "media/activity_7315553891473838081_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 465,
+      "size_bytes": 34014,
+      "declared_sha256": "470a8a5200cdd7f7b8a257653aa8aaebef33dba0ab52b8fde6626895f5cb66f6",
+      "actual_sha256": "470a8a5200cdd7f7b8a257653aa8aaebef33dba0ab52b8fde6626895f5cb66f6",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "“The best resume I've ever seen”\nUse this resume template\nSe EE",
+      "redactions": 0,
+      "search_text": "“The best resume I've ever seen” Use this resume template Se EE",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "63 chars, 12 words, 78% letters, 5% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2769095f971fdfaa82c4412c7e2f3a2120d668a355a39324de1a609f3c3aeb1a"
+    }
+  ]
+}

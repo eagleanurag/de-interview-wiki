@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-246",
+  "activity_id": "7348217855135383552",
+  "images": [
+    {
+      "post_id": "POST-246",
+      "activity_id": "7348217855135383552",
+      "filename": "activity_7348217855135383552_slide_0.jpg",
+      "path": "media/activity_7348217855135383552_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 800,
+      "height": 400,
+      "size_bytes": 17058,
+      "declared_sha256": "2c5abca32ad1e9c7b75cc8e452adcc4d85a9e4ae20717af0f6cf3fd726f0e714",
+      "actual_sha256": "2c5abca32ad1e9c7b75cc8e452adcc4d85a9e4ae20717af0f6cf3fd726f0e714",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "neha-p-sharma/SQL-\nCredit-Card-Analysis\nRd ©o wo FO oO",
+      "redactions": 0,
+      "search_text": "neha-p-sharma/SQL- Credit-Card-Analysis Rd ©o wo FO oO",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "54 chars, 8 words, 76% letters, 13% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9fd18e71cee311cbe9de51b699a54b00039063d0aaf4ece421d530a13b16d7d5"
+    }
+  ]
+}

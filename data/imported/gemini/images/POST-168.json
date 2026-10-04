@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-168",
+  "activity_id": "7339985122848329728",
+  "images": [
+    {
+      "post_id": "POST-168",
+      "activity_id": "7339985122848329728",
+      "filename": "activity_7339985122848329728_slide_0.jpg",
+      "path": "media/activity_7339985122848329728_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 480,
+      "size_bytes": 65985,
+      "declared_sha256": "032d7caf6a2122ccaa90c98b9c53e8d5320325391fcdd81a10222e0cc4774fbf",
+      "actual_sha256": "032d7caf6a2122ccaa90c98b9c53e8d5320325391fcdd81a10222e0cc4774fbf",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "1. Driver Program Begins Execution\n\n‘The user's Spark application starts execution. The driver program runs in cluster mode and begins\nby initiating an action (like count()), which triggers the execution of a Spark jb.\n\n2. Job is Submitted\n\n‘The application is submitted using spark-submit, which sends the application and its dependencies\nto the Cluster Manager (e.g. YARN, Kubernetes, or standalone).\n\n43. Job is Translated into DAG Stages\n\nSpark's internal DAG Scheduler converts the logical execution plan into a Directed Acyclic Graph\n(QAG) of stages. This graph represents the series of transformations and actions performed on\ndata.\n\n4. DAG is Divided into Narrow and Wide Stages\n\n‘The DAG is spit into stages.\n\nNarrow stages: where transformations (lke map) don’t require data to move between partitions\nWide stages: where transformations (Uke groupByKey) require shutfling data across partitions,\n\n5, Task Sets Generated from Stages\n\nEach stage is Broken down into tasks ~ the smallest unit of work. Each task corresponds to a\npartition of the data\n\n4. Application Master Is Assigned\n\n‘The Cluster Manager launches an Application Master (e.g.a container in YARN), which manages\nthe Spark application. The Spark Driver runs inside this container and initializes the Spark\nsession/context\n\n17. Code Submitted to Executors\n\n‘The driver program sends serialized code and task dependencies to executors on worker nodes,\nreadying them for execution.\n\n8, Tasks Launched on Worker Nodes\n\n‘The executors launch tasks on diferent worker nodes, Each executor processes one of more tasks\n{rom the task set, working on the associated partition of the data\n\n49. Shuttle ana Execution\n\nIt the job involves wide transformations, shutfle operations redistribute data between executors to\nComplete stage boundaries. Intermediate data is written to local disks and fetched remotely\n\n10, Driver Receives Results\n\n(Once the tasks are complete, results are sent back tothe driver. Ifthe action was coltect(), results\nfare brought into driver memory; atherwise, they're written to storage (eg., HOFS, S2),\n\n11, Job Completion and Resource Cleanup\n\nAer successful job completion, Spark cleans up the resources, stopping executors and releasing\nthe containers managed by the Cluster Manager.",
+      "redactions": 0,
+      "search_text": "1. Driver Program Begins Execution ‘The user's Spark application starts execution. The driver program runs in cluster mode and begins by initiating an action (like count()), which triggers the execution of a Spark jb. 2. Job is Submitted ‘The application is submitted using spark-submit, which sends the application and its dependencies to the Cluster Manager (e.g. YARN, Kubernetes, or standalone). 43. Job is Translated into DAG Stages Spark's internal DAG Scheduler converts the logical execution plan into a Directed Acyclic Graph (QAG) of stages. This graph represents the series of transformations and actions performed on data. 4. DAG is Divided into Narrow and Wide Stages ‘The DAG is spit into stages. Narrow stages: where transformations (lke map) don’t require data to move between partitions Wide stages: where transformations (Uke groupByKey) require shutfling data across partitions, 5, Task Sets Generated from Stages Each stage is Broken down into tasks ~ the smallest unit of work. Each task corresponds to a partition of the data 4. Application Master Is Assigned ‘The Cluster Manager launches an Application Master (e.g.a container in YARN), which manages the Spark application. The Spark Driver runs inside this container and initializes the Spark session/context 17. Code Submitted to Executors ‘The driver program sends serialized code and task dependencies to executors on worker nodes, readying them for execution. 8, Tasks Launched on Worker Nodes ‘The executors launch tasks on diferent worker nodes, Each executor processes one of more tasks {rom the task set, working on the associated partition of the data 49. Shuttle ana Execution It the job involves wide transformations, shutfle operations redistribute data between executors to Complete stage boundaries. Intermediate data is written to local disks and fetched remotely 10, Driver Receives Results (Once the tasks are complete, results are sent back tothe driver. Ifthe action was coltect(), results fare brought into driver memory; atherwise, they're written to storage (eg., HOFS, S2), 11, Job Completion and Resource Cleanup Aer successful job completion, Spark cleans up the resources, stopping executors and releasing the containers managed by the Cluster Manager.",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "2275 chars, 334 words, 80% letters, 4% symbols, 1.2% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "63ad14210629f23d8f5ad1838417fa2687a04320740c9d8b1562cd087eb72b08"
+    }
+  ]
+}

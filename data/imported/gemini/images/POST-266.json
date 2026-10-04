@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-266",
+  "activity_id": "7352180707789520896",
+  "images": [
+    {
+      "post_id": "POST-266",
+      "activity_id": "7352180707789520896",
+      "filename": "activity_7352180707789520896_slide_0.jpg",
+      "path": "media/activity_7352180707789520896_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 30576,
+      "declared_sha256": "d7f7827fab6ba4ac945f791de42fca1c3227114b34fc561a5e1d49d45ae35fde",
+      "actual_sha256": "d7f7827fab6ba4ac945f791de42fca1c3227114b34fc561a5e1d49d45ae35fde",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "IMPORTANT SQL INTERVIEW\nQUESTIONS\n\n(Onder of execution in an SQL query\n\n1. FROM ola\n\n2. WHERE\n\n3. GROUP BY\n\n4 Havine\n\n5. SELECT\n\n6 DISTINCT\n\n7. ORDER BY\n\nLIMIT /OFFSET\n‘Question 1: Wises SQL qe cathe smal sn fl och\ntrplyce, Te gurysoad eu he Employee, Ses sd\n{Coulis cols, ithe ial ouput edre by Engle.\nSolution -\nSELECT\n\nEmployestD,\n\nSalesDats,\n\n'SUMSales Amount) OVER (PARTITION BY EmploycelD\nORDER BY SalesDuts) AS Cumlativesales",
+      "redactions": 0,
+      "search_text": "IMPORTANT SQL INTERVIEW QUESTIONS (Onder of execution in an SQL query 1. FROM ola 2. WHERE 3. GROUP BY 4 Havine 5. SELECT 6 DISTINCT 7. ORDER BY LIMIT /OFFSET ‘Question 1: Wises SQL qe cathe smal sn fl och trplyce, Te gurysoad eu he Employee, Ses sd {Coulis cols, ithe ial ouput edre by Engle. Solution - SELECT EmployestD, SalesDats, 'SUMSales Amount) OVER (PARTITION BY EmploycelD ORDER BY SalesDuts) AS Cumlativesales",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "432 chars, 63 words, 74% letters, 7% symbols, 1.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "1219fdc5bd5f340539035162a3c56e042b4d91c4fe2967a5be5bcf0fa9d569c3"
+    }
+  ]
+}

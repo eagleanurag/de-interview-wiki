@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-282",
+  "activity_id": "7426557975819083776",
+  "images": [
+    {
+      "post_id": "POST-282",
+      "activity_id": "7426557975819083776",
+      "filename": "activity_7426557975819083776_slide_0.jpg",
+      "path": "media/activity_7426557975819083776_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 480,
+      "size_bytes": 34769,
+      "declared_sha256": "53c79a77d7d7d3eb4f0517e551c28b2b3356d0e432f9e4e0ce79237bdbfd4894",
+      "actual_sha256": "53c79a77d7d7d3eb4f0517e551c28b2b3356d0e432f9e4e0ce79237bdbfd4894",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "STOP GUESSING YOUR PARTITION SIZES.\nLET SPARK DO IT FOR YOU. @\nAdaptive Query Execution (AQE) for Data Engineers\nBEFORE AQE AFTER AQE\nEXE Sa\nspark shufopartons = 2000\nS&S “ 2.\nConescingPot- Sting Jon tundig\nSie parons ‘ioe ta Saw\nAQE is not just a feature; it’s a cost- rome. tn)\noptimization necessity. oe",
+      "redactions": 0,
+      "search_text": "STOP GUESSING YOUR PARTITION SIZES. LET SPARK DO IT FOR YOU. @ Adaptive Query Execution (AQE) for Data Engineers BEFORE AQE AFTER AQE EXE Sa spark shufopartons = 2000 S&S “ 2. ConescingPot- Sting Jon tundig Sie parons ‘ioe ta Saw AQE is not just a feature; it’s a cost- rome. tn) optimization necessity. oe",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "306 chars, 52 words, 75% letters, 7% symbols, 2.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "c84fae463a474c7b96fe1a24a3a168c535739948af2c121193a151111f919b31"
+    }
+  ]
+}

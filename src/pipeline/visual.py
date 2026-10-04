@@ -49,6 +49,7 @@ from src.visual.archive import (
     load_archive,
     resolve_asset_path,
 )
+from src.visual.assets import activity_for
 from src.visual.dedupe import asset_digest, mark_duplicates, redundant_assets
 from src.visual.models import (
     PROCESSOR_CONFIGURATION,
@@ -60,6 +61,7 @@ from src.visual.models import (
 from src.visual.plan import build_plan
 from src.visual.processor import build_default_processor
 from src.visual.stage import PostOutcome, VisualStage, usable_assets
+from src.visual.stage import inject as inject_media
 from src.visual.store import VisualStore, store_root
 
 
@@ -72,25 +74,23 @@ def archive_post_id(media_path: str) -> str | None:
     identifier is a hash of the archive identifier, which is
     deliberate -- it keeps the archive's own ids out of the public site
     -- so the reverse has to come from the file name instead.
+
+    The implementation lives in :mod:`src.visual.assets`, which owns the
+    two filename patterns it is built from. It was defined here, and that
+    put the orchestration layer in the import path of every consumer that
+    only needed to map a media path to an activity -- including the
+    imported-package bridge, which this same package's orchestrator
+    imports. Importing ``src.pipeline.visual`` executes
+    ``src/pipeline/__init__.py``, and that imports the orchestrator back,
+    so a module importing the bridge partway through its own
+    initialisation could not reach a name defined further down this file.
+
+    Still exported from here because callers already import it from here,
+    including :mod:`src.pipeline.visual_stage`, and churning those to fix
+    an import cycle would be a poor trade.
     """
 
-    from src.visual.assets import SLIDE_NAME
-
-    stem = Path(str(media_path)).stem
-
-    match = SLIDE_NAME.match(stem)
-
-    if match:
-        return match.group("stem")
-
-    from src.visual.assets import DOCUMENT_NAME
-
-    document = DOCUMENT_NAME.match(stem)
-
-    if document:
-        return document.group("stem")
-
-    return stem or None
+    return activity_for(media_path)
 
 
 @dataclass
@@ -103,6 +103,10 @@ class VisualRun:
     posts_failed: int = 0
     slides_read: int = 0
     slides_reused: int = 0
+    #: Assets deliberately not read because another tool already
+    #: transcribed them. Reported so a run restricted to the gaps is
+    #: never mistaken for a run that looked at everything.
+    slides_filtered: int = 0
     calls: int = 0
     retries: int = 0
     failed_assets: int = 0
@@ -119,6 +123,7 @@ class VisualRun:
             "posts_failed": self.posts_failed,
             "slides_read": self.slides_read,
             "slides_reused": self.slides_reused,
+            "slides_filtered": self.slides_filtered,
             "duplicates_reused": self.duplicates_reused,
             "calls": self.calls,
             "retries": self.retries,
@@ -138,6 +143,7 @@ class VisualRun:
             f"{'Slides read':<34}{self.slides_read:>8}",
             f"{'Slides reused':<34}{self.slides_reused:>8}",
             f"{'  of which duplicate content':<34}{self.duplicates_reused:>8}",
+            f"{'Slides already transcribed elsewhere':<34}{self.slides_filtered:>8}",
             f"{'Model calls':<34}{self.calls:>8}",
             f"{'Retries':<34}{self.retries:>8}",
             f"{'Assets that could not be read':<34}{self.failed_assets:>8}",
@@ -181,6 +187,7 @@ class VisualRunner:
         version: str = PROCESSOR_VERSION,
         configuration: str = PROCESSOR_CONFIGURATION,
         progress=None,
+        only: set[str] | None = None,
     ) -> None:
         self.archive_root = Path(archive_root)
         self.store = store or VisualStore(store_root())
@@ -189,9 +196,21 @@ class VisualRunner:
         self.version = version
         self.configuration = configuration
         self.progress = progress or log
+        # Restricts this run to a named set of files, used when another
+        # tool has already transcribed most of a corpus and this stage
+        # is only the fallback for what that tool could not read. The
+        # default is ``None``, meaning every asset, so nothing about the
+        # existing behaviour changes when the option is not used.
+        self.only = only
         self._processor = processor
         self._archive: Archive | None = None
         self._lock = threading.Lock()
+
+    @property
+    def gaps_skipped(self) -> int:
+        """Assets left out by the ``only`` filter, for reporting."""
+
+        return getattr(self, "_gaps_skipped", 0)
 
     @property
     def archive(self) -> Archive:
@@ -242,6 +261,7 @@ class VisualRunner:
             configuration=self.configuration,
             batch_size=self.batch_size,
             limit=limit,
+            only=self.only,
         )
 
     # -- execution ---------------------------------------------------
@@ -321,6 +341,26 @@ class VisualRunner:
             if not assets:
                 return None
 
+            if self.only is not None:
+                kept = [
+                    asset for asset in assets if asset.filename in self.only
+                ]
+
+                if len(kept) != len(assets):
+                    # Counted rather than discarded silently: a reader
+                    # of the run report needs to know slides were passed
+                    # over on purpose and how many.
+                    with self._lock:
+                        self._gaps_skipped = (
+                            getattr(self, "_gaps_skipped", 0)
+                            + (len(assets) - len(kept))
+                        )
+
+                assets = kept
+
+                if not assets:
+                    return None
+
             return stage.run_post(
                 archive_id,
                 assets,
@@ -389,108 +429,27 @@ class VisualRunner:
 
         run.seconds = time.monotonic() - started
 
+        run.slides_filtered = getattr(self, "_gaps_skipped", 0)
+
         return run
 
 
-def inject(post: KnowledgePost, outcome: PostOutcome) -> KnowledgePost:
-    """
-    Put what was read into the post's media, in memory.
-
-    ``extracted_text`` is what the existing enricher and grounding check
-    already read, so this is the whole integration. ``sequence``,
-    ``role``, ``sha256`` and ``extraction_method`` are recorded beside
-    it so a reader can walk a claim back to the file it came from.
-
-    Media already in the post that the archive did not contribute keeps
-    whatever it had: this stage adds to the post, it does not replace it.
-
-    Assets that failed keep their entry and gain a note. A gap is
-    visible, which is the point.
-    """
-
-    by_filename = {
-        Path(item.path).name: item for item in post.media
-    }
-
-    analyses = {
-        Path(analysis.source_path).name: analysis
-        for analysis in outcome.visual.analyses
-    }
-
-    for asset in outcome.visual.assets:
-        filename = asset.filename
-
-        item = by_filename.get(filename)
-
-        if item is None:
-            item = MediaItem(
-                type=(
-                    "pdf"
-                    if asset.media_type == "pdf"
-                    else "image"
-                    if asset.media_type == "image"
-                    else "other"
-                ),
-                path=asset.path,
-            )
-
-            post.media.append(item)
-            by_filename[filename] = item
-
-        item.sequence = asset.sequence
-        item.role = asset.role.value
-        item.sha256 = asset.sha256 or None
-
-        if asset.state is ProcessingState.FAILED:
-            item.extraction_method = None
-            item.description = (
-                f"{asset.format or 'unreadable'} image, "
-                f"{asset.width or '?'}x{asset.height or '?'} pixels. "
-                f"Could not be read: {asset.note}"
-            )
-
-            continue
-
-        analysis = analyses.get(filename)
-
-        if analysis is None:
-            item.extraction_method = None
-            item.description = (
-                f"{asset.format} image, "
-                f"{asset.width}x{asset.height} pixels"
-            )
-
-            continue
-
-        text = analysis.as_source_text()
-
-        item.extracted_text = text or None
-        item.extraction_method = analysis.processor
-
-        parts = [
-            f"{asset.format} image, {asset.width}x{asset.height} pixels"
-        ]
-
-        if asset.role is AssetRole.SLIDE:
-            parts.append(f"slide {asset.sequence + 1}")
-
-        if asset.role is AssetRole.THUMBNAIL:
-            parts.append("low-resolution preview, full slide also present")
-
-        if analysis.confidence:
-            parts.append(
-                f"read with confidence {analysis.confidence:.2f}"
-            )
-
-        item.description = ". ".join(parts)
-
-    # Ordered so a post's media reads in slide order, which is what the
-    # prompt and the wiki both assume.
-    post.media.sort(
-        key=lambda entry: (entry.sequence, Path(entry.path).name)
-    )
-
-    return post
+#: Re-exported from :mod:`src.visual.stage`, where the implementation
+#: lives. It is a pure function of a ``PostOutcome`` and a post, needs
+#: nothing from the pipeline, and belongs beside the type it consumes.
+#:
+#: It was defined here, which made the imported-package bridge depend on
+#: ``src.pipeline`` in order to reuse it -- and importing
+#: ``src.pipeline.visual`` executes ``src/pipeline/__init__.py``, which
+#: imports the orchestrator, which imports that same bridge. A source
+#: layer reaching into the orchestration layer for a helper is the
+#: inversion that produced the cycle, so the helper moved down to where
+#: its inputs live rather than the caller being made to work around it.
+#:
+#: A plain alias rather than a wrapper, so the two names are the same
+#: object: a wrapper would be a second signature to keep in step and a
+#: second place for the behaviour to drift.
+inject = inject_media
 
 
 def digest_for(post: KnowledgePost, outcome: PostOutcome | None) -> str:

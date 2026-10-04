@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-309",
+  "activity_id": "7505829570575785984",
+  "images": [
+    {
+      "post_id": "POST-309",
+      "activity_id": "7505829570575785984",
+      "filename": "activity_7505829570575785984_slide_0.jpg",
+      "path": "media/activity_7505829570575785984_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 23851,
+      "declared_sha256": "833995c4a0f275bd3857cdc491f923bb76507e4a49000b22db46e45461451584",
+      "actual_sha256": "833995c4a0f275bd3857cdc491f923bb76507e4a49000b22db46e45461451584",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Sea uro cee ss\n\nSiS] cpr,\n\n‘Set |peestr rare ode Sin, deve. tine AS ctl detvory tee,\n\ncir. |predctea tine\n\nBe re on SQL Interview\n\ntie! eta as Question\n\n‘ary |seicr el pert,\n\nSra] |siccase wen ects ettvery tne > pedtctd tie TN 1 80) AS delayed orders.\nira] |sacase wt actnl_oeliveyctie < pedicted tie Tan 1 BO) 45 on tim oer\n‘ira [rao cee\n\n‘ars lene de. partner\n\n‘arr | secret partner day sort\n\n— EBB Korrapati saswanth :",
+      "redactions": 0,
+      "search_text": "Sea uro cee ss SiS] cpr, ‘Set |peestr rare ode Sin, deve. tine AS ctl detvory tee, cir. |predctea tine Be re on SQL Interview tie! eta as Question ‘ary |seicr el pert, Sra] |siccase wen ects ettvery tne > pedtctd tie TN 1 80) AS delayed orders. ira] |sacase wt actnl_oeliveyctie < pedicted tie Tan 1 BO) 45 on tim oer ‘ira [rao cee ‘ars lene de. partner ‘arr | secret partner day sort — EBB Korrapati saswanth :",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "421 chars, 72 words, 70% letters, 9% symbols, 1.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9be2e530c81dd2dc09152d5ed77f96cbd687dfc136e5f5fe238132f6804b5148"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-145",
+  "activity_id": "7338527952621445120",
+  "images": [
+    {
+      "post_id": "POST-145",
+      "activity_id": "7338527952621445120",
+      "filename": "activity_7338527952621445120_slide_0.jpg",
+      "path": "media/activity_7338527952621445120_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 15964,
+      "declared_sha256": "59f250d67c80a4c67ffb3bf2cb3a3086f52a81ed62751d4b8fb0628fd27eb6b5",
+      "actual_sha256": "59f250d67c80a4c67ffb3bf2cb3a3086f52a81ed62751d4b8fb0628fd27eb6b5",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SQL Interview\nQuestion\nGoogle",
+      "redactions": 0,
+      "search_text": "SQL Interview Question Google",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "29 chars, 4 words, 90% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0dc26e2cef79e9d454bc796a23d74549af95bd466da5fef385e8ae6847ac10dd"
+    }
+  ]
+}

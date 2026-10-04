@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-130",
+  "activity_id": "7336206983072489472",
+  "images": [
+    {
+      "post_id": "POST-130",
+      "activity_id": "7336206983072489472",
+      "filename": "activity_7336206983072489472_slide_0.jpg",
+      "path": "media/activity_7336206983072489472_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 64021,
+      "declared_sha256": "8de6d28f605a076e53b7f5070644538b273118614cc89b333c3105c3cdaec4c1",
+      "actual_sha256": "8de6d28f605a076e53b7f5070644538b273118614cc89b333c3105c3cdaec4c1",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "CURRENT_DATE CURRENT_TIME\nSELECT CURRENT_DATE: SELECT CURRENT_TIME:\n2024-04-24 14:30:20\n\nDATE_TRUNC EXTRACT\nSELECT DATE_TRUNC( ‘hour’, SELECT EXTRACT(month\n\"2024-04-24 14:30:20): FROM '2024-04-24'):\n2024-04-24 14:00:00 4\n\nDATE_ADD DATE_SUB\nSELECT DATE_ADD('204- SELECT DATE_SUB(\n04-24', INTERVAL 5 DA \"2024-04-24\", INTERVAL\n\n5 DAY):\n\nBN BE PE) 2024-04-29\n\nDATE_SUB DATEDIFF\nSELECT DATE_SUB('204- SELECT DATEDIFF(\n04-24', INTERVAL 5 DA '2024-04-24','2024-0419);\n\n2024-04-19 5\n\nDATE_FORMAT DATE_FORMAT\nSELECT DATE_FORMAT( SELECT DATE_FORMAT(\n\n*2024-04-24', '%d/m/%Y') \"2024-04-24\", '%d/%m/%Y )",
+      "redactions": 0,
+      "search_text": "CURRENT_DATE CURRENT_TIME SELECT CURRENT_DATE: SELECT CURRENT_TIME: 2024-04-24 14:30:20 DATE_TRUNC EXTRACT SELECT DATE_TRUNC( ‘hour’, SELECT EXTRACT(month \"2024-04-24 14:30:20): FROM '2024-04-24'): 2024-04-24 14:00:00 4 DATE_ADD DATE_SUB SELECT DATE_ADD('204- SELECT DATE_SUB( 04-24', INTERVAL 5 DA \"2024-04-24\", INTERVAL 5 DAY): BN BE PE) 2024-04-29 DATE_SUB DATEDIFF SELECT DATE_SUB('204- SELECT DATEDIFF( 04-24', INTERVAL 5 DA '2024-04-24','2024-0419); 2024-04-19 5 DATE_FORMAT DATE_FORMAT SELECT DATE_FORMAT( SELECT DATE_FORMAT( *2024-04-24', '%d/m/%Y') \"2024-04-24\", '%d/%m/%Y )",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "591 chars, 64 words, 49% letters, 39% symbols, 2.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2e2445f94153e7a4db65a81a4c3fdb587d77237a93990a5d58d2b0174609a261"
+    }
+  ]
+}

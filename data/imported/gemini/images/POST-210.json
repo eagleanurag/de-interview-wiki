@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-210",
+  "activity_id": "7344212905657061376",
+  "images": [
+    {
+      "post_id": "POST-210",
+      "activity_id": "7344212905657061376",
+      "filename": "activity_7344212905657061376_slide_0.jpg",
+      "path": "media/activity_7344212905657061376_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 600,
+      "size_bytes": 62019,
+      "declared_sha256": "44b76f87d206f74b7b516f66f1fdd0ccd8001921aa397060528e10d73b651830",
+      "actual_sha256": "44b76f87d206f74b7b516f66f1fdd0ccd8001921aa397060528e10d73b651830",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "aws Data Engineering €LLIPs>\n\nRoadmap\n\ned ees ie\n4 oe ae",
+      "redactions": 0,
+      "search_text": "aws Data Engineering €LLIPs> Roadmap ed ees ie 4 oe ae",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "56 chars, 10 words, 73% letters, 5% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "51b5dbbcc2003a78a2795d7e59d5b58db74420e72c5d540192a0b5536fdb830d"
+    }
+  ]
+}

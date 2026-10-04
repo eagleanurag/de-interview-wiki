@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-279",
+  "activity_id": "7425742616220094465",
+  "images": [
+    {
+      "post_id": "POST-279",
+      "activity_id": "7425742616220094465",
+      "filename": "activity_7425742616220094465_slide_0.jpg",
+      "path": "media/activity_7425742616220094465_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 621,
+      "size_bytes": 44908,
+      "declared_sha256": "a1c997bf1e75061af5363b9a6c4ad7d74e9deff657e437411cf37969aeb90f44",
+      "actual_sha256": "a1c997bf1e75061af5363b9a6c4ad7d74e9deff657e437411cf37969aeb90f44",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Data Lake Interview O&A\n4 YOE) Real Mix Question:\nee\n\n‘Aaa Windies ead eel mod de yn\nDiterence:\nre |\na\nKeer enecmmmne\nseats Eee\nFee tennis\nBhatti Cede Ota Warton\nTs\n\n+ ALWAYS ue eae edn hem nt\n\n+ AGNSTRNMSee cto eases",
+      "redactions": 0,
+      "search_text": "Data Lake Interview O&A 4 YOE) Real Mix Question: ee ‘Aaa Windies ead eel mod de yn Diterence: re | a Keer enecmmmne seats Eee Fee tennis Bhatti Cede Ota Warton Ts + ALWAYS ue eae edn hem nt + AGNSTRNMSee cto eases",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "217 chars, 40 words, 75% letters, 4% symbols, 0.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "bbfa917beb1dd1278244cc5af5ebfc9f2818e04e5e9b54c634bbadf052964e99"
+    }
+  ]
+}

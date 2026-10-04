@@ -248,18 +248,38 @@ Against this project's own archive it reports:
   Media files referenced                3047
     of which carousel slides            2738
     of which previews                     65
-    exact duplicates                     104
+    exact duplicates                     265
   Missing files                            0
   Corrupt or unreadable                    0
   Files on disk not referenced            65
 
-  Distinct image contents               2774
-  Repeats of a picture already seen      169
+  Distinct image contents               2782
+  Repeats of a picture already seen      265
 
-  Posts needing visual work              305
-  Images to send to the model           2774
-  Model calls if all of them run         778
+  Posts needing visual work              312
+  Images to send to the model           2782
+  Model calls if all of them run         810
 ```
+
+The duplicate and distinct-content figures are SHA-256 over all 3,047
+archive files: 3,047 references collapse to 2,782 distinct contents, so
+265 files repeat a picture already seen. An earlier version of this
+section said 2,774 and split the difference into "104 exact duplicates"
+and "169 repeats", which is not a partition of anything -- 104 and 169
+are both wrong, and they cannot be reconciled because there is only one
+kind of duplicate.
+
+**Once an image-knowledge package has been imported, the visual stage
+stops being how these images are read.** 2,668 of the 3,047
+transcriptions then come from the package as text, and the visual model
+is asked only about the 398 gap slides the package could not fill:
+
+```
+python -m src.pipeline --only visual-plan --visual-gaps
+```
+
+That is the difference between 810 model calls and about 130, and the
+reason the gap flag exists rather than being a convenience.
 
 ### Processing
 
@@ -325,6 +345,9 @@ unavailable, and says what it would need. It does not return empty text
 as if it had read a slide, because "the slide was blank" and "no engine
 is installed" must not be the same observation.
 
+That is about an engine this project would install. The next section is
+about transcriptions that already exist.
+
 ### Deduplication, and what is deliberately not done
 
 Exact duplicates are content, not filename: two files with equal bytes
@@ -389,6 +412,223 @@ a slide saying `ADF` does not put `Azure Data Factory` into the
 knowledge base, which is the rule that stops a plausible expansion
 becoming a fact.
 
+---
+
+## The imported image-knowledge package
+
+A third party produced a machine transcription of these images and handed
+it over as five files. This project imports it as derived evidence about
+media it already holds. It is not the posts, not a human's transcription,
+and not a substitute for either.
+
+### Plan first, always
+
+```bash
+python -m src.pipeline --only gemini-plan \
+  --gemini-package "C:\path\to\LINKEDIN_KNOWLEDGE_ARCHIVE_PACKAGE" \
+  --archive "C:\path\to\linkedin_saved_archive"
+```
+
+Reads the package and the archive and stops. Writes nothing. The report
+puts the package's own headline figures next to what was actually found,
+and says which disagree, because the difference between those two columns
+is either a counting convention worth understanding or a real gap in the
+package's coverage, and only the report can tell you which.
+
+### Importing
+
+```bash
+python -m src.pipeline --only gemini-import \
+  --gemini-package "..." --archive "..."
+```
+
+Writes to `data/imported/gemini/`. Idempotent by digest: the same package
+and the same archive produce no second import, and a changed package is a
+real change rather than a re-read of the same bytes.
+
+### Local filesystem paths, and what "verbatim" is allowed to mean
+
+Nine transcriptions are Windows command prompts from a Python tutorial:
+
+```
+C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>pip install requests
+```
+
+That is a local filesystem path, so it cannot be committed or deployed. It
+is also the entire technical content of the slide. Removing the line would
+throw away `pip install requests` along with the path, so only the path
+component is replaced, with a marker that says what it was:
+
+```
+<LOCAL_WINDOWS_PATH>>pip install requests
+```
+
+Across all 3,047 transcriptions that is **19 substitutions in 10 files**,
+and every command survives -- `pip install`, `pip list`, `python -m`,
+`python myfile.py`, `python --version`.
+
+Two rules follow from it, and both are load-bearing.
+
+**`raw_ocr_text` is never written.** The verbatim transcription stays in
+memory, as the fingerprint's input; `public_text` is what reaches tracked
+output, the knowledge base and the site. The two are separate fields
+precisely so that "verbatim" keeps meaning a true word -- a sanitised copy
+under that name would be a claim that nothing changed, and something did.
+`redactions` says how much was replaced.
+
+**What is deliberately not touched.** A filter that removed anything
+path-shaped would break, measured against this corpus:
+
+| Kept | Because |
+|---|---|
+| `spark-submit --master local[*]` | "local" is not a path |
+| `abfss://`, `https://`, `s3://` | URLs |
+| `n//2`, `m=m//10` | integer division |
+| `'%d/%m/%Y'` | a date format |
+| `mongodb://localhost:27017/` | a connection string |
+| `SELECT ... WHERE dt='2024-01-01'` | SQL |
+
+An earlier filter matched "a letter, a separator, several segments" and
+rewrote `n//2` into `<LOCAL_WINDOWS_PATH>/2`. The rule is now scoped to a
+leading `Users` segment, which is what every real occurrence here has and
+which none of those has.
+
+The write-time guard is unchanged and still fail-closed. Redaction removes
+the paths that are found; the guard catches the ones that are not, and
+weakening it would remove the only thing between the next unfamiliar OCR
+shape and a published user directory.
+
+### Only 310 of the 3,047 transcriptions reach a post
+
+The package transcribes **every image the archive holds** for a post's
+activity. The archive holds 65 files no post references -- a carousel a post
+lists one slide of, for instance -- so 2,735 transcriptions have no post to
+attach to.
+
+They are reported, not silently attached. Attaching them fabricated 2,735
+media items across 65 posts, and on the largest carousel produced a
+**46,030 character prompt**. Windows refuses a command line over 32,767
+characters by failing process creation, which Python reports as
+`FileNotFoundError` -- so those posts failed with an error reading
+"OpenCode executable could not be started", naming an executable that was
+installed and working. Two things came out of that:
+
+* injection matches by filename and never invents media, while the
+  archive-driven visual stage still does add what it read;
+* the prompt length is checked before the call, so an over-long one is
+  reported as an over-long one.
+
+A run now ends with:
+
+```
+2,735 transcribed image(s) across 65 post(s) are described by the
+package but not carried by the post, and were not attached. They
+remain in the import.
+```
+
+### The four things kept apart
+
+| | What it is | Where it lives |
+|---|---|---|
+| `author_source` | what the author typed | `post.original_text`, never touched |
+| `image_ocr` | a machine's reading of a picture | `media.extracted_text` |
+| `visual_derived` | a model's interpretation of a picture | `extraction_method`, `source_kind` |
+| `ai_enrichment` | this project's own reasoning | `ai_analysis` |
+
+`original_text` is never written to. A transcription that reached it
+would make a misread of a 480-pixel screenshot indistinguishable from
+something the author said.
+
+### Two things in the package that carry less than they look
+
+Both were found by reading the files, and both are dropped rather than
+stored.
+
+**The "Visual Description" and "Source-Derived Explanation" sections are
+constant.** Every post in the package carries the identical two sentences
+about method. They describe no slide, so keeping them would put a
+sentence about policy into the knowledge base once per image, attributed
+to an image it says nothing about.
+
+**The question bank's "Answer" field is the OCR echoed back.** It is kept
+as a source excerpt and never promoted to an answer.
+
+### The question gate
+
+Reading the bank directly finds a bare YouTube link presented as a
+question, and the symbol debris `cn oh? Azure` presented as another. So
+every entry is a candidate and gets one of four verdicts:
+
+| Verdict | Meaning |
+|---|---|
+| `ACCEPT` | readable, genuinely a question, traceable to a slide |
+| `REWRITE` | damaged, and the repair is verifiable against the source |
+| `REJECT` | not a question, or too damaged to recover |
+| `NEEDS_REVIEW` | plausible, but a person has to reconstruct it |
+
+A rewrite is only accepted when the repaired text is **already present in
+the slide's own transcription**. That is the whole rule, and it is what
+keeps rewriting from turning into improving: there are four repairs
+offered, each states what it removed, and each is checked against the
+source before it is used. A rejected entry is kept in full with its
+reason, because a rejected entry that vanishes cannot be argued with.
+
+A question mark is not treated as evidence of a question. In this package
+it frequently arrives attached to noise, so a recognised interrogative is
+required instead.
+
+### The vision processor is now the fallback
+
+Importing this package exists to avoid paying for thousands of vision
+calls, so CP12 is not re-run over the whole corpus.
+
+```bash
+# What the fallback would cost.
+python -m src.pipeline --only visual-plan --visual-gaps --archive "..."
+
+# Run it, on the gaps only.
+python -m src.pipeline --only visual --visual-gaps --archive "..."
+```
+
+`gaps.json` lists the slides a vision model could still usefully read, and
+only for a stated reason: the package reported no text, reported it
+unresolved, reported nothing at all, or the text is symbol debris. A
+fragmentary transcription is **not** a gap — it is real text from a real
+picture, it is indexed, and it is labelled fragmentary. Sparse is not the
+same as unreadable, and spending a model call to confirm that a small
+diagram has three labels on it is how a budget disappears.
+
+`--visual-gaps` with no import on disk is a *full* run, not an empty one.
+Treating a missing import as an empty gap list would silently reduce the
+fallback to reading nothing.
+
+### Freshness
+
+Three separate fingerprints, because they are three different sources
+with three different authorities:
+
+| Field | Covers |
+|---|---|
+| `source_digest` | the author's text and the bytes of attached files |
+| `visual_digest` | what the vision processor read out of those files |
+| `ocr_digest` | what the imported package read out of those files |
+
+Compared independently. Folding them together would mean a change to one
+silently invalidate enrichment derived from the other, and would make a
+recorded version claim both were used when only one was.
+
+### What this must never claim
+
+The package states its own limit, and it is carried into the manifest
+verbatim: *a true human-style semantic visual review of every one of the
+unique images has not been performed individually.* Nothing here has been
+reviewed by a person, and the wiki says so on every transcription it
+renders.
+
+Commas, question marks and slide fragments that survived OCR are not
+human approval, and a machine that got a SQL query right is not thereby
+reliable on the next one.
+
 ### Troubleshooting
 
 **The plan says every post needs work and the cache is empty.** The
@@ -424,6 +664,153 @@ unknown than imply it was found.
   was; its pages are not rasterised for vision. An SVG is recognised and
   deliberately not rendered, because it can carry script.
 - **Concurrency above three is unmeasured.**
+
+## The knowledge page
+
+One page per captured post, and it used to be a description of the
+capture. It was titled `urn-li-saved-ffccf4f7771b97bd` and opened with a
+table of Platform, Captured, Published, Author and Post ID, followed by a
+"Saved item" card explaining how the content arrived, a "Classification"
+table of Domain / Interview relevant / Primary topic / Secondary topics,
+the original post text, and a media inventory listing filenames and OCR
+status per slide.
+
+Every one of those was true. None of it helped anybody revise, and a
+reader had to scroll past five sections of it to reach the questions.
+
+**Nothing was deleted.** `post.id`, `saved_item`, `source`,
+`original_text`, `media`, OCR status and `classification` are all still
+on the model, still written to the knowledge base, and still used for
+traceability, regeneration, auditing and deduplication. What changed is
+that none of them is what the page is for. There are tests that assert
+both halves: that the reader sees none of it, and that the record still
+has all of it.
+
+### Before and after
+
+| | Before | After |
+|---|---|---|
+| Title | `urn-li-saved-ffccf4f7771b97bd` | `Data Engineering — Hotel booking analysis` |
+| Breadcrumb | Home / Topics / `urn-li-saved-…` | Home / Data Engineering / General |
+| Sections | Source information, Saved item, Generated knowledge, Classification, Interview questions, Original source material, Media | Key concepts, Interview questions, Related, Source |
+| Hierarchy | Topics / Subtopics / Concepts as three rows of chips | the breadcrumb, and Related links |
+| Provenance | five sections, always open | one line, plus one disclosure |
+
+### The title is generated, never the identifier
+
+`knowledge_title()` builds it from the taxonomy: the subject from the
+placement, and the rest from the classification's own primary topic, with
+every subject name stripped back out. "Hotel booking analysis with SQL"
+filed under Data Engineering becomes "Data Engineering — Hotel booking
+analysis" rather than saying SQL twice.
+
+Four things it refuses to do, each because the obvious version was tried
+first:
+
+- **Never emit an identifier.** A stem-truncated fallback once produced
+  `SQL — The`, `Databricks — An` and `Spark and PySpark — This`; a
+  one-word title is worse than none, so short fragments are discarded.
+- **Never claim a subject the post never mentioned.** 86 of 490 posts
+  carry no topic, subtopic, concept or primary topic at all — job
+  announcements, personal updates, hiring posts. The classifier files
+  anything unrecognised under the broadest subject, so prefixing one
+  there produced "SQL" as the title of a Goldman Sachs offer
+  announcement. Those are titled from their summary instead.
+- **Never say SQL twice.** See above.
+- **Never 404.** The breadcrumb's subject link is rendered only when a
+  page exists for it; otherwise the position is plain text.
+
+### What the reader gets
+
+Key concepts as a compact list, questions behind `<details>`, a Related
+row of neighbouring subtopics and pages that share a concept, and one
+line of attribution. The captured post text, the original link, the
+image count and the whole capture record sit behind one "View source".
+
+A question whose text was quoted from a slide says so. A question with no
+answer says that too, rather than being filled in.
+
+`post.original_text` is reproduced **as excerpted and sanitised for
+display** -- local filesystem paths replaced, truncation noted -- and
+never rewritten in the model. The redaction lives in `src/redaction.py`
+rather than in `src/gemini`, because both the importer and the wiki need
+it and a rule only one of them can reach protects only one of them.
+
+### Known limitation, measured
+
+2,026 of 6,739 distinct labels (30%) match no subject pattern and land
+in a subtopic called `General`, which holds 551 of 1,961 questions. That
+is a real gap in the taxonomy, not a rendering choice, and the count is
+in `Curriculum.diagnostics` rather than hidden inside a tidy navigation
+bar.
+
+## The revision wiki
+
+The site is a revision aid for data engineering interviews. It is not an
+archive browser, and that is a deliberate change rather than a
+rebranding.
+
+The corpus is large and honest: 490 posts, and 1,560 distinct topic
+labels, 3,294 subtopics and 3,106 concepts across them. That is the right
+amount of evidence and the wrong shape for a reader. Two thousand four
+hundred and sixty-one top-level navigation entries is not navigable, and
+"Databricks troubleshooting" sitting beside "Window functions" as peers
+tells someone revising nothing about where to look.
+
+So the labels are kept -- none are discarded, they are the evidence --
+and *placed*. `src/wiki/taxonomy.py` holds the placement table:
+
+| | |
+|---|---|
+| 8 | subjects |
+| 64 | subtopics |
+| 1,961 | merged questions |
+| 3,614 | concepts, filed under their subject |
+
+**Primary navigation is four items.** Home, Subjects, Questions, Search.
+Concepts, Technologies and Saved Items are still generated and still
+reachable from the footer, but a reader who does not yet know whether the
+thing they half-remember was filed as a "concept" or a "technology" has to
+guess before they can search -- and that guess is the thing a revision
+site must not ask for.
+
+**Questions open in place.** `<details>` and `<summary>`, which the
+browser already implements. No framework, no JavaScript for the core
+interaction. A topic, type and difficulty filter carried over from the
+previous questions page, because grouping answers "what should I
+revise" and a difficulty filter answers "what could I be asked now".
+
+**Answers are never invented.** An answer is either written by this
+project's enricher, quoted from the slide a question was read off, or
+absent -- and absent is stated on the page rather than filled with
+something plausible. A thin answer is labelled thin instead of padded.
+
+**Post identifiers appear only inside a collapsed "Show source".** They
+are genuinely useful for checking a claim and useless as navigation.
+
+### Two matching bugs worth recording
+
+Both were found by running the classifier over the real corpus, and both
+would have looked fine in a test written against tidy labels.
+
+`orm` as a keyword matched 116 topic labels, every one of them inside
+*perf**orm**ance*, *plat**orm*** or *transf**orm***. Patterns are now
+anchored on word boundaries.
+
+And truncating a stem to six characters -- to let "join" match "joins" --
+made `data t` out of "data type", so every *data transformation* label
+was filed as a data-type constraint. Stems are no longer truncated.
+
+Declared-subject order also beat specificity: "broadcast joins" matched
+both SQL's generic "join" and Spark's "broadcast join", and SQL is
+declared first. The more specific match now wins regardless of order.
+
+### What the revision pages deliberately do not show
+
+Post counts, topic counts, concept counts, OCR counts, enrichment
+fingerprints and file hashes. Those describe how the site was built. A
+reader revising for an interview does not need them, and their absence
+is what makes the front page read as guidance rather than a report.
 
 ## Pipeline
 

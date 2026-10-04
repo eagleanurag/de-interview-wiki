@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-128",
+  "activity_id": "7335885533325234179",
+  "images": [
+    {
+      "post_id": "POST-128",
+      "activity_id": "7335885533325234179",
+      "filename": "activity_7335885533325234179_slide_0.jpg",
+      "path": "media/activity_7335885533325234179_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 340,
+      "size_bytes": 18585,
+      "declared_sha256": "aea7c6abf15741e2cb34b6bb6780e33f621789f357ca7b283bf8ef83d08db6cf",
+      "actual_sha256": "aea7c6abf15741e2cb34b6bb6780e33f621789f357ca7b283bf8ef83d08db6cf",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Subscribe @Asli_Analytics Youtube | Follow @Gaurav Agrawal 8 Yrs Exp Analytics\nEmployee Table\n\nEmp_1D is Primary Key\n\nEmp 10 Dept_1D\n\n| a\n\n[for 200]\n\n|) |\na\n[fos 00]\n[fos 700]\na\n\nQ3. Find the employee with the 2nd highest Salary in Department D3 ?",
+      "redactions": 0,
+      "search_text": "Subscribe @Asli_Analytics Youtube | Follow @Gaurav Agrawal 8 Yrs Exp Analytics Employee Table Emp_1D is Primary Key Emp 10 Dept_1D | a [for 200] |) | a [fos 00] [fos 700] a Q3. Find the employee with the 2nd highest Salary in Department D3 ?",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "247 chars, 38 words, 66% letters, 14% symbols, 0.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "73317bc6bc40066df42a12f953631b2db0a4b8c7fba1a107d5c93bb8af168790"
+    }
+  ]
+}

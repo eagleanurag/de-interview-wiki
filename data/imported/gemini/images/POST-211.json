@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-211",
+  "activity_id": "7344573867153047552",
+  "images": [
+    {
+      "post_id": "POST-211",
+      "activity_id": "7344573867153047552",
+      "filename": "activity_7344573867153047552_slide_0.jpg",
+      "path": "media/activity_7344573867153047552_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 42329,
+      "declared_sha256": "6163b22ad02132ed01151ef6473abb81b3c49361d8f2680f11484b24972fc82c",
+      "actual_sha256": "6163b22ad02132ed01151ef6473abb81b3c49361d8f2680f11484b24972fc82c",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "American Express Data Analyst\nInterview Questions\n(0-3 Years)\n15-17 LPA\n\nPython Questions\n4. Whats the dliference between a ist, tuple, set, and dictionary\n\nin Python?\n\nUs Ore, mabe, ows ete Bante: (2.31\n\nTupi Orc, rae, aos pees. romp, 23\n\n‘st Una muae ro pea. ron 2,9)\n\n‘lca: ka pas voted (rare as on 376), mae, Bante:\n\nboar)\n2. How is memory managed in Python?\n\ncrac age olen vcd marge rane ec\n‘3. Explain Python's GIL (Global Interpreter Lock).\n4. What are “args and kwargs in Python?\n\n“198 oer tee esl)\n\nsinepe = hyn wih gt).\n\nton, ns\n\nFines)",
+      "redactions": 0,
+      "search_text": "American Express Data Analyst Interview Questions (0-3 Years) 15-17 LPA Python Questions 4. Whats the dliference between a ist, tuple, set, and dictionary in Python? Us Ore, mabe, ows ete Bante: (2.31 Tupi Orc, rae, aos pees. romp, 23 ‘st Una muae ro pea. ron 2,9) ‘lca: ka pas voted (rare as on 376), mae, Bante: boar) 2. How is memory managed in Python? crac age olen vcd marge rane ec ‘3. Explain Python's GIL (Global Interpreter Lock). 4. What are “args and kwargs in Python? “198 oer tee esl) sinepe = hyn wih gt). ton, ns Fines)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "546 chars, 86 words, 67% letters, 13% symbols, 2.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "5a433658072c9eb3b7c7e5ab7b9d14ba188ec86ae303fe3258ff97fd708ad2ef"
+    }
+  ]
+}

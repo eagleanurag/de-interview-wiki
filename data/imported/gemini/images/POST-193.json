@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-193",
+  "activity_id": "7341691307733438465",
+  "images": [
+    {
+      "post_id": "POST-193",
+      "activity_id": "7341691307733438465",
+      "filename": "activity_7341691307733438465_slide_0.jpg",
+      "path": "media/activity_7341691307733438465_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 483,
+      "height": 483,
+      "size_bytes": 44647,
+      "declared_sha256": "7391ad4d4d8d66a09354078139672006a50666c804a93dd12f8296c5d9fc104d",
+      "actual_sha256": "7391ad4d4d8d66a09354078139672006a50666c804a93dd12f8296c5d9fc104d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "How Much Python Do You\nREALLY Need as a Data\nEngineer?\n\nNot sure where to stop of start?\n\nHere's a nc-fluff roadmap showing exactly What to\n\nlearn, what's optional, and how to replace SQL\n\nith Python telng Portas\n\nBookmark this & share with every aspiring data\n\negineer.",
+      "redactions": 0,
+      "search_text": "How Much Python Do You REALLY Need as a Data Engineer? Not sure where to stop of start? Here's a nc-fluff roadmap showing exactly What to learn, what's optional, and how to replace SQL ith Python telng Portas Bookmark this & share with every aspiring data egineer.",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "270 chars, 46 words, 77% letters, 3% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "5c8e39716716e96d90ceb68ab20992435a7b7eda444cb1a8c508c6859135a290"
+    }
+  ]
+}

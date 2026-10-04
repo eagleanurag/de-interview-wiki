@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-192",
+  "activity_id": "7341681712310956032",
+  "images": [
+    {
+      "post_id": "POST-192",
+      "activity_id": "7341681712310956032",
+      "filename": "activity_7341681712310956032_slide_0.jpg",
+      "path": "media/activity_7341681712310956032_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 789,
+      "size_bytes": 63893,
+      "declared_sha256": "ccdc66ce07bef1f3a2e2e8a0d9ff18c8a1a15edfb41b77b86a9b77acbd04b37f",
+      "actual_sha256": "ccdc66ce07bef1f3a2e2e8a0d9ff18c8a1a15edfb41b77b86a9b77acbd04b37f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "coo\nfrom pyspark.sql import SparkSession\nfron pyspark.sql.types import Structrype, StructField, Stringtype, Integertype\nfrom pyspark.sal.functions import cot\n# Initialize spark Session with optimized configuration\nspark = Sparksession.butlder \\\n-appliane( \"Comprehensive Join Operations\") \\\nTeonfig(\"spark.sal.adaptive-enabled*, true\") \\\n‘getorcreate( )\n# Define schena for enployees table\ncemployees_schena = StructType(\nStructField(“enp_id\", Integertype( ), True),\nStructFteld(“nane\", Stringtype(), True),\nStructField(‘dept_id°, Integertypel ), True),\nStructFteld(-salary\", Integertype( ), True),\nStructField(manager_d\", IntegerTypet), True)\n»\n4 Define schena for departments table\ndepartnents_schena = structType( [\nStructField( “dept id\", Integertype(), True),\nStructField( “dept _nane\", StringType(}, True),\nStructField( Location\", ‘stringType(), True),\nStructField( “budget, IntegerType(, True)\n»\n4 Create employees dataset with strategic edge cases\nemployees_data = [\n(1, *Alice*, 18, 75000, 3), # Valid employee with manager\n(2, \"800\", 20, 65000, fone), 4 Employee with null manager\n(3, “carol, fone, 5000, 1), # Employee with mult department\n(4, “Davids, 18, 70000, 1), # duplicate dept_id scenario\n(5, Eva\", 30, 60008, 2), 4# Employee in non-existing dept\n(Wone, “Frank, 18, 35800, 3) # Employee with null enp_td\n1\n# Create departments dataset with strategic edge cases\ndepartnents_data = [\n(a, “Engineering, “New York\", 580800), # Has enployees\n(28; “Marketing, “california, 300080), # Has one employee\n(None, “Unknown Dept, *Renote*, 190000), # Department with null 10\n(48, ‘nesearch*, “Boston”, 250000), # No enployees assigned\n(50, \"Operations\", “Chicago*, 180008), 4 No employees assigned\n(28; “Software Dev\", \"Austin\", 450000) # duplicate dept_id\n1\n# Create DataFranes from the datasets\nemployees dt = spark.createDatafrane(enployees_data, enployees_schena)\ndepartnents_dt = spark.createDatafrane( departments data, departments_schena)\nrint( “EMPLOYEES OATASET:*)\nemployees_df show! )\nprint (“DEPARTMENTS DATASETS\")\ndepartnents_df.show(}",
+      "redactions": 0,
+      "search_text": "coo from pyspark.sql import SparkSession fron pyspark.sql.types import Structrype, StructField, Stringtype, Integertype from pyspark.sal.functions import cot # Initialize spark Session with optimized configuration spark = Sparksession.butlder \\ -appliane( \"Comprehensive Join Operations\") \\ Teonfig(\"spark.sal.adaptive-enabled*, true\") \\ ‘getorcreate( ) # Define schena for enployees table cemployees_schena = StructType( StructField(“enp_id\", Integertype( ), True), StructFteld(“nane\", Stringtype(), True), StructField(‘dept_id°, Integertypel ), True), StructFteld(-salary\", Integertype( ), True), StructField(manager_d\", IntegerTypet), True) » 4 Define schena for departments table departnents_schena = structType( [ StructField( “dept id\", Integertype(), True), StructField( “dept _nane\", StringType(}, True), StructField( Location\", ‘stringType(), True), StructField( “budget, IntegerType(, True) » 4 Create employees dataset with strategic edge cases employees_data = [ (1, *Alice*, 18, 75000, 3), # Valid employee with manager (2, \"800\", 20, 65000, fone), 4 Employee with null manager (3, “carol, fone, 5000, 1), # Employee with mult department (4, “Davids, 18, 70000, 1), # duplicate dept_id scenario (5, Eva\", 30, 60008, 2), 4# Employee in non-existing dept (Wone, “Frank, 18, 35800, 3) # Employee with null enp_td 1 # Create departments dataset with strategic edge cases departnents_data = [ (a, “Engineering, “New York\", 580800), # Has enployees (28; “Marketing, “california, 300080), # Has one employee (None, “Unknown Dept, *Renote*, 190000), # Department with null 10 (48, ‘nesearch*, “Boston”, 250000), # No enployees assigned (50, \"Operations\", “Chicago*, 180008), 4 No employees assigned (28; “Software Dev\", \"Austin\", 450000) # duplicate dept_id 1 # Create DataFranes from the datasets employees dt = spark.createDatafrane(enployees_data, enployees_schena) departnents_dt = spark.createDatafrane( departments data, departments_schena) rint( “EMPLOYEES OATASET:*) employees_df show! ) print (“DEPARTMENTS DATASETS\") departnents_df.show(}",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "2053 chars, 215 words, 69% letters, 19% symbols, 0.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "949b83e0ef2cd179adbd3eee6e21dd35dba7f69bc6d7e3e648f144f7ab7522f0"
+    }
+  ]
+}

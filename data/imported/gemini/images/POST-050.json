@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-050",
+  "activity_id": "7304810765977296896",
+  "images": [
+    {
+      "post_id": "POST-050",
+      "activity_id": "7304810765977296896",
+      "filename": "activity_7304810765977296896_slide_0.jpg",
+      "path": "media/activity_7304810765977296896_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 466,
+      "size_bytes": 38500,
+      "declared_sha256": "eaadad99b84b00cbf9485dabb714c8e38349f5582782e2e32e5154b83016fe73",
+      "actual_sha256": "eaadad99b84b00cbf9485dabb714c8e38349f5582782e2e32e5154b83016fe73",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "LWVELCOME =",
+      "redactions": 0,
+      "search_text": "LWVELCOME =",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "11 chars, 1 words, 82% letters, 9% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "3309bc9c1f9f1380c96287063c865cd8bd777dbd2280a894bf5e5fb6f4831ac1"
+    }
+  ]
+}

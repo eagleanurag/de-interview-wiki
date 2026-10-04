@@ -1662,7 +1662,13 @@ class TestWikiAndSearch:
         site = self._site(tmp_path)
 
         assert (site / "posts" / "urn-li-archive-abc.html").is_file()
-        assert (site / "saved-items.html").is_file()
+
+        # saved-items.html is no longer generated. It was the third of
+        # four archive indexes, and it existed to list which posts came
+        # from a saved list -- a fact about how the archive was
+        # collected, carried as a reader-facing page. The provenance is
+        # still on every post in the knowledge base.
+        assert not (site / "saved-items.html").exists()
 
     def test_no_local_path_reaches_a_published_page(self, tmp_path: Path):
         site = self._site(tmp_path)
@@ -1709,15 +1715,38 @@ class TestWikiAndSearch:
         assert "urn-li-archive-abc" in ids
         assert "urn-li-saved-def" in ids
 
-    def test_the_archive_page_groups_by_capture_quality(
+    def test_the_capture_quality_still_groups_the_posts_in_the_data(
         self, tmp_path: Path
     ):
+        """
+        The grouping the saved-items page used to render.
+
+        There is no page for it now, but the distinction it drew -- a
+        post exported by a person from a saved list, against one the
+        collector fetched -- is still decided, still recorded on each
+        post, and still what the two ids encode.
+        """
+
         site = self._site(tmp_path)
 
-        body = (site / "saved-items.html").read_text(encoding="utf-8")
+        assert not (site / "saved-items.html").exists()
 
-        assert "urn-li-archive-abc" in body
-        assert "urn-li-saved-def" in body
+        index = json.loads(
+            (site / "assets" / "search-index.json").read_text(
+                encoding="utf-8"
+            )
+        )
+
+        ids = {record["i"] for record in index["records"]}
+
+        # Both posts are still individually reachable, which is the part
+        # of the old page that was doing any work: an archive post and a
+        # saved post both resolve to a page of their own.
+        assert "urn-li-archive-abc" in ids
+        assert "urn-li-saved-def" in ids
+
+        assert (site / "posts" / "urn-li-archive-abc.html").is_file()
+        assert (site / "posts" / "urn-li-saved-def.html").is_file()
 
 
 # ---------------------------------------------------------------------

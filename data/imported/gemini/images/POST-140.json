@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-140",
+  "activity_id": "7338071173940813825",
+  "images": [
+    {
+      "post_id": "POST-140",
+      "activity_id": "7338071173940813825",
+      "filename": "activity_7338071173940813825_slide_0.jpg",
+      "path": "media/activity_7338071173940813825_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 320,
+      "size_bytes": 25295,
+      "declared_sha256": "37e7dee6cca9fb5068117e30cffe3adb716f874653152423957bba73aa57acd3",
+      "actual_sha256": "37e7dee6cca9fb5068117e30cffe3adb716f874653152423957bba73aa57acd3",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ney\nSaaS — lh. AS",
+      "redactions": 0,
+      "search_text": "ney SaaS — lh. AS",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "17 chars, 4 words, 65% letters, 12% symbols, 5.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "51726bc2a9a3f58051ac583ab55f5122d001e1e590412eb328ce47d3b205e8ee"
+    }
+  ]
+}

@@ -1,0 +1,2917 @@
+{
+  "posts": [
+    {
+      "group_id": "POST-001",
+      "activity_id": "7263033731471351808",
+      "technologies": [
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7263033731471351808_slide_0.jpg#declared_slide=0": "Data Lake oi"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-003",
+      "activity_id": "7283111675530985473",
+      "technologies": [
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7283111675530985473_slide_0.jpg#declared_slide=0": "cn oh? Azure"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-004",
+      "activity_id": "7287036149515112448",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Data Engineering",
+        "Machine Learning",
+        "Git",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7287036149515112448_slide_13.jpg#declared_slide=13": "toy Fiske Cispetla aia POM For X.¥ dart: py (ly) « BEDE",
+        "activity_7287036149515112448_slide_61.jpg#declared_slide=61": "earl Ne Dena etl aw pte RP amt Ba, git retrns Pei no sch @ ex,"
+      },
+      "unresolved_group_ids": [
+        "POST-004"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Databricks",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7287317112577052672_slide_01.jpg#declared_slide=1": "H Datastore CloudSQL 4",
+        "activity_7287317112577052672_slide_14.jpg#declared_slide=14": "® SQL JOINS @"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-006",
+      "activity_id": "7289482734530412544",
+      "technologies": [
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "AWS",
+        "Machine Learning",
+        "Pandas/Polars",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7289482734530412544_slide_02.jpg#declared_slide=2": "at Practice Questions:",
+        "activity_7289482734530412544_slide_03.jpg#declared_slide=3": "3.Explain the difference between Python lists and tuples.",
+        "activity_7289482734530412544_slide_05.jpg#declared_slide=5": "a.Explain the dference between Python sts and tuples"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-007",
+      "activity_id": "7289860868484300800",
+      "technologies": [
+        "Python",
+        "Interview preparation"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-008",
+      "activity_id": "7290217478780076032",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Pandas/Polars"
+      ],
+      "slide_fragments": {
+        "activity_7290217478780076032_slide_0.jpg#declared_slide=0": "“Operation Pandas. | Polars, =| SQL | PSpork |"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-009",
+      "activity_id": "7290224119759958016",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "AWS",
+        "Interview preparation"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-009"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-010",
+      "activity_id": "7290958913657520129",
+      "technologies": [
+        "AWS",
+        "Machine Learning"
+      ],
+      "slide_fragments": {
+        "activity_7290958913657520129_slide_0.jpg#declared_slide=0": "in the AWS Cloud"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "technologies": [
+        "SQL",
+        "Data Engineering",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7292029039060398080_slide_02.jpg#declared_slide=2": "vironment ale data mars, The process connecting datasources to the Gata warehouse known as ETL (xtra,"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-013",
+      "activity_id": "7292198685361192960",
+      "technologies": [
+        "SQL",
+        "Databricks",
+        "Delta Lake",
+        "Data Engineering",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7292198685361192960_slide_07.jpg#declared_slide=7": "|p, Ro-Dehatake adbwsdetlae | Overview © .",
+        "activity_7292198685361192960_slide_35.jpg#declared_slide=35": "est [ATER TABLE dete etlograment tbe do letsREORG Command"
+      },
+      "unresolved_group_ids": [
+        "POST-013"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-014",
+      "activity_id": "7292844415373496320",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7292844415373496320_slide_02.jpg#declared_slide=2": "-- Q-16. Write an SQL query to print details of the",
+        "activity_7292844415373496320_slide_04.jpg#declared_slide=4": "-- Q-6. Write an SQL query to print the FIRST NAME from"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-015",
+      "activity_id": "7293108665887154176",
+      "technologies": [
+        "SQL",
+        "Azure Data Factory",
+        "Git"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-015"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7293569222478028800_slide_03.jpg#declared_slide=3": "Chapter 17: Export PostgreSQL database table header and data to CSV file ....ununnnnn 38",
+        "activity_7293569222478028800_slide_04.jpg#declared_slide=4": "Chapter 1: Getting started with PostgreSQL re::unnmnnmmnininnnnnnnmneninmnnnnnmnenennnee 2",
+        "activity_7293569222478028800_slide_10.jpg#declared_slide=10": "Section 11: Installing PostgreSQL on Windows",
+        "activity_7293569222478028800_slide_11.jpg#declared_slide=11": "Section 12: Install PostgreSQl. from Source on Linux",
+        "activity_7293569222478028800_slide_13.jpg#declared_slide=13": "Section 1.4: How to install PostgreSQL. via MacPorts on OSX",
+        "activity_7293569222478028800_slide_15.jpg#declared_slide=15": "Section 15: Install postgresql with brew on Mac",
+        "activity_7293569222478028800_slide_27.jpg#declared_slide=27": "Section 9.1: Updating a table based on joining another table",
+        "activity_7293569222478028800_slide_37.jpg#declared_slide=37": "Chapter 13: Window Functions",
+        "activity_7293569222478028800_slide_39.jpg#declared_slide=39": "Section 15.1: Basie PL/paSQL Function",
+        "activity_7293569222478028800_slide_40.jpg#declared_slide=40": "Section 15.3: PL/pgSQL Syntax",
+        "activity_7293569222478028800_slide_43.jpg#declared_slide=43": "Section 18.2: Basic PL/pgSQL Trigger Function",
+        "activity_7293569222478028800_slide_49.jpg#declared_slide=49": "Chapter 22: Comments in PostgreSQL"
+      },
+      "unresolved_group_ids": [
+        "POST-016"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-017",
+      "activity_id": "7293591844435730432",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Azure Data Factory",
+        "Data Engineering"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-017"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-018",
+      "activity_id": "7293871440108392448",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7293871440108392448_slide_01.jpg#declared_slide=1": "Apache Spark and Hadoop.",
+        "activity_7293871440108392448_slide_02.jpg#declared_slide=2": "+ Coin Change Problem: A typical dynamic programming question asking for"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-019",
+      "activity_id": "7293931585970552832",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Data Engineering",
+        "Machine Learning",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7293931585970552832_slide_02.jpg#declared_slide=2": "answers. The Apache Spark Interview Questions and answers mentioned"
+      },
+      "unresolved_group_ids": [
+        "POST-019"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7294210419810844672_slide_13.jpg#declared_slide=13": "® SQL JOINS @"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-022",
+      "activity_id": "7294558213721460736",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7294558213721460736_slide_09.jpg#declared_slide=9": "1D Aohisher Agrawal Azure Data Engineer",
+        "activity_7294558213721460736_slide_12.jpg#declared_slide=12": "G Abhishek Agrawal | Azure Data Engineer"
+      },
+      "unresolved_group_ids": [
+        "POST-022"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-023",
+      "activity_id": "7294656361873756160",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS",
+        "Machine Learning",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7294656361873756160_slide_03.jpg#declared_slide=3": "+ Considerations for pipeline maintenance, testing,",
+        "activity_7294656361873756160_slide_06.jpg#declared_slide=6": "+ Considerations fo pipeline maintenance testing",
+        "activity_7294656361873756160_slide_11.jpg#declared_slide=11": "Shoukbecomforabie wth SQL dsabses, REST API, ad"
+      },
+      "unresolved_group_ids": [
+        "POST-023"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-024",
+      "activity_id": "7294664118312022017",
+      "technologies": [
+        "SQL",
+        "Git",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7294664118312022017_slide_07.jpg#declared_slide=7": "JOB INTERVIEW 3",
+        "activity_7294664118312022017_slide_09.jpg#declared_slide=9": "JOB INTERVIEW oS",
+        "activity_7294664118312022017_slide_12.jpg#declared_slide=12": "Finally, do you have any questions"
+      },
+      "unresolved_group_ids": [
+        "POST-024"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-025",
+      "activity_id": "7294675971599712256",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Databricks",
+        "Delta Lake",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7294675971599712256_slide_0.jpg#declared_slide=0": "Delta Live Tables ae wv"
+      },
+      "unresolved_group_ids": [
+        "POST-025"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Machine Learning",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7294928141830025216_slide_02.jpg#declared_slide=2": "Spark Core isthe general execution engine fr the Spark platform, responsible for tasks such"
+      },
+      "unresolved_group_ids": [
+        "POST-026"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-028",
+      "activity_id": "7294931923687092226",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-028"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-029",
+      "activity_id": "7295266934294474752",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Data Engineering",
+        "AWS",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7295266934294474752_slide_02.jpg#declared_slide=2": "o Python runs on an interpreter system, meaning that code can be executed as"
+      },
+      "unresolved_group_ids": [
+        "POST-029"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-030",
+      "activity_id": "7295290520719765504",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7295290520719765504_slide_0.jpg#declared_slide=0": "question fase the mere 7:07 pm"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-033",
+      "activity_id": "7295781326744342528",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Data Engineering"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-033"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-034",
+      "activity_id": "7296015305749745664",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Databricks",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS",
+        "Machine Learning",
+        "Git",
+        "Pandas/Polars",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7296015305749745664_slide_02.jpg#declared_slide=2": "Chapter 5. Object Oriented Programming in Python _",
+        "activity_7296015305749745664_slide_03.jpg#declared_slide=3": "Question 1. In Python, a list is one of the most commonly used data"
+      },
+      "unresolved_group_ids": [
+        "POST-034"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-035",
+      "activity_id": "7296133645327593473",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7296133645327593473_slide_02.jpg#declared_slide=2": "8.SQL> Example for startwith, connect by and prior",
+        "activity_7296133645327593473_slide_03.jpg#declared_slide=3": "SQL> UPDATE table_name SET seqno = sequence_name. NEXTVAL;"
+      },
+      "unresolved_group_ids": [
+        "POST-035"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-036",
+      "activity_id": "7299646733146353664",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7299646733146353664_slide_07.jpg#declared_slide=7": "+ Many pipelines don validate for null, leading to data",
+        "activity_7299646733146353664_slide_09.jpg#declared_slide=9": "+ Pipelines often fal when processing edge eases, such as"
+      },
+      "unresolved_group_ids": [
+        "POST-036"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-037",
+      "activity_id": "7299738386641121281",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7299738386641121281_slide_08.jpg#declared_slide=8": "across partitions."
+      },
+      "unresolved_group_ids": [
+        "POST-037"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-039",
+      "activity_id": "7300054526030450688",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7300054526030450688_slide_0.jpg#declared_slide=0": "questions:"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-041",
+      "activity_id": "7300714341224304641",
+      "technologies": [
+        "SQL",
+        "Data Engineering",
+        "Git"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-043",
+      "activity_id": "7301085983347818496",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7301085983347818496_slide_11.jpg#declared_slide=11": "duplicates) is included in the window. If there is no such substring, return",
+        "activity_7301085983347818496_slide_19.jpg#declared_slide=19": "Return all possible palindrome partitioning of s.",
+        "activity_7301085983347818496_slide_31.jpg#declared_slide=31": "Return the max sliding window.",
+        "activity_7301085983347818496_slide_42.jpg#declared_slide=42": "array can be partitioned into two subsets such that the sum of elements in"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-044"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-045",
+      "activity_id": "7301772876238491651",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7301772876238491651_slide_0.jpg#declared_slide=0": "\\ databricks"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7301820963241750530_slide_02.jpg#declared_slide=2": "Structured Query language (SQL)",
+        "activity_7301820963241750530_slide_12.jpg#declared_slide=12": "® SQL JOINS @"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-047",
+      "activity_id": "7302536449503973376",
+      "technologies": [
+        "SQL",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7302536449503973376_slide_02.jpg#declared_slide=2": "data warehouse to integrate patient a",
+        "activity_7302536449503973376_slide_07.jpg#declared_slide=7": "dota warehouse to integrate patient a",
+        "activity_7302536449503973376_slide_10.jpg#declared_slide=10": "dota into the target data warehouse. ry"
+      },
+      "unresolved_group_ids": [
+        "POST-047"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-048",
+      "activity_id": "7303044153867710465",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS",
+        "Machine Learning"
+      ],
+      "slide_fragments": {
+        "activity_7303044153867710465_slide_02.jpg#declared_slide=2": "spark.readStream.format(’ source’). load()",
+        "activity_7303044153867710465_slide_03.jpg#declared_slide=3": "# Read Data from JSON: df = spark.read.json( path/to/}son\")"
+      },
+      "unresolved_group_ids": [
+        "POST-048"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-055",
+      "activity_id": "7307022837305729025",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Delta Lake",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Machine Learning"
+      ],
+      "slide_fragments": {
+        "activity_7307022837305729025_slide_01.jpg#declared_slide=1": "Databricks Dictionary"
+      },
+      "unresolved_group_ids": [
+        "POST-055"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Data Engineering",
+        "AWS",
+        "Machine Learning",
+        "Git",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7307247421867089920_slide_09.jpg#declared_slide=9": "14. PEP 8: The Python Enhancement Proposal 8 23",
+        "activity_7307247421867089920_slide_10.jpg#declared_slide=10": "66. What does the Python help() function do? 75",
+        "activity_7307247421867089920_slide_11.jpg#declared_slide=11": "43. Python switch-case statement 52",
+        "activity_7307247421867089920_slide_13.jpg#declared_slide=13": "31. Python iterators 40"
+      },
+      "unresolved_group_ids": [
+        "POST-056"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-058",
+      "activity_id": "7307959299186532353",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Data Engineering",
+        "Machine Learning",
+        "Git"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-058"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-059",
+      "activity_id": "7308183735705681920",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "AWS",
+        "Git"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-059"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-062",
+      "activity_id": "7310146449428611072",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7310146449428611072_slide_0.jpg#declared_slide=0": "SQL Query Logical Order"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-064",
+      "activity_id": "7311444447941005315",
+      "technologies": [
+        "PySpark",
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7311444447941005315_slide_0.jpg#declared_slide=0": "1 fron pyspark.sal. functions import *"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-066",
+      "activity_id": "7312742766722064385",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7312742766722064385_slide_0.jpg#declared_slide=0": "catomer sequin enpgemer an retin By wring carolex SQL querer we exraced able",
+        "activity_7312742766722064385_slide_07.jpg#declared_slide=7": "with cte as (select Cast(Placed_at as Date) as _Date,Customer_code,row_number() over(partition by Customer_code order",
+        "activity_7312742766722064385_slide_09.jpg#declared_slide=9": "select ¢,Customer_code from cte as ¢ join orders as 0 on c.Customer_code=0.Customer_code and",
+        "activity_7312742766722064385_slide_10.jpg#declared_slide=10": "with cte as (select Customer_code,dense_rank() over(partition by Customer_code order by Placed_at) as",
+        "activity_7312742766722064385_slide_12.jpg#declared_slide=12": "‘over (partition by Customer_code order by Placed_at) as rnk from orders where month(Placed_at)=I and year(Placed_at)=2025)x."
+      },
+      "unresolved_group_ids": [
+        "POST-066"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-069",
+      "activity_id": "7314232844652814336",
+      "technologies": [
+        "PySpark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7314232844652814336_slide_0.jpg#declared_slide=0": "Le at PySpark Interview Questions"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-070",
+      "activity_id": "7315004917868359681",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Data Engineering",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7315004917868359681_slide_01.jpg#declared_slide=1": "The immediate question: Why was the job suddenly 4x slower?",
+        "activity_7315004917868359681_slide_02.jpg#declared_slide=2": "3. Using Spark UI for Profiling in Databricks"
+      },
+      "unresolved_group_ids": [
+        "POST-070"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-072",
+      "activity_id": "7315221613656887296",
+      "technologies": [
+        "SQL",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7315221613656887296_slide_03.jpg#declared_slide=3": "[Tricky Join Queries(for 0-2 year exp) ______—dSal Server Tricky Join Intewiew Query SET-7",
+        "activity_7315221613656887296_slide_04.jpg#declared_slide=4": "| EmployeelD FirstName LastName Salary JoiningDate Department Gender"
+      },
+      "unresolved_group_ids": [
+        "POST-072"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-074",
+      "activity_id": "7315590769430474753",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7315590769430474753_slide_0.jpg#declared_slide=0": "Databricks Al Functions! NewSGlmdtorON ft Latesioas tm =~"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-075",
+      "activity_id": "7315596015292579840",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Machine Learning",
+        "Git",
+        "Pandas/Polars",
+        "Interview preparation"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-075"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-076",
+      "activity_id": "7315773551188361217",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7315773551188361217_slide_11.jpg#declared_slide=11": "Complex joins Inline TVF View / Sub-query 8 Depends",
+        "activity_7315773551188361217_slide_13.jpg#declared_slide=13": "‘Avoid scalar UDFS in WHERE/JOIN \\"
+      },
+      "unresolved_group_ids": [
+        "POST-076"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Delta Lake",
+        "Azure Data Factory",
+        "Data Engineering"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-078"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-079",
+      "activity_id": "7318987855861596160",
+      "technologies": [
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7318987855861596160_slide_0.jpg#declared_slide=0": "iinlanoe Data Lake"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-084",
+      "activity_id": "7324837204147539969",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-084"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-085",
+      "activity_id": "7325085602222112769",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-085"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-086",
+      "activity_id": "7325097644559638528",
+      "technologies": [
+        "Python",
+        "AWS"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-087",
+      "activity_id": "7325142325448400899",
+      "technologies": [
+        "SQL",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [
+        "POST-087"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-088",
+      "activity_id": "7325208130810748930",
+      "technologies": [
+        "SQL",
+        "Databricks",
+        "Azure Data Factory",
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7325208130810748930_slide_12.jpg#declared_slide=12": "scien By contrast, the DatabricksInteligurece Pattorm is distributed wystorn",
+        "activity_7325208130810748930_slide_17.jpg#declared_slide=17": "dotobricks Phase 3:Data Warehouse Migration",
+        "activity_7325208130810748930_slide_20.jpg#declared_slide=20": "“ier _ullited to create corresponding table schemas in Databricks. Revaing",
+        "activity_7325208130810748930_slide_26.jpg#declared_slide=26": "databricks sine oars dower hoe ta tte alo cre"
+      },
+      "unresolved_group_ids": [
+        "POST-088"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Data Engineering",
+        "AWS",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7325723643831812096_slide_02.jpg#declared_slide=2": "locathost:8889/notebooks/Documents/GitHub/Public/Python/PythonJpynb wie",
+        "activity_7325723643831812096_slide_03.jpg#declared_slide=3": "localhost:8889/notebooks/Documents/GitHub/Public/Python/Python.ipynb nie"
+      },
+      "unresolved_group_ids": [
+        "POST-089"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-091",
+      "activity_id": "7326096495571533824",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "Data Engineering",
+        "AWS",
+        "Pandas/Polars",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7326096495571533824_slide_01.jpg#declared_slide=1": "o Ensure joined fields are indexed.",
+        "activity_7326096495571533824_slide_02.jpg#declared_slide=2": "8. Partitioning and Sharding (for big data):"
+      },
+      "unresolved_group_ids": [
+        "POST-091"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-093",
+      "activity_id": "7326397121371197440",
+      "technologies": [
+        "SQL",
+        "Data Engineering",
+        "Git",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7326397121371197440_slide_03.jpg#declared_slide=3": "complex joins or aggregations.",
+        "activity_7326397121371197440_slide_09.jpg#declared_slide=9": "7. Explain ACID properties in SQL.",
+        "activity_7326397121371197440_slide_13.jpg#declared_slide=13": "15, _ Whats the purpose of inerng in SQL, and when should",
+        "activity_7326397121371197440_slide_14.jpg#declared_slide=14": "DECLARE EXIT WANOLEA (n MySQL) to cach and handle"
+      },
+      "unresolved_group_ids": [
+        "POST-093"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-095",
+      "activity_id": "7326463455274668032",
+      "technologies": [
+        "PySpark",
+        "Apache Spark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7326463455274668032_slide_0.jpg#declared_slide=0": "parameter Spark parameters"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-096",
+      "activity_id": "7326471405561106432",
+      "technologies": [
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7326471405561106432_slide_0.jpg#declared_slide=0": "Gf = spark: createDetaFrane(aate, [\"departuent”, \"salary\", “employee nane\"])"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-097",
+      "activity_id": "7326471551384473601",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7326471551384473601_slide_06.jpg#declared_slide=6": "{6 Advanced Teortiea! Questions"
+      },
+      "unresolved_group_ids": [
+        "POST-097"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-099",
+      "activity_id": "7326889752870170625",
+      "technologies": [
+        "SQL",
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7326889752870170625_slide_06.jpg#declared_slide=6": "1) write a sql to find top 5 customers who",
+        "activity_7326889752870170625_slide_09.jpg#declared_slide=9": "from sanecitybk inner Join overallbk on sanecttybk.custid-overal bk. custoner_id",
+        "activity_7326889752870170625_slide_11.jpg#declared_slide=11": "I) write a sql to find top 5 customers who",
+        "activity_7326889752870170625_slide_15.jpg#declared_slide=15": "from samecitybk inner join overallbk on samecitybk.custid=overallbk.customer_id",
+        "activity_7326889752870170625_slide_16.jpg#declared_slide=16": "2) write a sql to find percent contribution by",
+        "activity_7326889752870170625_slide_17.jpg#declared_slide=17": "from customer cust inner join hotel_booking hb",
+        "activity_7326889752870170625_slide_19.jpg#declared_slide=19": "cust_states as (select cust.customer_id,ci.state as cust_state from customer cust inner join cities ci"
+      },
+      "unresolved_group_ids": [
+        "POST-099"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-101",
+      "activity_id": "7327172858009341952",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Data Engineering",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7327172858009341952_slide_0.jpg#declared_slide=0": "‘Week3 19)Partitioning, Sharding, Distribution"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-102",
+      "activity_id": "7327179336220860417",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Delta Lake",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Machine Learning",
+        "Git",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7327179336220860417_slide_02.jpg#declared_slide=2": "o Leverage Azure’s elasticity to autoscale Integration"
+      },
+      "unresolved_group_ids": [
+        "POST-102"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-104",
+      "activity_id": "7327237430086959105",
+      "technologies": [
+        "Data Engineering"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-105",
+      "activity_id": "7327315874955018240",
+      "technologies": [
+        "SQL",
+        "Git"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-106",
+      "activity_id": "7327458889296232450",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7327458889296232450_slide_0.jpg#declared_slide=0": "Databricks"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Data Engineering",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7327540020444049411_slide_01.jpg#declared_slide=1": "We checked the \"Executors\" tab in Spark UI and found:",
+        "activity_7327540020444049411_slide_02.jpg#declared_slide=2": "using profiling (Spark UI) and logs to pinpoint bottlenecks."
+      },
+      "unresolved_group_ids": [
+        "POST-107"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-108",
+      "activity_id": "7327546343013396482",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7327546343013396482_slide_0.jpg#declared_slide=0": "Developer (AZ-204), Azure? sicnlist (DP-100)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-111",
+      "activity_id": "7327674189065113600",
+      "technologies": [
+        "SQL",
+        "Delta Lake",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Git"
+      ],
+      "slide_fragments": {
+        "activity_7327674189065113600_slide_0.jpg#declared_slide=0": "transfers or and read- data pipelines"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-112",
+      "activity_id": "7327875236828258304",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Data Engineering",
+        "Git",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7327875236828258304_slide_0.jpg#declared_slide=0": "Dri Data Lake wee ith MERGE. Replay Storage akarerseroger"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-116",
+      "activity_id": "7328241397017288704",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Delta Lake",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Git",
+        "Pandas/Polars"
+      ],
+      "slide_fragments": {
+        "activity_7328241397017288704_slide_01.jpg#declared_slide=1": "SparkSession available as ‘spark’."
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-118",
+      "activity_id": "7328696707439874048",
+      "technologies": [
+        "PySpark",
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7328696707439874048_slide_0.jpg#declared_slide=0": "af ~ spark. createDetaFrane(date, schema)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Delta Lake",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Git",
+        "Pandas/Polars"
+      ],
+      "slide_fragments": {
+        "activity_7329705187646824448_slide_01.jpg#declared_slide=1": "SparkSession available as ‘spark’."
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-121",
+      "activity_id": "7329752411470778368",
+      "technologies": [
+        "PySpark"
+      ],
+      "slide_fragments": {
+        "activity_7329752411470778368_slide_0.jpg#declared_slide=0": "‘) Identify accounts that should be banned based on logins from different IF addresses atthe same moment using PySpark"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-123",
+      "activity_id": "7330110065691037696",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7330110065691037696_slide_0.jpg#declared_slide=0": "databricks"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-126",
+      "activity_id": "7335500334980628481",
+      "technologies": [
+        "SQL",
+        "PySpark"
+      ],
+      "slide_fragments": {
+        "activity_7335500334980628481_slide_0.jpg#declared_slide=0": "eee when() Conditional logic (like SQL CASE)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-127",
+      "activity_id": "7335873650186665986",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7335873650186665986_slide_0.jpg#declared_slide=0": "INTERVIEW Sa"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-129",
+      "activity_id": "7335895978253668353",
+      "technologies": [
+        "PySpark",
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7335895978253668353_slide_0.jpg#declared_slide=0": "‘atty_feed.af = spark-creatoataFrane daily updates data, sthenandatly_fend schon)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-130",
+      "activity_id": "7336206983072489472",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-132",
+      "activity_id": "7337673670124781568",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Databricks",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7337673670124781568_slide_0.jpg#declared_slide=0": "#DataEngineer #Databricks #Analytics #StrataScratch"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-134",
+      "activity_id": "7337746532181360641",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-135",
+      "activity_id": "7337765415269363712",
+      "technologies": [
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7337765415269363712_slide_0.jpg#declared_slide=0": "Data Pipeline WWiseaver"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-136",
+      "activity_id": "7337803202441973760",
+      "technologies": [
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7337803202441973760_slide_0.jpg#declared_slide=0": "Interview Question"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-137",
+      "activity_id": "7337817883038707714",
+      "technologies": [
+        "Machine Learning",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7337817883038707714_slide_0.jpg#declared_slide=0": "2 Question 2: How does the attention mechanism function in"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-139",
+      "activity_id": "7338057794547343360",
+      "technologies": [
+        "Azure Data Factory",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7338057794547343360_slide_0.jpg#declared_slide=0": "Azure offers several unique advantages."
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-141",
+      "activity_id": "7338328091057885187",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7338328091057885187_slide_0.jpg#declared_slide=0": "Tablea Tables LEFT JOIN"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-142",
+      "activity_id": "7338442479387480066",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark",
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7338442479387480066_slide_0.jpg#declared_slide=0": "dense rank ).over(window, pert dept) -alias( \"dence_ranic perf\")"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-143",
+      "activity_id": "7338452429295730688",
+      "technologies": [
+        "SQL",
+        "Python",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7338452429295730688_slide_0.jpg#declared_slide=0": "LEVEL1 SQL Python"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-145",
+      "activity_id": "7338527952621445120",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7338527952621445120_slide_0.jpg#declared_slide=0": "SQL Interview"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-146",
+      "activity_id": "7338573772557307905",
+      "technologies": [
+        "AWS"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-147",
+      "activity_id": "7338607955723878402",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7338607955723878402_slide_0.jpg#declared_slide=0": "= Databricks Free Edition"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-148",
+      "activity_id": "7338761969245605889",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-149",
+      "activity_id": "7338780871455318016",
+      "technologies": [
+        "PySpark"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-152",
+      "activity_id": "7339105847597219840",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7339105847597219840_slide_0.jpg#declared_slide=0": "Ans: SQL stands for Structured Query Language. It is a"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-153",
+      "activity_id": "7339106266201411587",
+      "technologies": [
+        "Azure Data Factory",
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7339106266201411587_slide_0.jpg#declared_slide=0": "ETL PIPELINES"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-154",
+      "activity_id": "7339148768346259456",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7339148768346259456_slide_0.jpg#declared_slide=0": "vs COUNT(‘SQL)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-156",
+      "activity_id": "7339230107628134404",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7339230107628134404_slide_0.jpg#declared_slide=0": "SQL vs PySpark"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-158",
+      "activity_id": "7339347237044404225",
+      "technologies": [
+        "Apache Spark",
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7339347237044404225_slide_0.jpg#declared_slide=0": "Tuning partitions Auto-optimized"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-159",
+      "activity_id": "7339358389367357440",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Azure Data Factory",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7339358389367357440_slide_01.jpg#declared_slide=1": "groupBy in Spark NX",
+        "activity_7339358389367357440_slide_02.jpg#declared_slide=2": "© 1 groupe -inspark. he geoupBy method suse to group dts ins Ontaframe based on oe of mor cous,",
+        "activity_7339358389367357440_slide_05.jpg#declared_slide=5": "similar to the GROUP BY clause in SQL. This is often followed by aggregation operations to compute summary statistics for",
+        "activity_7339358389367357440_slide_09.jpg#declared_slide=9": "performing transformations on columns using SQL expressions directly."
+      },
+      "unresolved_group_ids": [
+        "POST-159"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-160",
+      "activity_id": "7339509411570163712",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7339509411570163712_slide_07.jpg#declared_slide=7": "Question 2:",
+        "activity_7339509411570163712_slide_11.jpg#declared_slide=11": "months from the join date.",
+        "activity_7339509411570163712_slide_12.jpg#declared_slide=12": "| Zelone| Join Ostelstates|"
+      },
+      "unresolved_group_ids": [
+        "POST-160"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-161",
+      "activity_id": "7339514243995619328",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7339514243995619328_slide_0.jpg#declared_slide=0": "a slow SQL query?"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-162",
+      "activity_id": "7339535672422055936",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Databricks",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7339535672422055936_slide_10.jpg#declared_slide=10": "and hash joins"
+      },
+      "unresolved_group_ids": [
+        "POST-162"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-164",
+      "activity_id": "7339623632530284545",
+      "technologies": [
+        "Python",
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7339623632530284545_slide_0.jpg#declared_slide=0": "with Python /"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-165",
+      "activity_id": "7339636481692487680",
+      "technologies": [
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7339636481692487680_slide_0.jpg#declared_slide=0": "1 Data Lake Data Warehouse"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-166",
+      "activity_id": "7339690591162716161",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7339690591162716161_slide_0.jpg#declared_slide=0": "Interviewer"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-167",
+      "activity_id": "7339901286844096513",
+      "technologies": [
+        "SQL",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7339901286844096513_slide_02.jpg#declared_slide=2": "‘make querying more complex due to the additional joins required across multiple"
+      },
+      "unresolved_group_ids": [
+        "POST-167"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-168",
+      "activity_id": "7339985122848329728",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7339985122848329728_slide_0.jpg#declared_slide=0": "Aer successful job completion, Spark cleans up the resources, stopping executors and releasing"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-169",
+      "activity_id": "7340220810126626817",
+      "technologies": [
+        "SQL",
+        "Python",
+        "Apache Spark",
+        "AWS",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7340220810126626817_slide_0.jpg#declared_slide=0": "‘Spark - Kafka- SQL - Python - AWS - Azure -GCP"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-171",
+      "activity_id": "7340234194553327619",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Git",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7340234194553327619_slide_01.jpg#declared_slide=1": "MYNTRA. INTERVIEW",
+        "activity_7340234194553327619_slide_02.jpg#declared_slide=2": "Window spec = indow.partittonsy \"eategory\") \\",
+        "activity_7340234194553327619_slide_03.jpg#declared_slide=3": "PySpark Coding + Theory Questions with Complete Answers"
+      },
+      "unresolved_group_ids": [
+        "POST-171"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-172",
+      "activity_id": "7340257429995077633",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7340257429995077633_slide_0.jpg#declared_slide=0": "SQL OPTIMIZATION"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-173",
+      "activity_id": "7340261895330852864",
+      "technologies": [
+        "Python",
+        "Pandas/Polars"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-176",
+      "activity_id": "7340581665108279299",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7340581665108279299_slide_0.jpg#declared_slide=0": "In Interviews"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-178",
+      "activity_id": "7340938263118893056",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7340938263118893056_slide_0.jpg#declared_slide=0": "JOIN {{orders}} AS o ON c.id = o.customer_id"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-179",
+      "activity_id": "7340947122621489152",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7340947122621489152_slide_0.jpg#declared_slide=0": "» Sdatabricks"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-180",
+      "activity_id": "7341079772573089792",
+      "technologies": [
+        "Azure Data Factory",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7341079772573089792_slide_0.jpg#declared_slide=0": "3. Real-World ETL Ppeline— End-to-End"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-181",
+      "activity_id": "7341086920443068416",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7341086920443068416_slide_0.jpg#declared_slide=0": "databricks A Azure"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-182",
+      "activity_id": "7341276741132328961",
+      "technologies": [
+        "SQL",
+        "PySpark"
+      ],
+      "slide_fragments": {
+        "activity_7341276741132328961_slide_0.jpg#declared_slide=0": "PYSPARK FUNCTIONS"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-183",
+      "activity_id": "7341290345546067969",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7341290345546067969_slide_0.jpg#declared_slide=0": "oc Question"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-184",
+      "activity_id": "7341317812893700096",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7341317812893700096_slide_0.jpg#declared_slide=0": "50 SQL Interview Queries"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-185",
+      "activity_id": "7341318414558294020",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-188",
+      "activity_id": "7341653522993528832",
+      "technologies": [
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7341653522993528832_slide_0.jpg#declared_slide=0": "the next row’s value in the partition"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-189",
+      "activity_id": "7341661228617900033",
+      "technologies": [
+        "PySpark",
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7341661228617900033_slide_0.jpg#declared_slide=0": "Databricks Looks To Disrupt Legacy Database"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-190",
+      "activity_id": "7341672457843453952",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7341672457843453952_slide_0.jpg#declared_slide=0": "SQL INTERVIEW"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-192",
+      "activity_id": "7341681712310956032",
+      "technologies": [
+        "SQL",
+        "PySpark",
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7341681712310956032_slide_0.jpg#declared_slide=0": "departnents_dt = spark.createDatafrane( departments data, departments_schena)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-193",
+      "activity_id": "7341691307733438465",
+      "technologies": [
+        "SQL",
+        "Python"
+      ],
+      "slide_fragments": {
+        "activity_7341691307733438465_slide_0.jpg#declared_slide=0": "ith Python telng Portas"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-194",
+      "activity_id": "7341756690179993602",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7341756690179993602_slide_0.jpg#declared_slide=0": "SOL SERVER OR DATABRICKS?"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-195",
+      "activity_id": "7342036204650909697",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7342036204650909697_slide_0.jpg#declared_slide=0": "Cheat Sheet (SQL Basics)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-196",
+      "activity_id": "7342431147378843648",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7342431147378843648_slide_0.jpg#declared_slide=0": "SQL OPTIMIZATION"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-197",
+      "activity_id": "7342880360839462912",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-198",
+      "activity_id": "7343220101560549376",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7343220101560549376_slide_0.jpg#declared_slide=0": "INTERVIEW (QM"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-199",
+      "activity_id": "7343254116598542337",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7343254116598542337_slide_0.jpg#declared_slide=0": "SELECT * FROM thi AS {1 LEFT JOIN — ov"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-202",
+      "activity_id": "7343477662515892224",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-203",
+      "activity_id": "7343486257341112321",
+      "technologies": [
+        "SQL",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7343486257341112321_slide_0.jpg#declared_slide=0": "2. Explain the difference between INNER JOIN and OUTER"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-204",
+      "activity_id": "7343495692914475008",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7343495692914475008_slide_0.jpg#declared_slide=0": "Questions along"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-208",
+      "activity_id": "7343878669532028928",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7343878669532028928_slide_0.jpg#declared_slide=0": "UBER DATA ENGINEER INTERVIEW QUESTIONS"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-209",
+      "activity_id": "7344135454503399424",
+      "technologies": [
+        "SQL",
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7344135454503399424_slide_0.jpg#declared_slide=0": "Datarame API: much mor dot! We ea spark vtexplode)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-210",
+      "activity_id": "7344212905657061376",
+      "technologies": [
+        "Data Engineering",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7344212905657061376_slide_0.jpg#declared_slide=0": "aws Data Engineering €LLIPs>"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-211",
+      "activity_id": "7344573867153047552",
+      "technologies": [
+        "Python",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7344573867153047552_slide_0.jpg#declared_slide=0": "4. What are “args and kwargs in Python?"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-219",
+      "activity_id": "7345429109935652864",
+      "technologies": [
+        "PySpark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7345429109935652864_slide_0.jpg#declared_slide=0": "Interview Questions &"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-222",
+      "activity_id": "7346017315269787649",
+      "technologies": [
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7346017315269787649_slide_0.jpg#declared_slide=0": "© Data Lakehouse & Iceberg"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-223",
+      "activity_id": "7346027818457161728",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7346027818457161728_slide_0.jpg#declared_slide=0": "800+ SQL SERVER."
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-224",
+      "activity_id": "7346044123352616960",
+      "technologies": [
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Pandas/Polars"
+      ],
+      "slide_fragments": {
+        "activity_7346044123352616960_slide_0.jpg#declared_slide=0": "spark a spark drop"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-225",
+      "activity_id": "7346070545882337280",
+      "technologies": [
+        "PySpark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7346070545882337280_slide_0.jpg#declared_slide=0": "She st Tea Interview Questions"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-226",
+      "activity_id": "7346198489967509504",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7346198489967509504_slide_0.jpg#declared_slide=0": "SQL COMMANDS"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-228",
+      "activity_id": "7346392254275571712",
+      "technologies": [
+        "PySpark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7346392254275571712_slide_0.jpg#declared_slide=0": "PySpark Cheat Sheet"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-230",
+      "activity_id": "7346429040959856640",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7346429040959856640_slide_0.jpg#declared_slide=0": "UBER DATA ENGINEER INTERVIEW QUESTIONS"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-231",
+      "activity_id": "7346523823892066305",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7346523823892066305_slide_0.jpg#declared_slide=0": "SQL Command Types"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-232",
+      "activity_id": "7346749628664463363",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7346749628664463363_slide_0.jpg#declared_slide=0": "IF you don't practice SQL for 5 days — even your coffee is suspicious!"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-235",
+      "activity_id": "7347739699681083393",
+      "technologies": [
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7347739699681083393_slide_0.jpg#declared_slide=0": "Data Pipelines for"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-236",
+      "activity_id": "7347822344066727936",
+      "technologies": [
+        "PySpark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7347822344066727936_slide_0.jpg#declared_slide=0": "Interview Questions &"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-239",
+      "activity_id": "7347839111384182785",
+      "technologies": [
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7347839111384182785_slide_0.jpg#declared_slide=0": "QUESTIONS AND ANSWERS"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-244",
+      "activity_id": "7347878257846894596",
+      "technologies": [
+        "PySpark",
+        "Databricks",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7347878257846894596_slide_0.jpg#declared_slide=0": "INTERVIEW PREP"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-246",
+      "activity_id": "7348217855135383552",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7348217855135383552_slide_0.jpg#declared_slide=0": "neha-p-sharma/SQL-"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-249",
+      "activity_id": "7348928864959541249",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7348928864959541249_slide_0.jpg#declared_slide=0": "Questions & Answers"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-250",
+      "activity_id": "7348931483375431681",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7348931483375431681_slide_0.jpg#declared_slide=0": "SQL INTERVIEW"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-251",
+      "activity_id": "7348939055495098368",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7348939055495098368_slide_0.jpg#declared_slide=0": "in Databricks"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-252",
+      "activity_id": "7349219212017483777",
+      "technologies": [
+        "SQL",
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-254",
+      "activity_id": "7349285324277043201",
+      "technologies": [
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7349285324277043201_slide_0.jpg#declared_slide=0": "' CI/CD Pipeline Explained Bevesvee6e"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-257",
+      "activity_id": "7349649977947693056",
+      "technologies": [
+        "SQL",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS"
+      ],
+      "slide_fragments": {
+        "activity_7349649977947693056_slide_0.jpg#declared_slide=0": "JSERVELESS AWS ETL Pipeline Project For Beg..."
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-259",
+      "activity_id": "7350001160059072512",
+      "technologies": [
+        "SQL",
+        "Git"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-261",
+      "activity_id": "7350210945224183810",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7350210945224183810_slide_0.jpg#declared_slide=0": "Questions and"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-263",
+      "activity_id": "7350849061920329729",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-264",
+      "activity_id": "7351712296550727680",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-266",
+      "activity_id": "7352180707789520896",
+      "technologies": [
+        "SQL",
+        "Apache Spark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7352180707789520896_slide_0.jpg#declared_slide=0": "'SUMSales Amount) OVER (PARTITION BY EmploycelD"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-267",
+      "activity_id": "7352906435711717378",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7352906435711717378_slide_0.jpg#declared_slide=0": "Ans: SQL stands for Structured Query Language. It is a"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-268",
+      "activity_id": "7353268809903824896",
+      "technologies": [
+        "PySpark",
+        "Apache Spark",
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7353268809903824896_slide_0.jpg#declared_slide=0": "+ nbs asso Spark tise SL, trem Man ta aang"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-269",
+      "activity_id": "7353272605207879680",
+      "technologies": [
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7353272605207879680_slide_0.jpg#declared_slide=0": "Partitioning oN Stream Processing"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-270",
+      "activity_id": "7354355972099747843",
+      "technologies": [
+        "Apache Spark"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-272",
+      "activity_id": "7355809327208681472",
+      "technologies": [
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7355809327208681472_slide_0.jpg#declared_slide=0": "+ Risevees tor nese ata ts ngetn ped oping the rearing pipeline ad asic orl pong"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-274",
+      "activity_id": "7356167931715620865",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-278",
+      "activity_id": "7421083202699677696",
+      "technologies": [
+        "Azure Data Factory"
+      ],
+      "slide_fragments": {
+        "activity_7421083202699677696_slide_0.jpg#declared_slide=0": "ao Data Pipelines for be"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-279",
+      "activity_id": "7425742616220094465",
+      "technologies": [
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7425742616220094465_slide_0.jpg#declared_slide=0": "4 YOE) Real Mix Question:"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-282",
+      "activity_id": "7426557975819083776",
+      "technologies": [
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7426557975819083776_slide_0.jpg#declared_slide=0": "spark shufopartons = 2000"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-283",
+      "activity_id": "7428910228877934592",
+      "technologies": [
+        "Apache Spark"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-284",
+      "activity_id": "7429013274874023936",
+      "technologies": [
+        "Apache Spark"
+      ],
+      "slide_fragments": {
+        "activity_7429013274874023936_slide_0.jpg#declared_slide=0": "Partitioning vs Bucketing vs Clustering"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-285",
+      "activity_id": "7455813265567154177",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7455813265567154177_slide_0.jpg#declared_slide=0": "ETL pipelines"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-286",
+      "activity_id": "7457377547241144321",
+      "technologies": [
+        "SQL",
+        "Azure Data Factory",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7457377547241144321_slide_0.jpg#declared_slide=0": "Tech Interview Titans"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-287",
+      "activity_id": "7457647884533121025",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-288",
+      "activity_id": "7457995150087299072",
+      "technologies": [
+        "SQL",
+        "Azure Data Factory",
+        "Data Engineering"
+      ],
+      "slide_fragments": {
+        "activity_7457995150087299072_slide_0.jpg#declared_slide=0": "“In aspect dtc om SQL DB REST APT nd Kak."
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-289",
+      "activity_id": "7458342412109660162",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-290",
+      "activity_id": "7458357546396028928",
+      "technologies": [
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7458357546396028928_slide_0.jpg#declared_slide=0": "1. Explain your Azure Data Engineering"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-291",
+      "activity_id": "7458365066741006336",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7458365066741006336_slide_0.jpg#declared_slide=0": "Medium to Advanced SQL Questions (01-300)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-293",
+      "activity_id": "7463423405413797888",
+      "technologies": [
+        "SQL",
+        "PySpark"
+      ],
+      "slide_fragments": {
+        "activity_7463423405413797888_slide_0.jpg#declared_slide=0": "Join & Combine"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-294",
+      "activity_id": "7463427170267213824",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7463427170267213824_slide_0.jpg#declared_slide=0": "Tech Interview Titans"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-295",
+      "activity_id": "7463473804212842496",
+      "technologies": [
+        "PySpark",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7463473804212842496_slide_0.jpg#declared_slide=0": "‘Azure Data Engineer"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-296",
+      "activity_id": "7463624574018965504",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7463624574018965504_slide_0.jpg#declared_slide=0": "IMPLEMENTING & databricks"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-297",
+      "activity_id": "7464513217633882112",
+      "technologies": [
+        "SQL",
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Azure Data Factory",
+        "Data Engineering",
+        "AWS",
+        "Machine Learning"
+      ],
+      "slide_fragments": {
+        "activity_7464513217633882112_slide_01.jpg#declared_slide=1": "¢ Joining DataFrames: df1.join(df2, dfi['id'] == df2['id'])",
+        "activity_7464513217633882112_slide_02.jpg#declared_slide=2": "@ Window Functions: from pyspark.sql.window import Window; from"
+      },
+      "unresolved_group_ids": [
+        "POST-297"
+      ],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-298",
+      "activity_id": "7468953134913077248",
+      "technologies": [
+        "Data Engineering"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-299",
+      "activity_id": "7475193500167372800",
+      "technologies": [
+        "Apache Spark",
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7475193500167372800_slide_0.jpg#declared_slide=0": "“ SPARK vs DATABRICKS"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-300",
+      "activity_id": "7475890208442347521",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7475890208442347521_slide_0.jpg#declared_slide=0": "INTERVIEW!"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-301",
+      "activity_id": "7476230697922260992",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {},
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-302",
+      "activity_id": "7477244849528942592",
+      "technologies": [
+        "Azure Data Factory",
+        "Data Engineering",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7477244849528942592_slide_0.jpg#declared_slide=0": "3. Explain design of a daity incremental data pipeline,"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-303",
+      "activity_id": "7477345172167520256",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7477345172167520256_slide_0.jpg#declared_slide=0": "The 20% of SQL"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-305",
+      "activity_id": "7491436624975671296",
+      "technologies": [
+        "Databricks"
+      ],
+      "slide_fragments": {
+        "activity_7491436624975671296_slide_0.jpg#declared_slide=0": "& databricks"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-306",
+      "activity_id": "7501836433637261312",
+      "technologies": [
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7501836433637261312_slide_0.jpg#declared_slide=0": "DELOITTE DATA ENGINEER INTERVIEW"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-309",
+      "activity_id": "7505829570575785984",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7505829570575785984_slide_0.jpg#declared_slide=0": "tie! eta as Question"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-310",
+      "activity_id": "7509801763013595136",
+      "technologies": [
+        "SQL"
+      ],
+      "slide_fragments": {
+        "activity_7509801763013595136_slide_0.jpg#declared_slide=0": "SQL prom 2: TS"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7509918585671241729_slide_0.jpg#declared_slide=0": "Interview Questions",
+        "activity_7509918585671241729_slide_49.jpg#declared_slide=49": "{ etiam i advanced SQL Questions (131-200)",
+        "activity_7509918585671241729_slide_58.jpg#declared_slide=58": "ED “rset nto joined oe depen sree",
+        "activity_7509918585671241729_slide_67.jpg#declared_slide=67": "{ etiam i advanced 59t Questions (201-300)"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    },
+    {
+      "group_id": "POST-312",
+      "activity_id": "7510541086562410497",
+      "technologies": [
+        "SQL",
+        "Interview preparation"
+      ],
+      "slide_fragments": {
+        "activity_7510541086562410497_slide_0.jpg#declared_slide=0": "SQL INTERVIEW QUESTION"
+      },
+      "unresolved_group_ids": [],
+      "source_kind": "visual_derived"
+    }
+  ]
+}

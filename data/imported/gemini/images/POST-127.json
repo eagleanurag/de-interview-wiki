@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-127",
+  "activity_id": "7335873650186665986",
+  "images": [
+    {
+      "post_id": "POST-127",
+      "activity_id": "7335873650186665986",
+      "filename": "activity_7335873650186665986_slide_0.jpg",
+      "path": "media/activity_7335873650186665986_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 30820,
+      "declared_sha256": "cae34ffb64f9205fca698c08c4c00c006a6b223bebb4fb5e9ebd0752383e64d9",
+      "actual_sha256": "cae34ffb64f9205fca698c08c4c00c006a6b223bebb4fb5e9ebd0752383e64d9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "| SQL | ASKED IN DELOITTE\nHOW MANY ROWS\nUS IN OUTPUT?\nL\nINTERVIEW Sa",
+      "redactions": 0,
+      "search_text": "| SQL | ASKED IN DELOITTE HOW MANY ROWS US IN OUTPUT? L INTERVIEW Sa",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "68 chars, 13 words, 75% letters, 4% symbols, 1.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0705662c183767474bbbdce4168a7afa938e2163e8afe74cd4de539ee5d7a7ee"
+    }
+  ]
+}

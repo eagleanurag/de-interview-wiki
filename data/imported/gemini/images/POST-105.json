@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-105",
+  "activity_id": "7327315874955018240",
+  "images": [
+    {
+      "post_id": "POST-105",
+      "activity_id": "7327315874955018240",
+      "filename": "activity_7327315874955018240_slide_0.jpg",
+      "path": "media/activity_7327315874955018240_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 640,
+      "size_bytes": 49941,
+      "declared_sha256": "3c7c7d239aeaba71d4b40ed8b2abb390e0a84ca2fc43f2ba568127d375fe3444",
+      "actual_sha256": "3c7c7d239aeaba71d4b40ed8b2abb390e0a84ca2fc43f2ba568127d375fe3444",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "G INSERT vs MERGE 5\n(Comparing SOL Server INSERT and MERGE performance for inserting data)\nLet's consider two queries that insert 2M rows from a esv fie into a table\n‘One inserts data using INSERT:\nsehr 1170 dbo.perf_tst_ins\nari (TaBLOCK) (id, val, num)\nSELECT 44, val, num\nFROM OPENROWSET BULK. “x: \\prodects\\perf_tst\\perf_tst_sre.c3y\nFORATFILE = \"a: \\projects\\perf_tt\\perf tot sre fxm!\nFIRSTROW = 2, FOwAT = \"C3V\") AS ser\nAnother - with MERGE:\nNERGE dbo.perf_tstnng WITH (TABLOCK) AS tat\nsine (\nSELECT $4, val, num\nFROM OPEHOWSET BULK \"x: \\profects\\pert_tst\\perf_tst_sre.csy\nFORMTFILE ~ \"a: projects\\perf tet\\perf tet are fx’,\nfs ser\nori\neH\nINSERT (44, val, tum\nVALUES (sre.3d, revel, sre.num\nThe first query took 2 seconds to execute and caused this execution plan:\n5 a\n‘The second query took 10 seconds to execute and caused this execution plan:\n& i] & ic]\nConclusion: As we can see, 2 seconds vs. 10 seconds and 2 operators vs. 5 reveal\nthe obvious winner EI INSERT $2",
+      "redactions": 0,
+      "search_text": "G INSERT vs MERGE 5 (Comparing SOL Server INSERT and MERGE performance for inserting data) Let's consider two queries that insert 2M rows from a esv fie into a table ‘One inserts data using INSERT: sehr 1170 dbo.perf_tst_ins ari (TaBLOCK) (id, val, num) SELECT 44, val, num FROM OPENROWSET BULK. “x: \\prodects\\perf_tst\\perf_tst_sre.c3y FORATFILE = \"a: \\projects\\perf_tt\\perf tot sre fxm! FIRSTROW = 2, FOwAT = \"C3V\") AS ser Another - with MERGE: NERGE dbo.perf_tstnng WITH (TABLOCK) AS tat sine ( SELECT $4, val, num FROM OPEHOWSET BULK \"x: \\profects\\pert_tst\\perf_tst_sre.csy FORMTFILE ~ \"a: projects\\perf tet\\perf tet are fx’, fs ser ori eH INSERT (44, val, tum VALUES (sre.3d, revel, sre.num The first query took 2 seconds to execute and caused this execution plan: 5 a ‘The second query took 10 seconds to execute and caused this execution plan: & i] & ic] Conclusion: As we can see, 2 seconds vs. 10 seconds and 2 operators vs. 5 reveal the obvious winner EI INSERT $2",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "973 chars, 166 words, 72% letters, 11% symbols, 2.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a2547e3d49763ecc868aef2c88c4e7375282605f8e494c26889d287bc147808c"
+    }
+  ]
+}

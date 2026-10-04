@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-214",
+  "activity_id": "7345294369790357506",
+  "images": [
+    {
+      "post_id": "POST-214",
+      "activity_id": "7345294369790357506",
+      "filename": "activity_7345294369790357506_slide_0.jpg",
+      "path": "media/activity_7345294369790357506_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 39960,
+      "declared_sha256": "19b7468adeb9998dc6dd57433fbea8a8a96c628178233a501d9a295ba443ec5f",
+      "actual_sha256": "19b7468adeb9998dc6dd57433fbea8a8a96c628178233a501d9a295ba443ec5f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "i\nThe Data Engineer's Guide to\nSoark",
+      "redactions": 0,
+      "search_text": "i The Data Engineer's Guide to Soark",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "36 chars, 7 words, 81% letters, 3% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "17751f09facddca2447903cc8c77a47a77082f088bfc4c0051eeccca79e6d72b"
+    }
+  ]
+}

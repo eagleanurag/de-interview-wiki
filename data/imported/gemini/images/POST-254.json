@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-254",
+  "activity_id": "7349285324277043201",
+  "images": [
+    {
+      "post_id": "POST-254",
+      "activity_id": "7349285324277043201",
+      "filename": "activity_7349285324277043201_slide_0.jpg",
+      "path": "media/activity_7349285324277043201_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 520,
+      "size_bytes": 718021,
+      "declared_sha256": "d4223ecff6d23894a07d1b89342dc7180580111e608f7ed0f16db110f99667aa",
+      "actual_sha256": "d4223ecff6d23894a07d1b89342dc7180580111e608f7ed0f16db110f99667aa",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "' CI/CD Pipeline Explained Bevesvee6e\nrae\nGitLab} JIRA | |confuence} Socket]\n\n2¢ 0 “pe\n\ngi lol\nwae a ®",
+      "redactions": 0,
+      "search_text": "' CI/CD Pipeline Explained Bevesvee6e rae GitLab} JIRA | |confuence} Socket] 2¢ 0 “pe gi lol wae a ®",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "102 chars, 16 words, 68% letters, 13% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ef86a8c7207182a34fbf53edd7919c0f2cb6a3a5837c33d726fc92e2a7af3a06"
+    }
+  ]
+}

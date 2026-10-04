@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-294",
+  "activity_id": "7463427170267213824",
+  "images": [
+    {
+      "post_id": "POST-294",
+      "activity_id": "7463427170267213824",
+      "filename": "activity_7463427170267213824_slide_0.jpg",
+      "path": "media/activity_7463427170267213824_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 678,
+      "size_bytes": 46071,
+      "declared_sha256": "eef31a4406c53482d2750c216bcdc7354f93fa05cc779d728c1af95dd3dfbb2f",
+      "actual_sha256": "eef31a4406c53482d2750c216bcdc7354f93fa05cc779d728c1af95dd3dfbb2f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "f TATA\nCONSULTANCY\nSERVICES\nData Engineer Interview — Round 1 (Real Scenario-\nBased Questions, 2026)\n\n1. Data Ingestion from Multiple Sources\n‘What thy asked me:\now wold yu dein aa pipsine ingest nom mail sous (ike MySQL.\n‘APL au CSV sos Data ake?\nWhat Lait\nTenn the ET. fw wang Azure Dat Factory\n\n+ Use Copy Activ opal om SQL and Bl sora.\n\n{For APLtnpeston me HTTP connect wth Liked Service,\n\nAlda Pow fo sca napping ad clearing\n\n{Scale with Trac mame fies wi ipl Nr.\nTips:\n‘Meio gia ey pty, and meadatden approach\nSow how son band sch (ans apn.\n2. Handling Slowly Changing Dimensions (SCD)\n‘What they asked me:\nHow do oid Slowly Changing Dimensions (SCD) a your dts washouse?\n\nTech Interview Titans",
+      "redactions": 0,
+      "search_text": "f TATA CONSULTANCY SERVICES Data Engineer Interview — Round 1 (Real Scenario- Based Questions, 2026) 1. Data Ingestion from Multiple Sources ‘What thy asked me: ow wold yu dein aa pipsine ingest nom mail sous (ike MySQL. ‘APL au CSV sos Data ake? What Lait Tenn the ET. fw wang Azure Dat Factory + Use Copy Activ opal om SQL and Bl sora. {For APLtnpeston me HTTP connect wth Liked Service, Alda Pow fo sca napping ad clearing {Scale with Trac mame fies wi ipl Nr. Tips: ‘Meio gia ey pty, and meadatden approach Sow how son band sch (ans apn. 2. Handling Slowly Changing Dimensions (SCD) ‘What they asked me: How do oid Slowly Changing Dimensions (SCD) a your dts washouse? Tech Interview Titans",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "700 chars, 119 words, 76% letters, 6% symbols, 1.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2de5347b7b33fd47e29666595287dca774a028b42687925702ac796b24fc83cd"
+    }
+  ]
+}

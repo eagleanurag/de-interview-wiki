@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-002",
+  "activity_id": "7272933836760461313",
+  "images": [
+    {
+      "post_id": "POST-002",
+      "activity_id": "7272933836760461313",
+      "filename": "activity_7272933836760461313_slide_0.jpg",
+      "path": "media/activity_7272933836760461313_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 800,
+      "height": 420,
+      "size_bytes": 146149,
+      "declared_sha256": "2689f9533ff5befe1e28dd38c384b003f462bfe7fbc9b0f17cc0ac25d7be0ecb",
+      "actual_sha256": "2689f9533ff5befe1e28dd38c384b003f462bfe7fbc9b0f17cc0ac25d7be0ecb",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "USE THE S.T.A.R TECHNIQUE!\n\nDescribe the Explain the TASK\nSITUATION you that needed to be\nwere in. done.\nDetail the ACTION Reveal the\nyou took to achieve RESULTS of your\nthe task. actions.\n\nLink 1: https://www_youtube.com/watch?v=lfN8RDA7kVA&t=1090s",
+      "redactions": 0,
+      "search_text": "USE THE S.T.A.R TECHNIQUE! Describe the Explain the TASK SITUATION you that needed to be were in. done. Detail the ACTION Reveal the you took to achieve RESULTS of your the task. actions. Link 1: https://www_youtube.com/watch?v=lfN8RDA7kVA&t=1090s",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "249 chars, 48 words, 75% letters, 10% symbols, 4.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "45b41825ff3f201ec273db3ec323e7eba9282951aaba9f806a4c058a0b755c11"
+    }
+  ]
+}

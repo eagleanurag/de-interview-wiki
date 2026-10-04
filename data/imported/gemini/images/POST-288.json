@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-288",
+  "activity_id": "7457995150087299072",
+  "images": [
+    {
+      "post_id": "POST-288",
+      "activity_id": "7457995150087299072",
+      "filename": "activity_7457995150087299072_slide_0.jpg",
+      "path": "media/activity_7457995150087299072_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 678,
+      "size_bytes": 38257,
+      "declared_sha256": "e0958bd01c02499e9ab8d8d5bb8b13b590a108405b228cc6db7d729dfb19fb7d",
+      "actual_sha256": "e0958bd01c02499e9ab8d8d5bb8b13b590a108405b228cc6db7d729dfb19fb7d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Data Engineer\nRound -1\nExperience: 0-4 Year\n1, Explain your ETL pipeline\n‘What they asked me:\nWalk me dough your ened TL pine nd your oe\nWhat tsa:\n“In aspect dtc om SQL DB REST APT nd Kak.\nTne An Da Facey engin Bath ats nln NDLS Broz, Kf ta\nland into Event Hab end hen ADL sre\nin Dini, opi wedi! cin chon dedi lcd\nuapeae el baton nie\naso! Kean (Gal oer were any Power\n‘ky change was chan ft Kafka inoded new ons unexpected\nDasieis Aol wi shone eeuon stray a now els and poet\neels ues\nTips:\n+ Alvays use Bronze — Ser —- old str\n{£isSinralloe eat yon vedi\n2. How do you design a data model for 10M daily transuctions?\n‘What they asked me:\ntow woud yu design sale daa mot”\nWhat tsa:",
+      "redactions": 0,
+      "search_text": "Data Engineer Round -1 Experience: 0-4 Year 1, Explain your ETL pipeline ‘What they asked me: Walk me dough your ened TL pine nd your oe What tsa: “In aspect dtc om SQL DB REST APT nd Kak. Tne An Da Facey engin Bath ats nln NDLS Broz, Kf ta land into Event Hab end hen ADL sre in Dini, opi wedi! cin chon dedi lcd uapeae el baton nie aso! Kean (Gal oer were any Power ‘ky change was chan ft Kafka inoded new ons unexpected Dasieis Aol wi shone eeuon stray a now els and poet eels ues Tips: + Alvays use Bronze — Ser —- old str {£isSinralloe eat yon vedi 2. How do you design a data model for 10M daily transuctions? ‘What they asked me: tow woud yu design sale daa mot” What tsa:",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "679 chars, 132 words, 75% letters, 5% symbols, 1.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "88de088d626e3583c72c964aece60e488d19e4b012e91e3554ba68da1c5c3abf"
+    }
+  ]
+}

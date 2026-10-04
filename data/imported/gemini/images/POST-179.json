@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-179",
+  "activity_id": "7340947122621489152",
+  "images": [
+    {
+      "post_id": "POST-179",
+      "activity_id": "7340947122621489152",
+      "filename": "activity_7340947122621489152_slide_0.jpg",
+      "path": "media/activity_7340947122621489152_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 360,
+      "size_bytes": 37456,
+      "declared_sha256": "4316a7f883f591cbd13b4c9cf518c240cc995da575a2b10a2d6d4f015f0b1597",
+      "actual_sha256": "4316a7f883f591cbd13b4c9cf518c240cc995da575a2b10a2d6d4f015f0b1597",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ee\n~~\n| \\ i ———\na eres oer\n» Sdatabricks\nvg ae",
+      "redactions": 0,
+      "search_text": "ee ~~ | \\ i ——— a eres oer » Sdatabricks vg ae",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "46 chars, 8 words, 57% letters, 17% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "1ec8fe050a1fc376b4e3ff1148d18728b57c2a1b802700f1bcdc6cecf2bfcfcd"
+    }
+  ]
+}

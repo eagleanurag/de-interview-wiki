@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-188",
+  "activity_id": "7341653522993528832",
+  "images": [
+    {
+      "post_id": "POST-188",
+      "activity_id": "7341653522993528832",
+      "filename": "activity_7341653522993528832_slide_0.jpg",
+      "path": "media/activity_7341653522993528832_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 64195,
+      "declared_sha256": "e5978eabc446bfe14823e1d283b97f9fee09404c80515a2f4a3eb784560b06e9",
+      "actual_sha256": "e5978eabc446bfe14823e1d283b97f9fee09404c80515a2f4a3eb784560b06e9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "— row_number() > Assigns a unique\nsequential number to rows within a\npartition.\n\nv Get the latest record per group\n\n— rank() > Assigns rank to rows, allowing\nties (same rank for equal values)\n\nv Leaderboards, top-N analysis with ties\n\n— dense_rank() > Like rank(), but\ndoesn’t skip ranks after ties\n\nv Clean, gap-free rankings\n\n— lag(column, offset) > Accesses the\nprevious row’s value in the partition\n\nv Calculate differences between current\nand past row\n\n- lead(column, offset) > Accesses\nthe next row’s value in the partition",
+      "redactions": 0,
+      "search_text": "— row_number() > Assigns a unique sequential number to rows within a partition. v Get the latest record per group — rank() > Assigns rank to rows, allowing ties (same rank for equal values) v Leaderboards, top-N analysis with ties — dense_rank() > Like rank(), but doesn’t skip ranks after ties v Clean, gap-free rankings — lag(column, offset) > Accesses the previous row’s value in the partition v Calculate differences between current and past row - lead(column, offset) > Accesses the next row’s value in the partition",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "529 chars, 84 words, 75% letters, 7% symbols, 0.2% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "7c913814ccf13830e251813774d2e13bce82293ee98e4a38adb312681e55c302"
+    }
+  ]
+}

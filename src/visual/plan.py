@@ -190,6 +190,7 @@ def build_plan(
     configuration: str = "vision+bounded-batch",
     batch_size: int = 5,
     limit: int | None = None,
+    only: set[str] | None = None,
 ) -> VisualPlan:
     """
     Discover, describe and cost every post that has images.
@@ -197,6 +198,14 @@ def build_plan(
     ``limit`` bounds how many posts are examined, for a plan over a
     subset. It bounds examination only; the totals are then totals of
     what was examined, and the render says so by showing the count.
+
+    ``only`` restricts the plan to a named set of files. It exists for
+    the fallback pass: when another tool has already transcribed most of
+    a corpus, the vision processor should be costed against the slides
+    that transcription could not read, not against all of them. A post
+    whose every asset is outside the set is still examined and still
+    reported with nothing to do, so the plan says what was skipped and
+    why rather than quietly omitting those posts.
     """
 
     plan = VisualPlan()
@@ -245,6 +254,14 @@ def build_plan(
 
         if not assets:
             continue
+
+        if only is not None:
+            assets = [
+                asset for asset in assets if asset.filename in only
+            ]
+
+            if not assets:
+                continue
 
         marked = list(assets)
         mark_duplicates(marked)

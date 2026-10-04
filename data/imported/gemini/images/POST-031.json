@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-031",
+  "activity_id": "7295651187985395712",
+  "images": [
+    {
+      "post_id": "POST-031",
+      "activity_id": "7295651187985395712",
+      "filename": "activity_7295651187985395712_slide_0.jpg",
+      "path": "media/activity_7295651187985395712_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 7355,
+      "declared_sha256": "abd1e2f99e9f3730a0d3fb4c69464aa7bf757527226a6f96a7b2640875030c13",
+      "actual_sha256": "abd1e2f99e9f3730a0d3fb4c69464aa7bf757527226a6f96a7b2640875030c13",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "LeetCode Solutions\nProgram Creek",
+      "redactions": 0,
+      "search_text": "LeetCode Solutions Program Creek",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "32 chars, 4 words, 91% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "30942243b9041f4a192aec4dd804fb5896c50815101b39da12079c8dc6f67573"
+    }
+  ]
+}

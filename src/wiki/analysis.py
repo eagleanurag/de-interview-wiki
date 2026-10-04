@@ -11,6 +11,8 @@ that exist in `src.models`.
 
 from __future__ import annotations
 
+from typing import Any
+
 from dataclasses import dataclass, field
 
 from src.aggregation.consolidation import (
@@ -190,6 +192,7 @@ class SiteModel:
 
     posts: tuple[KnowledgePost, ...]
     post_slugs: tuple[str, ...]
+
     topics: tuple[TopicEntry, ...]
     topic_slugs: dict[str, str]
     questions: tuple[QuestionEntry, ...]
@@ -199,6 +202,15 @@ class SiteModel:
     saved_items: tuple[SavedItemEntry, ...] = ()
     generated_at: str | None = None
     stats: dict[str, int] = field(default_factory=dict)
+
+    #: The revision curriculum, when the caller has built one.
+    #:
+    #: Present rather than rebuilt per page because building it walks
+    #: every post and every label; doing that once per knowledge page
+    #: would be 490 curricula for one site. A post page needs it to
+    #: link to neighbouring subtopics, and it cannot know which
+    #: subtopics have pages without it.
+    curriculum: Any | None = None
 
     @property
     def post_count(self) -> int:
@@ -591,7 +603,14 @@ def _build_concepts(
 
     for post, slug in zip(posts, post_slugs):
         labels = post_topics(post)
-        found = detect_technologies(post.original_text)
+
+        # Same field the consolidation reads, for the same reason: one
+        # source of truth for which posts cover a technology.
+        found = list(detect_technologies(post.original_text))
+
+        for name in post.ai_analysis.derived_technologies:
+            if name not in found:
+                found.append(name)
 
         for concept in post.ai_analysis.concepts:
             label = concept.strip()
@@ -652,7 +671,15 @@ def _build_technologies(
     Detection is the shared one from the consolidation layer, so the
     site and the canonical knowledge base never disagree about which
     technologies a post uses. A technology only appears when the post
-    text actually mentions it.
+    text actually mentions it, or when an attached image's
+    transcription does -- the second case read from
+    ``ai_analysis.derived_technologies``, which is the same field the
+    consolidation reads.
+
+    Reading the post field rather than the imported package directly
+    matters: the site must render identically whether or not the package
+    is on the machine building it, because by this point the evidence is
+    carried on the post.
     """
 
     registry = SlugRegistry()
@@ -661,7 +688,13 @@ def _build_technologies(
     for post, slug in zip(posts, post_slugs):
         topics = post_topics(post)
 
-        for technology in detect_technologies(post.original_text):
+        found = list(detect_technologies(post.original_text))
+
+        for name in post.ai_analysis.derived_technologies:
+            if name not in found:
+                found.append(name)
+
+        for technology in found:
             entry = grouped.setdefault(
                 technology,
                 {

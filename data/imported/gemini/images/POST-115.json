@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-115",
+  "activity_id": "7328101753961209859",
+  "images": [
+    {
+      "post_id": "POST-115",
+      "activity_id": "7328101753961209859",
+      "filename": "activity_7328101753961209859_slide_0.jpg",
+      "path": "media/activity_7328101753961209859_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 600,
+      "size_bytes": 47905,
+      "declared_sha256": "98307b04239fb09e438e7ab2b01cd7e0d33cf5bdf78d8d220523ef414e37a980",
+      "actual_sha256": "98307b04239fb09e438e7ab2b01cd7e0d33cf5bdf78d8d220523ef414e37a980",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "OaTAPPeLne HANTENANCE SACKFLING\nSeneca a\nees i ray es\nSee\n= em\nCnr nmstinenemeen et\n2 eaten = eae\nprepemieiieds ~\nar =\n° | J\nl\nfam ec\nspencer ys\nbeerpemmonineirmnryed irae\n@ Vovcote Bock downtime),\nype po\nEreomiiaiesnbioaieotaniss 1\non eee\nee ee\noe\n@2- ome",
+      "redactions": 0,
+      "search_text": "OaTAPPeLne HANTENANCE SACKFLING Seneca a ees i ray es See = em Cnr nmstinenemeen et 2 eaten = eae prepemieiieds ~ ar = ° | J l fam ec spencer ys beerpemmonineirmnryed irae @ Vovcote Bock downtime), ype po Ereomiiaiesnbioaieotaniss 1 on eee ee ee oe @2- ome",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "256 chars, 38 words, 76% letters, 5% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "6ac15d137c77943a9c170ec4f4d16c2ff649af1f8e35744739d76d2f24c2d444"
+    }
+  ]
+}

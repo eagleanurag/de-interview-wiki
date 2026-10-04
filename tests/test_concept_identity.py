@@ -1,15 +1,23 @@
-"""
-Concept identity between the knowledge base and the site.
+"""Concept identity between the knowledge base and the site.
 
 Found against a 490-post corpus: the site re-derived concepts from the
 posts on their own grouping rule instead of the one the aggregator used
 to decide what a concept is. One concept whose two posts spelled it
-differently became two pages, and each page listed only the post that
+differently became two entries, and each carried only the post that
 spelled it that way -- so a reader following a concept saw fewer sources
 than the knowledge base attributed to it.
 
 These build a small corpus where two posts mean the same concept and
 assert the two never disagree about it.
+
+The concept has no page of its own any more. Stopping the generation of
+3,112 standalone concept pages was the point: a concept is a label the
+enricher produced, not a thing a candidate revises, and listing every
+label that contains it is what turned the site back into an index. What
+these tests now check is the identity itself -- one concept, not two --
+and that both contributing posts still carry it. The labels are still
+visible, as the Key concepts row on each knowledge page and as searchable
+text in the search index.
 """
 
 from __future__ import annotations
@@ -68,38 +76,95 @@ def _build(canonical_file: Path, output: Path) -> Path:
 
 
 def _concepts(site: Path) -> list[str]:
+    """
+    The concept pages that used to exist.
+
+    Kept as a helper so the assertions below can say "none of these
+    exist" in one place rather than by implication.
+    """
+
     directory = site / "concepts"
 
     return sorted(path.stem for path in directory.glob("*.html"))
 
 
-def test_two_spellings_of_one_concept_make_one_page(corpus):
+def _model(canonical_file: Path):
+    from src.wiki.analysis import build_site_model
+    from src.wiki.canonical import load_canonical
+
+    return build_site_model(load_canonical(canonical_file))
+
+
+def test_two_spellings_of_one_concept_make_one_concept(corpus):
+    canonical_file, output = corpus
+
+    model = _model(canonical_file)
+
+    labels = [
+        entry.label.lower()
+        for entry in model.concept_entries
+    ]
+
+    # One concept, one label. Two spellings are one concept, because that
+    # is what the knowledge base says and two entries would be two
+    # concepts.
+    assert len([label for label in labels if "delta" in label]) == 1, labels
+    assert len([label for label in labels if "travel" in label]) == 1, labels
+
+    _build(canonical_file, output)
+
+
+def test_the_concept_page_is_no_longer_generated(corpus):
+    """
+    The removal, asserted rather than assumed.
+
+    Three thousand one hundred and twelve of the site's pages existed to
+    list concept labels. None is written now, and none is linked to.
+    """
+
     canonical_file, output = corpus
 
     site = _build(canonical_file, output)
 
-    pages = _concepts(site)
+    assert _concepts(site) == [], "a concept page was generated"
 
-    # One concept, one page. Two spellings are one concept, because that
-    # is what the knowledge base says and a page is not a second
-    # concept.
-    assert len([p for p in pages if "delta" in p]) == 1, pages
-    assert len([p for p in pages if "travel" in p]) == 1, pages
+    assert not (site / "concepts.html").exists()
+
+    # And nothing on either surviving page family links to one.
+    for page in site.rglob("*.html"):
+        assert "concepts/" not in page.read_text(encoding="utf-8")
 
 
-def test_that_page_lists_both_posts(corpus):
+def test_the_concept_still_lists_both_posts(corpus):
+    """
+    The other half: no page listing one source means nothing changed
+    about the provenance.
+
+    Both posts still carry the concept, and each post's knowledge page
+    still shows it, so a reader following the concept reaches both.
+    """
+
     canonical_file, output = corpus
+
+    model = _model(canonical_file)
+
+    entry = next(
+        e for e in model.concept_entries if "delta" in e.label.lower()
+    )
+
+    # Both sources, because both posts are about it. An entry listing
+    # one would be an entry that hides half its own provenance.
+    assert len(entry.post_slugs) == 2, entry.post_slugs
 
     site = _build(canonical_file, output)
 
-    page = next(
-        (site / "concepts").glob("*delta*")
-    ).read_text(encoding="utf-8")
+    for slug in entry.post_slugs:
+        page = site / "posts" / f"{slug}.html"
 
-    # Both sources, because both posts are about it. A page listing one
-    # would be a page that hides half its own provenance.
-    assert "urn-li-activity-1" in page or "activity_1" in page
-    assert "urn-li-activity-2" in page or "activity_2" in page
+        assert page.is_file(), f"{page} is missing"
+
+        # The concept is on the page, as a chip under Key concepts.
+        assert "Delta Lake" in page.read_text(encoding="utf-8")
 
 
 def test_the_site_and_the_knowledge_base_agree_how_many(corpus):
@@ -134,10 +199,17 @@ def test_the_site_and_the_knowledge_base_agree_how_many(corpus):
 
     site = _build(canonical_file, output)
 
-    assert len(_concepts(site)) == kb["stats"]["concepts_consolidated"]
+    # The count is now the model's, not a count of pages: nothing is
+    # written for a concept, so a page count would be zero and would
+    # agree with nothing.
+    assert _concepts(site) == []
+
+    assert len(_model(canonical_file).concept_entries) == (
+        kb["stats"]["concepts_consolidated"]
+    )
 
 
-def test_a_long_concept_is_reachable_by_its_stored_slug(corpus):
+def test_a_long_concept_is_carried_not_truncated(corpus):
     canonical_file, output = corpus
 
     long_name = (
@@ -158,7 +230,19 @@ def test_a_long_concept_is_reachable_by_its_stored_slug(corpus):
 
     from src.aggregation.consolidation import _slug
 
-    # The knowledge base records this slug; the site must have written
-    # a page at exactly that address, or a consumer following the
-    # knowledge base arrives nowhere.
-    assert (site / "concepts" / f"{_slug(long_name)}.html").is_file()
+    # The knowledge base records this concept under this slug. It is no
+    # longer a page, but the label is still searchable, which is what a
+    # long generated label is actually for.
+    index = json.loads(
+        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
+    )
+
+    assert _slug(long_name)
+
+    searchable = [
+        concept
+        for record in index["records"]
+        for concept in record.get("c", [])
+    ]
+
+    assert long_name in searchable, searchable

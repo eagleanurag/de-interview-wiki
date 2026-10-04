@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-071",
+  "activity_id": "7315044989753815041",
+  "images": [
+    {
+      "post_id": "POST-071",
+      "activity_id": "7315044989753815041",
+      "filename": "activity_7315044989753815041_slide_0.jpg",
+      "path": "media/activity_7315044989753815041_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 301,
+      "size_bytes": 19507,
+      "declared_sha256": "d6c4a0a3e581c589e1dcbab3f1077fc5bbad09112dcc9a812a7c08367405a957",
+      "actual_sha256": "d6c4a0a3e581c589e1dcbab3f1077fc5bbad09112dcc9a812a7c08367405a957",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Seta = — t",
+      "redactions": 0,
+      "search_text": "Seta = — t",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "10 chars, 2 words, 50% letters, 20% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "1977df9d702d5199707f849680f0a0c86effa28fb6d6977c44fb703d1a611a22"
+    }
+  ]
+}

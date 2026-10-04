@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-263",
+  "activity_id": "7350849061920329729",
+  "images": [
+    {
+      "post_id": "POST-263",
+      "activity_id": "7350849061920329729",
+      "filename": "activity_7350849061920329729_slide_0.jpg",
+      "path": "media/activity_7350849061920329729_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 413,
+      "size_bytes": 35406,
+      "declared_sha256": "34b70428d4470c22c2fd51fa30a931e865f7a8b00183b9bfa389a2b72b63e690",
+      "actual_sha256": "34b70428d4470c22c2fd51fa30a931e865f7a8b00183b9bfa389a2b72b63e690",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "9 - New and Repeat Customers |\n[ aueston | Your Submissions | Solution | Discussion f\nGa <\nFlipkart wants to build a very important business metrics where they want to\ntrack on daily basis how many new and repeat customers are purchasing\nproducts from their website. A new customer is defined when he purchased\nSnything forthe frst time from the website and repeat customer is someone\n\n‘who has done at least one purchase in the past.\n\nDisplay order date , new customers , repeat customers in ascending order of\nrepeat customers.\n\nTable: custoner_orders\n\n| covum nine | OATALTYPE |\n\n[ocderid lint |\n\n| custoner ig | int |\n\n[orderdate | cate |\n\nJ orderasount | int |",
+      "redactions": 0,
+      "search_text": "9 - New and Repeat Customers | [ aueston | Your Submissions | Solution | Discussion f Ga < Flipkart wants to build a very important business metrics where they want to track on daily basis how many new and repeat customers are purchasing products from their website. A new customer is defined when he purchased Snything forthe frst time from the website and repeat customer is someone ‘who has done at least one purchase in the past. Display order date , new customers , repeat customers in ascending order of repeat customers. Table: custoner_orders | covum nine | OATALTYPE | [ocderid lint | | custoner ig | int | [orderdate | cate | J orderasount | int |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "665 chars, 99 words, 77% letters, 4% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "07c48456a6c93b445ab3ebd8c0899f34fb5939e133c5a928d27bc52b4e43d6f3"
+    }
+  ]
+}

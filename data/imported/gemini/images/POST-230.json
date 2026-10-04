@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-230",
+  "activity_id": "7346429040959856640",
+  "images": [
+    {
+      "post_id": "POST-230",
+      "activity_id": "7346429040959856640",
+      "filename": "activity_7346429040959856640_slide_0.jpg",
+      "path": "media/activity_7346429040959856640_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 25893,
+      "declared_sha256": "0d1d070d8cc93ac1987306ee7d21dee34dff66bbe231f9c069f49d333100930e",
+      "actual_sha256": "0d1d070d8cc93ac1987306ee7d21dee34dff66bbe231f9c069f49d333100930e",
+      "exact_duplicate_of": "activity_7343878669532028928_slide_0.jpg",
+      "likely_preview_of": "",
+      "ocr_status": "UNRESOLVED",
+      "public_text": "UBER DATA ENGINEER INTERVIEW QUESTIONS\nCTC: 31+ LPA\nYoe:3-5.\nRound-1\nUber",
+      "redactions": 0,
+      "search_text": "UBER DATA ENGINEER INTERVIEW QUESTIONS CTC: 31+ LPA Yoe:3-5. Round-1 Uber",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "73 chars, 10 words, 71% letters, 15% symbols, 4.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "3cc7c1e7d4a1944d72a0b13d8f7e7623fd092b44b9db0b2d8f192bf2bfa49ee4"
+    }
+  ]
+}

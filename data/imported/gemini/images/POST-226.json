@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-226",
+  "activity_id": "7346198489967509504",
+  "images": [
+    {
+      "post_id": "POST-226",
+      "activity_id": "7346198489967509504",
+      "filename": "activity_7346198489967509504_slide_0.jpg",
+      "path": "media/activity_7346198489967509504_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 7474,
+      "declared_sha256": "de4b47856c79882ed8bc164d9763e9002791588fd8fceb97588e62c7abe82bc5",
+      "actual_sha256": "de4b47856c79882ed8bc164d9763e9002791588fd8fceb97588e62c7abe82bc5",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SQL COMMANDS\nPrepared By\nPandeeswari M",
+      "redactions": 0,
+      "search_text": "SQL COMMANDS Prepared By Pandeeswari M",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "38 chars, 6 words, 87% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0d479fa04d161899fe19c0443073b895836f83bb001ce6fc097ee4c983a68e22"
+    }
+  ]
+}

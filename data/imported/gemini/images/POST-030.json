@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-030",
+  "activity_id": "7295290520719765504",
+  "images": [
+    {
+      "post_id": "POST-030",
+      "activity_id": "7295290520719765504",
+      "filename": "activity_7295290520719765504_slide_0.jpg",
+      "path": "media/activity_7295290520719765504_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 402,
+      "size_bytes": 33818,
+      "declared_sha256": "ee463e5499b03fce4d741fedd9b79d3e40c09e6991d95e692b3d6e16bd288861",
+      "actual_sha256": "ee463e5499b03fce4d741fedd9b79d3e40c09e6991d95e692b3d6e16bd288861",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "-Guiegw~gt-o .\n31 January 2025\n\njust khatam hua . 50 min leadership\n\nprinciples hi puche interviewer 4:03 pm\nIsliye hm bole the ki leadership principles\npe dhyan do 4:31pm W/\n\nYou\n\nIsliye hm bole the ki leadership principles pe\n\ndhyan do\n\nHa Acha hua padh liye the. Aapke list se\n\nquestion fase the mere 7:07 pm",
+      "redactions": 0,
+      "search_text": "-Guiegw~gt-o . 31 January 2025 just khatam hua . 50 min leadership principles hi puche interviewer 4:03 pm Isliye hm bole the ki leadership principles pe dhyan do 4:31pm W/ You Isliye hm bole the ki leadership principles pe dhyan do Ha Acha hua padh liye the. Aapke list se question fase the mere 7:07 pm",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "311 chars, 50 words, 71% letters, 9% symbols, 1.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "81222be05f99495bc29b0a6de7e3c227c422e7a1fbacc91913c44391eeb150d7"
+    }
+  ]
+}

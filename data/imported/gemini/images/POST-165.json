@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-165",
+  "activity_id": "7339636481692487680",
+  "images": [
+    {
+      "post_id": "POST-165",
+      "activity_id": "7339636481692487680",
+      "filename": "activity_7339636481692487680_slide_0.jpg",
+      "path": "media/activity_7339636481692487680_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 492,
+      "size_bytes": 44662,
+      "declared_sha256": "8aacaf5dd20fff1de07275823cf3d15bd6fb082124b7c713f8272e4e1e29f835",
+      "actual_sha256": "8aacaf5dd20fff1de07275823cf3d15bd6fb082124b7c713f8272e4e1e29f835",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "12 Essential Data Engineering Terms\n1 Data Lake Data Warehouse\ned NY f2incen ) (Re ‘",
+      "redactions": 0,
+      "search_text": "12 Essential Data Engineering Terms 1 Data Lake Data Warehouse ed NY f2incen ) (Re ‘",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "84 chars, 13 words, 74% letters, 8% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "22b546fa2322020a6f91d9e476d76c72fe143b15c4d49d108b02679f893bf517"
+    }
+  ]
+}

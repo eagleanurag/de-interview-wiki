@@ -69,6 +69,8 @@ def build_parser() -> argparse.ArgumentParser:
         "--only",
         choices=[
             "discover",
+            "gemini-plan",
+            "gemini-import",
             "visual-plan",
             "visual",
             "enrich",
@@ -76,6 +78,46 @@ def build_parser() -> argparse.ArgumentParser:
             "site",
         ],
         help="Run one stage instead of the whole pipeline.",
+    )
+
+    parser.add_argument(
+        "--gemini-package",
+        default=None,
+        help=(
+            "Directory holding the Gemini-derived knowledge package. "
+            "Read-only, like the archive. Defaults to "
+            "$GEMINI_PACKAGE_ROOT. The package is machine transcription "
+            "and derived data; it never becomes the post's own text."
+        ),
+    )
+
+    parser.add_argument(
+        "--gemini-output",
+        default=None,
+        help=(
+            "Where an import writes its records. Default "
+            "data/imported/gemini."
+        ),
+    )
+
+    parser.add_argument(
+        "--gemini-force",
+        action="store_true",
+        help=(
+            "Re-import even when the package and archive are unchanged. "
+            "Usually pointless: an unchanged package produces an "
+            "identical import."
+        ),
+    )
+
+    parser.add_argument(
+        "--visual-gaps",
+        action="store_true",
+        help=(
+            "Read only the slides a previous Gemini import could not "
+            "transcribe. The vision processor stays the fallback rather "
+            "than re-reading images that already have text."
+        ),
     )
 
     parser.add_argument(
@@ -169,6 +211,12 @@ def main(argv: list[str] | None = None) -> int:
             discover()
             return 0
 
+        if args.only == "gemini-plan":
+            return _gemini_plan(args)
+
+        if args.only == "gemini-import":
+            return _gemini_import(args)
+
         if args.only == "visual-plan":
             return _visual_plan(args)
 
@@ -222,6 +270,182 @@ def main(argv: list[str] | None = None) -> int:
 
 
 # ---------------------------------------------------------------------
+# Gemini package
+# ---------------------------------------------------------------------
+
+
+def _package_root(args) -> str | None:
+    """
+    Where the Gemini package is, or None when it is not configured.
+
+    Reported rather than guessed, for the same reason the archive root is:
+    a default path that does not exist turns a missing configuration into
+    a confusing error deep inside a parser, and CI has no reason to have
+    somebody's Downloads folder.
+    """
+
+    if args.gemini_package:
+        return args.gemini_package
+
+    import os
+
+    return os.environ.get("GEMINI_PACKAGE_ROOT")
+
+
+def _gemini_paths(args) -> tuple[str, str] | None:
+    """Both roots, or an error already printed."""
+
+    package = _package_root(args)
+    archive = _archive_root(args)
+
+    missing = [
+        name
+        for name, value in (
+            ("--gemini-package or GEMINI_PACKAGE_ROOT", package),
+            ("--archive or LINKEDIN_ARCHIVE_ROOT", archive),
+        )
+        if not value
+    ]
+
+    if missing:
+        print(
+            "PIPELINE_ERROR=no source configured; pass " + " and ".join(missing),
+            file=sys.stderr,
+        )
+
+        return None
+
+    return package, archive
+
+
+def _gemini_plan(args) -> int:
+    """
+    What importing the package would find. Writes nothing.
+
+    Reads the package and the archive and stops. It is the only safe way
+    to look at a package nobody has verified, because it answers "what
+    does this claim, and does the archive agree" without leaving a
+    trace in the repository.
+    """
+
+    from src.gemini import build
+
+    resolved = _gemini_paths(args)
+
+    if resolved is None:
+        return 1
+
+    package, archive = resolved
+
+    try:
+        result = build(package, archive)
+
+    except Exception as exc:  # noqa: BLE001
+        print(f"PIPELINE_ERROR={type(exc).__name__}: {exc}", file=sys.stderr)
+
+        return 1
+
+    log(result.describe())
+
+    if result.unresolved_topic_groups:
+        log("")
+        log(
+            f"Topic index references {len(result.unresolved_topic_groups)} "
+            "group(s) with no image record; see cross_check.json after an "
+            "import."
+        )
+
+    return 0
+
+
+def _gemini_import(args) -> int:
+    """
+    Import the package, or report that nothing changed.
+
+    Idempotent by digest: the same package and the same archive produce
+    no second import, because there is nothing new to record and a
+    second copy of every record would only make the repository larger
+    and the knowledge base less trustworthy.
+    """
+
+    from src.gemini import DEFAULT_OUTPUT, run as run_import
+
+    resolved = _gemini_paths(args)
+
+    if resolved is None:
+        return 1
+
+    package, archive = resolved
+
+    output = args.gemini_output or DEFAULT_OUTPUT
+
+    try:
+        result = run_import(
+            package,
+            archive,
+            output,
+            force=args.gemini_force,
+        )
+
+    except Exception as exc:  # noqa: BLE001
+        print(f"PIPELINE_ERROR={type(exc).__name__}: {exc}", file=sys.stderr)
+
+        return 1
+
+    log(result.describe())
+
+    if not result.wrote:
+        log("")
+        log(
+            "nothing written: the package and the archive are both "
+            "unchanged since the last import"
+        )
+
+        return 0
+
+    actionable = [gap for gap in result.gaps if gap.actionable]
+
+    log("")
+    log(
+        f"{len(actionable)} slide(s) a vision model could still read; run "
+        "with --visual-gaps to spend calls on those alone."
+    )
+
+    from src.gemini.derived import claim_counts
+
+    counts = claim_counts(output)
+
+    log(
+        f"Technology claims: {counts['claims_with_a_slide']} backed by a "
+        f"named slide, {counts['claims_without_one']} attributed to a post "
+        "with no slide that says so. The second kind is weaker and is "
+        "kept only so nothing is lost."
+    )
+
+    return 0
+
+
+def _gap_filenames() -> set[str] | None:
+    """
+    The slides an import left for the vision processor.
+
+    ``None`` when there is no import to read, which means "no filter" and
+    so a normal full CP12 run. Treating a missing import as an empty gap
+    list would silently reduce a fallback run to reading nothing, and
+    that is the one failure mode here worth engineering against.
+    """
+
+    from src.gemini import load_gaps
+
+    gaps = load_gaps()
+
+    if not gaps:
+        return None
+
+    return {gap.filename for gap in gaps if gap.actionable}
+
+
+# ---------------------------------------------------------------------
 # Visual stages
 # ---------------------------------------------------------------------
 
@@ -257,7 +481,9 @@ def _visual_plan(args) -> int:
         )
         return 1
 
-    runner = make_visual(root, batch_size=args.visual_batch)
+    only = _gap_filenames() if args.visual_gaps else None
+
+    runner = make_visual(root, batch_size=args.visual_batch, only=only)
 
     plan = runner.plan()
 
@@ -266,6 +492,13 @@ def _visual_plan(args) -> int:
         return 1
 
     log(plan.render())
+
+    if only is not None:
+        log("")
+        log(
+            f"Restricted to {len(only)} slide(s) a previous import could "
+            "not transcribe. Drop --visual-gaps to plan a full run."
+        )
 
     return 0
 
@@ -302,11 +535,20 @@ def _run_visual(args, identifiers: list[str]) -> dict:
         except Exception as exc:  # noqa: BLE001
             log(f"  could not load {identifier}: {exc}")
 
+    only = _gap_filenames() if args.visual_gaps else None
+
     runner = make_visual(
         root,
         batch_size=args.visual_batch,
         attempts=args.attempts,
+        only=only,
     )
+
+    if only is not None:
+        log(
+            f"reading only the {len(only)} slide(s) a previous import "
+            "could not transcribe"
+        )
 
     run = runner.run(
         posts,

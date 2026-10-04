@@ -609,6 +609,35 @@ details .prose {
   margin-bottom: 8px;
 }
 
+/* Machine transcriptions of slide images. Set in a monospace face and
+   left-aligned, because a transcription is a transcription of
+   something that had a layout -- running it into prose would imply the
+   slide said a sentence. */
+
+.ocr-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 78ch;
+}
+
+.transcription-notes {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.transcription-notes li {
+  margin-bottom: 4px;
+}
+
+.provenance-note {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
 /* Search and filter panels */
 
 .search-panel,
@@ -739,6 +768,36 @@ details .prose {
   margin-bottom: 10px;
 }
 
+/* Machine transcriptions found inside slide images. Deliberately set
+   apart from a post's own text: a hit here is a picture read by a
+   machine, not something the author wrote, and the two should not look
+   identical on the page. */
+
+.ocr-heading {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin: 28px 0 12px;
+}
+
+.ocr-card {
+  border-left: 3px solid var(--border);
+  padding-left: 14px;
+}
+
+.ocr-card .result-summary {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.result-note {
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+
 mark {
   background: var(--medium-bg);
   color: inherit;
@@ -816,4 +875,222 @@ mark {
     transition: none !important;
     animation: none !important;
   }
+}
+
+/* Revision pages -------------------------------------------------------------
+   Home, subjects, subtopics and questions. Deliberately plain: a revising
+   reader needs a list they can scan and answers they can open, and every
+   decoration here is competing with that. */
+
+.lede {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 68ch;
+}
+
+.counts {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.subject-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.subject-tile {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+}
+
+.subject-tile:hover {
+  border-color: var(--text-muted);
+}
+
+.subject-tile h2 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.subject-tile p {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+}
+
+.subject-card {
+  margin-bottom: 34px;
+}
+
+.subject-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.subject-row .muted {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* One question. The summary is always the question; the answer is inside
+   the disclosure so a page of sixty questions reads as sixty questions. */
+details.question {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background: var(--surface);
+}
+
+details.question > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.question-text {
+  font-weight: 550;
+}
+
+.question-body {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.answer-thin {
+  font-size: 0.85rem;
+}
+
+details.provenance {
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+details.provenance ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+}
+
+.footer-nav {
+  font-size: 0.85rem;
+}
+
+.footer-nav .footer-link {
+  margin-right: 14px;
+}
+
+.caveat {
+  font-size: 0.85rem;
+  max-width: 78ch;
+}
+
+/* Knowledge page -------------------------------------------------------------
+   A study page: a name, a sentence, the things to remember, the
+   questions, and one line about where it came from. Generous space and
+   one accent, because the content is short and the reader is skimming. */
+
+.source-line {
+  margin: 28px 0 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.chip-row {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.chip-row .chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.chip-row a.chip:hover {
+  border-color: var(--text-muted);
+}
+
+.chip-quiet {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+
+/* The capture record. Present, but only ever opened on purpose. */
+details.provenance {
+  margin: 6px 0 8px;
+  font-size: 0.9rem;
+}
+
+details.provenance > summary {
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+details.provenance > summary:hover {
+  color: var(--text);
+}
+
+details.provenance dl {
+  margin: 12px 0 0;
+}
+
+details.provenance .source-text {
+  max-height: 32rem;
+  overflow-y: auto;
+  border-left: 3px solid var(--border);
+  padding-left: 12px;
+  white-space: pre-wrap;
+}
+
+/* A question on a knowledge page: closed, so a page of six reads as six
+   questions rather than six paragraphs. */
+details.question > summary {
+  line-height: 1.45;
+}
+
+details.question .prose {
+  max-width: 72ch;
+}
+
+details.question pre {
+  overflow-x: auto;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
 }

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-181",
+  "activity_id": "7341086920443068416",
+  "images": [
+    {
+      "post_id": "POST-181",
+      "activity_id": "7341086920443068416",
+      "filename": "activity_7341086920443068416_slide_0.jpg",
+      "path": "media/activity_7341086920443068416_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 23642,
+      "declared_sha256": "585b2b9ff0eef66172ae579d1f39a60b10541f4360b3e3050b2d8bffa4b2ce4b",
+      "actual_sha256": "585b2b9ff0eef66172ae579d1f39a60b10541f4360b3e3050b2d8bffa4b2ce4b",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "s &\ndette\nDatabricks\nLakehouse\nReference\nArchitectures on -\nAzure\n\ndatabricks A Azure\n© Naval Yemul statedsaaaron",
+      "redactions": 0,
+      "search_text": "s & dette Databricks Lakehouse Reference Architectures on - Azure databricks A Azure © Naval Yemul statedsaaaron",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "113 chars, 14 words, 82% letters, 3% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2bed59609467e6d6bde2625328d0eb09044a8ceacc9f4bfe681b8ab2182ae59f"
+    }
+  ]
+}

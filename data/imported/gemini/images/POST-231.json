@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-231",
+  "activity_id": "7346523823892066305",
+  "images": [
+    {
+      "post_id": "POST-231",
+      "activity_id": "7346523823892066305",
+      "filename": "activity_7346523823892066305_slide_0.jpg",
+      "path": "media/activity_7346523823892066305_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 329,
+      "height": 455,
+      "size_bytes": 34694,
+      "declared_sha256": "a69b87ab6b684b4b29321a32e331509ed6439d418feadced80ef18fa4bdfdd8b",
+      "actual_sha256": "a69b87ab6b684b4b29321a32e331509ed6439d418feadced80ef18fa4bdfdd8b",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SQL NOTES\nSQL Command Types\noo om fy re",
+      "redactions": 0,
+      "search_text": "SQL NOTES SQL Command Types oo om fy re",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "39 chars, 9 words, 79% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "d5e7e03ca3036cc9d721f5354fb952f6017dac4493782a9353a046f0a6b41f6f"
+    }
+  ]
+}

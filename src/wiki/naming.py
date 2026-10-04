@@ -34,14 +34,30 @@ TECHNOLOGIES_DIR = "technologies"
 
 INDEX_PAGE = "index.html"
 SEARCH_PAGE = "search.html"
-TOPICS_PAGE = "topics.html"
 QUESTIONS_PAGE = "questions.html"
+NOT_FOUND_PAGE = "404.html"
+
+#: The revision tree: Subject, then Subtopic. Named separately from
+#: :data:`TOPICS_PAGE` because the two are different things and used to be
+#: confused. "Topics" was the archive's grouping of posts by corpus
+#: label; "subjects" is what a candidate revises. Only the latter is
+#: generated.
+SUBJECTS_PAGE = "subjects.html"
+
+# Retained as names because the renderers and the model still describe
+# the evidence layer. No page is written at any of these paths, so
+# nothing links to them: see src.wiki.generator.
+TOPICS_PAGE = "topics.html"
 CONCEPTS_PAGE = "concepts.html"
 TECHNOLOGIES_PAGE = "technologies.html"
 SAVED_ITEMS_PAGE = "saved-items.html"
-NOT_FOUND_PAGE = "404.html"
 
 SEARCH_INDEX_FILE = f"{ASSETS_DIR}/search-index.json"
+
+#: Fetched separately and only once a search has run. Split from the
+#: main index because the transcriptions are large and most searches do
+#: not need them; see :mod:`src.wiki.ocr_index`.
+OCR_INDEX_FILE = f"{ASSETS_DIR}/ocr-index.json"
 STYLE_FILE = f"{ASSETS_DIR}/style.css"
 SEARCH_SCRIPT = f"{ASSETS_DIR}/search.js"
 QUESTIONS_SCRIPT = f"{ASSETS_DIR}/questions.js"

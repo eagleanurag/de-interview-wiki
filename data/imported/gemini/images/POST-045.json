@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-045",
+  "activity_id": "7301772876238491651",
+  "images": [
+    {
+      "post_id": "POST-045",
+      "activity_id": "7301772876238491651",
+      "filename": "activity_7301772876238491651_slide_0.jpg",
+      "path": "media/activity_7301772876238491651_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 373,
+      "size_bytes": 31308,
+      "declared_sha256": "3dc3a68a28855b19e1f63aa2c1489d226a7c1097f8a2ba3c0777e59b0a3cbe85",
+      "actual_sha256": "3dc3a68a28855b19e1f63aa2c1489d226a7c1097f8a2ba3c0777e59b0a3cbe85",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "\\ databricks\net eo\nf Ee Be q\n: a",
+      "redactions": 0,
+      "search_text": "\\ databricks et eo f Ee Be q : a",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "32 chars, 8 words, 66% letters, 6% symbols, 3.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "7052358397bd63c40dca2e21a1361259cf1a7d81e3700c72fa03bee37857d053"
+    }
+  ]
+}

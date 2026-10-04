@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-166",
+  "activity_id": "7339690591162716161",
+  "images": [
+    {
+      "post_id": "POST-166",
+      "activity_id": "7339690591162716161",
+      "filename": "activity_7339690591162716161_slide_0.jpg",
+      "path": "media/activity_7339690591162716161_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 390,
+      "height": 487,
+      "size_bytes": 46158,
+      "declared_sha256": "6bef6e79fcf9be99a8928c2c59bbcd6ddd7d9cd4f1c9c953b9d258b328481c3a",
+      "actual_sha256": "6bef6e79fcf9be99a8928c2c59bbcd6ddd7d9cd4f1c9c953b9d258b328481c3a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "FB) stemoesgnsenot ‘¢-systemdesignschoolio\n6 Steps to\nImpress Your |\nSystem 7\nDesign\nInterviewer",
+      "redactions": 0,
+      "search_text": "FB) stemoesgnsenot ‘¢-systemdesignschoolio 6 Steps to Impress Your | System 7 Design Interviewer",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "96 chars, 10 words, 80% letters, 7% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "da7621981bd60b8c27bc56c8f13d02c06353426a4686f89acf1a9d20ad7b87fe"
+    }
+  ]
+}

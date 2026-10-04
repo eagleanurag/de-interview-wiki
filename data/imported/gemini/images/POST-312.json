@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-312",
+  "activity_id": "7510541086562410497",
+  "images": [
+    {
+      "post_id": "POST-312",
+      "activity_id": "7510541086562410497",
+      "filename": "activity_7510541086562410497_slide_0.jpg",
+      "path": "media/activity_7510541086562410497_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 600,
+      "size_bytes": 46392,
+      "declared_sha256": "88ae30f78f3956f56a035f592d440f4e62540eb682dac4e387e8d974bfe5ca5d",
+      "actual_sha256": "88ae30f78f3956f56a035f592d440f4e62540eb682dac4e387e8d974bfe5ca5d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SQL INTERVIEW QUESTION\nInput Table\norder_id customer_id order_date order_amount\n1 100 2022-01-01 2000\n2 200 2022-01-01 2500\n3 300 2022-01-01 2100\n4 100 2022-01-02 2000\n5 400 2022-01-02 2200\n6 500 2022-01-02 2700\nPg 100 2022-01-03 3000\n8 400 2022-01-03 1000\n9 600 2022-01-03 3000\nTask:Write a query to find out new and\nrepeat customers for all the days\nOutput:\norder_date NewCustomers repeatcustomer\n2022-01-01 3 0\n2022-01-02 2 1\n2022-01-03 1 2 be",
+      "redactions": 0,
+      "search_text": "SQL INTERVIEW QUESTION Input Table order_id customer_id order_date order_amount 1 100 2022-01-01 2000 2 200 2022-01-01 2500 3 300 2022-01-01 2100 4 100 2022-01-02 2000 5 400 2022-01-02 2200 6 500 2022-01-02 2700 Pg 100 2022-01-03 3000 8 400 2022-01-03 1000 9 600 2022-01-03 3000 Task:Write a query to find out new and repeat customers for all the days Output: order_date NewCustomers repeatcustomer 2022-01-01 3 0 2022-01-02 2 1 2022-01-03 1 2 be",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "garbled",
+      "ocr_note": "446 chars, 35 words, 38% letters, 46% symbols, 0.4% sentence marks; overwhelmingly symbol rather than letters",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "360d6aca47ac60e739ee8f65a4bfc928ce2318c3df5e3c7829470d6883a6eef7"
+    }
+  ]
+}

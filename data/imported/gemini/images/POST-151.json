@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-151",
+  "activity_id": "7339028967460347905",
+  "images": [
+    {
+      "post_id": "POST-151",
+      "activity_id": "7339028967460347905",
+      "filename": "activity_7339028967460347905_slide_0.jpg",
+      "path": "media/activity_7339028967460347905_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 47378,
+      "declared_sha256": "bb0dcd6728dd9430034dc23021d97e46ea8073fe428e721f9995e01b231110d9",
+      "actual_sha256": "bb0dcd6728dd9430034dc23021d97e46ea8073fe428e721f9995e01b231110d9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "‘Amazon Web ServicelAWS\n1Lrotecoutticedetedo song net cen tetera and\n2 Rec aren mat ane ce ASS ual.\n\ndoce ti ila ltd oe ae ay\nmonet | mind | rated\nSos | +\nSecmenntnt | Pee | ¢ Sioa\nSESS | Se | Crea\nevar | g Sr\n= a\noa ecco | om\nmene | Senna\nEE | Sie BT\neee",
+      "redactions": 0,
+      "search_text": "‘Amazon Web ServicelAWS 1Lrotecoutticedetedo song net cen tetera and 2 Rec aren mat ane ce ASS ual. doce ti ila ltd oe ae ay monet | mind | rated Sos | + Secmenntnt | Pee | ¢ Sioa SESS | Se | Crea evar | g Sr = a oa ecco | om mene | Senna EE | Sie BT eee",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "255 chars, 46 words, 69% letters, 7% symbols, 0.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "94771cd857e7d441b967fa181d0bbff7822532b98c3a7fe164b42aeca9412698"
+    }
+  ]
+}

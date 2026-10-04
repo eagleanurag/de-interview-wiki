@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-290",
+  "activity_id": "7458357546396028928",
+  "images": [
+    {
+      "post_id": "POST-290",
+      "activity_id": "7458357546396028928",
+      "filename": "activity_7458357546396028928_slide_0.jpg",
+      "path": "media/activity_7458357546396028928_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 678,
+      "size_bytes": 41918,
+      "declared_sha256": "8f4f33d4cbc8c5c1e9a6368ede96f6e7e4462cf32569334758e0f1c9debe9b5a",
+      "actual_sha256": "8f4f33d4cbc8c5c1e9a6368ede96f6e7e4462cf32569334758e0f1c9debe9b5a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "(Accenture + MNC\nLevel) = 2026\nly Azure\nData Factory\nInterview Questions\nData Engineer\n\n1. Explain your Azure Data Engineering\nproject architecture.",
+      "redactions": 0,
+      "search_text": "(Accenture + MNC Level) = 2026 ly Azure Data Factory Interview Questions Data Engineer 1. Explain your Azure Data Engineering project architecture.",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "148 chars, 18 words, 78% letters, 7% symbols, 1.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "50fab8f657ef5f64217d92cf7d8eca939dd4045aa7c9f52f29a2065d830ba532"
+    }
+  ]
+}

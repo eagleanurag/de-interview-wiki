@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-275",
+  "activity_id": "7357567222967357443",
+  "images": [
+    {
+      "post_id": "POST-275",
+      "activity_id": "7357567222967357443",
+      "filename": "activity_7357567222967357443_slide_0.jpg",
+      "path": "media/activity_7357567222967357443_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 569,
+      "size_bytes": 26500,
+      "declared_sha256": "e7542b4e4169c634732b00ff41cb84e5647f5f0afc20fc5aa9ef2beefdb9f7af",
+      "actual_sha256": "e7542b4e4169c634732b00ff41cb84e5647f5f0afc20fc5aa9ef2beefdb9f7af",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Gp Lr\noot\nO85 aan\nWY - do\nFiltered Data oRuaBY\nDep 2oO#K",
+      "redactions": 0,
+      "search_text": "Gp Lr oot O85 aan WY - do Filtered Data oRuaBY Dep 2oO#K",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "56 chars, 13 words, 70% letters, 9% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "054019e84236e9f13c9f44f60ab87fa1f65b0ccc4389f572d3b0ab5f9d9c7454"
+    }
+  ]
+}

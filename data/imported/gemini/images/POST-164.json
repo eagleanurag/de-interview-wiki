@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-164",
+  "activity_id": "7339623632530284545",
+  "images": [
+    {
+      "post_id": "POST-164",
+      "activity_id": "7339623632530284545",
+      "filename": "activity_7339623632530284545_slide_0.jpg",
+      "path": "media/activity_7339623632530284545_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 382,
+      "height": 471,
+      "size_bytes": 38858,
+      "declared_sha256": "87e9d92e5617331bff9c1376835a1f9f8cbacadfbc0614d14556078bc0cc103b",
+      "actual_sha256": "87e9d92e5617331bff9c1376835a1f9f8cbacadfbc0614d14556078bc0cc103b",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ni\nData Engineering\nwith Python /\nfp y\nUg p/\nPaul Crickard 2",
+      "redactions": 0,
+      "search_text": "ni Data Engineering with Python / fp y Ug p/ Paul Crickard 2",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "60 chars, 11 words, 75% letters, 5% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "f1099c50e7d59666b1abb9dd644a051ed65ab82fc4caa1a089aa8e87d0f08e97"
+    }
+  ]
+}

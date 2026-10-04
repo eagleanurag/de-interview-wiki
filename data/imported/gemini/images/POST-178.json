@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-178",
+  "activity_id": "7340938263118893056",
+  "images": [
+    {
+      "post_id": "POST-178",
+      "activity_id": "7340938263118893056",
+      "filename": "activity_7340938263118893056_slide_0.jpg",
+      "path": "media/activity_7340938263118893056_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 434,
+      "size_bytes": 27167,
+      "declared_sha256": "0acc884b91f52279ad939579d3923277b270cda63b0a5b6892a5476cbea34eaf",
+      "actual_sha256": "0acc884b91f52279ad939579d3923277b270cda63b0a5b6892a5476cbea34eaf",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "silver_df = spark.sql(\"\"\"\nSELECT *\nFROM {customers} AS c\nJOIN {orders} AS 0 ON c.id = o.customer_id\nWHERE o.amount > 100\namount = 106\nsilver_df = spark.sql(f\"\"\"\nSELECT *\nFROM {{customers}} AS c\nJOIN {{orders}} AS o ON c.id = o.customer_id\nWHERE o.amount > {amount}",
+      "redactions": 0,
+      "search_text": "silver_df = spark.sql(\"\"\" SELECT * FROM {customers} AS c JOIN {orders} AS 0 ON c.id = o.customer_id WHERE o.amount > 100 amount = 106 silver_df = spark.sql(f\"\"\" SELECT * FROM {{customers}} AS c JOIN {{orders}} AS o ON c.id = o.customer_id WHERE o.amount > {amount}",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "264 chars, 46 words, 64% letters, 19% symbols, 3.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "519a67b304bd03fc42b446228e1f7bfd8c30013121e08622419c4ad7df05ca57"
+    }
+  ]
+}

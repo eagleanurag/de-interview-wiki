@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-249",
+  "activity_id": "7348928864959541249",
+  "images": [
+    {
+      "post_id": "POST-249",
+      "activity_id": "7348928864959541249",
+      "filename": "activity_7348928864959541249_slide_0.jpg",
+      "path": "media/activity_7348928864959541249_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 18864,
+      "declared_sha256": "374a11d4687c39e36445def38131bba3ffa3d46155fc893c5309243faba45b20",
+      "actual_sha256": "374a11d4687c39e36445def38131bba3ffa3d46155fc893c5309243faba45b20",
+      "exact_duplicate_of": "activity_7326397121371197440_slide_0.jpg",
+      "likely_preview_of": "activity_7326397121371197440_slide_01.jpg",
+      "ocr_status": "UNRESOLVED",
+      "public_text": "Pay Nitya CloudTech Pvt Ltd.\nSQL Scenario-Based Interview\nQuestions & Answers\na=\n—\n7\n\n=",
+      "redactions": 0,
+      "search_text": "Pay Nitya CloudTech Pvt Ltd. SQL Scenario-Based Interview Questions & Answers a= — 7 =",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "87 chars, 11 words, 75% letters, 8% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "22b3613476aca0dee7593a975568f972724839aac1dec855c48707933dcca79c"
+    }
+  ]
+}

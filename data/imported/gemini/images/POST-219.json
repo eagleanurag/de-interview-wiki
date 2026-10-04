@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-219",
+  "activity_id": "7345429109935652864",
+  "images": [
+    {
+      "post_id": "POST-219",
+      "activity_id": "7345429109935652864",
+      "filename": "activity_7345429109935652864_slide_0.jpg",
+      "path": "media/activity_7345429109935652864_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 27415,
+      "declared_sha256": "11eb0adda3b7d618e8eebe46df1a37c8d32071a2e20298b42431c46d5005af02",
+      "actual_sha256": "11eb0adda3b7d618e8eebe46df1a37c8d32071a2e20298b42431c46d5005af02",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "4X. Nitya Clouatech Pot La.\nPySpark Scenario-Based\nInterview Questions &\nAnswers\na |",
+      "redactions": 0,
+      "search_text": "4X. Nitya Clouatech Pot La. PySpark Scenario-Based Interview Questions & Answers a |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "84 chars, 11 words, 79% letters, 7% symbols, 2.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "5440e42cee6d54f0bb4cdc1a890e27aeeb07d1a77eba3b6604dd4396fa81dd4d"
+    }
+  ]
+}

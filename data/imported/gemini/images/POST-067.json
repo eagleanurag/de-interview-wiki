@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-067",
+  "activity_id": "7313046585775439872",
+  "images": [
+    {
+      "post_id": "POST-067",
+      "activity_id": "7313046585775439872",
+      "filename": "activity_7313046585775439872_slide_0.jpg",
+      "path": "media/activity_7313046585775439872_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 633,
+      "size_bytes": 21973,
+      "declared_sha256": "f12ba42276e476b4edfc6277d52d320b0aae0f8991d1005e10d905aa3765c8ad",
+      "actual_sha256": "f12ba42276e476b4edfc6277d52d320b0aae0f8991d1005e10d905aa3765c8ad",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Openings for Data_\nengineering role:\nAtlassian\nGoogle\nMicrosoft\nGSK\nAmazon",
+      "redactions": 0,
+      "search_text": "Openings for Data_ engineering role: Atlassian Google Microsoft GSK Amazon",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "74 chars, 10 words, 85% letters, 3% symbols, 1.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "63ff29430b311e7f7cad34273288f34bd24addae3b5145d24843649445ffabec"
+    }
+  ]
+}

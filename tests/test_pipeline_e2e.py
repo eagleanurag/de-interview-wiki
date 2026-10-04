@@ -308,15 +308,31 @@ def test_source_text_is_preserved_verbatim(knowledge_base):
 
 
 def test_the_entry_points_exist(site):
+    """
+    Five entry points, and the four the reader navigates by.
+
+    Home, Subjects, Questions, Search and the 404 that GitHub Pages
+    serves. There is no Topics, Concepts, Technologies or Saved Items
+    page; that list was the shape of the old site and it is what this
+    change removed.
+    """
+
     for name in (
         "index.html",
+        "subjects.html",
+        "questions.html",
+        "search.html",
+        "404.html",
+    ):
+        assert (site / name).is_file(), name
+
+    for name in (
         "topics.html",
         "concepts.html",
         "technologies.html",
-        "questions.html",
-        "search.html",
+        "saved-items.html",
     ):
-        assert (site / name).is_file(), name
+        assert not (site / name).exists(), name
 
 
 def test_every_post_has_a_page(site, knowledge_base):
@@ -338,14 +354,17 @@ def test_the_search_index_covers_every_post(site, knowledge_base):
 
     assert payload["posts"] == len(knowledge_base["posts"])
 
-    # Records cover posts and the consolidated sections. A checkout
-    # whose posts have not been enriched has no topics yet, and that is
-    # an honest state rather than a failure.
+    # Records cover posts plus the revision curriculum. The archive's own
+    # topic, concept and technology records are gone, because the pages
+    # they pointed at are gone; the revision records took their place and
+    # there are more of them, because every subtopic and every merged
+    # question is indexed rather than only every post.
     assert len(payload["records"]) >= payload["posts"]
-    assert (
-        len(payload["records"]) == payload["posts"]
-        or payload["topics"] > 0
-    )
+
+    # And nothing but a post or a revision page is indexed.
+    kinds = {record["k"] for record in payload["records"]}
+
+    assert kinds <= {"p", "s", "b", "q"}, kinds
 
     # "i" is the identifier and "u" the page, both compressed to keep
     # the index small. Only post records carry a post identifier.
@@ -481,16 +500,57 @@ def test_no_published_page_names_this_machine(site):
 
 
 def test_the_navigation_links_every_top_level_page(site):
+    """
+    Home must reach the three places a reader goes, and nothing else.
+
+    This asserted the archive's five indexes. Reaching them is what made
+    the site an archive with a revision front end rather than a revision
+    wiki.
+    """
+
     index = (site / "index.html").read_text(encoding="utf-8")
 
     for page in (
-        "topics.html",
-        "concepts.html",
-        "technologies.html",
+        "subjects.html",
         "questions.html",
         "search.html",
     ):
         assert page in index, page
+
+    for gone in (
+        "topics.html",
+        "concepts.html",
+        "technologies.html",
+        "saved-items.html",
+    ):
+        assert gone not in index, gone
+
+
+def test_every_top_level_page_is_reachable_from_home(site):
+    """
+    The replacement for the topic index.
+
+    The archive had four indexes, each unreachable without the other
+    three. There is one now: subjects, the revision tree, which reaches
+    every subtopic and every question on the site.
+    """
+
+    index = (site / "index.html").read_text(encoding="utf-8")
+
+    assert 'href="subjects.html"' in index
+
+    subjects = (site / "subjects.html").read_text(encoding="utf-8")
+
+    revisions = sorted((site / "topics").rglob("*/*.html"))
+
+    assert revisions, "no revision pages were generated"
+
+    for page in revisions:
+        relative = page.relative_to(site / "topics").as_posix()
+
+        assert relative in subjects, (
+            f"{relative} is unreachable from the subjects index"
+        )
 
 
 def test_the_topic_index_lists_the_topic_pages(site, knowledge_base):
@@ -658,20 +718,43 @@ def test_the_published_date_is_shown_on_the_post_page(
     """
     A reader needs to know when the source published the content, which
     is not the same as when it was collected.
+
+    It used to pass by accident. The raw value is
+    "2026-10-01T23:11:32Z" and the page shortened it to a date, but it
+    also printed a *Captured* row whose "2026-10-01" happened to be a
+    substring of the raw value, so the assertion was satisfied by a
+    capture timestamp rather than by the published one. That row is
+    gone, so the test now checks what it meant to check: the published
+    date appears in the form the page renders it.
     """
 
+    from datetime import datetime
+
+    checked = 0
+
     for post in knowledge_base["posts"]:
-        published = post["source"].get("published_at")
+        published = (post["source"].get("published_at") or "").strip()
 
         if not published:
             continue
 
+        try:
+            shown = datetime.fromisoformat(
+                published.replace("Z", "+00:00")
+            ).strftime("%Y-%m-%d")
+        except ValueError:
+            shown = published
+
         page = site / "posts" / f"{post['id']}.html"
 
-        assert published in page.read_text(encoding="utf-8"), (
+        assert shown in page.read_text(encoding="utf-8"), (
             post["id"],
             published,
         )
+
+        checked += 1
+
+    assert checked, "no post recorded a published date"
 
 
 def test_a_collected_post_page_links_back_to_the_original(
@@ -738,63 +821,89 @@ def test_no_page_contains_a_credential_marker(site):
 # ---------------------------------------------------------------------
 
 
-def test_every_concept_has_a_page(site, knowledge_base):
+def test_no_concept_or_technology_page_is_generated(
+    site, knowledge_base
+):
+    """
+    Concepts and technologies have no page, and that is the change.
+
+    Three thousand one hundred and twelve concept pages and forty-four
+    technology pages existed to list labels the enricher produced. A
+    candidate revising for an interview revises subjects and subtopics,
+    not the labels; and both pages were reachable from the footer of
+    every page on the site, which put the archive one click away from
+    everywhere.
+    """
+
+    concepts = knowledge_base["knowledge"]["concepts"]
+    technologies = knowledge_base["knowledge"]["technologies"]
+
+    if concepts:
+        assert not (site / "concepts").exists()
+        assert not (site / "concepts.html").exists()
+
+    if technologies:
+        assert not (site / "technologies").exists()
+        assert not (site / "technologies.html").exists()
+
+    assert not (site / "topics.html").exists()
+    assert not (site / "saved-items.html").exists()
+
+    # And nothing links to any of them.
+    for page in site.rglob("*.html"):
+        body = page.read_text(encoding="utf-8")
+
+        for gone in (
+            "concepts/",
+            "technologies/",
+            "concepts.html",
+            "technologies.html",
+            "topics.html",
+            "saved-items.html",
+        ):
+            assert gone not in body, f"{page.relative_to(site)}: {gone}"
+
+
+def test_every_concept_still_names_the_posts_it_came_from(
+    knowledge_base
+):
+    """
+    The traceability the concept page used to provide.
+
+    A concept that cannot be traced back to source is a claim nothing
+    supports. The page that listed its posts is gone; the linkage is not,
+    and it is what lets a reader search a label and land on a post.
+    """
+
     concepts = knowledge_base["knowledge"]["concepts"]
 
     if not concepts:
         pytest.skip("no concepts consolidated in this checkout")
 
-    pages = {path.stem for path in (site / "concepts").glob("*.html")}
-
     for concept in concepts:
-        assert concept["slug"] in pages, concept["name"]
+        assert concept["post_ids"], concept["name"]
+        assert concept["slug"], concept["name"]
 
 
-def test_every_technology_has_a_page(site, knowledge_base):
+def test_every_technology_still_names_the_posts_that_use_it(
+    knowledge_base
+):
     technologies = knowledge_base["knowledge"]["technologies"]
 
     if not technologies:
         pytest.skip("no technologies recognised in this checkout")
 
-    pages = {path.stem for path in (site / "technologies").glob("*.html")}
-
     for technology in technologies:
-        assert technology["slug"] in pages, technology["name"]
+        assert technology["post_ids"], technology["name"]
 
 
-def test_a_concept_page_lists_the_posts_it_came_from(
-    site, knowledge_base
+def test_a_shared_concept_still_carries_every_contributing_post(
+    knowledge_base
 ):
     """
-    A concept that cannot be traced back to source is a claim nothing
-    supports, so every concept page must name its posts.
-    """
+    The point of consolidation, which outlived the page.
 
-    for concept in knowledge_base["knowledge"]["concepts"]:
-        page = site / "concepts" / f"{concept['slug']}.html"
-        text = page.read_text(encoding="utf-8")
-
-        for post_id in concept["post_ids"]:
-            assert post_id in text, f"{concept['name']} -> {post_id}"
-
-
-def test_a_technology_page_lists_the_posts_that_use_it(
-    site, knowledge_base
-):
-    for technology in knowledge_base["knowledge"]["technologies"]:
-        page = site / "technologies" / f"{technology['slug']}.html"
-        text = page.read_text(encoding="utf-8")
-
-        for post_id in technology["post_ids"]:
-            assert post_id in text, f"{technology['name']} -> {post_id}"
-
-
-def test_a_shared_concept_links_posts_from_more_than_one_source(
-    site, knowledge_base
-):
-    """
-    The point of consolidation: one concept page that gathers several
-    posts, rather than a page per post.
+    One concept gathered from several posts, not one concept per post.
     """
 
     shared = [
@@ -807,54 +916,52 @@ def test_a_shared_concept_links_posts_from_more_than_one_source(
         pytest.skip("no concept is shared between posts yet")
 
     for concept in shared:
-        page = site / "concepts" / f"{concept['slug']}.html"
-        text = page.read_text(encoding="utf-8")
-
-        found = sum(1 for post in concept["post_ids"] if post in text)
-
-        assert found == len(concept["post_ids"]), concept["name"]
+        assert len(set(concept["post_ids"])) == len(concept["post_ids"]), (
+            concept["name"]
+        )
 
 
-def test_a_technology_links_the_posts_that_use_it(site, knowledge_base):
-    """
-    A technology appears only when a post mentions it, so its page
-    must point at those posts rather than at nothing.
-    """
-
-    for technology in knowledge_base["knowledge"]["technologies"]:
-        page = site / "technologies" / f"{technology['slug']}.html"
-        text = page.read_text(encoding="utf-8")
-
-        assert technology["post_ids"], technology["name"]
-        assert "posts/" in text, technology["name"]
-
-
-def test_no_technology_page_exists_without_a_supporting_post(
+def test_concepts_and_technologies_are_still_searchable_text(
     site, knowledge_base
 ):
     """
-    A technology page with no post behind it would be an invented
-    claim, so the two sets have to match exactly.
+    Where a reader meets them now.
+
+    Not as pages, but as text on the posts that discuss them, which is
+    what the technology keyword lists in the search index were for: a
+    search for "Azure Data Factory" has to find the posts that use it,
+    and it does.
     """
 
-    from_site = {
-        path.stem for path in (site / "technologies").glob("*.html")
+    payload = json.loads(
+        (site / "assets" / "search-index.json").read_text(encoding="utf-8")
+    )
+
+    concepts = knowledge_base["knowledge"]["concepts"]
+
+    if not concepts:
+        pytest.skip("no concepts consolidated in this checkout")
+
+    searchable = {
+        label
+        for record in payload["records"]
+        for label in record.get("c", [])
     }
 
-    from_kb = {
-        technology["slug"]
-        for technology in knowledge_base["knowledge"]["technologies"]
-    }
-
-    assert from_site == from_kb
+    for concept in concepts:
+        assert concept["name"] in searchable, concept["name"]
 
 
-def test_the_search_index_covers_concepts_and_technologies(
+def test_the_search_index_points_at_no_page_that_was_not_written(
     site, knowledge_base
 ):
     """
-    Search that cannot find a concept is not search over the
-    knowledge base, it is search over the posts.
+    The other half.
+
+    Every record's ``u`` is a URL a reader can follow. A record pointing
+    at a concept or technology page would have been a dead result in the
+    result list, which is worse than the concept not being findable at
+    all.
     """
 
     payload = json.loads(
@@ -863,19 +970,19 @@ def test_the_search_index_covers_concepts_and_technologies(
 
     records = payload["records"]
 
-    for concept in knowledge_base["knowledge"]["concepts"]:
-        page = f"concepts/{concept['slug']}.html"
+    assert records
 
-        assert any(
-            record["u"] == page for record in records
-        ), concept["name"]
+    for record in records:
+        target = site / record["u"]
 
-    for technology in knowledge_base["knowledge"]["technologies"]:
-        page = f"technologies/{technology['slug']}.html"
+        assert target.is_file(), (
+            f"{record['u']} is indexed but not generated"
+        )
 
-        assert any(
-            record["u"] == page for record in records
-        ), technology["name"]
+    for record in records:
+        assert record["u"].startswith(
+            ("posts/", "topics/")
+        ), record["u"]
 
 
 def test_every_post_records_what_kind_of_content_it_is(
@@ -986,20 +1093,52 @@ def test_the_site_and_the_knowledge_base_report_the_same_things(
     stats = knowledge_base["stats"]
 
     assert kinds.get("p") == stats["posts_aggregated"]
-    assert kinds.get("c") == stats["concepts_consolidated"]
-    assert kinds.get("x") == stats["technologies_consolidated"]
 
-    # The site renders topics and subtopics as navigable pages. A label
-    # that is both collapses onto one page, so the site count can be one
-    # lower than the two lists combined but never higher.
-    rendered = kinds.get("t", 0)
-    listed = (
-        stats["topics_consolidated"] + stats["subtopics_consolidated"]
-    )
+    # Concepts and technologies are no longer indexed as records of
+    # their own, because they no longer have pages. They are still in
+    # the knowledge base, and the posts that carry them still index them
+    # as searchable text -- which is the only way a reader now meets
+    # either. The counts come from the data, not from the index.
+    searchable_concepts = {
+        label
+        for record in payload["records"]
+        for label in record.get("c", [])
+    }
 
-    assert rendered <= listed
-    assert rendered >= max(
-        stats["topics_consolidated"], stats["subtopics_consolidated"]
+    searchable_technologies = {
+        label
+        for record in payload["records"]
+        for label in record.get("t", [])
+    }
+
+    assert kinds.get("c") is None
+    assert kinds.get("x") is None
+
+    # Every consolidated concept is reachable as searchable text. Not an
+    # equality: a post can carry a spelling the aggregator folded away,
+    # so the set of labels a reader can search is a superset of the set
+    # the knowledge base counts.
+    for concept in knowledge_base["knowledge"]["concepts"]:
+        assert concept["name"] in searchable_concepts, concept["name"]
+
+    for technology in knowledge_base["knowledge"]["technologies"]:
+        assert technology["name"] in searchable_technologies, technology["name"]
+
+    # Topics and subtopics are no longer archive pages either. They are
+    # rendered as the revision tree -- a subject per subject, a subtopic
+    # per subtopic -- and it is the tree that has to reconcile with the
+    # knowledge base, not a count of topic pages.
+    subjects = kinds.get("s", 0)
+    subtopics = kinds.get("b", 0)
+
+    assert subjects > 0
+    assert subtopics > 0
+
+    # Every revision page exists.
+    rendered_pages = sorted((site / "topics").rglob("*/*.html"))
+
+    assert len(rendered_pages) == subtopics, (
+        f"{len(rendered_pages)} pages for {subtopics} indexed subtopics"
     )
 
 

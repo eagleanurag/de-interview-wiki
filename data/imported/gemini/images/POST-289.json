@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-289",
+  "activity_id": "7458342412109660162",
+  "images": [
+    {
+      "post_id": "POST-289",
+      "activity_id": "7458342412109660162",
+      "filename": "activity_7458342412109660162_slide_0.jpg",
+      "path": "media/activity_7458342412109660162_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 390,
+      "height": 488,
+      "size_bytes": 23880,
+      "declared_sha256": "9b740808a0fa16899e4e59be7ec10b5424b074a63646be8c2853530274c33c75",
+      "actual_sha256": "9b740808a0fa16899e4e59be7ec10b5424b074a63646be8c2853530274c33c75",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "UNITY CATALOG\nan",
+      "redactions": 0,
+      "search_text": "UNITY CATALOG an",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "16 chars, 3 words, 88% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "26788d1f5988659567a79cbb01c6cb587accb34d6961c02df86e9559b4b8ebff"
+    }
+  ]
+}

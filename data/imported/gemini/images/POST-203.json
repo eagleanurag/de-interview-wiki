@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-203",
+  "activity_id": "7343486257341112321",
+  "images": [
+    {
+      "post_id": "POST-203",
+      "activity_id": "7343486257341112321",
+      "filename": "activity_7343486257341112321_slide_0.jpg",
+      "path": "media/activity_7343486257341112321_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 47755,
+      "declared_sha256": "9ecdba0114d8547d59b71495f526af9359f1c30089f338c3f10b257e3b7d33f4",
+      "actual_sha256": "9ecdba0114d8547d59b71495f526af9359f1c30089f338c3f10b257e3b7d33f4",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "American Express Data Analyst\nInterview Questions\n(0-3 Years)\n17-19 Ipa\nSQL Questions\n1. Write a query to find duplicate rows ina table.\n‘arte ey cmaes De St bone od ea en\nEames\nSee cn cu) cee\n‘To: Ad ROW MER) or AN CTE Mah or ee pe wid\n2. Explain the difference between INNER JOIN and OUTER\n3OIN with examples.\nRis matehing ero ah\nFiovenporecse\n‘Quy ony erotres wo beg Ws ener.\nape necord om he et sa mating ec a et ls 190\nSecu na renee\nSEs ene torrent none\n(Serban otpetnens d Ov eckssrmert = depart\n«tbe Magen othr ae wae\nsancti i aig eo elt.",
+      "redactions": 0,
+      "search_text": "American Express Data Analyst Interview Questions (0-3 Years) 17-19 Ipa SQL Questions 1. Write a query to find duplicate rows ina table. ‘arte ey cmaes De St bone od ea en Eames See cn cu) cee ‘To: Ad ROW MER) or AN CTE Mah or ee pe wid 2. Explain the difference between INNER JOIN and OUTER 3OIN with examples. Ris matehing ero ah Fiovenporecse ‘Quy ony erotres wo beg Ws ener. ape necord om he et sa mating ec a et ls 190 Secu na renee SEs ene torrent none (Serban otpetnens d Ov eckssrmert = depart «tbe Magen othr ae wae sancti i aig eo elt.",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "545 chars, 102 words, 75% letters, 6% symbols, 1.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "25758091644caf736cfc26c1827ce97392ddbb44e149e898db5ae7c391e717f5"
+    }
+  ]
+}

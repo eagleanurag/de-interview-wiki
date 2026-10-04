@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-052",
+  "activity_id": "7305188290385588224",
+  "images": [
+    {
+      "post_id": "POST-052",
+      "activity_id": "7305188290385588224",
+      "filename": "activity_7305188290385588224_slide_0.jpg",
+      "path": "media/activity_7305188290385588224_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 640,
+      "size_bytes": 25502,
+      "declared_sha256": "075583539a91c11d74b9b61fc73573d880abfd8f3b71e4d6d1254088bafe2500",
+      "actual_sha256": "075583539a91c11d74b9b61fc73573d880abfd8f3b71e4d6d1254088bafe2500",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "is ys\n. ,\nin",
+      "redactions": 0,
+      "search_text": "is ys . , in",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "12 chars, 3 words, 50% letters, 17% symbols, 8.3% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "87dbb0bddc63978b0087ca2daab109209013f2f020bcff369afd06a3310cdef5"
+    }
+  ]
+}

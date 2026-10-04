@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-177",
+  "activity_id": "7340936303015841792",
+  "images": [
+    {
+      "post_id": "POST-177",
+      "activity_id": "7340936303015841792",
+      "filename": "activity_7340936303015841792_slide_0.jpg",
+      "path": "media/activity_7340936303015841792_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 403,
+      "size_bytes": 25267,
+      "declared_sha256": "4906ef0b58fd5b60169b99e93630811cd50a02ca06eb83033112a502107fcf36",
+      "actual_sha256": "4906ef0b58fd5b60169b99e93630811cd50a02ca06eb83033112a502107fcf36",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "1 St risocmete tyre et iS oS]\n\n1 Ef olepceries {Ser 1 et Mot fay\n: I category | price |\n\nLappte | Ot\n\nLenerry | 361\n\n[ore | 8]\n\nLorange | 14]",
+      "redactions": 0,
+      "search_text": "1 St risocmete tyre et iS oS] 1 Ef olepceries {Ser 1 et Mot fay : I category | price | Lappte | Ot Lenerry | 361 [ore | 8] Lorange | 14]",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "141 chars, 20 words, 59% letters, 15% symbols, 0.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "79268923326a5cc0c109392e0016acdb58432bf918de4aa8aeff333f263bde91"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-132",
+  "activity_id": "7337673670124781568",
+  "images": [
+    {
+      "post_id": "POST-132",
+      "activity_id": "7337673670124781568",
+      "filename": "activity_7337673670124781568_slide_0.jpg",
+      "path": "media/activity_7337673670124781568_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 82628,
+      "declared_sha256": "eeba617229de2e9783ddcd47f6556aff5cfa8e1fb00fb8e25423d3cee68bf133",
+      "actual_sha256": "eeba617229de2e9783ddcd47f6556aff5cfa8e1fb00fb8e25423d3cee68bf133",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "DATA ENGINEER INTERVIEW PREF\n- SQLIS STILL KING 4\nWhether you're aiming for your first role or leveling up\nto senior data engineer positions — one thing is clear:\nSQL is a non-negotiable skill.\nTIMELESS TIPS FOR SQL PREP:\n* MASTER WINDOW FUNCTIONS (ROW_NUMBER,\nRANK, LEAD, LAG)\n* PRACTICE AGGREGATIONS + GROUP BY TRICKS\n© GET COMFORTABLE WITH CTES & SUBQUERIES\n* SOLVE PROBLEMS INVOLVING SCDs, JOINS,\nAND DATA DEDUPLICATION\n© THINK LIKE AN ENGINEER:: WRITE QUERIES THAT\nSCALE\n° Pro Tip: Sites like LeetCode, StrataScratch, and\nMode Analytics have goidmine-level SQL questions\nfor practice.\n8 SQL SCENARIO EXAMPLE:\n“Given a sales table, how would you get the highest\nsale per month per product?”\nIf you're thinking ROW_NUMBER() OVER(PARTITION\nBY ...), you're on the right track\nIf you're preparing for data engineer roles — let's\nconnect and exchange notes!\n#DataEngineering #SQL #InterviewPrep #BigData#ETL\n#DataEngineer #Databricks #Analytics #StrataScratch",
+      "redactions": 0,
+      "search_text": "DATA ENGINEER INTERVIEW PREF - SQLIS STILL KING 4 Whether you're aiming for your first role or leveling up to senior data engineer positions — one thing is clear: SQL is a non-negotiable skill. TIMELESS TIPS FOR SQL PREP: * MASTER WINDOW FUNCTIONS (ROW_NUMBER, RANK, LEAD, LAG) * PRACTICE AGGREGATIONS + GROUP BY TRICKS © GET COMFORTABLE WITH CTES & SUBQUERIES * SOLVE PROBLEMS INVOLVING SCDs, JOINS, AND DATA DEDUPLICATION © THINK LIKE AN ENGINEER:: WRITE QUERIES THAT SCALE ° Pro Tip: Sites like LeetCode, StrataScratch, and Mode Analytics have goidmine-level SQL questions for practice. 8 SQL SCENARIO EXAMPLE: “Given a sales table, how would you get the highest sale per month per product?” If you're thinking ROW_NUMBER() OVER(PARTITION BY ...), you're on the right track If you're preparing for data engineer roles — let's connect and exchange notes! #DataEngineering #SQL #InterviewPrep #BigData#ETL #DataEngineer #Databricks #Analytics #StrataScratch",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "958 chars, 137 words, 78% letters, 6% symbols, 1.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "4f7abb20e446521f3aacf847651a542d077f6aedf5a379fa3bacd8435d516154"
+    }
+  ]
+}

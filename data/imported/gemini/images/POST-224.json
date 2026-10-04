@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-224",
+  "activity_id": "7346044123352616960",
+  "images": [
+    {
+      "post_id": "POST-224",
+      "activity_id": "7346044123352616960",
+      "filename": "activity_7346044123352616960_slide_0.jpg",
+      "path": "media/activity_7346044123352616960_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 480,
+      "size_bytes": 45093,
+      "declared_sha256": "6d16ad53dcfcde491b8604e8691c4db0fd711df3938a21b923293280670bc0c5",
+      "actual_sha256": "6d16ad53dcfcde491b8604e8691c4db0fd711df3938a21b923293280670bc0c5",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "PySpark functions - Chess Board\nnm cure a | “en jon ia\n~~~\n\nwith\nina.dropkeoam sort EMU dropna Mr) flatmap\nRenamed\n\nFP eoaregste foreach random]\n\nreducelvkey Baeeiva Cited foreach| am Split\nsaveAs|\ntoPandas\n\n= w0PF | _ iTuble = ‘a\nspark a spark drop\n‘Context ca I once ss | eM.",
+      "redactions": 0,
+      "search_text": "PySpark functions - Chess Board nm cure a | “en jon ia ~~~ with ina.dropkeoam sort EMU dropna Mr) flatmap Renamed FP eoaregste foreach random] reducelvkey Baeeiva Cited foreach| am Split saveAs| toPandas = w0PF | _ iTuble = ‘a spark a spark drop ‘Context ca I once ss | eM.",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "277 chars, 45 words, 73% letters, 7% symbols, 0.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "69b6d507efce8735e3fb89d8cfbdd7529750a70ed9aee4baf69b123d1619af2c"
+    }
+  ]
+}

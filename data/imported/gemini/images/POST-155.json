@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-155",
+  "activity_id": "7339202820434268163",
+  "images": [
+    {
+      "post_id": "POST-155",
+      "activity_id": "7339202820434268163",
+      "filename": "activity_7339202820434268163_slide_0.jpg",
+      "path": "media/activity_7339202820434268163_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 323,
+      "size_bytes": 22601,
+      "declared_sha256": "d0af5c827864e48effe88771763f37606b3688f04950b54ace1cd19ad3c13f6f",
+      "actual_sha256": "d0af5c827864e48effe88771763f37606b3688f04950b54ace1cd19ad3c13f6f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": ": -P —_—_——— =.\n3.2. = ia 4\nZan? Pay",
+      "redactions": 0,
+      "search_text": ": -P —_—_——— =. 3.2. = ia 4 Zan? Pay",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "garbled",
+      "ocr_note": "36 chars, 4 words, 25% letters, 50% symbols, 13.9% sentence marks; overwhelmingly symbol rather than letters",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "22f9c6b35c2c827dcecad8d84b1ef107cf384c885c1fc1a4c0fce40e9a816d1d"
+    }
+  ]
+}

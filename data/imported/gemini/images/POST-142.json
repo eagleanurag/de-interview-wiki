@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-142",
+  "activity_id": "7338442479387480066",
+  "images": [
+    {
+      "post_id": "POST-142",
+      "activity_id": "7338442479387480066",
+      "filename": "activity_7338442479387480066_slide_0.jpg",
+      "path": "media/activity_7338442479387480066_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 650,
+      "size_bytes": 60263,
+      "declared_sha256": "4b03ab041114658ae64bde164809ec7d7932a445b0c0d41861b499cf4d36e2cb",
+      "actual_sha256": "4b03ab041114658ae64bde164809ec7d7932a445b0c0d41861b499cf4d36e2cb",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "eee\n‘tram pyspark.sql. import Sparksession\nteam pyspark-aql.tunctions import col, dese, asc, row.numer, rank, dense_rank, Ut\n‘ram pyspark.sawindow Inport window\n«+ tnitialize spark session\nSpark = Sparksesstonbul Ler -appae( \"Rark\\norunctonsdeno\").getOrcreatet)\n# create diverse dataset with ties and edge cases for comprehensive testing\ndata = |\n(Calice tohnson*, “Engineering®, $5, 120088), Top performer, top salary\n(aon atthe, “Ehgincering’, 887 118000), \"4 cond performers good salary\n(charle Browns, \"engineering™, 08, 1180@@),# SIME as Bob ~ performance AND salary the\n(otana Prince’, “Engineering, 82, 185080),” # TOP performer but LOWER salary than others\n(eva martinez\", \"sates\", 92, 138008), ¢ Top performer, TOP salary\n(Frank wilson’, *Sales:, 78, Ssaae),” ¢ Low performer, lou salary\nUrorace Lee’, \"Sates\", 98, s500e), 4 TOP performance but LOWER salary than Eva\nCheney Davids, “Sates, 75, OSMN0), # Lover performer, Lower salary\n(ctvy chent, “Marketings, 99, 190000), 6 Top performer, top salary\n(caack Turner\", \"Marketing\", 88, 95000), # TOP performance but LONER salary than Ivy\nCoretty Moores) “Marketing; 62, Tiseee}, \"# Lover pertormance but HIGH salary\nCUiam Taylors, Marketing, 62, 90008) \"# SINE perfornance 95 Kelty, Tower satBry\n1\ncolumns = (employee rane\", “department, *pertornance score, “salary\"]\n4 create nataFrane\n{f= spark.createDataFrane(data, columns)\npeint(*=-= ORIGINAL BATASET ==\")\n‘Seshow)\n1+ Define window speciftcations for different ranking scenarios\n# window partitioned by department, ordered by performance score OWLY (to show true ties)\n‘indow pert dept = windowpartLonay departnent”)-orderBy(dese( performance score\")\n‘+ window partitioned by departaent, ordered by salary OMLY (to show true ties)\n‘indow salary. dept = Window-parttionly(“deparnent”)orderBy{desc(salary\"))\n4 window for coupany vide performance ranking (ONLY by performance to show true ters)\n‘andow_perf company = Window. part ttonBy(it(“I\")).orderBy(dese(“peroreance_score\"))\nDrint(*\\ron= RAKING COMPARISON SIDE BY SIDE —=\")\nF'show atl ranking Tunetions suse by side for performance within departaent\ncompar son. = af-select(\nenployee.nane\", \"department\", “performance score\", \"salary\",\nston mien: Always assigns Unique sequential munbers (2,2,3,4...)\n‘row number ).over(vindow_pert_dept) -atias( \"roxio erf\"),\nshanks ness sane rank to Tles, skips next fork (11,298...)\n‘ankt) -overtwtndow pert dept) .aliaat“rank pert\"),\nSENSE RANK Assigns sape rank to thes, 0 9998 (1,1,2,9.-0)\ndense rank ).over(window, pert dept) -alias( \"dence_ranic perf\")\n’\nComparison. orderBy(\"departaent®, deset “performance score ))-showt)",
+      "redactions": 0,
+      "search_text": "eee ‘tram pyspark.sql. import Sparksession team pyspark-aql.tunctions import col, dese, asc, row.numer, rank, dense_rank, Ut ‘ram pyspark.sawindow Inport window «+ tnitialize spark session Spark = Sparksesstonbul Ler -appae( \"Rark\\norunctonsdeno\").getOrcreatet) # create diverse dataset with ties and edge cases for comprehensive testing data = | (Calice tohnson*, “Engineering®, $5, 120088), Top performer, top salary (aon atthe, “Ehgincering’, 887 118000), \"4 cond performers good salary (charle Browns, \"engineering™, 08, 1180@@),# SIME as Bob ~ performance AND salary the (otana Prince’, “Engineering, 82, 185080),” # TOP performer but LOWER salary than others (eva martinez\", \"sates\", 92, 138008), ¢ Top performer, TOP salary (Frank wilson’, *Sales:, 78, Ssaae),” ¢ Low performer, lou salary Urorace Lee’, \"Sates\", 98, s500e), 4 TOP performance but LOWER salary than Eva Cheney Davids, “Sates, 75, OSMN0), # Lover performer, Lower salary (ctvy chent, “Marketings, 99, 190000), 6 Top performer, top salary (caack Turner\", \"Marketing\", 88, 95000), # TOP performance but LONER salary than Ivy Coretty Moores) “Marketing; 62, Tiseee}, \"# Lover pertormance but HIGH salary CUiam Taylors, Marketing, 62, 90008) \"# SINE perfornance 95 Kelty, Tower satBry 1 columns = (employee rane\", “department, *pertornance score, “salary\"] 4 create nataFrane {f= spark.createDataFrane(data, columns) peint(*=-= ORIGINAL BATASET ==\") ‘Seshow) 1+ Define window speciftcations for different ranking scenarios # window partitioned by department, ordered by performance score OWLY (to show true ties) ‘indow pert dept = windowpartLonay departnent”)-orderBy(dese( performance score\") ‘+ window partitioned by departaent, ordered by salary OMLY (to show true ties) ‘indow salary. dept = Window-parttionly(“deparnent”)orderBy{desc(salary\")) 4 window for coupany vide performance ranking (ONLY by performance to show true ters) ‘andow_perf company = Window. part ttonBy(it(“I\")).orderBy(dese(“peroreance_score\")) Drint(*\\ron= RAKING COMPARISON SIDE BY SIDE —=\") F'show atl ranking Tunetions suse by side for performance within departaent compar son. = af-select( enployee.nane\", \"department\", “performance score\", \"salary\", ston mien: Always assigns Unique sequential munbers (2,2,3,4...) ‘row number ).over(vindow_pert_dept) -atias( \"roxio erf\"), shanks ness sane rank to Tles, skips next fork (11,298...) ‘ankt) -overtwtndow pert dept) .aliaat“rank pert\"), SENSE RANK Assigns sape rank to thes, 0 9998 (1,1,2,9.-0) dense rank ).over(window, pert dept) -alias( \"dence_ranic perf\") ’ Comparison. orderBy(\"departaent®, deset “performance score ))-showt)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "2628 chars, 324 words, 71% letters, 16% symbols, 1.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "b6d1d83e93ed45731c950d8aa97d0f9d111b77ae99de79e754ea21c78457ab37"
+    }
+  ]
+}

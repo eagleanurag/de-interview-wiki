@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-086",
+  "activity_id": "7325097644559638528",
+  "images": [
+    {
+      "post_id": "POST-086",
+      "activity_id": "7325097644559638528",
+      "filename": "activity_7325097644559638528_slide_0.jpg",
+      "path": "media/activity_7325097644559638528_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 621,
+      "size_bytes": 86453,
+      "declared_sha256": "97a90c5e4d71c4f701715a562115d4ddb7e3f72e2933b35a9c3b8c89caaa14ec",
+      "actual_sha256": "97a90c5e4d71c4f701715a562115d4ddb7e3f72e2933b35a9c3b8c89caaa14ec",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "EXCEL FUNCTIONS Jo2tn%- (¥=}\n_ HAVE HEARD OF t=!\nDROP 7 =onoP(aray rows, eo) i= es\nSererettocec SBI) om tet crcrstomternge See\nCombines ara erty achat CAS Perce\n[EXPAND SESE) ee\nevco. | aeons ge\nEe ceeeiieie § =6VCOL(AT:C10, LAMBDA(x, SUM(s))) Sema ceaa\nLAMBDA Ze. =\\aMaoA(porameter(} cceution) (Sa)\nPIVOTBY fe =PIVOTBY (values, rows, columns, (orvose) (Sas\n#\nEe EE os 7\nBYROW. aetna eras a",
+      "redactions": 0,
+      "search_text": "EXCEL FUNCTIONS Jo2tn%- (¥=} _ HAVE HEARD OF t=! DROP 7 =onoP(aray rows, eo) i= es Sererettocec SBI) om tet crcrstomternge See Combines ara erty achat CAS Perce [EXPAND SESE) ee evco. | aeons ge Ee ceeeiieie § =6VCOL(AT:C10, LAMBDA(x, SUM(s))) Sema ceaa LAMBDA Ze. =\\aMaoA(porameter(} cceution) (Sa) PIVOTBY fe =PIVOTBY (values, rows, columns, (orvose) (Sas # Ee EE os 7 BYROW. aetna eras a",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "390 chars, 65 words, 69% letters, 14% symbols, 1.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "c66bf7c5d7587684ab7e6fa971b0f3f8b9c2063f15c26ad9efc2b4e1216e7650"
+    }
+  ]
+}

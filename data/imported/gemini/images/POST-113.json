@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-113",
+  "activity_id": "7328050835572088832",
+  "images": [
+    {
+      "post_id": "POST-113",
+      "activity_id": "7328050835572088832",
+      "filename": "activity_7328050835572088832_slide_0.jpg",
+      "path": "media/activity_7328050835572088832_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 591,
+      "size_bytes": 495746,
+      "declared_sha256": "38b199aba085e282106a126b1f0f822e325fda96defd17992c601640dfba856a",
+      "actual_sha256": "38b199aba085e282106a126b1f0f822e325fda96defd17992c601640dfba856a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "a >\nH H H “\nRelational/SQt Time-Series Nos.\nDatabase Database Database\n1s Mysat 1+ tte 1+ Inte\n{Detect 1 Timoscawon f+ Timescale\n} Eatersonsatsener | 1 Oithouse 1 otopmte\n1 rostgresat 1 © Prometheus | + Pometeus\nHE _eatctonships TEIN vigh-write read ag Document-boved (6)\nEe ee |\n\\ H Fa Cobrrer-toved\nH H CER)\n\\ Cia |\nHE tronsactions «i '\nfag) Aci properties I '\n' Fa tonctona’\"\"* IRR) cistiburec ach. EE\nH Indexing H Nosat\nee \\\nH : ! NowSat",
+      "redactions": 0,
+      "search_text": "a > H H H “ Relational/SQt Time-Series Nos. Database Database Database 1s Mysat 1+ tte 1+ Inte {Detect 1 Timoscawon f+ Timescale } Eatersonsatsener | 1 Oithouse 1 otopmte 1 rostgresat 1 © Prometheus | + Pometeus HE _eatctonships TEIN vigh-write read ag Document-boved (6) Ee ee | \\ H Fa Cobrrer-toved H H CER) \\ Cia | HE tronsactions «i ' fag) Aci properties I ' ' Fa tonctona’\"\"* IRR) cistiburec ach. EE H Indexing H Nosat ee \\ H : ! NowSat",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "441 chars, 61 words, 70% letters, 11% symbols, 0.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "e498a924efa8c6fe23450fd89af67d0a77795f030ec36c65e6d90061a9933737"
+    }
+  ]
+}

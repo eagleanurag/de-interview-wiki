@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-146",
+  "activity_id": "7338573772557307905",
+  "images": [
+    {
+      "post_id": "POST-146",
+      "activity_id": "7338573772557307905",
+      "filename": "activity_7338573772557307905_slide_0.jpg",
+      "path": "media/activity_7338573772557307905_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 487,
+      "height": 487,
+      "size_bytes": 34685,
+      "declared_sha256": "3bbc7a84da1e11915d4b3418de9a1e8dc4c0fde4bfdf7b5aadedb2300e2b00d5",
+      "actual_sha256": "3bbc7a84da1e11915d4b3418de9a1e8dc4c0fde4bfdf7b5aadedb2300e2b00d5",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Amazon RDS: A Deep Dive\ninto the Cloud’s Relational\nBackbone\n——fe =\nfe |\nare",
+      "redactions": 0,
+      "search_text": "Amazon RDS: A Deep Dive into the Cloud’s Relational Backbone ——fe = fe | are",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "76 chars, 14 words, 74% letters, 8% symbols, 1.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "37efc8480501d22575280e0ff0630933c4c92825a5a493949d69da08e38c3b11"
+    }
+  ]
+}

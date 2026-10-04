@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-104",
+  "activity_id": "7327237430086959105",
+  "images": [
+    {
+      "post_id": "POST-104",
+      "activity_id": "7327237430086959105",
+      "filename": "activity_7327237430086959105_slide_0.jpg",
+      "path": "media/activity_7327237430086959105_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 678,
+      "size_bytes": 35665,
+      "declared_sha256": "e4d7b8e210df4a99720a436ad1161ffe870242fa4d316775ebbac03fccf3b798",
+      "actual_sha256": "e4d7b8e210df4a99720a436ad1161ffe870242fa4d316775ebbac03fccf3b798",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "‘rij Kishore Pandey\nosipoten\n\nproject mane!\n\n1\n\n2 contisy 4 configuration files (e.¢., eatabase connections, APE Keys)\n\n[8 contis.yam\n\nte\n\nI\n\nBaste 1 Raw and processed data fies\n\n| enw\n\n1 Co precesseas\n\nl\n\nB— seess # Project docunentation\n\n[pe ReADRE.\n\npe\n\nI\n\npow 1 TL (extract, Transform, Loa) seriots\n\n|B extracts\n\nTT pe tase\n\n[| bo everaet_sota.oy\n\npre.\n\n| 2 eeanstores\n\n| pa inse_py\n\n| | So Geanetoredata.py\n\npe\n\nTL tees\n\n| wen —tetey\n\n| s Yene satay\n\n,\n\nl\n\n1B — pipetines! 1 sta pipetine orchestration soripts\n\n|e inie_.oy\n\n|S bipetine.t oy\n\npo\n\nI\n\n2 sre = source cose\n\na) 1 bata processing and transformation scripts\n\n| ea ince oy\n\n|| = Gata-preprecessing.py\n\nae\n\n|p sestss  veltity sexipes and helper fanetions\n\nTf pa insta\n\n[| so terseroy\n\nLoe\n\n| Ree a\n\n= data.vaiivation.oy\n\n{\n\nl\n\nBD testes 1 Unig ang integration teste\n\n[8 inie_.oy\n\n[bo eesteetpy\n\n| pe stan emcees.\n\ni\n\nS— .gieignore fe Sgnore sutes\n\nb= envszonsent.yat 4 onda envizonment fie to manage sepensencies",
+      "redactions": 0,
+      "search_text": "‘rij Kishore Pandey osipoten project mane! 1 2 contisy 4 configuration files (e.¢., eatabase connections, APE Keys) [8 contis.yam te I Baste 1 Raw and processed data fies | enw 1 Co precesseas l B— seess # Project docunentation [pe ReADRE. pe I pow 1 TL (extract, Transform, Loa) seriots |B extracts TT pe tase [| bo everaet_sota.oy pre. | 2 eeanstores | pa inse_py | | So Geanetoredata.py pe TL tees | wen —tetey | s Yene satay , l 1B — pipetines! 1 sta pipetine orchestration soripts |e inie_.oy |S bipetine.t oy po I 2 sre = source cose a) 1 bata processing and transformation scripts | ea ince oy || = Gata-preprecessing.py ae |p sestss veltity sexipes and helper fanetions Tf pa insta [| so terseroy Loe | Ree a = data.vaiivation.oy { l BD testes 1 Unig ang integration teste [8 inie_.oy [bo eesteetpy | pe stan emcees. i S— .gieignore fe Sgnore sutes b= envszonsent.yat 4 onda envizonment fie to manage sepensencies",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "975 chars, 145 words, 69% letters, 9% symbols, 1.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "776d3fddbeb669fd6ddcf0ce89ab0fb6155f8809d00e0408817fca0802bc4834"
+    }
+  ]
+}

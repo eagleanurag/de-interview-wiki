@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-141",
+  "activity_id": "7338328091057885187",
+  "images": [
+    {
+      "post_id": "POST-141",
+      "activity_id": "7338328091057885187",
+      "filename": "activity_7338328091057885187_slide_0.jpg",
+      "path": "media/activity_7338328091057885187_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 225,
+      "size_bytes": 23047,
+      "declared_sha256": "25aaae554c7f1547d75fa5ad83d9e10e73318fde3061f3700c59c3e5b700dfb6",
+      "actual_sha256": "25aaae554c7f1547d75fa5ad83d9e10e73318fde3061f3700c59c3e5b700dfb6",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Tablea Tables LEFT JOIN\nes\n| qtyluid] [id] drinks| | qtyluid| id| drinks]\n|9000] 2] | 1]coca-cola] | 40] 2] 2{ Beer]\n| 75] 31 | 2] Beer| | 75| 3| 3] water|\n| se] al | 3 Water| | 5@| 4| 4|RedBull|\n| 100] 5] | 4] RedBull] | 100] 5|NULL]  NuLL|\n|1000| 6] +--+---------+ [1000] 6]NULL] NULL]",
+      "redactions": 0,
+      "search_text": "Tablea Tables LEFT JOIN es | qtyluid] [id] drinks| | qtyluid| id| drinks] |9000] 2] | 1]coca-cola] | 40] 2] 2{ Beer] | 75] 31 | 2] Beer| | 75| 3| 3] water| | se] al | 3 Water| | 5@| 4| 4|RedBull| | 100] 5] | 4] RedBull] | 100] 5|NULL] NuLL| |1000| 6] +--+---------+ [1000] 6]NULL] NULL]",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "garbled",
+      "ocr_note": "287 chars, 24 words, 39% letters, 40% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "cbe923a635b89309e29209cefc4c9e007599caf74d4cb207c53a895a406f535e"
+    }
+  ]
+}

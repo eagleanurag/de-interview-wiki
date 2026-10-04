@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-051",
+  "activity_id": "7305087695242878976",
+  "images": [
+    {
+      "post_id": "POST-051",
+      "activity_id": "7305087695242878976",
+      "filename": "activity_7305087695242878976_slide_0.jpg",
+      "path": "media/activity_7305087695242878976_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 540,
+      "size_bytes": 245613,
+      "declared_sha256": "08a15b19432d5007249d7a448a3449e74f0a1e2c5f2ae5c682c3de1e108e3457",
+      "actual_sha256": "08a15b19432d5007249d7a448a3449e74f0a1e2c5f2ae5c682c3de1e108e3457",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Qerovdaiy omwow ~ 8 oo el\nTan\n5 One deo fe pontine AEE\nse {oe\na Sa oo\n= SL (Comecuey_)\ne Dremtae | wh\nED crv Oost\n© Bem aes\n5 Dan Qs\nBD wasein omer",
+      "redactions": 0,
+      "search_text": "Qerovdaiy omwow ~ 8 oo el Tan 5 One deo fe pontine AEE se {oe a Sa oo = SL (Comecuey_) e Dremtae | wh ED crv Oost © Bem aes 5 Dan Qs BD wasein omer",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "147 chars, 30 words, 68% letters, 7% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ba2732d2545268f22ee5fd9bcecc1c03dcade66470e579b647bc3ef43a762493"
+    }
+  ]
+}

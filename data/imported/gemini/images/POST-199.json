@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-199",
+  "activity_id": "7343254116598542337",
+  "images": [
+    {
+      "post_id": "POST-199",
+      "activity_id": "7343254116598542337",
+      "filename": "activity_7343254116598542337_slide_0.jpg",
+      "path": "media/activity_7343254116598542337_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 969427,
+      "declared_sha256": "3cebab35d4ce9255f3efcfa3daac4d11f7dc1e0fdcb2c51e9961812e8e1ba1ad",
+      "actual_sha256": "3cebab35d4ce9255f3efcfa3daac4d11f7dc1e0fdcb2c51e9961812e8e1ba1ad",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Examples Command/clauses Order of\nExecution\n\nte ann res esesareenn\ncea et Ss\nmetre Saace ee || @ wee\nSeatene atop =Soaa\n‘cr Frou te @ croursy\nWHEE co’ BOF ot «2: Soastons\nsnctetom ent ot igh eae\nScr cou coz SEE EE Scena navine\nee SOMES weer e\nSeacrcount) SESS eee || @ eer\nsecant ase © onperey\nsaecrmadioot) SS\n= = a\nrrr yrerr ser ror “wroare saan meter aro Myra (ct\nSucr avo(cot) ron sot =\n———— eD\nSELECT * FROM thi AS {1 LEFT JOIN — ov\nSaasaontacot-est srummunion leat ‘ener some\neget eat as\n= cD\nee) Data Definition Language Sao\nCropton\n‘me cover) comare ae\ntose ane | Soe @D\nsaute =\ncar ‘Kura egg ‘amon some\n\nSS hnms |] me = @D\n(00 AS ewcotmename ‘Sirocco\nrower Settee | eratovrnsome",
+      "redactions": 0,
+      "search_text": "Examples Command/clauses Order of Execution te ann res esesareenn cea et Ss metre Saace ee || @ wee Seatene atop =Soaa ‘cr Frou te @ croursy WHEE co’ BOF ot «2: Soastons snctetom ent ot igh eae Scr cou coz SEE EE Scena navine ee SOMES weer e Seacrcount) SESS eee || @ eer secant ase © onperey saecrmadioot) SS = = a rrr yrerr ser ror “wroare saan meter aro Myra (ct Sucr avo(cot) ron sot = ———— eD SELECT * FROM thi AS {1 LEFT JOIN — ov Saasaontacot-est srummunion leat ‘ener some eget eat as = cD ee) Data Definition Language Sao Cropton ‘me cover) comare ae tose ane | Soe @D saute = car ‘Kura egg ‘amon some SS hnms |] me = @D (00 AS ewcotmename ‘Sirocco rower Settee | eratovrnsome",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "687 chars, 117 words, 72% letters, 8% symbols, 0.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "d51595e916e11a50a8fa3cd20a79b9e8da96b45d8b1f93636120f82790834b17"
+    }
+  ]
+}

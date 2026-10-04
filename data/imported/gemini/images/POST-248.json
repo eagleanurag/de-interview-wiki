@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-248",
+  "activity_id": "7348901286022455296",
+  "images": [
+    {
+      "post_id": "POST-248",
+      "activity_id": "7348901286022455296",
+      "filename": "activity_7348901286022455296_slide_0.jpg",
+      "path": "media/activity_7348901286022455296_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 299,
+      "height": 168,
+      "size_bytes": 12364,
+      "declared_sha256": "6f3498093e0d49baef6d8b049c220993104c5b08713885d44887c15f9cd2273f",
+      "actual_sha256": "6f3498093e0d49baef6d8b049c220993104c5b08713885d44887c15f9cd2273f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "eee ime |/\nDeloitte. EY",
+      "redactions": 0,
+      "search_text": "eee ime |/ Deloitte. EY",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "23 chars, 4 words, 70% letters, 13% symbols, 4.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "1a9e4aec03290b6fa1bb2fb7133257995ccab8ac44254c3bebae0af0d5b504f9"
+    }
+  ]
+}

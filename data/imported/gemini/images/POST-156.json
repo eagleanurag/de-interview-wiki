@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-156",
+  "activity_id": "7339230107628134404",
+  "images": [
+    {
+      "post_id": "POST-156",
+      "activity_id": "7339230107628134404",
+      "filename": "activity_7339230107628134404_slide_0.jpg",
+      "path": "media/activity_7339230107628134404_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 387,
+      "height": 484,
+      "size_bytes": 31171,
+      "declared_sha256": "228ef9e8f761896d3bfcd019b41ad139b02d106dfbb04bbd4e1de0895687a54d",
+      "actual_sha256": "228ef9e8f761896d3bfcd019b41ad139b02d106dfbb04bbd4e1de0895687a54d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Data Engineering 101 -\nSQL vs PySpark\n80+ |\ncomparisons\n©",
+      "redactions": 0,
+      "search_text": "Data Engineering 101 - SQL vs PySpark 80+ | comparisons ©",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "57 chars, 6 words, 67% letters, 16% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2561e635083f3d51aa3b9cc8cd4a33e0bbff9856d293b04aff0115590ccbafbc"
+    }
+  ]
+}

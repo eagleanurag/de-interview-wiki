@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-250",
+  "activity_id": "7348931483375431681",
+  "images": [
+    {
+      "post_id": "POST-250",
+      "activity_id": "7348931483375431681",
+      "filename": "activity_7348931483375431681_slide_0.jpg",
+      "path": "media/activity_7348931483375431681_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 645,
+      "size_bytes": 44625,
+      "declared_sha256": "7eb72a7706ef0a8b5dd05141ff3427ee3811fb5380d2cd4bd87b02100672f4d1",
+      "actual_sha256": "7eb72a7706ef0a8b5dd05141ff3427ee3811fb5380d2cd4bd87b02100672f4d1",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Deloitte\nSQL INTERVIEW\nQUESTION\nInput Table\nyear company_name_ product_name\n2019 Toyota Avalon\n2019 Toyota Camry\n2020 Toyota Corolla\n2019 Honda Accord\n2019 Honda Passport\nOutput\n\ncompany _name_net_products\n1 Chevrolet 2\n2 Ford a\n3 Honda 3\n4 Jeep 1\n5 Toyota aT",
+      "redactions": 0,
+      "search_text": "Deloitte SQL INTERVIEW QUESTION Input Table year company_name_ product_name 2019 Toyota Avalon 2019 Toyota Camry 2020 Toyota Corolla 2019 Honda Accord 2019 Honda Passport Output company _name_net_products 1 Chevrolet 2 2 Ford a 3 Honda 3 4 Jeep 1 5 Toyota aT",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "259 chars, 33 words, 71% letters, 13% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ce90c1a98c1b96ea586c508213b535be96beb54af10ca75c710a546072564c0f"
+    }
+  ]
+}

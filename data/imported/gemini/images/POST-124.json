@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-124",
+  "activity_id": "7330193015812083712",
+  "images": [
+    {
+      "post_id": "POST-124",
+      "activity_id": "7330193015812083712",
+      "filename": "activity_7330193015812083712_slide_0.jpg",
+      "path": "media/activity_7330193015812083712_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 558,
+      "size_bytes": 12364,
+      "declared_sha256": "935a19d2985c7fa8ee7a1345d7fe1776ac90c6a20e7a4b417e405ed81bfcc607",
+      "actual_sha256": "935a19d2985c7fa8ee7a1345d7fe1776ac90c6a20e7a4b417e405ed81bfcc607",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Certifications\nProjects $\nehetee Cg. 6.6 5 oy 16 ee!",
+      "redactions": 0,
+      "search_text": "Certifications Projects $ ehetee Cg. 6.6 5 oy 16 ee!",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "52 chars, 6 words, 65% letters, 17% symbols, 5.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "092851625856ec48158576d1b76570fdd5c03d4355c1361d1f47437fd939a743"
+    }
+  ]
+}

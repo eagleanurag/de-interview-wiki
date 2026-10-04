@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-235",
+  "activity_id": "7347739699681083393",
+  "images": [
+    {
+      "post_id": "POST-235",
+      "activity_id": "7347739699681083393",
+      "filename": "activity_7347739699681083393_slide_0.jpg",
+      "path": "media/activity_7347739699681083393_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 324,
+      "height": 486,
+      "size_bytes": 34151,
+      "declared_sha256": "a26aacbfdefe3da83b85038ad3265c46082bd43e8214aa6941e961a94db27825",
+      "actual_sha256": "a26aacbfdefe3da83b85038ad3265c46082bd43e8214aa6941e961a94db27825",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "OREILLY\nTechnical Guide\nUnderstanding\nData Pipelines for\nModern Data Architectures\nMatt Palmer",
+      "redactions": 0,
+      "search_text": "OREILLY Technical Guide Understanding Data Pipelines for Modern Data Architectures Matt Palmer",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "94 chars, 12 words, 88% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a2d8c2b8bb4dfb364f4402a289829c1e7260b6c37231f07d47cece66796dfe72"
+    }
+  ]
+}

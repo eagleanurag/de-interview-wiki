@@ -52,10 +52,16 @@ from src.enrichment.runner import (
     Outcome,
     cached,
 )
+from src.aggregation.consolidation import _question_key
 from src.enrichment.state import RunState
+from src.gemini.bridge import ocr_digest as digest_ocr
+from src.gemini.bridge import inject as inject_ocr
+from src.gemini.bridge import load_index
 from src.ingestion.post_loader import load_post, source_digest
+from src.models import InterviewQuestion, KnowledgePost
 from src.pipeline.freshness import (
     ENRICHER_VERSION,
+    OCR_PROCESSOR_VERSION,
     VISUAL_PROCESSOR_VERSION,
     _refresh_provenance,
     _reusable,
@@ -77,6 +83,12 @@ class Settled:
     outcome: Outcome
     broken_media: list[str] = field(default_factory=list)
 
+    #: Transcribed images the package described that this post does not
+    #: carry, so were not attached. Reported rather than dropped: they are
+    #: still in the import, and a reader told "3,047 transcriptions"
+    #: should not have to guess how many reached a post.
+    ocr_unmatched: int = 0
+
 
 def enrich(
     identifiers: list[str],
@@ -87,6 +99,7 @@ def enrich(
     state_path: Path | None = None,
     quiet: bool = False,
     visual: dict | None = None,
+    ocr=None,
 ) -> dict:
     """
     Enrich every post that needs it, into its own worker result.
@@ -116,6 +129,13 @@ def enrich(
     changed re-enrich their post, and for the source text, so that what
     a slide says is treated as source material by the same grounding
     check the post body goes through.
+
+    ``ocr`` is the imported image-knowledge package's index. Absent, or
+    empty, this is exactly the run CP12 left behind: no package has been
+    imported, and a post the package says nothing about is untouched.
+    Present, it contributes machine transcriptions as source material and
+    its own freshness digest, so a corrected transcription re-enriches the
+    posts it informs instead of being silently ignored.
     """
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -138,12 +158,22 @@ def enrich(
 
     visual = visual or {}
 
+    if ocr is None:
+        # Loaded here rather than required from the caller, so that every
+        # existing call site -- the CLI, the tests, the agent -- behaves
+        # identically whether or not anyone thought about this.
+        ocr = load_index()
+
     pending = _settle_cached(
-        identifiers, state, report, positions, force, quiet, visual
+        identifiers, state, report, positions, force, quiet, visual, ocr
     )
 
     written: list[str] = []
     media_failures: dict[str, list[str]] = {}
+
+    #: Transcribed images with no post to attach to, keyed by post.
+    #: Counted rather than dropped; see :func:`_enrich_one`.
+    ocr_unmatched: dict[str, int] = {}
 
     if pending:
         if not quiet:
@@ -154,10 +184,18 @@ def enrich(
 
         pool = _enricher_pool(attempts)
 
-        written, media_failures = _run_pending(
+        written, media_failures, ocr_unmatched = _run_pending(
             pool, pending, jobs, state, report, positions, path, quiet,
-            visual,
+            visual, ocr,
         )
+
+        if ocr_unmatched and not quiet:
+            log(
+                f"{sum(ocr_unmatched.values())} transcribed image(s) "
+                f"across {len(ocr_unmatched)} post(s) are described by "
+                "the package but not carried by the post, and were not "
+                "attached. They remain in the import."
+            )
 
     report.seconds = time.monotonic() - started
 
@@ -166,7 +204,9 @@ def enrich(
     if not quiet:
         log(report.render())
 
-    return _result(state, report, written, media_failures)
+    return _result(
+        state, report, written, media_failures, ocr_unmatched
+    )
 
 
 def _positions(identifiers: list[str]) -> dict[str, int]:
@@ -192,6 +232,7 @@ def _settle_cached(
     force: bool,
     quiet: bool,
     visual: dict | None = None,
+    ocr=None,
 ) -> list[tuple[str, Path]]:
     """
     Decide what needs the model, and settle what does not.
@@ -245,8 +286,12 @@ def _settle_cached(
 
         visual_digest = digest_for(post, visual.get(identifier))
 
+        ocr_digest = ocr.digest_for(post) if ocr is not None else ""
+
         if target.is_file() and not force:
-            existing = _reusable(target, digest, visual_digest)
+            existing = _reusable(
+                target, digest, visual_digest, ocr_digest
+            )
 
             if existing is not None:
                 # The analysis is still correct; the attribution around
@@ -290,7 +335,8 @@ def _run_pending(
     state_path: Path,
     quiet: bool,
     visual: dict | None = None,
-) -> tuple[list[str], dict[str, list[str]]]:
+    ocr=None,
+) -> tuple[list[str], dict[str, list[str]], dict[str, int]]:
     """
     Run the posts, bounded, settling each as it finishes.
 
@@ -299,6 +345,13 @@ def _run_pending(
     indistinguishable from a hung one. The index on the line is the
     post's fixed position in the batch, so the numbering is stable even
     though arrival is not.
+
+    ``ocr`` is shared across every worker thread. It holds one
+    pre-built record index and a per-post cache of outcomes, and the
+    outcome for a post is a pure function of its records, so two threads
+    asking about the same post build equal objects and one of them
+    discards it. Nothing in it is mutated after construction except that
+    cache, and a duplicate key written twice is the same value twice.
     """
 
     visual = visual or {}
@@ -306,14 +359,22 @@ def _run_pending(
     def work(item: tuple[str, Path]) -> Settled:
         identifier, directory = item
 
-        outcome, broken = _enrich_one(
-            identifier, directory, pool, visual.get(identifier)
+        outcome, broken, unmatched = _enrich_one(
+            identifier, directory, pool, visual.get(identifier), ocr
         )
 
-        return Settled(outcome=outcome, broken_media=broken)
+        return Settled(
+            outcome=outcome,
+            broken_media=broken,
+            ocr_unmatched=unmatched,
+        )
 
     written: list[str] = []
     media_failures: dict[str, list[str]] = {}
+
+    #: Transcribed images with no post to attach to, keyed by post.
+    #: Counted rather than dropped; see :func:`_enrich_one`.
+    ocr_unmatched: dict[str, int] = {}
 
     def take(settled: Settled) -> None:
         outcome = settled.outcome
@@ -329,6 +390,9 @@ def _run_pending(
 
         if settled.broken_media:
             media_failures[outcome.post_id] = settled.broken_media
+
+        if settled.ocr_unmatched:
+            ocr_unmatched[outcome.post_id] = settled.ocr_unmatched
 
         if outcome.succeeded and not outcome.reused:
             written.append(outcome.post_id)
@@ -346,7 +410,7 @@ def _run_pending(
         for item in pending:
             take(work(item))
 
-    return written, media_failures
+    return written, media_failures, ocr_unmatched
 
 
 def _result_of(future) -> Settled:
@@ -403,15 +467,20 @@ def _enrich_one(
     directory: Path,
     pool,
     visual=None,
-) -> tuple[Outcome, list[str]]:
+    ocr=None,
+) -> tuple[Outcome, list[str], int]:
     """
     Enrich one post, re-asking what a re-ask can fix.
 
-    Returns the outcome and the media that could not be read. A file
-    that will not open is not a reason to lose the post -- the text is
-    still worth enriching -- but it is reported rather than dropped,
-    because "the image was skipped" and "the image was read" are
-    different claims.
+    Returns the outcome, the media that could not be read, and how many
+    transcribed images the package described that this post does not
+    carry. A file that will not open is not a reason to lose the post --
+    the text is still worth enriching -- but it is reported rather than
+    dropped, because "the image was skipped" and "the image was read" are
+    different claims. The third figure is the same argument applied to
+    images the archive holds and no post references: they are not
+    attached, and the count says so rather than leaving a reader to
+    assume every transcription reached a post.
 
     The post is loaded once and the retry loop re-uses it, because a
     retry is a fresh model sample rather than a fresh post. The one
@@ -419,6 +488,14 @@ def _enrich_one(
     and :meth:`AIEnricher.enrich` raises before writing to the post
     when validation fails, so a failed attempt leaves the post as it
     was loaded.
+
+    ``ocr`` is the imported image-knowledge package's index. It is
+    consulted *after* ``visual`` and only for text the vision stage did
+    not produce, so a slide is never described twice from two sources and
+    the better-attested reading wins. Both write to the same
+    ``media.extracted_text`` field, which is why the order matters: the
+    later injection overwrites, and it must be the fallback that lands
+    last, not the other way round.
     """
 
     enricher = pool()
@@ -440,6 +517,31 @@ def _enrich_one(
 
     visual_digest = digest_for(post, visual)
 
+    ocr_digest = ""
+
+    unmatched = 0
+
+    if ocr is not None:
+        outcome_ocr = ocr.outcome_for(post)
+
+        if outcome_ocr is not None:
+            inject_ocr(post, outcome_ocr, ocr.records_for(post))
+
+            derived = ocr.technologies_for(post)
+
+            if derived:
+                # On the post rather than passed to the aggregator
+                # separately, so that the knowledge base and the site
+                # read the same field and cannot disagree about which
+                # posts cover a technology.
+                post.ai_analysis.derived_technologies = derived
+
+            _add_ocr_questions(post, ocr.questions_for(post))
+
+            ocr_digest = digest_ocr(outcome_ocr)
+
+            unmatched = outcome_ocr.unmatched
+
     post.enrichment = type(post.enrichment)(
         source_digest=digest,
         enricher_version=ENRICHER_VERSION,
@@ -447,12 +549,14 @@ def _enrich_one(
         visual_processor_version=(
             VISUAL_PROCESSOR_VERSION if visual_digest else ""
         ),
+        ocr_digest=ocr_digest,
+        ocr_processor_version=(OCR_PROCESSOR_VERSION if ocr_digest else ""),
     )
 
     outcome = enricher.enrich(post)
 
     if not outcome.succeeded:
-        return outcome, broken
+        return outcome, broken, unmatched
 
     payload = post.model_dump(mode="json")
 
@@ -466,6 +570,10 @@ def _enrich_one(
         "visual_digest": visual_digest,
         "visual_processor_version": (
             VISUAL_PROCESSOR_VERSION if visual_digest else ""
+        ),
+        "ocr_digest": ocr_digest,
+        "ocr_processor_version": (
+            OCR_PROCESSOR_VERSION if ocr_digest else ""
         ),
     }
 
@@ -484,7 +592,90 @@ def _enrich_one(
         target, json.dumps(payload, indent=2, ensure_ascii=False)
     )
 
-    return outcome, broken
+    return outcome, broken, unmatched
+
+
+def _add_ocr_questions(post: KnowledgePost, candidates) -> None:
+    """
+    Put the package's accepted questions onto the post.
+
+    Added rather than replacing, and only where the post has no question
+    saying the same thing. The existing dedup in the aggregator is the
+    authority on whether two questions are the same question, and running
+    it here would mean a second and weaker implementation of the same
+    comparison running earlier and disagreeing with it.
+
+    Every candidate carries a ``source_excerpt`` that is the slide's own
+    transcription, and that is what gets recorded as the answer: it is
+    the text the question was read from, attributed as such, rather than
+    an answer this project composed and might have got wrong.
+    """
+
+    existing = {
+        _question_key(question.question)
+        for question in post.interview_questions
+    }
+
+    for candidate in candidates:
+        if not candidate.question:
+            continue
+
+        key = _question_key(candidate.question)
+
+        if key in existing:
+            continue
+
+        existing.add(key)
+
+        post.interview_questions.append(
+            InterviewQuestion(
+                question=candidate.question,
+                type="theory",
+                difficulty="medium",
+                answer=_source_answer(candidate),
+                source_kind=candidate.source_kind.value,
+                answer_source="source_excerpt",
+                source_note=(
+                    f"Read from the transcribed text of "
+                    f"{candidate.filename}, slide "
+                    f"{candidate.slide_number}."
+                    if candidate.filename
+                    else (
+                        "Read from the transcribed text of a slide "
+                        "image."
+                    )
+                ),
+            )
+        )
+
+
+def _source_answer(candidate) -> str:
+    """
+    The answer a source-derived question gets.
+
+    The slide's own transcription, introduced as an excerpt. Presenting
+    OCR as an answer is the failure this avoids: the excerpt may not even
+    answer the question, and a reader who cannot tell an excerpt from an
+    answer will believe it does.
+    """
+
+    import re
+
+    excerpt = re.sub(
+        r"\s+", " ", candidate.source_excerpt or ""
+    ).strip()
+
+    if not excerpt:
+        return (
+            "No source text accompanies this question. It was read from "
+            "a slide image, and the transcription was too damaged to "
+            "recover a passage from it."
+        )
+
+    return (
+        "Source excerpt, transcribed from the slide image rather than "
+        f"written as an answer:\n\n{excerpt}"
+    )
 
 
 def _write_atomic(target: Path, body: str) -> None:
@@ -569,6 +760,7 @@ def _result(
     report: RunReport,
     written: list[str],
     media_failures: dict[str, list[str]],
+    ocr_unmatched: dict[str, int] | None = None,
 ) -> dict:
     """The same shape the pipeline returned before, plus the new detail."""
 

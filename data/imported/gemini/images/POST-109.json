@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-109",
+  "activity_id": "7327558140156149760",
+  "images": [
+    {
+      "post_id": "POST-109",
+      "activity_id": "7327558140156149760",
+      "filename": "activity_7327558140156149760_slide_0.jpg",
+      "path": "media/activity_7327558140156149760_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 447,
+      "size_bytes": 22767,
+      "declared_sha256": "d8d660d01eeec933d77959bbe9991fce8302b0593fb7ca12d88a9cd176330f53",
+      "actual_sha256": "d8d660d01eeec933d77959bbe9991fce8302b0593fb7ca12d88a9cd176330f53",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Limit vs Rank ||@Gaurav Agrawal, Analytics & DS @Walmart,\nEAs enen ees\n[matey [|e]\nse too)\na\nE Ks = with emp_rank_table as a =\nfe =\n,\nPaes\na\nexes",
+      "redactions": 0,
+      "search_text": "Limit vs Rank ||@Gaurav Agrawal, Analytics & DS @Walmart, EAs enen ees [matey [|e] se too) a E Ks = with emp_rank_table as a = fe = , Paes a exes",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "145 chars, 28 words, 67% letters, 12% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "c498f66e5777d419b8bfdf2251ed31d0d1b0ecff01536fb62403ae1dfb9d1e93"
+    }
+  ]
+}

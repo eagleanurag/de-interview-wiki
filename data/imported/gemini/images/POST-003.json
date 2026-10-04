@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-003",
+  "activity_id": "7283111675530985473",
+  "images": [
+    {
+      "post_id": "POST-003",
+      "activity_id": "7283111675530985473",
+      "filename": "activity_7283111675530985473_slide_0.jpg",
+      "path": "media/activity_7283111675530985473_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 614,
+      "size_bytes": 399159,
+      "declared_sha256": "a614e71e3b6f3532868821e426aceb19fc16470b7705a26d0689afa3941e8d9e",
+      "actual_sha256": "a614e71e3b6f3532868821e426aceb19fc16470b7705a26d0689afa3941e8d9e",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "[>smerote cman CRETE | oytusyce\n| i ey fe)\n% aws\n\na oun ip l\n\ncn oh? Azure\n\n9 sos\n\n©) Google Cloud\na s 2e 7\n\n3-22 @@ 22\nbo EE Serge ® Gigtble Meneses incon\nis igauey RES",
+      "redactions": 0,
+      "search_text": "[>smerote cman CRETE | oytusyce | i ey fe) % aws a oun ip l cn oh? Azure 9 sos ©) Google Cloud a s 2e 7 3-22 @@ 22 bo EE Serge ® Gigtble Meneses incon is igauey RES",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "169 chars, 30 words, 62% letters, 12% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "cf0bc75e23ca4f27acde625bec9d28df1cf9781ac1e092e15fd25f490d4a31d9"
+    }
+  ]
+}

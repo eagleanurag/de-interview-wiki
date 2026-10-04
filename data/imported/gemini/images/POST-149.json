@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-149",
+  "activity_id": "7338780871455318016",
+  "images": [
+    {
+      "post_id": "POST-149",
+      "activity_id": "7338780871455318016",
+      "filename": "activity_7338780871455318016_slide_0.jpg",
+      "path": "media/activity_7338780871455318016_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 57586,
+      "declared_sha256": "a65ed237d0d4bc490b7b0401bf585239c3137045718af7f307a498d22f7084ce",
+      "actual_sha256": "a65ed237d0d4bc490b7b0401bf585239c3137045718af7f307a498d22f7084ce",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "PYSPARK\nFREQUENTLY USED FUNCTIONS\nfe [woe |\n\nFalse)\nCOLUMN | df.age * 2)\nSAMPLE df.sample(False, 0,5)",
+      "redactions": 0,
+      "search_text": "PYSPARK FREQUENTLY USED FUNCTIONS fe [woe | False) COLUMN | df.age * 2) SAMPLE df.sample(False, 0,5)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "101 chars, 14 words, 69% letters, 15% symbols, 2.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "71548bbb2de688166a3c9b40de302e5a8423dbe13c09fb587de37a4834c09b86"
+    }
+  ]
+}

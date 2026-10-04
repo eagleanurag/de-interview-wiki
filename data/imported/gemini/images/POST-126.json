@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-126",
+  "activity_id": "7335500334980628481",
+  "images": [
+    {
+      "post_id": "POST-126",
+      "activity_id": "7335500334980628481",
+      "filename": "activity_7335500334980628481_slide_0.jpg",
+      "path": "media/activity_7335500334980628481_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 78423,
+      "declared_sha256": "32487fb67dc08233783a422e544990c901ab4693d8181be68b78d7c21f0d14e9",
+      "actual_sha256": "32487fb67dc08233783a422e544990c901ab4693d8181be68b78d7c21f0d14e9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": ".\nPySpark Functions\n® aggregation Functions  @ Window Functions\ncount() Counts the number of rows row_number() Row humber within,\nsun() Computes the sum of values rank() bapseaed\navg() /mean() Computes the average 0 dense_rank() Ranks rows with gaps\nfvalues: 1ag)/Lead() Accesses previousinext\nrnin() Returns the miniun value row\nfsax() Returns the maximum value ntile() Divides rows into buckets\napprox_count_dstinct) Apprximacunt cune_dist() Cumulative cstbution\nOf distinct vak percent _rank’ Relative rank of arow\ncoltect_List() Agaregates values into\ncollect_set() Aggregates distinct — Y@ Conditional Functions\neee when() Conditional logic (like SQL CASE)\n@ String Functions otherwise() Specifies faliback in when\ncootescet) Returns frst ngn-nul value\nse ner eee egg Asnult//Asnotnut¢) Nul\nancat() Coneatenates mip columns !frut//nvi() Reuns aerate\n‘Length() Returns length of string\nsubstr() Extracts a substring fom a's ,\n‘trim() Removes leading and trailing sp Ss Airey & Man Functions\nUtrin() /rtrim() Removes spaces: a Sav), Coopers erray calm\nfromietiight site _exbLode) Flaten arrays ito mute\nrexepp replace) Replaces regexpattem ize() _Relums size of aray\nrexepp_extract) in sting array_contains() Checks it array\ninstr() Returns matched regex group map() contains value\nsplit() Splits string by delimiter map() Creates a map ciment\ntranslate) Replaces charactersin string get_json_object) Extracts JSON\nfield using path\nYE Type Conversion & Casting Miscellaneous Functions\ncast() Converts column type U1t0) Crests a column wih eral\nastype) Alas forcast col() Refers to column by nme\nbrouna() Rounds to specine decimal places expr) Parses SOL expression string\nUH) “Runde so nearest ate onofon eal ly Anéreasangtd(y",
+      "redactions": 0,
+      "search_text": ". PySpark Functions ® aggregation Functions @ Window Functions count() Counts the number of rows row_number() Row humber within, sun() Computes the sum of values rank() bapseaed avg() /mean() Computes the average 0 dense_rank() Ranks rows with gaps fvalues: 1ag)/Lead() Accesses previousinext rnin() Returns the miniun value row fsax() Returns the maximum value ntile() Divides rows into buckets approx_count_dstinct) Apprximacunt cune_dist() Cumulative cstbution Of distinct vak percent _rank’ Relative rank of arow coltect_List() Agaregates values into collect_set() Aggregates distinct — Y@ Conditional Functions eee when() Conditional logic (like SQL CASE) @ String Functions otherwise() Specifies faliback in when cootescet) Returns frst ngn-nul value se ner eee egg Asnult//Asnotnut¢) Nul ancat() Coneatenates mip columns !frut//nvi() Reuns aerate ‘Length() Returns length of string substr() Extracts a substring fom a's , ‘trim() Removes leading and trailing sp Ss Airey & Man Functions Utrin() /rtrim() Removes spaces: a Sav), Coopers erray calm fromietiight site _exbLode) Flaten arrays ito mute rexepp replace) Replaces regexpattem ize() _Relums size of aray rexepp_extract) in sting array_contains() Checks it array instr() Returns matched regex group map() contains value split() Splits string by delimiter map() Creates a map ciment translate) Replaces charactersin string get_json_object) Extracts JSON field using path YE Type Conversion & Casting Miscellaneous Functions cast() Converts column type U1t0) Crests a column wih eral astype) Alas forcast col() Refers to column by nme brouna() Rounds to specine decimal places expr) Parses SOL expression string UH) “Runde so nearest ate onofon eal ly Anéreasangtd(y",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "1729 chars, 253 words, 78% letters, 7% symbols, 0.2% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "614da89422884feb8cada11b4c2a3d7d81accfd2771ea2ec5facb148a2127189"
+    }
+  ]
+}

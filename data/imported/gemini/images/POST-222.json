@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-222",
+  "activity_id": "7346017315269787649",
+  "images": [
+    {
+      "post_id": "POST-222",
+      "activity_id": "7346017315269787649",
+      "filename": "activity_7346017315269787649_slide_0.jpg",
+      "path": "media/activity_7346017315269787649_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 393,
+      "height": 492,
+      "size_bytes": 43749,
+      "declared_sha256": "7e3fda65c6ce2b812334aca9b28c5d4654de94638d721c010d8165521360f6ac",
+      "actual_sha256": "7e3fda65c6ce2b812334aca9b28c5d4654de94638d721c010d8165521360f6ac",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "AWS Data Engineering ‘€LLIPS>\nCurriculum Roadmap\n@ Cloud & AWS Foundations aws\n© Core AWS Data Storage A\nS86f > sere Fundamentala\nLY Q AWS Glue ETL Pipelines\n© Data Lakehouse & Iceberg",
+      "redactions": 0,
+      "search_text": "AWS Data Engineering ‘€LLIPS> Curriculum Roadmap @ Cloud & AWS Foundations aws © Core AWS Data Storage A S86f > sere Fundamentala LY Q AWS Glue ETL Pipelines © Data Lakehouse & Iceberg",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "184 chars, 28 words, 77% letters, 6% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9342a7b82e1953e3092c6414a6687566cc84b17034b6af5de8e1013bebb80b27"
+    }
+  ]
+}

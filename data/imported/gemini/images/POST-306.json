@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-306",
+  "activity_id": "7501836433637261312",
+  "images": [
+    {
+      "post_id": "POST-306",
+      "activity_id": "7501836433637261312",
+      "filename": "activity_7501836433637261312_slide_0.jpg",
+      "path": "media/activity_7501836433637261312_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 8020,
+      "declared_sha256": "ecd597be8b3eeb09996d1a889e17e6239fc46cd524475c6b33ed4897c05a8a55",
+      "actual_sha256": "ecd597be8b3eeb09996d1a889e17e6239fc46cd524475c6b33ed4897c05a8a55",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "DELOITTE DATA ENGINEER INTERVIEW\nEXPERIENCE (0-3 YOE)",
+      "redactions": 0,
+      "search_text": "DELOITTE DATA ENGINEER INTERVIEW EXPERIENCE (0-3 YOE)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "53 chars, 6 words, 79% letters, 9% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "bbfc2f686f19965c1c9c5a84bb13f628ce68bc658922bb6d3ccf2ea7bf96e86c"
+    }
+  ]
+}

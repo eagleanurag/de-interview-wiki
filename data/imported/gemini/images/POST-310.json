@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-310",
+  "activity_id": "7509801763013595136",
+  "images": [
+    {
+      "post_id": "POST-310",
+      "activity_id": "7509801763013595136",
+      "filename": "activity_7509801763013595136_slide_0.jpg",
+      "path": "media/activity_7509801763013595136_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 800,
+      "height": 800,
+      "size_bytes": 70758,
+      "declared_sha256": "f1b64b45a0c1e3ac8ab9d5fe4d51d3c24a08b46f327d65908478f41822da6c8a",
+      "actual_sha256": "f1b64b45a0c1e3ac8ab9d5fe4d51d3c24a08b46f327d65908478f41822da6c8a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "’ e rr\n2 = & @\nx .\ninatch(data nse a\n~. i ‘i ‘ -epte (dnveanti\n‘ ; hal\n« fl _structor} | |\n{(isteort data_st\nSQL prom 2: TS\n3%\n‘.\n+",
+      "redactions": 0,
+      "search_text": "’ e rr 2 = & @ x . inatch(data nse a ~. i ‘i ‘ -epte (dnveanti ‘ ; hal « fl _structor} | | {(isteort data_st SQL prom 2: TS 3% ‘. +",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "131 chars, 20 words, 51% letters, 23% symbols, 3.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "48b7c29e6d8055738fef545a49ef898fc665f4ceb0d238be26cb9adfa542e0fc"
+    }
+  ]
+}

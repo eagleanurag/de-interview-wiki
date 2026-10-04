@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-068",
+  "activity_id": "7313983651073925121",
+  "images": [
+    {
+      "post_id": "POST-068",
+      "activity_id": "7313983651073925121",
+      "filename": "activity_7313983651073925121_slide_0.jpg",
+      "path": "media/activity_7313983651073925121_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 409,
+      "size_bytes": 21797,
+      "declared_sha256": "015768775e2fbcecfa9bd83920507aaf3544553764e50bfbe5a86a0829101734",
+      "actual_sha256": "015768775e2fbcecfa9bd83920507aaf3544553764e50bfbe5a86a0829101734",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "NO_TEXT",
+      "public_text": "[NO TEXT DETECTED BY OCR — manual visual review required]",
+      "redactions": 0,
+      "search_text": "[NO TEXT DETECTED BY OCR — manual visual review required]",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "402f1c2e12dce6ef0ad6dc9f5a05ee490ebaab49c149a144c98779aead7ab24d"
+    }
+  ]
+}

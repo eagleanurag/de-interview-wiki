@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-215",
+  "activity_id": "7345310892898541568",
+  "images": [
+    {
+      "post_id": "POST-215",
+      "activity_id": "7345310892898541568",
+      "filename": "activity_7345310892898541568_slide_0.jpg",
+      "path": "media/activity_7345310892898541568_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 251,
+      "size_bytes": 9797,
+      "declared_sha256": "a7fadf0f7ccfa58643f7d90ebf8b3d676933273726cdadff83304c99a718eaee",
+      "actual_sha256": "a7fadf0f7ccfa58643f7d90ebf8b3d676933273726cdadff83304c99a718eaee",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "import att\nett.viewnane=\"source\")\n\n‘turn sparks read. table(\"external_sql.min.supptiers\")\nlt-create_streaning_Live_table(nane=\"=v9p ier\")\n4t-apply_changes_trom_snapshot(\n\ntarget = “ousplier\"y\n\nkeys = io\",\n\nstored_as_scd_type = 2,\n\ntrack history_coluan_Uist=['s0e\"]\n\n)",
+      "redactions": 0,
+      "search_text": "import att ett.viewnane=\"source\") ‘turn sparks read. table(\"external_sql.min.supptiers\") lt-create_streaning_Live_table(nane=\"=v9p ier\") 4t-apply_changes_trom_snapshot( target = “ousplier\"y keys = io\", stored_as_scd_type = 2, track history_coluan_Uist=['s0e\"] )",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "267 chars, 40 words, 70% letters, 19% symbols, 1.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "cf0e716c8cf003dbe8aae9d8e16a1821f25834a77a8596b214a2f688f022d016"
+    }
+  ]
+}

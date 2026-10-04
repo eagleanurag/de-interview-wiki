@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-303",
+  "activity_id": "7477345172167520256",
+  "images": [
+    {
+      "post_id": "POST-303",
+      "activity_id": "7477345172167520256",
+      "filename": "activity_7477345172167520256_slide_0.jpg",
+      "path": "media/activity_7477345172167520256_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 721,
+      "size_bytes": 72547,
+      "declared_sha256": "9bcdd0c9d8a2095dfa529b56e2790618f03a2487dad08d0eab14438707c867bd",
+      "actual_sha256": "9bcdd0c9d8a2095dfa529b56e2790618f03a2487dad08d0eab14438707c867bd",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "The 20% of SQL\nthat does 80% of the work\nRea syntax Real use cases. Used Daly\n\n( dlscabinecsna ley Y |. se\nOe ics iB || Se os ica\nBe neresiene 8 | te>_. @\n[Ricteihgaine 1 | Somes. afl\nome | eee. =]",
+      "redactions": 0,
+      "search_text": "The 20% of SQL that does 80% of the work Rea syntax Real use cases. Used Daly ( dlscabinecsna ley Y |. se Oe ics iB || Se os ica Be neresiene 8 | te>_. @ [Ricteihgaine 1 | Somes. afl ome | eee. =]",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "197 chars, 33 words, 64% letters, 13% symbols, 2.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "6ad86746104b834efd60278920166bbf40f0a4bd64f292c56b2d7a415ff06538"
+    }
+  ]
+}

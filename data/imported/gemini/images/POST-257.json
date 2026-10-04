@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-257",
+  "activity_id": "7349649977947693056",
+  "images": [
+    {
+      "post_id": "POST-257",
+      "activity_id": "7349649977947693056",
+      "filename": "activity_7349649977947693056_slide_0.jpg",
+      "path": "media/activity_7349649977947693056_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 800,
+      "size_bytes": 73671,
+      "declared_sha256": "30cc7404cfe49e3c60c7af891d479043c2b5ba9a8612b3a9b9b03bbc6d62ddd9",
+      "actual_sha256": "30cc7404cfe49e3c60c7af891d479043c2b5ba9a8612b3a9b9b03bbc6d62ddd9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SRRIPARENWA) Superstore Data Analysis | End to...\n10 mere (156072 Elin 41444 D7\n7 \\> 37:23\nGAEEGESESL) End to End Data Analytics Project...\n| @ Wt (267819 E315 (58,405 Fez\nser 46:52 iy\nfn eee Netflix Data Cleaning and Analysi...\n@ 81,208 EF) 140 2,282 B17\ne—2 SQL Portfolio Project for Data An...\nsaL M@] 51944 El 136 2619 Do\nGE\" £r4 to End Data Analytics Project...\n‘ Pema (1) 28,243 Enz 1780 P7\nie) 1:06:56. ey\nSal PY SOL Project for Data Analytics (L...\nTM fi) 18026 Elea 792 D4\nPROJECT ase\n200+ LINES How to Write Long and Complex...\ng WEES! 15678 Elo3s 900 1\nJSERVELESS AWS ETL Pipeline Project For Beg...\nfauna 14761 E17 G98 Po",
+      "redactions": 0,
+      "search_text": "SRRIPARENWA) Superstore Data Analysis | End to... 10 mere (156072 Elin 41444 D7 7 \\> 37:23 GAEEGESESL) End to End Data Analytics Project... | @ Wt (267819 E315 (58,405 Fez ser 46:52 iy fn eee Netflix Data Cleaning and Analysi... @ 81,208 EF) 140 2,282 B17 e—2 SQL Portfolio Project for Data An... saL M@] 51944 El 136 2619 Do GE\" £r4 to End Data Analytics Project... ‘ Pema (1) 28,243 Enz 1780 P7 ie) 1:06:56. ey Sal PY SOL Project for Data Analytics (L... TM fi) 18026 Elea 792 D4 PROJECT ase 200+ LINES How to Write Long and Complex... g WEES! 15678 Elo3s 900 1 JSERVELESS AWS ETL Pipeline Project For Beg... fauna 14761 E17 G98 Po",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "633 chars, 89 words, 55% letters, 27% symbols, 4.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "31064d5230b364ecbf7b5e0b64060d7e713e18ad2e9d7b19cf95772af4f06120"
+    }
+  ]
+}

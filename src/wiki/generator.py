@@ -25,6 +25,8 @@ import json
 import shutil
 import sys
 import time
+
+from dataclasses import replace
 from pathlib import Path
 
 from src.wiki.analysis import build_site_model
@@ -34,6 +36,7 @@ from src.wiki.naming import (
     INDEX_PAGE,
     MANIFEST_FILE,
     NOT_FOUND_PAGE,
+    OCR_INDEX_FILE,
     QUESTIONS_PAGE,
     SAVED_ITEMS_PAGE,
     SEARCH_INDEX_FILE,
@@ -42,6 +45,9 @@ from src.wiki.naming import (
     TOPICS_PAGE,
 )
 from src.wiki.saved_items import render_saved_items
+from src.wiki.curriculum import build_curriculum
+from src.wiki.revision import curriculum_pages
+from src.wiki.ocr_index import write_ocr_index
 from src.wiki.pages import (
     render_concept_detail,
     render_concepts_index,
@@ -122,32 +128,41 @@ def _write_site(model, staging: Path) -> list[str]:
     """Write every page and asset. Returns relative POSIX paths."""
 
     written: list[str] = []
+    # Built once, up front, and attached to the model everything below
+    # renders from. It has to be up front: a knowledge page links to
+    # neighbouring subtopics and cannot know which subtopics have
+    # pages without it. Built after the post pages had already been
+    # rendered, it left every one of them with no Related section --
+    # which is the section a reader uses to decide where to go next.
+    curriculum = build_curriculum(list(model.posts))
 
+    model = replace(model, curriculum=curriculum)
+
+
+    # The reader-facing pages, and only those.
+    #
+    # The evidence layer -- 5,786 archive topic pages, 3,112 concept
+    # pages, 44 technology pages, saved-items, and the four indexes that
+    # listed them -- used to be written here as well, which made 8,946 of
+    # the site's 9,595 pages a browsable archive of labels the corpus
+    # generated. The revision curriculum already represents all of it
+    # readably: a concept sits under the subtopic that teaches it, a
+    # technology under the subject that uses it.
+    #
+    # Nothing is lost. Every concept, technology, topic grouping and
+    # saved-item provenance record is still in the knowledge base, still
+    # reachable through the search index's data layer, and still counted
+    # by the manifest. What stops is the reader being sent there.
     pages = {
         INDEX_PAGE: render_home(model),
         SEARCH_PAGE: render_search(model),
-        TOPICS_PAGE: render_topics_index(model),
-        CONCEPTS_PAGE: render_concepts_index(model),
-        TECHNOLOGIES_PAGE: render_technologies_index(model),
         QUESTIONS_PAGE: render_questions(model),
-        SAVED_ITEMS_PAGE: render_saved_items(model),
         NOT_FOUND_PAGE: render_not_found(model),
     }
 
     for post, slug in zip(model.posts, model.post_slugs):
         page = f"posts/{slug}.html"
         pages[page] = render_post_detail(model, post, slug)
-
-    for topic in model.topics:
-        pages[topic.page] = render_topic_detail(model, topic)
-
-    for concept in model.concept_entries:
-        pages[concept.page] = render_concept_detail(model, concept)
-
-    for technology in model.technology_entries:
-        pages[technology.page] = render_technology_detail(
-            model, technology
-        )
 
     for relative, document in pages.items():
         _write_text(staging, relative, document)
@@ -160,8 +175,21 @@ def _write_site(model, staging: Path) -> list[str]:
         shutil.copyfile(asset, target)
         written.append(relative)
 
+    revision = curriculum_pages(curriculum, model)
+
+    for relative, document in sorted(revision.items()):
+        _write_text(staging, relative, document)
+        written.append(relative)
+
     write_search_index(model, staging / SEARCH_INDEX_FILE)
     written.append(SEARCH_INDEX_FILE)
+
+    # Written unconditionally, even when empty. An absent file and an
+    # empty one mean different things to the search script -- the first
+    # is an error, the second is a site with nothing transcribed -- and
+    # only one of those is worth showing a reader.
+    write_ocr_index(model, staging / OCR_INDEX_FILE)
+    written.append(OCR_INDEX_FILE)
 
     return sorted(written)
 

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-121",
+  "activity_id": "7329752411470778368",
+  "images": [
+    {
+      "post_id": "POST-121",
+      "activity_id": "7329752411470778368",
+      "filename": "activity_7329752411470778368_slide_0.jpg",
+      "path": "media/activity_7329752411470778368_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 35172,
+      "declared_sha256": "1b7d050c548f1874b7bf04823f1ecb365702f1896c128766001422062aa75b56",
+      "actual_sha256": "1b7d050c548f1874b7bf04823f1ecb365702f1896c128766001422062aa75b56",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "‘) Identify accounts that should be banned based on logins from different IF addresses atthe same moment using PySpark\nTages oe |\n\n$ 1. A001\naccenture BY: RAUSHAN KUMAR 2 ‘A004",
+      "redactions": 0,
+      "search_text": "‘) Identify accounts that should be banned based on logins from different IF addresses atthe same moment using PySpark Tages oe | $ 1. A001 accenture BY: RAUSHAN KUMAR 2 ‘A004",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "176 chars, 26 words, 74% letters, 9% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "64e624e1f870c6e5b7a731f6201b3cebc735be2640f3c20d988ebc474b9d36d2"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-152",
+  "activity_id": "7339105847597219840",
+  "images": [
+    {
+      "post_id": "POST-152",
+      "activity_id": "7339105847597219840",
+      "filename": "activity_7339105847597219840_slide_0.jpg",
+      "path": "media/activity_7339105847597219840_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 392,
+      "height": 490,
+      "size_bytes": 48709,
+      "declared_sha256": "ab70b3ba0f6b4c151714b73a64f450c22e77803f18d88936a1220d991b9dbd57",
+      "actual_sha256": "ab70b3ba0f6b4c151714b73a64f450c22e77803f18d88936a1220d991b9dbd57",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Q1. What is SQL?\n\nAns: SQL stands for Structured Query Language. It is a\nprogramming language used for managing and\nmanipulating relational databases.\n\nQ2. What is a database?\n\nAns: A database is an organized collection of data stored\nand accessed electronically. It provides a way to\nstore, organize, and retrieve large amounts of data\nefficiently.\n\nQ3. Whatis a primary key?\n\n‘Ans: A primary key is a column or combination of columns\nthat uniquely identifies each row ina table. It\nenforces the entity integrity rule in a relational\ndatabase.\n\n‘ZS a=",
+      "redactions": 0,
+      "search_text": "Q1. What is SQL? Ans: SQL stands for Structured Query Language. It is a programming language used for managing and manipulating relational databases. Q2. What is a database? Ans: A database is an organized collection of data stored and accessed electronically. It provides a way to store, organize, and retrieve large amounts of data efficiently. Q3. Whatis a primary key? ‘Ans: A primary key is a column or combination of columns that uniquely identifies each row ina table. It enforces the entity integrity rule in a relational database. ‘ZS a=",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "552 chars, 90 words, 79% letters, 4% symbols, 2.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "037438a8205b880b402cf90c238c2a468809e6e5e18365edf97150cf71e59b01"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-098",
+  "activity_id": "7326584275074449408",
+  "images": [
+    {
+      "post_id": "POST-098",
+      "activity_id": "7326584275074449408",
+      "filename": "activity_7326584275074449408_slide_0.jpg",
+      "path": "media/activity_7326584275074449408_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 299,
+      "height": 168,
+      "size_bytes": 4906,
+      "declared_sha256": "0d04bd7add7e5b1ddc8ddbf448f398730fc0c32f7efb57f71fd0d72bbbce0433",
+      "actual_sha256": "0d04bd7add7e5b1ddc8ddbf448f398730fc0c32f7efb57f71fd0d72bbbce0433",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "P PayPal",
+      "redactions": 0,
+      "search_text": "P PayPal",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "8 chars, 2 words, 88% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "d0301ce7b2e9b4e1590dee5a97eb47ccc735012c713cc0d3ad5004da75885bac"
+    }
+  ]
+}

@@ -162,11 +162,46 @@ def aggregate_results(
 
     posts.sort(key=lambda post: post.id)
 
+    # Technologies read out of an attached image, when a package has been
+    # imported. Absent an import this is empty and the consolidation is
+    # exactly what it was before, which is the point: the imported layer
+    # is optional and adds nothing on its own.
+    from src.gemini.derived import derived_claims_for_posts
+
+    derived = derived_claims_for_posts(posts)
+
+    # Fold the claims onto the posts before consolidating.
+    #
+    # There were two channels here and only one of them reached the site.
+    # The claims arrive as a mapping keyed by post; the site builder
+    # reads ``ai_analysis.derived_technologies`` on the post itself. A
+    # technology present in the knowledge base but absent from its own
+    # site -- Azure Data Factory, in the first run of this -- is exactly
+    # what that split produces. Writing the names onto the post first
+    # makes the post the single channel both sides read, which is the
+    # only arrangement in which "the knowledge base and the site cannot
+    # disagree" is true rather than merely intended.
+    by_id = {post.id: post for post in posts}
+
+    for post_id, claims in derived.items():
+        target = by_id.get(post_id)
+
+        if target is None:
+            continue
+
+        existing = target.ai_analysis.derived_technologies
+
+        for claim in claims:
+            if claim.name not in existing:
+                existing.append(claim.name)
+
+        existing.sort()
+
     # Consolidation turns the post list into navigable knowledge areas.
     # It runs before the payload is written so a reference to a post
     # that was never aggregated fails the run rather than producing a
     # knowledge base that points at nothing.
-    index = consolidate(posts)
+    index = consolidate(posts, derived_technologies=derived)
 
     verify(index, posts)
 

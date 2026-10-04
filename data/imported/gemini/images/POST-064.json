@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-064",
+  "activity_id": "7311444447941005315",
+  "images": [
+    {
+      "post_id": "POST-064",
+      "activity_id": "7311444447941005315",
+      "filename": "activity_7311444447941005315_slide_0.jpg",
+      "path": "media/activity_7311444447941005315_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 527,
+      "size_bytes": 26020,
+      "declared_sha256": "bf40cd09d5944b399582df1c8b8d9e3b3ce2d1ad769441efa95d521b5cc59b5a",
+      "actual_sha256": "bf40cd09d5944b399582df1c8b8d9e3b3ce2d1ad769441efa95d521b5cc59b5a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "> vy aneens 6\n1 atan [(°603°4°\",°H0\"),(°7,\"AP\" None) (None, \"*,\"balr“)1\n2 colum af city\" yretty2\", ett]\n5. aft = spark.createbatarrane(data,colum)\n4 dtsplay(att)\n+) Spark ob\nOo: pyar dearame Dataame = ony: sng, ey2: tng more\nRem heme hema\n3 it oor\n£ Brows | 12t¢ nme\n> y meen u\n1 fron pyspark.sal. functions import *\n2 display(dft.withcoluna(“nencata', coalesce(\n3. | when(afi.cttyt ==\", Hone) .ctherwise(dft-cttyt),\n| when (attctty2 == °\", none) otherwise(aft.etty2),\nS| wen(ats.clty3 =~, None) .otherwtse(dft ctty2)\n7»\n(Span ob\ntale +\na\n2 Ga » con\n2 imate to oo",
+      "redactions": 0,
+      "search_text": "> vy aneens 6 1 atan [(°603°4°\",°H0\"),(°7,\"AP\" None) (None, \"*,\"balr“)1 2 colum af city\" yretty2\", ett] 5. aft = spark.createbatarrane(data,colum) 4 dtsplay(att) +) Spark ob Oo: pyar dearame Dataame = ony: sng, ey2: tng more Rem heme hema 3 it oor £ Brows | 12t¢ nme > y meen u 1 fron pyspark.sal. functions import * 2 display(dft.withcoluna(“nencata', coalesce( 3. | when(afi.cttyt ==\", Hone) .ctherwise(dft-cttyt), | when (attctty2 == °\", none) otherwise(aft.etty2), S| wen(ats.clty3 =~, None) .otherwtse(dft ctty2) 7» (Span ob tale + a 2 Ga » con 2 imate to oo",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "563 chars, 81 words, 61% letters, 22% symbols, 2.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a4d8cebc538299a04808f8607d41cddf3847cd94823ab9b433f7603831cb605b"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-243",
+  "activity_id": "7347874745092091904",
+  "images": [
+    {
+      "post_id": "POST-243",
+      "activity_id": "7347874745092091904",
+      "filename": "activity_7347874745092091904_slide_0.jpg",
+      "path": "media/activity_7347874745092091904_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 483,
+      "height": 483,
+      "size_bytes": 47319,
+      "declared_sha256": "9a091edc7f792e96c935f4ff185dca4606391be4fb282e38f8d4dddaecfac353",
+      "actual_sha256": "9a091edc7f792e96c935f4ff185dca4606391be4fb282e38f8d4dddaecfac353",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Definition of Discipline:\nEA AE\nWw | sf |\nDoing it Doing it\nmotivated unmotivated\n@fuelyourgrowth",
+      "redactions": 0,
+      "search_text": "Definition of Discipline: EA AE Ww | sf | Doing it Doing it motivated unmotivated @fuelyourgrowth",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "97 chars, 14 words, 80% letters, 4% symbols, 1.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ef2ad936e3e83ac4275632413b0dcdfe0cda74238ea988f8f0906c4585086ac8"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-187",
+  "activity_id": "7341346474229731329",
+  "images": [
+    {
+      "post_id": "POST-187",
+      "activity_id": "7341346474229731329",
+      "filename": "activity_7341346474229731329_slide_0.jpg",
+      "path": "media/activity_7341346474229731329_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 535,
+      "size_bytes": 17880,
+      "declared_sha256": "a3d787e5f66ff5c25002ea1becc5e64c8c49cae0d7c54ac532a132a1566b464e",
+      "actual_sha256": "a3d787e5f66ff5c25002ea1becc5e64c8c49cae0d7c54ac532a132a1566b464e",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "data = [\ni\nuser id\": “Unt,\nname\": “Alice”,\norders\": [\n{\n“order ia\": \"o1ee1”,\namount\": 258,\n“heens\": [\n(item id\": \"I\", “product: \"Book\", “aty\": 2},\n{\"itenid\": \"12\", \"product\": \"pen\", “aty\": 5}\n1\n»\n{\n“order 14\": \"01002\",\namount\": 308,\n\"ites\": [\n(\"item id\": \"13\", \"product\": \"Notebook\", “gty\": 3}\n1\n)\n1\nd\n{\nuser id\": *U2\",\n“name: \"ob\",\norders\": [\na\n“order_t4\": \"02001\",\n“anount\": 150,\nitems\": [\n(\"item id\": \"4\", “product: \"Eraser\", “gty\": 1}\n1\n)\n1\n}\n7]",
+      "redactions": 0,
+      "search_text": "data = [ i user id\": “Unt, name\": “Alice”, orders\": [ { “order ia\": \"o1ee1”, amount\": 258, “heens\": [ (item id\": \"I\", “product: \"Book\", “aty\": 2}, {\"itenid\": \"12\", \"product\": \"pen\", “aty\": 5} 1 » { “order 14\": \"01002\", amount\": 308, \"ites\": [ (\"item id\": \"13\", \"product\": \"Notebook\", “gty\": 3} 1 ) 1 d { user id\": *U2\", “name: \"ob\", orders\": [ a “order_t4\": \"02001\", “anount\": 150, items\": [ (\"item id\": \"4\", “product: \"Eraser\", “gty\": 1} 1 ) 1 } 7]",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "garbled",
+      "ocr_note": "449 chars, 49 words, 42% letters, 40% symbols, 6.0% sentence marks; overwhelmingly symbol rather than letters",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "b1cea75ba93a20375e905d6135e9146a0943883d6da377fcf33e618cd945e0d9"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-154",
+  "activity_id": "7339148768346259456",
+  "images": [
+    {
+      "post_id": "POST-154",
+      "activity_id": "7339148768346259456",
+      "filename": "activity_7339148768346259456_slide_0.jpg",
+      "path": "media/activity_7339148768346259456_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 35878,
+      "declared_sha256": "348a175e5ae39d1dfbfeecc62894be2604e6327d6132009e18ac366967729f15",
+      "actual_sha256": "348a175e5ae39d1dfbfeecc62894be2604e6327d6132009e18ac366967729f15",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "| SQL | TRICKY SQL PROBLEM\nCOUNT(*)\nvs z=:\nCOUNT(D) | snistynzaeoururor\nCOUNT(‘SQL) | fount\nvs COUNT(‘SQL)\nCOUNT (NULL) | ,oSOUNTUD",
+      "redactions": 0,
+      "search_text": "| SQL | TRICKY SQL PROBLEM COUNT(*) vs z=: COUNT(D) | snistynzaeoururor COUNT(‘SQL) | fount vs COUNT(‘SQL) COUNT (NULL) | ,oSOUNTUD",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "131 chars, 19 words, 69% letters, 16% symbols, 0.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "7551bce40d930c85336573bcd614b551e5e19b822ae8ecd04799096a829a7fa4"
+    }
+  ]
+}

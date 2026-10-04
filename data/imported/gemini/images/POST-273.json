@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-273",
+  "activity_id": "7355944631584358400",
+  "images": [
+    {
+      "post_id": "POST-273",
+      "activity_id": "7355944631584358400",
+      "filename": "activity_7355944631584358400_slide_0.jpg",
+      "path": "media/activity_7355944631584358400_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 197,
+      "size_bytes": 15531,
+      "declared_sha256": "9b4d42bed55934c9e4e79fd717cc12e522a39696fae1945b095410fca502b755",
+      "actual_sha256": "9b4d42bed55934c9e4e79fd717cc12e522a39696fae1945b095410fca502b755",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "[_Sorees\n[emonofemeiid | _emanofename_[orgname|\n[_ ioifnar@xncom | [_a0ufhari [en |\n[Caozfiimar@bce.com] [202 kumar Toot —]\n[aoa] sua. Yabo |",
+      "redactions": 0,
+      "search_text": "[_Sorees [emonofemeiid | _emanofename_[orgname| [_ ioifnar@xncom | [_a0ufhari [en | [Caozfiimar@bce.com] [202 kumar Toot —] [aoa] sua. Yabo |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "141 chars, 17 words, 65% letters, 22% symbols, 1.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "bbb548bc35ea11d82c41fa641431f2b30bfa0b48d34842ddc5f136b71f0c136e"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-158",
+  "activity_id": "7339347237044404225",
+  "images": [
+    {
+      "post_id": "POST-158",
+      "activity_id": "7339347237044404225",
+      "filename": "activity_7339347237044404225_slide_0.jpg",
+      "path": "media/activity_7339347237044404225_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 497,
+      "size_bytes": 51417,
+      "declared_sha256": "64396080e6968fa996291364c3051bd1019b118f8756b49fbe22329dc58f445b",
+      "actual_sha256": "64396080e6968fa996291364c3051bd1019b118f8756b49fbe22329dc58f445b",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Databricks: Snowflake:\nTuning partitions Auto-optimized\nat 2AM and chilling\nBoh\nOLD) De\n——",
+      "redactions": 0,
+      "search_text": "Databricks: Snowflake: Tuning partitions Auto-optimized at 2AM and chilling Boh OLD) De ——",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "90 chars, 12 words, 79% letters, 8% symbols, 2.2% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "27d60740077ebc4959292b85ec746cdf27964f4ff843c483463bb2d2b1ad2eec"
+    }
+  ]
+}

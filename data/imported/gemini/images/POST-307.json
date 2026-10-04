@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-307",
+  "activity_id": "7505120949038518272",
+  "images": [
+    {
+      "post_id": "POST-307",
+      "activity_id": "7505120949038518272",
+      "filename": "activity_7505120949038518272_slide_0.jpg",
+      "path": "media/activity_7505120949038518272_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 800,
+      "height": 420,
+      "size_bytes": 166072,
+      "declared_sha256": "e7099b9fd11fcbe5039f521840b7034f8b0e40fb1b18b709f0fb5be840ff3382",
+      "actual_sha256": "e7099b9fd11fcbe5039f521840b7034f8b0e40fb1b18b709f0fb5be840ff3382",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "=\" Microsoft Learn\n~—",
+      "redactions": 0,
+      "search_text": "=\" Microsoft Learn ~—",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "21 chars, 2 words, 67% letters, 19% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "1440d33708dbe5e7bfb03ffab333c6e906d140f288b2d53129e2d5c23070de77"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-284",
+  "activity_id": "7429013274874023936",
+  "images": [
+    {
+      "post_id": "POST-284",
+      "activity_id": "7429013274874023936",
+      "filename": "activity_7429013274874023936_slide_0.jpg",
+      "path": "media/activity_7429013274874023936_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 325,
+      "size_bytes": 29227,
+      "declared_sha256": "f1084aed6ad7ccb1f454741d9de96959fc1ceeb126fbe67d86051995c10a8b80",
+      "actual_sha256": "f1084aed6ad7ccb1f454741d9de96959fc1ceeb126fbe67d86051995c10a8b80",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Partitioning vs Bucketing vs Clustering\nclustering\nSy Con Sos\nSeas || Geass |e\ner =a oo\nSo Ses: =5=\n—— ASR, tater 003 Fae\nBES ovnaw, ee =i.\ncena ae cares\nan cae eens\noad ae ee\noa = ee\nUsk @O GB sak O-\nerp ant ||| Became cls | Pate deaie\nY @ cee V souteCLnTEneY mera tp UATIR Bary",
+      "redactions": 0,
+      "search_text": "Partitioning vs Bucketing vs Clustering clustering Sy Con Sos Seas || Geass |e er =a oo So Ses: =5= —— ASR, tater 003 Fae BES ovnaw, ee =i. cena ae cares an cae eens oad ae ee oa = ee Usk @O GB sak O- erp ant ||| Became cls | Pate deaie Y @ cee V souteCLnTEneY mera tp UATIR Bary",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "279 chars, 54 words, 69% letters, 9% symbols, 0.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "f118f6a88d4423d65c61f27c298565e98e21869436e71cbca52ffdc1bdd27da7"
+    }
+  ]
+}

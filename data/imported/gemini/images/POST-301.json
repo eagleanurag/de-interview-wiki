@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-301",
+  "activity_id": "7476230697922260992",
+  "images": [
+    {
+      "post_id": "POST-301",
+      "activity_id": "7476230697922260992",
+      "filename": "activity_7476230697922260992_slide_0.jpg",
+      "path": "media/activity_7476230697922260992_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 600,
+      "size_bytes": 76022,
+      "declared_sha256": "b3829c2f7bd6d0d30bf48b36005e340b6053f6c6ec1afca033fc81df6b14afb9",
+      "actual_sha256": "b3829c2f7bd6d0d30bf48b36005e340b6053f6c6ec1afca033fc81df6b14afb9",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "i\n_ OO ———————————— Sli i‘ a;\nChange Data Capture 101\nfor Data Engineers\n\n4. What is CDC? — AR.\neae (Barmetns] °c\n+ eae real-time + Send only these changes to other systems,\neerie <i ice\na\n4,PushvsPull\n2. Why use CDC? 3.Where does CDC sit? <=>\nsighs cece BS\n[me] eos 4 =\na ee aang\nHeeger [9] est os LER\ney | (ete\nData is old Data is fresh eased eel '\n| ‘hours behind) aacand minte 3 5. What can you do with CDC?\nee Gott @ |\nsloeatnar tities |\nSieatasinesigpcernany PO EQ\n6 Common CDC methods\" tees oes)\nog-based Tasuia SAIS (je MORSES wn ee\nmpuemareee nee\n= El EER) Ere 7. Simple CDC checklist\nLry ba ad ‘egg ort! a ee\neta mc uri! | Fer eas\n£ eae, || eee\nEeveeenen || Emwamene|| Sperm, | (ese Lee\n= = —_!\n4 = —_—— 4",
+      "redactions": 0,
+      "search_text": "i _ OO ———————————— Sli i‘ a; Change Data Capture 101 for Data Engineers 4. What is CDC? — AR. eae (Barmetns] °c + eae real-time + Send only these changes to other systems, eerie <i ice a 4,PushvsPull 2. Why use CDC? 3.Where does CDC sit? <=> sighs cece BS [me] eos 4 = a ee aang Heeger [9] est os LER ey | (ete Data is old Data is fresh eased eel ' | ‘hours behind) aacand minte 3 5. What can you do with CDC? ee Gott @ | sloeatnar tities | Sieatasinesigpcernany PO EQ 6 Common CDC methods\" tees oes) og-based Tasuia SAIS (je MORSES wn ee mpuemareee nee = El EER) Ere 7. Simple CDC checklist Lry ba ad ‘egg ort! a ee eta mc uri! | Fer eas £ eae, || eee Eeveeenen || Emwamene|| Sperm, | (ese Lee = = —_! 4 = —_—— 4",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "715 chars, 117 words, 65% letters, 14% symbols, 2.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a3bd90de117a841e7e94c03e100b6e0c4d5dcb230687ea372a0ed361eb970852"
+    }
+  ]
+}

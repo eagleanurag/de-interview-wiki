@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-008",
+  "activity_id": "7290217478780076032",
+  "images": [
+    {
+      "post_id": "POST-008",
+      "activity_id": "7290217478780076032",
+      "filename": "activity_7290217478780076032_slide_0.jpg",
+      "path": "media/activity_7290217478780076032_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 433,
+      "size_bytes": 53398,
+      "declared_sha256": "27218ff71b82439764692588584be7b6b160231f75c53fd61bbb73be70cccbfd",
+      "actual_sha256": "27218ff71b82439764692588584be7b6b160231f75c53fd61bbb73be70cccbfd",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "[Pandas «> Polars «> SQL + PySpark | blo. bayDoseot®s.com\n“Operation Pandas. | Polars, =| SQL | PSpork |\n| eee | Rereas ee | ae eee |e\n[om [oem | oem |e | mor |\n— a\nP| Se\n| —\n[Select cmede) | ae”, “eae | oon “ei | SELECT cle Fam wie: | at acetic) |\nSe\n[st asennteceame | wanes | SSiseetice | atom |\nee eee ee\nVe [apes [pee Se me |\n| sername | rtemeisaan | vemenai n | “Siro eae | teh\n“pees | aes [| ee |\n[moran | tatmemo | memo | aro | a |\n——|ese [asses | Seee [amen]\n[ese ct etree = Pesaro] canine = Cekmerd) | SF Elgnn Say, | ats iey |",
+      "redactions": 0,
+      "search_text": "[Pandas «> Polars «> SQL + PySpark | blo. bayDoseot®s.com “Operation Pandas. | Polars, =| SQL | PSpork | | eee | Rereas ee | ae eee |e [om [oem | oem |e | mor | — a P| Se | — [Select cmede) | ae”, “eae | oon “ei | SELECT cle Fam wie: | at acetic) | Se [st asennteceame | wanes | SSiseetice | atom | ee eee ee Ve [apes [pee Se me | | sername | rtemeisaan | vemenai n | “Siro eae | teh “pees | aes [| ee | [moran | tatmemo | memo | aro | a | ——|ese [asses | Seee [amen] [ese ct etree = Pesaro] canine = Cekmerd) | SF Elgnn Say, | ats iey |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "537 chars, 83 words, 61% letters, 16% symbols, 0.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "465a0c4da4490f5e7a6b8e59cd224f7d6ff3439f7c73e9b8c17522bb9954e708"
+    }
+  ]
+}

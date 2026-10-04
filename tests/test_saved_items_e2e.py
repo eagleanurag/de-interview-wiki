@@ -894,9 +894,19 @@ class TestTheWholePipeline:
 
         assert len(carrying) == 1
 
-    def test_a_saved_item_page_states_how_it_was_captured(
+    def test_a_saved_item_page_says_where_it_came_from_in_words(
         self, imported, knowledge, tmp_path_factory
     ):
+        """
+        The reader-facing form of "this was supplied, not collected".
+
+        It used to be a "How it arrived" row with the exact manifest term
+        in a ``data-capture-method`` attribute. That is a fact about how
+        the archive was built, and a candidate revising for an interview
+        gains nothing from it. What remains is the plain statement: a
+        LinkedIn post, saved from a list.
+        """
+
         _drop, _posts = imported
 
         site = generate(knowledge, tmp_path_factory)
@@ -907,15 +917,24 @@ class TestTheWholePipeline:
             if ARTICLE_SPARK in path.read_text(encoding="utf-8")
         ).read_text(encoding="utf-8")
 
-        # A reader has to be able to tell material this project was
-        # given from material it collected, in plain words and in the
-        # exact term the manifest recorded.
-        assert "You supplied the content for this" in page
-        assert 'data-capture-method="user_provided"' in page
+        assert "LinkedIn post, saved from a list" in page
+
+        # The attribute and the manifest term are gone.
+        assert "data-capture-method" not in page
+        assert "user_provided" not in page
+        assert "How it arrived" not in page
 
     def test_a_saved_item_page_links_back_to_the_item(
         self, imported, knowledge, tmp_path_factory
     ):
+        """
+        The link survives; the identifier it replaced does not.
+
+        The original URL is the one thing in the capture record a reader
+        can actually use, so it is still offered. The saved item's own id
+        is not, and neither is the saved date as a field.
+        """
+
         _drop, _posts = imported
 
         site = generate(knowledge, tmp_path_factory)
@@ -926,8 +945,18 @@ class TestTheWholePipeline:
             if ARTICLE_SPARK in path.read_text(encoding="utf-8")
         ).read_text(encoding="utf-8")
 
-        assert sid(ARTICLE_SPARK) in page
-        assert "2026-01-04" in page
+        assert ARTICLE_SPARK in page
+
+        import re as _re
+
+        # The saved item id, which is the identifier this change removed.
+        # The URL does contain "urn:li:activity:" for some posts, so the
+        # check is on the saved-list form specifically.
+        assert sid(ARTICLE_SPARK) not in page
+
+        labels = _re.findall(r"<dt>(.*?)</dt>", page)
+
+        assert set(labels) <= {"Source", "Author"}, labels
 
     def test_a_post_that_was_not_saved_carries_no_saved_item(
         self, tmp_path

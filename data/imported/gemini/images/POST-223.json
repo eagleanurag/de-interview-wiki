@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-223",
+  "activity_id": "7346027818457161728",
+  "images": [
+    {
+      "post_id": "POST-223",
+      "activity_id": "7346027818457161728",
+      "filename": "activity_7346027818457161728_slide_0.jpg",
+      "path": "media/activity_7346027818457161728_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 16984,
+      "declared_sha256": "ab52ea6549056c8248b9790711178129f221374e3f51e38d65fab84ef6b78f82",
+      "actual_sha256": "ab52ea6549056c8248b9790711178129f221374e3f51e38d65fab84ef6b78f82",
+      "exact_duplicate_of": "activity_7315221613656887296_slide_0.jpg",
+      "likely_preview_of": "",
+      "ocr_status": "UNRESOLVED",
+      "public_text": "800+ SQL SERVER.\nINTERVIEW\nQUESTION\nSNSWERS PPF",
+      "redactions": 0,
+      "search_text": "800+ SQL SERVER. INTERVIEW QUESTION SNSWERS PPF",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "47 chars, 6 words, 77% letters, 11% symbols, 2.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "3e0c8b287f67e879d78afd1185ab66097ab408201934177bbe3d76defe6a8b59"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-095",
+  "activity_id": "7326463455274668032",
+  "images": [
+    {
+      "post_id": "POST-095",
+      "activity_id": "7326463455274668032",
+      "filename": "activity_7326463455274668032_slide_0.jpg",
+      "path": "media/activity_7326463455274668032_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 45394,
+      "declared_sha256": "d3452f7c73b9d02614ae182f3cc83642e1eb0ec4b4e38c7cb3157ff69f809ef8",
+      "actual_sha256": "d3452f7c73b9d02614ae182f3cc83642e1eb0ec4b4e38c7cb3157ff69f809ef8",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "in Interviews\n\nx We'll use an. We'll map that\nRDD to do that RDD using the\nmap operation map transformation\n\nx DataFrames DataFrames provide\nare just like optimizations\nRDDs over RDDs\n\n© llike using I've worked with\nnarrow narrow\ntransformations transformations\n\nv I've set a Spark I've configured\nparameter Spark parameters\nbefore\n\ne. a",
+      "redactions": 0,
+      "search_text": "in Interviews x We'll use an. We'll map that RDD to do that RDD using the map operation map transformation x DataFrames DataFrames provide are just like optimizations RDDs over RDDs © llike using I've worked with narrow narrow transformations transformations v I've set a Spark I've configured parameter Spark parameters before e. a",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "337 chars, 53 words, 80% letters, 2% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ca05e70cd27eccfb75240c3c26da630c27794b53efeb9d59a4f5be7b6db13022"
+    }
+  ]
+}

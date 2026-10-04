@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-251",
+  "activity_id": "7348939055495098368",
+  "images": [
+    {
+      "post_id": "POST-251",
+      "activity_id": "7348939055495098368",
+      "filename": "activity_7348939055495098368_slide_0.jpg",
+      "path": "media/activity_7348939055495098368_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 483,
+      "height": 483,
+      "size_bytes": 35024,
+      "declared_sha256": "6337a0300e0897b3287deb62b7a8feb0ad547990052cba6ed591a06d67b3cbb3",
+      "actual_sha256": "6337a0300e0897b3287deb62b7a8feb0ad547990052cba6ed591a06d67b3cbb3",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Unit Testing\nin Databricks",
+      "redactions": 0,
+      "search_text": "Unit Testing in Databricks",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "26 chars, 4 words, 88% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "6c7e5a684af4920063087782a47c917bc6c3f9748817045df0dd555c4abd24a2"
+    }
+  ]
+}

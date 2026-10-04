@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-137",
+  "activity_id": "7337817883038707714",
+  "images": [
+    {
+      "post_id": "POST-137",
+      "activity_id": "7337817883038707714",
+      "filename": "activity_7337817883038707714_slide_0.jpg",
+      "path": "media/activity_7337817883038707714_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 541,
+      "size_bytes": 61917,
+      "declared_sha256": "d24e6786823ed38781d2d6997272557c064511fe9b85c86a74d063914d0c0b97",
+      "actual_sha256": "d24e6786823ed38781d2d6997272557c064511fe9b85c86a74d063914d0c0b97",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "‘Top 50 Large Language Model (LLM) Interview\nQuestions\nHs Hoang - Pew nn lr AL nt\nMay 2025\n\nExplore the ry concep tiga nd hilenges of Lange Language Modes (LLMs)\nwih ths compen pu, cael or At ents an protect prepatig\nIntroduction\nLarge Language Mol (LLM) are rvttoniing aril inteligee, esting op-\nfuctos Eos chties Yo extn! tent ec. This docu cop £0\n{Social inteviow quaton, erly canted fo epen Your undasending of LIA\nEach qeton sped wth sealed enower,leing tec nghte wth practi\ncontin, Bers Gin Loris nh ur ork ak menial demain\n1 Question 1: What does tokenization entail, and why is it\n\ncritical for LLMs?\n“Tekeszation ives breaking down txt nto alr units or tokens, uh a word\n\"als Tua praca sil bean LEAs prose noms eesti of cls\ntt raw text Toenisation eae nl o handle es Ingugsy manage eof\n‘kzovn win end eps voslary br enbncng compen eicmny ad\nteal poten\n2 Question 2: How does the attention mechanism function in\n\ntransformer models?\n‘he Leon chan li LLM to wight imptae of tn thesin :\nuc whenptretng or iteping tent comptes tro gay\nEp, Da rs ve tg cperutoe Be ds poten, occa recer ee\nForimtane in \"Thea eset ie moe tention hes the nl nk \"mouse to\n\"chen Tis och improves covtsk undetanmg ming raion hghly\nfete fr NUP tsk",
+      "redactions": 0,
+      "search_text": "‘Top 50 Large Language Model (LLM) Interview Questions Hs Hoang - Pew nn lr AL nt May 2025 Explore the ry concep tiga nd hilenges of Lange Language Modes (LLMs) wih ths compen pu, cael or At ents an protect prepatig Introduction Large Language Mol (LLM) are rvttoniing aril inteligee, esting op- fuctos Eos chties Yo extn! tent ec. This docu cop £0 {Social inteviow quaton, erly canted fo epen Your undasending of LIA Each qeton sped wth sealed enower,leing tec nghte wth practi contin, Bers Gin Loris nh ur ork ak menial demain 1 Question 1: What does tokenization entail, and why is it critical for LLMs? “Tekeszation ives breaking down txt nto alr units or tokens, uh a word \"als Tua praca sil bean LEAs prose noms eesti of cls tt raw text Toenisation eae nl o handle es Ingugsy manage eof ‘kzovn win end eps voslary br enbncng compen eicmny ad teal poten 2 Question 2: How does the attention mechanism function in transformer models? ‘he Leon chan li LLM to wight imptae of tn thesin : uc whenptretng or iteping tent comptes tro gay Ep, Da rs ve tg cperutoe Be ds poten, occa recer ee Forimtane in \"Thea eset ie moe tention hes the nl nk \"mouse to \"chen Tis och improves covtsk undetanmg ming raion hghly fete fr NUP tsk",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "1227 chars, 218 words, 78% letters, 4% symbols, 0.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "637908a779efc80de45ef6f8cae1cb33b2373639eb10c33898f6d3b78bf60693"
+    }
+  ]
+}

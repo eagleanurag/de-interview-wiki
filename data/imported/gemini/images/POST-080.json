@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-080",
+  "activity_id": "7319949257480843265",
+  "images": [
+    {
+      "post_id": "POST-080",
+      "activity_id": "7319949257480843265",
+      "filename": "activity_7319949257480843265_slide_0.jpg",
+      "path": "media/activity_7319949257480843265_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 480,
+      "size_bytes": 42521,
+      "declared_sha256": "05531aa0f25c24740ce375bdefa52b68efe97677b970968be1375680e993a471",
+      "actual_sha256": "05531aa0f25c24740ce375bdefa52b68efe97677b970968be1375680e993a471",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ey == ” = v “",
+      "redactions": 0,
+      "search_text": "ey == ” = v “",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "13 chars, 2 words, 23% letters, 38% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "1648951b95b50fb225ae54f8771bec4aafb0fc5632ba828573f8c4d55ef3d97c"
+    }
+  ]
+}

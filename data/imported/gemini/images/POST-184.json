@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-184",
+  "activity_id": "7341317812893700096",
+  "images": [
+    {
+      "post_id": "POST-184",
+      "activity_id": "7341317812893700096",
+      "filename": "activity_7341317812893700096_slide_0.jpg",
+      "path": "media/activity_7341317812893700096_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 34454,
+      "declared_sha256": "94578ac457ace2b4ca5c59ec6d1e541065048bb8664ffa1548ed20ba4edab1a2",
+      "actual_sha256": "94578ac457ace2b4ca5c59ec6d1e541065048bb8664ffa1548ed20ba4edab1a2",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "50 SQL Interview Queries\nOGaNG\n1. Find duplicate records in a table\neee\nSELECT columni, column2, COUNT(*)\nFROM your_table\nGROUP BY coluent, column?\nHAVING CouNT(#) > 3; ‘amazon\n2. Retrieve the second highest salary\nfrom the Employee table\neve\nSELECT Wax(satary) AS 3s\nSecondHighestSalary i\nFROM Employee\nWHERE salary < (SELECT \"™X(salary) i\nFROM Employee); rt",
+      "redactions": 0,
+      "search_text": "50 SQL Interview Queries OGaNG 1. Find duplicate records in a table eee SELECT columni, column2, COUNT(*) FROM your_table GROUP BY coluent, column? HAVING CouNT(#) > 3; ‘amazon 2. Retrieve the second highest salary from the Employee table eve SELECT Wax(satary) AS 3s SecondHighestSalary i FROM Employee WHERE salary < (SELECT \"™X(salary) i FROM Employee); rt",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "359 chars, 53 words, 75% letters, 9% symbols, 1.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "55f044ae628723be47305b3184f5086b39c65c9325ca6c3d0ac1106cf6fa0018"
+    }
+  ]
+}

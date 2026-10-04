@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-202",
+  "activity_id": "7343477662515892224",
+  "images": [
+    {
+      "post_id": "POST-202",
+      "activity_id": "7343477662515892224",
+      "filename": "activity_7343477662515892224_slide_0.jpg",
+      "path": "media/activity_7343477662515892224_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 47965,
+      "declared_sha256": "e49dfec953bd4aa21f81667f497e07d52279d08e860e08f001c6465353fec38c",
+      "actual_sha256": "e49dfec953bd4aa21f81667f497e07d52279d08e860e08f001c6465353fec38c",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "test een oe hie\n\nterres\n\nSEE coieeeintnmce\n\nies\n\nSieherteencts\n\nBEE nected arent et tne\nEMEP Ulwal Sontake Jain\n\nSUES See roll Somlaite\n\ntry\n\nSete\n\nSade ce,\n\nPeay\n\n3 STaetid eee\n\npeated\n\nBe mare\n\nSita a nme\n\nEee ae\n\net eee a=",
+      "redactions": 0,
+      "search_text": "test een oe hie terres SEE coieeeintnmce ies Sieherteencts BEE nected arent et tne EMEP Ulwal Sontake Jain SUES See roll Somlaite try Sete Sade ce, Peay 3 STaetid eee peated Be mare Sita a nme Eee ae et eee a=",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "225 chars, 40 words, 74% letters, 1% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "37b4c4d1e12f9198a98d487846ba0019b48ba1aa0a38964207388c0ad6c9b725"
+    }
+  ]
+}

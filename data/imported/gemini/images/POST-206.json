@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-206",
+  "activity_id": "7343824255513464832",
+  "images": [
+    {
+      "post_id": "POST-206",
+      "activity_id": "7343824255513464832",
+      "filename": "activity_7343824255513464832_slide_0.jpg",
+      "path": "media/activity_7343824255513464832_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 465,
+      "height": 480,
+      "size_bytes": 53912,
+      "declared_sha256": "cb0efdf3796dc56a5290dd8c07a23119ab576e58a94effbb3b668db070ab39b3",
+      "actual_sha256": "cb0efdf3796dc56a5290dd8c07a23119ab576e58a94effbb3b668db070ab39b3",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "DataEngineerin 2025-26 *\n. ce. =\na <o\n/ SSeccee oor\n= sass (___ca— version contr\nSS == aS\n<i ;\n=\n=e\nf\n——\n=< ;\n—=—4 == <m,\n7 3 ~~ S\nCastes! / =r,\na)\nace te you te 9 vy a at s\ncottons SA ———",
+      "redactions": 0,
+      "search_text": "DataEngineerin 2025-26 * . ce. = a <o / SSeccee oor = sass (___ca— version contr SS == aS <i ; = =e f —— =< ; —=—4 == <m, 7 3 ~~ S Castes! / =r, a) ace te you te 9 vy a at s cottons SA ———",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "188 chars, 30 words, 47% letters, 27% symbols, 2.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "d456498af717639c47028a4a802344711bc56aad8c53e7f03fe19cf133116bb9"
+    }
+  ]
+}

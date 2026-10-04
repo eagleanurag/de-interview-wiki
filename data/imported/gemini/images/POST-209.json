@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-209",
+  "activity_id": "7344135454503399424",
+  "images": [
+    {
+      "post_id": "POST-209",
+      "activity_id": "7344135454503399424",
+      "filename": "activity_7344135454503399424_slide_0.jpg",
+      "path": "media/activity_7344135454503399424_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 320,
+      "size_bytes": 32679,
+      "declared_sha256": "ed17deadff1245d5ff4d79a4845f2cfa27b86aa295eef258cc01751a83633f47",
+      "actual_sha256": "ed17deadff1245d5ff4d79a4845f2cfa27b86aa295eef258cc01751a83633f47",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Input Data\n‘SparkSQL: Using sparkal rely on a SOL query with a\nLATERAL Join ad exlode 1 el th ob done\nDatarame API: much mor dot! We ea spark vtexplode)\n‘ohn ou Datarame chain, No more SOL stings needed!",
+      "redactions": 0,
+      "search_text": "Input Data ‘SparkSQL: Using sparkal rely on a SOL query with a LATERAL Join ad exlode 1 el th ob done Datarame API: much mor dot! We ea spark vtexplode) ‘ohn ou Datarame chain, No more SOL stings needed!",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "203 chars, 38 words, 77% letters, 4% symbols, 2.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "e34c9c4c7686f6d059bd20236610f892676d01b53d5ff039a0f98ec1694b8aeb"
+    }
+  ]
+}

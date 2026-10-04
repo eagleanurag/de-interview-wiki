@@ -253,6 +253,43 @@ def sequence_for(filename: str) -> int:
     return int(match.group("digits"))
 
 
+def activity_for(media_path: str | Path) -> str | None:
+    """
+    The archive activity a media file belongs to.
+
+    Taken from the filename rather than from a lookup table, because the
+    filename is the only link the committed posts carry. Their own
+    identifier is a hash of the archive identifier, which is deliberate --
+    it keeps the archive's ids off the published site -- so the reverse
+    has to come from the file name.
+
+    Lives here rather than in the pipeline layer because it is pure
+    filename knowledge, using the two patterns defined at the top of this
+    module. Putting it in :mod:`src.pipeline` made every consumer that
+    only needed this one function import the whole pipeline package,
+    which the orchestration layer itself imports back.
+    """
+
+    stem = Path(str(media_path)).stem
+
+    match = SLIDE_NAME.match(stem)
+
+    if match:
+        return match.group("stem")
+
+    document = DOCUMENT_NAME.match(stem)
+
+    if document:
+        return document.group("stem")
+
+    return stem or None
+
+
+#: Retained under the name the pipeline layer has always exported, so
+#: every existing caller keeps working unchanged.
+archive_post_id = activity_for
+
+
 def build_asset(
     path: Path,
     media_root: Path,
@@ -373,6 +410,8 @@ def order_assets(assets: list[VisualAsset]) -> list[VisualAsset]:
 
 __all__ = [
     "UnsafePath",
+    "activity_for",
+    "archive_post_id",
     "build_asset",
     "classify_role",
     "contained_media_path",

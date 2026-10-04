@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-101",
+  "activity_id": "7327172858009341952",
+  "images": [
+    {
+      "post_id": "POST-101",
+      "activity_id": "7327172858009341952",
+      "filename": "activity_7327172858009341952_slide_0.jpg",
+      "path": "media/activity_7327172858009341952_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 301,
+      "size_bytes": 53055,
+      "declared_sha256": "d1124cea90c6b065bf53c84279eba4965270d5a35013791c3d327b7399c06461",
+      "actual_sha256": "d1124cea90c6b065bf53c84279eba4965270d5a35013791c3d327b7399c06461",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "‘Weeki {a]SELECT, WHERE, ORDER BY, LIMIT\nWeek {GROUP BY, HAVING, Aggregates\nWeek i [FULL OUTER, SELFJOIN, CROSS JOIN\nWeek 1 5 Set Operations: UNION, INTERSECT, EXCEPT\nWeek t ‘6/51 Practice (LeetCode Easy/Medium) Timed practice and recap\n\n‘Weeki 7|Mini Project: Customer Transactions Report\nWeek? ‘Bisubqueries (scalar, correlated)\nWeek? ‘o[CTEs (WITH) + Recursive CTES\n[Week2 | 30]ROW_NUMBER), RANK), DENSE RANK) Ranking employees, sles, ete. |\nWeek? {2| Windowed Aggregates SUN) OVER) AVG) [Running total, maving verage=\n‘Week? 13) Practice: Top N, Deduplication, Trends\nWeek? 1Min Project: Monthy Sales Anais\nWeek 15|Performance: Indexing, PLAIN PLAN [Tune queries wth plan analy |\nWeek 16 ETL SOL: MERGE, Dedupication, Fiters\nWeek 3 | _17|Views, Temp Tables, Materialized Views,\nWeek3 18 SON/ArrayParsin work with nested structures\n\n‘Week3 19)Partitioning, Sharding, Distribution\n‘Week 20[Final Practice Set (10 Real Problems)\neke 'ai Wesases + Misia ales Keston",
+      "redactions": 0,
+      "search_text": "‘Weeki {a]SELECT, WHERE, ORDER BY, LIMIT Week {GROUP BY, HAVING, Aggregates Week i [FULL OUTER, SELFJOIN, CROSS JOIN Week 1 5 Set Operations: UNION, INTERSECT, EXCEPT Week t ‘6/51 Practice (LeetCode Easy/Medium) Timed practice and recap ‘Weeki 7|Mini Project: Customer Transactions Report Week? ‘Bisubqueries (scalar, correlated) Week? ‘o[CTEs (WITH) + Recursive CTES [Week2 | 30]ROW_NUMBER), RANK), DENSE RANK) Ranking employees, sles, ete. | Week? {2| Windowed Aggregates SUN) OVER) AVG) [Running total, maving verage= ‘Week? 13) Practice: Top N, Deduplication, Trends Week? 1Min Project: Monthy Sales Anais Week 15|Performance: Indexing, PLAIN PLAN [Tune queries wth plan analy | Week 16 ETL SOL: MERGE, Dedupication, Fiters Week 3 | _17|Views, Temp Tables, Materialized Views, Week3 18 SON/ArrayParsin work with nested structures ‘Week3 19)Partitioning, Sharding, Distribution ‘Week 20[Final Practice Set (10 Real Problems) eke 'ai Wesases + Misia ales Keston",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "965 chars, 128 words, 73% letters, 12% symbols, 1.2% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2c21c060a6d226878a93dc2e2ef04dedf8a15438234cf0b7472c190655e86e51"
+    }
+  ]
+}

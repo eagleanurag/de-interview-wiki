@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-083",
+  "activity_id": "7322839563276615680",
+  "images": [
+    {
+      "post_id": "POST-083",
+      "activity_id": "7322839563276615680",
+      "filename": "activity_7322839563276615680_slide_0.jpg",
+      "path": "media/activity_7322839563276615680_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 18573,
+      "declared_sha256": "58a399c2d331163a5edc6688af991d0b881cc3fb7945281ccb362ca1723520e4",
+      "actual_sha256": "58a399c2d331163a5edc6688af991d0b881cc3fb7945281ccb362ca1723520e4",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SRST erence accenture",
+      "redactions": 0,
+      "search_text": "SRST erence accenture",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "21 chars, 3 words, 90% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "d566915bb2ed18bae01e228b54d2a46a1795ca03b719a5ae1517442852e2a2ec"
+    }
+  ]
+}

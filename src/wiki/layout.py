@@ -24,14 +24,28 @@ from src.wiki.naming import (
 )
 
 
+#: The four things a reader revising for an interview reaches for.
+#:
+#: Concepts, Technologies, Topics and Saved Items used to be the primary
+#: navigation, and that was the problem rather than the fix: a reader
+#: who does not yet know whether the thing they half-remembers was filed
+#: as a "concept" or a "technology" has to guess before they can search,
+#: and all of those pages list labels the corpus generated rather than
+#: subjects a person would revise.
+#:
+#: They were then demoted to a footer row, and finally stopped being
+#: generated at all. The revision curriculum is the reader-facing
+#: representation: a concept label belongs under the subtopic that
+#: teaches it, a technology under the subject that uses it, and a saved
+#: item is not revision material. Their pages, and every link into them,
+#: are gone; the underlying concepts, technologies and saved-item
+#: provenance remain in the knowledge base and in the search index's
+#: data layer.
 NAV_ITEMS = (
     ("Home", INDEX_PAGE),
-    ("Search", SEARCH_PAGE),
-    ("Topics", TOPICS_PAGE),
-    ("Concepts", CONCEPTS_PAGE),
-    ("Technologies", TECHNOLOGIES_PAGE),
+    ("Subjects", "subjects.html"),
     ("Questions", QUESTIONS_PAGE),
-    ("Saved Items", SAVED_ITEMS_PAGE),
+    ("Search", SEARCH_PAGE),
 )
 
 
@@ -120,6 +134,14 @@ def _footer(page: str, generated_at: str | None) -> str:
         else "Source data generation time was not recorded."
     )
 
+    # There is no secondary row any more. Concepts, Technologies, Topics
+    # and Saved Items were the evidence behind the revision pages, and
+    # while they were generated they were linked from here on every one
+    # of the site's pages -- 2,601 links to four indexes of labels the
+    # corpus invented. A reader who finished a subtopic and clicked
+    # "Concepts" was back inside the archive the site was built to
+    # replace. Their content is still in the knowledge base; it is just
+    # no longer a place the reader is sent.
     return (
         '<footer class="site-footer">'
         '<div class="wrap">'

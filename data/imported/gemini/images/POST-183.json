@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-183",
+  "activity_id": "7341290345546067969",
+  "images": [
+    {
+      "post_id": "POST-183",
+      "activity_id": "7341290345546067969",
+      "filename": "activity_7341290345546067969_slide_0.jpg",
+      "path": "media/activity_7341290345546067969_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 241,
+      "size_bytes": 16668,
+      "declared_sha256": "f497206456f9489c9ee1d89e44baf1a3b59f563f132ef352cdd3f76acf155e7d",
+      "actual_sha256": "f497206456f9489c9ee1d89e44baf1a3b59f563f132ef352cdd3f76acf155e7d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "1255 Jsevect\n66! ‘8\n=| SUBSTRING(enaLL,CHARINOEK(‘@\" enat2)+4, len(emal)) AS domain\n1259\" | Fron ssaakin\n1260 | users\ni Deloitte.\nSS SQL Interview\noc Question",
+      "redactions": 0,
+      "search_text": "1255 Jsevect 66! ‘8 =| SUBSTRING(enaLL,CHARINOEK(‘@\" enat2)+4, len(emal)) AS domain 1259\" | Fron ssaakin 1260 | users i Deloitte. SS SQL Interview oc Question",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "158 chars, 19 words, 62% letters, 23% symbols, 1.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a2a6620f73f318378def5ec284f628ec1c6c7280e122950ba9fbdf554b6dc56c"
+    }
+  ]
+}

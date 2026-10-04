@@ -44,11 +44,23 @@ try:
 except ImportError:  # pragma: no cover - visual package always present
     VISUAL_PROCESSOR_VERSION = "1"
 
+#: The imported-transcription processor's version, imported for the same
+#: reason and with the same fallback. Kept distinct from
+#: ``VISUAL_PROCESSOR_VERSION`` because the two read different sources
+#: with different authority, and a result derived from one is not
+#: automatically a result the other would produce.
+try:
+    from src.gemini.bridge import PROCESSOR_VERSION as OCR_PROCESSOR_VERSION
+
+except ImportError:  # pragma: no cover - gemini package always present
+    OCR_PROCESSOR_VERSION = "1"
+
 
 def _reusable(
     target: Path,
     digest: str,
     visual_digest: str = "",
+    ocr_digest: str = "",
 ) -> dict | None:
     """
     An existing worker result that still matches the current content.
@@ -63,9 +75,16 @@ def _reusable(
     enrichment would publish knowledge derived from slides that are no
     longer there.
 
-    Compared only when the caller supplies one. A post with no images
-    passes nothing and is decided on its source alone, which is the
-    behaviour every post had before visual enrichment existed.
+    ``ocr_digest`` is the same argument one step further out. It covers
+    transcriptions imported from outside the post, so a corrected
+    transcription re-enriches the post it informs. It is compared
+    independently of the visual digest because the two come from
+    different sources: requiring both to match is what stops a change to
+    either being mistaken for a change to the other.
+
+    Each is compared only when the caller supplies one. A post with no
+    images passes neither and is decided on its source alone, which is
+    the behaviour every post had before visual enrichment existed.
     """
 
     try:
@@ -93,6 +112,13 @@ def _reusable(
             return None
 
         if recorded.get("visual_processor_version") != VISUAL_PROCESSOR_VERSION:
+            return None
+
+    if ocr_digest:
+        if recorded.get("ocr_digest") != ocr_digest:
+            return None
+
+        if recorded.get("ocr_processor_version") != OCR_PROCESSOR_VERSION:
             return None
 
     return payload
@@ -145,12 +171,24 @@ def _refresh_provenance(
 
 #: Media fields that come from reading a file rather than from the post
 #: describing it. Never overwritten by a refresh.
+#:
+#: The last four arrived with the imported image-knowledge package. They
+#: are reading-derived for exactly the same reason ``extracted_text`` is,
+#: and they matter more than the rest: they are what tells a reader that
+#: a transcription is a transcription and how legible it looked. Dropping
+#: them on refresh would republish a machine's garbled reading of a
+#: 480-pixel screenshot as though it were plain fact.
 _VISUAL_FIELDS = (
     "extracted_text",
     "sequence",
     "role",
     "sha256",
     "extraction_method",
+    "ocr_status",
+    "ocr_quality",
+    "ocr_note",
+    "source_kind",
+    "slide_count",
 )
 
 

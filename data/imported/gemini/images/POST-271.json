@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-271",
+  "activity_id": "7355607628678356993",
+  "images": [
+    {
+      "post_id": "POST-271",
+      "activity_id": "7355607628678356993",
+      "filename": "activity_7355607628678356993_slide_0.jpg",
+      "path": "media/activity_7355607628678356993_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 23827,
+      "declared_sha256": "1c4687320e24e868a6bd59f973b541b24a9f222e5cc5f6c8dcc0bbdbfc50592f",
+      "actual_sha256": "1c4687320e24e868a6bd59f973b541b24a9f222e5cc5f6c8dcc0bbdbfc50592f",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "3\nTHE ILLUSTRATED\nGUIDEBOOK\n{ \\, Daily Dose of “Avi Chawla & Akshay Pachoor",
+      "redactions": 0,
+      "search_text": "3 THE ILLUSTRATED GUIDEBOOK { \\, Daily Dose of “Avi Chawla & Akshay Pachoor",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "75 chars, 10 words, 75% letters, 8% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "62aadf37718b99f6b8d97b9f256457db7e07f39ca10d607b84075bbd90f05902"
+    }
+  ]
+}

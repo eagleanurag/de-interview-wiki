@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-261",
+  "activity_id": "7350210945224183810",
+  "images": [
+    {
+      "post_id": "POST-261",
+      "activity_id": "7350210945224183810",
+      "filename": "activity_7350210945224183810_slide_0.jpg",
+      "path": "media/activity_7350210945224183810_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 26558,
+      "declared_sha256": "3a21bff8b78cee1db854fd554ffd7ece29ebadf155d0eb232588a9199bb79219",
+      "actual_sha256": "3a21bff8b78cee1db854fd554ffd7ece29ebadf155d0eb232588a9199bb79219",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "INTERVIEW] cAN sec\nQ LF\n\nQuestions and\n\nAnswers",
+      "redactions": 0,
+      "search_text": "INTERVIEW] cAN sec Q LF Questions and Answers",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "47 chars, 8 words, 79% letters, 2% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "71a1a445d2ac6cff8118e7cc28818ecdf533b65f981a734b935d94ee0fa6b0f4"
+    }
+  ]
+}

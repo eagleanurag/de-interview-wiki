@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-054",
+  "activity_id": "7306216334671937536",
+  "images": [
+    {
+      "post_id": "POST-054",
+      "activity_id": "7306216334671937536",
+      "filename": "activity_7306216334671937536_slide_0.jpg",
+      "path": "media/activity_7306216334671937536_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 596,
+      "size_bytes": 522272,
+      "declared_sha256": "594fd7a007149f3e1749f9ef5af5b60e7b9dca9daa32df73b53a06281b9c7a68",
+      "actual_sha256": "594fd7a007149f3e1749f9ef5af5b60e7b9dca9daa32df73b53a06281b9c7a68",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Howgeximprovey eves performance? BUT aon\n— a\nSees Ee\nSaar | Sei,\npats feta Spee\n=\n\nfd\n[le}------> [>=] 7\n[elep------[= |e | _\n[c[et------>[-[o= | 2\nHE g |g\na\nos [= |S.\ncarers. Simeone Sateen\nsaa | rh ee\n\n=:\n.\n\neo Ti a ‘\n— —— os\neo, (SS | SS,\nSepaaeemty  Remiemcoee | Seat\na Se\n=e ame\n\n—\n=. 2\n+ i + a :\n\n+\n\ngeen\n\nSeen\n\nanan",
+      "redactions": 0,
+      "search_text": "Howgeximprovey eves performance? BUT aon — a Sees Ee Saar | Sei, pats feta Spee = fd [le}------> [>=] 7 [elep------[= |e | _ [c[et------>[-[o= | 2 HE g |g a os [= |S. carers. Simeone Sateen saa | rh ee =: . eo Ti a ‘ — —— os eo, (SS | SS, Sepaaeemty Remiemcoee | Seat a Se =e ame — =. 2 + i + a : + geen Seen anan",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "322 chars, 51 words, 52% letters, 23% symbols, 2.2% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "32d08e80534b19d1bd728781f99229aec5178c3c10369b8541b9593c011d79d5"
+    }
+  ]
+}

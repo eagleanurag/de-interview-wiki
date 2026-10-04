@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-100",
+  "activity_id": "7326983384889511936",
+  "images": [
+    {
+      "post_id": "POST-100",
+      "activity_id": "7326983384889511936",
+      "filename": "activity_7326983384889511936_slide_0.jpg",
+      "path": "media/activity_7326983384889511936_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 236,
+      "size_bytes": 16350,
+      "declared_sha256": "e73eb146799eee26a5258da6ef41e7779b23237befb4c98a50aa9b69b2ec0421",
+      "actual_sha256": "e73eb146799eee26a5258da6ef41e7779b23237befb4c98a50aa9b69b2ec0421",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "* Py irk Intervi luestions\nP penn",
+      "redactions": 0,
+      "search_text": "* Py irk Intervi luestions P penn",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "33 chars, 6 words, 79% letters, 3% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "fd1aaaac58a4a464178947369ce7ccd25dd3b1b1119e20850721bfa19b3e4c16"
+    }
+  ]
+}

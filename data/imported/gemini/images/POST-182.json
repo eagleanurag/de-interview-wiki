@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-182",
+  "activity_id": "7341276741132328961",
+  "images": [
+    {
+      "post_id": "POST-182",
+      "activity_id": "7341276741132328961",
+      "filename": "activity_7341276741132328961_slide_0.jpg",
+      "path": "media/activity_7341276741132328961_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 92422,
+      "declared_sha256": "0a84e858295fa139e036c22f9d3158f7ecbd0b37172ea93aae168d358cedadb6",
+      "actual_sha256": "0a84e858295fa139e036c22f9d3158f7ecbd0b37172ea93aae168d358cedadb6",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "PYSPARK FUNCTIONS\nBASIC COLUMN FUNCTIONS. STRING FUNCTIONS |\ncol) | Refers toa column Comerscase |\nCreates column wath | Retuns stringlength |\nGaels el\nfetter fl eouatoanie aa transtate() | Replaces characters |\na [eae | initeap() Cone tat\n‘Approximate count Current date/time |\n‘Agaregates values into a Convert to date/ |\ncottect | Aggregates distinct values | | date format() | Format date as string |\nset() | intoa set datediff() Days between two dates |\nFil/drop/replace nulls Sr\nnareplace) Extract week/quarte! |\nFirst non-null value dayofweek)\nvinen(),/_| Conditional gi Het) Ger eaeal\nRATHEMAT CAR EUNCTIONS) JSON & STRUCT FUNCTIONS: |\nsone a Tart BON tld\n| round() Round numbers: Parsapaerales GON |\n‘rey ie Grate sc coun |",
+      "redactions": 0,
+      "search_text": "PYSPARK FUNCTIONS BASIC COLUMN FUNCTIONS. STRING FUNCTIONS | col) | Refers toa column Comerscase | Creates column wath | Retuns stringlength | Gaels el fetter fl eouatoanie aa transtate() | Replaces characters | a [eae | initeap() Cone tat ‘Approximate count Current date/time | ‘Agaregates values into a Convert to date/ | cottect | Aggregates distinct values | | date format() | Format date as string | set() | intoa set datediff() Days between two dates | Fil/drop/replace nulls Sr nareplace) Extract week/quarte! | First non-null value dayofweek) vinen(),/_| Conditional gi Het) Ger eaeal RATHEMAT CAR EUNCTIONS) JSON & STRUCT FUNCTIONS: | sone a Tart BON tld | round() Round numbers: Parsapaerales GON | ‘rey ie Grate sc coun |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "732 chars, 101 words, 76% letters, 8% symbols, 0.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "164a71d82a151de9d838ee0e541d8c13b60d630df1861a16840be2a7f91a0e22"
+    }
+  ]
+}

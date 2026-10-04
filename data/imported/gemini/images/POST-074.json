@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-074",
+  "activity_id": "7315590769430474753",
+  "images": [
+    {
+      "post_id": "POST-074",
+      "activity_id": "7315590769430474753",
+      "filename": "activity_7315590769430474753_slide_0.jpg",
+      "path": "media/activity_7315590769430474753_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 320,
+      "size_bytes": 30434,
+      "declared_sha256": "4e52247eb8c5f3313f40618b6d35f4d35fd93b2608c8cefe454815b977e15a8c",
+      "actual_sha256": "4e52247eb8c5f3313f40618b6d35f4d35fd93b2608c8cefe454815b977e15a8c",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Databricks Al Functions! NewSGlmdtorON ft Latesioas tm =~\nnn",
+      "redactions": 0,
+      "search_text": "Databricks Al Functions! NewSGlmdtorON ft Latesioas tm =~ nn",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "60 chars, 8 words, 82% letters, 5% symbols, 1.7% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "a2202b01b0bb9cc8e78f550a01e36aa5a3cd84f11477db6506068028910088e6"
+    }
+  ]
+}

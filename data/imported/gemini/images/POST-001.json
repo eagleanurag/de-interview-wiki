@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-001",
+  "activity_id": "7263033731471351808",
+  "images": [
+    {
+      "post_id": "POST-001",
+      "activity_id": "7263033731471351808",
+      "filename": "activity_7263033731471351808_slide_0.jpg",
+      "path": "media/activity_7263033731471351808_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 599,
+      "size_bytes": 394683,
+      "declared_sha256": "a1190f1f8103fbd6d03a9c45f85f0e057877b78439b9e53baddfd95734fa9cdf",
+      "actual_sha256": "a1190f1f8103fbd6d03a9c45f85f0e057877b78439b9e53baddfd95734fa9cdf",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "bree ondey AEST\n= \"Data WERGRGUES ve KEKE vs\nLake House vs Mesh\n-~_ » gt. ™\ne-* 2%\nData Lake oi\nae\n82% 8... ene eee\nata Lake House x aa\noma == =e\nanne a2\naera G=o-/ = a",
+      "redactions": 0,
+      "search_text": "bree ondey AEST = \"Data WERGRGUES ve KEKE vs Lake House vs Mesh -~_ » gt. ™ e-* 2% Data Lake oi ae 82% 8... ene eee ata Lake House x aa oma == =e anne a2 aera G=o-/ = a",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "168 chars, 33 words, 60% letters, 16% symbols, 2.4% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "15be257f8b06ecfe2f93787672f80b93184c2aa89913c8adf57dd3ef25ba82c3"
+    }
+  ]
+}

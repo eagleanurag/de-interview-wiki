@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-106",
+  "activity_id": "7327458889296232450",
+  "images": [
+    {
+      "post_id": "POST-106",
+      "activity_id": "7327458889296232450",
+      "filename": "activity_7327458889296232450_slide_0.jpg",
+      "path": "media/activity_7327458889296232450_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 480,
+      "size_bytes": 19921,
+      "declared_sha256": "5647086a2617f28c8063a5bbbbe4b18824433464fb88a798d2e8fd36f09e20da",
+      "actual_sha256": "5647086a2617f28c8063a5bbbbe4b18824433464fb88a798d2e8fd36f09e20da",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "[bes\nAzure Data\nS Factory se\nDatabricks | Ve Snowflake\nSQL — X\ndbt\n@- |\nPython im\ng Power BI\nDatabricks",
+      "redactions": 0,
+      "search_text": "[bes Azure Data S Factory se Databricks | Ve Snowflake SQL — X dbt @- | Python im g Power BI Databricks",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "103 chars, 18 words, 74% letters, 6% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "835bde1073c4d4b05cdac18c37e9ace3c851f01da5fc2fe39f79473cd3ac3cf9"
+    }
+  ]
+}

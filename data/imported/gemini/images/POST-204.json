@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-204",
+  "activity_id": "7343495692914475008",
+  "images": [
+    {
+      "post_id": "POST-204",
+      "activity_id": "7343495692914475008",
+      "filename": "activity_7343495692914475008_slide_0.jpg",
+      "path": "media/activity_7343495692914475008_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 25284,
+      "declared_sha256": "44d93a14949840e1d5bf9f7eba8ca166da5eecb83f04652fd44fab62bbba4b9c",
+      "actual_sha256": "44d93a14949840e1d5bf9f7eba8ca166da5eecb83f04652fd44fab62bbba4b9c",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "10 Advanced\nSQL Interview\nPractical Query\nQuestions along\nwith their\nSolutions",
+      "redactions": 0,
+      "search_text": "10 Advanced SQL Interview Practical Query Questions along with their Solutions",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "78 chars, 10 words, 85% letters, 3% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "ec34ddc88dcc5acaa105456d4f83e0ed689e50d33cb56b7efd3366dc62baf9f4"
+    }
+  ]
+}

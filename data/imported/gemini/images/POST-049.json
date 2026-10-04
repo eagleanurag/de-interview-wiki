@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-049",
+  "activity_id": "7303617905911373825",
+  "images": [
+    {
+      "post_id": "POST-049",
+      "activity_id": "7303617905911373825",
+      "filename": "activity_7303617905911373825_slide_0.jpg",
+      "path": "media/activity_7303617905911373825_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 640,
+      "size_bytes": 62717,
+      "declared_sha256": "69f24cbbc0060f2d4ccb5211c6e60b6abd9ea07f9b3d63bcbc37dc4fcc6003ef",
+      "actual_sha256": "69f24cbbc0060f2d4ccb5211c6e60b6abd9ea07f9b3d63bcbc37dc4fcc6003ef",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "\\\n\noo Baas\n\"oa —_— Ht\nBe ig He +\nat BRAS:\nPAUTaseUAPEnABEEHURSALE!\nea x_n ie",
+      "redactions": 0,
+      "search_text": "\\ oo Baas \"oa —_— Ht Be ig He + at BRAS: PAUTaseUAPEnABEEHURSALE! ea x_n ie",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "76 chars, 14 words, 67% letters, 12% symbols, 2.6% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "b344a9ec4d758a02567536cb6f6b17fa96969e5ba23926c2e461e125dbf4b845"
+    }
+  ]
+}

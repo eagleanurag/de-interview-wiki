@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-232",
+  "activity_id": "7346749628664463363",
+  "images": [
+    {
+      "post_id": "POST-232",
+      "activity_id": "7346749628664463363",
+      "filename": "activity_7346749628664463363_slide_0.jpg",
+      "path": "media/activity_7346749628664463363_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 279,
+      "size_bytes": 14725,
+      "declared_sha256": "87bbd964c62b619190a4c080cd07a08f94f2dbdfc0d06b0de915bc0468371fb7",
+      "actual_sha256": "87bbd964c62b619190a4c080cd07a08f94f2dbdfc0d06b0de915bc0468371fb7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Reminder-\n\nIF you don't practice SQL for 1 day — you know it!\n\nIf you don’t practice SQL for 2 days — the interviewer knows it!\n\nIf you don't practice SQL for 3 days — your colleagues know it!\n\nIF you don't practice SQL for 4 days ~ Linkedin knows it!\n\nIF you don't practice SQL for 5 days — even your coffee is suspicious!\n@mohitmotwani16",
+      "redactions": 0,
+      "search_text": "Reminder- IF you don't practice SQL for 1 day — you know it! If you don’t practice SQL for 2 days — the interviewer knows it! If you don't practice SQL for 3 days — your colleagues know it! IF you don't practice SQL for 4 days ~ Linkedin knows it! IF you don't practice SQL for 5 days — even your coffee is suspicious! @mohitmotwani16",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "339 chars, 57 words, 72% letters, 7% symbols, 1.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "4c59a0af3df6a2778d59cc40a4d9d550f45ac9e8f3319c21a6a962f0c73533fe"
+    }
+  ]
+}

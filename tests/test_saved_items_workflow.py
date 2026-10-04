@@ -663,9 +663,19 @@ class TestPublished:
 
         assert sid(METADATA).replace(":", "-") not in ids
 
-    def test_the_site_links_back_to_every_saved_item(
+    def test_every_saved_item_still_has_a_page_of_its_own(
         self, drop: Path, posts: Path, tmp_path: Path
     ):
+        """
+        What the saved-items index used to do, done by the posts.
+
+        It listed every saved item and linked to it. The index is gone;
+        each post still has a page, and each page still links to the
+        original, so every captured item is still reachable. What is no
+        longer published is the list of which posts happened to come from
+        a saved list.
+        """
+
         enrich_everything(drop, posts)
 
         knowledge = self._knowledge_base(posts, tmp_path)
@@ -682,16 +692,37 @@ class TestPublished:
             output_dir=source / "out",
         )
 
-        index = (source / "out" / "saved-items.html").read_text(
-            encoding="utf-8"
-        )
+        out = source / "out"
 
+        assert not (out / "saved-items.html").exists()
+
+        bodies = [
+            page.read_text(encoding="utf-8")
+            for page in (out / "posts").glob("*.html")
+        ]
+
+        assert bodies
+
+        # Every original URL is still offered, on the page of the post it
+        # belongs to.
         for url in (DELTA, SQL, SPARK, DATABRICKS, FACTORY, ARCHITECTURE):
-            assert url in index
+            assert any(url in body for body in bodies), url
 
-    def test_the_image_only_item_is_labelled_in_the_site(
+        # And the reader is told each one came from a saved list, in
+        # words rather than as an identifier.
+        assert any("saved from a list" in body for body in bodies)
+
+    def test_the_image_only_capture_is_still_labelled_in_the_data(
         self, drop: Path, posts: Path, tmp_path: Path
     ):
+        """
+        The "Image only" distinction survives as data, not as a page.
+
+        The label was useful -- it tells a reader that a post has no
+        transcribed body -- but it belonged on a page about the capture,
+        and there is no longer one. The quality flag is still on the post.
+        """
+
         enrich_everything(drop, posts)
 
         knowledge = self._knowledge_base(posts, tmp_path)
@@ -708,11 +739,17 @@ class TestPublished:
             output_dir=source / "out",
         )
 
-        index = (source / "out" / "saved-items.html").read_text(
-            encoding="utf-8"
-        )
+        out = source / "out"
 
-        assert "Image only" in index
+        assert not (out / "saved-items.html").exists()
+
+        qualities = {
+            post.get("saved_item", {}).get("capture_quality")
+            for post in knowledge["posts"]
+            if post.get("saved_item")
+        }
+
+        assert "image_only" in qualities
 
     def test_no_page_is_generated_for_an_uncaptured_link(
         self, drop: Path, posts: Path, tmp_path: Path

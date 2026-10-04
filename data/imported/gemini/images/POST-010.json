@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-010",
+  "activity_id": "7290958913657520129",
+  "images": [
+    {
+      "post_id": "POST-010",
+      "activity_id": "7290958913657520129",
+      "filename": "activity_7290958913657520129_slide_0.jpg",
+      "path": "media/activity_7290958913657520129_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 383,
+      "height": 481,
+      "size_bytes": 38216,
+      "declared_sha256": "86ef523510bbf39577a21ee69af2b0861b1f5e089172b691216997ffaded5b1e",
+      "actual_sha256": "86ef523510bbf39577a21ee69af2b0861b1f5e089172b691216997ffaded5b1e",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Abhishek Mishra\nMachine Learning\nin the AWS Cloud\nAdd Intelligence to Applications with\nAmazon SageMaker and Amazon Rekognition",
+      "redactions": 0,
+      "search_text": "Abhishek Mishra Machine Learning in the AWS Cloud Add Intelligence to Applications with Amazon SageMaker and Amazon Rekognition",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "127 chars, 18 words, 87% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "b97c50e7afb22f414cb5d1526a6c53e981da9ab99732964965e4ce3c14e4c437"
+    }
+  ]
+}

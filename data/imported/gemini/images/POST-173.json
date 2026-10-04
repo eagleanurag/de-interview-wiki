@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-173",
+  "activity_id": "7340261895330852864",
+  "images": [
+    {
+      "post_id": "POST-173",
+      "activity_id": "7340261895330852864",
+      "filename": "activity_7340261895330852864_slide_0.jpg",
+      "path": "media/activity_7340261895330852864_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 16655,
+      "declared_sha256": "5a8f42e3ca8e89e203861331648b509b398defd78ab50f3ea5085a91de751db7",
+      "actual_sha256": "5a8f42e3ca8e89e203861331648b509b398defd78ab50f3ea5085a91de751db7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Pandas\nNotes\nEA",
+      "redactions": 0,
+      "search_text": "Pandas Notes EA",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "fragmentary",
+      "ocr_note": "15 chars, 3 words, 87% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "c5f398893f6d62b72c3b9117890969e856060df29b4b3a1b39ee7a0362ee9086"
+    }
+  ]
+}

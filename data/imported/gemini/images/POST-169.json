@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-169",
+  "activity_id": "7340220810126626817",
+  "images": [
+    {
+      "post_id": "POST-169",
+      "activity_id": "7340220810126626817",
+      "filename": "activity_7340220810126626817_slide_0.jpg",
+      "path": "media/activity_7340220810126626817_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 327,
+      "height": 490,
+      "size_bytes": 30010,
+      "declared_sha256": "3cb770f601a1c1b1fef3180ac8a4ff0831be39734a43e9eb7a705ca4efeac11a",
+      "actual_sha256": "3cb770f601a1c1b1fef3180ac8a4ff0831be39734a43e9eb7a705ca4efeac11a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Crack Top Data\nEngineerring\nInterviews\nReal-Time Scenarios\n‘Spark - Kafka- SQL - Python - AWS - Azure -GCP\nKeerthana Annur",
+      "redactions": 0,
+      "search_text": "Crack Top Data Engineerring Interviews Real-Time Scenarios ‘Spark - Kafka- SQL - Python - AWS - Azure -GCP Keerthana Annur",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "122 chars, 16 words, 78% letters, 7% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "558146722227741b18f97a583592f3bc99d184d413ce31c447e6b00712d9250c"
+    }
+  ]
+}

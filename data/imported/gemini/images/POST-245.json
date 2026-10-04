@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-245",
+  "activity_id": "7347921644906082306",
+  "images": [
+    {
+      "post_id": "POST-245",
+      "activity_id": "7347921644906082306",
+      "filename": "activity_7347921644906082306_slide_0.jpg",
+      "path": "media/activity_7347921644906082306_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 800,
+      "height": 450,
+      "size_bytes": 49165,
+      "declared_sha256": "75e98941d8bdae8470d78a0f15eef44f4a40b3644ce2b08d6b9c127a4d4be904",
+      "actual_sha256": "75e98941d8bdae8470d78a0f15eef44f4a40b3644ce2b08d6b9c127a4d4be904",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "a : : Cloudlearningyard -\nSNOWFLAKE 3\nZERO TO HERO 4 one,\n#5-Deep Dive of Virtual tS a.\nWarehouse i oA\nSUBCRIBE VA /\nKick start your Snowflake journey ff",
+      "redactions": 0,
+      "search_text": "a : : Cloudlearningyard - SNOWFLAKE 3 ZERO TO HERO 4 one, #5-Deep Dive of Virtual tS a. Warehouse i oA SUBCRIBE VA / Kick start your Snowflake journey ff",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "153 chars, 24 words, 74% letters, 7% symbols, 2.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "8e135b5005f83f5f31493e7e9599e877a860f3af5beb6ab86ee57c0dc20c8c39"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-281",
+  "activity_id": "7426120115638915072",
+  "images": [
+    {
+      "post_id": "POST-281",
+      "activity_id": "7426120115638915072",
+      "filename": "activity_7426120115638915072_slide_0.jpg",
+      "path": "media/activity_7426120115638915072_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 678,
+      "size_bytes": 36386,
+      "declared_sha256": "aaa27e945010f1c5c074afc9b9470d09a23fed13eaf1a8b6ded51a6fbc6f52d5",
+      "actual_sha256": "aaa27e945010f1c5c074afc9b9470d09a23fed13eaf1a8b6ded51a6fbc6f52d5",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "12 DATA\nENGINEERING\nCONCEPTS —\nMASTER GUIDE\n(2026)\nFoz\na",
+      "redactions": 0,
+      "search_text": "12 DATA ENGINEERING CONCEPTS — MASTER GUIDE (2026) Foz a",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "56 chars, 7 words, 68% letters, 16% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "3e76d1b014a9980c379e0a2e5e0adfe467b6d4d9e2f2c54101a42627a0e954a8"
+    }
+  ]
+}

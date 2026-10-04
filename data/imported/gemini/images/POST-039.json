@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-039",
+  "activity_id": "7300054526030450688",
+  "images": [
+    {
+      "post_id": "POST-039",
+      "activity_id": "7300054526030450688",
+      "filename": "activity_7300054526030450688_slide_0.jpg",
+      "path": "media/activity_7300054526030450688_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 886,
+      "size_bytes": 82922,
+      "declared_sha256": "0d18c883bf7515346a27e8489fded34bffae9f0a5731be8700f007a3ac958a67",
+      "actual_sha256": "0d18c883bf7515346a27e8489fded34bffae9f0a5731be8700f007a3ac958a67",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "t/leetcode\n\n Gioscctmurat «30 *\n\n%a Ubersetzen\n\nHow | “Cheated” My Way Into FAANG\n\nInterviews and Got the Offer\n\nAlright, so let's be real—FAANG interviews are more\n\nabout playing the game than being the best\n\nengineer. | didn’t grind 500 LeetCode problems, and\n| didn't have a perfect resume. Instead, | hacked the\ninterview process by understanding how hiring\n\nactually works. Here's exactly what | did:\n\nStep 1: Skipping the Black Hole (Cold\n\nApplications Are a Waste)\n\n+ | never applied through company portals. They\nget thousands of applications, and ATS filters out\nmost of them.\n\n+ Instead, | targeted engineers and hiring managers\non Linkedin and asked for referrals.\n\n+ [kept my messages short and to the point: “Hey\n[Name], I'm really interested in [Team/Company]\nand I'd love to apply. | have [X years] of\nexperience in [Relevant Skill], and | think I'd be a\ngreat fit. Would you be open to referring me?”\n\n+ This got me multiple referrals in a week, and |\nwent straight to recruiter screens instead of\nwaiting in the void.\n\nStep 2: Only Studying What Actually Gets Asked\n\n+ Instead of grinding hundreds of LeetCode Me\nproblems, | reverse-engineered the interview\nquestions:",
+      "redactions": 0,
+      "search_text": "t/leetcode Gioscctmurat «30 * %a Ubersetzen How | “Cheated” My Way Into FAANG Interviews and Got the Offer Alright, so let's be real—FAANG interviews are more about playing the game than being the best engineer. | didn’t grind 500 LeetCode problems, and | didn't have a perfect resume. Instead, | hacked the interview process by understanding how hiring actually works. Here's exactly what | did: Step 1: Skipping the Black Hole (Cold Applications Are a Waste) + | never applied through company portals. They get thousands of applications, and ATS filters out most of them. + Instead, | targeted engineers and hiring managers on Linkedin and asked for referrals. + [kept my messages short and to the point: “Hey [Name], I'm really interested in [Team/Company] and I'd love to apply. | have [X years] of experience in [Relevant Skill], and | think I'd be a great fit. Would you be open to referring me?” + This got me multiple referrals in a week, and | went straight to recruiter screens instead of waiting in the void. Step 2: Only Studying What Actually Gets Asked + Instead of grinding hundreds of LeetCode Me problems, | reverse-engineered the interview questions:",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "1185 chars, 181 words, 76% letters, 6% symbols, 1.3% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9d1b0ad423f89cd1249518b4f99126d627916eab51728522d38be8761b44a891"
+    }
+  ]
+}

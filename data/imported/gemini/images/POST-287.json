@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-287",
+  "activity_id": "7457647884533121025",
+  "images": [
+    {
+      "post_id": "POST-287",
+      "activity_id": "7457647884533121025",
+      "filename": "activity_7457647884533121025_slide_0.jpg",
+      "path": "media/activity_7457647884533121025_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 678,
+      "size_bytes": 40161,
+      "declared_sha256": "291e304baa06521f5d29fc88acfa9b26e1338e405628f3587181feb563d11e1b",
+      "actual_sha256": "291e304baa06521f5d29fc88acfa9b26e1338e405628f3587181feb563d11e1b",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ADVANCED\nDATA ENGINEER\nINTERVIEW\nQUESTIONS\n\n(3-5 YEARS)",
+      "redactions": 0,
+      "search_text": "ADVANCED DATA ENGINEER INTERVIEW QUESTIONS (3-5 YEARS)",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "55 chars, 6 words, 78% letters, 9% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "5f49306ca87f5cba09af5d64c212078092a63ecca35a7b6949eedc01038436ed"
+    }
+  ]
+}

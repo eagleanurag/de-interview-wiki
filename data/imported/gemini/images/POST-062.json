@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-062",
+  "activity_id": "7310146449428611072",
+  "images": [
+    {
+      "post_id": "POST-062",
+      "activity_id": "7310146449428611072",
+      "filename": "activity_7310146449428611072_slide_0.jpg",
+      "path": "media/activity_7310146449428611072_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 729,
+      "size_bytes": 1051616,
+      "declared_sha256": "876704a405e8523992a717d4771c03206e5fad5d1eb962612251d5361b90a6ee",
+      "actual_sha256": "876704a405e8523992a717d4771c03206e5fad5d1eb962612251d5361b90a6ee",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "P\nSQL Query Logical Order\nfe EEE\n[ “\n——— 4\nBos\nit\nit\ntt\nHt\n1\nHI\ni\na ptoee- SELECT column_a, column_b\neget 777 FROM tl\nit h------yon t2\nEe U------- oN tl.column_a=t2.column_a\n= 1 |----WHERE constraint_expression\n2 erour ey column\nBEEBE H — HAVING constraint_expression\n<¢--4-~! ,-oRDERBY column Asc/DESC\nae PH} = um coun\n\"\ni\nj\n5 | |\nes 1 |\n; '\nj\n-----+ |\nss '\nH\n' i\nPON",
+      "redactions": 0,
+      "search_text": "P SQL Query Logical Order fe EEE [ “ ——— 4 Bos it it tt Ht 1 HI i a ptoee- SELECT column_a, column_b eget 777 FROM tl it h------yon t2 Ee U------- oN tl.column_a=t2.column_a = 1 |----WHERE constraint_expression 2 erour ey column BEEBE H — HAVING constraint_expression <¢--4-~! ,-oRDERBY column Asc/DESC ae PH} = um coun \" i j 5 | | es 1 | ; ' j -----+ | ss ' H ' i PON",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "368 chars, 63 words, 59% letters, 20% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "220050a283e4d389905fe9f7e9288521213aa8da21edcf159bcd911a50c92e12"
+    }
+  ]
+}

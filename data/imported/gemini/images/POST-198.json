@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-198",
+  "activity_id": "7343220101560549376",
+  "images": [
+    {
+      "post_id": "POST-198",
+      "activity_id": "7343220101560549376",
+      "filename": "activity_7343220101560549376_slide_0.jpg",
+      "path": "media/activity_7343220101560549376_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 320,
+      "size_bytes": 31251,
+      "declared_sha256": "e33686e1828bdc969a811103168edbca8391a4dc40b8fd5e199df77d40e0a22d",
+      "actual_sha256": "e33686e1828bdc969a811103168edbca8391a4dc40b8fd5e199df77d40e0a22d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "INTERVIEW (QM\nEXPERIENCE Wop (em",
+      "redactions": 0,
+      "search_text": "INTERVIEW (QM EXPERIENCE Wop (em",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "32 chars, 5 words, 81% letters, 6% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "09aba95bcc6cde849d5b698d214d131b6fa88fb978f0cd42388acafeb0b970cc"
+    }
+  ]
+}

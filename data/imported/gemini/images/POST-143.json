@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-143",
+  "activity_id": "7338452429295730688",
+  "images": [
+    {
+      "post_id": "POST-143",
+      "activity_id": "7338452429295730688",
+      "filename": "activity_7338452429295730688_slide_0.jpg",
+      "path": "media/activity_7338452429295730688_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 720,
+      "size_bytes": 51042,
+      "declared_sha256": "c7a5fed33a03b53e8225f76dc5f4a59bd3f3615ff89e19391e56bb3ab1aad2db",
+      "actual_sha256": "c7a5fed33a03b53e8225f76dc5f4a59bd3f3615ff89e19391e56bb3ab1aad2db",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "AWS DATA ENGINEER ROADMAP\nLEVEL1 SQL Python\n4\n$3 Data Modelir\n+\nGl Step Functi\n+\nLEVEL 4 Redshift RDS/At\n+\nOrchestration & (MWAA)\nMonitoring t\nLEVEL 6 Encryption/ Lake Formation\n+\nAirfl CloudWatch\n+\nLeveLs | CO Terraform/ 6 Lake Formation\nAdvanced oudForm\n+",
+      "redactions": 0,
+      "search_text": "AWS DATA ENGINEER ROADMAP LEVEL1 SQL Python 4 $3 Data Modelir + Gl Step Functi + LEVEL 4 Redshift RDS/At + Orchestration & (MWAA) Monitoring t LEVEL 6 Encryption/ Lake Formation + Airfl CloudWatch + LeveLs | CO Terraform/ 6 Lake Formation Advanced oudForm +",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "257 chars, 33 words, 75% letters, 8% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0e575be8fa376321ef1caa1cba98a5e58202e75a545a7198f3eb76387e63ad57"
+    }
+  ]
+}

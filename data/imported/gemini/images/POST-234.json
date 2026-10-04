@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-234",
+  "activity_id": "7347663347707744256",
+  "images": [
+    {
+      "post_id": "POST-234",
+      "activity_id": "7347663347707744256",
+      "filename": "activity_7347663347707744256_slide_0.jpg",
+      "path": "media/activity_7347663347707744256_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 321,
+      "height": 247,
+      "size_bytes": 16958,
+      "declared_sha256": "9770f737258c44dcd050a316fc9f9918eff45e48b0b6fdd5855976741dd97b99",
+      "actual_sha256": "9770f737258c44dcd050a316fc9f9918eff45e48b0b6fdd5855976741dd97b99",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Posse Se ea gece eee e eng Seen a\n| emp_id | experience | salary |\n7 oo ons\n| 1 | Junior | 10e00 |\n| 2 | Junior | 15000 |\n| 3 | Junior | 40000 |\n| 4 | Senior | 16000 |\n| 5 | Senior | 20000 |\n| 6 | Senior | 50000 |\n1 cewpncaseannump i sannenicemcaincspeecsereis Ul cacocacractpensuse ts",
+      "redactions": 0,
+      "search_text": "Posse Se ea gece eee e eng Seen a | emp_id | experience | salary | 7 oo ons | 1 | Junior | 10e00 | | 2 | Junior | 15000 | | 3 | Junior | 40000 | | 4 | Senior | 16000 | | 5 | Senior | 20000 | | 6 | Senior | 50000 | 1 cewpncaseannump i sannenicemcaincspeecsereis Ul cacocacractpensuse ts",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "285 chars, 28 words, 53% letters, 23% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "417c55cc9a5248259279527eb8f132cb9e3c0d14a58d75cab8335a16ffa46e92"
+    }
+  ]
+}

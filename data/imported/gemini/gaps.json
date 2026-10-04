@@ -1,0 +1,3984 @@
+{
+  "gaps": [
+    {
+      "filename": "activity_7287036149515112448_slide_06.jpg",
+      "group_id": "POST-004",
+      "activity_id": "7287036149515112448",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "177 chars, 21 words, 86% letters, 2% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287036149515112448_slide_09.jpg",
+      "group_id": "POST-004",
+      "activity_id": "7287036149515112448",
+      "slide_number": 9,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287036149515112448_slide_10.jpg",
+      "group_id": "POST-004",
+      "activity_id": "7287036149515112448",
+      "slide_number": 10,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "240 chars, 31 words, 84% letters, 2% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287036149515112448_slide_14.jpg",
+      "group_id": "POST-004",
+      "activity_id": "7287036149515112448",
+      "slide_number": 14,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "1166 chars, 205 words, 68% letters, 13% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287036149515112448_slide_15.jpg",
+      "group_id": "POST-004",
+      "activity_id": "7287036149515112448",
+      "slide_number": 15,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "2144 chars, 414 words, 68% letters, 10% symbols, 0.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_02.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 2,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_03.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "111 chars, 26 words, 59% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_04.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 4,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_06.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "111 chars, 26 words, 59% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_09.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 9,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_10.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 10,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "10 chars, 2 words, 60% letters, 20% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_13.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 13,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_16.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 16,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7287317112577052672_slide_19.jpg",
+      "group_id": "POST-005",
+      "activity_id": "7287317112577052672",
+      "slide_number": 19,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7289482734530412544_slide_04.jpg",
+      "group_id": "POST-006",
+      "activity_id": "7289482734530412544",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7289482734530412544_slide_06.jpg",
+      "group_id": "POST-006",
+      "activity_id": "7289482734530412544",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "25 chars, 2 words, 80% letters, 8% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7290224119759958016_slide_01.jpg",
+      "group_id": "POST-009",
+      "activity_id": "7290224119759958016",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7290224119759958016_slide_05.jpg",
+      "group_id": "POST-009",
+      "activity_id": "7290224119759958016",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "225 chars, 32 words, 77% letters, 5% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_04.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_06.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "30 chars, 4 words, 63% letters, 10% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_12.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 12,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_13.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 13,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_19.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 19,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_20.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 20,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_21.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 21,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_22.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 22,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_26.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 26,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_27.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 27,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_29.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 29,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_30.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 30,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_32.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 32,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_34.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 34,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_35.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 35,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_36.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 36,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292029039060398080_slide_37.jpg",
+      "group_id": "POST-011",
+      "activity_id": "7292029039060398080",
+      "slide_number": 37,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292198685361192960_slide_06.jpg",
+      "group_id": "POST-013",
+      "activity_id": "7292198685361192960",
+      "slide_number": 6,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "7 chars, 0 words, 0% letters, 71% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292198685361192960_slide_09.jpg",
+      "group_id": "POST-013",
+      "activity_id": "7292198685361192960",
+      "slide_number": 9,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292198685361192960_slide_13.jpg",
+      "group_id": "POST-013",
+      "activity_id": "7292198685361192960",
+      "slide_number": 13,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292198685361192960_slide_14.jpg",
+      "group_id": "POST-013",
+      "activity_id": "7292198685361192960",
+      "slide_number": 14,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292198685361192960_slide_17.jpg",
+      "group_id": "POST-013",
+      "activity_id": "7292198685361192960",
+      "slide_number": 17,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292198685361192960_slide_18.jpg",
+      "group_id": "POST-013",
+      "activity_id": "7292198685361192960",
+      "slide_number": 18,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292844415373496320_slide_01.jpg",
+      "group_id": "POST-014",
+      "activity_id": "7292844415373496320",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292844415373496320_slide_06.jpg",
+      "group_id": "POST-014",
+      "activity_id": "7292844415373496320",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "25 chars, 4 words, 88% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292844415373496320_slide_100.jpg",
+      "group_id": "POST-014",
+      "activity_id": "7292844415373496320",
+      "slide_number": 100,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7292844415373496320_slide_114.jpg",
+      "group_id": "POST-014",
+      "activity_id": "7292844415373496320",
+      "slide_number": 114,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "22 chars, 1 words, 59% letters, 41% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293108665887154176_slide_04.jpg",
+      "group_id": "POST-015",
+      "activity_id": "7293108665887154176",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "250 chars, 36 words, 84% letters, 2% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_01.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_05.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "65 chars, 12 words, 60% letters, 12% symbols, 3.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_14.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 14,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_17.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 17,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "111 chars, 13 words, 73% letters, 12% symbols, 4.5% sentence marks, repeats 'section'; one token dominates, so the engine repeated a line rather than reading the slide",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_18.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 18,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_29.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 29,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_30.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 30,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_31.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 31,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_44.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 44,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_54.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 54,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293569222478028800_slide_55.jpg",
+      "group_id": "POST-016",
+      "activity_id": "7293569222478028800",
+      "slide_number": 55,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293591844435730432_slide_04.jpg",
+      "group_id": "POST-017",
+      "activity_id": "7293591844435730432",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293591844435730432_slide_07.jpg",
+      "group_id": "POST-017",
+      "activity_id": "7293591844435730432",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "196 chars, 32 words, 78% letters, 5% symbols, 2.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293871440108392448_slide_04.jpg",
+      "group_id": "POST-018",
+      "activity_id": "7293871440108392448",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293871440108392448_slide_05.jpg",
+      "group_id": "POST-018",
+      "activity_id": "7293871440108392448",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "246 chars, 50 words, 72% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293931585970552832_slide_01.jpg",
+      "group_id": "POST-019",
+      "activity_id": "7293931585970552832",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7293931585970552832_slide_05.jpg",
+      "group_id": "POST-019",
+      "activity_id": "7293931585970552832",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "585 chars, 106 words, 77% letters, 3% symbols, 0.5% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_0.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "111 chars, 26 words, 59% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_01.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_02.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 2,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "111 chars, 26 words, 59% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_03.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_04.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "10 chars, 2 words, 60% letters, 20% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_05.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "111 chars, 26 words, 59% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_06.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "10 chars, 2 words, 60% letters, 20% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_07.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_08.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 8,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "18 chars, 4 words, 72% letters, 6% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_09.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 9,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "53 chars, 9 words, 74% letters, 11% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_10.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 10,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "47 chars, 9 words, 77% letters, 6% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_11.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 11,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "4 chars, 1 words, 75% letters, 25% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_12.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 12,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_13.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 13,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "13 chars, 2 words, 62% letters, 15% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_14.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 14,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "5 chars, 1 words, 40% letters, 40% symbols, 20.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_15.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 15,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_16.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 16,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "38 chars, 7 words, 82% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_17.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 17,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "8 chars, 2 words, 62% letters, 12% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_18.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 18,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_19.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 19,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "13 chars, 3 words, 69% letters, 8% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294210419810844672_slide_20.jpg",
+      "group_id": "POST-020",
+      "activity_id": "7294210419810844672",
+      "slide_number": 20,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "42 chars, 6 words, 74% letters, 10% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294354360824713216_slide_04.jpg",
+      "group_id": "POST-021",
+      "activity_id": "7294354360824713216",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294354360824713216_slide_05.jpg",
+      "group_id": "POST-021",
+      "activity_id": "7294354360824713216",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "109 chars, 16 words, 78% letters, 6% symbols, 1.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294558213721460736_slide_01.jpg",
+      "group_id": "POST-022",
+      "activity_id": "7294558213721460736",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "236 chars, 38 words, 81% letters, 3% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294558213721460736_slide_04.jpg",
+      "group_id": "POST-022",
+      "activity_id": "7294558213721460736",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294558213721460736_slide_05.jpg",
+      "group_id": "POST-022",
+      "activity_id": "7294558213721460736",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "236 chars, 38 words, 81% letters, 3% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294558213721460736_slide_06.jpg",
+      "group_id": "POST-022",
+      "activity_id": "7294558213721460736",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "342 chars, 55 words, 80% letters, 3% symbols, 1.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294558213721460736_slide_07.jpg",
+      "group_id": "POST-022",
+      "activity_id": "7294558213721460736",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "413 chars, 59 words, 80% letters, 4% symbols, 1.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294656361873756160_slide_04.jpg",
+      "group_id": "POST-023",
+      "activity_id": "7294656361873756160",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294656361873756160_slide_05.jpg",
+      "group_id": "POST-023",
+      "activity_id": "7294656361873756160",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "105 chars, 13 words, 79% letters, 5% symbols, 1.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294664118312022017_slide_04.jpg",
+      "group_id": "POST-024",
+      "activity_id": "7294664118312022017",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "76 chars, 9 words, 79% letters, 7% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294675971599712256_slide_04.jpg",
+      "group_id": "POST-025",
+      "activity_id": "7294675971599712256",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294675971599712256_slide_05.jpg",
+      "group_id": "POST-025",
+      "activity_id": "7294675971599712256",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "84 chars, 13 words, 69% letters, 11% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294675971599712256_slide_06.jpg",
+      "group_id": "POST-025",
+      "activity_id": "7294675971599712256",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "276 chars, 39 words, 71% letters, 9% symbols, 2.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294675971599712256_slide_07.jpg",
+      "group_id": "POST-025",
+      "activity_id": "7294675971599712256",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "37 chars, 5 words, 73% letters, 8% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_03.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_04.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "68 chars, 7 words, 84% letters, 4% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_25.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 25,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_26.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 26,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "1 chars, 0 words, 0% letters, 100% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_27.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 27,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_28.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 28,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_29.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 29,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_30.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 30,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294928141830025216_slide_49.jpg",
+      "group_id": "POST-026",
+      "activity_id": "7294928141830025216",
+      "slide_number": 49,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7294931923687092226_slide_05.jpg",
+      "group_id": "POST-028",
+      "activity_id": "7294931923687092226",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "36 chars, 5 words, 72% letters, 14% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7295266934294474752_slide_04.jpg",
+      "group_id": "POST-029",
+      "activity_id": "7295266934294474752",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7295266934294474752_slide_07.jpg",
+      "group_id": "POST-029",
+      "activity_id": "7295266934294474752",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "102 chars, 15 words, 77% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7295691255940792320_slide_0.jpg",
+      "group_id": "POST-032",
+      "activity_id": "7295691255940792320",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7295781326744342528_slide_04.jpg",
+      "group_id": "POST-033",
+      "activity_id": "7295781326744342528",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7295781326744342528_slide_05.jpg",
+      "group_id": "POST-033",
+      "activity_id": "7295781326744342528",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "35 chars, 6 words, 69% letters, 11% symbols, 2.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7296015305749745664_slide_04.jpg",
+      "group_id": "POST-034",
+      "activity_id": "7296015305749745664",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "77 chars, 11 words, 79% letters, 6% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7296133645327593473_slide_04.jpg",
+      "group_id": "POST-035",
+      "activity_id": "7296133645327593473",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7296133645327593473_slide_05.jpg",
+      "group_id": "POST-035",
+      "activity_id": "7296133645327593473",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "32 chars, 5 words, 88% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7296133645327593473_slide_73.jpg",
+      "group_id": "POST-035",
+      "activity_id": "7296133645327593473",
+      "slide_number": 73,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7296133645327593473_slide_83.jpg",
+      "group_id": "POST-035",
+      "activity_id": "7296133645327593473",
+      "slide_number": 83,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7296133645327593473_slide_91.jpg",
+      "group_id": "POST-035",
+      "activity_id": "7296133645327593473",
+      "slide_number": 91,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7296133645327593473_slide_93.jpg",
+      "group_id": "POST-035",
+      "activity_id": "7296133645327593473",
+      "slide_number": 93,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "1 chars, 0 words, 0% letters, 100% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7299646733146353664_slide_04.jpg",
+      "group_id": "POST-036",
+      "activity_id": "7299646733146353664",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "46 chars, 7 words, 87% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7299646733146353664_slide_20.jpg",
+      "group_id": "POST-036",
+      "activity_id": "7299646733146353664",
+      "slide_number": 20,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "74 chars, 12 words, 84% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7299738386641121281_slide_03.jpg",
+      "group_id": "POST-037",
+      "activity_id": "7299738386641121281",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7299738386641121281_slide_05.jpg",
+      "group_id": "POST-037",
+      "activity_id": "7299738386641121281",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "49 chars, 6 words, 84% letters, 2% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7299764429649285121_slide_0.jpg",
+      "group_id": "POST-038",
+      "activity_id": "7299764429649285121",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7300525893645430785_slide_04.jpg",
+      "group_id": "POST-040",
+      "activity_id": "7300525893645430785",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "23 chars, 4 words, 87% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7300738730540089344_slide_0.jpg",
+      "group_id": "POST-042",
+      "activity_id": "7300738730540089344",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301085983347818496_slide_04.jpg",
+      "group_id": "POST-043",
+      "activity_id": "7301085983347818496",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301085983347818496_slide_05.jpg",
+      "group_id": "POST-043",
+      "activity_id": "7301085983347818496",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "75 chars, 14 words, 75% letters, 7% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_0.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "74 chars, 11 words, 86% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_04.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_05.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "74 chars, 11 words, 86% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_06.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "252 chars, 37 words, 81% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_07.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "248 chars, 49 words, 77% letters, 1% symbols, 0.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_08.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 8,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "4 chars, 1 words, 100% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_09.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 9,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "118 chars, 18 words, 81% letters, 4% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301572245049556992_slide_10.jpg",
+      "group_id": "POST-044",
+      "activity_id": "7301572245049556992",
+      "slide_number": 10,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "77 chars, 14 words, 81% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_0.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "111 chars, 26 words, 59% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_04.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "111 chars, 26 words, 59% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_05.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_06.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "10 chars, 2 words, 60% letters, 20% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_07.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "18 chars, 4 words, 72% letters, 6% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_08.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 8,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "53 chars, 9 words, 74% letters, 11% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_09.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 9,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "47 chars, 9 words, 77% letters, 6% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_10.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 10,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "4 chars, 1 words, 75% letters, 25% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_11.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 11,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_12.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 12,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "13 chars, 2 words, 62% letters, 15% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_13.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 13,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "5 chars, 1 words, 40% letters, 40% symbols, 20.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_14.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 14,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_15.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 15,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "38 chars, 7 words, 82% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_16.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 16,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "8 chars, 2 words, 62% letters, 12% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_17.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 17,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_18.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 18,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "13 chars, 3 words, 69% letters, 8% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7301820963241750530_slide_19.jpg",
+      "group_id": "POST-046",
+      "activity_id": "7301820963241750530",
+      "slide_number": 19,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "42 chars, 6 words, 74% letters, 10% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7302536449503973376_slide_04.jpg",
+      "group_id": "POST-047",
+      "activity_id": "7302536449503973376",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7302536449503973376_slide_05.jpg",
+      "group_id": "POST-047",
+      "activity_id": "7302536449503973376",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "61 chars, 9 words, 80% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7303044153867710465_slide_01.jpg",
+      "group_id": "POST-048",
+      "activity_id": "7303044153867710465",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7303044153867710465_slide_06.jpg",
+      "group_id": "POST-048",
+      "activity_id": "7303044153867710465",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "400 chars, 61 words, 72% letters, 11% symbols, 1.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7305823652422303744_slide_0.jpg",
+      "group_id": "POST-053",
+      "activity_id": "7305823652422303744",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "9 chars, 1 words, 33% letters, 56% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307022837305729025_slide_04.jpg",
+      "group_id": "POST-055",
+      "activity_id": "7307022837305729025",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307022837305729025_slide_05.jpg",
+      "group_id": "POST-055",
+      "activity_id": "7307022837305729025",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "34 chars, 6 words, 79% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_0.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "76 chars, 11 words, 72% letters, 8% symbols, 2.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_01.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "76 chars, 11 words, 72% letters, 8% symbols, 2.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_03.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_04.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "76 chars, 11 words, 72% letters, 8% symbols, 2.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_05.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "186 chars, 32 words, 69% letters, 9% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_107.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 107,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_108.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 108,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_109.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 109,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307247421867089920_slide_110.jpg",
+      "group_id": "POST-056",
+      "activity_id": "7307247421867089920",
+      "slide_number": 110,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307271984038457345_slide_0.jpg",
+      "group_id": "POST-057",
+      "activity_id": "7307271984038457345",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307959299186532353_slide_04.jpg",
+      "group_id": "POST-058",
+      "activity_id": "7307959299186532353",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7307959299186532353_slide_05.jpg",
+      "group_id": "POST-058",
+      "activity_id": "7307959299186532353",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "37 chars, 6 words, 81% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7308183735705681920_slide_04.jpg",
+      "group_id": "POST-059",
+      "activity_id": "7308183735705681920",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7308183735705681920_slide_05.jpg",
+      "group_id": "POST-059",
+      "activity_id": "7308183735705681920",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "54 chars, 8 words, 81% letters, 2% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7313983651073925121_slide_0.jpg",
+      "group_id": "POST-068",
+      "activity_id": "7313983651073925121",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7315004917868359681_slide_04.jpg",
+      "group_id": "POST-070",
+      "activity_id": "7315004917868359681",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7315004917868359681_slide_05.jpg",
+      "group_id": "POST-070",
+      "activity_id": "7315004917868359681",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "844 chars, 129 words, 80% letters, 3% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7315596015292579840_slide_01.jpg",
+      "group_id": "POST-075",
+      "activity_id": "7315596015292579840",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "486 chars, 81 words, 78% letters, 5% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7315596015292579840_slide_04.jpg",
+      "group_id": "POST-075",
+      "activity_id": "7315596015292579840",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "1212 chars, 184 words, 78% letters, 4% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7315596015292579840_slide_05.jpg",
+      "group_id": "POST-075",
+      "activity_id": "7315596015292579840",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "1324 chars, 210 words, 77% letters, 4% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7315596015292579840_slide_08.jpg",
+      "group_id": "POST-075",
+      "activity_id": "7315596015292579840",
+      "slide_number": 8,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "486 chars, 81 words, 78% letters, 5% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7315773551188361217_slide_04.jpg",
+      "group_id": "POST-076",
+      "activity_id": "7315773551188361217",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7316977518450790400_slide_0.jpg",
+      "group_id": "POST-077",
+      "activity_id": "7316977518450790400",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_01.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "179 chars, 25 words, 72% letters, 10% symbols, 3.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_04.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "179 chars, 25 words, 72% letters, 10% symbols, 3.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_05.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "19 chars, 3 words, 79% letters, 5% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_06.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "10 chars, 1 words, 100% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_07.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 7,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_08.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 8,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_09.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 9,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_11.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 11,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_12.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 12,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_14.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 14,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_16.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 16,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7317058702715346944_slide_17.jpg",
+      "group_id": "POST-078",
+      "activity_id": "7317058702715346944",
+      "slide_number": 17,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7320835110730174465_slide_01.jpg",
+      "group_id": "POST-081",
+      "activity_id": "7320835110730174465",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "308 chars, 42 words, 69% letters, 12% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7322125201947742208_slide_01.jpg",
+      "group_id": "POST-082",
+      "activity_id": "7322125201947742208",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "248 chars, 46 words, 58% letters, 17% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7324837204147539969_slide_01.jpg",
+      "group_id": "POST-084",
+      "activity_id": "7324837204147539969",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "341 chars, 57 words, 67% letters, 15% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325085602222112769_slide_01.jpg",
+      "group_id": "POST-085",
+      "activity_id": "7325085602222112769",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "84 chars, 12 words, 79% letters, 7% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325085602222112769_slide_03.jpg",
+      "group_id": "POST-085",
+      "activity_id": "7325085602222112769",
+      "slide_number": 3,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "331 chars, 35 words, 43% letters, 45% symbols, 1.2% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325085602222112769_slide_04.jpg",
+      "group_id": "POST-085",
+      "activity_id": "7325085602222112769",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "84 chars, 12 words, 79% letters, 7% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325085602222112769_slide_05.jpg",
+      "group_id": "POST-085",
+      "activity_id": "7325085602222112769",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "garbled",
+      "note": "331 chars, 35 words, 43% letters, 45% symbols, 1.2% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325085602222112769_slide_06.jpg",
+      "group_id": "POST-085",
+      "activity_id": "7325085602222112769",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "267 chars, 43 words, 78% letters, 6% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325142325448400899_slide_04.jpg",
+      "group_id": "POST-087",
+      "activity_id": "7325142325448400899",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "142 chars, 22 words, 82% letters, 3% symbols, 1.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325142325448400899_slide_17.jpg",
+      "group_id": "POST-087",
+      "activity_id": "7325142325448400899",
+      "slide_number": 17,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "74 chars, 12 words, 84% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325208130810748930_slide_01.jpg",
+      "group_id": "POST-088",
+      "activity_id": "7325208130810748930",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "77 chars, 12 words, 84% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325208130810748930_slide_04.jpg",
+      "group_id": "POST-088",
+      "activity_id": "7325208130810748930",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325208130810748930_slide_05.jpg",
+      "group_id": "POST-088",
+      "activity_id": "7325208130810748930",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "77 chars, 12 words, 84% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325208130810748930_slide_06.jpg",
+      "group_id": "POST-088",
+      "activity_id": "7325208130810748930",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "13 chars, 2 words, 92% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325208130810748930_slide_07.jpg",
+      "group_id": "POST-088",
+      "activity_id": "7325208130810748930",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "254 chars, 40 words, 80% letters, 4% symbols, 0.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_04.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_05.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "60 chars, 9 words, 80% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_20.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 20,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_42.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 42,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_43.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 43,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_44.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 44,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_58.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 58,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_65.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 65,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_67.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 67,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_76.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 76,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_79.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 79,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "167 chars, 26 words, 65% letters, 22% symbols, 3.6% sentence marks, repeats 'self'; one token dominates, so the engine repeated a line rather than reading the slide",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_80.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 80,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_83.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 83,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_103.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 103,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_104.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 104,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_105.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 105,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325723643831812096_slide_109.jpg",
+      "group_id": "POST-089",
+      "activity_id": "7325723643831812096",
+      "slide_number": 109,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "25 chars, 3 words, 24% letters, 44% symbols, 4.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325908563225108481_slide_01.jpg",
+      "group_id": "POST-090",
+      "activity_id": "7325908563225108481",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "132 chars, 25 words, 56% letters, 16% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7325908563225108481_slide_03.jpg",
+      "group_id": "POST-090",
+      "activity_id": "7325908563225108481",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326096495571533824_slide_04.jpg",
+      "group_id": "POST-091",
+      "activity_id": "7326096495571533824",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326096495571533824_slide_05.jpg",
+      "group_id": "POST-091",
+      "activity_id": "7326096495571533824",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "255 chars, 44 words, 74% letters, 7% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326397121371197440_slide_04.jpg",
+      "group_id": "POST-093",
+      "activity_id": "7326397121371197440",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "87 chars, 11 words, 75% letters, 8% symbols, 1.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326471551384473601_slide_03.jpg",
+      "group_id": "POST-097",
+      "activity_id": "7326471551384473601",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "61 chars, 10 words, 66% letters, 15% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326471551384473601_slide_04.jpg",
+      "group_id": "POST-097",
+      "activity_id": "7326471551384473601",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "61 chars, 10 words, 66% letters, 15% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326471551384473601_slide_05.jpg",
+      "group_id": "POST-097",
+      "activity_id": "7326471551384473601",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "280 chars, 58 words, 71% letters, 7% symbols, 1.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326471551384473601_slide_07.jpg",
+      "group_id": "POST-097",
+      "activity_id": "7326471551384473601",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "215 chars, 43 words, 70% letters, 7% symbols, 1.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326889752870170625_slide_04.jpg",
+      "group_id": "POST-099",
+      "activity_id": "7326889752870170625",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326889752870170625_slide_10.jpg",
+      "group_id": "POST-099",
+      "activity_id": "7326889752870170625",
+      "slide_number": 10,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "29 chars, 4 words, 83% letters, 7% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326889752870170625_slide_12.jpg",
+      "group_id": "POST-099",
+      "activity_id": "7326889752870170625",
+      "slide_number": 12,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "637 chars, 97 words, 79% letters, 6% symbols, 1.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7326889752870170625_slide_14.jpg",
+      "group_id": "POST-099",
+      "activity_id": "7326889752870170625",
+      "slide_number": 14,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "278 chars, 35 words, 85% letters, 3% symbols, 0.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327179336220860417_slide_05.jpg",
+      "group_id": "POST-102",
+      "activity_id": "7327179336220860417",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "67 chars, 11 words, 82% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_0.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "844 chars, 129 words, 80% letters, 3% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_01.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "1029 chars, 147 words, 79% letters, 6% symbols, 1.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_02.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 2,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "1029 chars, 153 words, 79% letters, 4% symbols, 1.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_03.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "828 chars, 121 words, 79% letters, 4% symbols, 2.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_04.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_05.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "844 chars, 129 words, 80% letters, 3% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_06.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "678 chars, 99 words, 80% letters, 4% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_07.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "767 chars, 118 words, 79% letters, 4% symbols, 0.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_08.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 8,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "579 chars, 84 words, 80% letters, 4% symbols, 0.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7327540020444049411_slide_09.jpg",
+      "group_id": "POST-107",
+      "activity_id": "7327540020444049411",
+      "slide_number": 9,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "736 chars, 99 words, 80% letters, 4% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7328241397017288704_slide_04.jpg",
+      "group_id": "POST-116",
+      "activity_id": "7328241397017288704",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7328241397017288704_slide_05.jpg",
+      "group_id": "POST-116",
+      "activity_id": "7328241397017288704",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "19 chars, 3 words, 89% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7328745757790965760_slide_0.jpg",
+      "group_id": "POST-119",
+      "activity_id": "7328745757790965760",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "413 chars, 50 words, 43% letters, 52% symbols, 3.9% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_0.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "19 chars, 3 words, 89% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_01.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "1011 chars, 143 words, 73% letters, 11% symbols, 2.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_02.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 2,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "19 chars, 3 words, 89% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_03.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "1061 chars, 176 words, 77% letters, 4% symbols, 1.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_04.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "160 chars, 34 words, 69% letters, 7% symbols, 0.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_05.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "229 chars, 44 words, 78% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_06.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "123 chars, 21 words, 80% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_07.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 7,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "136 chars, 22 words, 79% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_08.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 8,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "19 chars, 3 words, 89% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_09.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 9,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "113 chars, 20 words, 77% letters, 4% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_10.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 10,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "96 chars, 14 words, 82% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_11.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 11,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "141 chars, 26 words, 79% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_12.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 12,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "29 chars, 5 words, 79% letters, 7% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_13.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 13,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "157 chars, 27 words, 80% letters, 4% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_14.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 14,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "96 chars, 15 words, 80% letters, 2% symbols, 2.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_15.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 15,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "272 chars, 50 words, 79% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_16.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 16,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "65 chars, 12 words, 78% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_17.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 17,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "137 chars, 24 words, 82% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_18.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 18,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "83 chars, 17 words, 78% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_19.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 19,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "107 chars, 20 words, 77% letters, 4% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_20.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 20,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "154 chars, 26 words, 81% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_21.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 21,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "41 chars, 9 words, 80% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_22.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 22,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "106 chars, 18 words, 76% letters, 5% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_23.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 23,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "66 chars, 14 words, 80% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_24.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 24,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "123 chars, 17 words, 85% letters, 2% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_25.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 25,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "131 chars, 18 words, 82% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_26.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 26,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "18 chars, 2 words, 89% letters, 6% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_27.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 27,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "9 chars, 3 words, 78% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_28.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 28,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "190 chars, 35 words, 78% letters, 1% symbols, 0.5% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_29.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 29,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "82 chars, 13 words, 79% letters, 5% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_30.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 30,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "144 chars, 26 words, 75% letters, 6% symbols, 2.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_31.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 31,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "5 chars, 1 words, 100% letters, 0% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_32.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 32,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "77 chars, 14 words, 82% letters, 1% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_33.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 33,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "183 chars, 33 words, 80% letters, 2% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_34.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 34,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "19 chars, 4 words, 84% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_35.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 35,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "217 chars, 38 words, 76% letters, 4% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_36.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 36,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "259 chars, 54 words, 68% letters, 7% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_37.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 37,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "234 chars, 47 words, 73% letters, 3% symbols, 0.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_38.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 38,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "311 chars, 63 words, 73% letters, 3% symbols, 0.3% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_39.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 39,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "209 chars, 35 words, 75% letters, 6% symbols, 1.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_40.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 40,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "139 chars, 30 words, 71% letters, 6% symbols, 1.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_41.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 41,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "298 chars, 50 words, 75% letters, 4% symbols, 1.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_42.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 42,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "260 chars, 52 words, 73% letters, 3% symbols, 0.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_43.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 43,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "271 chars, 58 words, 73% letters, 3% symbols, 0.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_44.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 44,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "230 chars, 51 words, 69% letters, 5% symbols, 1.3% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_45.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 45,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "371 chars, 69 words, 73% letters, 4% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_46.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 46,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "269 chars, 53 words, 72% letters, 4% symbols, 1.5% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_47.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 47,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "282 chars, 60 words, 71% letters, 4% symbols, 1.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_48.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 48,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "255 chars, 53 words, 72% letters, 4% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_49.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 49,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "243 chars, 51 words, 72% letters, 4% symbols, 0.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_50.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 50,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "357 chars, 68 words, 74% letters, 4% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_51.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 51,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "350 chars, 68 words, 76% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_52.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 52,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "468 chars, 94 words, 74% letters, 4% symbols, 0.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_53.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 53,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "260 chars, 49 words, 77% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_54.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 54,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "298 chars, 56 words, 75% letters, 4% symbols, 1.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_55.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 55,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "353 chars, 68 words, 77% letters, 3% symbols, 0.3% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_56.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 56,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "450 chars, 79 words, 77% letters, 3% symbols, 0.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_57.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 57,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "375 chars, 74 words, 75% letters, 3% symbols, 0.5% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_58.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 58,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "293 chars, 55 words, 75% letters, 3% symbols, 0.3% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_59.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 59,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "422 chars, 80 words, 75% letters, 4% symbols, 0.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_60.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 60,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "339 chars, 73 words, 73% letters, 3% symbols, 0.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_61.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 61,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "419 chars, 81 words, 76% letters, 3% symbols, 0.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_62.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 62,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "318 chars, 65 words, 75% letters, 3% symbols, 0.3% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_63.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 63,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "244 chars, 49 words, 75% letters, 3% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_64.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 64,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "189 chars, 37 words, 77% letters, 3% symbols, 0.5% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_65.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 65,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "198 chars, 41 words, 72% letters, 5% symbols, 1.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_66.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 66,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "376 chars, 78 words, 73% letters, 3% symbols, 0.3% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_67.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 67,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "399 chars, 80 words, 73% letters, 4% symbols, 0.5% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_68.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 68,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "431 chars, 85 words, 74% letters, 4% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_69.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 69,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "441 chars, 89 words, 73% letters, 4% symbols, 0.9% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_70.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 70,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "367 chars, 72 words, 74% letters, 4% symbols, 1.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_71.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 71,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "353 chars, 70 words, 70% letters, 6% symbols, 0.8% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_72.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 72,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "481 chars, 95 words, 75% letters, 3% symbols, 0.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_73.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 73,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "327 chars, 65 words, 74% letters, 4% symbols, 1.2% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7329705187646824448_slide_74.jpg",
+      "group_id": "POST-120",
+      "activity_id": "7329705187646824448",
+      "slide_number": 74,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "349 chars, 66 words, 72% letters, 5% symbols, 0.6% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7338328091057885187_slide_0.jpg",
+      "group_id": "POST-141",
+      "activity_id": "7338328091057885187",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "287 chars, 24 words, 39% letters, 40% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339202820434268163_slide_0.jpg",
+      "group_id": "POST-155",
+      "activity_id": "7339202820434268163",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "36 chars, 4 words, 25% letters, 50% symbols, 13.9% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339358389367357440_slide_03.jpg",
+      "group_id": "POST-159",
+      "activity_id": "7339358389367357440",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339358389367357440_slide_04.jpg",
+      "group_id": "POST-159",
+      "activity_id": "7339358389367357440",
+      "slide_number": 4,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339509411570163712_slide_01.jpg",
+      "group_id": "POST-160",
+      "activity_id": "7339509411570163712",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "69 chars, 10 words, 77% letters, 10% symbols, 1.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339509411570163712_slide_02.jpg",
+      "group_id": "POST-160",
+      "activity_id": "7339509411570163712",
+      "slide_number": 2,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339509411570163712_slide_04.jpg",
+      "group_id": "POST-160",
+      "activity_id": "7339509411570163712",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "fragmentary",
+      "note": "21 chars, 3 words, 86% letters, 5% symbols, 0.0% sentence marks; real words, but too few to carry a topic",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339509411570163712_slide_05.jpg",
+      "group_id": "POST-160",
+      "activity_id": "7339509411570163712",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "69 chars, 10 words, 77% letters, 10% symbols, 1.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339509411570163712_slide_07.jpg",
+      "group_id": "POST-160",
+      "activity_id": "7339509411570163712",
+      "slide_number": 7,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "88 chars, 8 words, 40% letters, 41% symbols, 2.3% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339509411570163712_slide_08.jpg",
+      "group_id": "POST-160",
+      "activity_id": "7339509411570163712",
+      "slide_number": 8,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "2 chars, 1 words, 50% letters, 50% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339535672422055936_slide_01.jpg",
+      "group_id": "POST-162",
+      "activity_id": "7339535672422055936",
+      "slide_number": 1,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339535672422055936_slide_06.jpg",
+      "group_id": "POST-162",
+      "activity_id": "7339535672422055936",
+      "slide_number": 6,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "65 chars, 8 words, 83% letters, 3% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339542923673260032_slide_0.jpg",
+      "group_id": "POST-163",
+      "activity_id": "7339542923673260032",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339901286844096513_slide_0.jpg",
+      "group_id": "POST-167",
+      "activity_id": "7339901286844096513",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "35 chars, 4 words, 91% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339901286844096513_slide_05.jpg",
+      "group_id": "POST-167",
+      "activity_id": "7339901286844096513",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "35 chars, 4 words, 91% letters, 0% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7339901286844096513_slide_07.jpg",
+      "group_id": "POST-167",
+      "activity_id": "7339901286844096513",
+      "slide_number": 7,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7340362521930846208_slide_0.jpg",
+      "group_id": "POST-174",
+      "activity_id": "7340362521930846208",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "19 chars, 2 words, 42% letters, 42% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7341346474229731329_slide_0.jpg",
+      "group_id": "POST-187",
+      "activity_id": "7341346474229731329",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "449 chars, 49 words, 42% letters, 40% symbols, 6.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7345683549418618882_slide_0.jpg",
+      "group_id": "POST-221",
+      "activity_id": "7345683549418618882",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7346027818457161728_slide_0.jpg",
+      "group_id": "POST-223",
+      "activity_id": "7346027818457161728",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "47 chars, 6 words, 77% letters, 11% symbols, 2.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7346429040959856640_slide_0.jpg",
+      "group_id": "POST-230",
+      "activity_id": "7346429040959856640",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "73 chars, 10 words, 71% letters, 15% symbols, 4.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7347822344066727936_slide_0.jpg",
+      "group_id": "POST-236",
+      "activity_id": "7347822344066727936",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "84 chars, 11 words, 79% letters, 7% symbols, 2.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7347829243361312770_slide_0.jpg",
+      "group_id": "POST-237",
+      "activity_id": "7347829243361312770",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7347855268489154561_slide_0.jpg",
+      "group_id": "POST-242",
+      "activity_id": "7347855268489154561",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7348928864959541249_slide_0.jpg",
+      "group_id": "POST-249",
+      "activity_id": "7348928864959541249",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "87 chars, 11 words, 75% letters, 8% symbols, 1.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7349610973206368256_slide_0.jpg",
+      "group_id": "POST-255",
+      "activity_id": "7349610973206368256",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "55 chars, 7 words, 40% letters, 42% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7350426333870444544_slide_0.jpg",
+      "group_id": "POST-262",
+      "activity_id": "7350426333870444544",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7352906435711717378_slide_0.jpg",
+      "group_id": "POST-267",
+      "activity_id": "7352906435711717378",
+      "slide_number": 0,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "552 chars, 90 words, 79% letters, 4% symbols, 2.7% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7357640130028822529_slide_0.jpg",
+      "group_id": "POST-276",
+      "activity_id": "7357640130028822529",
+      "slide_number": 0,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7426107288421031936_slide_0.jpg",
+      "group_id": "POST-280",
+      "activity_id": "7426107288421031936",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "223 chars, 17 words, 34% letters, 52% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7464513217633882112_slide_04.jpg",
+      "group_id": "POST-297",
+      "activity_id": "7464513217633882112",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7464513217633882112_slide_05.jpg",
+      "group_id": "POST-297",
+      "activity_id": "7464513217633882112",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "144 chars, 22 words, 75% letters, 6% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_01.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 1,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_03.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 3,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "59 chars, 9 words, 56% letters, 17% symbols, 3.4% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_04.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 4,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "57 chars, 9 words, 79% letters, 5% symbols, 0.0% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_05.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 5,
+      "reason": "unresolved",
+      "quality": "readable",
+      "note": "93 chars, 19 words, 76% letters, 1% symbols, 1.1% sentence marks",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_06.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 6,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_13.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 13,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_16.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 16,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_19.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 19,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_21.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 21,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_22.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 22,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_23.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 23,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_27.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 27,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_29.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 29,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_32.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 32,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_41.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 41,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_44.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 44,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_45.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 45,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_46.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 46,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_47.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 47,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_48.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 48,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_51.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 51,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_52.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 52,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_55.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 55,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_56.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 56,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_57.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 57,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_63.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 63,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_66.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 66,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_68.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 68,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_71.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 71,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_79.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 79,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_84.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 84,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_86.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 86,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_88.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 88,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_92.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 92,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7509918585671241729_slide_94.jpg",
+      "group_id": "POST-311",
+      "activity_id": "7509918585671241729",
+      "slide_number": 94,
+      "reason": "no_text",
+      "quality": "readable",
+      "note": "the package reports no text in this image; a second reader may find some, since a claim of emptiness is a finding and not a certainty",
+      "actionable": true
+    },
+    {
+      "filename": "activity_7510541086562410497_slide_0.jpg",
+      "group_id": "POST-312",
+      "activity_id": "7510541086562410497",
+      "slide_number": 0,
+      "reason": "debris",
+      "quality": "garbled",
+      "note": "446 chars, 35 words, 38% letters, 46% symbols, 0.4% sentence marks; overwhelmingly symbol rather than letters",
+      "actionable": true
+    }
+  ]
+}

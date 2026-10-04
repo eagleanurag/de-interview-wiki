@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-117",
+  "activity_id": "7328694427760185345",
+  "images": [
+    {
+      "post_id": "POST-117",
+      "activity_id": "7328694427760185345",
+      "filename": "activity_7328694427760185345_slide_0.jpg",
+      "path": "media/activity_7328694427760185345_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 270,
+      "size_bytes": 27614,
+      "declared_sha256": "a2c706479d313bc247d3878d233727bec8e82b3c6571c875295537a373af3294",
+      "actual_sha256": "a2c706479d313bc247d3878d233727bec8e82b3c6571c875295537a373af3294",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Sapte ana it pet a fete moe ie ry, amg INPUT TABLE,\nsuntan SOI Se Ae gpm QUTPUTTABLE fa]\nerr Sareea MRMNOUT GUE | mate",
+      "redactions": 0,
+      "search_text": "Sapte ana it pet a fete moe ie ry, amg INPUT TABLE, suntan SOI Se Ae gpm QUTPUTTABLE fa] err Sareea MRMNOUT GUE | mate",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "118 chars, 24 words, 76% letters, 3% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "708109ac02f5b2a55ef0b9e4896cb6ecb0f40a142b4aa98ac0750285cd046c8c"
+    }
+  ]
+}

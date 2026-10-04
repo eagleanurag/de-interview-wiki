@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import json
 
-from src.models import KnowledgePost
+from src.models import KnowledgePost, MediaItem
 from src.wiki.analysis import (
     ConceptEntry,
     DIFFICULTIES,
@@ -50,16 +50,19 @@ from src.wiki.naming import (
     CONCEPTS_PAGE,
     INDEX_PAGE,
     NOT_FOUND_PAGE,
+    OCR_INDEX_FILE,
     QUESTIONS_PAGE,
     QUESTIONS_SCRIPT,
     SEARCH_INDEX_FILE,
     SEARCH_PAGE,
     SEARCH_SCRIPT,
+    SUBJECTS_PAGE,
     TECHNOLOGIES_PAGE,
     TOPICS_PAGE,
     href,
     post_page,
 )
+from src.wiki.knowledge import render_knowledge
 
 
 RECENT_POST_LIMIT = 12
@@ -68,32 +71,10 @@ SOURCE_PLATFORM_LABELS = {
     "linkedin": "LinkedIn",
 }
 
-GENERATED_CARD_SUBTITLE = (
-    "Model-assisted content derived from the captured post. Treat "
-    "it as a study aid, not as an authoritative source."
-)
-
-SOURCE_CARD_SUBTITLE = (
-    "Captured third-party content, reproduced only as short excerpts "
-    "for study and attribution."
-)
-
 #: How each capture method is described to a reader. The point of the
 #: distinction is that material this project was given is not material
 #: it went and collected, and a reader is entitled to know which they
 #: are looking at.
-CAPTURE_METHOD_LABELS = {
-    "user_export": "You exported this from your saved items",
-    "user_provided": "You supplied the content for this",
-    "user_saved_page": "You saved the page and supplied it here",
-    "user_bundle": "You assembled this from your own notes",
-}
-
-SAVED_ITEM_CARD_SUBTITLE = (
-    "Traced back to the entry in your saved list, and to the capture "
-    "that came with it."
-)
-
 
 def render_home(model: SiteModel) -> str:
     """Dashboard: totals plus the most recent knowledge entries."""
@@ -225,7 +206,12 @@ def render_search(model: SiteModel) -> str:
                 "This page filters a pre-generated index in the "
                 "browser. With JavaScript disabled, browse the "
             ),
-            page_link("topics page", TOPICS_PAGE, page),
+            # The subjects index, not the topics index. The topics
+            # index was the archive listing of 5,786 pages grouped by
+            # corpus label; it is not generated. The subject index is
+            # the revision tree a reader can actually walk, and it is
+            # what "browse without search" should offer.
+            page_link("subjects index", SUBJECTS_PAGE, page),
             esc(" or the "),
             page_link("questions browser", QUESTIONS_PAGE, page),
             esc(" instead."),
@@ -244,7 +230,7 @@ def render_search(model: SiteModel) -> str:
         ),
         body=body,
         generated_at=model.generated_at,
-        config={"indexUrl": SEARCH_INDEX_FILE},
+        config={"indexUrl": SEARCH_INDEX_FILE, "ocrIndexUrl": OCR_INDEX_FILE},
         scripts=(SEARCH_SCRIPT,),
     )
 
@@ -912,101 +898,32 @@ def render_post_detail(
     post: KnowledgePost,
     slug: str,
 ) -> str:
-    """One post: attribution, generated knowledge, source material."""
+    """
+    One captured post, as a study page.
 
-    page = post_page(slug)
-    source = post.source
+    Delegates to :mod:`src.wiki.knowledge`. The page used to be a
+    description of the capture: Platform, Captured, Published, Author
+    and Post ID in a table, then a "Saved item" card explaining how the
+    content arrived, then a "Classification" table of Domain /
+    Interview relevant / Primary topic / Secondary topics, then the
+    original post text, then a media inventory with filenames.
 
-    platform = SOURCE_PLATFORM_LABELS.get(
-        source.platform, source.platform
-    )
-    source_url = safe_link(source.url)
+    All of that is still true and all of it is still in the model. It
+    is simply no longer what the page is for, and a reader revising for
+    an interview had to scroll past five sections of it to reach the
+    questions. The capture record is now one line plus one disclosure.
+    """
 
-    pairs: list[tuple[str, str]] = [
-        ("Platform", esc(platform)),
-        (
-            "Captured",
-            esc(source.captured_at.strftime("%Y-%m-%d")),
-        ),
-    ]
-
-    if source.published_at:
-        # Shown as the source rendered it, which may be a relative form
-        # such as "2 days ago". Converting that to a date would mean
-        # guessing, so the original wording is kept.
-        pairs.append(("Published", esc(source.published_at)))
-
-    if source.author:
-        pairs.append(("Author", esc(source.author)))
-
-    pairs.append(("Post ID", f"<code>{esc(post.id)}</code>"))
-
-    if source_url:
-        source_link = (
-            f'<a class="button button-ghost" '
-            f'href="{esc(source_url)}" '
-            f'rel="noopener noreferrer nofollow" target="_blank">'
-            f"Open original source</a>"
-        )
-    else:
-        source_link = (
-            '<p class="muted">No source URL was recorded for this '
-            "post.</p>"
-        )
-
-    description = collapse_whitespace(post.ai_analysis.summary)
-
-    if not description:
-        description = f"Knowledge entry {post.id}."
-
-    body = "".join(
-        [
-            _breadcrumb(
-                page,
-                [
-                    ("Home", INDEX_PAGE),
-                    ("Topics", TOPICS_PAGE),
-                    (post.id, None),
-                ],
-            ),
-            '<section class="hero hero-compact">',
-            f"<h1>{esc(post.id)}</h1>",
-            '<div class="badge-row">',
-            badge(platform, "badge badge-source"),
-            badge(
-                post.classification.domain or "Data Engineering",
-                "badge badge-domain",
-            ),
-            "</div>",
-            "</section>",
-            section(
-                "Source information",
-                definition_list(pairs) + source_link,
-                subtitle=(
-                    "Attribution recorded at capture time. Only short "
-                    "excerpts are reproduced here; read the original "
-                    "for the full content."
-                ),
-            ),
-            _saved_item_card(post),
-            _generated_knowledge_card(model, post, page),
-            _questions_card(post),
-            _source_material_card(post),
-            '<p class="page-foot">',
-            page_link("Back to home", INDEX_PAGE, page),
-            esc(" &middot; "),
-            page_link("Browse topics", TOPICS_PAGE, page),
-            esc(" &middot; "),
-            page_link("Search the knowledge base", SEARCH_PAGE, page),
-            "</p>",
-        ]
-    )
-
-    return render_document(
-        page=page,
-        title=post.id,
-        description=description[:300],
-        body=body,
+    return render_knowledge(
+        post,
+        page=post_page(slug),
+        # One page is one post. The "N contributing posts" figure on a
+        # question counts the posts that asked it, which is a different
+        # thing and belongs to the questions index.
+        contributing=1,
+        curriculum=model.curriculum,
+        posts=list(model.posts),
+        slugs=list(model.post_slugs),
         generated_at=model.generated_at,
     )
 
@@ -1029,7 +946,11 @@ def render_not_found(model: SiteModel) -> str:
             '<nav class="hero-actions" aria-label="Site sections">',
             _button_link(page, "Home", INDEX_PAGE),
             _button_link(page, "Search", SEARCH_PAGE),
-            _button_link(page, "Topics", TOPICS_PAGE),
+            # Subjects, not Topics. A reader who lands on a dead URL has
+            # lost their place; the revision tree is where they can pick
+            # it up again. Topics was the archive index and is not
+            # generated.
+            _button_link(page, "Subjects", SUBJECTS_PAGE),
             _button_link(page, "Questions", QUESTIONS_PAGE),
             "</nav>",
             "</section>",
@@ -1081,306 +1002,6 @@ def _explainer() -> str:
         "How this wiki is organised",
         definition_list(rows),
         css_class="card card-quiet",
-    )
-
-
-def _generated_knowledge_card(
-    model: SiteModel,
-    post: KnowledgePost,
-    page: str,
-) -> str:
-    analysis = post.ai_analysis
-    classification = post.classification
-    slugs = model.topic_slugs
-
-    blocks = []
-
-    if analysis.summary:
-        blocks.append(
-            '<div class="prose">'
-            f"<p>{esc(collapse_whitespace(analysis.summary))}</p>"
-            "</div>"
-        )
-
-    knowledge_rows: list[tuple[str, str]] = []
-
-    if analysis.topics:
-        knowledge_rows.append(
-            (
-                "Topics",
-                topic_badges(analysis.topics, page, slugs),
-            )
-        )
-
-    if analysis.subtopics:
-        knowledge_rows.append(
-            (
-                "Subtopics",
-                topic_badges(analysis.subtopics, page, slugs),
-            )
-        )
-
-    if knowledge_rows:
-        blocks.append(definition_list(knowledge_rows))
-
-    if analysis.concepts:
-        chips = "".join(
-            badge(concept, "badge badge-concept")
-            for concept in analysis.concepts
-        )
-        blocks.append(
-            '<div class="subblock">'
-            "<h3>Concepts</h3>"
-            f'<div class="badge-row">{chips}</div>'
-            "</div>"
-        )
-
-    if analysis.image_descriptions:
-        items = "".join(
-            f"<li>{esc(description)}</li>"
-            for description in analysis.image_descriptions
-        )
-        blocks.append(
-            '<div class="subblock">'
-            "<h3>Image descriptions</h3>"
-            f'<ul class="plain-list">{items}</ul>'
-            "</div>"
-        )
-
-    classification_rows: list[tuple[str, str]] = [
-        (
-            "Interview relevant",
-            "Yes" if classification.interview_relevant else "No",
-        )
-    ]
-
-    if classification.domain:
-        classification_rows.insert(
-            0, ("Domain", esc(classification.domain))
-        )
-
-    if classification.primary_topic:
-        classification_rows.append(
-            ("Primary topic", esc(classification.primary_topic))
-        )
-
-    if classification.secondary_topics:
-        classification_rows.append(
-            (
-                "Secondary topics",
-                " ".join(
-                    badge(topic, "badge badge-quiet")
-                    for topic in classification.secondary_topics
-                ),
-            )
-        )
-
-    blocks.append(
-        '<div class="subblock">'
-        "<h3>Classification</h3>"
-        f"{definition_list(classification_rows)}"
-        "</div>"
-    )
-
-    return section(
-        "Generated knowledge",
-        "".join(blocks),
-        css_class="card card-generated",
-        subtitle=GENERATED_CARD_SUBTITLE,
-    )
-
-
-def _questions_card(post: KnowledgePost) -> str:
-    if not post.interview_questions:
-        return section(
-            "Interview questions",
-            '<p class="muted">No interview questions were generated '
-            "for this post.</p>",
-        )
-
-    cards = "".join(
-        '<article class="question-card question-card-compact">'
-        '<div class="badge-row">'
-        f"{difficulty_badge(question.difficulty)}"
-        f"{type_badge(question.type)}"
-        "</div>"
-        f"<h3>{esc(question.question)}</h3>"
-        f"{_answer_block(question.answer)}"
-        "</article>"
-        for question in post.interview_questions
-    )
-
-    return section(
-        f"Interview questions ({len(post.interview_questions)})",
-        cards,
-    )
-
-
-def _saved_item_card(post: KnowledgePost) -> str:
-    """
-    The saved item a post came from.
-
-    Nothing at all for a post that did not come from one: a section
-    headed "saved item" on every page would imply every post was saved,
-    and would bury the one section that actually tells a reader
-    something.
-    """
-    saved = post.saved_item
-
-    if saved is None or not saved.saved_item_id:
-        return ""
-
-    method = post.source.capture_method or ""
-
-    # The reader gets the plain description and the recorded value is
-    # kept alongside it, so the page says what happened in words and
-    # remains traceable back to the manifest in the exact term it used.
-    arrival = esc(
-        CAPTURE_METHOD_LABELS.get(
-            method, method.replace("_", " ") or "not recorded"
-        )
-    )
-
-    if method:
-        arrival += (
-            f' <code class="muted" data-capture-method="{esc(method)}">'
-            f"{esc(method)}</code>"
-        )
-
-    pairs: list[tuple[str, str]] = [
-        ("How it arrived", arrival),
-        ("Saved item", f"<code>{esc(saved.saved_item_id)}</code>"),
-    ]
-
-    if saved.saved_date:
-        pairs.append(("Saved on", esc(saved.saved_date)))
-
-    if saved.url_kind:
-        pairs.append(("Link type", esc(saved.url_kind.replace("_", " "))))
-
-    if saved.capture_match and saved.capture_match != "no bundle":
-        pairs.append(("Content matched by", esc(saved.capture_match)))
-
-    if saved.saved_notes:
-        pairs.append(("Your note", esc(saved.saved_notes)))
-
-    extras = ""
-
-    if saved.capture_notes:
-        items = "".join(
-            f"<li>{esc(note)}</li>"
-            for note in saved.capture_notes
-            if note
-        )
-
-        if items:
-            extras = (
-                '<p class="muted">About this capture</p>'
-                f"<ul>{items}</ul>"
-            )
-
-    if not extras:
-        # The state is stated even when there is nothing to add, so a
-        # reader is never left guessing whether something was missed.
-        extras = (
-            '<p class="muted">The capture was read in full; nothing '
-            "was left unreadable.</p>"
-        )
-
-    return section(
-        "Saved item",
-        definition_list(pairs) + extras,
-        css_class="card card-source",
-        subtitle=SAVED_ITEM_CARD_SUBTITLE,
-    )
-
-
-def _source_material_card(post: KnowledgePost) -> str:
-    original, truncated = truncate(
-        post.original_text, POST_SOURCE_EXCERPT_LIMIT
-    )
-
-    blocks = []
-
-    if original:
-        note = ""
-        if truncated:
-            note = (
-                '<p class="muted">Excerpt truncated for readability. '
-                "Use the original source link for the full text.</p>"
-            )
-
-        blocks.append(
-            f'<div class="prose source-text">{esc(original)}</div>'
-            f"{note}"
-        )
-    else:
-        blocks.append(
-            '<p class="muted">No original text was captured for this '
-            "post.</p>"
-        )
-
-    if post.media:
-        blocks.append(_media_list(post))
-
-    return section(
-        "Original source material",
-        "".join(blocks),
-        css_class="card card-source",
-        subtitle=SOURCE_CARD_SUBTITLE,
-    )
-
-
-def _media_list(post: KnowledgePost) -> str:
-    items = []
-
-    for media in post.media:
-        details = [
-            f'<span class="badge badge-quiet">'
-            f"{esc(media.type)}</span>"
-        ]
-
-        if media.description:
-            details.append(
-                '<span class="media-desc">'
-                f"{esc(collapse_whitespace(media.description))}"
-                "</span>"
-            )
-
-        extracted, _ = truncate(
-            media.extracted_text, MEDIA_EXCERPT_LIMIT
-        )
-
-        extracted_html = ""
-        if extracted:
-            extracted_html = (
-                '<details class="media-extract">'
-                "<summary>Extracted text from this file</summary>"
-                f'<div class="prose">{esc(extracted)}</div>'
-                "</details>"
-            )
-
-        path_html = ""
-        if media.path:
-            path_html = (
-                f'<code class="media-path">{esc(media.path)}</code>'
-            )
-
-        items.append(
-            '<li class="media-item">'
-            f'<div class="badge-row">{"".join(details)}</div>'
-            f"{path_html}"
-            f"{extracted_html}"
-            "</li>"
-        )
-
-    return (
-        '<div class="subblock">'
-        f"<h3>Media ({len(post.media)})</h3>"
-        '<p class="muted">Files are referenced by their '
-        "capture-time path and are not published with this site.</p>"
-        f'<ul class="media-list">{"".join(items)}</ul>'
-        "</div>"
     )
 
 

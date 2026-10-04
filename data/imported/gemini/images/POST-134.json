@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-134",
+  "activity_id": "7337746532181360641",
+  "images": [
+    {
+      "post_id": "POST-134",
+      "activity_id": "7337746532181360641",
+      "filename": "activity_7337746532181360641_slide_0.jpg",
+      "path": "media/activity_7337746532181360641_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 46102,
+      "declared_sha256": "019af1dbc6b3b6f358c49fc00106998024e2064740452845f2285274a668cc3a",
+      "actual_sha256": "019af1dbc6b3b6f358c49fc00106998024e2064740452845f2285274a668cc3a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "test een oe hie\nterres\n\nSEE coieeeintnmce\nies\n\nSieherteencts\n\nBEE nected arent et tne\nEMCEE Se tote st oe?\ntry\nSerene\n\nSade ce,\nPoa\n\n3 STaetid eee\n\npeated\n\nBe mare\n\nSita a nme\nPicton\n\nSecreto",
+      "redactions": 0,
+      "search_text": "test een oe hie terres SEE coieeeintnmce ies Sieherteencts BEE nected arent et tne EMCEE Se tote st oe? try Serene Sade ce, Poa 3 STaetid eee peated Be mare Sita a nme Picton Secreto",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "191 chars, 34 words, 76% letters, 2% symbols, 0.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "6b4b653475d2a6a17cedae59463fad29fc4b4cf83002e50b4625fafa6cd86c28"
+    }
+  ]
+}

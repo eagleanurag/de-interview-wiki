@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-123",
+  "activity_id": "7330110065691037696",
+  "images": [
+    {
+      "post_id": "POST-123",
+      "activity_id": "7330110065691037696",
+      "filename": "activity_7330110065691037696_slide_0.jpg",
+      "path": "media/activity_7330110065691037696_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 325,
+      "size_bytes": 15075,
+      "declared_sha256": "d134a2923cba152035886ba3646ae35a703a0abbb9d9eaac48991886a4f87ea7",
+      "actual_sha256": "d134a2923cba152035886ba3646ae35a703a0abbb9d9eaac48991886a4f87ea7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "databricks\nAuto Loader can now clean processed files in the source directory",
+      "redactions": 0,
+      "search_text": "databricks Auto Loader can now clean processed files in the source directory",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "76 chars, 12 words, 86% letters, 0% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "6364451a6fe753660dcad6770b8a75b077a89d12f6e060622ef41186b9fa8f00"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-280",
+  "activity_id": "7426107288421031936",
+  "images": [
+    {
+      "post_id": "POST-280",
+      "activity_id": "7426107288421031936",
+      "filename": "activity_7426107288421031936_slide_0.jpg",
+      "path": "media/activity_7426107288421031936_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 344,
+      "size_bytes": 36740,
+      "declared_sha256": "a9fceb873081dbbe0e9cbcb931d3bd231c9baf4afe32a6f240a67eb312455a04",
+      "actual_sha256": "a9fceb873081dbbe0e9cbcb931d3bd231c9baf4afe32a6f240a67eb312455a04",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Input\n1646\n29776 withdrawal 25] 1ara022\nSa151\n19153|deposit_[ 65] 10/2022\n77436|deposit_| 32] 740/202\n\nOutput\n16461\n29776 withdrawal 25] re/a0z2[ 259]\nSa151\n19169]deposi_| 65] 7/40/2000] 273\n77436| deposit | 32] so/avz2| a0",
+      "redactions": 0,
+      "search_text": "Input 1646 29776 withdrawal 25] 1ara022 Sa151 19153|deposit_[ 65] 10/2022 77436|deposit_| 32] 740/202 Output 16461 29776 withdrawal 25] re/a0z2[ 259] Sa151 19169]deposi_| 65] 7/40/2000] 273 77436| deposit | 32] so/avz2| a0",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "garbled",
+      "ocr_note": "223 chars, 17 words, 34% letters, 52% symbols, 0.0% sentence marks; overwhelmingly symbol rather than letters",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "72e9789a019d25634b56c07b6e435476c0117986c256aeae409878c3f1c5b7c1"
+    }
+  ]
+}

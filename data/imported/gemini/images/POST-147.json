@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-147",
+  "activity_id": "7338607955723878402",
+  "images": [
+    {
+      "post_id": "POST-147",
+      "activity_id": "7338607955723878402",
+      "filename": "activity_7338607955723878402_slide_0.jpg",
+      "path": "media/activity_7338607955723878402_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 360,
+      "size_bytes": 26804,
+      "declared_sha256": "290a028b25517b3509fd18f0a6f2e4375dea105fde88dac23b8419d193285f24",
+      "actual_sha256": "290a028b25517b3509fd18f0a6f2e4375dea105fde88dac23b8419d193285f24",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "b anata\n= Databricks Free Edition\n> ua alotDatabt\neotervee\n* strove ated .\n> S100M investment 4\n‘Mtlning sod eos\nly De TMI nee GE TOE WEE sDODMO. - 9\nnatin\n=— biota mon Ores\n- = Lo —eleeeeieo emia!",
+      "redactions": 0,
+      "search_text": "b anata = Databricks Free Edition > ua alotDatabt eotervee * strove ated . > S100M investment 4 ‘Mtlning sod eos ly De TMI nee GE TOE WEE sDODMO. - 9 natin =— biota mon Ores - = Lo —eleeeeieo emia!",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "197 chars, 31 words, 70% letters, 10% symbols, 1.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9c7679024e83fff99cc6083760d5305a20d1133656740702799b25b29d7dbc96"
+    }
+  ]
+}

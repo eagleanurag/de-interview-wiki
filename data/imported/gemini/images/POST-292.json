@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-292",
+  "activity_id": "7462691074113880064",
+  "images": [
+    {
+      "post_id": "POST-292",
+      "activity_id": "7462691074113880064",
+      "filename": "activity_7462691074113880064_slide_0.jpg",
+      "path": "media/activity_7462691074113880064_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 347,
+      "height": 491,
+      "size_bytes": 36902,
+      "declared_sha256": "915b0ebdd654bf786bd8aa5a601f529c5b5d43b1252386b4ddb39f5215df8ef2",
+      "actual_sha256": "915b0ebdd654bf786bd8aa5a601f529c5b5d43b1252386b4ddb39f5215df8ef2",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "birlasoft\nSerna Based QA Set\nRRR\nera\n! eeeceramere manne\nae\nfeepunr",
+      "redactions": 0,
+      "search_text": "birlasoft Serna Based QA Set RRR era ! eeeceramere manne ae feepunr",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "67 chars, 11 words, 82% letters, 1% symbols, 1.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2702f7b248580d8d757e4c467513c36586b3cc54b2a894e516c7ed41d3158c6f"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-265",
+  "activity_id": "7352033129559216129",
+  "images": [
+    {
+      "post_id": "POST-265",
+      "activity_id": "7352033129559216129",
+      "filename": "activity_7352033129559216129_slide_0.jpg",
+      "path": "media/activity_7352033129559216129_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 314,
+      "size_bytes": 17953,
+      "declared_sha256": "931909e4f92d1597d21ceee8230a2cbd722aa94907b99c299044c576ff44afe7",
+      "actual_sha256": "931909e4f92d1597d21ceee8230a2cbd722aa94907b99c299044c576ff44afe7",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Converting External to Managed Tables\nFrom\n> CREATE OR REPLACE TABLE catalog. schena.my_managed_table\nDEEP CLONE catalog.schema.my_oxternol_table\n> DROP TABLE catalog. schema.my_oxtornal table\nTo a |",
+      "redactions": 0,
+      "search_text": "Converting External to Managed Tables From > CREATE OR REPLACE TABLE catalog. schena.my_managed_table DEEP CLONE catalog.schema.my_oxternol_table > DROP TABLE catalog. schema.my_oxtornal table To a |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "199 chars, 31 words, 81% letters, 7% symbols, 3.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "557236f4fad63088aaca7a504d4918cc54d807f46c67742cfd8a0d9dafbcf4b3"
+    }
+  ]
+}

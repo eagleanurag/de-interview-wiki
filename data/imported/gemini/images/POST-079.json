@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-079",
+  "activity_id": "7318987855861596160",
+  "images": [
+    {
+      "post_id": "POST-079",
+      "activity_id": "7318987855861596160",
+      "filename": "activity_7318987855861596160_slide_0.jpg",
+      "path": "media/activity_7318987855861596160_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 600,
+      "size_bytes": 29372,
+      "declared_sha256": "849aa36449ddb52c8b4c0f9f98ce6ba0c5acc09fc096193c6de1d68c0082fc3d",
+      "actual_sha256": "849aa36449ddb52c8b4c0f9f98ce6ba0c5acc09fc096193c6de1d68c0082fc3d",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Database vs. Data Warehouse\nvs. Data Lake\niinlanoe Data Lake\ntransactional data reporting and analytics pares\ntional da eporting and analy fractiea a\n> Best suited for day- [I> Ideal for business, —\nto-day operations intelligence and perianal\n(OLTP) historical trends: workloads and\nel exploratory analysis",
+      "redactions": 0,
+      "search_text": "Database vs. Data Warehouse vs. Data Lake iinlanoe Data Lake transactional data reporting and analytics pares tional da eporting and analy fractiea a > Best suited for day- [I> Ideal for business, — to-day operations intelligence and perianal (OLTP) historical trends: workloads and el exploratory analysis",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "306 chars, 44 words, 81% letters, 4% symbols, 1.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "2a1fc75be565d3026633ff7568d553cd83c3bfa0d987cd1ab06ce5c41882204e"
+    }
+  ]
+}

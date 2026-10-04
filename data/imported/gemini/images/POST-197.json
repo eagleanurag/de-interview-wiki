@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-197",
+  "activity_id": "7342880360839462912",
+  "images": [
+    {
+      "post_id": "POST-197",
+      "activity_id": "7342880360839462912",
+      "filename": "activity_7342880360839462912_slide_0.jpg",
+      "path": "media/activity_7342880360839462912_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 487,
+      "height": 487,
+      "size_bytes": 50166,
+      "declared_sha256": "ca8b2fca1e83cf063008526d496d7a4328fc0dd1db38a65fc8f4ebd1736a3236",
+      "actual_sha256": "ca8b2fca1e83cf063008526d496d7a4328fc0dd1db38a65fc8f4ebd1736a3236",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "activity_7295781326744342528_slide_02.jpg",
+      "ocr_status": "AVAILABLE",
+      "public_text": "— 6 d.\nSOL “EB vss\nWINDOW\nFUNCTIONS",
+      "redactions": 0,
+      "search_text": "— 6 d. SOL “EB vss WINDOW FUNCTIONS",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "35 chars, 6 words, 69% letters, 11% symbols, 2.9% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "845cc96c7384fc93096a69560bf620778689048c0069774e5a88a269d811f2d5"
+    }
+  ]
+}

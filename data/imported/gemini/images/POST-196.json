@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-196",
+  "activity_id": "7342431147378843648",
+  "images": [
+    {
+      "post_id": "POST-196",
+      "activity_id": "7342431147378843648",
+      "filename": "activity_7342431147378843648_slide_0.jpg",
+      "path": "media/activity_7342431147378843648_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 22918,
+      "declared_sha256": "7ad145aa7acd464592fcbc9af74ddc694d790ea956aaedc077d76fa1d53b0f46",
+      "actual_sha256": "7ad145aa7acd464592fcbc9af74ddc694d790ea956aaedc077d76fa1d53b0f46",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "SQL OPTIMIZATION\nINTERVIEW\nQUESTION\n\nNy\nWalmart >< iH! ZS",
+      "redactions": 0,
+      "search_text": "SQL OPTIMIZATION INTERVIEW QUESTION Ny Walmart >< iH! ZS",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "57 chars, 8 words, 79% letters, 5% symbols, 1.8% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "0d74a9979b9cc47be00fedbc4cb2bfcbe97e158b20b986561c4c6754593a1428"
+    }
+  ]
+}

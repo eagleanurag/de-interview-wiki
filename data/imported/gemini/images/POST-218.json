@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-218",
+  "activity_id": "7345415283479613441",
+  "images": [
+    {
+      "post_id": "POST-218",
+      "activity_id": "7345415283479613441",
+      "filename": "activity_7345415283479613441_slide_0.jpg",
+      "path": "media/activity_7345415283479613441_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 374,
+      "height": 484,
+      "size_bytes": 36803,
+      "declared_sha256": "816f54029e8423120c90bf041574b46aa8d7bfcadab3f77b353d59aecb767304",
+      "actual_sha256": "816f54029e8423120c90bf041574b46aa8d7bfcadab3f77b353d59aecb767304",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "ee\n2 SRS cee\n2 oe can\na oe ore\n| powsang 7\nEpil ao\nBes Gea",
+      "redactions": 0,
+      "search_text": "ee 2 SRS cee 2 oe can a oe ore | powsang 7 Epil ao Bes Gea",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "58 chars, 13 words, 66% letters, 7% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "71eb18152ef9ad4d5b6fbc83043532e605153cb4b7ed354e159a8ecb327a5097"
+    }
+  ]
+}

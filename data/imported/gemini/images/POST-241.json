@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-241",
+  "activity_id": "7347851892875534338",
+  "images": [
+    {
+      "post_id": "POST-241",
+      "activity_id": "7347851892875534338",
+      "filename": "activity_7347851892875534338_slide_0.jpg",
+      "path": "media/activity_7347851892875534338_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 483,
+      "height": 483,
+      "size_bytes": 36344,
+      "declared_sha256": "4d092b282d14e0d99c351d4f0a7c80def5541623f6f33ce35fea1240918e4029",
+      "actual_sha256": "4d092b282d14e0d99c351d4f0a7c80def5541623f6f33ce35fea1240918e4029",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Rae\nGe =\n\naan\nLAKEHOUSE VS MEDALLION\nARCHITECTURE",
+      "redactions": 0,
+      "search_text": "Rae Ge = aan LAKEHOUSE VS MEDALLION ARCHITECTURE",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "49 chars, 7 words, 82% letters, 2% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "1346e68d1839eb99bb307fbea98ee62517cbf205d5f08c98fefa1b24c54ce8c6"
+    }
+  ]
+}

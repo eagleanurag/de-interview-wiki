@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-135",
+  "activity_id": "7337765415269363712",
+  "images": [
+    {
+      "post_id": "POST-135",
+      "activity_id": "7337765415269363712",
+      "filename": "activity_7337765415269363712_slide_0.jpg",
+      "path": "media/activity_7337765415269363712_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 245,
+      "size_bytes": 12482,
+      "declared_sha256": "c55910110a9bbe9b711368eba21fa7749ca4a02d63413621d235f7b94ab5c6f6",
+      "actual_sha256": "c55910110a9bbe9b711368eba21fa7749ca4a02d63413621d235f7b94ab5c6f6",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "Data Pipeline WWiseaver\nBE spake mee SQ\nsiti, é |",
+      "redactions": 0,
+      "search_text": "Data Pipeline WWiseaver BE spake mee SQ siti, é |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "49 chars, 8 words, 78% letters, 4% symbols, 0.0% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "af3dfe8bca0ae266710b9508fa42ada32fb4d8150b485eddcad07f7860440718"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-296",
+  "activity_id": "7463624574018965504",
+  "images": [
+    {
+      "post_id": "POST-296",
+      "activity_id": "7463624574018965504",
+      "filename": "activity_7463624574018965504_slide_0.jpg",
+      "path": "media/activity_7463624574018965504_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 721,
+      "size_bytes": 81494,
+      "declared_sha256": "6289620ec5ebb4fccc5e20418148b44148c8c6e810f2394193fb5e2382a6239a",
+      "actual_sha256": "6289620ec5ebb4fccc5e20418148b44148c8c6e810f2394193fb5e2382a6239a",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "IMPLEMENTING & databricks\nooo EE as PySpaik’\nCL\nwert crrriner tn eres\n\nOsa | F\n\n° eo ea. oe |",
+      "redactions": 0,
+      "search_text": "IMPLEMENTING & databricks ooo EE as PySpaik’ CL wert crrriner tn eres Osa | F ° eo ea. oe |",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "93 chars, 16 words, 71% letters, 6% symbols, 1.1% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "be7465dc7acb06ddef75d2c8d4aba853b3c11d424a456cf399742224f8df002c"
+    }
+  ]
+}

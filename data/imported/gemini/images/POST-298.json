@@ -1,0 +1,32 @@
+{
+  "group_id": "POST-298",
+  "activity_id": "7468953134913077248",
+  "images": [
+    {
+      "post_id": "POST-298",
+      "activity_id": "7468953134913077248",
+      "filename": "activity_7468953134913077248_slide_0.jpg",
+      "path": "media/activity_7468953134913077248_slide_0.jpg",
+      "slide_number": 0,
+      "slide_number_source": "package",
+      "width": 480,
+      "height": 600,
+      "size_bytes": 1805988,
+      "declared_sha256": "698e95655ef55ad04ababd12a3f026fc85b506b89b8f13d0c0f92b804de7b5c1",
+      "actual_sha256": "698e95655ef55ad04ababd12a3f026fc85b506b89b8f13d0c0f92b804de7b5c1",
+      "exact_duplicate_of": "",
+      "likely_preview_of": "",
+      "ocr_status": "AVAILABLE",
+      "public_text": "DATA ENGINEERING STACK\nThe CORE COMPONENTS OF DATA ENGINEERING\n(Cre co eo oe\nwe Came Goer =\n1 comes) tested | Kea) 2. teeter\neo ers en =\nFoot) kee | Qaononsny) Preven) tycoon\ngas\neo —— Oe et\nTE wn coms CL a",
+      "redactions": 0,
+      "search_text": "DATA ENGINEERING STACK The CORE COMPONENTS OF DATA ENGINEERING (Cre co eo oe we Came Goer = 1 comes) tested | Kea) 2. teeter eo ers en = Foot) kee | Qaononsny) Preven) tycoon gas eo —— Oe et TE wn coms CL a",
+      "source_kind": "image_ocr",
+      "extraction_method": "gemini_ocr",
+      "ocr_quality": "readable",
+      "ocr_note": "206 chars, 37 words, 72% letters, 7% symbols, 0.5% sentence marks",
+      "verdict": "matched",
+      "verdict_note": "",
+      "fingerprint": "9fb0ae83f30fb21091841c2d288a2dacd6537677c9ffd82fa75c469435abdd72"
+    }
+  ]
+}
